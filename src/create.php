@@ -61,7 +61,7 @@ if (isset($headers)) {
                 if($xmlResult['data']['profile']['id'] != "n/a"){
                   $userID = substr($xmlResult['data']['profile']['id'], 1);
                 }else{
-                  $userID = null;
+                  $userID = "";
                 }
 
                 $param_r_player = $r_player;
