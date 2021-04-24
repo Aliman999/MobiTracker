@@ -30,7 +30,7 @@ if (isset($headers)) {
     }else{
       $forceOrgRefresh = false;
     }
-
+    echo "https://api.starcitizen-api.com/".$key."/v1/".$version."/user/".$username;
     $orgs = "";
     $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/".$version."/user/".$username);
 
