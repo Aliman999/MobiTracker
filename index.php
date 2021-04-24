@@ -46,8 +46,10 @@
   <body>
     <!--
     <div id="navMenu" class="navMenu">
-      <p class="navTitle">MOBITRACKER.CO</p>
-      <a href="javascript:void(0)" class="closebtn" id="closeNavBtn"><img src="src/close.png" class="navBtn"></a>
+      <div class="navTitleContainer">
+        <p class="navTitle">NAVIGATE</p>
+        <a href="javascript:void(0)" class="closebtn" id="closeNavBtn"><img src="src/close.png" class="navBtn"></a>
+      </div>
       <div class="miniPlayerDiv">
         <div class="miniPlayer">
           <img src="src/avatars/avatar_default.jpg" class="avatar circleBorder">
@@ -83,10 +85,12 @@
       </div>
       <div class="miniPlayerDivOut">
         <div class="miniPlayerOut">
-          <p>Username</p>
-          <input type="text" name="" value="">
-          <p>Password</p>
-          <input type="text" name="" value="">
+          <div>
+            <p>Username</p>
+            <input type="text" name="" value="">
+            <p>Password</p>
+            <input type="text" name="" value="">
+          </div>
         </div>
       </div>
       <div class="eleContainer">
