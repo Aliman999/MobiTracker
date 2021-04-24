@@ -77,8 +77,10 @@
     </div>
     -->
     <div id="navMenu" class="navMenu">
-      <p class="navTitle">NAVIGATE</p>
-      <a href="javascript:void(0)" class="closebtn" id="closeNavBtn"><img src="src/close.png" class="navBtn"></a>
+      <div class="navTitleContainer">
+        <p class="navTitle">NAVIGATE</p>
+        <a href="javascript:void(0)" class="closebtn" id="closeNavBtn"><img src="src/close.png" class="navBtn"></a>
+      </div>
       <div class="miniPlayerDivOut">
         <div class="miniPlayerOut">
           <p>Username</p>

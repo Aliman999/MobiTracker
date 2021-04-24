@@ -49,24 +49,16 @@ var ro = new ResizeObserver(entries => {
   }
 });
 ro.observe(iContainer);
-/*
-  if(this.clientWidth < 800){
-    this.style.margin = "0 8px";
-    sPContainer.style.margin = "0 8px";
-  }else{
-    this.style.margin = ""
-    sPContainer.style.margin = "";
-  }
-*/
+
 /* Set the width of the side navigation to 250px */
 function openNav() {
   openBtn.active = true;
-  if(screen.width <= 820){
+  if(screen.width <= 1282){
     document.addEventListener("click", checkClick);
   }else{
     document.removeEventListener("click", checkClick);
   }
-  if(screen.width <= 820){
+  if(screen.width <= 1282){
     document.body.style.overflowY = "hidden";
     document.getElementById("navMenu").style.width = screen.width-(screen.width*0.20)+"px";
     document.getElementById("navBackDrop").style.zIndex = "9";
