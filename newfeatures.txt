@@ -1,0 +1,88 @@
+Website Additions:
+
+Cache all queries from bot and website.
+
+Have a reference ID (uID) of every event and the starting timestamp of when they've been cached and when updates occured.
+
+Track how many times per day a user is searched and if it meets threshold warn searches that this person is
+
+
+
+
+8/21/20
+New Feature List:
+
+Search by Career and Rating
+Mobile Friendly
+
+To Do:
+Restrict Reviews between internal Organizations (This can still be bypassed by friends in other organizations).
+
+If you select you're interested in legal work you will not see illegal contracts and you will be locked to this choice for 3 months.
+
+Rank 5 member of their organization may post a contract on behalf of the organization or themselves. if you are not the highest ranking of your organization you may not unless a rank 4 allows either all rank 4 or 1 person to make a contract on behalf
+
+Setup discord bot with 3 selections Merchants/Clients/Mediators
+
+Setup where mediators charge 8% and I get 2% of that price to insure any scams
+
+Changed so that new users must have 1 of any of the backer titles
+https://starcitizen.tools/Titles
+
+Legal: See all Legal Contracts.
+
+Legal Contract Options:
+Offering Service:
+Racer,                   (Offer your services as a racing pilot for hosted races)
+Delivery,                (Shipment Delivery)
+Security,                (Offering Escort or Security Crew)
+Head Hunting,            (Offering Head Hunting Services)
+Scout,                   (Offering Scouting)
+Medical,                 (Offering Medical Personnel or Medical Ship)
+Charter | Regular/Luxury (Offering Charter Services differentiating luxury or regular)
+
+Required Service:
+Racer,                   (Hosting Race, Require a pilot/pilots)
+Scout,                   (Require a Scout)
+Medical,                 (Require a Medical Service)
+Delivery,                (Require a Delivery Service)
+Security,                (Require Escort or Security Crew)
+Charter | Regular/Luxury (Require a Charter Service regular or luxury)
+
+Illegal: See all Illegal Contracts.
+
+Offering Service:
+Delivery,                (Offering the Smuggling of Illegal Goods)
+Security,                (Clearing CS, Blockades)
+Head Hunting,            (Offering Head Hunting Services)
+Scout,                   (Offering Scouting Service)
+Medical,                 (Offering Medical Personnel or Medical Ship)
+Transport                (Offering the Smuggling of Crimestat players)
+
+Required Service:
+Delivery,                (Requiring the Smuggling of Illegal Goods)
+Security,                (Requiring Clearing CS, Blockades)
+Head Hunting,            (Requiring Head Hunting Services)
+Scout,                   (Requiring Scouting Services)
+Medical,                 (Requiring Medical Personnel or Medical Ship)
+Transport                (Requiring the Smuggling of Crimestat players)
+
+
+As MobiTracker grows how will you maintain the credibility of legal contracts?
+Our team of moderators have tools spanning over the whole of the review and contracts system allowing them to weed out suspicious contracts and we are searching for a reputable 3rd party escrow corporation that will also assist in ensuring your contracts are paid out and will issue a warning to applicants when a contract does not use the escrow system.
+If there is no way of perfect moderation are you prepared to be in a position where people will have negative reviews about your service.
+We are taking every step in producing the most reputable contract and reputation system available in Star Citizen. This includes internal moderation tools, 3rd party escrow corporations and a contract insurance system upheld by MobiTracker itself.
+
+Clarify token process with visible Click here to copy token.
+
+When creating a dispute I want every user to click a button to be redirected to /contracts/dispute and I would need to pass information such as Contract ID and ensure every user who tries to access a contract ID is either an employee or creator of said contract. We need to ensure that every user may create a dispute once.
+
+3/30/21
+
+Discord Bot Additions:
+
+Have the bot detect when there is a RSI handle dropped in the chat, read the link and cache the players information with a timestamp + date
+
+Produce a timeline of a user changing organizations and having the cached information displayed with events.
+
+Allow the bot to be used by other bots to allow automation.

@@ -1,0 +1,25 @@
+.flagTitle{
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+.flagCount{
+  margin-top: auto;
+}
+.toUser{
+  margin-top: auto;
+  text-shadow: 0px 0px 5px #C4D7E6;
+  font-weight: bold;
+}
+.toUser:hover{
+  color:#ffffff;
+}
+.titleContainer{
+  display: flex;
+  justify-content: center;
+}
+input.userInput{
+  height: 21px;
+  width: 784px;
+}

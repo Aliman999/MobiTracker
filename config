@@ -1,0 +1,16 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = true
+	symlinks = false
+	ignorecase = true
+[remote "beta"]
+	url = ssh://ubuntu@mobitracker.co/var/repo/beta.git
+	fetch = +refs/heads/*:refs/remotes/beta/*
+	pushurl = ssh://ubuntu@mobitracker.co/var/repo/beta.git
+	pushurl = git@mobitracker.co:JDusky/mt-beta.git
+[remote "live"]
+	url = ssh://ubuntu@mobitracker.co/var/repo/site.git
+	fetch = +refs/heads/*:refs/remotes/live/*
+	pushurl = ssh://ubuntu@mobitracker.co/var/repo/site.git
+	pushurl = git@mobitracker.co:JDusky/mobitracker.git

@@ -1,0 +1,10 @@
+
+5+: Blacklisted
+
+1-5: Sketchy
+Negative
+0: Newbie
+Positive
+1-30: Experienced
+
+31-100: Reliable

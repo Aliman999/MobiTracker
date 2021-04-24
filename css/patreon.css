@@ -1,0 +1,25 @@
+.login_menu > *:first-child{
+  margin-left: 0;
+}
+.patreonContainer{
+  display: flex;
+  padding: 0 8px;
+}
+.patreonImg{
+  height:24px;
+  margin: auto 0;
+}
+@media screen and (max-width: 880px) {
+  .patreonContainer{
+    padding: 4px 4px;
+    position: unset;
+    margin: auto 2px;
+  }
+  .patreonTxt{
+    visibility: hidden;
+    position: absolute;
+  }
+  .login_menu > *:first-child{
+    margin-left: 0;
+  }
+}

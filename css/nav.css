@@ -1,0 +1,205 @@
+.navMenu p{
+  white-space: nowrap;
+}
+
+/* The side navigation menu */
+.navMenu {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #243139; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the navMenu */
+}
+
+.navActive p{
+  color: #f1f1f1;
+}
+
+/* The navigation menu links */
+.navMenu a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  transition: 0.3s;
+}
+
+.navBackDrop{
+  transition: 0.5s;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.loggedIn{
+  width: 26px;
+  height:2px;
+  border-radius: 6px;
+  background-color: #87d374;
+  box-shadow: 0px 0px 5px #87d374;
+  margin: 5px;
+}
+
+.loggedOut{
+  width: 26px;
+  height:2px;
+  border-radius: 6px;
+  background-color: #f0e7b3;
+  box-shadow: 0px 0px 5px #f0e7b3;
+  margin: 5px;
+}
+
+.mtLogo{
+  height: 52px;
+  margin-right: 2px;
+}
+
+.navBtnContainer{
+  margin: auto 0;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.loginNameContainer{
+  display: flex;
+  justify-content: center;
+}
+.loginNameContainer p{
+  padding: 8px 2px 8px 2px;
+}
+
+.navTitle{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 27px;
+}
+
+.eleContainer{
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+
+.menuIcon{
+  height:49px;
+}
+
+.navBtn{
+  height: 36px;
+}
+
+.miniPlayer{
+  width: 144px;
+  margin: 16px 4px 16px 16px;
+}
+
+/* Logged Out */
+
+.miniPlayerOut{
+  width: 100%;
+}
+
+.miniPlayerDivOut{
+  height: 271px;
+  display: flex;
+  background-color: #151f26;
+  margin-bottom: 8px;
+}
+
+/* Logged Out */
+
+.miniPlayerDiv{
+  height: 271px;
+  display: flex;
+  background-color: #151f26;
+  margin-bottom: 8px;
+}
+
+
+.miniPlayerInfo{
+  display: flex;
+}
+
+.miniPlayerInfo p{
+  margin: auto;
+  margin-left: 4px;
+  padding: 8px 2px;
+  white-space: pre-line;
+}
+
+.miniRep{
+  margin: 16px 16px 16px 0px;
+}
+
+.miniRep p{
+  display: flex;
+  padding: 2px;
+}
+
+.miniRep p:first-child{
+  margin-top:25px;
+}
+
+.avatar{
+  height: 128px;
+  padding: 8px;
+}
+
+.circleBorder{
+  border-radius: 360px;
+}
+
+.miniOrg{
+  height:41px;
+  margin: auto;
+  margin-right: 4px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.navMenu a:hover{
+  color: #f1f1f1;
+}
+
+.navEle{
+  display: flex;
+  justify-content: flex-start !important;
+}
+
+.navEle img{
+  margin: auto 0;
+  margin-left: 8px;
+}
+
+/* Position and style the close button (top right corner) */
+.navMenu .closebtn {
+  position: absolute;
+  right: 24px;
+  top: 8px;
+  font-size: 36px;
+}
+
+.closebtn{
+  transition: 0s !important;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#canvas {
+  transition: margin-right .5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the navMenu (less padding and a smaller font size) */
+@media screen and (max-width: 450px) {
+  .navMenu {padding-top: 40px;}
+  .navMenu a {font-size: 18px;}
+  .navEle img{height:40px;}
+  .navTitle {top:0; left:0; font-size:19px;}
+  .closebtn {padding:0px !important; right:0 !important; top: 2px !important;}
+  .avatar {height:117px;}
+}

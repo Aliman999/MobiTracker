@@ -1,0 +1,26 @@
+.userInput, .createComment{
+  color: #C4D7E6;
+  background-color: #253139;
+  border: 2px solid #19777e;
+  box-shadow: none;
+  text-shadow: none;
+  font-size: 14px;
+}
+.userInput:focus, .createComment:focus{
+  border: 2px solid rgb(57, 206, 216);
+  box-shadow: 0px 0px 15px rgba(57, 206, 216, 0.5);
+  color: #C4D7E6;
+  background-color: #253139;
+}
+.jpForm{
+  padding:8px;
+}
+.jpFormHoldThePad{
+  padding:8px 0;
+}
+.jpForm>p{
+  white-space: pre-wrap;
+}
+textarea{
+  border-radius: 4px;
+}
