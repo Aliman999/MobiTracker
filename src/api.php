@@ -6,11 +6,11 @@ error_reporting(E_ALL);
 
 $oldname = $oldavatar = "";
 session_start();
-//$headers = $_SERVER['HTTP_TOKEN'];
-//if (isset($headers)) {
-//  if($headers !== $_SESSION['token']){
-//    exit(json_encode(['error' => 'Wrong token.']));
-//  }else{
+$headers = $_SERVER['HTTP_TOKEN'];
+if (isset($headers)) {
+  if($headers !== $_SESSION['token']){
+    exit(json_encode(['error' => 'Wrong token.']));
+  }else{
     require_once "config.php";
     foreach ($_GET as $get => $g) {
       mysqli_real_escape_string($link, $g);
@@ -30,7 +30,7 @@ session_start();
     }else{
       $forceOrgRefresh = false;
     }
-    echo "https://api.starcitizen-api.com/".$key."/v1/".$version."/user/".$username;
+    
     $orgs = "";
     $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/".$version."/user/".$username);
 
@@ -108,8 +108,8 @@ session_start();
       $result = mysqli_query($link, $sql);
     }
     mysqli_close($link);
-//  }
-//}else{
-// exit();
-//}
+  }
+}else{
+ exit();
+}
 ?>
