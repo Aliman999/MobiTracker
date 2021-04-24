@@ -6,11 +6,11 @@ error_reporting(E_ALL);
 
 $oldname = $oldavatar = "";
 session_start();
-$headers = $_SERVER['HTTP_TOKEN'];
-if (isset($headers)) {
-  if($headers !== $_SESSION['token']){
-    exit(json_encode(['error' => 'Wrong token.']));
-  }else{
+//$headers = $_SERVER['HTTP_TOKEN'];
+//if (isset($headers)) {
+//  if($headers !== $_SESSION['token']){
+//    exit(json_encode(['error' => 'Wrong token.']));
+//  }else{
     require_once "config.php";
     foreach ($_GET as $get => $g) {
       mysqli_real_escape_string($link, $g);
@@ -108,8 +108,8 @@ if (isset($headers)) {
       $result = mysqli_query($link, $sql);
     }
     mysqli_close($link);
-  }
-}else{
- exit();
-}
+//  }
+//}else{
+// exit();
+//}
 ?>
