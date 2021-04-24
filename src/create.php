@@ -58,7 +58,11 @@ if (isset($headers)) {
                 $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/auto/user/".$r_player);
                 $xmlResult = json_decode($json, true);
 
-                $userID = substr($xmlResult['data']['profile']['id'], 1);
+                if($xmlResult['data']['profile']['id'] != "n/a"){
+                  $userID = substr($xmlResult['data']['profile']['id'], 1);
+                }else{
+                  $userID = null;
+                }
 
                 $param_r_player = $r_player;
                 $param_password = "mobiTrackerTemporaryPassword";
