@@ -64,6 +64,13 @@
   margin-right: 2px;
 }
 
+.mtTitle{
+  color: #C4D7E6;
+  font-size: 27px;
+  padding: 8px;
+  margin: 0;
+}
+
 .navBtnContainer{
   margin: auto 0;
   cursor: pointer;

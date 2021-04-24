@@ -67,7 +67,7 @@ if (isset($headers)) {
                 $param_rating = $rating;
 
                 $sql = "INSERT INTO players (cID, username, password, email, avatar, avgRating, signup) VALUES ($userID, '$param_r_player', '$param_password', '$param_email', '$param_avatar', $param_rating, 0);";
-
+                echo $sql;
                 if(!mysqli_query($link, $sql)){
                   echo "Something went wrong. Please try again later.";
                   echo "Prepare error: " . mysqli_error($link);
