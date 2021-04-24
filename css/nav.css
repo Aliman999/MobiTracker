@@ -106,7 +106,7 @@
 
 .navTitle{
   position: absolute;
-  top: 8px;
+  top: 4px;
   left: 16px;
   font-size: 27px;
 }
@@ -210,7 +210,7 @@
 .navMenu .closebtn {
   position: absolute;
   right: 24px;
-  top: 8px;
+  top: 4px;
   font-size: 36px;
 }
 
