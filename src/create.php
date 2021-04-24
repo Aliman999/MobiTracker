@@ -55,7 +55,7 @@ if (isset($headers)) {
                 $row = mysqli_fetch_assoc($result);
                 $r_player_err = 1;
 
-                $json = file_get_contents("https://api.starcitizen-api.com/c13b1badf9ccd433c90b4160c7664107/v1/auto/user/".$r_player);
+                $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/auto/user/".$r_player);
                 $xmlResult = json_decode($json, true);
 
                 $userID = substr($xmlResult['data']['profile']['id'], 1);
