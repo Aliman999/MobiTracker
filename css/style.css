@@ -4,6 +4,7 @@ html{
   font-weight: 400;
   text-align: center;
   outline: 0;
+  transition: 0.5s;
 }
 body{
   width: auto;
