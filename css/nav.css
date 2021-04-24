@@ -70,6 +70,9 @@
   padding: 8px;
   margin: 0;
 }
+.mtTitle:hover{
+  color:#fff
+}
 
 .headerContainer{
   width: 100%;

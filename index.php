@@ -101,8 +101,8 @@
     <div id="canvas">
       <div class="headerContainer">
         <div id="login_status" class="login_menu">
-          <img src="android-chrome-512x512.png" class="mtLogo" id="mtLogo">
-          <a href="/" class="mtTitle">MOBITRACKER.CO</a>
+          <a href=""><img src="android-chrome-512x512.png" class="mtLogo" id="mtLogo"></a>
+          <a href="" class="mtTitle">MOBITRACKER.CO</a>
           <div id="navBtnContainer" class="navBtnContainer">
             <div class="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "loggedIn";}else{echo "loggedOut";} ?>"></div>
             <div class="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "loggedIn";}else{echo "loggedOut";} ?>"></div>

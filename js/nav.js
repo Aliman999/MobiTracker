@@ -4,8 +4,6 @@ var eleCount = document.getElementsByClassName("navEle");
 var navMenu = document.getElementById("navMenu");
 var iContainer = document.getElementById("iContainer");
 iContainer.sibling = document.getElementById("sPContainer");
-iContainer.navLeft = document.getElementById("mtLogo");
-iContainer.navRight = document.getElementById("navBtnContainer");
 openBtn.active = false;
 
 
