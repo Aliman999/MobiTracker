@@ -71,8 +71,27 @@
   margin: 0;
 }
 
+.headerContainer{
+  width: 100%;
+  background-color: #253139;
+}
+
+.login_menu{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #253139;
+  position: relative;
+  min-height: 52px;
+  padding: 4px 0 4px 0;
+
+  width: 800px;
+  margin: auto;
+}
+
 .navBtnContainer{
-  margin: auto 0;
+  position: absolute;
+  right: 8px;
+  top: 12px;
   cursor: pointer;
   padding: 4px;
 }

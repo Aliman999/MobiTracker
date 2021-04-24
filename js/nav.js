@@ -34,17 +34,9 @@ var ro = new ResizeObserver(entries => {
     if(cr.width < 800){
       entry.target.style.margin = "0 8px";
       entry.target.sibling.style.margin = "0 8px";
-
-      entry.target.navLeft.style.margin = "0 0 0 8px";
-      entry.target.navRight.style.margin = "auto 0 auto 8px";
-      entry.target.navRight.parentElement.style.justifyContent = "space-between";
     }else{
       entry.target.style.margin = "";
       entry.target.sibling.style.margin = "";
-
-      entry.target.navLeft.style.margin = "";
-      entry.target.navRight.style.margin = "";
-      entry.target.navRight.parentElement.style.justifyContent = "";
     }
   }
 });
