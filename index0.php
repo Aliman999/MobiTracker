@@ -17,9 +17,6 @@ function selectKey(){
 
 $key = selectKey();
 
-if(!$link ) {
-  die('Could not connect: ' . mysqli_error());
-}
 $updateOrgSID = "EVILORG";
 
 $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/auto/organization/".$updateOrgSID);
