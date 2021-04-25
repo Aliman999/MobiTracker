@@ -1,4 +1,6 @@
 var openBtn = document.getElementById("navBtnContainer");
+var openLoginBtn = document.getElementById("lmLBtn");
+var openSignUpBtn = document.getElementById("lmSBtn");
 var closeBtn = document.getElementById("closeNavBtn");
 var eleCount = document.getElementsByClassName("navEle");
 var navMenu = document.getElementById("navMenu");
