@@ -91,8 +91,8 @@
             <p>Password</p>
             <input type="text" value="">
             <div class="mpBtnContainer">
-              <button type="button" class="verify_btn" id="login">Login</button>
-              <button type="button" class="verify_btn" id="signUp">Sign Up</button>
+              <input type="button" class="verify_btn" id="login" value="Login">
+              <input type="button" class="verify_btn" id="signUp" value="Sign Up">
             </div>
           </div>
         </div>
