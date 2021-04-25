@@ -104,6 +104,15 @@ function updateSearch(user){
 }
 //PUSH Search
 
+var mtLogo = document.getElementById("mtLogo");
+mtLogo.onclick = function(){
+  mtco();
+}
+var mtTitle = document.getElementById("mtTitle");
+mtTitle.onclick = function(){
+  mtco();
+}
+
 var usr = document.getElementsByClassName("loginName")[0];
 usr.onclick = function(){clickUser(this.innerText)};
 
