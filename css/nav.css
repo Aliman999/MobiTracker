@@ -136,6 +136,7 @@
 
 .miniPlayerOut{
   width: 100%;
+  display: flex;
 }
 
 .miniPlayerDivOut{
