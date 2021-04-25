@@ -27,15 +27,14 @@ $memberCount = $xmlResult['data']['members'];
 $grossPages = ceil($memberCount/32);
 
 $x=0;
+$orgMembers = array();
 for($i=0;$i<$grossPages;$i++){
   $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/live/organization_members/".$updateOrgSID."?page=".$i);
   $xmlResult = json_decode($json, true);
   foreach ($xmlResult['data'] as $member => $m){
-    if($m['stars'] < $rank){
-      $updateOrgMembers[$x] = [$m['handle']];
-      $x++;
-    }
+    $orgMembers[$x] = [$m['handle']];
+    $x++;
   }
 }
-echo "!search ".join(" ", $updateOrgMembers);
+echo "!search ".join(" ", $orgMembers);
 ?>
