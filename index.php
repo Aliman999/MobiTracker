@@ -111,8 +111,8 @@
         <div id="login_status" class="login_menu">
           <a><img id="mtLogo" src="android-chrome-512x512.png" class="mtLogo"></a>
           <a id="mtTitle" class="mtTitle">MOBITRACKER</a>
-          <a class="rButton highlight-green">Login</a>
-          <a class="rButton highlight-green">Sign Up</a>
+          <a class="verify_btn">Login</a>
+          <a class="verify_btn">Sign Up</a>
           <div id="navBtnContainer" class="navBtnContainer">
             <div class="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "loggedIn";}else{echo "loggedOut";} ?>"></div>
             <div class="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "loggedIn";}else{echo "loggedOut";} ?>"></div>
