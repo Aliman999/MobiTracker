@@ -242,11 +242,13 @@
 
 .rButton{
   background-color: #243139;
+  box-shadow: 0px 0px 11px 0px #000000;
   margin: 0 2px;
 }
 
 .rButton:hover{
   color: #bee7b4;
+  box-shadow: 0px 0px 11px 0px #15fffd;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
