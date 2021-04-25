@@ -32,10 +32,10 @@ for($i=0;$i<$grossPages;$i++){
   $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/live/organization_members/".$updateOrgSID."?page=".$i);
   $xmlResult = json_decode($json, true);
   foreach ($xmlResult['data'] as $member => $m){
-    $orgMembers[$x] = [$m['handle']];
+    $orgMembers[$x] = $m['handle'];
     $x++;
   }
 }
 var_dump($orgMembers);
-echo "!search ".join($orgMembers);
+echo "!search ".join(" ", $orgMembers);
 ?>
