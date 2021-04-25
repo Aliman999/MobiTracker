@@ -238,12 +238,13 @@
 
 .mpBtnContainer{
   display: flex;
-  margin-left: auto;
+  margin-left: 58.969px;
 }
 
 .rButton{
   background-color: #243139;
   box-shadow: 0px 0px 11px 0px #0c1214;
+  white-space: nowrap;
 }
 .rButton:last-child{
   margin-left: 8px;
