@@ -85,12 +85,12 @@
       </div>
       <div class="miniPlayerDivOut">
         <div class="miniPlayerOut">
-          <div>
+          <div class="mpLoginContainer">
             <p>Username</p>
             <input type="text" value="">
             <p>Password</p>
             <input type="text" value="">
-            <div class="loginContainer">
+            <div class="mpbtnContainer">
               <button type="button" id="login">Login</button>
               <button type="button" id="signUp">Sign Up</button>
             </div>
