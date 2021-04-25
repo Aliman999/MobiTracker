@@ -621,12 +621,6 @@ p.page{
   border-radius: 4px;
   display: flex;
 }
-.iButton{
-  padding: 4px 8px;
-  background-color: #243139;
-  border-radius: 4px;
-  display: flex;
-}
 .rDisabled{
   pointer-events: none;
   cursor: default;

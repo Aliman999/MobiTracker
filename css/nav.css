@@ -25,7 +25,7 @@
 }
 
 /* The navigation menu links */
-.navMenu a {
+.eleContainer a {
   padding: 8px;
   text-decoration: none;
   font-size: 25px;
@@ -196,7 +196,7 @@
 }
 
 /* When you mouse over the navigation links, change their color */
-.navMenu a:hover{
+.eleContainer a:hover{
   color: #f1f1f1;
 }
 
@@ -236,9 +236,8 @@
 }
 
 .mpBtnContainer{
-  
+  display: flex;
 }
-
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #canvas {
   transition: margin-right .5s;
