@@ -19,12 +19,12 @@ openBtn.onclick = function(){
 
 openLoginBtn.onclick = function(){
   openNav();
-  this.toggle("rDisabled");
+  this.classList.toggle("rDisabled");
 }
 
 openSignUpBtn.onclick = function(){
   openNav();
-  this.toggle("rDisabled");
+  this.classList.toggle("rDisabled");
 }
 
 closeBtn.onclick = function(){
