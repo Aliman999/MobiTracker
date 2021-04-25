@@ -87,9 +87,11 @@
         <div class="miniPlayerOut">
           <div>
             <p>Username</p>
-            <input type="text" name="" value="">
+            <input type="text" value="">
             <p>Password</p>
-            <input type="text" name="" value="">
+            <input type="text" value="">
+            <button type="button" id="login">Login</button>
+            <button type="button" id="signUp">Sign Up</button>
           </div>
         </div>
       </div>
