@@ -36,5 +36,6 @@ for($i=0;$i<$grossPages;$i++){
     $x++;
   }
 }
+var_dump($orgMembers);
 echo "!search ".join(" ", $orgMembers);
 ?>
