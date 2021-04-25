@@ -91,8 +91,8 @@
             <p>Password</p>
             <input type="password" autocomplete="current-password" value="">
             <div class="mpBtnContainer">
-              <a class="rButton highlight-green" id="login">Login</a>
-              <a class="rButton highlight-green" id="signUp">Sign Up</a>
+              <a class="rButton highlight-green form-control" id="login">Login</a>
+              <a class="rButton highlight-green form-control" id="signUp">Sign Up</a>
             </div>
           </div>
         </div>
@@ -172,5 +172,6 @@
     <script type="text/javascript" src="js/socket.js" async></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/events.js"></script>
   </body>
 </html>
