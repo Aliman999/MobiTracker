@@ -110,7 +110,6 @@
 .navTitle{
   position: absolute;
   top: 4px;
-  left: 16px;
   font-size: 27px;
 }
 
@@ -213,8 +212,8 @@
 /* Position and style the close button (top right corner) */
 .navMenu .closebtn {
   position: absolute;
-  right: 24px;
-  top: 4px;
+  right: 8px;
+  top: 12px;
   font-size: 36px;
 }
 
@@ -238,7 +237,7 @@
 
 .mpBtnContainer{
   display: flex;
-  margin-left: 58.969px;
+  margin-left: 70.969px;
 }
 
 .rButton{
@@ -287,6 +286,6 @@
   .eleContainer a {font-size: 18px;}
   .navEle img{height:40px;}
   .navTitle {left:0}
-  .closebtn {padding: 0px !important; right: 4px !important; top: 15px !important;}
+  .closebtn {padding: 0px !important; right: 4px !important; top: 12px !important;}
   .avatar {height:117px;}
 }
