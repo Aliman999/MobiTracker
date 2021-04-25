@@ -272,6 +272,7 @@ img.playeravatar{
   background-color: #253139;
   border: 0;
   width: 100%;
+  border-radius: 4px 4px 0px 0px;
 }
 input{
   box-sizing: border-box;
