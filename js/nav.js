@@ -31,21 +31,26 @@ closeBtn.onclick = function(){
   closeNav();
 }
 
+
+var form = {
+  pUsername: document.createElement("p"),
+  iUsername: document.createElement("input"),
+  pPassword: document.createElement("p"),
+  iPassword: document.createElement("input"),
+  pEmail: document.createElement("p"),
+  iEmail: document.createElement("input")
+}
+
 function showLogin(){
-  
+  var container = document.getElementById("mpLoginContainer");
+  container.innerHTML = "";
+  form.pUsername.innerText = "Testing";
+  container.appendChild("pUsername");
 }
 
 function showRegister(){
   var container = document.getElementById("mpLoginContainer");
   container.innerHTML = "";
-  var register = {
-    pUsername: document.createElement("p"),
-    iUsername: document.createElement("input"),
-    pPassword: document.createElement("p"),
-    iPassword: document.createElement("input"),
-    pEmail: document.createElement("p"),
-    iEmail: document.createElement("input")
-  }
 }
 
 function checkClick() {
