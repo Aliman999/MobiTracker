@@ -87,12 +87,12 @@
         <div class="miniPlayerOut">
           <div class="mpLoginContainer">
             <p>Username</p>
-            <input type="text" autocomplete="username" maxlength="50"  value="">
+            <input class="form-control" type="text" autocomplete="username" maxlength="50"  value="">
             <p>Password</p>
-            <input type="password" autocomplete="current-password" value="">
+            <input class="form-control" type="password" autocomplete="current-password" value="">
             <div class="mpBtnContainer">
-              <a class="rButton highlight-green form-control" id="login">Login</a>
-              <a class="rButton highlight-green form-control" id="signUp">Sign Up</a>
+              <a class="rButton highlight-green" id="login">Login</a>
+              <a class="rButton highlight-green" id="signUp">Sign Up</a>
             </div>
           </div>
         </div>
