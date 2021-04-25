@@ -91,8 +91,8 @@
             <p>Password</p>
             <input type="text" value="">
             <div class="mpBtnContainer">
-              <a class="rButton highlight-green" id="login">Login</a>
-              <a class="rButton highlight-green" id="signUp">Sign Up</a>
+              <btn class="rButton highlight-green" id="login">Login</btn>
+              <btn class="rButton highlight-green" id="signUp">Sign Up</btn>
             </div>
           </div>
         </div>
