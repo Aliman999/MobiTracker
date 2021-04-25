@@ -140,7 +140,7 @@
 }
 
 .miniPlayerDivOut{
-  height: 271px;
+  min-height: 271px;
   display: flex;
   background-color: #151f26;
   margin-bottom: 8px;

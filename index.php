@@ -85,7 +85,7 @@
       </div>
       <div class="miniPlayerDivOut">
         <div class="miniPlayerOut">
-          <div class="mpLoginContainer">
+          <div id="mpLoginContainer" class="mpLoginContainer">
             <p>Username</p>
             <input class="form-control" type="text" autocomplete="username" maxlength="50"  value="">
             <p>Password</p>

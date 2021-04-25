@@ -19,16 +19,33 @@ openBtn.onclick = function(){
 
 openLoginBtn.onclick = function(){
   openNav();
-  this.classList.toggle("rDisabled");
+  showLogin();
 }
 
 openSignUpBtn.onclick = function(){
   openNav();
-  this.classList.toggle("rDisabled");
+  showRegister();
 }
 
 closeBtn.onclick = function(){
   closeNav();
+}
+
+function showLogin(){
+  
+}
+
+function showRegister(){
+  var container = document.getElementById("mpLoginContainer");
+  container.innerHTML = "";
+  var register = {
+    pUsername: document.createElement("p"),
+    iUsername: document.createElement("input"),
+    pPassword: document.createElement("p"),
+    iPassword: document.createElement("input"),
+    pEmail: document.createElement("p"),
+    iEmail: document.createElement("input")
+  }
 }
 
 function checkClick() {
