@@ -90,8 +90,10 @@
             <input type="text" value="">
             <p>Password</p>
             <input type="text" value="">
-            <button type="button" id="login">Login</button>
-            <button type="button" id="signUp">Sign Up</button>
+            <div class="loginContainer">
+              <button type="button" id="login">Login</button>
+              <button type="button" id="signUp">Sign Up</button>
+            </div>
           </div>
         </div>
       </div>
