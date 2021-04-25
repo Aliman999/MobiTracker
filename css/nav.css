@@ -223,6 +223,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 207px;
 }
 
 .miniPlayerOut p{
@@ -266,6 +267,7 @@
   border-radius: .25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   outline: 0;
+  width: 100%;
 }
 .form-control:focus{
   border: 2px solid rgb(57, 206, 216);
