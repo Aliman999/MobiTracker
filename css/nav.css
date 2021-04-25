@@ -92,11 +92,12 @@
 }
 
 .navBtnContainer{
-  position: absolute;
-  right: 8px;
-  top: 12px;
   cursor: pointer;
   padding: 4px;
+}
+
+.lmBtn{
+  margin-left: auto;
 }
 
 .loginNameContainer{
