@@ -17,7 +17,7 @@ function selectKey(){
 
 $key = selectKey();
 
-$updateOrgSID = "EVILORG";
+$updateOrgSID = "ASTROLLC";
 
 $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/auto/organization/".$updateOrgSID);
 $xmlResult = json_decode($json, true);
