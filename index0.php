@@ -3,36 +3,31 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require_once "config.php";
+function selectKey(){
+  $apiKeys = array(
+  "eb275472840a55ff74bcca0ba7baced0",
+  "c032ae79fa8a389e5b6e2f17a191643e",
+  "608c3b491aed563faca4bfef14f70c1c",
+  "7d3192f880dee8c748ef4e02ee39b447",
+  "c13b1badf9ccd433c90b4160c7664107"
+  );
+
+  return $apiKeys[array_rand($apiKeys, 1)];
+}
+
+$key = selectKey();
+
 if(!$link ) {
   die('Could not connect: ' . mysqli_error());
 }
+$updateOrgSID = "EVILORG";
 
-$user = "Stesig";
-$rank = 5;
-$json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/auto/organization/EVILORG");
+$json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/auto/organization/".$updateOrgSID);
 $xmlResult = json_decode($json, true);
 
 $memberCount = $xmlResult['data']['members'];
-$updateOrgName = $xmlResult['data']['name'];
-$updateOrgLogo = $xmlResult['data']['logo'];
 
 $grossPages = ceil($memberCount/32);
-
-$json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/live/organization_members/".$updateOrgSID."?rank=1");
-$xmlResult = json_decode($json, true);
-
-$updateOrgLeaders = array();
-$updateOrgMembers = array();
-$x=0;
-foreach ($xmlResult['data'] as $leader => $l) {
-  $updateOrgLeaders[$x] = [
-      "handle"=>$l['handle'],
-      "rank"=>$l['stars']
-    ];
-    $x++;
-}
-
 
 $x=0;
 for($i=0;$i<$grossPages;$i++){
