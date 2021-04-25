@@ -223,7 +223,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 207px;
+  min-width: 207px;
+  padding:16px;
 }
 
 .miniPlayerOut p{

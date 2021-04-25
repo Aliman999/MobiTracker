@@ -14,7 +14,7 @@ if ($headers == $_SESSION['token']) {
       die('Could not connect: ' . mysqli_error());
     }
 
-    $user = "Schrike";
+    $user = "Stesig";
     $rank = 5;
 
     $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/auto/user/".$user);

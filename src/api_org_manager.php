@@ -16,7 +16,7 @@ if ($headers == $_SESSION['token']) {
     $setPage = 0;
   }
 
-  $org = "UEMC";
+  $org = "EVILORG";
   $sql = "SELECT name, sid FROM organizations WHERE sid = '$org'";
   $result = mysqli_query($link, $sql);
   if(mysqli_num_rows($result) == 0){
