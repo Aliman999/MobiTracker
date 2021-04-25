@@ -17,6 +17,16 @@ openBtn.onclick = function(){
   }
 }
 
+openLoginBtn.onclick = function(){
+  openNav();
+  this.toggle("rDisabled");
+}
+
+openSignUpBtn.onclick = function(){
+  openNav();
+  this.toggle("rDisabled");
+}
+
 closeBtn.onclick = function(){
   closeNav();
 }
