@@ -38,13 +38,23 @@ var form = {
   pPassword: document.createElement("p"),
   iPassword: document.createElement("input"),
   pEmail: document.createElement("p"),
-  iEmail: document.createElement("input")
+  iEmail: document.createElement("input"),
+  lContainer: document.createElement("div"),
+  bLogin: document.createElement("a")
 }
 
 function showLogin(){
   var container = document.getElementById("mpLoginContainer");
   container.innerHTML = "";
-  form.pUsername.innerText = "Testing";
+  form.pUsername.innerText = "Username";
+  form.iUsername.className = "form-control";
+  form.iUsername.type = "text";
+  form.iUsername.autocomplete = "username";
+  form.iUsername.maxLength = "50";
+  form.pPassword.innerText = "Password";
+  form.iPassword.className = "form-control";
+  form.iPassword.type = "password";
+  form.iPassword.autocomplete = "current-password";
   container.appendChild(form.pUsername);
 }
 
