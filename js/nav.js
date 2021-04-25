@@ -45,7 +45,7 @@ function showLogin(){
   var container = document.getElementById("mpLoginContainer");
   container.innerHTML = "";
   form.pUsername.innerText = "Testing";
-  container.appendChild("pUsername");
+  container.appendChild(form.pUsername);
 }
 
 function showRegister(){
