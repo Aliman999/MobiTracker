@@ -284,7 +284,7 @@
 
 /* On smaller screens, where height is less than 450px, change the style of the navMenu (less padding and a smaller font size) */
 @media screen and (max-width: 450px) {
-  .navMenu a {font-size: 18px;}
+  .eleContainer a {font-size: 18px;}
   .navEle img{height:40px;}
   .navTitle {left:0}
   .closebtn {padding: 0px !important; right: 4px !important; top: 15px !important;}
