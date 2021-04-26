@@ -237,6 +237,16 @@
   padding: 4px;
 }
 
+.mpLoginContainer div{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.mpLoginContainer p{
+  margin-top: 24px;
+}
+
 .mpBtnContainer{
   display: flex;
   margin-left: 70.969px;

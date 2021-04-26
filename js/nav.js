@@ -66,7 +66,7 @@ function showLogin(){
   form.bMain.className = "rButton highlight-green";
   form.bMain.id = "login";
   form.bMain.innerText = "Login";
-  form.pAlt.innerHTML = "Dont have an account? <a class='hightlight-green'>Sign Up</a>";
+  form.pAlt.innerHTML = "Dont have an account? <a class='highlight-green'>Sign Up</a>";
 
   form.lContainer.appendChild(form.bMain);
   form.lContainer.appendChild(form.pAlt);
