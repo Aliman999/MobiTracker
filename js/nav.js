@@ -41,7 +41,8 @@ var form = {
   iEmail: document.createElement("input"),
   lContainer: document.createElement("div"),
   bMain: document.createElement("a"),
-  pAlt: document.createElement("p")
+  pAlt: document.createElement("p"),
+  iAlt: document.createElement("a");
 }
 
 function showLogin(){
@@ -66,7 +67,9 @@ function showLogin(){
   form.bMain.className = "rButton highlight-green";
   form.bMain.id = "login";
   form.bMain.innerText = "Login";
-  form.pAlt.innerHTML = "Dont have an account? <a class='highlight-green'>Sign Up</a>";
+  form.iAlt.className = "highlight-green";
+  form.iAlt.innerText = "Sign Up";
+  form.pAlt.innerHTML = "Dont have an account? "+form.iAlt;
 
   form.lContainer.appendChild(form.bMain);
   form.lContainer.appendChild(form.pAlt);
@@ -102,7 +105,9 @@ function showRegister(){
   form.bMain.className = "rButton highlight-green";
   form.bMain.id = "signUp";
   form.bMain.innerText = "Sign Up";
-  form.pAlt.innerHTML = "Already have an account? <a class='highlight-green'>Login</a>";
+  form.iAlt.className = "highlight-green";
+  form.iAlt.innerText = "Login";
+  form.pAlt.innerHTML = "Already have an account? "+form.iAlt;
 
   form.lContainer.appendChild(form.bMain);
   form.lContainer.appendChild(form.pAlt);
