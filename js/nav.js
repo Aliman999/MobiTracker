@@ -85,7 +85,7 @@ function showRegister(){
   container.appendChild(form.pUsername);
   container.appendChild(form.iUsername);
 
-  form.pEmail.innerText = "";
+  form.pEmail.innerText = "Email";
   form.iEmail.className = "form-control";
   form.iEmail.type = "email";
   form.iEmail.autocomplete = "email";
@@ -100,9 +100,9 @@ function showRegister(){
   container.appendChild(form.iPassword);
 
   form.bMain.className = "rButton highlight-green";
-  form.bMain.id = "login";
-  form.bMain.innerText = "Login";
-  form.pAlt.innerHTML = "Dont have an account? <a class='highlight-green'>Sign Up</a>";
+  form.bMain.id = "signUp";
+  form.bMain.innerText = "Sign Up";
+  form.pAlt.innerHTML = "Already have an account? <a class='highlight-green'>Login</a>";
 
   form.lContainer.appendChild(form.bMain);
   form.lContainer.appendChild(form.pAlt);
