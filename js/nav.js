@@ -70,6 +70,9 @@ function showLogin(){
   form.pAlt.innerHTML = "Dont have an account? ";
   form.iAlt.className = "highlight-green";
   form.iAlt.innerText = "Sign Up";
+  form.iAlt.onclick = function(){
+    showRegister();
+  }
   form.pAlt.appendChild(form.iAlt);
 
   form.lContainer.appendChild(form.bMain);
@@ -110,6 +113,9 @@ function showRegister(){
   form.pAlt.innerHTML = "Already have an account? ";
   form.iAlt.className = "highlight-green";
   form.iAlt.innerText = "Login";
+  form.iAlt.onclick = function(){
+    showLogin();
+  }
   form.pAlt.appendChild(form.iAlt);
 
   form.lContainer.appendChild(form.bMain);
