@@ -42,7 +42,7 @@ var form = {
   lContainer: document.createElement("div"),
   bMain: document.createElement("a"),
   pAlt: document.createElement("p"),
-  iAlt: document.createElement("a");
+  iAlt: document.createElement("a")
 }
 
 function showLogin(){
