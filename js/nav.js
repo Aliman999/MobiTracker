@@ -67,7 +67,7 @@ function showLogin(){
   form.bMain.className = "rButton highlight-green";
   form.bMain.id = "login";
   form.bMain.innerText = "Login";
-  form.pAlt.innerHTML = "Dont have an account?";
+  form.pAlt.innerHTML = "Dont have an account? ";
   form.iAlt.className = "highlight-green";
   form.iAlt.innerText = "Sign Up";
   form.pAlt.appendChild(form.iAlt);
@@ -107,7 +107,7 @@ function showRegister(){
   form.bMain.id = "signUp";
   form.bMain.innerText = "Sign Up";
 
-  form.pAlt.innerHTML = "Already have an account?";
+  form.pAlt.innerHTML = "Already have an account? ";
   form.iAlt.className = "highlight-green";
   form.iAlt.innerText = "Login";
   form.pAlt.appendChild(form.iAlt);
