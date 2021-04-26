@@ -40,22 +40,37 @@ var form = {
   pEmail: document.createElement("p"),
   iEmail: document.createElement("input"),
   lContainer: document.createElement("div"),
-  bLogin: document.createElement("a")
+  bMain: document.createElement("a"),
+  pAlt: document.createElement("p")
 }
 
 function showLogin(){
   var container = document.getElementById("mpLoginContainer");
   container.innerHTML = "";
+
   form.pUsername.innerText = "Username";
   form.iUsername.className = "form-control";
   form.iUsername.type = "text";
   form.iUsername.autocomplete = "username";
   form.iUsername.maxLength = "50";
+  container.appendChild(form.pUsername);
+  container.appendChild(form.iUsername);
+
   form.pPassword.innerText = "Password";
   form.iPassword.className = "form-control";
   form.iPassword.type = "password";
   form.iPassword.autocomplete = "current-password";
-  container.appendChild(form.pUsername);
+  container.appendChild(form.pPassword);
+  container.appendChild(form.iPassword);
+
+  form.bMain.className = "rButton highlight-green";
+  form.bMain.id = "login";
+  form.bMain.innerText = "Login";
+  form.pAlt.innerHTML = "Dont have an account? <a class='hightlight-green'>Sign Up</a>";
+
+  form.lContainer.appendChild(form.bMain);
+  form.lContainer.appendChild(form.pAlt);
+  container.appendChild(form.lContainer);
 }
 
 function showRegister(){
