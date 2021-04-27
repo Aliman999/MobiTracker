@@ -303,6 +303,8 @@
   .navEle img{height:40px}
   .avatar {height:117px}
   .mtTitle {display: none}
+}
+@media screen and (max-width: 336px) {
   .mpLoginContainer div p a {white-space: pre}
   .mpLoginContainer div p {white-space: normal}
 }
