@@ -481,6 +481,7 @@ input{
 .search-param-container{
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   max-width: 784px;
   border: 2px solid rgb(57, 206, 216);
   border-top: 0px;

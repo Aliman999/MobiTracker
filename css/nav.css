@@ -245,6 +245,12 @@
 
 .mpLoginContainer div p{
   margin-top: 12px;
+  white-space: normal;
+}
+
+.mpLoginContainer div p a{
+  white-space: pre;
+  padding: 4px 8px;
 }
 
 .mpBtnContainer{
