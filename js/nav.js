@@ -14,6 +14,7 @@ openBtn.onclick = function(){
     closeNav();
   }else{
     openNav();
+    showForm(false);
   }
 }
 
