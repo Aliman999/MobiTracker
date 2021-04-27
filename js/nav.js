@@ -103,8 +103,7 @@ function showForm(register){
 }
 
 function checkClick() {
-  var check = (navMenu.contains(event.target), openBtn.contains(event.target), openLoginBtn.contains(event.target), openSignUpBtn.contains(event.target));
-  if(!check){
+  if(!navMenu.contains(event.target) && !openBtn.contains(event.target) && openLoginBtn.contains(event.target) && openSignUpBtn.contains(event.target)){
     closeNav();
   }
 }
