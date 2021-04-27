@@ -87,7 +87,6 @@
         <div class="miniPlayerOut">
           <form class="mpLoginContainer" id="mpLoginContainer">
           </form>
-          </div>
         </div>
       </div>
       <div class="eleContainer">
