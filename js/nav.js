@@ -103,9 +103,8 @@ function showForm(register){
 }
 
 function checkClick() {
-  var isClickInside = navMenu.contains(event.target);
-  var isClickOpen = openBtn.contains(event.target);
-  if(!isClickInside && !isClickOpen){
+  var check = (navMenu.contains(event.target), openBtn.contains(event.target), openLoginBtn.contains(event.target), openSignUpBtn.contains(event.target));
+  if(!check){
     closeNav();
   }
 }
