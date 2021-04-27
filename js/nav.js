@@ -103,7 +103,11 @@ function showForm(register){
 }
 
 function checkClick() {
-  if(!navMenu.contains(event.target) && !openBtn.contains(event.target) && openLoginBtn.contains(event.target) && openSignUpBtn.contains(event.target)){
+  var isClickInside = navMenu.contains(event.target);
+  var isClickOpen = openBtn.contains(event.target);
+  var isClickBtn0 = openLoginBtn.contains(event.target);
+  var isClickBtn1 = openSignUpBtn.contains(event.target);
+  if(!isClickInside && !isClickOpen && !isClickBtn0 && !isClickBtn1){
     closeNav();
   }
 }
