@@ -19,7 +19,7 @@ openBtn.onclick = function(){
 
 openLoginBtn.onclick = function(){
   openNav();
-  showLogin(false);
+  showForm(false);
 }
 
 openSignUpBtn.onclick = function(){
