@@ -75,16 +75,8 @@ function showForm(register){
 
   form.bMain.className = "rButton highlight-green";
   form.iAlt.className = "highlight-green";
-  if(register){
-    form.bMain.id = "login";
-    form.bMain.innerText = "Login";
 
-    form.pAlt.innerHTML = "Dont have an account? ";
-    form.iAlt.innerText = "Sign Up";
-    form.iAlt.onclick = function(){
-      showForm(true);
-    }
-  }else{
+  if(register){
     form.bMain.id = "signUp";
     form.bMain.innerText = "Sign Up";
 
@@ -92,6 +84,15 @@ function showForm(register){
     form.iAlt.innerText = "Login";
     form.iAlt.onclick = function(){
       showForm(false);
+    }
+  }else{
+    form.bMain.id = "login";
+    form.bMain.innerText = "Login";
+
+    form.pAlt.innerHTML = "Dont have an account? ";
+    form.iAlt.innerText = "Sign Up";
+    form.iAlt.onclick = function(){
+      showForm(true);
     }
   }
   form.pAlt.appendChild(form.iAlt);
