@@ -136,7 +136,11 @@ function openNav() {
   }
   if(screen.width <= 1282){
     document.body.style.overflowY = "hidden";
-    document.getElementById("navMenu").style.width = screen.width-(screen.width*0.20)+"px";
+    if(screen.width-(screen.width*0.20) > 460){
+      document.getElementById("navMenu").style.width = "460px";
+    }else{
+      document.getElementById("navMenu").style.width = screen.width-(screen.width*0.20)+"px";
+    }
     document.getElementById("navBackDrop").style.zIndex = "9";
     document.getElementById("navBackDrop").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
   }else{
