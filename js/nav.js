@@ -19,12 +19,12 @@ openBtn.onclick = function(){
 
 openLoginBtn.onclick = function(){
   openNav();
-  showLogin();
+  showLogin(false);
 }
 
 openSignUpBtn.onclick = function(){
   openNav();
-  showRegister();
+  showForm(true);
 }
 
 closeBtn.onclick = function(){
@@ -45,7 +45,7 @@ var form = {
   iAlt: document.createElement("a")
 }
 
-function showLogin(){
+function showForm(register){
   var container = document.getElementById("mpLoginContainer");
   container.innerHTML = "";
 
@@ -57,47 +57,14 @@ function showLogin(){
   container.appendChild(form.pUsername);
   container.appendChild(form.iUsername);
 
-  form.pPassword.innerText = "Password";
-  form.iPassword.className = "form-control";
-  form.iPassword.type = "password";
-  form.iPassword.autocomplete = "current-password";
-  container.appendChild(form.pPassword);
-  container.appendChild(form.iPassword);
-
-  form.bMain.className = "rButton highlight-green";
-  form.bMain.id = "login";
-  form.bMain.innerText = "Login";
-  form.pAlt.innerHTML = "Dont have an account? ";
-  form.iAlt.className = "highlight-green";
-  form.iAlt.innerText = "Sign Up";
-  form.iAlt.onclick = function(){
-    showRegister();
+  if(register){
+    form.pEmail.innerText = "Email";
+    form.iEmail.className = "form-control";
+    form.iEmail.type = "email";
+    form.iEmail.autocomplete = "email";
+    container.appendChild(form.pEmail);
+    container.appendChild(form.iEmail);
   }
-  form.pAlt.appendChild(form.iAlt);
-
-  form.lContainer.appendChild(form.bMain);
-  form.lContainer.appendChild(form.pAlt);
-  container.appendChild(form.lContainer);
-}
-
-function showRegister(){
-  var container = document.getElementById("mpLoginContainer");
-  container.innerHTML = "";
-
-  form.pUsername.innerText = "Username";
-  form.iUsername.className = "form-control";
-  form.iUsername.type = "text";
-  form.iUsername.autocomplete = "username";
-  form.iUsername.maxLength = "50";
-  container.appendChild(form.pUsername);
-  container.appendChild(form.iUsername);
-
-  form.pEmail.innerText = "Email";
-  form.iEmail.className = "form-control";
-  form.iEmail.type = "email";
-  form.iEmail.autocomplete = "email";
-  container.appendChild(form.pEmail);
-  container.appendChild(form.iEmail);
 
   form.pPassword.innerText = "Password";
   form.iPassword.className = "form-control";
@@ -107,14 +74,25 @@ function showRegister(){
   container.appendChild(form.iPassword);
 
   form.bMain.className = "rButton highlight-green";
-  form.bMain.id = "signUp";
-  form.bMain.innerText = "Sign Up";
-
-  form.pAlt.innerHTML = "Already have an account? ";
   form.iAlt.className = "highlight-green";
-  form.iAlt.innerText = "Login";
-  form.iAlt.onclick = function(){
-    showLogin();
+  if(register){
+    form.bMain.id = "login";
+    form.bMain.innerText = "Login";
+
+    form.pAlt.innerHTML = "Dont have an account? ";
+    form.iAlt.innerText = "Sign Up";
+    form.iAlt.onclick = function(){
+      showForm(true);
+    }
+  }else{
+    form.bMain.id = "signUp";
+    form.bMain.innerText = "Sign Up";
+
+    form.pAlt.innerHTML = "Already have an account? ";
+    form.iAlt.innerText = "Login";
+    form.iAlt.onclick = function(){
+      showForm(false);
+    }
   }
   form.pAlt.appendChild(form.iAlt);
 
