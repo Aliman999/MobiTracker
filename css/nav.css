@@ -246,11 +246,9 @@
 .mpLoginContainer div p{
   padding: 8px 0;
   margin-top: 12px;
-  white-space: normal;
 }
 
 .mpLoginContainer div p a{
-  white-space: pre;
   padding: 4px 4px
 }
 
@@ -305,4 +303,6 @@
   .navEle img{height:40px}
   .avatar {height:117px}
   .mtTitle {display: none}
+  .mpLoginContainer div p a {white-space: pre}
+  .mpLoginContainer div p {white-space: normal}
 }
