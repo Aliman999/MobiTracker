@@ -304,7 +304,7 @@
   .avatar {height:117px}
   .mtTitle {display: none}
 }
-@media screen and (max-width: 336px) {
+@media screen and (max-width: 335px) {
   .mpLoginContainer div p a {white-space: pre}
   .mpLoginContainer div p {white-space: normal}
 }
