@@ -39,7 +39,7 @@ var form = {
   iPassword: document.createElement("input"),
   pEmail: document.createElement("p"),
   iEmail: document.createElement("input"),
-  lContainer: document.createElement("div"),
+  lContainer: document.createElement("form"),
   bMain: document.createElement("a"),
   pAlt: document.createElement("p"),
   iAlt: document.createElement("a")

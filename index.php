@@ -85,7 +85,7 @@
       </div>
       <div class="miniPlayerDivOut">
         <div class="miniPlayerOut">
-          <div class="mpLoginContainer" id="mpLoginContainer">
+          <form class="mpLoginContainer" id="mpLoginContainer">
             <p>Username</p>
             <input class="form-control" type="text" autocomplete="username" maxlength="50"  value="">
             <p>Password</p>
@@ -93,7 +93,7 @@
             <div class="mpBtnContainer">
               <a class="rButton highlight-green" id="login">Login</a>
               <p>Dont have an account? <a class="highlight-green">Sign Up</a></p>
-            </div>
+            </form>
           </div>
         </div>
       </div>
