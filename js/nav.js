@@ -38,7 +38,12 @@ function register(username, email, password){
   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   request.send("username="+username+"&email="+email+"&password="+password);
   request.onload = function(){
-    console.log(request.response);
+    var response = JSON.parse(request.response);
+    if(response.username || response.email || response.password){
+      console.log("Failed");
+    }else{
+      console.log("Registered");
+    }
   }
 }
 
