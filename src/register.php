@@ -181,6 +181,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     'email' => $email_err,
     'password' => $password_err
   );
-  echo JSON.encode($errors);
+  echo json_encode($errors);
 }
 ?>
