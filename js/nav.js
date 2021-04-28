@@ -54,6 +54,30 @@ function register(username, email, password){
       form.pPasswordErr.classList.add("hidden");
       form.pSuccess.classList.remove("hidden");
       form.pSuccess.innerText = "Successfully Registered!";
+      setTimeout(function(){
+        showForm(false);
+      }, 2000);
+    }
+  }
+}
+
+function login(){
+  request.open("POST", "src/login.php");
+  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  request.send("username="+username+"&email="+email+"&password="+password);
+  request.onload = function(){
+    var response = JSON.parse(request.response);
+    if(response.username){
+      form.pUsernameErr.classList.remove("hidden");
+      form.pUsernameErr.innerText = response.username;
+    }else if(response.password){
+      form.pPasswordErr.classList.remove("hidden");
+      form.pPasswordErr.innerText = response.password;
+    }else{
+      form.pUsernameErr.classList.add("hidden");
+      form.pPasswordErr.classList.add("hidden");
+      form.pSuccess.classList.remove("hidden");
+      form.pSuccess.innerText = "Logged in!";
     }
   }
 }
@@ -131,6 +155,9 @@ function showForm(register){
   if(register){
     form.bMain.id = "signUp";
     form.bMain.innerText = "Sign Up";
+    form.bMain.onclick = function(){
+      register(form.iUsername.value, form.iEmail.value, form.iPassword.value);
+    }
 
     form.pAlt.innerHTML = "Already have an account? ";
     form.iAlt.innerText = "Login";
@@ -140,6 +167,9 @@ function showForm(register){
   }else{
     form.bMain.id = "login";
     form.bMain.innerText = "Login";
+    form.bMain.onclick = function(){
+      login(form.iUsername.value, form.iPassword.value);
+    }
 
     form.pAlt.innerHTML = "Dont have an account? ";
     form.iAlt.innerText = "Sign Up";

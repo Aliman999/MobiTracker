@@ -140,7 +140,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                               if($_GET['ref'] == "escrow"){
                                 $_GET['ref'] = "contracts/escrow";
                               }
-                              header("location: ../".$_GET['ref']);
                             }
                         } else{
                             // Display an error message if password is not valid
@@ -162,5 +161,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Close connection
     mysqli_close($link);
+    $errors = array(
+      'username' => $username_err,
+      'password' => $password_err
+    );
+    echo json_encode($errors);
 }
 ?>
