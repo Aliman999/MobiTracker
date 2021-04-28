@@ -13,7 +13,7 @@ $headers = $_SESSION['token'];
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
   if($_SESSION['banned'] == 0){
-    $username_err = "Your account is banned."
+    $username_err = "Your account is banned.";
     echo json_encode($username_err);
     exit;
   }else{
