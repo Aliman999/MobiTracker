@@ -36,10 +36,9 @@ closeBtn.onclick = function(){
 function register(username, email, password){
   request.open("POST", "src/register.php");
   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  request.responseType = "json";
   request.send("username="+username+"&email="+email+"&password="+password);
   request.onload = function(){
-    var response = request.response;
+    var response = JSON.parse(request.response);
     if(response.username){
       form.pUsernameErr.classList.remove("hidden");
       form.pUsernameErr.innerText = response.username;
