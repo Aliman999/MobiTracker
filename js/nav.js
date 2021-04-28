@@ -61,10 +61,10 @@ function register(username, email, password){
   }
 }
 
-function login(){
+function login(username, password){
   request.open("POST", "src/login.php");
   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  request.send("username="+username+"&email="+email+"&password="+password);
+  request.send("username="+username+"&password="+password);
   request.onload = function(){
     var response = JSON.parse(request.response);
     if(response.username){
