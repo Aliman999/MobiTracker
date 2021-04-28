@@ -38,8 +38,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           $username_err = "This handle has been taken";
         }else{
           $obj = json_decode(file_get_contents($requestURL.$_POST['username']), true);
-          $res = $obj['data']['profile']['badge'];
 
+          $sql = "SELECT id, username, signup FROM players WHERE (username = ? AND signup = 0)";
+          if($obj['data']['profile']){
+            if($stmt = mysqli_prepare($link, $sql)){
+
+              mysqli_stmt_bind_param($stmt, "s", $param_username);
+              $param_username = trim($_POST["username"]);
+
+              if(mysqli_stmt_execute($stmt)){
+                mysqli_stmt_store_result($stmt);
+                if(mysqli_stmt_num_rows($stmt) == 1){
+                  $update = 1;
+                }
+              }
+            }
+          }else{
+            $username_err = "This is not a RSI Handle";
+          }
+
+          $res = $obj['data']['profile']['badge'];
           if($res == "Developer" || $res == "Administrator" || $res == "Moderator" || $res == "Staff" || $res == "Creator"){
             $username_err = "You cannot use this Handle";
             $username = "";
@@ -68,23 +86,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                   $update = 1;
                 }
               }else{
-                $sql = "SELECT id, username, signup FROM players WHERE (username = ? AND signup = 0)";
-                if(isset($username)){
-                  if($stmt = mysqli_prepare($link, $sql)){
-
-                    mysqli_stmt_bind_param($stmt, "s", $param_username);
-                    $param_username = trim($_POST["username"]);
-
-                    if(mysqli_stmt_execute($stmt)){
-                      mysqli_stmt_store_result($stmt);
-                      if(mysqli_stmt_num_rows($stmt) == 1){
-                        $update = 1;
-                      }
-                    }
-                  }
-                }else{
-                  $username_err = "This is not a RSI Handle";
-                }
                 $update = 0;
               }
             }
