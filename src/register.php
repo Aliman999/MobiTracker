@@ -136,11 +136,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       $param_email = password_hash($email, PASSWORD_DEFAULT); // email hash
       $param_avatar = $avatar;
       $sql = "INSERT INTO players (cID, username, password, email, organization, avatar, signup) VALUES ($cID, '$param_username', '$param_password', '$param_email', '{}', '$param_avatar', 1);";
-      if(mysqli_query($link, $sql)){
-        header("location: ../login");
-      }else{
-        echo $sql;
-      }
+      mysqli_query($link, $sql);
       // Close statement
       mysqli_stmt_close($stmt);
   }
@@ -159,13 +155,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               $param_username = $username;
 
               // Attempt to execute the prepared statement
-              if(mysqli_stmt_execute($stmt)){
-                  // Redirect to login page
-                  header("location: ../login");
-              } else{
-                  echo "Something went wrong. Please try again later. PT3";
-                  echo "Prepare error: " . mysqli_error($stmt);
-              }
+              mysqli_stmt_execute($stmt)
 
               // Close statement
               mysqli_stmt_close($stmt);
