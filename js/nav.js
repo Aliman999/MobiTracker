@@ -78,6 +78,9 @@ function login(username, password){
       form.pPasswordErr.classList.add("hidden");
       form.pSuccess.classList.remove("hidden");
       form.pSuccess.innerText = "Logged in!";
+      setTimeout(function(){
+        location.reload();
+      }, 2000);
     }
   }
 }
@@ -150,7 +153,7 @@ function showForm(register){
 
   form.pSuccess.className = "highlight-green hidden";
   form.bMain.className = "rButton highlight-green";
-  
+
   form.pAlt.className = "form-alt";
   form.iAlt.className = "highlight-green";
 
