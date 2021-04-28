@@ -5,6 +5,7 @@ var closeBtn = document.getElementById("closeNavBtn");
 var eleCount = document.getElementsByClassName("navEle");
 var navMenu = document.getElementById("navMenu");
 var iContainer = document.getElementById("iContainer");
+var query = new XMLHttpRequest();
 iContainer.sibling = document.getElementById("sPContainer");
 openBtn.active = false;
 
@@ -32,8 +33,18 @@ closeBtn.onclick = function(){
   closeNav();
 }
 
+function register(){
+  request.open("POST", "https://mobitracker.co/src/register.php");
+  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  request.responseType = "json";
+  request.send();
+  request.onload = function(){
+
+  }
+}
 
 var form = {
+  pTitle: document.createElement("h2"),
   pUsername: document.createElement("p"),
   iUsername: document.createElement("input"),
   pPassword: document.createElement("p"),
@@ -49,6 +60,13 @@ var form = {
 function showForm(register){
   var container = document.getElementById("mpLoginContainer");
   container.innerHTML = "";
+
+  if(register){
+    pTitle.innerText = "Register";
+  }else{
+    pTitle.innerText = "Login";
+  }
+  container.appendChild(form.pTitle);
 
   form.pUsername.innerText = "Username";
   form.iUsername.className = "form-control";
