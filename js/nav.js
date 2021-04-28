@@ -54,7 +54,7 @@ function register(username, email, password){
 }
 
 var form = {
-  pTitle: document.createElement("h3"),
+  pTitle: document.createElement("h2"),
 
   pUsername: document.createElement("p"),
   iUsername: document.createElement("input"),
