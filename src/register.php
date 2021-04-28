@@ -5,12 +5,11 @@ if (empty($_SESSION['token'])) {
 }
 // Include config file
 require_once "../src/config.php";
-require_once "checkHandle.php";
 $requestURL = 'https://api.starcitizen-api.com/c13b1badf9ccd433c90b4160c7664107/v1/live/user/';
 
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 // Define variables and initialize with empty values
 $username = $password = $email = $avatar = "";
@@ -40,7 +39,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }else{
           $obj = json_decode(file_get_contents($requestURL.$_POST['username']), true);
           $res = $obj['data']['profile']['badge'];
-          
+
           if($res == "Developer" || $res == "Administrator" || $res == "Moderator" || $res == "Staff" || $res == "Creator"){
             $username_err = "You cannot use this Handle";
             $username = "";
@@ -175,5 +174,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   // Close connection
   mysqli_close($link);
+  $errors = array(
+    'username' => $username_err,
+    'email' => $email_err,
+    'password' => $password_err
+  );
+  echo JSON.stringify($errors);
 }
 ?>

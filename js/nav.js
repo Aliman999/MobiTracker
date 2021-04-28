@@ -33,7 +33,7 @@ closeBtn.onclick = function(){
   closeNav();
 }
 
-function register(){
+function register(username, email, password){
   request.open("POST", "https://mobitracker.co/src/register.php");
   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   request.responseType = "json";
