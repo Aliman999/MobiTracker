@@ -92,6 +92,7 @@ function showForm(register){
   container.appendChild(form.pTitle);
 
   form.pUsername.innerText = "Username";
+  form.pUsername.className = "inputHeader";
   form.iUsername.className = "form-control";
   form.pUsernameErr.className = "highlight-red hidden";
   form.iUsername.type = "text";
@@ -103,6 +104,7 @@ function showForm(register){
 
   if(register){
     form.pEmail.innerText = "Email";
+    form.pEmail.className = "inputHeader";
     form.pEmailErr.className = "highlight-red hidden";
     form.iEmail.className = "form-control";
     form.iEmail.type = "email";
@@ -113,6 +115,7 @@ function showForm(register){
   }
 
   form.pPassword.innerText = "Password";
+  form.pPassword.className = "inputHeader";
   form.pPasswordErr.className = "highlight-red hidden";
   form.iPassword.className = "form-control form-control-last";
   form.iPassword.type = "password";
