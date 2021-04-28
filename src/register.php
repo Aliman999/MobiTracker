@@ -5,7 +5,7 @@ if (empty($_SESSION['token'])) {
 }
 // Include config file
 require_once "../src/config.php";
-$requestURL = 'https://api.starcitizen-api.com/c13b1badf9ccd433c90b4160c7664107/v1/live/user/';
+$requestURL = 'https://api.starcitizen-api.com/'.$key.'/v1/live/user/';
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
