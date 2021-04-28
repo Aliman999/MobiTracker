@@ -114,7 +114,7 @@ function showForm(register){
 
   form.pPassword.innerText = "Password";
   form.pPasswordErr.className = "highlight-red hidden";
-  form.iPassword.className = "form-control";
+  form.iPassword.className = "form-control form-control-last";
   form.iPassword.type = "password";
   form.iPassword.autocomplete = "current-password";
   container.appendChild(form.pPassword);

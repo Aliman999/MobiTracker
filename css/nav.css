@@ -291,7 +291,7 @@
   color: #C4D7E6;
   background-color: #253139;
 }
-.form-control:last-child{
+.form-control-last{
   margin-bottom: 16px;
 }
 
