@@ -49,6 +49,12 @@ function register(username, email, password){
     }else if(response.password){
       form.pPasswordErr.classList.remove("hidden");
       form.pPasswordErr.innerText = response.password;
+    }else{
+      form.pUsernameErr.classList.add("hidden");
+      form.pEmailErr.classList.add("hidden");
+      form.pPasswordErr.classList.add("hidden");
+      form.pSuccess.classList.remove("hidden");
+      form.pSuccess.innerText = "Successfully Registered!";
     }
   }
 }
@@ -116,7 +122,7 @@ function showForm(register){
   container.appendChild(form.iPassword);
   container.appendChild(form.pPasswordErr);
 
-  form.pSuccess.className = "highlight-green";
+  form.pSuccess.className = "highlight-green hidden";
   form.bMain.className = "rButton highlight-green";
   form.iAlt.className = "highlight-green";
 
