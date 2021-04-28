@@ -105,7 +105,7 @@
           <a id="mtTitle" class="mtTitle">MOBITRACKER</a>
           <a id="lmLBtn" class="verify_btn lmBtn <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "hidden";} ?>">Login</a>
           <a id="lmSBtn" class="verify_btn <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "hidden";} ?>">Sign Up</a>
-          <div id="navBtnContainer" class="navBtnContainer">
+          <div id="navBtnContainer" class="navBtnContainer <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "lmBtn";} ?>">
             <div class="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "loggedIn";}else{echo "loggedOut";} ?>"></div>
             <div class="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "loggedIn";}else{echo "loggedOut";} ?>"></div>
             <div class="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "loggedIn";}else{echo "loggedOut";} ?>"></div>
