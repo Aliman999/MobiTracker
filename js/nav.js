@@ -36,11 +36,14 @@ closeBtn.onclick = function(){
 function register(username, email, password){
   request.open("POST", "src/register.php");
   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  request.responseType = "json";
   request.send("username="+username+"&email="+email+"&password="+password);
   request.onload = function(){
-    var response = JSON.parse(request.response);
+    var response = request.response;
     if(response.username || response.email || response.password){
-
+      form.pUsernameErr.innerText = response.username;
+      form.pEmailErr.innerText = response.email;
+      form.pPasswordErr.innerText = response.password;
     }else{
       console.log("Registered");
     }
@@ -60,9 +63,10 @@ var form = {
 
   pEmail: document.createElement("p"),
   iEmail: document.createElement("input"),
-  pEmail: document.createElement("p"),
+  pEmailErr: document.createElement("p"),
 
   lContainer: document.createElement("div"),
+  pSuccess: document.createElement("p"),
   bMain: document.createElement("a"),
   pAlt: document.createElement("p"),
   iAlt: document.createElement("a")
@@ -81,28 +85,35 @@ function showForm(register){
 
   form.pUsername.innerText = "Username";
   form.iUsername.className = "form-control";
+  form.pUsernameErr.className = "highlight-red";
   form.iUsername.type = "text";
   form.iUsername.autocomplete = "username";
   form.iUsername.maxLength = "50";
   container.appendChild(form.pUsername);
   container.appendChild(form.iUsername);
+  container.appendChild(form.pUsernameErr);
 
   if(register){
     form.pEmail.innerText = "Email";
+    form.pEmailErr.className = "highlight-red";
     form.iEmail.className = "form-control";
     form.iEmail.type = "email";
     form.iEmail.autocomplete = "email";
     container.appendChild(form.pEmail);
     container.appendChild(form.iEmail);
+    container.appendChild(form.pEmailErr);
   }
 
   form.pPassword.innerText = "Password";
+  form.pPasswordErr.className = "highlight-red";
   form.iPassword.className = "form-control";
   form.iPassword.type = "password";
   form.iPassword.autocomplete = "current-password";
   container.appendChild(form.pPassword);
   container.appendChild(form.iPassword);
+  container.appendChild(form.pPasswordErr);
 
+  form.pSuccess.className = "highlight-green";
   form.bMain.className = "rButton highlight-green";
   form.iAlt.className = "highlight-green";
 
@@ -127,6 +138,7 @@ function showForm(register){
   }
   form.pAlt.appendChild(form.iAlt);
 
+  form.lContainer.appendChild(form.pSuccess);
   form.lContainer.appendChild(form.bMain);
   form.lContainer.appendChild(form.pAlt);
   container.appendChild(form.lContainer);
