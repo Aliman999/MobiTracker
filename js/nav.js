@@ -40,7 +40,7 @@ function register(username, email, password){
   request.onload = function(){
     var response = JSON.parse(request.response);
     if(response.username || response.email || response.password){
-      console.log("Failed");
+
     }else{
       console.log("Registered");
     }
@@ -49,12 +49,19 @@ function register(username, email, password){
 
 var form = {
   pTitle: document.createElement("h2"),
+
   pUsername: document.createElement("p"),
   iUsername: document.createElement("input"),
+  pUsernameErr: document.createElement("p"),
+
   pPassword: document.createElement("p"),
   iPassword: document.createElement("input"),
+  pPasswordErr: document.createElement("p"),
+
   pEmail: document.createElement("p"),
   iEmail: document.createElement("input"),
+  pEmail: document.createElement("p"),
+
   lContainer: document.createElement("div"),
   bMain: document.createElement("a"),
   pAlt: document.createElement("p"),
