@@ -155,7 +155,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               $param_username = $username;
 
               // Attempt to execute the prepared statement
-              mysqli_stmt_execute($stmt)
+              mysqli_stmt_execute($stmt);
 
               // Close statement
               mysqli_stmt_close($stmt);
