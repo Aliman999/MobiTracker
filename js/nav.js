@@ -40,12 +40,15 @@ function register(username, email, password){
   request.send("username="+username+"&email="+email+"&password="+password);
   request.onload = function(){
     var response = request.response;
-    if(response.username || response.email || response.password){
+    if(response.username){
+      form.pUsernameErr.classList.remove("hidden");
       form.pUsernameErr.innerText = response.username;
+    }else if(response.email){
+      form.pEmailErr.classList.remove("hidden");
       form.pEmailErr.innerText = response.email;
+    }else if(response.password){
+      form.pPasswordErr.classList.remove("hidden");
       form.pPasswordErr.innerText = response.password;
-    }else{
-      console.log("Registered");
     }
   }
 }
@@ -85,7 +88,7 @@ function showForm(register){
 
   form.pUsername.innerText = "Username";
   form.iUsername.className = "form-control";
-  form.pUsernameErr.className = "highlight-red";
+  form.pUsernameErr.className = "highlight-red hidden";
   form.iUsername.type = "text";
   form.iUsername.autocomplete = "username";
   form.iUsername.maxLength = "50";
@@ -95,7 +98,7 @@ function showForm(register){
 
   if(register){
     form.pEmail.innerText = "Email";
-    form.pEmailErr.className = "highlight-red";
+    form.pEmailErr.className = "highlight-red hidden";
     form.iEmail.className = "form-control";
     form.iEmail.type = "email";
     form.iEmail.autocomplete = "email";
@@ -105,7 +108,7 @@ function showForm(register){
   }
 
   form.pPassword.innerText = "Password";
-  form.pPasswordErr.className = "highlight-red";
+  form.pPasswordErr.className = "highlight-red hidden";
   form.iPassword.className = "form-control";
   form.iPassword.type = "password";
   form.iPassword.autocomplete = "current-password";
