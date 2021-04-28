@@ -11,6 +11,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+var_dump($_POST);
+
 // Define variables and initialize with empty values
 $username = $password = $email = $avatar = "";
 $username_err = $password_err = $email_err = "";
@@ -179,6 +181,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     'email' => $email_err,
     'password' => $password_err
   );
-  echo JSON.stringify($errors);
+  echo JSON.encode($errors);
 }
 ?>
