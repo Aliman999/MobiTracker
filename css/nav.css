@@ -228,8 +228,9 @@
 }
 
 .miniPlayerOut p{
-  padding-left: 0;
   font-size: 16px;
+  padding-left: 0;
+  margin-top:8px;
 }
 
 .mpLoginContainer input{
