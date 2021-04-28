@@ -233,8 +233,11 @@
 }
 
 .mpLoginContainer input{
-  margin-bottom: 20px;
   padding: 4px;
+}
+
+.mpLoginContainer input:last-child{
+  margin-bottom: 20px;
 }
 
 .mpLoginContainer div{
