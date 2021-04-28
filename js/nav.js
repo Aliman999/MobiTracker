@@ -77,9 +77,9 @@ function showForm(register){
   container.innerHTML = "";
 
   if(register){
-    pTitle.innerText = "Register";
+    form.pTitle.innerText = "Register";
   }else{
-    pTitle.innerText = "Login";
+    form.pTitle.innerText = "Login";
   }
   container.appendChild(form.pTitle);
 
