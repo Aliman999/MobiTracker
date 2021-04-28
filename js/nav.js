@@ -37,7 +37,7 @@ function register(username, email, password){
   request.open("POST", "https://mobitracker.co/src/register.php");
   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   request.responseType = "json";
-  request.send();
+  request.send("username="+username+"&email"+email+"&password"+password);
   request.onload = function(){
     console.log(request.response);
   }
