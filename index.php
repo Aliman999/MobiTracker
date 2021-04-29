@@ -8,7 +8,6 @@
     if($_SESSION['banned'] == 1){
       header("location: signout");
     }
-    var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html>
