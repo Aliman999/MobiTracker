@@ -1,6 +1,4 @@
 var openBtn = document.getElementById("navBtnContainer");
-var openLoginBtn = document.getElementById("lmLBtn");
-var openSignUpBtn = document.getElementById("lmSBtn");
 var closeBtn = document.getElementById("closeNavBtn");
 var eleCount = document.getElementsByClassName("navEle");
 var navMenu = document.getElementById("navMenu");
@@ -36,8 +34,23 @@ getUser.onload = function(){
   flagged = userResponse["flagged"];
   faction = userResponse["faction"];
   avatar = userResponse["avatar"];
-}
 
+  if(session){
+    var openLoginBtn = document.getElementById("lmLBtn");
+    var openSignUpBtn = document.getElementById("lmSBtn");
+    openLoginBtn.onclick = function(){
+      openNav();
+      showForm(false);
+    }
+
+    openSignUpBtn.onclick = function(){
+      openNav();
+      showForm(true);
+    }
+  }else{
+
+  }
+}
 
 openBtn.onclick = function(){
   if(this.active){
@@ -46,16 +59,6 @@ openBtn.onclick = function(){
     openNav();
     showForm(false);
   }
-}
-
-openLoginBtn.onclick = function(){
-  openNav();
-  showForm(false);
-}
-
-openSignUpBtn.onclick = function(){
-  openNav();
-  showForm(true);
 }
 
 closeBtn.onclick = function(){
