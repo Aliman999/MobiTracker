@@ -10,6 +10,35 @@ iContainer.sibling = document.getElementById("sPContainer");
 openBtn.active = false;
 
 
+var getUser = new XMLHttpRequest();
+var session,
+    sessionUser,
+    comcount,
+    search,
+    limited,
+    verified,
+    flagged,
+    faction;
+getUser.open("GET", "https://mobitracker.co/src/user.php");
+getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
+getUser.responseType = "json";
+getUser.async = false;
+getUser.send();
+getUser.onload = function(){
+  var userResponse = getUser.response;
+  session = userResponse["session"];
+  sessionUser = userResponse["sessionUser"];
+  comcount = userResponse["comcount"];
+  search = userResponse["search"];
+  limited = userResponse["limited"];
+  verified = userResponse["verified"];
+  flagged = userResponse["flagged"];
+  faction = userResponse["faction"];
+  avatar = userResponse["avatar"];
+}
+
+
 openBtn.onclick = function(){
   if(this.active){
     closeNav();

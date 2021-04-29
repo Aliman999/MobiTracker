@@ -31,6 +31,9 @@ if (isset($headers)) {
     }else{
       $user['limited'] = false;
     }
+    if(isset($_SESSION['avatar'])){
+
+    }
     if(isset($_SESSION['verified'])){
       $user['verified'] = $_SESSION['verified'];
     }else{

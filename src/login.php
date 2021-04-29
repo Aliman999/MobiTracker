@@ -70,7 +70,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     mysqli_stmt_bind_result($stmt, $cID, $username, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
-                            $sql = "SELECT JSON_EXTRACT(organization, '$**.sid') AS sid, JSON_EXTRACT(organization, '$**.rank') AS orgRank, verify, contracts, faction, daysleft, contractPref, banned, com_count, contractCD FROM players WHERE username = '$param_username'";
+                            $sql = "SELECT JSON_EXTRACT(organization, '$**.sid') AS sid, JSON_EXTRACT(organization, '$**.rank') AS orgRank, verify, contracts, faction, daysleft, avatar, contractPref, banned, com_count, contractCD FROM players WHERE username = '$param_username'";
                             $result = mysqli_query($link, $sql);
                             $row = mysqli_fetch_assoc($result);
                             if($row['verify'] == 1){
