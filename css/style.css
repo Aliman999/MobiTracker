@@ -405,6 +405,7 @@ input{
   color: #FF5A5A;
 }
 .flag:hover{
+  color: #FF5A5A;
   text-shadow: 0px 0px 5px #ff5a5a;
 }
 .refresh{
