@@ -932,6 +932,8 @@ function populateHeader(jsonObj) {
   tooltiptext.className = "tooltiptext";
   var tags = document.createElement("img");
   tags.className = "careers";
+  tags.addEventListener('mouseover', createTip);
+  tags.addEventListener('mouseout', cancelTip);
   var tooltip = document.createElement("span");
   tooltip.className = "tooltip";
   tooltip.style.position = "absolute";
@@ -951,15 +953,11 @@ function populateHeader(jsonObj) {
       }
       for(var x = 0; x<selectedCareer.length; x++){
         if(selectedCareer[x] == 1){
-          tags.addEventListener('mouseover', createTip);
-          tags.addEventListener('mouseout', cancelTip);
           tags.className = "careers";
           tags.title = careersText[x];
           tags.src = careers[x];
           tagContainer.appendChild(tags.cloneNode(true));
         }else{
-          tags.addEventListener('mouseover', createTip);
-          tags.addEventListener('mouseout', cancelTip);
           tags.className = "careers notSelected";
           tags.src = careers[x];
           tagContainer.appendChild(tags.cloneNode(true));
