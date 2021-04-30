@@ -5,26 +5,12 @@ error_reporting(E_ALL);
 $_SESSION['token'] = "SET";
 require_once "src/config.php";
 
-$sql = "SELECT apiKey, count FROM apiKeys where note like '%index0.php%';";
+$sql = "SELECT apiKey FROM apiKeys where note like '%index0.php%' GROUP BY apiKey, count ORDER BY count desc LIMIT 1;";
 $result = mysqli_query($link, $sql);
-$apiKeys = array();
-while($row = mysqli_fetch_assoc($result)){
-  $apiKeys[] = $row;
-}
-var_dump($apiKeys);
+$key = mysqli_fetch_assoc($result);
+var_dump($key);
 
-function testKey(){
-  global $apiKeys;
-  /*
-  for($i = 0; $i < length($apiKeys); $i++){
-  }
-  */
-  $counts = min(array_column($apiKeys, 1));
-  $availableKey = $apiKeys[array_search($counts)];
-  echo array_search(min(array_column($apiKeys, 1)), $apiKeys);
-}
 
-$key = testKey();
 
 $updateOrgSID = "EVILORG";
 /*
