@@ -8,7 +8,7 @@ require_once "src/config.php";
 $sql = "SELECT apiKey, count FROM apiKeys where note like '%index0.php%';";
 $result = mysqli_query($link, $sql);
 $apiKeys = mysqli_fetch_assoc($result);
-var_dump($apiKeys);
+var_dump($result);
 
 function testKey(){
   global $apiKeys;
