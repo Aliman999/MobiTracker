@@ -10,7 +10,7 @@ $result = mysqli_query($link, $sql);
 $apiKeys = mysqli_fetch_assoc($result);
 var_dump($apiKeys);
 
-function selectKey(){
+function testKey(){
   global $apiKeys;
   /*
   for($i = 0; $i < length($apiKeys); $i++){
@@ -21,7 +21,7 @@ function selectKey(){
   echo array_search(min(array_column($apiKeys, 1)), $apiKeys);
 }
 
-$key = selectKey();
+$key = testKey();
 
 $updateOrgSID = "EVILORG";
 /*
