@@ -8,7 +8,7 @@ require_once "src/config.php";
 $key = $count = $id = "";
 
 function getKey(){
-  global $id, $key, $count;
+  global $id, $key, $count, $link;
   $sql = "SELECT id, apiKey, count FROM apiKeys WHERE note like '%index0.php%' GROUP BY apiKey, count ORDER BY count desc LIMIT 1;";
   $result = mysqli_query($link, $sql);
   $key = mysqli_fetch_assoc($result);
@@ -18,7 +18,7 @@ function getKey(){
 }
 
 function setKey(){
-  global $id, $key, $count;
+  global $id, $key, $count, $link;
   if($key != ""){
     $count = $count-1;
     $sql = "UPDATE apiKeys SET count = $count WHERE id = $id";
