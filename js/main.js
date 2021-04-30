@@ -376,6 +376,23 @@ function pages(p, m, v, ele){
   }
 }
 
+function createTip(ev){
+  var title = this.title;
+  this.title = '';
+  this.setAttribute("tooltip", title);
+  var tooltipWrap = document.createElement("div");
+  tooltipWrap.className = 'ttooltip';
+  tooltipWrap.appendChild(document.createTextNode(title));
+
+  var firstChild = document.body.firstChild;
+  firstChild.parentNode.insertBefore(tooltipWrap, firstChild);
+}
+function cancelTip(ev){
+  var title = this.getAttribute("tooltip");
+  this.title = title;
+  this.removeAttribute("tooltip");
+}
+
 //search By
 var boolsbc = false;
 var boolsbr = false;
@@ -943,39 +960,8 @@ function populateHeader(jsonObj) {
           tagContainer.appendChild(tags.cloneNode(true));
         }
       }
-      tagContainer.onmouseover = function(e){
-        if(e.target == this.children[1]){
-          tooltip.textContent = careersText[0];
-          tooltip.style.visibility = "visible";
-          tooltip.style.left = (e.target.offsetLeft-8)+"px";
-          tooltip.style.top = (e.target.offsetTop+33)+"px";
-        }else if (e.target == this.children[2]) {
-          tooltip.textContent = careersText[1];
-          tooltip.style.visibility = "visible";
-          tooltip.style.left = (e.target.offsetLeft-12.6)+"px";
-          tooltip.style.top = (e.target.offsetTop+33)+"px";
-        }else if (e.target == this.children[3]) {
-          tooltip.textContent = careersText[2];
-          tooltip.style.visibility = "visible";
-          tooltip.style.left = (e.target.offsetLeft-21)+"px";
-          tooltip.style.top = (e.target.offsetTop+33)+"px";
-        }else if (e.target == this.children[4]) {
-          tooltip.textContent = careersText[3];
-          tooltip.style.visibility = "visible";
-          tooltip.style.left = (e.target.offsetLeft-10)+"px";
-          tooltip.style.top = (e.target.offsetTop+33)+"px";
-        }else if (e.target == this.children[5]) {
-          tooltip.textContent = careersText[4];
-          tooltip.style.visibility = "visible";
-          tooltip.style.left = (e.target.offsetLeft-11)+"px";
-          tooltip.style.top = (e.target.offsetTop+33)+"px";
-        }else if (e.target == this.children[6]) {
-          tooltip.textContent = careersText[5];
-          tooltip.style.visibility = "visible";
-          tooltip.style.left = (e.target.offsetLeft-14)+"px";
-          tooltip.style.top = (e.target.offsetTop+33)+"px";
-        }
-      };
+      tagContainer.addEventListener('mouseover', createTip);
+      tagContainer.addEventListener('mouseout', cancelTip);
       tagContainer.onmouseout = function(e){
         tooltip.textContent = "";
         tooltip.style.visibility = "hidden";
