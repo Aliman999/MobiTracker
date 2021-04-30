@@ -13,11 +13,11 @@ $apiKeys = array(
 
 function selectKey(){
   $key = "";
+  global $apiKeys;
   /*
   for($i = 0; $i < length($apiKeys); $i++){
   }
   */
-  var_dump($apiKeys);
   echo min(array_column($apiKeys, 1));
 }
 
