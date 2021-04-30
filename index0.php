@@ -18,7 +18,7 @@ function selectKey(){
   for($i = 0; $i < length($apiKeys); $i++){
   }
   */
-  echo min(array_column($apiKeys, 1));
+  echo array_search(min(array_column($apiKeys, 1), $apiKeys));
 }
 
 $key = selectKey();
