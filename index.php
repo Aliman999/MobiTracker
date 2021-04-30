@@ -105,7 +105,7 @@
           <a id="mtTitle" class="mtTitle">MOBITRACKER</a>
           <?php if(!isset($_SESSION["loggedin"])){echo "<a id='lmLBtn' class='verify_btn lmBtn'>Login</a>";} ?>
           <?php if(!isset($_SESSION["loggedin"])){echo "<a id='lmSBtn' class='verify_btn'>Sign Up</a>";} ?>
-          <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo ""})?>
+          <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "";})?>
           <a><img class="verified" src="src/verified.png">JamesDusky</a>
           <div id="navBtnContainer" class="navBtnContainer <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "lmBtn";} ?>">
             <div class="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "loggedIn";}else{echo "loggedOut";} ?>"></div>
