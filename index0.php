@@ -1,18 +1,21 @@
 <?php
-/*
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-function selectKey(){
-  $apiKeys = array(
-  "eb275472840a55ff74bcca0ba7baced0",
-  "c032ae79fa8a389e5b6e2f17a191643e",
-  "608c3b491aed563faca4bfef14f70c1c",
-  "7d3192f880dee8c748ef4e02ee39b447",
-  "c13b1badf9ccd433c90b4160c7664107"
-  );
+$apiKeys = array(
+  array("741aec657e32c60effa94d49cca33813", 1000),
+  array("db46886588f0f62b4a6c63b20473ce99", 1000),
+  array("7e153d95cd2292706273d3927b1a1725", 1000),
+  array("4ec889f8fce000f725603ad5fcd4f34b", 1000),
+  array("7160193d04bdacf39cbbed64becb061a", 1000)
+);
 
+function selectKey(){
+  $key = "";
+  for($i = 0, $i < length($apiKeys), $i++){
+    echo min(array_column($apiKeys, 1));
+  }
   return $apiKeys[array_rand($apiKeys, 1)];
 }
 
@@ -38,4 +41,3 @@ for($i=0;$i<$grossPages;$i++){
   }
 }
 echo "!search ".join("\n", $orgMembers);
-?>
