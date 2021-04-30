@@ -50,8 +50,7 @@ a, a:link, a:hover, a:visited, a:active{
   font-weight: bold;
 }
 .loginName:hover{
-  color: #FFFFFF;
-  text-shadow: 0px 0px 5px #C4D7E6;
+  text-shadow: 0px 0px 5px #c4d7e6;
 }
 .logout_btn{
   padding:4px 8px;
