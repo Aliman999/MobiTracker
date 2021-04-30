@@ -8,6 +8,7 @@ require_once "src/config.php";
 $sql = "SELECT apiKey FROM apiKeys where note like '%index0.php%' GROUP BY apiKey, count ORDER BY count desc LIMIT 1;";
 $result = mysqli_query($link, $sql);
 $key = mysqli_fetch_assoc($result);
+$key = $key['apiKey'];
 var_dump($key);
 
 
