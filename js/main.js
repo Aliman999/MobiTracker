@@ -847,11 +847,10 @@ function populateHeader(jsonObj) {
   readRating.onreadystatechange = function(){
     if(readRating.readyState == 4){
       var ratings = JSON.parse(readRating.response);
-      ratingCount = ratings["reviewed_count"];
-      showCount.textContent = "("+ratingCount+")";
+      showCount.textContent = "("+ratings["reviewed_count"]+")";
     }
   }
-  playerPanel.appendChild(ratingCount);
+  playerPanel.appendChild(showCount);
   //Player Vouchers END
 
   //Player Org
