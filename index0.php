@@ -13,9 +13,11 @@ $apiKeys = array(
 
 function selectKey(){
   $key = "";
-  for($i = 0, $i < length($apiKeys), $i++){
-    echo min(array_column($apiKeys, 1));
+  /*
+  for($i = 0; $i < length($apiKeys); $i++){
   }
+  */
+  echo min(array_column($apiKeys, 1));
 }
 
 $key = selectKey();
