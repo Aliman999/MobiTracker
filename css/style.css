@@ -222,12 +222,10 @@ div.span{
   box-shadow: 0px 0px 15px rgba(57, 206, 216, 0.5);
 }
 img.playerbadge{
-  height:24px;
-  width:24px;
+  height:44px;
 }
 .orgLogo{
-  height:24px;
-  width: 24px;
+  height:44px;
 }
 .panelLink{
   color: #C4D7E6;
@@ -440,7 +438,7 @@ input{
 .careers{
   margin: 0px;
   padding: 4px;
-  height: 24px;
+  height: 32px;
 }
 .notSelected{
   opacity: 0.2;
