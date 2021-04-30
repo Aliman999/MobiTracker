@@ -402,6 +402,7 @@ input{
   text-shadow: 0px 0px 5px #C4D7E6;
 }
 .flag{
+  font-weight: bold;
   color: #FF5A5A;
 }
 .flag:hover{
