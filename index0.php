@@ -24,7 +24,7 @@ function setKey(){
   if($key != ""){
     $count = $count-1;
     $sql = "UPDATE apiKeys SET count = $count WHERE id = $id";
-    echo $count;
+    echo "New Count:".$count."<br>";
     mysqli_query($link, $sql);
   }else{
     return "No Key";
