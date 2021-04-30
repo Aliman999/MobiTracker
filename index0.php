@@ -3,22 +3,22 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$apiKeys = array(
-  array("741aec657e32c60effa94d49cca33813", 1000),
-  array("db46886588f0f62b4a6c63b20473ce99", 1000),
-  array("7e153d95cd2292706273d3927b1a1725", 1000),
-  array("4ec889f8fce000f725603ad5fcd4f34b", 1000),
-  array("7160193d04bdacf39cbbed64becb061a", 1000)
-);
+require_once "src/config.php";
 
+$sql = "SELECT apiKey, count FROM apiKeys where note like '%index0.php%';";
+//$sql = "SELECT username, avatar FROM players WHERE cID = $userID;";
+$result = mysqli_query($link, $sql);
+$apiKeys = mysqli_fetch_assoc($result);
+var_dump($apiKeys);
 function selectKey(){
-  $key = "";
   global $apiKeys;
   /*
   for($i = 0; $i < length($apiKeys); $i++){
   }
   */
-  var_dump(array_keys($apiKeys, min(array_column($apiKeys, 1))));
+  $counts = min(array_column($apiKeys, 1));
+  $availableKey = $apiKeys[array_search($counts)]
+  echo array_search(min(array_column($apiKeys, 1)), $apiKeys);
 }
 
 $key = selectKey();
