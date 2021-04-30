@@ -32,10 +32,10 @@ closeBtn.onclick = function(){
   closeNav();
 }
 
-function register(username, email, password){
+function register(usernam, email, password){
   request.open("POST", "src/register.php");
   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  request.send("username="+username+"&email="+email+"&password="+password);
+  request.send("username="+usernam+"&email="+email+"&password="+password);
   request.onload = function(){
     var response = JSON.parse(request.response);
     if(response.username){
