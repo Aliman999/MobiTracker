@@ -48,10 +48,10 @@ a, a:link, a:hover, a:visited, a:active{
   margin: auto 0px;
   padding: 4px;
   font-weight: bold;
-  text-shadow: 0px 0px 5px #C4D7E6;
 }
 .loginName:hover{
   color: #FFFFFF;
+  text-shadow: 0px 0px 5px #C4D7E6;
 }
 .logout_btn{
   padding:4px 8px;
