@@ -29,7 +29,7 @@ function setKey(){
   }
 }
 
-$updateOrgSID = "ASTROLLC";
+$updateOrgSID = "CCG";
 
 $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/organization/".$updateOrgSID);
 setKey();
