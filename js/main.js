@@ -849,9 +849,9 @@ function populateHeader(jsonObj) {
       var ratings = JSON.parse(readRating.response);
       ratingCount = ratings["reviewed_count"];
       showCount.textContent = "("+ratingCount+")";
-      ratingContainer.appendChild(showCount);
     }
   }
+  playerPanel.appendChild(ratingCount);
   //Player Vouchers END
 
   //Player Org
