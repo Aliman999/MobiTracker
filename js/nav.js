@@ -1,6 +1,4 @@
 var openBtn = document.getElementById("navBtnContainer");
-var openLoginBtn = document.getElementById("lmLBtn");
-var openSignUpBtn = document.getElementById("lmSBtn");
 var closeBtn = document.getElementById("closeNavBtn");
 var eleCount = document.getElementsByClassName("navEle");
 var navMenu = document.getElementById("navMenu");
@@ -16,16 +14,6 @@ openBtn.onclick = function(){
     openNav();
     showForm(false);
   }
-}
-
-openLoginBtn.onclick = function(){
-  openNav();
-  showForm(false);
-}
-
-openSignUpBtn.onclick = function(){
-  openNav();
-  showForm(true);
 }
 
 closeBtn.onclick = function(){
@@ -192,9 +180,7 @@ function showForm(register){
 function checkClick() {
   var isClickInside = navMenu.contains(event.target);
   var isClickOpen = openBtn.contains(event.target);
-  var isClickBtn0 = openLoginBtn.contains(event.target);
-  var isClickBtn1 = openSignUpBtn.contains(event.target);
-  if(!isClickInside && !isClickOpen && !isClickBtn0 && !isClickBtn1){
+  if(!isClickInside && !isClickOpen){
     closeNav();
   }
 }
