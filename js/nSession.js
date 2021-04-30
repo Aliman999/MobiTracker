@@ -55,7 +55,7 @@ function register(usernam, email, password){
       form.pSuccess.innerText = "Successfully Registered!";
       setTimeout(function(){
         showForm(false);
-      }, 2000);
+      }, 1000);
     }
   }
 }
@@ -183,8 +183,8 @@ function showForm(register){
   }
   form.pAlt.appendChild(form.iAlt);
 
-  form.lContainer.appendChild(form.pSuccess);
   form.lContainer.appendChild(form.bMain);
+  form.lContainer.appendChild(form.pSuccess);
   form.lContainer.appendChild(form.pAlt);
   container.appendChild(form.lContainer);
 }

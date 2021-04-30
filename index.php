@@ -44,30 +44,12 @@
   </head>
 
   <body>
-    <!--
     <div id="navMenu" class="navMenu">
       <div class="navTitleContainer">
         <p class="navTitle">NAVIGATE</p>
         <a href="javascript:void(0)" class="closebtn" id="closeNavBtn"><img src="src/close.png" class="navBtn"></a>
       </div>
       <div class="miniPlayerDiv">
-        <div class="miniPlayer">
-          <img src="src/avatars/avatar_default.jpg" class="avatar circleBorder">
-          <div class="loginNameContainer">
-            <img class="verified" src="src/verified.png">
-            <p class="loginName">JamesDusky</p>
-          </div>
-          <div class="miniPlayerInfo">
-            <img src="android-chrome-512x512.png" class="miniOrg circleBorder">
-            <p>Something extra long</p>
-          </div>
-        </div>
-        <div class="miniRep">
-          <p class="rBold">Experienced</p>
-          <p>Vouches: 54</p>
-          <p>Unique Vouches: 54</p>
-          <p>Contracts: 1</p>
-        </div>
       </div>
       <div class="eleContainer">
         <a class="navEle navActive"><img src="src/repHub.png" class="menuIcon"/><p>Reputation Hub</p></a>
@@ -77,7 +59,6 @@
         <a href="https://patreon.com/mobitracker" class="navEle"><img src="src/patreon.png" class="menuIcon"/><p>Patreon</p></a>
       </div>
     </div>
-    -->
     <div id="navMenu" class="navMenu">
       <div class="navTitleContainer">
         <p class="navTitle">NAVIGATE</p>
@@ -85,8 +66,28 @@
       </div>
       <div class="miniPlayerDivOut">
         <div class="miniPlayerOut">
-          <form class="mpLoginContainer" id="mpLoginContainer">
-          </form>
+          <?php
+            if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+              echo "<div class='mpLoginContainer' id='mpLoginContainer'></div>";
+            }
+          ?>
+          <div class="miniPlayer">
+            <img src="src/avatars/avatar_default.jpg" class="avatar circleBorder">
+            <div class="loginNameContainer">
+              <img class="verified" src="src/verified.png">
+              <p class="loginName">JamesDusky</p>
+            </div>
+            <div class="miniPlayerInfo">
+              <img src="android-chrome-512x512.png" class="miniOrg circleBorder">
+              <p>Something extra long</p>
+            </div>
+          </div>
+          <div class="miniRep">
+            <p class="rBold">Experienced</p>
+            <p>Vouches: 54</p>
+            <p>Unique Vouches: 54</p>
+            <p>Contracts: 1</p>
+          </div>
         </div>
       </div>
       <div class="eleContainer">
