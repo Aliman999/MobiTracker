@@ -837,6 +837,23 @@ function populateHeader(jsonObj) {
   header.appendChild(playerPanel);
   //Player Handle END
 
+  //Player Badge
+  var playerbadge = document.createElement("img");
+  var playertitle = document.createElement("p");
+  var ptitle = document.createElement("div");
+  ptitle.className = "ptitle";
+
+  playertitle.className = "playertitle";
+  playertitle.textContent = jsonObj["data"]["profile"]["badge"];
+
+  playerbadge.className = "playerbadge";
+  playerbadge.src = jsonObj["data"]["profile"]["badge_image"];
+
+  header.appendChild(ptitle);
+  ptitle.appendChild(playerbadge);
+  ptitle.appendChild(playertitle);
+  //Player Badge END
+
   //Rating Container
   var ratingContainer = document.createElement("div");
   ratingContainer.className  = "ptitle";
@@ -890,22 +907,6 @@ function populateHeader(jsonObj) {
   }
   //Player Org END
 
-  //Player Badge
-  var playerbadge = document.createElement("img");
-  var playertitle = document.createElement("p");
-  var ptitle = document.createElement("div");
-  ptitle.className = "ptitle";
-
-  playertitle.className = "playertitle";
-  playertitle.textContent = jsonObj["data"]["profile"]["badge"];
-
-  playerbadge.className = "playerbadge";
-  playerbadge.src = jsonObj["data"]["profile"]["badge_image"];
-
-  header.appendChild(ptitle);
-  ptitle.appendChild(playerbadge);
-  ptitle.appendChild(playertitle);
-  //Player Badge END
   //Tag
   var selectedCareer = [];
   var tagContainer = document.createElement("div");
