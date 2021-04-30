@@ -33,6 +33,7 @@ function setKey(){
 $updateOrgSID = "ASTROLLC";
 
 $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/organization/".$updateOrgSID);
+setKey();
 $xmlResult = json_decode($json, true);
 
 $memberCount = $xmlResult['data']['members'];
