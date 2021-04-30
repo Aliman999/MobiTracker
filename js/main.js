@@ -837,6 +837,23 @@ function populateHeader(jsonObj) {
   header.appendChild(playerPanel);
   //Player Handle END
 
+  //Player Vouchers
+  var showCount = document.createElement("p");
+  showCount.className = "ratingCount";
+  var queryString = "?username=" + node.value;
+  readRating.open("GET", "src/rating.php" + queryString, true);
+  readRating.setRequestHeader(tokenHeader.name,tokenHeader.content);
+  readRating.send();
+  readRating.onreadystatechange = function(){
+    if(readRating.readyState == 4){
+      var ratings = JSON.parse(readRating.response);
+      ratingCount = ratings["reviewed_count"];
+      showCount.textContent = "("+ratingCount+")";
+      ratingContainer.appendChild(showCount);
+    }
+  }
+  //Player Vouchers END
+
   //Player Org
   var orgLogo = document.createElement("img");
   var orgName = document.createElement("p");
@@ -882,40 +899,6 @@ function populateHeader(jsonObj) {
   ptitle.appendChild(playerbadge);
   ptitle.appendChild(playertitle);
   //Player Badge END
-  //Rating Container
-  var ratingContainer = document.createElement("div");
-  ratingContainer.className  = "ptitle";
-  var e = 0;
-  var ratingStar = document.createElement("img");
-  var showCount = document.createElement("p");
-  showCount.className = "ratingCount";
-  ratingStar.className = "rating ratinguser";
-  ratingStar.src = "src/star.png";
-  var queryString = "?username=" + node.value;
-  readRating.open("GET", "src/rating.php" + queryString, true);
-  readRating.setRequestHeader(tokenHeader.name,tokenHeader.content);
-  readRating.send();
-  readRating.onreadystatechange = function(){
-    if(readRating.readyState == 4){
-      var ratings = JSON.parse(readRating.response);
-      rating = ratings["avgRating"];
-      ratingCount = ratings["reviewed_count"];
-      if(rating !== "-1"){
-        for(e=0; e<5 ; e++){
-          if(e==rating){
-            ratingStar.src="src/star-empty.png";
-            ratingContainer.appendChild(ratingStar.cloneNode(true));
-          }else{
-            ratingContainer.appendChild(ratingStar.cloneNode(true));
-          }
-        }
-        showCount.textContent = "("+ratingCount+")";
-        ratingContainer.appendChild(showCount);
-      }
-    }
-  }
-  header.appendChild(ratingContainer);
-  //Rating Container END
   //Tag
   var selectedCareer = [];
   var tagContainer = document.createElement("div");
