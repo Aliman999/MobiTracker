@@ -808,13 +808,15 @@ function populateHeader(jsonObj) {
   //Player ID END
 
   //Player Avatar
+  var playerDiv = document.createElement("div");
+
   var playeravatar = document.createElement("img");
   playeravatar.className = "playeravatar";
   playeravatar.src = jsonObj["data"]["profile"]["image"];
   playeravatar.onerror = function(){
     this.src = "src/avatars/avatar_default.jpg";
   }
-  header.appendChild(playeravatar);
+  playerDiv.appendChild(playeravatar);
   //Player Avatar END
 
 
@@ -834,8 +836,25 @@ function populateHeader(jsonObj) {
 
   handleLink.appendChild(playerinfo);
   playerPanel.appendChild(handleLink);
-  header.appendChild(playerPanel);
+  playerDiv.appendChild(playerPanel);
   //Player Handle END
+
+  //Player Badge
+  var playerbadge = document.createElement("img");
+  var playertitle = document.createElement("p");
+  var ptitle = document.createElement("div");
+  ptitle.className = "ptitle";
+
+  playertitle.className = "playertitle";
+  playertitle.textContent = jsonObj["data"]["profile"]["badge"];
+
+  playerbadge.className = "playerbadge";
+  playerbadge.src = jsonObj["data"]["profile"]["badge_image"];
+
+  ptitle.appendChild(playerbadge);
+  ptitle.appendChild(playertitle);
+  playerDiv.appendChild(ptitle);
+  //Player Badge END
 
   //Rating Container
   var ratingContainer = document.createElement("div");
@@ -858,9 +877,9 @@ function populateHeader(jsonObj) {
       ratingContainer.appendChild(showCount);
     }
   }
-  header.appendChild(ratingContainer);
+  playerDiv.appendChild(ratingContainer);
   //Rating Container END
-
+  header.appendChild(playerDiv);
   //Player Org
   var orgLogo = document.createElement("img");
   var orgName = document.createElement("p");
@@ -890,22 +909,6 @@ function populateHeader(jsonObj) {
   }
   //Player Org END
 
-  //Player Badge
-  var playerbadge = document.createElement("img");
-  var playertitle = document.createElement("p");
-  var ptitle = document.createElement("div");
-  ptitle.className = "ptitle";
-
-  playertitle.className = "playertitle";
-  playertitle.textContent = jsonObj["data"]["profile"]["badge"];
-
-  playerbadge.className = "playerbadge";
-  playerbadge.src = jsonObj["data"]["profile"]["badge_image"];
-
-  header.appendChild(ptitle);
-  ptitle.appendChild(playerbadge);
-  ptitle.appendChild(playertitle);
-  //Player Badge END
   //Tag
   var selectedCareer = [];
   var tagContainer = document.createElement("div");
