@@ -201,7 +201,6 @@ p.comment{
 }
 .player-min-name{
   color: #C4D7E6;
-  text-shadow: 0px 0px 5px #C4D7E6;
   font-size: 1em;
   font-weight: bold;
   display: flex;
@@ -232,10 +231,9 @@ img.playerbadge{
 }
 .panelLink{
   color: #C4D7E6;
-  text-shadow: 0px 0px 5px #C4D7E6;
 }
 .panelLink:hover{
-  color:#fff;
+  text-shadow: 0px 0px 5px #C4D7E6;
 }
 .web-title{
   display: flex;
@@ -402,7 +400,7 @@ input{
   white-space: pre;
 }
 .player-username:hover{
-  color:#fff;
+  text-shadow: 0px 0px 5px #C4D7E6;
 }
 .flag{
   color: #FF5A5A;
