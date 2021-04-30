@@ -837,7 +837,9 @@ function populateHeader(jsonObj) {
   header.appendChild(playerPanel);
   //Player Handle END
 
-  //Player Vouchers
+  //Rating Container
+  var ratingContainer = document.createElement("div");
+  ratingContainer.className  = "ptitle";
   var showCount = document.createElement("p");
   showCount.className = "ratingCount";
   var queryString = "?username=" + node.value;
@@ -847,11 +849,13 @@ function populateHeader(jsonObj) {
   readRating.onreadystatechange = function(){
     if(readRating.readyState == 4){
       var ratings = JSON.parse(readRating.response);
-      showCount.textContent = "("+ratings["reviewed_count"]+")";
+      ratingCount = ratings["reviewed_count"];
+      showCount.textContent = "("+ratingCount+")";
+      ratingContainer.appendChild(showCount);
     }
   }
-  playerPanel.appendChild(showCount);
-  //Player Vouchers END
+  header.appendChild(ratingContainer);
+  //Rating Container END
 
   //Player Org
   var orgLogo = document.createElement("img");
