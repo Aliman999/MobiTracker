@@ -32,7 +32,6 @@ function setKey(){
 $updateOrgSID = "CCG";
 
 $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/organization/".$updateOrgSID);
-setKey();
 $xmlResult = json_decode($json, true);
 
 $memberCount = $xmlResult['data']['members'];
@@ -43,8 +42,8 @@ $x=0;
 $orgMembers = array();
 for($i=0;$i<$grossPages;$i++){
   $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/live/organization_members/".$updateOrgSID."?page=".$i);
-  $xmlResult = json_decode($json, true);
   setKey();
+  $xmlResult = json_decode($json, true);
   foreach ($xmlResult['data'] as $member => $m){
     $orgMembers[$x] = $m['handle'];
     $x++;
