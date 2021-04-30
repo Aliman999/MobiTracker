@@ -950,23 +950,21 @@ function populateHeader(jsonObj) {
         selectedCareer = [careersvar["crew"],careersvar["escort"],careersvar["explorer"],careersvar["miner"],careersvar["pirate"],careersvar["trader"]];
       }
       for(var x = 0; x<selectedCareer.length; x++){
-        tags.addEventListener('mouseover', createTip);
-        tags.addEventListener('mouseout', cancelTip);
         if(selectedCareer[x] == 1){
+          tags.addEventListener('mouseover', createTip);
+          tags.addEventListener('mouseout', cancelTip);
           tags.className = "careers";
           tags.title = careersText[x];
           tags.src = careers[x];
           tagContainer.appendChild(tags.cloneNode(true));
         }else{
+          tags.addEventListener('mouseover', createTip);
+          tags.addEventListener('mouseout', cancelTip);
           tags.className = "careers notSelected";
           tags.src = careers[x];
           tagContainer.appendChild(tags.cloneNode(true));
         }
       }
-      tagContainer.onmouseout = function(e){
-        tooltip.textContent = "";
-        tooltip.style.visibility = "hidden";
-      };
       if(session && sessionUser == node.value){
         tagContainer.onclick = function(e){
           if(e.target == this.children[1]){
