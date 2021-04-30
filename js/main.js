@@ -952,6 +952,7 @@ function populateHeader(jsonObj) {
       for(var x = 0; x<selectedCareer.length; x++){
         if(selectedCareer[x] == 1){
           tags.className = "careers";
+          tags.title = Object.keys(careersvar[x]);
           tags.src = careers[x];
           tagContainer.appendChild(tags.cloneNode(true));
         }else{
