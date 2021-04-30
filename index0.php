@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
+$_SESSION['token'] = "SET";
 require_once "src/config.php";
 
 $sql = "SELECT apiKey, count FROM apiKeys where note like '%index0.php%';";
