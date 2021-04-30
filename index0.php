@@ -15,6 +15,7 @@ function getKey(){
   $id = $key['id'];
   $count = $key['count'];
   $key = $key['apiKey'];
+  echo $id." | ".$key." | ".$count;
   return $key;
 }
 
