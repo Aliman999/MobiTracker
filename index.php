@@ -52,27 +52,10 @@
       <div class="miniPlayerDivOut">
         <div class="miniPlayerOut">
           <?php
-            if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+            if(!isset($_SESSION["loggedin"])){
               echo "<div class='mpLoginContainer' id='mpLoginContainer'></div>";
             }
           ?>
-          <div class="miniPlayer">
-            <img src="src/avatars/avatar_default.jpg" class="avatar circleBorder">
-            <div class="loginNameContainer">
-              <img class="verified" src="src/verified.png">
-              <p class="loginName">JamesDusky</p>
-            </div>
-            <div class="miniPlayerInfo">
-              <img src="android-chrome-512x512.png" class="miniOrg circleBorder">
-              <p>Something extra long</p>
-            </div>
-          </div>
-          <div class="miniRep">
-            <p class="rBold">Experienced</p>
-            <p>Vouches: 54</p>
-            <p>Unique Vouches: 54</p>
-            <p>Contracts: 1</p>
-          </div>
         </div>
       </div>
       <div class="eleContainer">
