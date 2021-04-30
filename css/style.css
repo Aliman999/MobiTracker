@@ -226,6 +226,7 @@ img.playerbadge{
 }
 .orgLogo{
   height:44px;
+  border-radius: 360px;
 }
 .panelLink{
   color: #C4D7E6;
