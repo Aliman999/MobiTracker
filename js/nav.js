@@ -19,6 +19,7 @@ closeBtn.onclick = function(){
 }
 
 var user = {
+  
 }
 
 function showUser(){
