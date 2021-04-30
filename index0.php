@@ -6,10 +6,10 @@ error_reporting(E_ALL);
 require_once "src/config.php";
 
 $sql = "SELECT apiKey, count FROM apiKeys where note like '%index0.php%';";
-//$sql = "SELECT username, avatar FROM players WHERE cID = $userID;";
 $result = mysqli_query($link, $sql);
 $apiKeys = mysqli_fetch_assoc($result);
 var_dump($apiKeys);
+
 function selectKey(){
   global $apiKeys;
   /*
@@ -17,7 +17,7 @@ function selectKey(){
   }
   */
   $counts = min(array_column($apiKeys, 1));
-  $availableKey = $apiKeys[array_search($counts)]
+  $availableKey = $apiKeys[array_search($counts)];
   echo array_search(min(array_column($apiKeys, 1)), $apiKeys);
 }
 
