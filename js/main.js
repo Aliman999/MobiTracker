@@ -843,9 +843,9 @@ function populateHeader(jsonObj) {
       var ratings = JSON.parse(readRating.response);
       ratingCount = ratings["reviewed_count"];
       if(ratingCount > 0){
-        showCount.textContent = "Vouchers: +"+ratingCount;
+        showCount.textContent = "Vouches: +"+ratingCount;
       }else{
-        showCount.textContent = "Vouchers: "+ratingCount;
+        showCount.textContent = "Vouches: "+ratingCount;
       }
       ratingContainer.appendChild(showCount);
     }
@@ -1135,21 +1135,8 @@ function showReview(comment) {
       //Rating Container
       var ratingContainer = document.createElement("div");
       ratingContainer.className  = "rating-container";
-      var rating = comment[i]["rating"];
-      var e = 0;
-      var ratingStar = document.createElement("img");
-      ratingContainer.id = rating;
-      ratingStar.className = "rating";
-      ratingStar.src = "src/star.png";
+      var vouch = document.createElement("div");
 
-      for(e=0; e<5 ; e++){
-        if(e==rating){
-          ratingStar.src="src/star-empty.png";
-          ratingContainer.appendChild(ratingStar.cloneNode(true));
-        }else{
-          ratingContainer.appendChild(ratingStar.cloneNode(true));
-        }
-      }
       //Rating Container END
       //Comment
       var creatorComment = document.createElement("p");
