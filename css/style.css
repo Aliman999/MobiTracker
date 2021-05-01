@@ -128,10 +128,9 @@ div.ptitle img.orgLogo{
 }
 .rating-container{
   display: flex;
-  margin: auto;
+  margin-left: auto;
   margin-top: 8px;
   justify-content: center;
-  width: 180px;
 }
 .commentContainer{
   width:100%;
