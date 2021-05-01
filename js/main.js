@@ -932,12 +932,6 @@ function populateHeader(jsonObj) {
   tooltiptext.className = "tooltiptext";
   var tags = document.createElement("img");
   tags.className = "careers";
-  tags.onmouseover = function(){
-    createTip();
-  };
-  tags.onmouseout = function(){
-    cancelTip();
-  }
   var tooltip = document.createElement("span");
   tooltip.className = "tooltip";
   tooltip.style.position = "absolute";
@@ -956,6 +950,12 @@ function populateHeader(jsonObj) {
         selectedCareer = [careersvar["crew"],careersvar["escort"],careersvar["explorer"],careersvar["miner"],careersvar["pirate"],careersvar["trader"]];
       }
       for(var x = 0; x<selectedCareer.length; x++){
+        tags.onmouseover = function(){
+          createTip();
+        };
+        tags.onmouseout = function(){
+          cancelTip();
+        }
         if(selectedCareer[x] == 1){
           tags.className = "careers";
           tags.title = careersText[x];
