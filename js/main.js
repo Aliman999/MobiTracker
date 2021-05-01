@@ -930,7 +930,7 @@ function populateHeader(jsonObj) {
         selectedCareer = [careersvar["crew"],careersvar["escort"],careersvar["explorer"],careersvar["miner"],careersvar["pirate"],careersvar["trader"]];
       }
       for(var x = 0; x<selectedCareer.length; x++){
-        tag.title = careersText[x];
+        tags.title = careersText[x];
         if(selectedCareer[x] == 1){
           tags.className = "careers";
           tags.src = careers[x];
