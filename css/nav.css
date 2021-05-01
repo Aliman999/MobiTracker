@@ -129,7 +129,7 @@
 
 .miniPlayer{
   width: 144px;
-  margin: 16px 4px 16px 16px;
+  margin: 16px;
 }
 
 /* Logged Out */
@@ -168,7 +168,7 @@
 }
 
 .miniRep{
-  margin: 16px 16px 16px 0px;
+  margin: 16px;
 }
 
 .miniRep p{
@@ -306,9 +306,11 @@
 /* On smaller screens, where height is less than 450px, change the style of the navMenu (less padding and a smaller font size) */
 @media screen and (max-width: 450px) {
   .eleContainer a {font-size: 18px;}
-  .navEle img{height:40px}
-  .avatar {height:117px}
-  .mtTitle {display: none}
+  .navEle img{height:40px;}
+  .avatar {height:117px;}
+  .mtTitle {display: none;}
+  .miniPlayerOut {flex-direction: column;}
+  .miniRep p:first-child {margin-top:0}
 }
 @media screen and (max-width: 335px) {
   .mpLoginContainer div p a {white-space: pre}
