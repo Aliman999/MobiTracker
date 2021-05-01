@@ -43,14 +43,19 @@ a, a:link, a:hover, a:visited, a:active{
 .home_btn{
   margin-left: 4px;
 }
-.loginName{
+p.loginName{
   display: flex;
+}
+.loginName{
   margin: auto 0px;
   padding: 4px;
   font-weight: bold;
 }
 .loginName:hover{
   text-shadow: 0px 0px 5px #c4d7e6;
+}
+.loginName:visited{
+  color: #C4D7E6;
 }
 .logout_btn{
   padding:4px 8px;
@@ -491,9 +496,6 @@ input{
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;
-}
-.loginName:visited{
-  color: #C4D7E6;
 }
 .by{
   color: inherit;
