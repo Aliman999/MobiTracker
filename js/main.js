@@ -943,6 +943,19 @@ function populateHeader(jsonObj) {
       }
       tagContainer.onmouseover = function(e){
         tooltip.innerText = e.target.title;
+        if(e.target == this.children[1]){
+          tooltip.style.left = "-22px";
+        }else if (e.target == this.children[2]) {
+          tooltip.style.left = "17px";
+        }else if (e.target == this.children[3]) {
+          tooltip.style.left = "58px";
+        }else if (e.target == this.children[4]) {
+          tooltip.style.right = "58px";
+        }else if (e.target == this.children[5]) {
+          tooltip.style.right = "17px";
+        }else if (e.target == this.children[6]) {
+          tooltip.style.right = "-22px";
+        }
       };
       tagContainer.onmouseout = function(e){
       //  tooltip.textContent = "";
