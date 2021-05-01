@@ -1137,6 +1137,7 @@ function showReview(comment) {
       ratingContainer.className  = "rating-container";
       var vouch = document.createElement("h3");
       vouch.innerText = "+1";
+      vouch.classList.add("highlight-green");
       ratingContainer.appendChild(vouch);
 
       //Rating Container END
