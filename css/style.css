@@ -446,17 +446,34 @@ input{
 .notSelected{
   opacity: 0.2;
 }
+/*
 .tooltip{
+  border-radius: 4px;
+  padding: 4px;
+  z-index: 1;
+}
+*/
+
+.tooltip {
   position: relative;
   display: inline-block;
 }
-.tooltip .tooltiptext{
-  border-radius: 4px;
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
   background-color: #151f26;
   border: 2px solid rgb(57, 206, 216);
   box-shadow: 0px 0px 15px rgba(57, 206, 216, 0.5);
-  padding: 4px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
   z-index: 1;
+}
+.tooltiptext::after{
   content: " ";
   position: absolute;
   bottom: 100%;
@@ -466,20 +483,6 @@ input{
   border-style: solid;
   border-color: transparent transparent rgb(57, 206, 216) transparent;
 }
-/*
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-
-  position: absolute;
-  z-index: 1;
-}
-*/
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
