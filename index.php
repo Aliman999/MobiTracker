@@ -62,9 +62,7 @@
               <img class="verified" src="src/verified.png">
               <p class="loginName">JamesDusky</p>
             </div>
-            <div class="miniPlayerInfo">
-              <img src="android-chrome-512x512.png" class="miniOrg circleBorder">
-              <p>MOBI</p>
+            <div class="settingsContainer">
             </div>
           </div>
           <div class="miniRep">
