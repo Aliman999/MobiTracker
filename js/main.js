@@ -910,16 +910,13 @@ function populateHeader(jsonObj) {
   //Tag
   var selectedCareer = [];
   var tagContainer = document.createElement("div");
-  tagContainer.className  = "ptitle";
+  tagContainer.className  = "ptitle tooltip";
   var tooltiptext = document.createElement("span");
   tooltiptext.className = "tooltiptext";
   var tags = document.createElement("img");
   tags.className = "careers";
   var tooltip = document.createElement("span");
-  tooltip.className = "tooltip";
-  tooltip.style.position = "absolute";
-  tooltip.style.visibility = "hidden";
-  tagContainer.appendChild(tooltip);
+  tooltip.className = "tooltiptext";
   var queryString = "?username=" + node.value;
   readCareers.open("GET", "src/rating.php" + queryString, true);
   readCareers.setRequestHeader(tokenHeader.name,tokenHeader.content);
@@ -933,6 +930,7 @@ function populateHeader(jsonObj) {
         selectedCareer = [careersvar["crew"],careersvar["escort"],careersvar["explorer"],careersvar["miner"],careersvar["pirate"],careersvar["trader"]];
       }
       for(var x = 0; x<selectedCareer.length; x++){
+        tag.title = careersText[x];
         if(selectedCareer[x] == 1){
           tags.className = "careers";
           tags.src = careers[x];
@@ -944,15 +942,7 @@ function populateHeader(jsonObj) {
         }
       }
       tagContainer.onmouseover = function(e){
-        var title = e.target.title;
-        e.target.title = '';
-        this.setAttribute("tooltip", title);
-        var tooltipWrap = document.createElement("div");
-        tooltipWrap.className = 'ttooltip';
-        tooltipWrap.appendChild(document.createTextNode(title));
-
-        var firstChild = document.body.firstChild;
-        firstChild.parentNode.insertBefore(tooltipWrap, firstChild);
+        tooltiptext.text = e.target.title;
       };
       tagContainer.onmouseout = function(e){
       //  tooltip.textContent = "";
@@ -1007,6 +997,7 @@ function populateHeader(jsonObj) {
       }
     }
   }
+  tagContainer.appendChild(tooltip);
   header.appendChild(tagContainer);
   //Tag END
   //Player Bio
