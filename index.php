@@ -63,7 +63,7 @@
               <p class="loginName">JamesDusky</p>
             </div>
             <div class="settingsContainer">
-              <a class="rButton highlight" href="">Settings</a>
+              <a class="rButton highlight settings" href="">Settings</a>
             </div>
           </div>
           <div class="miniRep">
