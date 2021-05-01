@@ -472,6 +472,7 @@ input{
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
+  top: 50px;
 }
 .tooltiptext::after{
   content: " ";
