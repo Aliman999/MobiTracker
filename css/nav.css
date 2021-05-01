@@ -310,7 +310,7 @@
   .avatar {height:117px}
   .mtTitle {display: none}
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 420px) {
   .miniPlayerOut {flex-direction: column}
   .miniRep p:first-child {margin-top:0}
 }
