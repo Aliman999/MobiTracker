@@ -1023,26 +1023,8 @@ function populateHeader(jsonObj) {
     var editImg = document.createElement("img");
     createButton.onclick = function() {
       if(session && commented == 0 && comcount != 3){
-        rating = 0;
-        selected = -1;
         var createCommentContainer = document.createElement("div");
         header.removeChild(header.lastChild);
-
-
-        var rating = 0;
-
-        var createRatingContainer = document.createElement("div");
-        createRatingContainer.className  = "select-rating";
-        var e = 0;
-        var ratingStar = document.createElement("img");
-        ratingStar.src = "src/star-empty.png";
-        for(var i = 0;i<5;i++){
-          ratingStar.id = i;
-          ratingStar.className = "rating star"+i;
-          createRatingContainer.appendChild(ratingStar.cloneNode());
-        }
-
-        createCommentContainer.appendChild(createRatingContainer);
 
         var createComment = document.createElement("textarea");
         createComment.maxLength = 600;
@@ -1092,7 +1074,7 @@ function populateHeader(jsonObj) {
         newCommentContainer.appendChild(cancelNew);
         newCommentContainer.appendChild(createCommentSubmit);
         header.appendChild(createCommentContainer);
-        
+
         createCommentSubmit.addEventListener("click", function(){
           selected++;
           var writeString = "u_player="+sessionUser+"&r_player="+jsonObj["data"]["profile"]["handle"]+"&avi="+jsonObj["data"]["profile"]["image"]+"&rating="+selected+"&comment="+createComment.value;
