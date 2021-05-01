@@ -45,6 +45,7 @@ a, a:link, a:hover, a:visited, a:active{
 }
 p.loginName{
   display: flex;
+  cursor: pointer;
 }
 .loginName{
   margin: auto 0px;
