@@ -64,7 +64,7 @@
             </div>
             <div class="miniPlayerInfo">
               <img src="android-chrome-512x512.png" class="miniOrg circleBorder">
-              <p>Master</p>
+              <p>MOBI</p>
             </div>
           </div>
           <div class="miniRep">
