@@ -305,11 +305,13 @@
 
 /* On smaller screens, where height is less than 450px, change the style of the navMenu (less padding and a smaller font size) */
 @media screen and (max-width: 450px) {
-  .eleContainer a {font-size: 18px;}
-  .navEle img{height:40px;}
-  .avatar {height:117px;}
-  .mtTitle {display: none;}
-  .miniPlayerOut {flex-direction: column;}
+  .eleContainer a {font-size: 18px}
+  .navEle img{height:40px}
+  .avatar {height:117px}
+  .mtTitle {display: none}
+}
+@media screen and (max-width: 425px) {
+  .miniPlayerOut {flex-direction: column}
   .miniRep p:first-child {margin-top:0}
 }
 @media screen and (max-width: 335px) {
