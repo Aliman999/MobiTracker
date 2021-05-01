@@ -504,21 +504,27 @@ function showSBC(){
             switch(i){
               case 0:
                 tooltip.style.right = "76px";
+                tooltip.style.left = "";
                 break;
               case 1:
                 tooltip.style.right = "45px";
+                tooltip.style.left = "";
                 break;
               case 2:
                 tooltip.style.right = "14px";
+                tooltip.style.left = "";
                 break;
               case 3:
                 tooltip.style.left = "14px";
+                tooltip.style.right = "";
                 break;
               case 4:
                 tooltip.style.left = "45px";
+                tooltip.style.right = "";
                 break;
               case 5:
                 tooltip.style.left = "76px";
+                tooltip.style.right = "";
             }
           }
         }
