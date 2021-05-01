@@ -459,7 +459,7 @@ input{
   display: inline-block;
 }
 
-.tooltip .tooltiptext {
+.tooltip .tooltiptext{
   visibility: hidden;
   width: 120px;
   background-color: #151f26;

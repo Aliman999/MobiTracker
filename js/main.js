@@ -952,46 +952,22 @@ function populateHeader(jsonObj) {
         tagContainer.onclick = function(e){
           if(e.target == this.children[1]){
             updateCareer(0);
-            if(e.target.className == "careers notSelected"){
-              e.target.className = "careers";
-            }else{
-              e.target.className = "careers notSelected";
-            }
+            e.target.classList.toggle("notSelected");
           }else if (e.target == this.children[2]) {
             updateCareer(1);
-            if(e.target.className == "careers notSelected"){
-              e.target.className = "careers";
-            }else{
-              e.target.className = "careers notSelected";
-            }
+            e.target.classList.toggle("notSelected");
           }else if (e.target == this.children[3]) {
             updateCareer(2);
-            if(e.target.className == "careers notSelected"){
-              e.target.className = "careers";
-            }else{
-              e.target.className = "careers notSelected";
-            }
+            e.target.classList.toggle("notSelected");
           }else if (e.target == this.children[4]) {
             updateCareer(3);
-            if(e.target.className == "careers notSelected"){
-              e.target.className = "careers";
-            }else{
-              e.target.className = "careers notSelected";
-            }
+            e.target.classList.toggle("notSelected");
           }else if (e.target == this.children[5]) {
             updateCareer(4);
-            if(e.target.className == "careers notSelected"){
-              e.target.className = "careers";
-            }else{
-              e.target.className = "careers notSelected";
-            }
+            e.target.classList.toggle("notSelected");
           }else if (e.target == this.children[6]) {
             updateCareer(5);
-            if(e.target.className == "careers notSelected"){
-              e.target.className = "careers";
-            }else{
-              e.target.className = "careers notSelected";
-            }
+            e.target.classList.toggle("notSelected");
           }
         };
       }
