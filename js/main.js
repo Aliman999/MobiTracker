@@ -942,7 +942,7 @@ function populateHeader(jsonObj) {
         }
       }
       tagContainer.onmouseover = function(e){
-        tooltiptext.innerText = e.target.title;
+        tooltip.innerText = e.target.title;
       };
       tagContainer.onmouseout = function(e){
       //  tooltip.textContent = "";
