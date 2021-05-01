@@ -376,23 +376,6 @@ function pages(p, m, v, ele){
   }
 }
 
-function createTip(ev){
-  var title = this.title;
-  this.title = '';
-  this.setAttribute("tooltip", title);
-  var tooltipWrap = document.createElement("div");
-  tooltipWrap.className = 'ttooltip';
-  tooltipWrap.appendChild(document.createTextNode(title));
-
-  var firstChild = document.body.firstChild;
-  firstChild.parentNode.insertBefore(tooltipWrap, firstChild);
-}
-function cancelTip(ev){
-  var title = this.getAttribute("tooltip");
-  this.title = title;
-  this.removeAttribute("tooltip");
-}
-
 //search By
 var boolsbc = false;
 var boolsbr = false;
@@ -950,15 +933,8 @@ function populateHeader(jsonObj) {
         selectedCareer = [careersvar["crew"],careersvar["escort"],careersvar["explorer"],careersvar["miner"],careersvar["pirate"],careersvar["trader"]];
       }
       for(var x = 0; x<selectedCareer.length; x++){
-        tags.onmouseover = function(){
-          createTip();
-        };
-        tags.onmouseout = function(){
-          cancelTip();
-        }
         if(selectedCareer[x] == 1){
           tags.className = "careers";
-          tags.title = careersText[x];
           tags.src = careers[x];
           tagContainer.appendChild(tags.cloneNode(true));
         }else{
@@ -967,6 +943,18 @@ function populateHeader(jsonObj) {
           tagContainer.appendChild(tags.cloneNode(true));
         }
       }
+      tagContainer.onmouseover = function(e){
+        var tooltipWrap = document.createElement("div");
+        tooltipWrap.className = 'tooltip';
+        tooltipWrap.appendChild(document.createTextNode(title));
+
+        var firstChild = document.body.firstChild;
+        firstChild.parentNode.insertBefore(tooltipWrap, firstChild);
+      };
+      tagContainer.onmouseout = function(e){
+      //  tooltip.textContent = "";
+      //  tooltip.style.visibility = "hidden";
+      };
       if(session && sessionUser == node.value){
         tagContainer.onclick = function(e){
           if(e.target == this.children[1]){
