@@ -130,6 +130,10 @@ div.ptitle img.orgLogo{
 .commentContainer{
   width:100%;
 }
+.cCommentContainer{
+  display: flex;
+  flex-direction: column;
+}
 header p {
   font-size: 1.3rem;
   font-weight: bold;
@@ -373,6 +377,7 @@ input{
 .manageComment{
   display: flex;
   justify-content: flex-end;
+  margin-right: 18px;
 }
 .sc-logo{
   height: 200px;

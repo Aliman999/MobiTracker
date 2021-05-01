@@ -1024,6 +1024,7 @@ function populateHeader(jsonObj) {
     createButton.onclick = function() {
       if(session && commented == 0 && comcount != 3){
         var createCommentContainer = document.createElement("div");
+        createCommentContainer.className = "cCommentContainer";
         header.removeChild(header.lastChild);
 
         var createComment = document.createElement("textarea");
