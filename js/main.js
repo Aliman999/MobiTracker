@@ -392,7 +392,7 @@ function searchCareer(sc){
   emptySearch();
   header.style.display = "grid";
   header.style.justifyContent = "flex-start";
-  if(sc[0] || sc[1] || sc[2] || sc[3] || sc[4] || sc[5] == 1){
+  if(sc[0] || sc[1] || sc[2] || sc[3] || sc[4] || sc[5]){
     var queryString = "?c="+sc[0]+"&e="+sc[1]+"&x="+sc[2]+"&m="+sc[3]+"&p="+sc[4]+"&t="+sc[5]+"&r="+sc[6];
   }else if (sC[6] == -1) {
     var queryString = "?c="+sc[0]+"&e="+sc[1]+"&x="+sc[2]+"&m="+sc[3]+"&p="+sc[4]+"&t="+sc[5]+"&r="+sc[6];
@@ -421,9 +421,6 @@ function showSBC(){
     var sbcImg = document.getElementsByClassName("sbc-content")[0];
     var sbcContainer = document.getElementsByClassName("search-param-container")[0];
     var tooltip = document.createElement("span");
-    tooltip.className = "tooltip";
-    tooltip.style.position = "absolute";
-    tooltip.style.visibility = "hidden";
     sbcImg.appendChild(tooltip);
 
     sbcImg.style.display = "flex";
@@ -432,103 +429,45 @@ function showSBC(){
 
     sbcContainer.onclick = function(e){
       sC[7] = 1;
+      e.target.classList.toggle("notSelected");
       if(e.target == this.children[0].children[1].children[0]){
-        if(e.target.className == "sbc-img notSelected"){
-          e.target.className = "sbc-img";
-          if(sC[0] == 0){
-            sC[0] = 1;
-            searchCareer(sC);
-          }
+        if(sC[0] == 0){
+          sC[0] = 1;
         }else{
-          e.target.className = "sbc-img notSelected";
-          if(sC[0] == 1){
-            sC[0] = 0;
-            if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
-              searchCareer(sC);
-            }
-          }
+          sC[0] = 0;
         }
       }else if (e.target == this.children[0].children[1].children[1]) {
-        if(e.target.className == "sbc-img notSelected"){
-          e.target.className = "sbc-img";
-          if(sC[1] == 0){
-            sC[1] = 1;
-            searchCareer(sC);
-          }
+        if(sC[1] == 0){
+          sC[1] = 1;
         }else{
-          e.target.className = "sbc-img notSelected";
-          if(sC[1] == 1){
-            sC[1] = 0;
-            if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
-              searchCareer(sC);
-            }
-          }
+          sC[1] = 0;
         }
       }else if (e.target == this.children[0].children[1].children[2]) {
-        if(e.target.className == "sbc-img notSelected"){
-          e.target.className = "sbc-img";
-          if(sC[2] == 0){
-            sC[2] = 1;
-            searchCareer(sC);
-          }
+        if(sC[2] == 0){
+          sC[2] = 1;
         }else{
-          e.target.className = "sbc-img notSelected";
-          if(sC[2] == 1){
-            sC[2] = 0;
-            if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
-              searchCareer(sC);
-            }
-          }
+          sC[2] = 0;
         }
       }else if (e.target == this.children[0].children[1].children[3]) {
-        if(e.target.className == "sbc-img notSelected"){
-          e.target.className = "sbc-img";
-          if(sC[3] == 0){
-            sC[3] = 1;
-            searchCareer(sC);
-          }
+        if(sC[3] == 0){
+          sC[3] = 1;
         }else{
-          e.target.className = "sbc-img notSelected";
-          if(sC[3] == 1){
-            sC[3] = 0;
-            if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
-              searchCareer(sC);
-            }
-          }
+          sC[3] = 0;
         }
       }else if (e.target == this.children[0].children[1].children[4]) {
-        if(e.target.className == "sbc-img notSelected"){
-          e.target.className = "sbc-img";
-          if(sC[4] == 0){
-            sC[4] = 1;
-            searchCareer(sC);
-          }
+        if(sC[4] == 0){
+          sC[4] = 1;
         }else{
-          e.target.className = "sbc-img notSelected";
-          if(sC[4] == 1){
-            sC[4] = 0;
-            if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
-              searchCareer(sC);
-            }
-          }
+          sC[4] = 0;
         }
       }else if (e.target == this.children[0].children[1].children[5]) {
-        if(e.target.className == "sbc-img notSelected"){
-          e.target.className = "sbc-img";
-          if(sC[5] == 0){
-            sC[5] = 1;
-            searchCareer(sC);
-          }
+        if(sC[5] == 0){
+          sC[5] = 1;
         }else{
-          e.target.className = "sbc-img notSelected";
-          if(sC[5] == 1){
-            sC[5] = 0;
-            if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
-              searchCareer(sC);
-            }
-          }
+          sC[5] = 0;
         }
       }
+      searchCareer(sC);
       sbcContainer.onmouseover = function(e){
         var target = e.target;
         var mouse = e;
