@@ -435,6 +435,7 @@ function showSBC(){
         e.target.classList.toggle("notSelected");
         if(sC[0] == 0){
           sC[0] = 1;
+          searchCareer(sC);
         }else{
           sC[0] = 0;
           if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
@@ -445,6 +446,7 @@ function showSBC(){
         e.target.classList.toggle("notSelected");
         if(sC[1] == 0){
           sC[1] = 1;
+          searchCareer(sC);
         }else{
           sC[1] = 0;
           if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
@@ -455,6 +457,7 @@ function showSBC(){
         e.target.classList.toggle("notSelected");
         if(sC[2] == 0){
           sC[2] = 1;
+          searchCareer(sC);
         }else{
           sC[2] = 0;
           if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
@@ -465,6 +468,7 @@ function showSBC(){
         e.target.classList.toggle("notSelected");
         if(sC[3] == 0){
           sC[3] = 1;
+          searchCareer(sC);
         }else{
           sC[3] = 0;
           if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
@@ -475,6 +479,7 @@ function showSBC(){
         e.target.classList.toggle("notSelected");
         if(sC[4] == 0){
           sC[4] = 1;
+          searchCareer(sC);
         }else{
           sC[4] = 0;
           if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
@@ -485,6 +490,7 @@ function showSBC(){
         e.target.classList.toggle("notSelected");
         if(sC[5] == 0){
           sC[5] = 1;
+          searchCareer(sC);
         }else{
           sC[5] = 0;
           if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
