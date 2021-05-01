@@ -931,9 +931,6 @@ function populateHeader(jsonObj) {
       }
       for(var x = 0; x<selectedCareer.length; x++){
         tags.title = careersText[x];
-        tags.onmouseover = function(e){
-          tooltip.style.visibility = "visible";
-        };
         if(selectedCareer[x] == 1){
           tags.className = "careers";
           tags.src = careers[x];
@@ -944,6 +941,9 @@ function populateHeader(jsonObj) {
           tagContainer.appendChild(tags.cloneNode(true));
         }
       }
+      tagContainer.onmouseover = function(e){
+        tooltip.innerText = e.target.title;
+      };
       tagContainer.onmouseout = function(e){
       //  tooltip.textContent = "";
       //  tooltip.style.visibility = "hidden";
