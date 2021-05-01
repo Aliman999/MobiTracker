@@ -745,7 +745,7 @@ function populateHeader(jsonObj) {
   if(dataCount > 0){
     header.style.padding = "8px 16px";
     containerHeader.style.display = "block";
-    header.style.display = "block";
+    header.style.display = "flex";
   }else{
     containerHeader.style.display = "block";
     containerSection.style.display = "none";
