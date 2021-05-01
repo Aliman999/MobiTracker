@@ -503,22 +503,22 @@ function showSBC(){
             tooltip.style.top = (e[i].offsetHeight+6)+"px";
             switch(i){
               case 0:
-                //tooltip.style.left = -63+"px";
+                tooltip.style.left = "76px";
                 break;
               case 1:
-                //tooltip.style.left = -37+"px";
+                tooltip.style.left = "45px";
                 break;
               case 2:
-                //tooltip.style.left = -13+"px";
+                tooltip.style.left = "14px";
                 break;
               case 3:
-                //tooltip.style.left = 28+"px";
+                tooltip.style.left = "14px";
                 break;
               case 4:
-                //tooltip.style.left = 60+"px";
+                tooltip.style.left = "45px";
                 break;
               case 5:
-                //tooltip.style.left = 90+"px";
+                tooltip.style.left = "76px";
             }
           }
         }
