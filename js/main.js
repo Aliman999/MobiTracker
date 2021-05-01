@@ -843,9 +843,9 @@ function populateHeader(jsonObj) {
       var ratings = JSON.parse(readRating.response);
       ratingCount = ratings["reviewed_count"];
       if(ratingCount > 0){
-        showCount.textContent = "Vouches: +"+ratingCount;
+        showCount.textContent = "Vouchees: +"+ratingCount;
       }else{
-        showCount.textContent = "Vouches: "+ratingCount;
+        showCount.textContent = "Vouchers: "+ratingCount;
       }
       ratingContainer.appendChild(showCount);
     }
