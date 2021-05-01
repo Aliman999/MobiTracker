@@ -945,22 +945,22 @@ function populateHeader(jsonObj) {
         tooltip.innerText = e.target.title;
         if(e.target == this.children[1]){
           tooltip.style.left = "-22px";
-          tooltip.style.right = "0";
+          tooltip.style.right = "";
         }else if (e.target == this.children[2]) {
           tooltip.style.left = "17px";
-          tooltip.style.right = "0";
+          tooltip.style.right = "";
         }else if (e.target == this.children[3]) {
           tooltip.style.left = "58px";
-          tooltip.style.right = "0";
+          tooltip.style.right = "";
         }else if (e.target == this.children[4]) {
           tooltip.style.right = "58px";
-          tooltip.style.left = "0";
+          tooltip.style.left = "";
         }else if (e.target == this.children[5]) {
           tooltip.style.right = "17px";
-          tooltip.style.left = "0";
+          tooltip.style.left = "";
         }else if (e.target == this.children[6]) {
           tooltip.style.right = "-22px";
-          tooltip.style.left = "0";
+          tooltip.style.left = "";
         }
       };
       tagContainer.onmouseout = function(e){
