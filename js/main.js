@@ -932,12 +932,12 @@ function populateHeader(jsonObj) {
   tooltiptext.className = "tooltiptext";
   var tags = document.createElement("img");
   tags.className = "careers";
-  tags.onmouseover(function(){
+  tags.onmouseover = function(){
     createTip();
-  });
-  tags.onmouseout(function(){
+  };
+  tags.onmouseout = function(){
     cancelTip();
-  });
+  }
   var tooltip = document.createElement("span");
   tooltip.className = "tooltip";
   tooltip.style.position = "absolute";
