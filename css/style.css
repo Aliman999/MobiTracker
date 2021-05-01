@@ -481,7 +481,7 @@ input{
   position: absolute;
   z-index: 1;
 }
-.tooltip:hover .tooltiptext {
+.tooltiptext:hover {
   visibility: visible;
 }
 .loginName:visited{
