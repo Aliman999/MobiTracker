@@ -435,48 +435,60 @@ function showSBC(){
           sC[0] = 1;
         }else{
           sC[0] = 0;
+          if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
+            searchCareer(sC);
+          }
         }
-        searchCareer(sC);
       }else if (e.target == this.children[0].children[1].children[1]) {
         e.target.classList.toggle("notSelected");
         if(sC[1] == 0){
           sC[1] = 1;
         }else{
           sC[1] = 0;
+          if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
+            searchCareer(sC);
+          }
         }
-        searchCareer(sC);
       }else if (e.target == this.children[0].children[1].children[2]) {
         e.target.classList.toggle("notSelected");
         if(sC[2] == 0){
           sC[2] = 1;
         }else{
           sC[2] = 0;
+          if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
+            searchCareer(sC);
+          }
         }
-        searchCareer(sC);
       }else if (e.target == this.children[0].children[1].children[3]) {
         e.target.classList.toggle("notSelected");
         if(sC[3] == 0){
           sC[3] = 1;
         }else{
           sC[3] = 0;
+          if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
+            searchCareer(sC);
+          }
         }
-        searchCareer(sC);
       }else if (e.target == this.children[0].children[1].children[4]) {
         e.target.classList.toggle("notSelected");
         if(sC[4] == 0){
           sC[4] = 1;
         }else{
           sC[4] = 0;
+          if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
+            searchCareer(sC);
+          }
         }
-        searchCareer(sC);
       }else if (e.target == this.children[0].children[1].children[5]) {
         e.target.classList.toggle("notSelected");
         if(sC[5] == 0){
           sC[5] = 1;
         }else{
           sC[5] = 0;
+          if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
+            searchCareer(sC);
+          }
         }
-        searchCareer(sC);
       }
       sbcContainer.onmouseover = function(e){
         var target = e.target;
