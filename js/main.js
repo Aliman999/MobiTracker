@@ -948,7 +948,7 @@ function populateHeader(jsonObj) {
         e.target.title = '';
         this.setAttribute("tooltip", title);
         var tooltipWrap = document.createElement("div");
-        tooltipWrap.className = 'tooltip';
+        tooltipWrap.className = 'ttooltip';
         tooltipWrap.appendChild(document.createTextNode(title));
 
         var firstChild = document.body.firstChild;
