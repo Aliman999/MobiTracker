@@ -511,11 +511,11 @@ function showSBC(){
                 tooltip.style.left = "";
                 break;
               case 2:
-                tooltip.style.right = "14px";
+                tooltip.style.right = "13px";
                 tooltip.style.left = "";
                 break;
               case 3:
-                tooltip.style.left = "14px";
+                tooltip.style.left = "13px";
                 tooltip.style.right = "";
                 break;
               case 4:
