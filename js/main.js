@@ -436,6 +436,7 @@ function showSBC(){
         }else{
           sC[0] = 0;
         }
+        searchCareer(sC);
       }else if (e.target == this.children[0].children[1].children[1]) {
         e.target.classList.toggle("notSelected");
         if(sC[1] == 0){
@@ -443,6 +444,7 @@ function showSBC(){
         }else{
           sC[1] = 0;
         }
+        searchCareer(sC);
       }else if (e.target == this.children[0].children[1].children[2]) {
         e.target.classList.toggle("notSelected");
         if(sC[2] == 0){
@@ -450,6 +452,7 @@ function showSBC(){
         }else{
           sC[2] = 0;
         }
+        searchCareer(sC);
       }else if (e.target == this.children[0].children[1].children[3]) {
         e.target.classList.toggle("notSelected");
         if(sC[3] == 0){
@@ -457,6 +460,7 @@ function showSBC(){
         }else{
           sC[3] = 0;
         }
+        searchCareer(sC);
       }else if (e.target == this.children[0].children[1].children[4]) {
         e.target.classList.toggle("notSelected");
         if(sC[4] == 0){
@@ -464,6 +468,7 @@ function showSBC(){
         }else{
           sC[4] = 0;
         }
+        searchCareer(sC);
       }else if (e.target == this.children[0].children[1].children[5]) {
         e.target.classList.toggle("notSelected");
         if(sC[5] == 0){
@@ -471,8 +476,8 @@ function showSBC(){
         }else{
           sC[5] = 0;
         }
+        searchCareer(sC);
       }
-      searchCareer(sC);
       sbcContainer.onmouseover = function(e){
         var target = e.target;
         var mouse = e;
