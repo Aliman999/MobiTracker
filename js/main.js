@@ -944,6 +944,9 @@ function populateHeader(jsonObj) {
         }
       }
       tagContainer.onmouseover = function(e){
+        var title = this.title;
+        this.title = '';
+        this.setAttribute("tooltip", title);
         var tooltipWrap = document.createElement("div");
         tooltipWrap.className = 'tooltip';
         tooltipWrap.appendChild(document.createTextNode(title));
