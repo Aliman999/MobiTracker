@@ -169,6 +169,8 @@
 
 .miniRep{
   margin: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .miniRep p{
@@ -312,7 +314,9 @@
 }
 @media screen and (max-width: 420px) {
   .miniPlayerOut {flex-direction: column}
+  .miniPlayer {margin: 8px auto}
   .miniRep p:first-child {margin-top:0}
+  .miniRep {margin: 8px auto}
 }
 @media screen and (max-width: 335px) {
   .mpLoginContainer div p a {white-space: pre}
