@@ -419,8 +419,10 @@ function showSBC(){
   }
   if(boolsbc == false){
     var sbcImg = document.getElementsByClassName("sbc-content")[0];
+    sbcImg.classList.add("tooltip");
     var sbcContainer = document.getElementsByClassName("search-param-container")[0];
     var tooltip = document.createElement("span");
+    tooltip.className = "tooltiptext";
     sbcImg.appendChild(tooltip);
 
     sbcImg.style.display = "flex";
