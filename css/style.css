@@ -110,6 +110,7 @@ div.ptitle{
   display: flex;
   justify-content: center;
   word-break: break-all;
+  margin: auto;
 }
 div.ptitle img.playerbadge{
   margin:auto 0px auto 0px;
