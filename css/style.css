@@ -444,6 +444,7 @@ input{
 .notSelected{
   opacity: 0.2;
 }
+/*
 .tooltip{
   border-radius: 4px;
   background-color: #151f26;
@@ -455,13 +456,14 @@ input{
 .tooltip::after{
   content: " ";
   position: absolute;
-  bottom: 100%;  /* At the top of the tooltip */
+  bottom: 100%;
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent rgb(57, 206, 216) transparent;
 }
+*/
 .tooltip {
   position: relative;
   display: inline-block;
