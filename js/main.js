@@ -503,13 +503,13 @@ function showSBC(){
             tooltip.style.top = (e[i].offsetHeight+6)+"px";
             switch(i){
               case 0:
-                tooltip.style.left = "76px";
+                tooltip.style.right = "76px";
                 break;
               case 1:
-                tooltip.style.left = "45px";
+                tooltip.style.right = "45px";
                 break;
               case 2:
-                tooltip.style.left = "14px";
+                tooltip.style.right = "14px";
                 break;
               case 3:
                 tooltip.style.left = "14px";
