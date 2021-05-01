@@ -1135,7 +1135,9 @@ function showReview(comment) {
       //Rating Container
       var ratingContainer = document.createElement("div");
       ratingContainer.className  = "rating-container";
-      var vouch = "+1";
+      var vouch = document.createElement("p");
+      vouch.innerText = "+1";
+      ratingContainer.appendChild(vouch);
 
       //Rating Container END
       //Comment
