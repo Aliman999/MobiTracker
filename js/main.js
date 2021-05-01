@@ -953,21 +953,27 @@ function populateHeader(jsonObj) {
           if(e.target == this.children[1]){
             updateCareer(0);
             e.target.classList.toggle("notSelected");
+            tooltip.style.left = "-22px";
           }else if (e.target == this.children[2]) {
             updateCareer(1);
             e.target.classList.toggle("notSelected");
+            tooltip.style.left = "17px";
           }else if (e.target == this.children[3]) {
             updateCareer(2);
             e.target.classList.toggle("notSelected");
+            tooltip.style.left = "58px";
           }else if (e.target == this.children[4]) {
             updateCareer(3);
             e.target.classList.toggle("notSelected");
+            tooltip.style.right = "58px";
           }else if (e.target == this.children[5]) {
             updateCareer(4);
             e.target.classList.toggle("notSelected");
+            tooltip.style.right = "17px";
           }else if (e.target == this.children[6]) {
             updateCareer(5);
             e.target.classList.toggle("notSelected");
+            tooltip.style.right = "-22px";
           }
         };
       }
