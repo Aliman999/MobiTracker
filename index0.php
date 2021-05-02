@@ -1,5 +1,4 @@
 <?php
-/*
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -14,20 +13,11 @@ function getKey(){
   $result = mysqli_query($link, $sql);
   $key = mysqli_fetch_assoc($result);
   $id = $key['id'];
+  $sql = "UPDATE apiKeys SET count = count-1 WHERE id = $id";
+  $result = mysqli_query($link, $sql);
   $count = $key['count'];
   $key = $key['apiKey'];
   return $key;
-}
-
-function setKey(){
-  global $id, $key, $count, $link;
-  if($key != ""){
-    $count = $count-1;
-    $sql = "UPDATE apiKeys SET count = $count WHERE id = $id";
-    mysqli_query($link, $sql);
-  }else{
-    return "No Key";
-  }
 }
 
 $updateOrgSID = "TDKD";
@@ -43,7 +33,6 @@ $x=0;
 $orgMembers = array();
 for($i=0;$i<$grossPages;$i++){
   $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/live/organization_members/".$updateOrgSID."?page=".$i);
-  setKey();
   $xmlResult = json_decode($json, true);
   foreach ($xmlResult['data'] as $member => $m){
     $orgMembers[$x] = $m['handle'];
