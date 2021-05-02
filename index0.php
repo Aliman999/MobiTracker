@@ -29,7 +29,7 @@ function setKey(){
   }
 }
 
-$updateOrgSID = "UETG";
+$updateOrgSID = "JIANGJUNFU";
 
 $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/organization/".$updateOrgSID);
 $xmlResult = json_decode($json, true);
