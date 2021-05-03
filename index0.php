@@ -42,5 +42,5 @@ if(isset($_GET['id'])){
   }
   echo "!search ".join("\n", $orgMembers);
 }else{
-  echo "Add ?id=ORGNAME to the url";
+  echo "Add '?id=ORGNAME' to the url";
 }
