@@ -20,7 +20,7 @@ function getKey(){
   return $key;
 }
 
-$updateOrgSID = "YANHUANG";
+$updateOrgSID = "SHELAK";
 
 $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/organization/".$updateOrgSID);
 $xmlResult = json_decode($json, true);
