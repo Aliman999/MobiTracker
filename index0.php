@@ -20,23 +20,27 @@ function getKey(){
   return $key;
 }
 
-$updateOrgSID = $_GET['id'];
+if(isset($_GET['id'])){
+  $updateOrgSID = $_GET['id'];
 
-$json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/organization/".$updateOrgSID);
-$xmlResult = json_decode($json, true);
-
-$memberCount = $xmlResult['data']['members'];
-
-$grossPages = ceil($memberCount/32);
-
-$x=0;
-$orgMembers = array();
-for($i=0;$i<$grossPages;$i++){
-  $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/live/organization_members/".$updateOrgSID."?page=".$i);
+  $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/organization/".$updateOrgSID);
   $xmlResult = json_decode($json, true);
-  foreach ($xmlResult['data'] as $member => $m){
-    $orgMembers[$x] = $m['handle'];
-    $x++;
+
+  $memberCount = $xmlResult['data']['members'];
+
+  $grossPages = ceil($memberCount/32);
+
+  $x=0;
+  $orgMembers = array();
+  for($i=0;$i<$grossPages;$i++){
+    $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/live/organization_members/".$updateOrgSID."?page=".$i);
+    $xmlResult = json_decode($json, true);
+    foreach ($xmlResult['data'] as $member => $m){
+      $orgMembers[$x] = $m['handle'];
+      $x++;
+    }
   }
+  echo "!search ".join("\n", $orgMembers);
+}else{
+  echo "Add ?id=ORGNAME to the url";
 }
-echo "!search ".join("\n", $orgMembers);
