@@ -13,10 +13,10 @@ function getKey(){
   $result = mysqli_query($link, $sql);
   $key = mysqli_fetch_assoc($result);
   $id = $key['id'];
-  $sql = "UPDATE apiKeys SET count = count-1 WHERE id = $id";
-  $result = mysqli_query($link, $sql);
   $count = $key['count'];
   $key = $key['apiKey'];
+  $sql = "UPDATE apiKeys SET count = count-1 WHERE id = $id";
+  $result = mysqli_query($link, $sql);
   return $key;
 }
 
