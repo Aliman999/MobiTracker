@@ -26,6 +26,8 @@ if(isset($_GET['id'])){
   $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/organization/".$updateOrgSID);
   $xmlResult = json_decode($json, true);
 
+  echo "https://api.starcitizen-api.com/".getKey()."/v1/auto/organization/".$updateOrgSID;
+
   $memberCount = $xmlResult['data']['members'];
 
   $grossPages = ceil($memberCount/32);
