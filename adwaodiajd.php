@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 $_SESSION['token'] = "SET";
 require_once "src/config.php";
 
@@ -25,8 +25,6 @@ if(isset($_GET['id'])){
 
   $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/organization/".$updateOrgSID);
   $xmlResult = json_decode($json, true);
-
-  echo "https://api.starcitizen-api.com/".getKey()."/v1/auto/organization/".$updateOrgSID;
 
   $memberCount = $xmlResult['data']['members'];
 
