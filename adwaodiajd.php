@@ -9,7 +9,7 @@ $key = $count = $id = "";
 
 function getKey(){
   global $id, $key, $count, $link;
-  $sql = "SELECT id, apiKey, count FROM apiKeys WHERE note like '%index0.php%' GROUP BY id, apiKey, count ORDER BY count desc LIMIT 1;";
+  $sql = "SELECT id, apiKey, count FROM apiKeys WHERE note like '%Reserved%' GROUP BY id, apiKey, count ORDER BY count desc LIMIT 1;";
   $result = mysqli_query($link, $sql);
   $key = mysqli_fetch_assoc($result);
   $id = $key['id'];
