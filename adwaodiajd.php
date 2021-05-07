@@ -25,9 +25,8 @@ if(isset($_GET['id'])){
 
   $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/organization/".$updateOrgSID);
   $xmlResult = json_decode($json, true);
-    var_dump($xmlResult);
   if($xmlResult['data'] == null){
-    exit("API ".$xmlResult['message']);
+    exit("API Returned Null");
   }
   $memberCount = $xmlResult['data']['members'];
 
