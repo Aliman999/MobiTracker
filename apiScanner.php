@@ -20,4 +20,12 @@ $keys = array();
 while($row = mysqli_fetch_assoc($result)){
   $keys[] = $row;
 }
-var_dump($keys);
+for($i = 0; $i < count($keys); $i++){
+  $json = file_get_contents("https://api.starcitizen-api.com/".$keys[$i]['apiKey']."/v1/me");
+  $json = json_decode($json, true);
+  if($json['data']['value'] !== $keys[$i]['count']){
+    $sql = "UPDATE apiKeys SET count = ".$json['data']['value']." WHERE apiKey = '".$keys[$i]['apiKey']."'";
+    echo $sql;
+    mysqli_query($link, $sql);
+  }
+}
