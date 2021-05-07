@@ -40,7 +40,11 @@ if(isset($_GET['id'])){
       $x++;
     }
   }
-  echo "!search ".join("\n", $orgMembers);
+  if(length($orgMembers) == 0){
+    echo "All members of ".$updateOrgSID." are redacted/hidden";
+  }else{
+    echo "!search ".join("\n", $orgMembers);
+  }
 }else{
   echo "Add '?id=ORGNAME' to the url";
 }

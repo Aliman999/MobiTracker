@@ -52,7 +52,9 @@
       <div class="miniPlayerDivOut">
         <div class="miniPlayerOut">
           <?php
-            if(!isset($_SESSION["loggedin"])){
+            if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+              echo "<div class='miniPlayer'></div><div class='miniRep'></div>";
+            }else{
               echo "<div class='mpLoginContainer' id='mpLoginContainer'></div>";
             }
           ?>
