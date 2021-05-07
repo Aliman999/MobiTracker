@@ -58,6 +58,7 @@
               echo "<div class='mpLoginContainer' id='mpLoginContainer'></div>";
             }
           ?>
+          <!--
           <div class="miniPlayer">
             <img src="src/avatars/avatar_default.jpg" class="avatar circleBorder">
             <div class="loginNameContainer">
@@ -74,6 +75,7 @@
             <p>Unique Vouches: 54</p>
             <p>Completed Contracts: 1</p>
           </div>
+        -->
         </div>
       </div>
       <div class="eleContainer">
