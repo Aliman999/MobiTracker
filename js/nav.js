@@ -14,7 +14,6 @@ openBtn.onclick = function(){
     closeNav();
   }else{
     openNav();
-    showForm(false);
   }
 }
 
@@ -55,7 +54,7 @@ function showUser(){
   }
   var name = document.createElement("p");
   name.className = "loginName";
-  name.innerText = user.username;
+  name.innerText = user.sessionUser;
   nameContainer.appendChild(name);
 
   miniPlayer.appendChild(nameContainer);
