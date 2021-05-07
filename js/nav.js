@@ -41,7 +41,7 @@ getUser.onload = function() {
 
 function showUser(){
   var avatar = document.createElement("img");
-  avatar.src = "";
+  avatar.src = "../src/avatars/avatar_default.jpg";
   avatar.className = "avatar circleBorder";
   miniPlayer.appendChild(avatar);
 
@@ -49,7 +49,7 @@ function showUser(){
   nameContainer.className = "loginNameContainer";
   if(user.verified){
     var verifiedImg = document.createElement("img");
-    verifiedImg.src = "src/verified.png";
+    verifiedImg.src = "../src/verified.png";
     nameContainer.appendChild(verifiedImg);
   }
   var name = document.createElement("p");
