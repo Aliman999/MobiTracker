@@ -42,10 +42,10 @@ if(isset($_GET['id'])){
   }
   if(count($orgMembers) == 0){
     echo "All members of ".$updateOrgSID." are redacted/hidden";
-    echo "https://api.starcitizen-api.com/".getKey()."/v1/live/organization_members/".$updateOrgSID;
   }else{
     echo "!search ".join("\n", $orgMembers);
   }
+  echo "https://api.starcitizen-api.com/".getKey()."/v1/live/organization_members/".$updateOrgSID;
 }else{
   echo "Add '?id=ORGNAME' to the url";
 }
