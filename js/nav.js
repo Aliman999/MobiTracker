@@ -2,6 +2,10 @@ var openBtn = document.getElementById("navBtnContainer");
 var closeBtn = document.getElementById("closeNavBtn");
 var eleCount = document.getElementsByClassName("navEle");
 var navMenu = document.getElementById("navMenu");
+
+var miniPlayer = document.getElementById("miniPlayer");
+var miniRep = document.getElementById("miniRep");
+
 var query = new XMLHttpRequest();
 openBtn.active = false;
 
@@ -18,11 +22,69 @@ closeBtn.onclick = function(){
   closeNav();
 }
 
-var user = {
-  
+
+
+// USER
+var getUser = new XMLHttpRequest();
+var user;
+
+getUser.open("GET", "../src/user.php");
+getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
+getUser.responseType = "json";
+getUser.async = false;
+getUser.send();
+getUser.onload = function() {
+  user = getUser.response;
+  showUser();
 }
 
 function showUser(){
+  var avatar = document.createElement("img");
+  avatar.src = "";
+  avatar.className = "avatar circleBorder";
+  miniPlayer.appendChild(avatar);
+
+  var nameContainer = document.createElement("div");
+  nameContainer.className = "loginNameContainer";
+  if(user.verified){
+    var verifiedImg = document.createElement("img");
+    verifiedImg.src = "src/verified.png";
+    nameContainer.appendChild(verifiedImg);
+  }
+  var name = document.createElement("p");
+  name.className = "loginName";
+  name.innerText = user.username;
+  nameContainer.appendChild(name);
+
+  miniPlayer.appendChild(nameContainer);
+
+  var settingsContainer = document.createElement("div");
+  settingsContainer.className = "settingsContainer";
+  var settingsBtn = document.createElement("a");
+  settingsBtn.className = "rButton highlight settings";
+  settingsBtn.href = "";
+  settingsBtn.innerText = "Settings";
+  settingsContainer.appendChild(settingsBtn);
+
+  miniPlayer.appendChild(settingsContainer);
+
+
+  var experience = document.createElement("p");
+  experience.className = "rBold";
+  experience.innerText = "Experienced";
+  var vouches = document.createElement("p");
+  vouches.innerText = "Vouches: 54";
+  var unique = document.createElement("p");
+  unique.innerText = "Unique Vouches: 54";
+  var contracts = document.createElement("p");
+  contracts.innerText = "Completed Contracts: 1";
+
+  miniRep.appendChild(experience);
+  miniRep.appendChild(vouches);
+  miniRep.appendChild(unique);
+  miniRep.appendChild(contracts);
+
 }
 
 function checkClick() {

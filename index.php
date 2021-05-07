@@ -53,7 +53,7 @@
         <div class="miniPlayerOut">
           <?php
             if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-              echo "<div class='miniPlayer'></div><div class='miniRep'></div>";
+              echo "<div class='miniPlayer' id='miniPlayer'></div><div class='miniRep' id='miniRep'></div>";
             }else{
               echo "<div class='mpLoginContainer' id='mpLoginContainer'></div>";
             }
@@ -72,7 +72,7 @@
             <p class="rBold">Experienced</p>
             <p>Vouches: 54</p>
             <p>Unique Vouches: 54</p>
-            <p>Contracts: 1</p>
+            <p>Completed Contracts: 1</p>
           </div>
         </div>
       </div>
