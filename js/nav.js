@@ -50,6 +50,7 @@ function showUser(){
   if(user.verified){
     var verifiedImg = document.createElement("img");
     verifiedImg.src = "../src/verified.png";
+    verifiedImg.className = "verified";
     nameContainer.appendChild(verifiedImg);
   }
   var name = document.createElement("p");
