@@ -45,7 +45,7 @@ var session,
     verified,
     flagged,
     faction;
-getUser.open("GET", "https://mobitracker.co/src/user.php");
+getUser.open("GET", "../src/user.php");
 getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
 getUser.responseType = "json";
