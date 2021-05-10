@@ -34,8 +34,10 @@ getUser.responseType = "json";
 getUser.async = false;
 getUser.send();
 getUser.onreadystatechange = function(){
-  user = getUser.response;
-  showUser();
+  if(getUser.readyState == 4){
+    user = getUser.response;
+    showUser();
+  }
 }
 
 function showUser(){
