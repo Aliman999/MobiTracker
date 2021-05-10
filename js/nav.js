@@ -34,8 +34,10 @@ getUser.responseType = "json";
 getUser.async = false;
 getUser.send();
 getUser.onload = function() {
-  user = getUser.response;
-  showUser();
+  if (status === 0 || (status >= 200 && status < 400)) {
+    user = getUser.response;
+    showUser();
+  }
 }
 
 function showUser(){
