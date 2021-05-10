@@ -52,34 +52,32 @@ getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
 getUser.responseType = "json";
 getUser.async = false;
 getUser.send();
-getUser.onload = function() {
-  if (getUser.status === 0 || (getUser.status >= 200 && getUser.status < 400)) {
-    var userResponse = getUser.response;
-    session = userResponse["session"];
-    sessionUser = userResponse["sessionUser"];
-    comcount = userResponse["comcount"];
-    search = userResponse["search"];
-    limited = userResponse["limited"];
-    verified = userResponse["verified"];
-    flagged = userResponse["flagged"];
-    faction = userResponse["faction"];
-    if(search.includes("/")){
-      search = "";
-    }
-    //init Search
-    if(search){
-      if(search != "" && search != "undefined"){
-        showPlayer(search);
-      }else{
-        document.title = "MobiTracker";
-      }
-    }else if(sessionUser){
-      node.value = sessionUser;
-      updateSearch(sessionUser);
-      showPlayer(sessionUser);
-    }
-    //init Search
+getUser.onreadystatechange = function(){
+  var userResponse = getUser.response;
+  session = userResponse["session"];
+  sessionUser = userResponse["sessionUser"];
+  comcount = userResponse["comcount"];
+  search = userResponse["search"];
+  limited = userResponse["limited"];
+  verified = userResponse["verified"];
+  flagged = userResponse["flagged"];
+  faction = userResponse["faction"];
+  if(search.includes("/")){
+    search = "";
   }
+  //init Search
+  if(search){
+    if(search != "" && search != "undefined"){
+      showPlayer(search);
+    }else{
+      document.title = "MobiTracker";
+    }
+  }else if(sessionUser){
+    node.value = sessionUser;
+    updateSearch(sessionUser);
+    showPlayer(sessionUser);
+  }
+  //init Search
 }
 
 //Responsive UI
