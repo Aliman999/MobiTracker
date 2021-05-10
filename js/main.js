@@ -36,6 +36,15 @@ var reset = new XMLHttpRequest();
 var updateCareerXML = new XMLHttpRequest();
 
 var c = 0;
+var session,
+    sessionUser,
+    comcount,
+    search,
+    limited,
+    verified,
+    flagged,
+    faction;
+
 var waitUser = setInterval(function(){
   if(getUser.status == 404){
     if(c == 3){
@@ -43,14 +52,14 @@ var waitUser = setInterval(function(){
     }
     c++;
   }else if(user){
-    var session = user.session;
-    var sessionUser = user.sessionUser;
-    var comcount = user.comcount;
-    var search = user.search;
-    var limited = user.limited;
-    var verified = user.verified;
-    var flagged = user.flagged;
-    var faction = user.faction;
+    session = user.session;
+    sessionUser = user.sessionUser;
+    comcount = user.comcount;
+    search = user.search;
+    limited = user.limited;
+    verified = user.verified;
+    flagged = user.flagged;
+    faction = user.faction;
     if(search.includes("/")){
       search = "";
     }
