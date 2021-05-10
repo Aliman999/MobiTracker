@@ -37,7 +37,12 @@ var updateCareerXML = new XMLHttpRequest();
 
 var c = 0;
 var waitUser = setInterval(function(){
-  if(user){
+  if(!user){
+    if(c == 3){
+      clearInterval(waitUser);
+    }
+    c++;
+  }else if(user){
     var session = user.session;
     var sessionUser = user.sessionUser;
     var comcount = user.comcount;
@@ -63,11 +68,6 @@ var waitUser = setInterval(function(){
     }
     //init Search
     clearInterval(waitUser);
-  }else if (!user) {
-    if(c == 3){
-
-      clearInterval(waitUser);
-    }
   }
 }, 1000);
 
