@@ -61,7 +61,7 @@ setInterval(function(){
       showPlayer(sessionUser);
     }
     //init Search
-    clearInterval(this);
+    clearInterval();
   }
 }, 1000);
 
