@@ -35,6 +35,8 @@ var flagID = new XMLHttpRequest();
 var reset = new XMLHttpRequest();
 var updateCareerXML = new XMLHttpRequest();
 
+var user = requestUser();
+
 var session = user.session;
 var sessionUser = user.sessionUser;
 var comcount = user.comcount;
