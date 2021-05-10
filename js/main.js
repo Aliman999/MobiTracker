@@ -35,30 +35,34 @@ var flagID = new XMLHttpRequest();
 var reset = new XMLHttpRequest();
 var updateCareerXML = new XMLHttpRequest();
 
-var session = user.session;
-var sessionUser = user.sessionUser;
-var comcount = user.comcount;
-var search = user.search;
-var limited = user.limited;
-var verified = user.verified;
-var flagged = user.flagged;
-var faction = user.faction;
-if(search.includes("/")){
-  search = "";
-}
-//init Search
-if(search){
-  if(search != "" && search != "undefined"){
-    showPlayer(search);
-  }else{
-    document.title = "MobiTracker";
+setInterval(function(){
+  if(user){
+    var session = user.session;
+    var sessionUser = user.sessionUser;
+    var comcount = user.comcount;
+    var search = user.search;
+    var limited = user.limited;
+    var verified = user.verified;
+    var flagged = user.flagged;
+    var faction = user.faction;
+    if(search.includes("/")){
+      search = "";
+    }
+    //init Search
+    if(search){
+      if(search != "" && search != "undefined"){
+        showPlayer(search);
+      }else{
+        document.title = "MobiTracker";
+      }
+    }else if(sessionUser){
+      node.value = sessionUser;
+      updateSearch(sessionUser);
+      showPlayer(sessionUser);
+    }
+    //init Search
   }
-}else if(sessionUser){
-  node.value = sessionUser;
-  updateSearch(sessionUser);
-  showPlayer(sessionUser);
-}
-//init Search
+}, 1000);
 
 //Responsive UI
 var iContainer = document.getElementById("iContainer");
