@@ -35,14 +35,14 @@ var reset = new XMLHttpRequest();
 var updateCareerXML = new XMLHttpRequest();
 
 var userResponse = getUser.response;
-var session = userResponse["session"];
-var sessionUser = userResponse["sessionUser"];
-var comcount = userResponse["comcount"];
-var search = userResponse["search"];
-var limited = userResponse["limited"];
-var verified = userResponse["verified"];
-var flagged = userResponse["flagged"];
-var faction = userResponse["faction"];
+var session = user.session;
+var sessionUser = user.sessionUser;
+var comcount = user.comcount;
+var search = user.search;
+var limited = user.limited;
+var verified = user.verified;
+var flagged = user.flagged;
+var faction = user.faction;
 if(search.includes("/")){
   search = "";
 }
