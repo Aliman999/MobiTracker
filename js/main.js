@@ -53,7 +53,7 @@ getUser.responseType = "json";
 getUser.async = false;
 getUser.send();
 getUser.onload = function() {
-  if (getUser.status === 0 || (getUser.status >= 200 && status < 400)) {
+  if (getUser.status === 0 || (getUser.status >= 200 && getUser.status < 400)) {
     var userResponse = getUser.response;
     session = userResponse["session"];
     sessionUser = userResponse["sessionUser"];
