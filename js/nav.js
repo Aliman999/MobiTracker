@@ -34,11 +34,9 @@ getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
 getUser.responseType = "json";
 getUser.async = false;
 getUser.send();
-getUser.onreadystatechange = function(){
-  if(getUser.readyState == 4){
-    user = getUser.response;
-    showUser();
-  }
+getUser.onload = function(){
+  user = getUser.response;
+  showUser();
 }
 
 function showUser(){
