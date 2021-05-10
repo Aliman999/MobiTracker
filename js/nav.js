@@ -34,8 +34,8 @@ function requestUser(){
   getUser.async = false;
   getUser.send();
   getUser.onload = function(){
-    return getUser.response;
     showUser();
+    return getUser.response;
   }
 }
 
