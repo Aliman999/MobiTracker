@@ -21,7 +21,6 @@ var ext = "auto";
 var careers = ["src/crew.png","src/escort.png","src/explorer.png","src/miner.png","src/pirate.png","src/trader.png"];
 var careersText = ["Crew","Escort","Explorer","Miner","Pirate","Trader"];
 var orgURL = "https://robertsspaceindustries.com/orgs/";
-var tokenHeader = document.getElementsByName("token")[0];
 var request = new XMLHttpRequest();
 var readComments = new XMLHttpRequest();
 var readRating = new XMLHttpRequest();
@@ -35,52 +34,31 @@ var flagID = new XMLHttpRequest();
 var reset = new XMLHttpRequest();
 var updateCareerXML = new XMLHttpRequest();
 
-// USER
-var getUser = new XMLHttpRequest();
-var session,
-    sessionUser,
-    comcount,
-    search,
-    limited,
-    verified,
-    flagged,
-    faction;
-
-getUser.open("GET", "../src/user.php");
-getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
-getUser.responseType = "json";
-getUser.async = false;
-getUser.send();
-getUser.onreadystatechange = function(){
-  if(getUser.readyState == 4){
-    var userResponse = getUser.response;
-    session = userResponse["session"];
-    sessionUser = userResponse["sessionUser"];
-    comcount = userResponse["comcount"];
-    search = userResponse["search"];
-    limited = userResponse["limited"];
-    verified = userResponse["verified"];
-    flagged = userResponse["flagged"];
-    faction = userResponse["faction"];
-    if(search.includes("/")){
-      search = "";
-    }
-    //init Search
-    if(search){
-      if(search != "" && search != "undefined"){
-        showPlayer(search);
-      }else{
-        document.title = "MobiTracker";
-      }
-    }else if(sessionUser){
-      node.value = sessionUser;
-      updateSearch(sessionUser);
-      showPlayer(sessionUser);
-    }
-    //init Search
-  }
+var userResponse = getUser.response;
+var session = userResponse["session"];
+var sessionUser = userResponse["sessionUser"];
+var comcount = userResponse["comcount"];
+var search = userResponse["search"];
+var limited = userResponse["limited"];
+var verified = userResponse["verified"];
+var flagged = userResponse["flagged"];
+var faction = userResponse["faction"];
+if(search.includes("/")){
+  search = "";
 }
+//init Search
+if(search){
+  if(search != "" && search != "undefined"){
+    showPlayer(search);
+  }else{
+    document.title = "MobiTracker";
+  }
+}else if(sessionUser){
+  node.value = sessionUser;
+  updateSearch(sessionUser);
+  showPlayer(sessionUser);
+}
+//init Search
 
 //Responsive UI
 var iContainer = document.getElementById("iContainer");
