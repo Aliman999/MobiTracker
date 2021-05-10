@@ -21,7 +21,6 @@ var ext = "auto";
 var careers = ["src/crew.png","src/escort.png","src/explorer.png","src/miner.png","src/pirate.png","src/trader.png"];
 var careersText = ["Crew","Escort","Explorer","Miner","Pirate","Trader"];
 var orgURL = "https://robertsspaceindustries.com/orgs/";
-var user = require('./nav.js');
 
 var request = new XMLHttpRequest();
 var readComments = new XMLHttpRequest();
