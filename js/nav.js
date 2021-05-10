@@ -23,7 +23,6 @@ closeBtn.onclick = function(){
 }
 
 
-
 // USER
 function requestUser(){
   var getUser = new XMLHttpRequest();
@@ -40,7 +39,7 @@ function requestUser(){
   }
 }
 
-var user = await requestUser();
+var user = requestUser();
 
 function showUser(){
   var avatar = document.createElement("img");
