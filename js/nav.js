@@ -134,5 +134,3 @@ function closeNav() {
   document.getElementById("canvas").style.marginRight = "";
   closeBtn.style.visibility = "hidden";
 }
-
-module.exports = user;
