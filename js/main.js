@@ -989,7 +989,7 @@ function populateHeader(jsonObj) {
     createErr.className = "createErr";
     createErr.textContent = "";
     createButton.className = "commentButton";
-    createButton.textContent = "Leave a Review";
+    createButton.textContent = "Vouch for "+jsonObj.data.profile.handle;
     createButton.style.marginTop = "15px";
     header.style.paddingBottom = "18px";
     var editImg = document.createElement("img");
@@ -1133,8 +1133,13 @@ function showReview(comment) {
       var ratingContainer = document.createElement("div");
       ratingContainer.className  = "rating-container";
       var vouch = document.createElement("h3");
-      vouch.innerText = "+1";
-      vouch.classList.add("highlight-green");
+      if(comment.rating == 1){
+        vouch.innerText = "+1";
+        vouch.classList.add("highlight-green");
+      }else if(comment.rating == -1){
+        vouch.innerText = "+1";
+        vouch.classList.add("highlight-green");
+      }
       ratingContainer.appendChild(vouch);
 
       //Rating Container END
