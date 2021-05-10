@@ -842,11 +842,7 @@ function populateHeader(jsonObj) {
     if(readRating.readyState == 4){
       var ratings = JSON.parse(readRating.response);
       ratingCount = ratings["reviewed_count"];
-      if(ratingCount > 0){
-        showCount.textContent = "Vouchees: +"+ratingCount;
-      }else{
-        showCount.textContent = "Vouchers: "+ratingCount;
-      }
+      showCount.textContent = "Vouchers: +"+ratingCount;
       ratingContainer.appendChild(showCount);
     }
   }
