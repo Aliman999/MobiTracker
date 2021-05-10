@@ -416,6 +416,7 @@ input{
 }
 .flag{
   color: #FF5A5A;
+  box-shadow: 0px 0px 11px 0px #0c1214;
 }
 .flag:hover{
   color: #FF5A5A;
