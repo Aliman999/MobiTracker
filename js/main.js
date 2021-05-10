@@ -37,6 +37,7 @@ var updateCareerXML = new XMLHttpRequest();
 
 var c = 0;
 var waitUser = setInterval(function(){
+  var test = getUser;
   if(user){
     var session = user.session;
     var sessionUser = user.sessionUser;
