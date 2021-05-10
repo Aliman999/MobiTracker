@@ -69,12 +69,11 @@ function showUser(){
   settingsBtn.innerText = "Settings";
   var signoutBtn = document.createElement("a");
   signoutBtn.className = "rButton highlight-red settings";
-  settingsBtn.href = "";
-  settingsBtn.innerText = "Sign out";
+  signoutBtn.href = "";
+  signoutBtn.innerText = "Sign out";
   settingsContainer.appendChild(settingsBtn);
   settingsContainer.appendChild(signoutBtn);
 
-  miniRep.appendChild(settingsContainer);
 
 
 
@@ -93,6 +92,7 @@ function showUser(){
   miniRep.appendChild(unique);
   miniRep.appendChild(contracts);
 
+  miniRep.appendChild(settingsContainer);
 }
 
 function checkClick() {
