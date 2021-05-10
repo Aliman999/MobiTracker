@@ -95,10 +95,10 @@ window.onpopstate = function(e){
 };
 //PUSH Search
 var pushSearch = new XMLHttpRequest();
-function updateSearch(user){
-  search = user;
+function updateSearch(sUser){
+  search = sUser;
   if (window.location.href.indexOf("beta") == -1) {
-    pushSearch.open("GET", "vadw.php?search="+user);
+    pushSearch.open("GET", "vadw.php?search="+sUser);
     pushSearch.send();
   }
 }
