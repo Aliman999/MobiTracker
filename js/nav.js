@@ -67,10 +67,12 @@ function showUser(){
   settingsBtn.className = "rButton highlight settings";
   settingsBtn.href = "";
   settingsBtn.innerText = "Settings";
+  settingsBtn.style.marginRight = "auto";
   var signoutBtn = document.createElement("a");
   signoutBtn.className = "rButton highlight-red settings";
   signoutBtn.href = "";
   signoutBtn.innerText = "Sign out";
+  signoutBtn.style.marginLeft = "auto";
   settingsContainer.appendChild(settingsBtn);
   settingsContainer.appendChild(signoutBtn);
 
