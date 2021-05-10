@@ -67,9 +67,15 @@ function showUser(){
   settingsBtn.className = "rButton highlight settings";
   settingsBtn.href = "";
   settingsBtn.innerText = "Settings";
+  var signoutBtn = document.createElement("a");
+  signoutBtn.className = "rButton highlight-red settings";
+  settingsBtn.href = "";
+  settingsBtn.innerText = "Sign out";
   settingsContainer.appendChild(settingsBtn);
 
-  miniPlayer.appendChild(settingsContainer);
+  miniPlayer.parentElement.appendChild(settingsContainer);
+  //miniPlayer.appendChild(settingsContainer);
+
 
 
   var experience = document.createElement("p");
