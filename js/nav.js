@@ -26,7 +26,7 @@ var user;
 // USER
 var getUser = new XMLHttpRequest();
 function requestUser(){
-  getUser.open("GET", "../src/user.php");
+  getUser.open("GET", "../src/use.php");
   getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
   getUser.responseType = "json";
