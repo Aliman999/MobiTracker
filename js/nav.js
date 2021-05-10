@@ -21,7 +21,7 @@ openBtn.onclick = function(){
 closeBtn.onclick = function(){
   closeNav();
 }
-
+var user;
 
 // USER
 function requestUser(){
@@ -34,12 +34,12 @@ function requestUser(){
   getUser.async = false;
   getUser.send();
   getUser.onload = function(){
+    user = getUser.response;
     showUser();
-    return getUser.response;
   }
 }
 
-var user = requestUser();
+requestUser();
 
 function showUser(){
   var avatar = document.createElement("img");
