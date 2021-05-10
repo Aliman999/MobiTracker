@@ -72,9 +72,9 @@ function showUser(){
   settingsBtn.href = "";
   settingsBtn.innerText = "Sign out";
   settingsContainer.appendChild(settingsBtn);
+  settingsContainer.appendChild(signoutBtn);
 
-  miniPlayer.parentElement.appendChild(settingsContainer);
-  //miniPlayer.appendChild(settingsContainer);
+  miniRep.appendChild(settingsContainer);
 
 
 
