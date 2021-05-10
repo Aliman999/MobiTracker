@@ -35,7 +35,7 @@ var flagID = new XMLHttpRequest();
 var reset = new XMLHttpRequest();
 var updateCareerXML = new XMLHttpRequest();
 
-setInterval(function(){
+var waitUser = setInterval(function(){
   if(user){
     var session = user.session;
     var sessionUser = user.sessionUser;
@@ -61,7 +61,7 @@ setInterval(function(){
       showPlayer(sessionUser);
     }
     //init Search
-    clearInterval();
+    clearInterval(waitUser);
   }
 }, 1000);
 
