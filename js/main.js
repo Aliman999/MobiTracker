@@ -35,7 +35,7 @@ var flagID = new XMLHttpRequest();
 var reset = new XMLHttpRequest();
 var updateCareerXML = new XMLHttpRequest();
 
-console.log(global.user);
+console.log(user);
 
 var session = user.session;
 var sessionUser = user.sessionUser;
