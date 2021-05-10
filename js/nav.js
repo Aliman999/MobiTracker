@@ -24,9 +24,8 @@ closeBtn.onclick = function(){
 var user;
 
 // USER
+var getUser = new XMLHttpRequest();
 function requestUser(){
-  var getUser = new XMLHttpRequest();
-
   getUser.open("GET", "../src/user.php");
   getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
