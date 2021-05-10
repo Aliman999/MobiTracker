@@ -37,7 +37,7 @@ var updateCareerXML = new XMLHttpRequest();
 
 var c = 0;
 var waitUser = setInterval(function(){
-  if(!user){
+  if(getUser){
     if(c == 3){
       clearInterval(waitUser);
     }
