@@ -26,7 +26,7 @@ closeBtn.onclick = function(){
 
 // USER
 var getUser = new XMLHttpRequest();
-var window.user;
+var user;
 
 getUser.open("GET", "../src/user.php");
 getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -134,3 +134,5 @@ function closeNav() {
   document.getElementById("canvas").style.marginRight = "";
   closeBtn.style.visibility = "hidden";
 }
+
+module.exports = user;
