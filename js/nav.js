@@ -25,19 +25,22 @@ closeBtn.onclick = function(){
 
 
 // USER
-var getUser = new XMLHttpRequest();
-user;
+function requestUser(){
+  var getUser = new XMLHttpRequest();
 
-getUser.open("GET", "../src/user.php");
-getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
-getUser.responseType = "json";
-getUser.async = false;
-getUser.send();
-getUser.onload = function(){
-  user = getUser.response;
-  showUser();
+  getUser.open("GET", "../src/user.php");
+  getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
+  getUser.responseType = "json";
+  getUser.async = false;
+  getUser.send();
+  getUser.onload = function(){
+    return getUser.response;
+    showUser();
+  }
 }
+
+var user = await requestUser();
 
 function showUser(){
   var avatar = document.createElement("img");
