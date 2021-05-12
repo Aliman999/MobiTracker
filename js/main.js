@@ -1063,11 +1063,9 @@ function populateHeader(jsonObj) {
   }
   //Add Comment END
 }
-function showReview(comment) {
-  if(commentCount > 0){
-    containerSection.style.display = "block";
 
-  }else if (session == 1 && commentCount == 0 && dataCount > 0) {
+function noVouchers(){
+  if(session == 1){
     var firstContainer = document.createElement("div");
     var notFound = document.createElement("p");
     firstContainer.className = "firstContainer";
@@ -1076,7 +1074,7 @@ function showReview(comment) {
     firstContainer.appendChild(notFound);
     containerSection.style.display = "block";
     section.appendChild(firstContainer);
-  }else if(session == 0 && commentCount == 0 && dataCount > 0){
+  }else{
     var firstContainer = document.createElement("div");
     var notFound = document.createElement("p");
     var signup = document.createElement("a");
@@ -1091,214 +1089,229 @@ function showReview(comment) {
     containerSection.style.display = "block";
     section.appendChild(firstContainer);
   }
-  for(var i = 0; i<commentCount; i++){
-    if(session){
-      editing = 0;
-      //Creator Container
-      var playerReview = document.createElement("div");
-      playerReview.className = "player-review";
-      var playerminContainer = document.createElement("div");
-      playerminContainer.className = "player-min-container";
-      playerReview.appendChild(playerminContainer);
+  return;
+}
 
-      var playerMin = document.createElement("div");
-      playerMin.className = "player-min";
-      playerminContainer.appendChild(playerMin);
+function showReview(){
+  if(commentCount > 0){
+    containerSection.style.display = "block";
+  }else{
+    noVouchers();
+    return;
+  }
+  for(var i = 0; i < commentCount; i++){
+    editing = 0;
+    //Creator Container
+    var playerReview = document.createElement("div");
+    playerReview.className = "player-review";
+    var playerminContainer = document.createElement("div");
+    playerminContainer.className = "player-min-container";
+    playerReview.appendChild(playerminContainer);
 
-      var playerminAvatar = document.createElement("img");
-      playerminAvatar.className = "player-min-avatar";
-      playerminAvatar.src = comment[i]["avatar"];
-      playerminAvatar.onerror = function(){
-        this.src = "https://mobitracker.co/src/avatars/avatar_default.jpg";
-      }
-      playerMin.appendChild(playerminAvatar);
+    var playerMin = document.createElement("div");
+    playerMin.className = "player-min";
+    playerminContainer.appendChild(playerMin);
 
-      var playerminName = document.createElement("a");
-      playerminName.className = "player-min-name";
-      playerminName.href = "https://mobitracker.co/"+comment[i]["u_creator"];
-      var playerUsername = document.createElement("p");
-      var playerVerify = document.createElement("img");
-      playerVerify.src = "src/verified.png";
-      playerVerify.className = "verified";
-      playerUsername.className = "player-username";
-      playerUsername.id = comment[i]["u_creator"];
-      if(comment[i]["verify"] == 1){
-        playerminName.appendChild(playerVerify);
-      }
-      playerUsername.innerHTML = comment[i]["u_creator"];
-      playerminName.appendChild(playerUsername);
-      playerMin.appendChild(playerminName);
-      //Creator Container END
-      //Rating Container
-      var ratingContainer = document.createElement("div");
-      ratingContainer.className  = "rating-container";
-      var vouch = document.createElement("h3");
-      if(comment.rating == 1){
-        vouch.innerText = "+1";
-        vouch.classList.add("highlight-green");
-      }else if(comment.rating == -1){
-        vouch.innerText = "+1";
-        vouch.classList.add("highlight-green");
-      }
-      ratingContainer.appendChild(vouch);
+    var playerminAvatar = document.createElement("img");
+    playerminAvatar.className = "player-min-avatar";
+    playerminAvatar.src = comment[i]["avatar"];
+    playerminAvatar.onerror = function(){
+      this.src = "https://mobitracker.co/src/avatars/avatar_default.jpg";
+    }
+    playerMin.appendChild(playerminAvatar);
 
-      //Rating Container END
-      //Comment
-      var creatorComment = document.createElement("p");
-      var commentContainer = document.createElement("div");
-      creatorComment.className = "comment";
-      creatorComment.innerHTML = comment[i]["comment"];
-      if(session && sessionUser == comment[i]["u_creator"]){
-        creatorComment.id = comment[i]["id"];
+    var playerminName = document.createElement("a");
+    playerminName.className = "player-min-name";
+    playerminName.href = "https://mobitracker.co/"+comment[i]["u_creator"];
+    var playerUsername = document.createElement("p");
+    var playerVerify = document.createElement("img");
+    playerVerify.src = "src/verified.png";
+    playerVerify.className = "verified";
+    playerUsername.className = "player-username";
+    playerUsername.id = comment[i]["u_creator"];
+    if(comment[i]["verify"] == 1){
+      playerminName.appendChild(playerVerify);
+    }
+    playerUsername.innerHTML = comment[i]["u_creator"];
+    playerminName.appendChild(playerUsername);
+    playerMin.appendChild(playerminName);
+    //Creator Container END
+    //Rating Container
+    var ratingContainer = document.createElement("div");
+    ratingContainer.className  = "rating-container";
+    var vouch = document.createElement("h3");
+    if(comment.rating == 1){
+      vouch.innerText = "+1";
+      vouch.classList.add("highlight-green");
+    }else if(comment.rating == -1){
+      vouch.innerText = "+1";
+      vouch.classList.add("highlight-green");
+    }
+    ratingContainer.appendChild(vouch);
+
+    //Rating Container END
+    //Comment
+    var creatorComment = document.createElement("p");
+    var commentContainer = document.createElement("div");
+    creatorComment.className = "comment";
+    creatorComment.innerHTML = comment[i]["comment"];
+    if(session && sessionUser == comment[i]["u_creator"]){
+      creatorComment.id = comment[i]["id"];
+    }
+    commentContainer.className = "commentContainer";
+    commentContainer.appendChild(ratingContainer);
+    commentContainer.append(creatorComment);
+    playerReview.id = creatorComment.innerHTML;
+    playerminContainer.appendChild(commentContainer);
+    //Comment END
+    //Manage
+    manageComment = document.createElement("div");
+    manageComment.className = "manageComment";
+    if(comment[i]["u_creator"] != sessionUser){
+      var flagComment = document.createElement("button");
+      flagComment.className = "manageEdit commentSubmit flag";
+      flagComment.id = comment[i]["id"];
+      if(flagged.includes(comment[i]["id"])){
+        flagComment.innerHTML = "Unreport";
+      }else{
+        flagComment.innerHTML = "Report";
       }
-      commentContainer.className = "commentContainer";
-      commentContainer.appendChild(ratingContainer);
-      commentContainer.append(creatorComment);
-      playerReview.id = creatorComment.innerHTML;
-      playerminContainer.appendChild(commentContainer);
-      //Comment END
-      //Manage
+      flagComment.onclick = function(){
+        if(flagged.includes(this.id)){
+          flag(this.id,0);
+          this.innerHTML = "Report";
+          flagged = flagged.replace(this.id,"");
+        }else{
+          flag(this.id,1);
+          this.innerHTML = "Unreport";
+          flagged = flagged+this.id;
+        }
+      };
+    }
+    //Manage END
+    //Manage Comment
+    if(sessionUser == comment[i]["u_creator"]){
+      commented = 1
+      createButton.onclick = function(){
+        createErr.textContent = "Error: You've already left a review of this Citizen. \n If you wish to change your review please edit it using the edit button";
+        setTimeout(function () {
+          createErr.textContent = "";
+        }, 5000);
+      };
       manageComment = document.createElement("div");
       manageComment.className = "manageComment";
+
+      var editComment = document.createElement("button");
+      editComment.className = "manageEdit commentSubmit";
+      editComment.id = "Edit";
+      editComment.innerHTML = "Edit";
+      editComment.onclick = function(){
+        if(editing == 0){
+          editing = 1;
+          var editContainer = document.createElement("div");
+          editContainer.className = "createCommentContainer";
+          var manageEditContainer = document.createElement("div");
+          manageEditContainer.className = "manageComment";
+          var editBox = document.createElement("textarea");
+          var editSubmit = document.createElement("button");
+          var editCancel = document.createElement("button");
+          var editorCount = document.createElement("p");
+          editorCount.className = "charCounter";
+
+          editBox.className = "createComment editComment";
+          editBox.maxLength = 600;
+
+          var prevLen = 0;
+          editCancel.onclick = function(){
+            editing = 0;
+            this.parentElement.parentElement.parentElement.children[0].style.display = "flex";
+            this.parentElement.parentElement.parentElement.children[1].style.display = "block";
+            this.parentElement.parentElement.parentElement.children[4].style.display = "flex";
+            this.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement.parentElement.children[2]);
+            this.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement.parentElement.children[2]);
+          };
+          editBox.oninput = function(){
+            var len = this.textLength;
+            if(len !== prevLen){
+              prevLen = len;
+              editorCount.textContent = len+"/600";
+            }
+          };
+
+          editBox.innerHTML = this.parentElement.parentElement.children[1].innerText;
+          editorCount.textContent = editBox.textLength+"/600";
+          editCancel.className = "manageEdit commentSubmit";
+          editCancel.innerHTML = "Cancel"
+          editSubmit.className = "editSubmit commentSubmit";
+          editSubmit.innerHTML = "Submit";
+          editSubmit.id = this.parentElement.parentElement.children[1].id;
+          editContainer.appendChild(editBox);
+          editContainer.appendChild(manageEditContainer);
+          manageEditContainer.appendChild(editorCount);
+          manageEditContainer.appendChild(editCancel);
+          manageEditContainer.appendChild(editSubmit);
+
+          selected = this.parentElement.parentElement.children[0].id;
+          this.parentElement.parentElement.children[0].style.display = "none";
+          this.parentElement.parentElement.children[1].style.display = "none";
+          this.parentElement.parentElement.children[2].style.display = "none";
+          this.parentElement.parentElement.insertBefore(editContainer, this.parentElement.parentElement.children[2]);
+          editSubmit.onclick = function(){
+            updateComment(editSubmit.id, selected++, editBox.value);
+          };
+          document.getElementsByClassName("createErr")[0].textContent = "";
+
+        }
+      };
       if(comment[i]["u_creator"] != sessionUser){
-        var flagComment = document.createElement("button");
-        flagComment.className = "manageEdit commentSubmit flag";
-        flagComment.id = comment[i]["id"];
-        if(flagged.includes(comment[i]["id"])){
-          flagComment.innerHTML = "Unreport";
-        }else{
-          flagComment.innerHTML = "Report";
-        }
-        flagComment.onclick = function(){
-          if(flagged.includes(this.id)){
-            flag(this.id,0);
-            this.innerHTML = "Report";
-            flagged = flagged.replace(this.id,"");
-          }else{
-            flag(this.id,1);
-            this.innerHTML = "Unreport";
-            flagged = flagged+this.id;
-          }
-        };
-      }
-      //Manage END
-      //Manage Comment
-      if(sessionUser == comment[i]["u_creator"]){
-        commented = 1
-        createButton.onclick = function(){
-          createErr.textContent = "Error: You've already left a review of this Citizen. \n If you wish to change your review please edit it using the edit button";
-          setTimeout(function () {
-            createErr.textContent = "";
-          }, 5000);
-        };
-        manageComment = document.createElement("div");
-        manageComment.className = "manageComment";
-
-        var editComment = document.createElement("button");
-        editComment.className = "manageEdit commentSubmit";
-        editComment.id = "Edit";
-        editComment.innerHTML = "Edit";
-        editComment.onclick = function(){
-          if(editing == 0){
-            editing = 1;
-            var editContainer = document.createElement("div");
-            editContainer.className = "createCommentContainer";
-            var manageEditContainer = document.createElement("div");
-            manageEditContainer.className = "manageComment";
-            var editBox = document.createElement("textarea");
-            var editSubmit = document.createElement("button");
-            var editCancel = document.createElement("button");
-            var editorCount = document.createElement("p");
-            editorCount.className = "charCounter";
-
-            editBox.className = "createComment editComment";
-            editBox.maxLength = 600;
-
-            var prevLen = 0;
-            editCancel.onclick = function(){
-              editing = 0;
-              this.parentElement.parentElement.parentElement.children[0].style.display = "flex";
-              this.parentElement.parentElement.parentElement.children[1].style.display = "block";
-              this.parentElement.parentElement.parentElement.children[4].style.display = "flex";
-              this.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement.parentElement.children[2]);
-              this.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement.parentElement.children[2]);
-            };
-            editBox.oninput = function(){
-              var len = this.textLength;
-              if(len !== prevLen){
-                prevLen = len;
-                editorCount.textContent = len+"/600";
-              }
-            };
-
-            editBox.innerHTML = this.parentElement.parentElement.children[1].innerText;
-            editorCount.textContent = editBox.textLength+"/600";
-            editCancel.className = "manageEdit commentSubmit";
-            editCancel.innerHTML = "Cancel"
-            editSubmit.className = "editSubmit commentSubmit";
-            editSubmit.innerHTML = "Submit";
-            editSubmit.id = this.parentElement.parentElement.children[1].id;
-            editContainer.appendChild(editBox);
-            editContainer.appendChild(manageEditContainer);
-            manageEditContainer.appendChild(editorCount);
-            manageEditContainer.appendChild(editCancel);
-            manageEditContainer.appendChild(editSubmit);
-
-            selected = this.parentElement.parentElement.children[0].id;
-            this.parentElement.parentElement.children[0].style.display = "none";
-            this.parentElement.parentElement.children[1].style.display = "none";
-            this.parentElement.parentElement.children[2].style.display = "none";
-            this.parentElement.parentElement.insertBefore(editContainer, this.parentElement.parentElement.children[2]);
-            editSubmit.onclick = function(){
-              updateComment(editSubmit.id, selected++, editBox.value);
-            };
-            document.getElementsByClassName("createErr")[0].textContent = "";
-
-          }
-        };
-        if(comment[i]["u_creator"] != sessionUser){
-          manageComment.appendChild(flagComment);
-        }
-        manageComment.appendChild(editComment);
-
-        var deleteBtn = document.createElement("button");
-        deleteBtn.className = "manageEdit commentSubmit deleteBtn highlight-red";
-        if(session && sessionUser == comment[i]["u_creator"]){
-          deleteBtn.id = comment[i]["id"];
-        }
-        deleteBtn.innerHTML = "Delete";
-        deleteBtn.onclick = function(){
-          deleteComment(this);
-        };
-        manageComment.appendChild(deleteBtn);
-        commentContainer.appendChild(manageComment);
-
-      }else{
-        commentContainer.appendChild(manageComment);
         manageComment.appendChild(flagComment);
       }
-      //Manage Comment END
-      //Creation
-      var created_at = document.createElement("p");
-      var t = comment[i]["created_at"].split(/[- :]/);
-      var d = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]));
-      created_at.className = "created_at";
-      created_at.innerHTML = d.toLocaleString("en-US", {
-          weekday: "short",
-          month: "long",
-          day: "2-digit",
-          year: "numeric",
-            hour: "2-digit",
-            minute: "2-digit"
-        });
-      playerReview.appendChild(created_at);
-      //Creation END
-      section.appendChild(playerReview);
-      if(comment[0]["u_creator"] == sessionUser){
-        commented = 1;
-      }else{
-        commented = 0;
+      manageComment.appendChild(editComment);
+
+      var deleteBtn = document.createElement("button");
+      deleteBtn.className = "manageEdit commentSubmit deleteBtn highlight-red";
+      if(session && sessionUser == comment[i]["u_creator"]){
+        deleteBtn.id = comment[i]["id"];
       }
+      deleteBtn.innerHTML = "Delete";
+      deleteBtn.onclick = function(){
+        deleteComment(this);
+      };
+      manageComment.appendChild(deleteBtn);
+      commentContainer.appendChild(manageComment);
+
+    }else{
+      commentContainer.appendChild(manageComment);
+      manageComment.appendChild(flagComment);
+    }
+    //Manage Comment END
+    //Creation
+    var created_at = document.createElement("p");
+    var t = comment[i]["created_at"].split(/[- :]/);
+    var d = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]));
+    created_at.className = "created_at";
+    created_at.innerHTML = d.toLocaleString("en-US", {
+        weekday: "short",
+        month: "long",
+        day: "2-digit",
+        year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit"
+      });
+    playerReview.appendChild(created_at);
+    //Creation END
+    section.appendChild(playerReview);
+    if(comment[0]["u_creator"] == sessionUser){
+      commented = 1;
+    }else{
+      commented = 0;
+    }
+  }
+}
+/*
+function showReview(comment) {
+  for(var i = 0; i<commentCount; i++){
+    if(session){
     }else{
       //Creator Container
       var playerReview = document.createElement("div");
@@ -1389,6 +1402,7 @@ function showReview(comment) {
         }
       };
       manageComment.appendChild(flagComment);
+      commentContainer.appendChild(manageComment);
       //Manage END
       //Creation
       var created_at = document.createElement("p");
@@ -1404,12 +1418,12 @@ function showReview(comment) {
           minute: "2-digit"
         });
       playerReview.appendChild(created_at);
-      playerReview.appendChild(manageComment);
       //Creation END
       section.appendChild(playerReview);
     }
   }
 }
+*/
 //Searched Users
 function uSearch(searched){
   document.title = "MobiTracker";
