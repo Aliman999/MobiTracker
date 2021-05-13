@@ -46,39 +46,43 @@ var session,
     faction;
 
 var waitUser = setInterval(function(){
-  if(getUser){
-    if(getUser.status == 404){
-      if(c == 3){
-        clearInterval(waitUser);
+  try{
+    if(getUser){
+      if(getUser.status == 404){
+        if(c == 3){
+          clearInterval(waitUser);
+        }
+        c++;
       }
-      c++;
-    }
-  }else if(user){
-    session = user.session;
-    sessionUser = user.sessionUser;
-    comcount = user.comcount;
-    search = user.search;
-    limited = user.limited;
-    verified = user.verified;
-    flagged = user.flagged;
-    faction = user.faction;
-    if(search.includes("/")){
-      search = "";
-    }
-    //init Search
-    if(search){
-      if(search != "" && search != "undefined"){
-        showPlayer(search);
-      }else{
-        document.title = "MobiTracker";
+    }else if(user){
+      session = user.session;
+      sessionUser = user.sessionUser;
+      comcount = user.comcount;
+      search = user.search;
+      limited = user.limited;
+      verified = user.verified;
+      flagged = user.flagged;
+      faction = user.faction;
+      if(search.includes("/")){
+        search = "";
       }
-    }else if(sessionUser){
-      node.value = sessionUser;
-      updateSearch(sessionUser);
-      showPlayer(sessionUser);
+      //init Search
+      if(search){
+        if(search != "" && search != "undefined"){
+          showPlayer(search);
+        }else{
+          document.title = "MobiTracker";
+        }
+      }else if(sessionUser){
+        node.value = sessionUser;
+        updateSearch(sessionUser);
+        showPlayer(sessionUser);
+      }
+      //init Search
+      clearInterval(waitUser);
     }
-    //init Search
-    clearInterval(waitUser);
+  }catch(){
+
   }
 }, 1000);
 
