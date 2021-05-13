@@ -53,36 +53,36 @@ var waitUser = setInterval(function(){
           clearInterval(waitUser);
         }
         c++;
-      }
-    }else if(user){
-      session = user.session;
-      sessionUser = user.sessionUser;
-      comcount = user.comcount;
-      search = user.search;
-      limited = user.limited;
-      verified = user.verified;
-      flagged = user.flagged;
-      faction = user.faction;
-      if(search.includes("/")){
-        search = "";
-      }
-      //init Search
-      if(search){
-        if(search != "" && search != "undefined"){
-          showPlayer(search);
-        }else{
-          document.title = "MobiTracker";
+      }else{
+        session = user.session;
+        sessionUser = user.sessionUser;
+        comcount = user.comcount;
+        search = user.search;
+        limited = user.limited;
+        verified = user.verified;
+        flagged = user.flagged;
+        faction = user.faction;
+        if(search.includes("/")){
+          search = "";
         }
-      }else if(sessionUser){
-        node.value = sessionUser;
-        updateSearch(sessionUser);
-        showPlayer(sessionUser);
+        //init Search
+        if(search){
+          if(search != "" && search != "undefined"){
+            showPlayer(search);
+          }else{
+            document.title = "MobiTracker";
+          }
+        }else if(sessionUser){
+          node.value = sessionUser;
+          updateSearch(sessionUser);
+          showPlayer(sessionUser);
+        }
+        //init Search
+        clearInterval(waitUser);
       }
-      //init Search
-      clearInterval(waitUser);
     }
   }catch(err){
-    
+
   }
 }, 1000);
 
@@ -1167,7 +1167,7 @@ function showReview(){
     commentContainer.className = "commentContainer";
     commentContainer.appendChild(ratingContainer);
     commentContainer.append(creatorComment);
-    playerReview.id = creatorComment.innerHTML;
+    playerReview.comment = creatorComment;
     playerminContainer.appendChild(commentContainer);
     //Comment END
     //Manage
