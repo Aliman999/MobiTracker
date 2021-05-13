@@ -46,11 +46,13 @@ var session,
     faction;
 
 var waitUser = setInterval(function(){
-  if(getUser.status == 404){
-    if(c == 3){
-      clearInterval(waitUser);
+  if(getUser){
+    if(getUser.status == 404){
+      if(c == 3){
+        clearInterval(waitUser);
+      }
+      c++;
     }
-    c++;
   }else if(user){
     session = user.session;
     sessionUser = user.sessionUser;
