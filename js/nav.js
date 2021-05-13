@@ -25,6 +25,11 @@ var user;
 // USER
 
 function requestUser(){
+  getUser.open("GET", "https://mobitracker.co/src/user.php");
+  getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
+  getUser.responseType = "json";
+  getUser.async = false;
   getUser.send();
   getUser.onload = function(){
     user = getUser.response;
