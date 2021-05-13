@@ -33,11 +33,11 @@ closeBtn.onclick = function(){
 }
 
 function register(usernam, email, password){
-  request.open("POST", "src/register.php");
-  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  request.send("username="+usernam+"&email="+email+"&password="+password);
-  request.onload = function(){
-    var response = JSON.parse(request.response);
+  query.open("POST", "src/register.php");
+  query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  query.send("username="+usernam+"&email="+email+"&password="+password);
+  query.onload = function(){
+    var response = JSON.parse(query.response);
     if(response.username){
       form.pUsernameErr.classList.remove("hidden");
       form.pUsernameErr.innerText = response.username;
@@ -61,11 +61,11 @@ function register(usernam, email, password){
 }
 
 function login(username, password){
-  request.open("POST", "src/login.php");
-  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  request.send("username="+username+"&password="+password);
-  request.onload = function(){
-    var response = JSON.parse(request.response);
+  query.open("POST", "src/login.php");
+  query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  query.send("username="+username+"&password="+password);
+  query.onload = function(){
+    var response = JSON.parse(query.response);
     if(response.username){
       form.pUsernameErr.classList.remove("hidden");
       form.pUsernameErr.innerText = response.username;
