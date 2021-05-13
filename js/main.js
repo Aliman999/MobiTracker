@@ -81,8 +81,8 @@ var waitUser = setInterval(function(){
       //init Search
       clearInterval(waitUser);
     }
-  }catch(){
-
+  }catch(err){
+    
   }
 }, 1000);
 
