@@ -47,20 +47,7 @@ var session,
 
 var waitUser = setInterval(function(){
   try{
-    if(!getUser){
-      if(c == 3){
-        session = "";
-        sessionUser = "";
-        comcount = "";
-        search = "";
-        limited = "";
-        verified = "";
-        flagged = "";
-        faction = "";
-        clearInterval(waitUser);
-      }
-      c++;
-    }else{
+    if(getUser){
       if(getUser.status == 404){
         if(c == 3){
           clearInterval(waitUser);
@@ -93,9 +80,22 @@ var waitUser = setInterval(function(){
         //init Search
         clearInterval(waitUser);
       }
+    }else{
+      if(c == 3){
+        session = "";
+        sessionUser = "";
+        comcount = "";
+        search = "";
+        limited = "";
+        verified = "";
+        flagged = "";
+        faction = "";
+        clearInterval(waitUser);
+      }
+      c++;
     }
   }catch(err){
-    console.log(err);
+    console.log(err)
   }
 }, 1000);
 
