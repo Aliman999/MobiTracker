@@ -45,6 +45,16 @@ var session,
     flagged,
     faction;
 
+function requestUser(){
+  getUser.send();
+  getUser.onload = function(){
+    user = getUser.response;
+  }
+}
+
+requestUser();
+
+/*
 var waitUser = setInterval(function(){
   try{
     if(getUser){
@@ -82,7 +92,7 @@ var waitUser = setInterval(function(){
       }
     }
   }catch(err){
-    if(c == 3){
+    if(c == 100){
       session = "";
       sessionUser = "";
       comcount = "";
@@ -95,7 +105,8 @@ var waitUser = setInterval(function(){
     }
     c++;
   }
-}, 1000);
+}, 100);
+*/
 
 //Responsive UI
 var iContainer = document.getElementById("iContainer");
