@@ -95,7 +95,7 @@ var waitUser = setInterval(function(){
       }
     }
   }catch(err){
-
+    console.log(err);
   }
 }, 1000);
 
