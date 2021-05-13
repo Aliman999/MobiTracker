@@ -1,4 +1,3 @@
-var tokenHeader = document.getElementsByName("token")[0];
 var openBtn = document.getElementById("navBtnContainer");
 var closeBtn = document.getElementById("closeNavBtn");
 var eleCount = document.getElementsByClassName("navEle");

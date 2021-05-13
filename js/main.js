@@ -3,6 +3,7 @@ var section = document.querySelector("section");
 var body = document.getElementsByTagName("body");
 var containerHeader = document.getElementsByClassName("container-header")[0];
 var containerSection = document.getElementsByClassName("container-section")[0];
+var tokenHeader = document.getElementsByName("token")[0];
 var createErr = document.createElement("p");
 var createButton = document.createElement("button");
 var newline = "\r\n";
@@ -35,7 +36,8 @@ var flagID = new XMLHttpRequest();
 var reset = new XMLHttpRequest();
 var updateCareerXML = new XMLHttpRequest();
 
-var c = 0;
+// USER
+var getUser = new XMLHttpRequest();
 var session,
     sessionUser,
     comcount,
@@ -44,15 +46,40 @@ var session,
     verified,
     flagged,
     faction;
-
-function requestUser(){
-  getUser.send();
-  getUser.onload = function(){
-    user = getUser.response;
+getUser.open("GET", "https://mobitracker.co/src/user.php");
+getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
+getUser.responseType = "json";
+getUser.async = false;
+getUser.send();
+getUser.onload = function() {
+  var userResponse = getUser.response;
+  session = userResponse["session"];
+  sessionUser = userResponse["sessionUser"];
+  comcount = userResponse["comcount"];
+  search = userResponse["search"];
+  limited = userResponse["limited"];
+  verified = userResponse["verified"];
+  flagged = userResponse["flagged"];
+  faction = userResponse["faction"];
+  if(search.includes("/")){
+    search = "";
   }
+  //init Search
+  if(search){
+    if(search != "" && search != "undefined"){
+      showPlayer(search);
+    }else{
+      document.title = "MobiTracker";
+    }
+  }else if(sessionUser){
+    node.value = sessionUser;
+    updateSearch(sessionUser);
+    showPlayer(sessionUser);
+  }
+  //init Search
 }
 
-requestUser();
 
 /*
 var waitUser = setInterval(function(){
