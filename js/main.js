@@ -80,6 +80,19 @@ var waitUser = setInterval(function(){
         //init Search
         clearInterval(waitUser);
       }
+    }else{
+      if(c == 3){
+        session = "";
+        sessionUser = "";
+        comcount = "";
+        search = "";
+        limited = "";
+        verified = "";
+        flagged = "";
+        faction = "";
+        clearInterval(waitUser);
+      }
+      c++;
     }
   }catch(err){
 
