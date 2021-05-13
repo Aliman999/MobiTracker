@@ -1,3 +1,4 @@
+var tokenHeader = document.getElementsByName("token")[0];
 var openBtn = document.getElementById("navBtnContainer");
 var openLoginBtn = document.getElementById("lmLBtn");
 var openSignUpBtn = document.getElementById("lmSBtn");
