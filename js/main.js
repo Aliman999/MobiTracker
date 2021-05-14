@@ -172,10 +172,8 @@ window.onpopstate = function(e){
 var pushSearch = new XMLHttpRequest();
 function updateSearch(sUser){
   search = sUser;
-  if (window.location.href.indexOf("beta") == -1) {
-    pushSearch.open("GET", "vadw.php?search="+sUser);
-    pushSearch.send();
-  }
+  pushSearch.open("GET", "vadw.php?search="+sUser);
+  pushSearch.send();
 }
 //PUSH Search
 
