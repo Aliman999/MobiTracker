@@ -15,7 +15,6 @@ if (isset($headers)) {
       $g = htmlentities($g, ENT_QUOTES, 'UTF-8');
     }
     $username = $_GET['username'];
-    $_SESSION['search'] = $username;
 
     if(!$link ) {
        die('Could not connect: ' . mysqli_error());
