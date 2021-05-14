@@ -1259,6 +1259,26 @@ function showReview(){
       editComment.onclick = function(){
         if(editing == 0){
           editing = 1;
+
+          var vouchContainer = document.createElement("div");
+          var vouchPlus = document.createElement("h3");
+          vouchPlus.className = "highlight-green notSelected";
+          vouchPlus.innerText = "+1";
+
+          var vouchMin = document.createElement("h3");
+          vouchMin.className = "highlight-red notSelected";
+          vouchMin.innerText = "-1";
+
+          if(comment[i].rating > 0){
+            vouchPlus.classList.toggle("notSelected");
+          }else if (comment[i].rating < 0) {
+            vouchMin.classList.toggle("notSelected");
+          }
+
+          function toggleSelected(){
+
+          }
+
           var editContainer = document.createElement("div");
           editContainer.className = "createCommentContainer";
           var manageEditContainer = document.createElement("div");
@@ -1306,7 +1326,7 @@ function showReview(){
           this.parentElement.parentElement.children[2].style.display = "none";
           this.parentElement.parentElement.insertBefore(editContainer, this.parentElement.parentElement.children[2]);
           editSubmit.onclick = function(){
-            updateComment(editSubmit.id, editBox.value);
+            updateComment(editSubmit.id, newRating, editBox.value);
           };
           document.getElementsByClassName("createErr")[0].textContent = "";
 
