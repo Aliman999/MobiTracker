@@ -1287,7 +1287,7 @@ function showReview(){
           }
 
           function toggleSelected(e){
-            if(!e.classList.contains("notSelected")){
+            if(e.classList.contains("notSelected")){
               e.classList.toggle("notSelected");
               e.other.classList.toggle("notSelected");
               return;
