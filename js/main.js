@@ -1176,8 +1176,7 @@ function populateHeader(jsonObj) {
   }else{
     cache.innerText = "Live - "+created_at;
   }
-  cacheContainer.appendChild(cache);
-  header.appendChild(cacheContainer);
+  header.appendChild(cache);
   //Add Comment END
 }
 
