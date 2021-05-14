@@ -1269,7 +1269,7 @@ function showReview(){
           vouchPlus.innerText = "+1";
           vouchPlus.other = vouchMin;
           vouchPlus.onclick = function(){
-            toggleSelected();
+            toggleSelected(this);
           };
 
           var vouchMin = document.createElement("h3");
@@ -1277,7 +1277,7 @@ function showReview(){
           vouchMin.innerText = "-1";
           vouchMin.other = vouchPlus;
           vouchMin.onclick = function(){
-            toggleSelected();
+            toggleSelected(this);
           };
 
           if(userComment.rating > 0){
@@ -1286,7 +1286,7 @@ function showReview(){
             vouchMin.classList.toggle("notSelected");
           }
 
-          function toggleSelected(){
+          function toggleSelected(this){
             this.classList.toggle("notSelected");
             this.other.classList.toggle("notSelected");
             return;
