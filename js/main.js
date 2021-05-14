@@ -1261,6 +1261,9 @@ function showReview(){
           editing = 1;
 
           var vouchContainer = document.createElement("div");
+          vouchContainer.style.display = "flex";
+          vouchContainer.style.justifyContent = "flex-end";
+
           var vouchPlus = document.createElement("h3");
           vouchPlus.className = "highlight-green notSelected";
           vouchPlus.innerText = "+1";
