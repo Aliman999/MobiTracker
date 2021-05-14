@@ -113,7 +113,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION['daysleft'] = $dl;
                             $_SESSION['cPref'] = json_decode($pref, true);
                             require_once "../src/jwt/generate_jwt.php";
-                            unset($_SESSION['search']);
 
                             if($_SESSION['verified'] == 0){
                               $_SESSION['com_count'] = $row['com_count'];
