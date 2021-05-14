@@ -1287,9 +1287,11 @@ function showReview(){
           }
 
           function toggleSelected(e){
-            e.classList.toggle("notSelected");
-            e.other.classList.toggle("notSelected");
-            return;
+            if(!e.classList.includes("notSelected")){
+              e.classList.toggle("notSelected");
+              e.other.classList.toggle("notSelected");
+              return;
+            }
           }
 
           vouchContainer.appendChild(vouchMin);
