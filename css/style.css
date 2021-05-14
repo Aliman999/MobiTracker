@@ -386,7 +386,7 @@ input{
 .manageComment{
   display: flex;
   justify-content: flex-end;
-  margin-right: 18px;
+  margin-right: 8px;
 }
 .sc-logo{
   height: 200px;

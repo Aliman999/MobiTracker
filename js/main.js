@@ -1060,6 +1060,7 @@ function populateHeader(jsonObj) {
         var vouchMin = document.createElement("h3");
         vouchPlus.className = "highlight-green cursor";
         vouchPlus.innerText = "+1";
+        vouchPlus.value = 1;
         vouchPlus.other = vouchMin;
         vouchPlus.onclick = function(){
           toggleSelected(this);
@@ -1067,15 +1068,17 @@ function populateHeader(jsonObj) {
 
         vouchMin.className = "highlight-red shadow-red notSelected cursor";
         vouchMin.innerText = "-1";
+        vouchPlus.value = -1;
         vouchMin.other = vouchPlus;
         vouchMin.onclick = function(){
           toggleSelected(this);
         };
-
+        var selected;
         function toggleSelected(e){
           if(e.classList.contains("notSelected")){
             e.classList.toggle("notSelected");
             e.other.classList.toggle("notSelected");
+            selected = e.value;
             return;
           }
         }
