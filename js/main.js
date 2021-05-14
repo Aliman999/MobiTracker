@@ -1150,6 +1150,31 @@ function populateHeader(jsonObj) {
     header.appendChild(createErr);
     header.appendChild(createButton);
   }
+
+  //Data Source
+
+  var created_at = document.createElement("p");
+
+  var d = Date.now();
+  created_at.className = "created_at";
+  created_at.innerHTML = d.toLocaleString("en-US", {
+      weekday: "short",
+      month: "long",
+      day: "2-digit",
+      year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+    });
+
+  var cacheContainer = document.createElement("div");
+  cacheContainer.className = "ptitle";
+
+  var cache = document.createElement("p");
+  if(jsonObj.source == "cache"){
+    cache.innerText = "Cache";
+  }else{
+    cache.innerText = "Live - "+created_at;
+  }
   //Add Comment END
 }
 
