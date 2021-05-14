@@ -1306,6 +1306,7 @@ function showReview(){
           var vouchMin = document.createElement("h3");
           vouchPlus.className = "highlight-green notSelected cursor";
           vouchPlus.innerText = "+1";
+          vouchPlus.value = 1;
           vouchPlus.other = vouchMin;
           vouchPlus.onclick = function(){
             toggleSelected(this);
@@ -1313,21 +1314,24 @@ function showReview(){
 
           vouchMin.className = "highlight-red shadow-red notSelected cursor";
           vouchMin.innerText = "-1";
+          vouchMin.value = -1;
           vouchMin.other = vouchPlus;
           vouchMin.onclick = function(){
             toggleSelected(this);
           };
-
+          var newRating;
           if(userComment.rating > 0){
             vouchPlus.classList.toggle("notSelected");
+            newRating = 1;
           }else if (userComment.rating < 0) {
             vouchMin.classList.toggle("notSelected");
+            newRating = -1;
           }
-
           function toggleSelected(e){
             if(e.classList.contains("notSelected")){
               e.classList.toggle("notSelected");
               e.other.classList.toggle("notSelected");
+              newRating = e.value;
               return;
             }
           }
