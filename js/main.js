@@ -1170,6 +1170,7 @@ function populateHeader(jsonObj) {
   cacheContainer.className = "ptitle";
 
   var cache = document.createElement("p");
+  cache.className = "created_at";
   if(jsonObj.source == "cache"){
     cache.innerText = "Cache";
   }else{
