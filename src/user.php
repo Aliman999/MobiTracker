@@ -26,7 +26,6 @@ if (isset($headers)) {
     }else{
       $user['search'] = "";
     }
-    echo $_SESSION['search'];
     if($_SESSION['com_count'] == 3){
       $user['limited'] = true;
     }else{
@@ -54,7 +53,7 @@ if (isset($headers)) {
     }else{
       $user['cPref'] = array('cType' => 2, 'cOwn' => 1);
     }
-    //echo json_encode($user);
+    echo json_encode($_SESSION);
   }
 }else{
  exit(json_encode(['error' => 'No CSRF Token.']));
