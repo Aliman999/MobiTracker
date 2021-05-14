@@ -1248,7 +1248,7 @@ function showReview(){
     if(sessionUser == comment[i]["u_creator"]){
       commented = 1
       createButton.onclick = function(){
-        createErr.textContent = "Error: You've already left a review of this Citizen. \n If you wish to change your review please edit it using the edit button";
+        createErr.textContent = "Error: You've already vouched of this Citizen. \n If you wish to edit your comments please edit it using the edit button";
         setTimeout(function () {
           createErr.textContent = "";
         }, 5000);
