@@ -829,6 +829,35 @@ function populateHeader(jsonObj) {
   };
   header.appendChild(forceRefresh);
   //Refresh END
+
+  //Data Source
+
+  var created_at = document.createElement("p");
+
+  var d = Date.now();
+  created_at.className = "created_at";
+  created_at.innerHTML = d.toLocaleString("en-US", {
+      weekday: "short",
+      month: "long",
+      day: "2-digit",
+      year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+    });
+
+  var cacheContainer = document.createElement("div");
+  cacheContainer.className = "ptitle";
+
+  var cache = document.createElement("p");
+  cache.className = "created_at";
+  if(jsonObj.source == "cache"){
+    cache.innerText = "Cache";
+  }else{
+    cache.innerText = "Live - "+created_at;
+  }
+  header.appendChild(cache);
+  //Data Source
+
   //Player ID
   var playerid = document.createElement("p");
   playerid.className = "playerid";
@@ -1150,33 +1179,6 @@ function populateHeader(jsonObj) {
     header.appendChild(createErr);
     header.appendChild(createButton);
   }
-
-  //Data Source
-
-  var created_at = document.createElement("p");
-
-  var d = Date.now();
-  created_at.className = "created_at";
-  created_at.innerHTML = d.toLocaleString("en-US", {
-      weekday: "short",
-      month: "long",
-      day: "2-digit",
-      year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit"
-    });
-
-  var cacheContainer = document.createElement("div");
-  cacheContainer.className = "ptitle";
-
-  var cache = document.createElement("p");
-  cache.className = "created_at";
-  if(jsonObj.source == "cache"){
-    cache.innerText = "Cache";
-  }else{
-    cache.innerText = "Live - "+created_at;
-  }
-  header.appendChild(cache);
   //Add Comment END
 }
 
