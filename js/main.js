@@ -1281,7 +1281,8 @@ function showReview(){
           }
 
           function toggleSelected(){
-
+            this.classList.toggle("notSelected");
+            this.other.classList.toggle("notSelected");
           }
 
           vouchContainer.appendChild(vouchMin);
