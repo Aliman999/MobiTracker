@@ -173,9 +173,6 @@ function updateSearch(sUser){
   search = sUser;
   pushSearch.open("GET", "vadw.php?search="+sUser);
   pushSearch.send();
-  pushSearch.onload = function(){
-    console.log(pushSearch);
-  }
 }
 //PUSH Search
 
