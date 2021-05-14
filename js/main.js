@@ -12,6 +12,7 @@ var commentCount;
 var sCount;
 var dataCount;
 var bioExist;
+var userComment;
 var player = null;
 var editing = 0;
 var commented = 0;
@@ -1198,6 +1199,7 @@ function showReview(){
       vouch.innerText = "-1";
       vouch.classList.add("highlight-red");
     }
+    userComment.rating = comment[i].rating;
     ratingContainer.appendChild(vouch);
 
     //Rating Container END
@@ -1212,7 +1214,7 @@ function showReview(){
     commentContainer.className = "commentContainer";
     commentContainer.appendChild(ratingContainer);
     commentContainer.append(creatorComment);
-    playerReview.comment = creatorComment;
+    userComment.comment = creatorComment;
     playerminContainer.appendChild(commentContainer);
     //Comment END
     //Manage
