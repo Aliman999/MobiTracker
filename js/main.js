@@ -1281,7 +1281,7 @@ function showReview(){
             editing = 0;
             this.parentElement.parentElement.parentElement.children[0].style.display = "flex";
             this.parentElement.parentElement.parentElement.children[1].style.display = "block";
-            this.parentElement.parentElement.parentElement.children[4].style.display = "flex";
+            this.parentElement.parentElement.parentElement.children[3].style.display = "flex";
             this.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement.parentElement.children[2]);
             this.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement.parentElement.children[2]);
           };
