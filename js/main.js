@@ -850,6 +850,7 @@ function populateHeader(jsonObj) {
 
   var cache = document.createElement("p");
   cache.className = "created_at";
+  cache.style.textAlign = "start";
   if(jsonObj.source == "cache"){
     cache.innerText = "Cache";
   }else{
