@@ -18,6 +18,9 @@ a, a:link, a:hover, a:visited, a:active{
   justify-content: center;
   align-items: center;
 }
+h3{
+  padding: 0 8px;
+}
 .login_btn:hover{
   color: #fdfcf7;
 }
