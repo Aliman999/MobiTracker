@@ -1203,7 +1203,7 @@ function showReview(){
       vouch.classList.add("highlight-green");
     }
     ratingContainer.appendChild(vouch);
-    commentContainer.appendChild(ratingContainer);
+    playerminContainer.appendChild(ratingContainerp);
 
     //Rating Container END
     //Comment
