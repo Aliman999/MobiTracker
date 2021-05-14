@@ -32,7 +32,6 @@ var deleteComments = new XMLHttpRequest();
 var editComments = new XMLHttpRequest();
 var editCareer = new XMLHttpRequest();
 var flagID = new XMLHttpRequest();
-var reset = new XMLHttpRequest();
 var updateCareerXML = new XMLHttpRequest();
 
 // USER
@@ -221,9 +220,7 @@ function showHome(){
 }
 function emptySearch(){
   node.value = "";
-  reset.open("POST", "src/reset.php");
-  reset.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  reset.send();
+  updateSearch(node.value);
 }
 function flag(id,bool){
   flagID.open("POST", "src/report.php");
