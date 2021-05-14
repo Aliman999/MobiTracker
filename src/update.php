@@ -32,19 +32,6 @@ if (isset($headers)) {
       }else{
         $sql = "UPDATE comments SET rating = $rating, comment = '$comment', created_at = current_timestamp WHERE (id = $id);";
         $result = mysqli_query($link, $sql);
-
-        $sql = "SELECT AVG(rating) AS avgRating FROM comments WHERE (r_player = '$username');";
-        $result = mysqli_query($link, $sql);
-        $row = mysqli_fetch_assoc($result);
-        $rating = round($row['avgRating']);
-        if($rating == 0){
-          $rating = -1;
-        }
-
-        $sql = "UPDATE players SET avgRating = $rating WHERE (username = '$username');";
-        if(mysqli_query($link, $sql)){
-          mysqli_close($link);
-        }
       }
     }
 } else {
