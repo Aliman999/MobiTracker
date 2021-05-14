@@ -1268,11 +1268,13 @@ function showReview(){
           vouchPlus.className = "highlight-green notSelected cursor";
           vouchPlus.innerText = "+1";
           vouchPlus.other = vouchMin;
+          vouchPlus.onclick = toggleSelected();
 
           var vouchMin = document.createElement("h3");
           vouchMin.className = "highlight-red notSelected cursor";
           vouchMin.innerText = "-1";
           vouchMin.other = vouchPlus;
+          vouchMin.onclick = toggleSelected();
 
           if(userComment.rating > 0){
             vouchPlus.classList.toggle("notSelected");
@@ -1283,6 +1285,7 @@ function showReview(){
           function toggleSelected(){
             this.classList.toggle("notSelected");
             this.other.classList.toggle("notSelected");
+            return;
           }
 
           vouchContainer.appendChild(vouchMin);
