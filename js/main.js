@@ -1283,7 +1283,6 @@ function showReview(){
 
           vouchContainer.appendChild(vouchMin);
           vouchContainer.appendChild(vouchPlus);
-          editContainer.appendChild(vouchContainer);
 
           var editContainer = document.createElement("div");
           editContainer.className = "createCommentContainer";
@@ -1321,6 +1320,8 @@ function showReview(){
           editSubmit.className = "editSubmit commentSubmit";
           editSubmit.innerHTML = "Submit";
           editSubmit.id = this.parentElement.parentElement.children[1].id;
+
+          editContainer.appendChild(vouchContainer);
           editContainer.appendChild(editBox);
           editContainer.appendChild(manageEditContainer);
           manageEditContainer.appendChild(editorCount);
