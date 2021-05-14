@@ -53,7 +53,7 @@ if (isset($headers)) {
     }else{
       $user['cPref'] = array('cType' => 2, 'cOwn' => 1);
     }
-    echo json_encode($_SESSION);
+    echo json_encode($user);
   }
 }else{
  exit(json_encode(['error' => 'No CSRF Token.']));
