@@ -1108,7 +1108,9 @@ function populateHeader(jsonObj) {
           }
         };
 
-        newCommentContainer.className = "manageComment";
+        newCommentContainer.style.display = "flex";
+        newCommentContainer.style.justifyContent = "flex-end";
+
         cancelNew.className = "commentSubmit";
         createComment.className = "createComment";
         createCommentSubmit.className = "commentSubmit";

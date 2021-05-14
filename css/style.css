@@ -143,6 +143,7 @@ div.ptitle img.orgLogo{
 .cCommentContainer{
   display: flex;
   flex-direction: column;
+  padding: 8px;
 }
 header p {
   font-size: 1.3rem;
