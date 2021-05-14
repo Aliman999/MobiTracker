@@ -289,7 +289,6 @@ input{
   box-sizing: border-box;
 }
 .createCommentContainer{
-  padding: 8px;
   white-space: pre-wrap;
 }
 .createComment{
