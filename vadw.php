@@ -4,4 +4,5 @@ if(isset($_GET['search'])){
 }else{
   $_SESSION['search'] = "";
 }
+echo $_SESSION['search'];
 ?>
