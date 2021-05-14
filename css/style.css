@@ -603,6 +603,9 @@ p.sbrc{
 .highlight-red:hover{
   text-shadow: 0px 0px 5px #FF5A5A;
 }
+.shadow-red{
+  text-shadow: 0px 0px 5px #FF5A5A;
+}
 .highlight-yellow{
   color: #f0e7b3;
   text-shadow: 0px 0px 5px #f0e7b3;

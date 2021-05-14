@@ -1273,7 +1273,7 @@ function showReview(){
             toggleSelected(this);
           };
 
-          vouchMin.className = "highlight-red notSelected cursor";
+          vouchMin.className = "highlight-red shadow-red notSelected cursor";
           vouchMin.innerText = "-1";
           vouchMin.other = vouchPlus;
           vouchMin.onclick = function(){
