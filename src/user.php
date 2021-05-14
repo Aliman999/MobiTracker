@@ -23,6 +23,7 @@ if (isset($headers)) {
     }
     if(isset($_SESSION['search'])){
       $user['search'] = $_SESSION['search'];
+      $user['search'] = "isset";
     }else{
       $user['search'] = "";
     }
