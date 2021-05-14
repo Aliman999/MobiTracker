@@ -13,7 +13,6 @@ var sCount;
 var dataCount;
 var bioExist;
 var player = null;
-var selected = -1;
 var editing = 0;
 var commented = 0;
 var check = 0;
@@ -302,7 +301,7 @@ function deleteComment(commentID){
     mtco();
   };
 }
-function updateComment(id,  newRating, newComment){
+function updateComment(id, newComment){
   newRating++;
   editComments.open("POST", "src/update.php");
   editComments.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -1104,10 +1103,8 @@ function populateHeader(jsonObj) {
         header.appendChild(createCommentContainer);
 
         createCommentSubmit.addEventListener("click", function(){
-          selected++;
           var writeString = "u_player="+sessionUser+"&r_player="+jsonObj["data"]["profile"]["handle"]+"&avi="+jsonObj["data"]["profile"]["image"]+"&rating="+selected+"&comment="+createComment.value;
           sendComment(writeString);
-          selected = -1;
         });
       }else if(session && commented == 0 && comcount == 3){
         createErr.textContent = "Unverified accounts are limited to 3 reviews. "+comcount+"/3";
@@ -1305,13 +1302,12 @@ function showReview(){
           manageEditContainer.appendChild(editCancel);
           manageEditContainer.appendChild(editSubmit);
 
-          selected = this.parentElement.parentElement.children[0].id;
           this.parentElement.parentElement.children[0].style.display = "none";
           this.parentElement.parentElement.children[1].style.display = "none";
           this.parentElement.parentElement.children[2].style.display = "none";
           this.parentElement.parentElement.insertBefore(editContainer, this.parentElement.parentElement.children[2]);
           editSubmit.onclick = function(){
-            updateComment(editSubmit.id, selected++, editBox.value);
+            updateComment(editSubmit.id, editBox.value);
           };
           document.getElementsByClassName("createErr")[0].textContent = "";
 
