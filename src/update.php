@@ -31,7 +31,6 @@ if (isset($headers)) {
         exit();
       }else{
         $sql = "UPDATE comments SET rating = $rating, comment = '$comment', created_at = current_timestamp WHERE (id = $id);";
-        echo $sql;
         $result = mysqli_query($link, $sql);
       }
     }
