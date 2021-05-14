@@ -1286,9 +1286,9 @@ function showReview(){
             vouchMin.classList.toggle("notSelected");
           }
 
-          function toggleSelected(this){
-            this.classList.toggle("notSelected");
-            this.other.classList.toggle("notSelected");
+          function toggleSelected(e){
+            e.classList.toggle("notSelected");
+            e.other.classList.toggle("notSelected");
             return;
           }
 
