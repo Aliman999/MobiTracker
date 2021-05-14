@@ -1203,7 +1203,6 @@ function showReview(){
       vouch.classList.add("highlight-red");
     }
     ratingContainer.appendChild(vouch);
-    playerminContainer.appendChild(ratingContainer);
 
     //Rating Container END
     //Comment
