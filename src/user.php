@@ -23,10 +23,8 @@ if (isset($headers)) {
     }
     if(isset($_SESSION['search'])){
       $user['search'] = $_SESSION['search'];
-      $user['search'] = "true";
     }else{
-      $user['search'] = "not true";
-
+      $user['search'] = "";
     }
     if($_SESSION['com_count'] == 3){
       $user['limited'] = true;
