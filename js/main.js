@@ -1058,7 +1058,7 @@ function populateHeader(jsonObj) {
 
         var vouchPlus = document.createElement("h3");
         var vouchMin = document.createElement("h3");
-        vouchPlus.className = "highlight-green notSelected cursor";
+        vouchPlus.className = "highlight-green cursor";
         vouchPlus.innerText = "+1";
         vouchPlus.other = vouchMin;
         vouchPlus.onclick = function(){
@@ -1071,12 +1071,6 @@ function populateHeader(jsonObj) {
         vouchMin.onclick = function(){
           toggleSelected(this);
         };
-
-        if(userComment.rating > 0){
-          vouchPlus.classList.toggle("notSelected");
-        }else if (userComment.rating < 0) {
-          vouchMin.classList.toggle("notSelected");
-        }
 
         function toggleSelected(e){
           if(e.classList.contains("notSelected")){
