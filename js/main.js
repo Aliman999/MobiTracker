@@ -1195,12 +1195,12 @@ function showReview(){
     var ratingContainer = document.createElement("div");
     ratingContainer.className  = "rating-container";
     var vouch = document.createElement("h3");
-    if(comment.rating == 1){
+    if(comment.rating > 0){
       vouch.innerText = "+1";
       vouch.classList.add("highlight-green");
-    }else if(comment.rating == -1){
-      vouch.innerText = "+1";
-      vouch.classList.add("highlight-green");
+    }else if(comment.rating < 0){
+      vouch.innerText = "-1";
+      vouch.classList.add("highlight-red");
     }
     ratingContainer.appendChild(vouch);
     playerminContainer.appendChild(ratingContainer);
