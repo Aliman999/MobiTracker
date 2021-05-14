@@ -1073,7 +1073,7 @@ function populateHeader(jsonObj) {
         vouchMin.onclick = function(){
           toggleSelected(this);
         };
-        var selected;
+        var selected = 1;
         function toggleSelected(e){
           if(e.classList.contains("notSelected")){
             e.classList.toggle("notSelected");
