@@ -1052,6 +1052,45 @@ function populateHeader(jsonObj) {
         createCommentContainer.className = "cCommentContainer";
         header.removeChild(header.lastChild);
 
+        var vouchContainer = document.createElement("div");
+        vouchContainer.style.display = "flex";
+        vouchContainer.style.justifyContent = "flex-end";
+
+        var vouchPlus = document.createElement("h3");
+        var vouchMin = document.createElement("h3");
+        vouchPlus.className = "highlight-green notSelected cursor";
+        vouchPlus.innerText = "+1";
+        vouchPlus.other = vouchMin;
+        vouchPlus.onclick = function(){
+          toggleSelected(this);
+        };
+
+        vouchMin.className = "highlight-red shadow-red notSelected cursor";
+        vouchMin.innerText = "-1";
+        vouchMin.other = vouchPlus;
+        vouchMin.onclick = function(){
+          toggleSelected(this);
+        };
+
+        if(userComment.rating > 0){
+          vouchPlus.classList.toggle("notSelected");
+        }else if (userComment.rating < 0) {
+          vouchMin.classList.toggle("notSelected");
+        }
+
+        function toggleSelected(e){
+          if(e.classList.contains("notSelected")){
+            e.classList.toggle("notSelected");
+            e.other.classList.toggle("notSelected");
+            return;
+          }
+        }
+
+        vouchContainer.appendChild(vouchMin);
+        vouchContainer.appendChild(vouchPlus);
+
+        createCommentContainer.appendChild(vouchContainer);
+
         var createComment = document.createElement("textarea");
         createComment.maxLength = 600;
         var newCommentContainer = document.createElement("div");
