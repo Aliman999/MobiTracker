@@ -306,6 +306,9 @@ function updateComment(id, newRating, newComment){
   editComments.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   editComments.setRequestHeader(tokenHeader.name,tokenHeader.content);
   editComments.send("id="+id+"&rating="+newRating+"&comment="+escape(newComment));
+  editComment.onload = function(){
+    console.log(editComment);
+  }
   mtco();
 }
 function sendComment(string){
