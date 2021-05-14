@@ -79,12 +79,21 @@ function login(username, password){
   query.send("username="+username+"&password="+password);
   query.onload = function(){
     var response = JSON.parse(query.response);
-    if(response.username){
-      form.pUsernameErr.classList.remove("hidden");
-      form.pUsernameErr.innerText = response.username;
-    }else if(response.password){
-      form.pPasswordErr.classList.remove("hidden");
-      form.pPasswordErr.innerText = response.password;
+    if(response.username || response.password){
+      if(response.username){
+        form.pUsernameErr.classList.remove("hidden");
+        form.pUsernameErr.innerText = response.username;
+      }else{
+        form.pUsernameErr.classList.add("hidden");
+        form.pUsernameErr.innerText = response.username;
+      }
+      if(response.password){
+        form.pPasswordErr.classList.remove("hidden");
+        form.pPasswordErr.innerText = response.password;
+      }else{
+        form.pPasswordErr.classList.add("hidden");
+        form.pPasswordErr.innerText = response.password;
+      }
     }else{
       form.pUsernameErr.classList.add("hidden");
       form.pPasswordErr.classList.add("hidden");
