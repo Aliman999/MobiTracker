@@ -1269,9 +1269,9 @@ function showReview(){
           vouchMin.className = "highlight-red notSelected";
           vouchMin.innerText = "-1";
 
-          if(comment[i].rating > 0){
+          if(userComment.rating > 0){
             vouchPlus.classList.toggle("notSelected");
-          }else if (comment[i].rating < 0) {
+          }else if (userComment.rating < 0) {
             vouchMin.classList.toggle("notSelected");
           }
 
