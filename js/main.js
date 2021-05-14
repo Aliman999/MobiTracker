@@ -1265,6 +1265,7 @@ function showReview(){
           vouchContainer.style.justifyContent = "flex-end";
 
           var vouchPlus = document.createElement("h3");
+          var vouchMin = document.createElement("h3");
           vouchPlus.className = "highlight-green notSelected cursor";
           vouchPlus.innerText = "+1";
           vouchPlus.other = vouchMin;
@@ -1272,7 +1273,6 @@ function showReview(){
             toggleSelected(this);
           };
 
-          var vouchMin = document.createElement("h3");
           vouchMin.className = "highlight-red notSelected cursor";
           vouchMin.innerText = "-1";
           vouchMin.other = vouchPlus;
