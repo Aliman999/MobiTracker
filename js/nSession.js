@@ -38,15 +38,28 @@ function register(usernam, email, password){
   query.send("username="+usernam+"&email="+email+"&password="+password);
   query.onload = function(){
     var response = JSON.parse(query.response);
-    if(response.username){
-      form.pUsernameErr.classList.remove("hidden");
-      form.pUsernameErr.innerText = response.username;
-    }else if(response.email){
-      form.pEmailErr.classList.remove("hidden");
-      form.pEmailErr.innerText = response.email;
-    }else if(response.password){
-      form.pPasswordErr.classList.remove("hidden");
-      form.pPasswordErr.innerText = response.password;
+    if(response.username || response.email || response.password){
+      if(response.username){
+        form.pUsernameErr.classList.remove("hidden");
+        form.pUsernameErr.innerText = response.username;
+      }else{
+        form.pUsernameErr.classList.add("hidden");
+        form.pUsernameErr.innerText = response.username;
+      }
+      if(response.email){
+        form.pEmailErr.classList.remove("hidden");
+        form.pEmailErr.innerText = response.email;
+      }else{
+        form.pEmailErr.classList.add("hidden");
+        form.pEmailErr.innerText = response.email;
+      }
+      if(response.password){
+        form.pPasswordErr.classList.remove("hidden");
+        form.pPasswordErr.innerText = response.password;
+      }else{
+        form.pPasswordErr.classList.add("hidden");
+        form.pPasswordErr.innerText = response.password;
+      }
     }else{
       form.pUsernameErr.classList.add("hidden");
       form.pEmailErr.classList.add("hidden");
