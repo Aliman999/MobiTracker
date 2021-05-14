@@ -12,7 +12,6 @@ var commentCount;
 var sCount;
 var dataCount;
 var bioExist;
-var userComment;
 var player = null;
 var editing = 0;
 var commented = 0;
@@ -1210,6 +1209,7 @@ function showReview(){
     creatorComment.innerHTML = comment[i]["comment"];
     if(session && sessionUser == comment[i]["u_creator"]){
       creatorComment.id = comment[i]["id"];
+      var userComment = comment[i];
     }
     commentContainer.className = "commentContainer";
     commentContainer.appendChild(ratingContainer);
