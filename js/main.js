@@ -1198,7 +1198,6 @@ function showReview(){
       vouch.innerText = "-1";
       vouch.classList.add("highlight-red");
     }
-    userComment.rating = comment[i].rating;
     ratingContainer.appendChild(vouch);
 
     //Rating Container END
@@ -1214,7 +1213,6 @@ function showReview(){
     commentContainer.className = "commentContainer";
     commentContainer.appendChild(ratingContainer);
     commentContainer.append(creatorComment);
-    userComment.comment = creatorComment;
     playerminContainer.appendChild(commentContainer);
     //Comment END
     //Manage
