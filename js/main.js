@@ -1268,13 +1268,17 @@ function showReview(){
           vouchPlus.className = "highlight-green notSelected cursor";
           vouchPlus.innerText = "+1";
           vouchPlus.other = vouchMin;
-          vouchPlus.onclick = toggleSelected();
+          vouchPlus.onclick = function(){
+            toggleSelected();
+          };
 
           var vouchMin = document.createElement("h3");
           vouchMin.className = "highlight-red notSelected cursor";
           vouchMin.innerText = "-1";
           vouchMin.other = vouchPlus;
-          vouchMin.onclick = toggleSelected();
+          vouchMin.onclick = function(){
+            toggleSelected();
+          };
 
           if(userComment.rating > 0){
             vouchPlus.classList.toggle("notSelected");
