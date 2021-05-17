@@ -1262,7 +1262,7 @@ function showReview(){
     }
     playerMin.appendChild(playerminAvatar);
 
-    var playerminName = document.createElement("div");
+    var playerminName = document.createElement("a");
     playerminName.className = "player-min-name";
     playerminName.href = "https://mobitracker.co/"+comment[i]["u_creator"];
     var playerUsername = document.createElement("p");
@@ -1634,7 +1634,7 @@ function uSearch(searched){
       this.src = "src/avatars/avatar_default.jpg";
     }
     sb.appendChild(sba);
-    var sbName = document.createElement("a");
+    var sbName = document.createElement("div");
     sbName.className = "player-min-name";
 
     if(searched[i]["verify"] == 1){
