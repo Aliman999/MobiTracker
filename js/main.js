@@ -1287,7 +1287,7 @@ function showReview(){
       vouch.classList.add("highlight-green");
     }else if(comment[i].rating < 3){
       vouch.innerText = "-1";
-      vouch.classList.add("highlight-red");
+      vouch.classList.add("highlight-red shadow-red");
     }
     ratingContainer.appendChild(vouch);
 
