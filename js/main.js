@@ -862,8 +862,8 @@ function populateHeader(jsonObj) {
 
   var d = new Date(now());
   created_at.innerText = d.toLocaleString("en-US", {
+    month: "long",
     day: "2-digit",
-    year: "2-digit",
     hour: "2-digit",
     minute: "2-digit"
   });
