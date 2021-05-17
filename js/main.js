@@ -1282,10 +1282,10 @@ function showReview(){
     var ratingContainer = document.createElement("div");
     ratingContainer.className  = "rating-container";
     var vouch = document.createElement("h3");
-    if(comment[i].rating > 0){
+    if(comment[i].rating >= 3){
       vouch.innerText = "+1";
       vouch.classList.add("highlight-green");
-    }else if(comment[i].rating < 0){
+    }else if(comment[i].rating < 3){
       vouch.innerText = "-1";
       vouch.classList.add("highlight-red");
     }
