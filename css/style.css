@@ -222,6 +222,7 @@ p.comment{
   font-weight: bold;
   display: flex;
   justify-content: center;
+  cursor: default;
 }
 .player-min-container{
     display: flex;
@@ -755,10 +756,6 @@ p.page{
   }
   p.playerbio{
     font-size: 16px;
-  }
-  .player-min-name{
-    font-size: 1rem;
-    cursor: default;
   }
   .copyURL{
       right:16px;
