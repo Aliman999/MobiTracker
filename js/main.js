@@ -1262,7 +1262,7 @@ function showReview(){
     }
     playerMin.appendChild(playerminAvatar);
 
-    var playerminName = document.createElement("a");
+    var playerminName = document.createElement("div");
     playerminName.className = "player-min-name";
     playerminName.href = "https://mobitracker.co/"+comment[i]["u_creator"];
     var playerUsername = document.createElement("p");
