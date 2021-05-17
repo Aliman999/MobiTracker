@@ -758,6 +758,7 @@ p.page{
   }
   .player-min-name{
     font-size: 1rem;
+    cursor: default;
   }
   .copyURL{
       right:16px;
