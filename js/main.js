@@ -861,7 +861,7 @@ function populateHeader(jsonObj) {
   }
 
   var d = now();
-  var created_at = d.toLocaleString("en-US", {
+  created_at.innerText = d.toLocaleString("en-US", {
     weekday: "short",
     month: "long",
     day: "2-digit",
@@ -873,16 +873,15 @@ function populateHeader(jsonObj) {
   var cacheContainer = document.createElement("div");
   cacheContainer.className = "ptitle";
 
-  var cache = document.createElement("p");
-  cache.className = "created_at";
-  cache.style.textAlign = "start";
+  created_at.style.textAlign = "start";
+
   if(jsonObj.source == "cache"){
-    cache.innerText = "Cache";
+    created_at.innerText = "Cache";
   }else{
-    cache.innerText = "Live - "+created_at;
+    created_at.innerText = "Live - "+created_at.innerText;
   }
 
-  header.appendChild(cache);
+  header.appendChild(created_at);
   //Data Source
 
   //Player ID
