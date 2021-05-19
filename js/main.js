@@ -1535,8 +1535,7 @@ function uSearch(searched){
     sbUsername.href = "https://mobitracker.co/"+searched[i]["username"];
     sbName.appendChild(sbUsername);
     sb.appendChild(sbName);
-
-    //Im not sure why I put the same classname
+    
     var sbr = document.createElement("div");
     sbr.className = "sbr";
 
