@@ -63,6 +63,9 @@ if (isset($headers)) {
     }else{
       $user['completed'] = 0;
     }
+    if(isset($_SESSION['debug'])){
+      $user['debug'] = $_SESSION['debug'];
+    }
     echo json_encode($user);
   }
 }else{
