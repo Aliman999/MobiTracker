@@ -50,7 +50,6 @@ if(isset($headers)){
       }
       $order[$xx] = $types[$xx]." DESC";
     }
-    sort($order);
     $career = join(" OR ", $career);
     $order = join(", ", $order);
     $sql = "SELECT username, avatar, verify, reviewed_count, crew, escort, explorer, miner, pirate, trader FROM players WHERE (signup = 1) AND ($career) ORDER BY verify DESC, reviewed_count DESC, $order;";
