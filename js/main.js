@@ -801,14 +801,32 @@ function populateHeader(jsonObj) {
   readRating.open("GET", "src/rating.php" + queryString, true);
   readRating.setRequestHeader(tokenHeader.name,tokenHeader.content);
   readRating.send();
+  function xp(rep){
+    if(rep < 0){
+      if(rep > -5){
+        return "Dangerous";
+      }else if (rep <= -5) {
+        return "Sketchy";
+      }
+    }else{
+      if(rep == 0){
+        return "Newbie";
+      }else if (rep <= 30) {
+        return "Experienced";
+      }else if (rep <= 100) {
+        return "Reliable";
+      }
+    }
+  }
   readRating.onreadystatechange = function(){
     if(readRating.readyState == 4){
       var ratings = JSON.parse(readRating.response);
-      ratingCount = ratings["reviewed_count"];
-      showCount.textContent = "Vouchers: +"+ratingCount;
+      ratingCount = ratings.reviewed_count;
+      showCount.textContent = "Reputation: "+xp(ratingCount);
       ratingContainer.appendChild(showCount);
     }
   }
+
   header.appendChild(ratingContainer);
   //Rating Container END
 
