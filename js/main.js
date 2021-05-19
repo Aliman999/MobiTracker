@@ -593,7 +593,6 @@ function hideSB(){
   sbc.style.display = "none";
   sbcContainer.style.height = null;
   sbcContainer.children[0].style.color = "C4D7E6";
-  sbcContainer.children[1].style.color = "C4D7E6";
   //Reset selected
   resetsbc = document.getElementsByClassName("sbc-img");
   //Reset END
