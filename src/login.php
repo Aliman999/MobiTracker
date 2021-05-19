@@ -79,6 +79,9 @@ if(!isset($_GET['ref'])){
                                 $completedContracts++;
                               };
                             }
+                            if(mysqli_error($link)){
+                              echo mysqli_error($link);
+                            }
                             if($row['verify'] == 1){
                               $_SESSION["verified"] = 1;
                             }else {
