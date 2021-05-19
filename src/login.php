@@ -24,14 +24,14 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = "";
-$_POST['username'] = "mobitracker";
-$_POST['password'] = "mobitrackerco";
+//$_POST['username'] = "mobitracker";
+//$_POST['password'] = "mobitrackerco";
 $len = 0;
 if(!isset($_GET['ref'])){
   $_GET['ref'] = "login";
 }
 // Processing form data when form is submitted
-//if($_SERVER["REQUEST_METHOD"] == "POST"){
+if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Include config file
     include "../src/config.php";
 
@@ -116,7 +116,6 @@ if(!isset($_GET['ref'])){
                             $_SESSION['cPref'] = json_decode($pref, true);
                             $_SESSION['vouchers'] = $row['reviewed_count'];
                             $_SESSION['completed'] = $row['completed'];
-                            var_dump($_SESSION);
                             //$_SESSION['debug'] = $sql;
                             require_once "../src/jwt/generate_jwt.php";
 
@@ -174,5 +173,5 @@ if(!isset($_GET['ref'])){
       'password' => $password_err
     );
     echo json_encode($errors);
-//}
+}
 ?>
