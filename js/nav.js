@@ -2,6 +2,7 @@ var openBtn = document.getElementById("navBtnContainer");
 var closeBtn = document.getElementById("closeNavBtn");
 var eleCount = document.getElementsByClassName("navEle");
 var navMenu = document.getElementById("navMenu");
+var tokenHeader = document.getElementsByName("token")[0];
 
 var miniPlayer = document.getElementById("miniPlayer");
 var miniRep = document.getElementById("miniRep");
