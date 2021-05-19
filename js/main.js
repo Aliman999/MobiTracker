@@ -441,13 +441,9 @@ function searchCareer(sc){
   emptySearch();
   header.style.display = "grid";
   header.style.justifyContent = "flex-start";
-  if(sc[0] || sc[1] || sc[2] || sc[3] || sc[4] || sc[5]){
-    var queryString = "?c="+sc[0]+"&e="+sc[1]+"&x="+sc[2]+"&m="+sc[3]+"&p="+sc[4]+"&t="+sc[5]+"&r="+sc[6];
-  }else if (sC[6] == -1) {
-    var queryString = "?c="+sc[0]+"&e="+sc[1]+"&x="+sc[2]+"&m="+sc[3]+"&p="+sc[4]+"&t="+sc[5]+"&r="+sc[6];
-  }else{
-    var queryString = "?c=0&e=0&x=0&m=0&p=0&t=0&r="+sc[6];
-  }
+
+  var queryString = "?c="+sc[0]+"&e="+sc[1]+"&x="+sc[2]+"&m="+sc[3]+"&p="+sc[4]+"&t="+sc[5];
+  
   searchCareers.open("GET", "src/searchBy.php" + queryString+"&page="+sC[7]);
   searchCareers.setRequestHeader(tokenHeader.name,tokenHeader.content);
   searchCareers.send();
@@ -1535,7 +1531,7 @@ function uSearch(searched){
     sbUsername.href = "https://mobitracker.co/"+searched[i]["username"];
     sbName.appendChild(sbUsername);
     sb.appendChild(sbName);
-    
+
     var sbr = document.createElement("div");
     sbr.className = "sbr";
 

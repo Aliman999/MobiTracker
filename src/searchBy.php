@@ -6,7 +6,7 @@ if(isset($headers)){
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
     require_once "config.php";
-    $c = $e = $x = $m = $p = $t= $r = $career = $order =  "";
+    $c = $e = $x = $m = $p = $t = $career = $order =  "";
     foreach ($_GET as $get => $g) {
       mysqli_real_escape_string($link, $g);
       $g = htmlentities($g, ENT_QUOTES, 'UTF-8');
@@ -17,7 +17,6 @@ if(isset($headers)){
     $m = $_GET['m'];
     $p = $_GET['p'];
     $t = $_GET['t'];
-    $r = $_GET['r'];
 
     if(isset($_GET['page'])){
       if($_GET['page']>1){
@@ -30,9 +29,6 @@ if(isset($headers)){
       $perPage = htmlentities($_GET['perpage'], ENT_QUOTES, 'UTF-8');
     }else{
       $perPage = 24;
-    }
-    if($r > 5){
-      $r = 5;
     }
 
     //ini_set('display_errors', 1);
@@ -55,21 +51,10 @@ if(isset($headers)){
       $order[$xx] = $types[$xx]." DESC";
     }
 
-    if($r == -1){
-      $career = join(" OR ", $career); //Joins the indexes of career if they are selected if not then they dont apply to the sql query;
-      $order = join(", ", $order);
-      $sql = "SELECT username, avatar, avgRating, verify, reviewed_count, crew, escort, explorer, miner, pirate, trader FROM players WHERE (signup = 1) AND ($career) ORDER BY avgRating DESC, verify DESC, reviewed_count DESC, $order;";
-    }else{
-      if($r == 0){
-        $r--;
-      }
-      $career = join(" OR ", $career);
-      $order = join(", ", $order);
-      if(strlen($career) > 0){
-        $career = $career." AND ";
-      }
-      $sql = "SELECT username, avatar, avgRating, verify, reviewed_count, crew, escort, explorer, miner, pirate, trader FROM players WHERE $career avgRating >= $r ORDER BY avgRating DESC, verify DESC, reviewed_count DESC, $order;";
-    }
+    $career = join(" OR ", $career);
+    $order = join(", ", $order);
+    $sql = "SELECT username, avatar, verify, reviewed_count, crew, escort, explorer, miner, pirate, trader FROM players WHERE (signup = 1) AND ($career) ORDER BY avgRating DESC, verify DESC, reviewed_count DESC, $order;";
+
     $result = mysqli_query($link, $sql);
     $searchResult = array();
 
