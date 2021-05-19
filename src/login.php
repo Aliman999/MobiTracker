@@ -172,5 +172,5 @@ if(!isset($_GET['ref'])){
       'password' => $password_err
     );
     echo json_encode($errors);
-}
+//}
 ?>
