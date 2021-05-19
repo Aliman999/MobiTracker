@@ -177,8 +177,8 @@ function showForm(register){
     form.iEmail.type = "email";
     form.iEmail.autocomplete = "email";
 
-    form.iEmail.oninput = function(){hasValue(e)};
-    form.iEmail.onchange = function(){hasValue(e)};
+    form.iEmail.oninput = function(){hasValue(this)};
+    form.iEmail.onchange = function(){hasValue(this)};
 
     container.appendChild(form.pEmail);
     container.appendChild(form.iEmail);
@@ -192,8 +192,8 @@ function showForm(register){
   form.iPassword.type = "password";
   form.iPassword.autocomplete = "current-password";
 
-  form.iPassword.oninput = function(){hasValue(e)};
-  form.iPassword.onchange = function(){hasValue(e)};
+  form.iPassword.oninput = function(){hasValue(this)};
+  form.iPassword.onchange = function(){hasValue(this)};
 
   container.appendChild(form.pPassword);
   container.appendChild(form.iPassword);
