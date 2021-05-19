@@ -99,11 +99,7 @@ function showUser(){
 
   var experience = document.createElement("p");
   experience.className = "rBold";
-  var testRep = -5;
-  setInterval(function(){
-    experience.innerText = xp(testRep++);
-  }, 1000);
-  //experience.innerText = "Experienced";
+  experience.innerText = xp(user.vouchers);
   var vouches = document.createElement("p");
   vouches.innerText = "Vouches: "+user.vouchers;
   //var unique = document.createElement("p");
