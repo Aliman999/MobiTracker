@@ -40,6 +40,24 @@ function requestUser(){
 
 requestUser();
 
+function xp(rep){
+  if(rep < 0){
+    if(rep > -5){
+      return "Dangerous";
+    }else if (rep <= -5) {
+      return "Sketchy";
+    }
+  }else{
+    if(rep == 0){
+      return "Newbie";
+    }else if (rep <= 30) {
+      return "Experienced";
+    }else if (rep <= 100) {
+      return "Reliable";
+    }
+  }
+}
+
 function showUser(){
   var avatar = document.createElement("img");
   avatar.src = "../src/avatars/avatar_default.jpg";
@@ -81,17 +99,21 @@ function showUser(){
 
   var experience = document.createElement("p");
   experience.className = "rBold";
-  experience.innerText = "Experienced";
+  var testRep = -5;
+  setTimeout(function(){
+    experience.innerText = xp(testRep++);
+  }, 1000);
+  //experience.innerText = "Experienced";
   var vouches = document.createElement("p");
   vouches.innerText = "Vouches: "+user.vouchers;
   //var unique = document.createElement("p");
   //unique.innerText = "Unique Vouches: 54";
   var contracts = document.createElement("p");
-  contracts.innerText = "Completed Contracts: 1";
+  contracts.innerText = "Completed Contracts: "+user.completed;
 
   miniRep.appendChild(experience);
-  //miniRep.appendChild(vouches);
-  miniRep.appendChild(unique);
+  miniRep.appendChild(vouches);
+  //miniRep.appendChild(unique);
   miniRep.appendChild(contracts);
 
   miniRep.appendChild(settingsContainer);
