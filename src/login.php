@@ -12,12 +12,10 @@ if (empty($_SESSION['token'])) {
 $headers = $_SESSION['token'];
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-  if($_SESSION['banned'] == 0){
+  if($_SESSION['banned'] == 1){
     $username_err = "Your account is banned.";
     echo json_encode($username_err);
     exit;
-  }else{
-    $username_err = "Your account is banned.";
   }
 }
 
@@ -113,7 +111,8 @@ if(!isset($_GET['ref'])){
                             $_SESSION['daysleft'] = $dl;
                             $_SESSION['cPref'] = json_decode($pref, true);
                             $_SESSION['vouchers'] = $row['reviewed_count'];
-                            $_SESSION['debug'] = var_dump($row);
+                            $_SESSION['debug'] = $sql;
+                            var_dump($row);
                             require_once "../src/jwt/generate_jwt.php";
 
                             if($_SESSION['verified'] == 0){
