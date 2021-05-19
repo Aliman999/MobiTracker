@@ -1282,10 +1282,10 @@ function showReview(){
     var ratingContainer = document.createElement("div");
     ratingContainer.className  = "rating-container";
     var vouch = document.createElement("h3");
-    if(comment[i].rating >= 3){
+    if(comment[i].rating > 0){
       vouch.innerText = "+1";
       vouch.classList.add("highlight-green");
-    }else if(comment[i].rating < 3){
+    }else if(comment[i].rating < 0){
       vouch.innerText = "-1";
       vouch.classList.add("highlight-red shadow-red");
     }
@@ -1492,122 +1492,6 @@ function showReview(){
     }
   }
 }
-/*
-function showReview(comment) {
-  for(var i = 0; i<commentCount; i++){
-    if(session){
-    }else{
-      //Creator Container
-      var playerReview = document.createElement("div");
-      playerReview.className = "player-review";
-      var playerminContainer = document.createElement("div");
-      playerminContainer.className = "player-min-container";
-      playerReview.appendChild(playerminContainer);
-
-      var playerMin = document.createElement("div");
-      playerMin.className = "player-min";
-      playerminContainer.appendChild(playerMin);
-
-      var playerminAvatar = document.createElement("img");
-      playerminAvatar.className = "player-min-avatar";
-      playerminAvatar.src = comment[i]["avatar"];
-      playerminAvatar.onerror = function(){
-        this.src = "src/avatars/avatar_default.jpg";
-      }
-      playerMin.appendChild(playerminAvatar);
-
-      var playerminName = document.createElement("a");
-      playerminName.className = "player-min-name";
-      playerminName.href = "https://mobitracker.co/"+comment[i]["u_creator"];
-      var playerUsername = document.createElement("p");
-      var playerVerify = document.createElement("img");
-      playerVerify.src = "src/verified.png";
-      playerVerify.className = "verified";
-      playerUsername.className = "player-username";
-      playerUsername.id = comment[i]["u_creator"];
-      if(comment[i]["verify"] == 1){
-        playerminName.appendChild(playerVerify);
-      }
-      playerUsername.innerHTML = comment[i]["u_creator"];
-      playerminName.appendChild(playerUsername);
-      playerMin.appendChild(playerminName);
-      //Creator Container END
-
-      //Rating Container
-      var ratingContainer = document.createElement("div");
-      ratingContainer.className  = "rating-container";
-      var rating = comment[i]["rating"];
-      var e = 0;
-      var ratingStar = document.createElement("img");
-      ratingStar.className = "rating";
-      ratingStar.src = "src/star.png";
-      playerminContainer.appendChild(ratingContainer);
-
-      for(e=0; e<5 ; e++){
-        if(e==rating){
-          ratingStar.src="src/star-empty.png";
-          ratingContainer.appendChild(ratingStar.cloneNode(true));
-        }else{
-          ratingContainer.appendChild(ratingStar.cloneNode(true));
-        }
-      }
-      //Rating Container END
-      //Comment
-      var creatorComment = document.createElement("p");
-      var commentContainer = document.createElement("div");
-      creatorComment.className = "comment";
-      creatorComment.innerHTML = comment[i]["comment"];
-      commentContainer.className = "commentContainer";
-      commentContainer.appendChild(ratingContainer);
-      commentContainer.append(creatorComment);
-      playerReview.id = creatorComment.innerHTML;
-      playerminContainer.appendChild(commentContainer);
-      //Comment END
-      //Manage
-      manageComment = document.createElement("div");
-      manageComment.className = "manageComment";
-      var flagComment = document.createElement("button");
-      flagComment.className = "manageEdit commentSubmit flag";
-      flagComment.id = comment[i]["id"];
-      if(flagged.includes(comment[i]["id"])){
-        flagComment.innerHTML = "Unreport";
-      }else{
-        flagComment.innerHTML = "Report";
-      }
-      flagComment.onclick = function(){
-        if(flagged.includes(this.id)){
-          flag(this.id,0);
-          this.innerHTML = "Report";
-          flagged = flagged.replace(this.id,"");
-        }else{
-          flag(this.id,1);
-          this.innerHTML = "Unreport";
-          flagged = flagged+this.id;
-        }
-      };
-      manageComment.appendChild(flagComment);
-      commentContainer.appendChild(manageComment);
-      //Manage END
-      //Creation
-      var created_at = document.createElement("p");
-      var t = comment[i]["created_at"].split(/[- :]/);
-      var d = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]));
-      created_at.className = "created_at";
-      created_at.innerHTML = d.toLocaleString("en-US", {
-          weekday: "short",
-          month: "long",
-          day: "2-digit",
-          year: "numeric",
-          hour: "2-digit",
-          minute: "2-digit"
-        });
-      playerReview.appendChild(created_at);
-      //Creation END
-      section.appendChild(playerReview);
-    }
-  }
-}
-*/
 //Searched Users
 function uSearch(searched){
   document.title = "MobiTracker";
@@ -1655,28 +1539,12 @@ function uSearch(searched){
     //Im not sure why I put the same classname
     var sbr = document.createElement("div");
     sbr.className = "sbr";
-    var sbrI = document.createElement("img");
-    sbrI.className = "sbr";
-    sbrI.src="src/star.png";
+
     var showsbrc = document.createElement("p");
     showsbrc.className = "sbrc";
 
-    var sbRating = searched[i]["avgRating"];
-    var sbRatingCount = searched[i]["reviewed_count"];
-    if(sbRatingCount == 0){
-      showsbrc.textContent = "No Reviews";
-      showsbrc.style.paddingTop = "";
-    }else{
-      for(e=0; e<5 ; e++){
-        if(e==sbRating){
-          sbrI.src="src/star-empty.png";
-          sbr.appendChild(sbrI.cloneNode(true));
-        }else{
-          sbr.appendChild(sbrI.cloneNode(true));
-        }
-      }
-      showsbrc.textContent = "("+sbRatingCount+")";
-    }
+    showsbrc.textContent = "Vouchers: "+searched[i].reviewed_count;
+
     sbr.appendChild(showsbrc);
     sb.appendChild(sbr);
     header.appendChild(sb);
