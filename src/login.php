@@ -114,7 +114,8 @@ if(!isset($_GET['ref'])){
                             $_SESSION['faction'] = $f;
                             $_SESSION['daysleft'] = $dl;
                             $_SESSION['cPref'] = json_decode($pref, true);
-                            $_SESSION['vouchers'] = $row['reviewed_count'];
+                            $_SESSION['vouchers'] = $row['completed'];
+                            var_dump($_SESSION);
                             //$_SESSION['debug'] = $sql;
                             require_once "../src/jwt/generate_jwt.php";
 
