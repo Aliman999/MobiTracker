@@ -100,7 +100,7 @@ function showUser(){
   var experience = document.createElement("p");
   experience.className = "rBold";
   var testRep = -5;
-  setTimeout(function(){
+  setInterval(function(){
     experience.innerText = xp(testRep++);
   }, 1000);
   //experience.innerText = "Experienced";
