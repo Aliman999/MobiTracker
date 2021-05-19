@@ -100,9 +100,6 @@
   display: flex;
   justify-content: center;
 }
-.loginNameContainer p{
-  padding: 8px 2px 8px 2px;
-}
 
 .navTitle{
   position: absolute;
@@ -234,6 +231,10 @@
 .miniPlayerOut p{
   font-size: 16px;
   padding-left: 0;
+}
+
+.loginNameContainer p{
+  padding: 8px 2px 8px 2px;
 }
 
 .inputHeader{
