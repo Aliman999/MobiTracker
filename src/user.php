@@ -13,7 +13,7 @@ if (isset($headers)) {
       $user['session'] = 1;
       $user['sessionUser'] = $_SESSION['username'];
       if(isset($_SESSION['com_count'])){
-        $user['comcount'] = $_SESSION['com_count'];
+        $user['comcount'] = intval($_SESSION['com_count']);
       }else{
         $user['comcount'] = "";
       }
@@ -45,7 +45,7 @@ if (isset($headers)) {
       $user['flagged'] = "";
     }
     if(isset($_SESSION['faction'])){
-      $user['faction'] = $_SESSION['faction'];
+      $user['faction'] = intval($_SESSION['faction']);
     }
     // TODO: $_SESSION['cPref'] takes JSON object cType |0 = Freelancers, 1 = Requests, 2 = Both| and cOwn |0 = Hide Own, 1 = Exclusively Own Contracts, 2 = Combined Contracts|
     if(isset($_SESSION['cPref'])){
@@ -54,12 +54,12 @@ if (isset($headers)) {
       $user['cPref'] = array('cType' => 2, 'cOwn' => 1);
     }
     if(isset($_SESSION['vouchers'])){
-      $user['vouchers'] = $_SESSION['vouchers'];
+      $user['vouchers'] = intval($_SESSION['vouchers']);
     }else{
       $user['vouchers'] = 0;
     }
     if(isset($_SESSION['completed'])){
-      $user['completed'] = $_SESSION['completed'];
+      $user['completed'] = intval($_SESSION['completed']);
     }else{
       $user['completed'] = 0;
     }
