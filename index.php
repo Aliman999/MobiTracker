@@ -128,17 +128,6 @@
             <img class="sbc-img notSelected" src="../src/trader.png" alt="">
           </div>
         </div>
-        <div class="search-by">
-          <span class="sbr-btn sb-btn">Ratings</span>
-          <div class="sbr-content sb-content">
-            <span class="player-min-name notSelected" href="#">0</span>
-            <span class="player-min-name notSelected" href="#">1</span>
-            <span class="player-min-name notSelected" href="#">2</span>
-            <span class="player-min-name notSelected" href="#">3</span>
-            <span class="player-min-name notSelected" href="#">4</span>
-            <span class="player-min-name notSelected" href="#">5</span>
-          </div>
-        </div>
       </div>
       <p class='home hidden' id='moto'></p>
       <p class = 'disclaimer home fineprint'>Please leave reviews that are only relating to real ingame interactions.<br>We reserve the right to remove reviews that we believe to be fake or an attempt of harassment.<br/>We are not affiliated or associated with Roberts Space Industries or Cloud Imperium Games.<br>This is simply a fan website created by <a class='loginName by' target="_blank" href="https://robertsspaceindustries.com/citizens/JamesDusky">JamesDusky</a></p>

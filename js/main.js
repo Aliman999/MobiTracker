@@ -443,7 +443,7 @@ function searchCareer(sc){
   header.style.justifyContent = "flex-start";
 
   var queryString = "?c="+sc[0]+"&e="+sc[1]+"&x="+sc[2]+"&m="+sc[3]+"&p="+sc[4]+"&t="+sc[5];
-  
+
   searchCareers.open("GET", "src/searchBy.php" + queryString+"&page="+sC[7]);
   searchCareers.setRequestHeader(tokenHeader.name,tokenHeader.content);
   searchCareers.send();
@@ -586,134 +586,6 @@ function showSBC(){
       };
     };
     boolsbc = true;
-  }else{
-    hideSB();
-  }
-
-}
-function showSBR(){
-  if(boolsbc == true){
-    hideSB();
-  }
-  if(boolsbr == false){
-    var sbcImg = document.getElementsByClassName("sbr-content")[0];
-    var sbcContainer = document.getElementsByClassName("search-param-container")[0];
-    sbcImg.style.display = "flex";
-    sbcContainer.style.height = "57px";
-    sbcContainer.children[1].style.color = "FFFFFF";
-
-    sbcContainer.onclick = function(e){
-      if(e.target == this.children[1].children[1].children[0] || e.target == this.children[1].children[1].children[1] || e.target == this.children[1].children[1].children[2] || e.target == this.children[1].children[1].children[3] || e.target == this.children[1].children[1].children[4] || e.target == this.children[1].children[1].children[5]){
-        for(var y = 0; y<this.children[1].children[1].childElementCount; y++){
-          this.children[1].children[1].children[y].className = "player-min-name notSelected";
-        }
-        sC[7] = 1;
-      }
-      if(e.target == this.children[1].children[1].children[0]){
-        if(sC[6] == -1){
-          e.target.className = "player-min-name";
-          sC[6] = 0;
-          searchCareer(sC);
-        }else{
-          if(sC[6] == 0){
-            sC[6] = -1;
-            e.target.className = "player-min-name notSelected";
-          }else{
-            sC[6] = 0;
-            e.target.className = "player-min-name";
-          }
-          if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
-            searchCareer(sC);
-          }
-        }
-      }else if (e.target == this.children[1].children[1].children[1]) {
-        if(sC[6] == -1){
-          e.target.className = "player-min-name";
-          sC[6] = 1;
-          searchCareer(sC);
-        }else{
-          if(sC[6] == 1){
-            sC[6] = -1;
-            e.target.className = "player-min-name notSelected";
-          }else{
-            sC[6] = 1;
-            e.target.className = "player-min-name";
-          }
-          if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
-            searchCareer(sC);
-          }
-        }
-      }else if (e.target == this.children[1].children[1].children[2]) {
-        if(sC[6] == -1){
-          e.target.className = "player-min-name";
-          sC[6] = 2;
-          searchCareer(sC);
-        }else{
-          if(sC[6] == 2){
-            sC[6] = -1;
-            e.target.className = "player-min-name notSelected";
-          }else{
-            sC[6] = 2;
-            e.target.className = "player-min-name";
-          }
-          if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
-            searchCareer(sC);
-          }
-        }
-      }else if (e.target == this.children[1].children[1].children[3]) {
-        if(sC[6] == -1){
-          e.target.className = "player-min-name";
-          sC[6] = 3;
-          searchCareer(sC);
-        }else{
-          if(sC[6] == 3){
-            sC[6] = -1;
-            e.target.className = "player-min-name notSelected";
-          }else{
-            sC[6] = 3;
-            e.target.className = "player-min-name";
-          }
-          if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
-            searchCareer(sC);
-          }
-        }
-      }else if (e.target == this.children[1].children[1].children[4]) {
-        if(sC[6] == -1){
-          e.target.className = "player-min-name";
-          sC[6] = 4;
-          searchCareer(sC);
-        }else{
-          if(sC[6] == 4){
-            sC[6] = -1;
-            e.target.className = "player-min-name notSelected";
-          }else{
-            sC[6] = 4;
-            e.target.className = "player-min-name";
-          }
-          if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
-            searchCareer(sC);
-          }
-        }
-      }else if (e.target == this.children[1].children[1].children[5]) {
-        if(sC[6] == -1){
-          e.target.className = "player-min-name";
-          sC[6] = 5;
-          searchCareer(sC);
-        }else{
-          if(sC[6] == 5){
-            sC[6] = -1;
-            e.target.className = "player-min-name notSelected";
-          }else{
-            sC[6] = 5;
-            e.target.className = "player-min-name";
-          }
-          if(sC[0] || sC[1] || sC[2] || sC[3] || sC[4] || sC[5] || sC[6] > -1){
-            searchCareer(sC);
-          }
-        }
-      }
-    };
-    boolsbr = true;
   }else{
     hideSB();
   }
@@ -1579,5 +1451,3 @@ function uSearch(searched){
 // functions
 var sbc = document.getElementsByClassName("sbc-btn")[0];
 sbc.onclick = function(){showSBC()};
-var sbr = document.getElementsByClassName("sbr-btn")[0];
-sbr.onclick = function(){showSBR()};
