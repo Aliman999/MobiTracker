@@ -84,6 +84,7 @@ if(isset($headers)){
     }
     $emparray = array_values($emparray);
     $emparray["pages"] = $maxPages;
+    $emparray["sql"] = $sql;
 
     mysqli_close($link);
     echo json_encode($emparray);
