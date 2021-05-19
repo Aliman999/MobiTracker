@@ -56,7 +56,12 @@ if (isset($headers)) {
     if(isset($_SESSION['vouchers'])){
       $user['vouchers'] = $_SESSION['vouchers'];
     }else{
-      $user['vouchers'] = "none";
+      $user['vouchers'] = 0;
+    }
+    if(isset($_SESSION['completed'])){
+      $user['completed'] = $_SESSION['completed'];
+    }else{
+      $user['completed'] = 0;
     }
     echo json_encode($user);
   }
