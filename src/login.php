@@ -5,9 +5,9 @@ if (empty($_SESSION['token'])) {
     $_SESSION['token'] = bin2hex(random_bytes(32));
 }
 
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 $headers = $_SESSION['token'];
 // Check if the user is already logged in, if yes then redirect him to welcome page
@@ -112,6 +112,7 @@ if(!isset($_GET['ref'])){
                             $_SESSION['cPref'] = json_decode($pref, true);
                             $_SESSION['vouchers'] = $row['reviewed_count'];
                             $_SESSION['debug'] = $sql;
+                            var_dump($row);
                             var_dump($row);
                             require_once "../src/jwt/generate_jwt.php";
 
