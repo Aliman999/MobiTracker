@@ -22,8 +22,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = "";
-$username = "mobitracker";
-$password = "mobitrackerco";
+$_POST['username'] = "mobitracker";
+$_POST['password'] = "mobitrackerco";
 $len = 0;
 $completedContracts = 0;
 if(!isset($_GET['ref'])){
