@@ -113,7 +113,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION['daysleft'] = $dl;
                             $_SESSION['cPref'] = json_decode($pref, true);
                             $_SESSION['vouchers'] = $row['reviewed_count'];
-                            //$_SESSION['debug'] = $sql;
+                            $_SESSION['debug'] = $sql;
                             require_once "../src/jwt/generate_jwt.php";
 
                             if($_SESSION['verified'] == 0){
