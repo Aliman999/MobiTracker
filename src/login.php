@@ -5,17 +5,19 @@ if (empty($_SESSION['token'])) {
     $_SESSION['token'] = bin2hex(random_bytes(32));
 }
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 
 $headers = $_SESSION['token'];
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-  if($_SESSION['banned'] == 1){
+  if($_SESSION['banned'] == 0){
     $username_err = "Your account is banned.";
     echo json_encode($username_err);
     exit;
+  }else{
+    $username_err = "Your account is banned.";
   }
 }
 
@@ -25,7 +27,6 @@ $username_err = $password_err = "";
 $_POST['username'] = "mobitracker";
 $_POST['password'] = "mobitrackerco";
 $len = 0;
-$completedContracts = 0;
 if(!isset($_GET['ref'])){
   $_GET['ref'] = "login";
 }
@@ -71,20 +72,9 @@ if(!isset($_GET['ref'])){
                     mysqli_stmt_bind_result($stmt, $cID, $username, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
-                            $sql = "SELECT JSON_EXTRACT(organization, '$**.sid') AS sid, JSON_EXTRACT(organization, '$**.rank') AS orgRank, verify, contracts, faction, daysleft, avatar, contractPref, banned, com_count, contractCD, reviewed_count FROM players WHERE username = '$param_username';";
-                            $sql .= "SELECT id FROM contracts WHERE u_creator = '$param_username' AND markComplete = 1;";
-                            $result = mysqli_multi_query($link, $sql);
-                            echo $sql;
-                            if(!$result){
-                              echo "Error:" . mysqli_error($link);
-                            }
-                            $row = mysqli_fetch_row($result);
-                            mysqli_free_result($result);
-                            if(mysqli_more_results($link)){
-                              while (mysqli_next_result($link)){
-                                $completedContracts++;
-                              };
-                            }
+                            $sql = "SELECT JSON_EXTRACT(organization, '$**.sid') AS sid, JSON_EXTRACT(organization, '$**.rank') AS orgRank, verify, contracts, faction, daysleft, avatar, contractPref, banned, com_count, contractCD, reviewed_count FROM players WHERE username = '$param_username'";
+                            $result = mysqli_query($link, $sql);
+                            $row = mysqli_fetch_assoc($result);
                             if($row['verify'] == 1){
                               $_SESSION["verified"] = 1;
                             }else {
@@ -125,9 +115,7 @@ if(!isset($_GET['ref'])){
                             $_SESSION['daysleft'] = $dl;
                             $_SESSION['cPref'] = json_decode($pref, true);
                             $_SESSION['vouchers'] = $row['reviewed_count'];
-                            $_SESSION['debug'] = $sql;
-                            var_dump($row);
-                            var_dump($row);
+                            //$_SESSION['debug'] = $sql;
                             require_once "../src/jwt/generate_jwt.php";
 
                             if($_SESSION['verified'] == 0){
@@ -184,5 +172,5 @@ if(!isset($_GET['ref'])){
       'password' => $password_err
     );
     echo json_encode($errors);
-//}
+}
 ?>
