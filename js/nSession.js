@@ -236,9 +236,6 @@ function showForm(register){
   form.lContainer.appendChild(form.pSuccess);
   form.lContainer.appendChild(form.pAlt);
   container.appendChild(form.lContainer);
-
-  input[i].onchange = function(){highlight()};
-  input[i].oninput = function(){hasValue(this)};
 }
 
 function checkClick() {
