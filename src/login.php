@@ -68,7 +68,8 @@ if(!isset($_GET['ref'])){
                     mysqli_stmt_bind_result($stmt, $cID, $username, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
-                            $sql = "SELECT JSON_EXTRACT(organization, '$**.sid') AS sid, JSON_EXTRACT(organization, '$**.rank') AS orgRank, verify, contracts, faction, daysleft, avatar, contractPref, banned, com_count, contractCD, reviewed_count FROM players WHERE username = '$param_username'; SELECT id FROM contracts WHERE u_creator = '$param_username' AND markComplete = 1;";
+                            $sql = "SELECT JSON_EXTRACT(organization, '$**.sid') AS sid, JSON_EXTRACT(organization, '$**.rank') AS orgRank, verify, contracts, faction, daysleft, avatar, contractPref, banned, com_count, contractCD, reviewed_count FROM players WHERE username = '$param_username';";
+                            $sql .= "SELECT id FROM contracts WHERE u_creator = '$param_username' AND markComplete = 1;";
                             $result = mysqli_multi_query($link, $sql);
                             $row = mysqli_fetch_assoc($result);
                             if($row['verify'] == 1){
