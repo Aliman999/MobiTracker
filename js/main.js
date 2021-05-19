@@ -427,7 +427,6 @@ function pages(p, m, v, ele){
 
 //search By
 var boolsbc = false;
-var boolsbr = false;
 var headerHeight;
 
 function searchCareer(sc){
@@ -459,9 +458,6 @@ function searchCareer(sc){
 }
 
 function showSBC(){
-  if(boolsbr == true){
-    hideSB();
-  }
   if(boolsbc == false){
     var sbcImg = document.getElementsByClassName("sbc-content")[0];
     sbcImg.classList.add("tooltip");
@@ -593,24 +589,17 @@ function showSBC(){
 }
 function hideSB(){
   var sbc = document.getElementsByClassName("sbc-content")[0];
-  var sbr = document.getElementsByClassName("sbr-content")[0];
   var sbcContainer = document.getElementsByClassName("search-param-container")[0];
   sbc.style.display = "none";
-  sbr.style.display = "none";
   sbcContainer.style.height = null;
   sbcContainer.children[0].style.color = "C4D7E6";
   sbcContainer.children[1].style.color = "C4D7E6";
   //Reset selected
   resetsbc = document.getElementsByClassName("sbc-img");
-  resetsbr = document.getElementsByClassName("sbr-content")[0];
   //Reset END
   boolsbc= false;
-  boolsbr = false;
 }
 function clearSB(){
-  for(var n=0; n<resetsbr.childElementCount; n++){
-    resetsbr.children[n].className = "player-min-name notSelected";
-  }
   for(var n=0; n<resetsbc.length; n++){
     resetsbc[n].className = "sbc-img notSelected";
   }
