@@ -98,7 +98,7 @@
             echo "<a id='lmSBtn' class='verify_btn'>Sign Up</a>";
           }
           if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-            echo "<p class='loginName lmBtn'><img class='verified' src='src/verified.png'>".$_SESSION['sessionUser']."</p>";
+            echo "<p class='loginName lmBtn'><img class='verified' src='src/verified.png'>".$_SESSION['username']."</p>";
           }
           ?>
           <div id="navBtnContainer" class="navBtnContainer">
