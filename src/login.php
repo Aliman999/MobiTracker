@@ -116,7 +116,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION['cPref'] = json_decode($pref, true);
                             $_SESSION['vouchers'] = $row['reviewed_count'];
                             $_SESSION['completed'] = $row['completed'];
-                            //$_SESSION['debug'] = $sql;
+                            $_SESSION['debug'] = $sql;
                             require_once "../src/jwt/generate_jwt.php";
 
                             if($_SESSION['verified'] == 0){
@@ -141,7 +141,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                 ];
                               $x++;
                             }
-                            //var_dump($_SESSION);
                             // Redirect user to welcome page
                             if($_SESSION['banned'] == 0){
                               if($_GET['ref'] == "escrow"){
