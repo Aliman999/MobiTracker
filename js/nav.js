@@ -82,15 +82,14 @@ function showUser(){
   experience.className = "rBold";
   experience.innerText = "Experienced";
   var vouches = document.createElement("p");
-  user;
-  vouches.innerText = "Vouches: ";
-  var unique = document.createElement("p");
-  unique.innerText = "Unique Vouches: 54";
+  vouches.innerText = "Vouches: "+user.vouchers;
+  //var unique = document.createElement("p");
+  //unique.innerText = "Unique Vouches: 54";
   var contracts = document.createElement("p");
   contracts.innerText = "Completed Contracts: 1";
 
   miniRep.appendChild(experience);
-  miniRep.appendChild(vouches);
+  //miniRep.appendChild(vouches);
   miniRep.appendChild(unique);
   miniRep.appendChild(contracts);
 
