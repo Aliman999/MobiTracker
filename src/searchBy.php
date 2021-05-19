@@ -53,7 +53,7 @@ if(isset($headers)){
 
     $career = join(" OR ", $career);
     $order = join(", ", $order);
-    $sql = "SELECT username, avatar, verify, reviewed_count, crew, escort, explorer, miner, pirate, trader FROM players WHERE (signup = 1) AND ($career) ORDER BY avgRating DESC, verify DESC, reviewed_count DESC, $order;";
+    $sql = "SELECT username, avatar, verify, reviewed_count, crew, escort, explorer, miner, pirate, trader FROM players WHERE (signup = 1) AND ($career) verify DESC, reviewed_count DESC, $order;";
 
     $result = mysqli_query($link, $sql);
     $searchResult = array();
