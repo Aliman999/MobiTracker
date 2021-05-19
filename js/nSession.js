@@ -32,6 +32,19 @@ closeBtn.onclick = function(){
   closeNav();
 }
 
+//EVEMTS
+
+function hasValue(e){
+  if(e.value){
+    e.style.border = "2px solid rgb(57, 206, 216)";
+    e.style.boxShadow = "0px 0px 15px rgba(57, 206, 216, 0.5)";
+  }else{
+    e.style.border = null;
+    e.style.boxShadow = null;
+  }
+}
+
+
 //FORM CTRL
 
 function register(usernam, email, password){
@@ -148,6 +161,10 @@ function showForm(register){
   form.iUsername.type = "text";
   form.iUsername.autocomplete = "username";
   form.iUsername.maxLength = "50";
+
+  form.iUsername.oninput = function(){hasValue(this)};
+  form.iUsername.onchange = function(){hasValue(this)};
+
   container.appendChild(form.pUsername);
   container.appendChild(form.iUsername);
   container.appendChild(form.pUsernameErr);
@@ -159,6 +176,10 @@ function showForm(register){
     form.iEmail.className = "form-control";
     form.iEmail.type = "email";
     form.iEmail.autocomplete = "email";
+
+    form.iEmail.oninput = function(){hasValue(e)};
+    form.iEmail.onchange = function(){hasValue(e)};
+
     container.appendChild(form.pEmail);
     container.appendChild(form.iEmail);
     container.appendChild(form.pEmailErr);
@@ -170,6 +191,10 @@ function showForm(register){
   form.iPassword.className = "form-control form-control-last";
   form.iPassword.type = "password";
   form.iPassword.autocomplete = "current-password";
+
+  form.iPassword.oninput = function(){hasValue(e)};
+  form.iPassword.onchange = function(){hasValue(e)};
+
   container.appendChild(form.pPassword);
   container.appendChild(form.iPassword);
   container.appendChild(form.pPasswordErr);
@@ -211,6 +236,9 @@ function showForm(register){
   form.lContainer.appendChild(form.pSuccess);
   form.lContainer.appendChild(form.pAlt);
   container.appendChild(form.lContainer);
+
+  input[i].onchange = function(){highlight()};
+  input[i].oninput = function(){hasValue(this)};
 }
 
 function checkClick() {
