@@ -14,7 +14,7 @@ function socket(){
   webSocket.onmessage = function(event){
     data = JSON.parse(event.data);
     if(data.noti){
-      sub(data);
+      //sub(data);
     }
   }
   webSocket.onclose = function(){
@@ -29,6 +29,8 @@ function heartbeat() {
   setTimeout(heartbeat, 3000);
 }
 
+//Need to convert to a notification area
+/*
 var contracts;
 if(contracts = document.getElementsByClassName("verify_btn home_btn")[0]){
   var tokenHeader = document.getElementsByName("token")[0];
@@ -51,6 +53,7 @@ if(contracts = document.getElementsByClassName("verify_btn home_btn")[0]){
     }
   }
 }
+*/
 if(jwt){
   socket();
 }
