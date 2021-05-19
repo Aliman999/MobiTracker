@@ -29,7 +29,7 @@ if(!isset($_GET['ref'])){
   $_GET['ref'] = "login";
 }
 // Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+//if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Include config file
     include "../src/config.php";
 
@@ -170,5 +170,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       'password' => $password_err
     );
     echo json_encode($errors);
-}
+//}
 ?>
