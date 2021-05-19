@@ -234,7 +234,8 @@
 }
 
 .loginNameContainer p{
-  padding: 8px 2px 8px 2px;
+  padding: 4px;
+  margin: auto 0;
 }
 
 .inputHeader{
