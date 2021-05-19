@@ -212,6 +212,11 @@
   margin-left: 8px;
 }
 
+.userContainer{
+  display: flex;
+  margin-left: auto;
+}
+
 /* Position and style the close button (top right corner) */
 .navMenu .closebtn {
   position: absolute;
