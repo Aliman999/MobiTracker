@@ -53,7 +53,11 @@ if (isset($headers)) {
     }else{
       $user['cPref'] = array('cType' => 2, 'cOwn' => 1);
     }
-    $user['vouchers'] = $_SESSION['vouchers'];
+    if(isset($_SESSION['vouchers'])){
+      $user['vouchers'] = $_SESSION['vouchers'];
+    }else{
+      $user['vouchers'] = "none";
+    }
     echo json_encode($user);
   }
 }else{
