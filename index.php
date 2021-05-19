@@ -8,6 +8,8 @@
     if($_SESSION['banned'] == 1){
       header("location: signout");
     }
+
+    echo $_SESSION['debug'];
 ?>
 <!DOCTYPE html>
 <html>
