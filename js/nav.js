@@ -82,7 +82,8 @@ function showUser(){
   experience.className = "rBold";
   experience.innerText = "Experienced";
   var vouches = document.createElement("p");
-  vouches.innerText = "Vouches: 54";
+  user;
+  vouches.innerText = "Vouches: ";
   var unique = document.createElement("p");
   unique.innerText = "Unique Vouches: 54";
   var contracts = document.createElement("p");
