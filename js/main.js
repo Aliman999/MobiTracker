@@ -822,7 +822,7 @@ function populateHeader(jsonObj) {
     if(readRating.readyState == 4){
       var ratings = JSON.parse(readRating.response);
       ratingCount = ratings.reviewed_count;
-      showCount.textContent = "Reputation: "+xp(ratingCount);
+      showCount.textContent = "Reputation: "+xp(ratingCount)+" ("+ratingCount+")";
       ratingContainer.appendChild(showCount);
     }
   }
