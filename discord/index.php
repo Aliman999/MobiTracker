@@ -154,12 +154,12 @@ session_start();
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#253139">
     <?php
-    /*
-    echo "<meta name='token' content=".$_SESSION['token'].">";
+    //echo "<meta name='token' content=".$_SESSION['token'].">";
     ?>
 </head>
 <body>
   <?php
+  /*
   if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     require_once "../register/checkHandle.php";
     require_once "../src/config.php";
@@ -167,6 +167,7 @@ session_start();
   }else{
     include "login.php";
   }
+  */
   ?>
   <script type="text/javascript" src="main.js"></script>
 </body>
