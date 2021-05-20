@@ -295,7 +295,7 @@ const cookie = document.cookie
   .find(row => row.startsWith('open='))
   .split('=')[1];
 
-if(cookie){
+if(cookie == "true"){
   openNav();
   showForm(false);
 }
