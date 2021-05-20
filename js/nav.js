@@ -167,3 +167,13 @@ function closeNav() {
   document.getElementById("canvas").style.marginRight = "";
   closeBtn.style.visibility = "hidden";
 }
+
+const cookie = document.cookie
+  .split('; ')
+  .find(row => row.startsWith('open='))
+  .split('=')[1];
+
+if(cookie == "true"){
+  openNav();
+  showForm(false);
+}
