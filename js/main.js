@@ -825,7 +825,8 @@ function populateHeader(jsonObj) {
   readRating.onreadystatechange = function(){
     if(readRating.readyState == 4){
       var ratings = JSON.parse(readRating.response);
-      ratingCount = ratings.reviewed_count;
+      var ratingCount = ratings.reviewed_count;
+      var avgRating = ratings.avgRating;
       showCount.textContent = xp(ratingCount, avgRating)+" ("+ratingCount+")";
       ratingContainer.appendChild(showCount);
     }
