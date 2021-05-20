@@ -1000,7 +1000,7 @@ function populateHeader(jsonObj) {
 
         vouchMin.className = "highlight-red shadow-red notSelected cursor";
         vouchMin.innerText = "-1";
-        vouchPlus.value = -1;
+        vouchMin.value = -1;
         vouchMin.other = vouchPlus;
         vouchMin.onclick = function(){
           toggleSelected(this);
