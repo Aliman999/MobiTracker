@@ -51,7 +51,7 @@ function hasValue(e){
 //FORM CTRL
 
 function register(usernam, email, password){
-  query.open("POST", "src/register.php");
+  query.open("POST", "https://mobitracker.co/beta/src/register.php");
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   query.send("username="+usernam+"&email="+email+"&password="+password);
   query.onload = function(){
@@ -92,7 +92,7 @@ function register(usernam, email, password){
 }
 
 function login(username, password){
-  query.open("POST", "src/login.php");
+  query.open("POST", "https://mobitracker.co/beta/src/login.php");
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   query.send("username="+username+"&password="+password);
   query.onload = function(){
