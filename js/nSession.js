@@ -4,9 +4,10 @@ var openSignUpBtn = document.getElementById("lmSBtn");
 var closeBtn = document.getElementById("closeNavBtn");
 var eleCount = document.getElementsByClassName("navEle");
 var navMenu = document.getElementById("navMenu");
-var iContainer = document.getElementById("iContainer");
 var query = new XMLHttpRequest();
 openBtn.active = false;
+
+document.cookie;
 
 openBtn.onclick = function(){
   if(this.active){
