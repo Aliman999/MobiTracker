@@ -1338,7 +1338,7 @@ function showReview(){
     }else if(comment[i].rating < 0 && comment[i].approval == 1){
       var approved = document.createElement("p");
       approved.className = "validity highlight-green";
-      approved.innerText = "Approved Valid";
+      approved.innerText = "Approved";
       manageComment.insertBefore(approved, manageComment.firstChild);
     }
     //Manage Comment END
