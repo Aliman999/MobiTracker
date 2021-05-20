@@ -7,29 +7,34 @@ var navMenu = document.getElementById("navMenu");
 var query = new XMLHttpRequest();
 openBtn.active = false;
 
-document.cookie = "open=true";
+var test = document.cookie;
 
 openBtn.onclick = function(){
   if(this.active){
+    document.cookie = "open=false";
     closeNav();
   }else{
+    document.cookie = "open=true";
     openNav();
     showForm(false);
   }
 }
 
 openLoginBtn.onclick = function(){
+  document.cookie = "open=true";
   openNav();
   showForm(false);
 }
 
 openSignUpBtn.onclick = function(){
+  document.cookie = "open=true";
   openNav();
   showForm(true);
 }
 
 closeBtn.onclick = function(){
   closeNav();
+  document.cookie = "open=false";
 }
 
 //EVEMTS
