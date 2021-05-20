@@ -1166,7 +1166,8 @@ function showReview(){
       vouch.classList.add("highlight-green");
     }else if(comment[i].rating < 0){
       vouch.innerText = "-1";
-      vouch.classList.add("highlight-red shadow-red");
+      vouch.classList.add("highlight-red");
+      vouch.classList.add("shadow-red");
     }
     ratingContainer.appendChild(vouch);
 
