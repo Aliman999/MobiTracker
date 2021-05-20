@@ -42,7 +42,7 @@ session_start();
     <div id="navMenu" class="navMenu">
       <div class="navTitleContainer">
         <p class="navTitle">NAVIGATE</p>
-        <a href="javascript:void(0)" class="closebtn" id="closeNavBtn"><img src="src/close.png" class="navBtn"></a>
+        <a href="javascript:void(0)" class="closebtn" id="closeNavBtn"><img src="../src/close.png" class="navBtn"></a>
       </div>
       <div class="miniPlayerDivOut">
         <div class="miniPlayerOut">
@@ -74,10 +74,10 @@ session_start();
         </div>
       </div>
       <div class="eleContainer">
-        <a class="navEle navActive"><img src="src/repHub.png" class="menuIcon"/><p>Reputation Hub</p></a>
-        <a href="contracts" class="navEle"><img src="src/contracts.png" class="menuIcon"/><p>Contracts</p></a>
-        <a href="discord" class="navEle"><img src="src/discord.png" class="menuIcon"/><p>Discord</p></a>
-        <a href="faq" class="navEle"><img src="src/faq.png" class="menuIcon"/><p>FAQ</p></a>
+        <a class="navEle navActive"><img src="../src/repHub.png" class="menuIcon"/><p>Reputation Hub</p></a>
+        <a href="contracts" class="navEle"><img src="../src/contracts.png" class="menuIcon"/><p>Contracts</p></a>
+        <a href="discord" class="navEle"><img src="../src/discord.png" class="menuIcon"/><p>Discord</p></a>
+        <a href="faq" class="navEle"><img src="../src/faq.png" class="menuIcon"/><p>FAQ</p></a>
         <a href="https://patreon.com/mobitracker" class="navEle"><img src="src/patreon.png" class="menuIcon"/><p>Patreon</p></a>
       </div>
     </div>
@@ -105,8 +105,7 @@ session_start();
       </div>
 
       <div class="web-title">
-        <img class="sc-logo" src="Star-Citizen.png" alt="">
-        <p class="web-slogan">Reputation Hub</p>
+        <p class="web-slogan">Discord</p>
       </div>
 
       <div class="container container-header" id="container">
