@@ -85,7 +85,7 @@ session_start();
     <div id="canvas">
       <div class="headerContainer">
         <div id="login_status" class="login_menu">
-          <a><img id="mtLogo" src="android-chrome-512x512.png" class="mtLogo"></a>
+          <a><img id="mtLogo" src="../android-chrome-512x512.png" class="mtLogo"></a>
           <a id="mtTitle" class="mtTitle">MOBITRACKER</a>
           <?php
           if(!isset($_SESSION["loggedin"])){
@@ -131,7 +131,7 @@ session_start();
 
     </div>
     <script type="text/javascript" src="../js/socket.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="main.js" async></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js";}else{echo "../js/nSession.js";} ?>" async></script>
   </body>
 </html>
