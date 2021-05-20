@@ -1000,6 +1000,8 @@ function populateHeader(jsonObj) {
               minWarning.style.margin = "auto 0";
               minWarning.style.fontSize = "18px";
               vouchContainer.insertBefore(minWarning, vouchContainer.firstChild);
+            }else{
+              minWarning.remove();
             }
             return;
           }
