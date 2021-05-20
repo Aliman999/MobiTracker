@@ -1,4 +1,3 @@
-const tokenHeader = document.getElementsByName("token")[0];
 const formGroup = document.getElementsByClassName("form-group")[0];
 const genAuth = new XMLHttpRequest();
 const genBtn = document.getElementsByClassName("btn-primary")[0];
