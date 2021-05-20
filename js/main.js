@@ -1331,11 +1331,11 @@ function showReview(){
       manageComment.appendChild(flagComment);
     }
     if(comment[i].rating < 0 && comment[i].approval == 0){
-      var pending = document.create("p");
+      var pending = document.createElement("p");
       pending.innerText = "Pending Admin Validity";
       manageComment.insertBefore(pending, manageComment.firstChild);
     }else if(comment[i].rating < 0 && comment[i].approval == 1){
-      var pending = document.create("p");
+      var pending = document.createElement("p");
       pending.innerText = "Approved Valid";
       manageComment.insertBefore(pending, manageComment.firstChild);
     }
