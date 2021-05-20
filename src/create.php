@@ -119,13 +119,14 @@ if (isset($headers)) {
                 mysqli_stmt_bind_param($stmt, "ss", $param_rating, $param_r_player);
                 $param_rating = $row['rating'];
                 $param_r_player = $r_player;
-                if($param_rating > 0){
-                  $sql = "UPDATE players SET com_count = com_count + 1 WHERE username = '$param_u_player';";
-                }else{
-                  $sql = "UPDATE players SET com_count = com_count - 1 WHERE username = '$param_u_player';";
-                }
+                $sql = "UPDATE players SET com_count = com_count + 1 WHERE username = '$param_u_player';";
                 $result = mysqli_query($link, $sql);
-                $sql = "UPDATE players SET reviewed_count = reviewed_count + 1 WHERE username = '$param_r_player';";
+
+                if($param_rating > 0){
+                  $sql = "UPDATE players SET reviewed_count = reviewed_count + 1 WHERE username = '$param_r_player';";
+                }else{
+                  $sql = "UPDATE players SET reviewed_count = reviewed_count - 1 WHERE username = '$param_r_player';";
+                }
                 $result = mysqli_query($link, $sql);
 
                 if(isset($_SESSION['com_count'])){
