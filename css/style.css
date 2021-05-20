@@ -337,6 +337,9 @@ input{
 .commentButton:disabled{
   opacity: 0.5;
 }
+.validity{
+  margin-top: auto;
+}
 .player-review{
   padding: 0px 16px;
   border-bottom: 2px solid rgb(57, 206, 216);
