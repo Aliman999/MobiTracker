@@ -7,7 +7,15 @@ var navMenu = document.getElementById("navMenu");
 var query = new XMLHttpRequest();
 openBtn.active = false;
 
-var test = document.cookie;
+const cookie = document.cookie
+  .split('; ')
+  .find(row => row.startsWith('open='))
+  .split('=')[1];
+
+if(cookie){
+  openNav();
+  showForm(false);
+}
 
 openBtn.onclick = function(){
   if(this.active){
