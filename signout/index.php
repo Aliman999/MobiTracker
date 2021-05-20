@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
-if(basename($_SERVER['HTTP_REFERER']) != "beta")){
+if(basename($_SERVER['HTTP_REFERER']) != "beta"){
   $ref = basename($_SERVER['HTTP_REFERER']);
 }
 var_dump($ref);
