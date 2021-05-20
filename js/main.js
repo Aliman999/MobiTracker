@@ -1431,7 +1431,25 @@ function uSearch(searched){
     var showsbrc = document.createElement("p");
     showsbrc.className = "sbrc";
 
-    showsbrc.textContent = "Vouchers: "+searched[i].reviewed_count;
+    function xp(rep){
+      if(rep < 0){
+        if(rep > -5){
+          return "Dangerous";
+        }else if (rep <= -5) {
+          return "Sketchy";
+        }
+      }else{
+        if(rep == 0){
+          return "Newbie";
+        }else if (rep <= 30) {
+          return "Experienced";
+        }else if (rep <= 100) {
+          return "Reliable";
+        }
+      }
+    }
+
+    showsbrc.textContent = xp(searched[i].reviewed_count)+"("+searched[i].reviewed_count+")";
 
     sbr.appendChild(showsbrc);
     sb.appendChild(sbr);
