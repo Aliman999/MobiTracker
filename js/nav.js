@@ -60,7 +60,7 @@ function xp(rep){
 
 function showUser(){
   var avatar = document.createElement("img");
-  avatar.src = "../src/avatars/avatar_default.jpg";
+  avatar.src = user.avatar;
   avatar.className = "avatar circleBorder";
   miniPlayer.appendChild(avatar);
 

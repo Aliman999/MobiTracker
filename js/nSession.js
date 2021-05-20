@@ -85,6 +85,7 @@ function register(usernam, email, password){
       form.pSuccess.classList.remove("hidden");
       form.pSuccess.innerText = "Successfully Registered!";
       setTimeout(function(){
+        document.cookie = "open=false";
         showForm(false);
       }, 1000);
     }
@@ -118,6 +119,7 @@ function login(username, password){
       form.pSuccess.classList.remove("hidden");
       form.pSuccess.innerText = "Logged in!";
       setTimeout(function(){
+        document.cookie = "open=false";
         location.reload();
       }, 2000);
     }
