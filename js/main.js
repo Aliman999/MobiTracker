@@ -993,6 +993,12 @@ function populateHeader(jsonObj) {
             e.classList.toggle("notSelected");
             e.other.classList.toggle("notSelected");
             selected = e.value;
+            if(selected == -1){
+              var minWarning = document.createElement("p");
+              minWarning.className = "highlight-red shadow-red";
+              minWarning.innerText = "-1 Requires Proof in Discord.";
+              vouchContainer.appendChild(minWarning);
+            }
             return;
           }
         }
