@@ -26,7 +26,7 @@ var user;
 // USER
 
 function requestUser(){
-  query.open("GET", "src/user.php");
+  query.open("GET", "https://mobitracker.co/beta/src/user.php");
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   query.setRequestHeader(tokenHeader.name,tokenHeader.content);
   query.responseType = "json";
