@@ -42,6 +42,7 @@ if(isset($_GET['id'])){
       $x++;
     }
   }
+  array_unique($orgMembers);
   if(count($orgMembers) == 0){
     echo "All members of ".$updateOrgSID." are redacted/hidden";
   }else{
