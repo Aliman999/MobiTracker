@@ -7,16 +7,6 @@ var navMenu = document.getElementById("navMenu");
 var query = new XMLHttpRequest();
 openBtn.active = false;
 
-const cookie = document.cookie
-  .split('; ')
-  .find(row => row.startsWith('open='))
-  .split('=')[1];
-
-if(cookie){
-  openNav();
-  showForm(false);
-}
-
 openBtn.onclick = function(){
   if(this.active){
     document.cookie = "open=false";
@@ -298,4 +288,14 @@ function closeNav() {
   document.getElementById("navMenu").style.boxShadow = "";
   document.getElementById("canvas").style.marginRight = "";
   closeBtn.style.visibility = "hidden";
+}
+
+const cookie = document.cookie
+  .split('; ')
+  .find(row => row.startsWith('open='))
+  .split('=')[1];
+
+if(cookie){
+  openNav();
+  showForm(false);
 }
