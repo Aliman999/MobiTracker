@@ -39,8 +39,11 @@ if (isset($headers)) {
       if($rating == 0){
         $rating = -1;
       }
-
-      $sql = "UPDATE players SET avgRating = $rating, reviewed_count = reviewed_count - 1 WHERE username = '$r_player'";
+      if($rating > 0){
+        $sql = "UPDATE players SET avgRating = $rating, reviewed_count = reviewed_count - 1 WHERE username = '$r_player'";
+      }else{
+        $sql = "UPDATE players SET avgRating = $rating, reviewed_count = reviewed_count + 1 WHERE username = '$r_player'";
+      }
       $result = mysqli_query($link, $sql);
       echo $sql;
       $sql = "UPDATE players SET com_count = com_count - 1 WHERE username = '$u_creator';";
