@@ -32,13 +32,11 @@ if (isset($headers)) {
       $sql = "DELETE FROM comments WHERE id = $id;";
       $result = mysqli_query($link, $sql);
 
-      $sql = "SELECT AVG(rating) AS avgRating FROM comments WHERE (r_player = '$r_player');";
+      $sql = "SELECT rating FROM comments WHERE (r_player = '$r_player');";
       $result = mysqli_query($link, $sql);
       $row = mysqli_fetch_assoc($result);
       $rating = round($row['avgRating']);
-      if($rating == 0){
-        $rating = -1;
-      }
+
       if($rating > 0){
         $sql = "UPDATE players SET avgRating = $rating, reviewed_count = reviewed_count - 1 WHERE username = '$r_player'";
       }else{
