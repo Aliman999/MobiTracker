@@ -94,7 +94,7 @@ var ro = new ResizeObserver(entries => {
 });
 ro.observe(iContainer);
 
-function xp(rep, rating){
+function xp(rep){
   if(rep < 0){
     if(rep < -5){
       return "Dangerous";
@@ -827,7 +827,7 @@ function populateHeader(jsonObj) {
       var ratings = JSON.parse(readRating.response);
       var ratingCount = ratings.reviewed_count;
       var avgRating = ratings.avgRating;
-      showCount.textContent = xp(ratingCount, avgRating)+" ("+ratingCount+")";
+      showCount.textContent = xp(ratingCount)+" ("+ratingCount+")";
       ratingContainer.appendChild(showCount);
     }
   }
@@ -1423,7 +1423,7 @@ function uSearch(searched){
     showsbrc.className = "sbrc";
 
 
-    showsbrc.textContent = xp(searched[i].reviewed_count, searched[i].avgRating)+" ("+searched[i].reviewed_count+")";
+    showsbrc.textContent = xp(searched[i].reviewed_count)+" ("+searched[i].reviewed_count+")";
 
     sbr.appendChild(showsbrc);
     sb.appendChild(sbr);
