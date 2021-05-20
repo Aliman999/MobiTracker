@@ -53,6 +53,8 @@ if(isset($headers)){
     if(count($career) > 0){
       $career = join(" OR ", $career);
       $career = 'AND ('.$career.')';
+    }else{
+      $career = "";
     }
     $order = join(", ", $order);
     $sql = "SELECT username, avatar, verify, reviewed_count, crew, escort, explorer, miner, pirate, trader FROM players WHERE (signup = 1) $career ORDER BY verify DESC, reviewed_count DESC, $order;";
