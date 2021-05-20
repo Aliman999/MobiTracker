@@ -12,7 +12,7 @@ if (isset($headers)) {
     if(!$link ) {
        die('Could not connect: ' . mysqli_error());
     }
-    $sql = "SELECT reviewed_count, crew, escort, explorer, miner, pirate, trader FROM players WHERE username = '$username';";
+    $sql = "SELECT avgRating, reviewed_count, crew, escort, explorer, miner, pirate, trader FROM players WHERE username = '$username';";
     $result = mysqli_query($link, $sql);
 
     if($row = mysqli_fetch_assoc($result)){
