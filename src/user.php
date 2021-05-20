@@ -21,53 +21,64 @@ if (isset($headers)) {
       $user['session'] = 0;
       $user['sessionUser'] = "";
     }
+
     if(isset($_SESSION['search'])){
       $user['search'] = $_SESSION['search'];
     }else{
       $user['search'] = "";
     }
+
     if($_SESSION['com_count'] == 3){
       $user['limited'] = true;
     }else{
       $user['limited'] = false;
     }
+
     if(isset($_SESSION['avatar'])){
       $user['avatar'] = $_SESSION['avatar'];
     }else{
       $user['avatar'] = "https://mobitracker.co/src/avatars/avatar_default.jpg";
     }
+
     if(isset($_SESSION['verified'])){
       $user['verified'] = $_SESSION['verified'];
     }else{
       $user['verified'] = 0;
     }
+
     if(isset($_SESSION['flag'])){
       $user['flagged'] = $_SESSION['flag'];
     }else{
       $user['flagged'] = "";
     }
+
     if(isset($_SESSION['faction'])){
       $user['faction'] = intval($_SESSION['faction']);
     }
+
     // TODO: $_SESSION['cPref'] takes JSON object cType |0 = Freelancers, 1 = Requests, 2 = Both| and cOwn |0 = Hide Own, 1 = Exclusively Own Contracts, 2 = Combined Contracts|
     if(isset($_SESSION['cPref'])){
       $user['cPref'] = $_SESSION['cPref'];
     }else{
       $user['cPref'] = array('cType' => 2, 'cOwn' => 1);
     }
+
     if(isset($_SESSION['vouchers'])){
       $user['vouchers'] = intval($_SESSION['vouchers']);
     }else{
       $user['vouchers'] = 0;
     }
+
     if(isset($_SESSION['completed'])){
       $user['completed'] = intval($_SESSION['completed']);
     }else{
       $user['completed'] = 0;
     }
+
     if(isset($_SESSION['debug'])){
       $user['debug'] = $_SESSION['debug'];
     }
+    
     echo json_encode($user);
   }
 }else{
