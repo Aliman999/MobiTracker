@@ -997,6 +997,8 @@ function populateHeader(jsonObj) {
               var minWarning = document.createElement("p");
               minWarning.className = "highlight-red shadow-red";
               minWarning.innerText = "-1 Requires Proof in Discord.";
+              minWarning.style.margin = "auto 0";
+              minWarning.style.fontSize = "18px";
               vouchContainer.insertBefore(minWarning, vouchContainer.firstChild);
             }
             return;
