@@ -6,7 +6,6 @@ var eleCount = document.getElementsByClassName("navEle");
 var navMenu = document.getElementById("navMenu");
 var iContainer = document.getElementById("iContainer");
 var query = new XMLHttpRequest();
-iContainer.sibling = document.getElementById("sPContainer");
 openBtn.active = false;
 
 openBtn.onclick = function(){
@@ -247,19 +246,6 @@ function checkClick() {
     closeNav();
   }
 }
-var ro = new ResizeObserver(entries => {
-  for (let entry of entries) {
-    const cr = entry.contentRect;
-    if(cr.width < 800){
-      entry.target.style.margin = "0 8px";
-      entry.target.sibling.style.margin = "0 8px";
-    }else{
-      entry.target.style.margin = "";
-      entry.target.sibling.style.margin = "";
-    }
-  }
-});
-ro.observe(iContainer);
 
 /* Set the width of the side navigation to 250px */
 function openNav() {

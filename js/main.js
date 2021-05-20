@@ -78,6 +78,20 @@ getUser.onload = function() {
   //init Search
 }
 
+iContainer.sibling = document.getElementById("sPContainer");
+var ro = new ResizeObserver(entries => {
+  for (let entry of entries) {
+    const cr = entry.contentRect;
+    if(cr.width < 800){
+      entry.target.style.margin = "0 8px";
+      entry.target.sibling.style.margin = "0 8px";
+    }else{
+      entry.target.style.margin = "";
+      entry.target.sibling.style.margin = "";
+    }
+  }
+});
+ro.observe(iContainer);
 
 /*
 var waitUser = setInterval(function(){
