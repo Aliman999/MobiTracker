@@ -50,9 +50,12 @@ if(isset($headers)){
       }
       $order[$xx] = $types[$xx]." DESC";
     }
-    $career = join(" OR ", $career);
+    if(count($career) > 0){
+      $career = join(" OR ", $career);
+      $career = 'AND ('.$career.')';
+    }
     $order = join(", ", $order);
-    $sql = "SELECT username, avatar, verify, reviewed_count, crew, escort, explorer, miner, pirate, trader FROM players WHERE (signup = 1) AND ($career) ORDER BY verify DESC, reviewed_count DESC, $order;";
+    $sql = "SELECT username, avatar, verify, reviewed_count, crew, escort, explorer, miner, pirate, trader FROM players WHERE (signup = 1) $career ORDER BY verify DESC, reviewed_count DESC, $order;";
 
     $result = mysqli_query($link, $sql);
     $searchResult = array();
