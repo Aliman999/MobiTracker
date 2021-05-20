@@ -6,6 +6,8 @@ error_reporting(E_ALL);
 session_start();
 if(basename($_SERVER['HTTP_REFERER']) != "beta"){
   $ref = basename($_SERVER['HTTP_REFERER']);
+}else{
+  $ref = "";
 }
 var_dump($ref);
 //unset($_SESSION);
