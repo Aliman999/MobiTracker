@@ -1,10 +1,9 @@
 <?php
   session_start();
   $ref = basename($_SERVER['HTTP_REFERER']);
-  var_dump($ref);
-  //unset($_SESSION);
-  //session_destroy();
-  //session_write_close();
-  //header('Location: ../');
-  //die;
+  unset($_SESSION);
+  session_destroy();
+  session_write_close();
+  header('Location: ../'.$ref);
+  die;
 ?>
