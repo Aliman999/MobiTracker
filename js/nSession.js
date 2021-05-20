@@ -7,7 +7,7 @@ var navMenu = document.getElementById("navMenu");
 var query = new XMLHttpRequest();
 openBtn.active = false;
 
-document.cookie;
+document.cookie += "open=true";
 
 openBtn.onclick = function(){
   if(this.active){
