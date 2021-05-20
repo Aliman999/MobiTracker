@@ -20,7 +20,7 @@ if (isset($headers)) {
        die('Could not connect: ' . mysqli_error());
     }
 
-    $sql = "SELECT t1.id AS id, rating, u_creator, comment, r_player, flag, t1.created_at AS created_at, avatar, verify, reviewed_count FROM comments t1 INNER JOIN players t2 ON t1.u_creator = t2.username WHERE r_player = '$username' ORDER BY t1.created_at DESC;";
+    $sql = "SELECT t1.id AS id, rating, u_creator, comment, r_player, flag, approval, t1.created_at AS created_at, avatar, verify, reviewed_count FROM comments t1 INNER JOIN players t2 ON t1.u_creator = t2.username WHERE r_player = '$username' ORDER BY t1.created_at DESC;";
     $result = mysqli_query($link, $sql);
     $emparray = array();
     while($row = mysqli_fetch_assoc($result)){

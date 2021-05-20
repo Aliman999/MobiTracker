@@ -94,25 +94,6 @@ var ro = new ResizeObserver(entries => {
 });
 ro.observe(iContainer);
 
-function xp(rep){
-  rep = parseInt(rep);
-  if(rep < 0){
-    if(rep < -5){
-      return "Dangerous";
-    }else if (rep < 0) {
-      return "Sketchy";
-    }
-  }else{
-    if(rep == 0){
-      return "Newbie";
-    }else if (rep <= 30) {
-      return "Experienced";
-    }else if (rep <= 100) {
-      return "Reliable";
-    }
-  }
-}
-
 /*
 var waitUser = setInterval(function(){
   try{
@@ -1348,6 +1329,15 @@ function showReview(){
     }else{
       commentContainer.appendChild(manageComment);
       manageComment.appendChild(flagComment);
+    }
+    if(comment[i].rating < 0 && comment[i].approval == 0){
+      var pending = document.create("p");
+      pending.innerText = "Pending Admin Validity";
+      manageComment.insertBefore(pending, manageComment.firstChild);
+    }else if(comment[i].rating < 0 && comment[i].approval == 1){
+      var pending = document.create("p");
+      pending.innerText = "Approved Valid";
+      manageComment.insertBefore(pending, manageComment.firstChild);
     }
     //Manage Comment END
     //Creation
