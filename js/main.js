@@ -1433,7 +1433,7 @@ function uSearch(searched){
     showsbrc.className = "sbrc";
 
 
-    showsbrc.textContent = xp(searched[i].reviewed_count)+"("+searched[i].reviewed_count+")";
+    showsbrc.textContent = xp(searched[i].reviewed_count)+" ("+searched[i].reviewed_count+")";
 
     sbr.appendChild(showsbrc);
     sb.appendChild(sbr);
