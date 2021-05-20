@@ -88,7 +88,7 @@ function showUser(){
   settingsBtn.style.marginRight = "auto";
   var signoutBtn = document.createElement("a");
   signoutBtn.className = "rButton highlight-red settings";
-  signoutBtn.href = "signout";
+  signoutBtn.href = "https://mobitracker.co/beta/signout";
   signoutBtn.innerText = "Sign out";
   signoutBtn.style.marginLeft = "auto";
   settingsContainer.appendChild(settingsBtn);
