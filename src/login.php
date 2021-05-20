@@ -72,7 +72,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     mysqli_stmt_bind_result($stmt, $cID, $username, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
-                            $sql = "SELECT JSON_EXTRACT(organization, '$**.sid') AS sid, JSON_EXTRACT(organization, '$**.rank') AS orgRank, verify, contracts, players.faction, daysleft, avatar, contractPref, banned, com_count, contractCD, reviewed_count, COUNT(contracts.markComplete) AS completed FROM players LEFT JOIN contracts  ON username = u_creator WHERE username = '$param_username' GROUP BY sid, orgRank, verify, contracts, players.faction, daysleft, avatar, contractPref, banned, com_count, contractCD, reviewed_count;";
+                            $sql = "SELECT JSON_EXTRACT(organization, '$**.sid') AS sid, JSON_EXTRACT(organization, '$**.rank') AS orgRank, avatar verify, contracts, players.faction, daysleft, avatar, contractPref, banned, com_count, contractCD, reviewed_count, COUNT(contracts.markComplete) AS completed FROM players LEFT JOIN contracts  ON username = u_creator WHERE username = '$param_username' GROUP BY sid, orgRank, verify, contracts, players.faction, daysleft, avatar, contractPref, banned, com_count, contractCD, reviewed_count, avatar;";
                             $result = mysqli_query($link, $sql);
                             $row = mysqli_fetch_assoc($result);
                             if($row['verify'] == 1){
@@ -116,6 +116,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION['cPref'] = json_decode($pref, true);
                             $_SESSION['vouchers'] = $row['reviewed_count'];
                             $_SESSION['completed'] = $row['completed'];
+                            $_SESSION['avatar'] = $row['avatar'];
                             //$_SESSION['debug'] = $sql;
                             require_once "../src/jwt/generate_jwt.php";
 

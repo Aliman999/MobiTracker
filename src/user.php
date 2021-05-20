@@ -32,7 +32,9 @@ if (isset($headers)) {
       $user['limited'] = false;
     }
     if(isset($_SESSION['avatar'])){
-
+      $user['avatar'] = $_SESSION['avatar'];
+    }else{
+      $user['avatar'] = "https://mobitracker.co/src/avatars/avatar_default.jpg";
     }
     if(isset($_SESSION['verified'])){
       $user['verified'] = $_SESSION['verified'];
