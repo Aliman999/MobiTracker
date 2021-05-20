@@ -95,6 +95,7 @@ var ro = new ResizeObserver(entries => {
 ro.observe(iContainer);
 
 function xp(rep){
+  rep = parseInt(rep);
   if(rep < 0){
     if(rep < -5){
       return "Dangerous";
