@@ -44,10 +44,11 @@ function requestUser(){
 requestUser();
 
 function xp(rep){
+  rep = parseInt(rep);
   if(rep < 0){
-    if(rep > -5){
+    if(rep < -5){
       return "Dangerous";
-    }else if (rep <= -5) {
+    }else if (rep < 0) {
       return "Sketchy";
     }
   }else{
