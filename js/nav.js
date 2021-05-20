@@ -12,13 +12,16 @@ openBtn.active = false;
 
 openBtn.onclick = function(){
   if(this.active){
+    document.cookie = "open=false";
     closeNav();
   }else{
+    document.cookie = "open=true";
     openNav();
   }
 }
 
 closeBtn.onclick = function(){
+  document.cookie = "open=false";
   closeNav();
 }
 var user;
