@@ -50,10 +50,10 @@ function hasValue(e){
 
 //FORM CTRL
 
-function register(usernam, email, password){
+function registerUser(username, email, password){
   query.open("POST", "https://mobitracker.co/beta/src/register.php");
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  query.send("username="+usernam+"&email="+email+"&password="+password);
+  query.send("username="+username+"&email="+email+"&password="+password);
   query.onload = function(){
     var response = JSON.parse(query.response);
     if(response.username || response.email || response.password){
@@ -214,7 +214,7 @@ function showForm(register){
     form.bMain.id = "signUp";
     form.bMain.innerText = "Sign Up";
     form.bMain.onclick = function(){
-      register(form.iUsername.value, form.iEmail.value, form.iPassword.value);
+      registerUser(form.iUsername.value, form.iEmail.value, form.iPassword.value);
     }
 
     form.pAlt.innerHTML = "Already have an account? ";
