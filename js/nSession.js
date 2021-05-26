@@ -9,30 +9,25 @@ openBtn.active = false;
 
 openBtn.onclick = function(){
   if(this.active){
-    document.cookie = "open=false";
     closeNav();
   }else{
-    document.cookie = "open=true";
     openNav();
     showForm(false);
   }
 }
 
 openLoginBtn.onclick = function(){
-  document.cookie = "open=true";
   openNav();
   showForm(false);
 }
 
 openSignUpBtn.onclick = function(){
-  document.cookie = "open=true";
   openNav();
   showForm(true);
 }
 
 closeBtn.onclick = function(){
   closeNav();
-  document.cookie = "open=false";
 }
 
 //EVEMTS
@@ -85,7 +80,6 @@ function registerUser(username, email, password){
       form.pSuccess.classList.remove("hidden");
       form.pSuccess.innerText = "Successfully Registered!";
       setTimeout(function(){
-        document.cookie = "open=false";
         showForm(false);
       }, 1000);
     }
@@ -119,7 +113,6 @@ function login(username, password){
       form.pSuccess.classList.remove("hidden");
       form.pSuccess.innerText = "Logged in!";
       setTimeout(function(){
-        document.cookie = "open=false";
         location.reload();
       }, 2000);
     }
@@ -290,14 +283,4 @@ function closeNav() {
   document.getElementById("navMenu").style.boxShadow = "";
   document.getElementById("canvas").style.marginRight = "";
   closeBtn.style.visibility = "hidden";
-}
-
-const cookie = document.cookie
-  .split('; ')
-  .find(row => row.startsWith('open='))
-  .split('=')[1];
-
-if(cookie == "true"){
-  openNav();
-  showForm(false);
 }

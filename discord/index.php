@@ -53,24 +53,6 @@ session_start();
               echo "<div class='mpLoginContainer' id='mpLoginContainer'></div>";
             }
           ?>
-          <!--
-          <div class="miniPlayer">
-            <img src="src/avatars/avatar_default.jpg" class="avatar circleBorder">
-            <div class="loginNameContainer">
-              <img class="verified" src="src/verified.png">
-              <p class="loginName">JamesDusky</p>
-            </div>
-            <div class="settingsContainer">
-              <a class="rButton highlight settings" href="">Settings</a>
-            </div>
-          </div>
-          <div class="miniRep">
-            <p class="rBold">Experienced</p>
-            <p>Vouches: 54</p>
-            <p>Unique Vouches: 54</p>
-            <p>Completed Contracts: 1</p>
-          </div>
-        -->
         </div>
       </div>
       <div class="eleContainer">

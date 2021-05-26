@@ -12,16 +12,13 @@ openBtn.active = false;
 
 openBtn.onclick = function(){
   if(this.active){
-    document.cookie = "open=false";
     closeNav();
   }else{
-    document.cookie = "open=true";
     openNav();
   }
 }
 
 closeBtn.onclick = function(){
-  document.cookie = "open=false";
   closeNav();
 }
 var user;
@@ -167,14 +164,4 @@ function closeNav() {
   document.getElementById("navMenu").style.boxShadow = "";
   document.getElementById("canvas").style.marginRight = "";
   closeBtn.style.visibility = "hidden";
-}
-
-const cookie = document.cookie
-  .split('; ')
-  .find(row => row.startsWith('open='))
-  .split('=')[1];
-
-if(cookie == "true"){
-  openNav();
-  showForm(false);
 }
