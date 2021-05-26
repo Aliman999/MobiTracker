@@ -95,6 +95,8 @@ session_start();
         </div>
         <header class="playercard">
           <?php
+          require_once "../register/checkHandle.php";
+          require_once "../src/config.php";
           include "auth.php";
           ?>
         </header>
