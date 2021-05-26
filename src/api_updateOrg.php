@@ -17,7 +17,7 @@ if ($headers == $_SESSION['token']) {
     $user = "Stesig";
     $rank = 5;
 
-    $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/auto/user/".$user);
+    $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/user/".$user);
 
     $xmlResult = json_decode($json, true);
     $updateOrgSID = $xmlResult['data']['organization']['sid'];
@@ -27,7 +27,7 @@ if ($headers == $_SESSION['token']) {
     $row = mysqli_fetch_assoc($result);
 
     if($row['sid'] !== $updateOrgSID){
-      $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/auto/organization/".$updateOrgSID);
+      $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/organization/".$updateOrgSID);
       $xmlResult = json_decode($json, true);
 
       $memberCount = $xmlResult['data']['members'];
@@ -36,7 +36,7 @@ if ($headers == $_SESSION['token']) {
 
       $grossPages = ceil($memberCount/32);
 
-      $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/live/organization_members/".$updateOrgSID."?rank=1");
+      $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/live/organization_members/".$updateOrgSID."?rank=1");
       $xmlResult = json_decode($json, true);
 
       $updateOrgLeaders = array();
@@ -53,7 +53,7 @@ if ($headers == $_SESSION['token']) {
 
       $x=0;
       for($i=0;$i<$grossPages;$i++){
-        $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/live/organization_members/".$updateOrgSID."?page=".$i);
+        $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/live/organization_members/".$updateOrgSID."?page=".$i);
         $xmlResult = json_decode($json, true);
         foreach ($xmlResult['data'] as $member => $m){
           if($m['stars'] < $rank){

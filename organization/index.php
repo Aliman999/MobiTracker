@@ -1,12 +1,12 @@
 <?php
-  require_once "config.php";
+  require_once "../config.php";
   if(!$link ) {
     die('Could not connect: ' . mysqli_error());
   }
 
   $user = "Stesig";
   $rank = 5;
-  $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/auto/organization/EVILORG");
+  $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/organization/EVILORG");
   $xmlResult = json_decode($json, true);
 
   $memberCount = $xmlResult['data']['members'];
@@ -15,7 +15,7 @@
 
   $grossPages = ceil($memberCount/32);
 
-  $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/live/organization_members/".$updateOrgSID."?rank=1");
+  $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/live/organization_members/".$updateOrgSID."?rank=1");
   $xmlResult = json_decode($json, true);
 
   $updateOrgLeaders = array();
@@ -32,7 +32,7 @@
 
   $x=0;
   for($i=0;$i<$grossPages;$i++){
-    $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/live/organization_members/".$updateOrgSID."?page=".$i);
+    $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/live/organization_members/".$updateOrgSID."?page=".$i);
     $xmlResult = json_decode($json, true);
     foreach ($xmlResult['data'] as $member => $m){
       if($m['stars'] < $rank){

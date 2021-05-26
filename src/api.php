@@ -32,7 +32,7 @@ if (isset($headers)) {
     }
 
     $orgs = "";
-    $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/".$version."/user/".$username);
+    $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/".$version."/user/".$username);
 
     $xmlResult = json_decode($json, true);
 

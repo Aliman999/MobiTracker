@@ -55,7 +55,7 @@ if (isset($headers)) {
                 $row = mysqli_fetch_assoc($result);
                 $r_player_err = 1;
 
-                $json = file_get_contents("https://api.starcitizen-api.com/".$key."/v1/auto/user/".$r_player);
+                $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/user/".$r_player);
                 $xmlResult = json_decode($json, true);
 
                 if($xmlResult['data']['profile']['id'] != "n/a"){
@@ -127,7 +127,7 @@ if (isset($headers)) {
                 }else{
                   $sql = "UPDATE players SET reviewed_count = reviewed_count - 1 WHERE username = '$param_r_player';";
                 }
-                
+
                 $result = mysqli_query($link, $sql);
 
                 if(isset($_SESSION['com_count'])){
