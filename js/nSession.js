@@ -42,6 +42,26 @@ function hasValue(e){
   }
 }
 
+//Experience
+
+function xp(rep){
+  rep = parseInt(rep);
+  if(rep < 0){
+    if(rep < -5){
+      return "Dangerous";
+    }else if (rep < 0) {
+      return "Sketchy";
+    }
+  }else{
+    if(rep == 0){
+      return "Newbie";
+    }else if (rep <= 30) {
+      return "Experienced";
+    }else if (rep <= 100) {
+      return "Reliable";
+    }
+  }
+}
 
 //FORM CTRL
 

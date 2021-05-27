@@ -90,29 +90,21 @@ session_start();
       <div class="web-title">
         <p class="web-slogan">Discord</p>
       </div>
+      <div class="container-header">
+        <div class="dEmbedContainer">
+          <div class="embedLeft">
+            <div class="embedHeader">
 
-      <div class="container container-header" id="container">
-        <div id="pageContainer" class="pageContainer">
-        </div>
-        <header class="playercard">
-          <?php
-          require_once "../src/config.php";
-          include "discord.php";
-          ?>
-        </header>
-        <div id="pageContainer" class="pageContainer">
+            </div>
+            <div class="emebedAKA">
+
+            </div>
+          </div>
+          <div class="embedRight">
+            
+          </div>
         </div>
       </div>
-
-      <div class="container container-section" id="container">
-        <div id="pageContainer" class="pageContainer">
-        </div>
-        <section class="container-comments">
-        </section>
-        <div id="pageContainer" class="pageContainer">
-        </div>
-      </div>
-
     </div>
     <script type="text/javascript" src="../js/socket.js"></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js";}else{echo "../js/nSession.js";} ?>" async></script>

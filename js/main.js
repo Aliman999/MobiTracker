@@ -94,60 +94,6 @@ var ro = new ResizeObserver(entries => {
 });
 ro.observe(iContainer);
 
-/*
-var waitUser = setInterval(function(){
-  try{
-    if(getUser){
-      if(getUser.status == 404){
-        if(c == 3){
-          clearInterval(waitUser);
-        }
-        c++;
-      }else{
-        session = user.session;
-        sessionUser = user.sessionUser;
-        comcount = user.comcount;
-        search = user.search;
-        limited = user.limited;
-        verified = user.verified;
-        flagged = user.flagged;
-        faction = user.faction;
-        if(search.includes("/")){
-          search = "";
-        }
-        //init Search
-        if(search){
-          if(search != "" && search != "undefined"){
-            showPlayer(search);
-          }else{
-            document.title = "MobiTracker";
-          }
-        }else if(sessionUser){
-          node.value = sessionUser;
-          updateSearch(sessionUser);
-          showPlayer(sessionUser);
-        }
-        //init Search
-        clearInterval(waitUser);
-      }
-    }
-  }catch(err){
-    if(c == 100){
-      session = "";
-      sessionUser = "";
-      comcount = "";
-      search = "";
-      limited = "";
-      verified = "";
-      flagged = "";
-      faction = "";
-      clearInterval(waitUser);
-    }
-    c++;
-  }
-}, 100);
-*/
-
 //Responsive UI
 var iContainer = document.getElementById("iContainer");
 iContainer.sibling = document.getElementById("sPContainer");
@@ -166,6 +112,10 @@ var ro = new ResizeObserver(entries => {
 ro.observe(iContainer);
 
 //Responsive UI
+
+//Experience
+
+//Experience
 
 //USER
 window.onpopstate = function(e){
