@@ -94,14 +94,57 @@ session_start();
         <div class="dEmbedContainer">
           <div class="embedLeft">
             <div class="embedHeader">
-
+              <img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png">
+              <a>JamesDusky#153021</a>
             </div>
-            <div class="emebedAKA">
-
+            <div class="embedAKA">
+              <p>AKA Aliman</p>
+            </div>
+            <div class="embedRow">
+              <div class="field">
+                <p class="emebedTitle">Badge</p>
+                <p>Vice Admiral</p>
+              </div>
+              <div class="field">
+                <p class="emebedTitle">MobiTracker Vouchers</p>
+                <p>Experienced (2)</p>
+              </div>
+              <div class="field">
+                <p class="emebedTitle">RSI Profile</p>
+                <a>JamesDusky</a>
+              </div>
+            </div>
+            <div class="embedRow">
+              <div class="field">
+                <p class="emebedTitle">Enlisted</p>
+                <p>06/24/2013</p>
+              </div>
+              <div class="field">
+                <p class="emebedTitle">Location</p>
+                <p>New York, United States</p>
+              </div>
+              <div class="field">
+                <p class="emebedTitle">Languages</p>
+                <p>English</p>
+              </div>
+            </div>
+            <div class="embedRow">
+              <div class="field">
+                <p class="emebedTitle">Main Organization</p>
+                <p>Creator [5] in <a href="">MobiTracker</a></p>
+              </div>
+            </div>
+            <div class="embedRow">
+              <div class="field">
+                <p class="emebedTitle">Affiliated Organizations</p>
+                <p>Operator [2] in <a href="">Deep Space Crew</a></p>
+                <p>Raptor Fodder [0] in <a href="">Banu Merchantman Owner's Club</a></p>
+                <p>Board Member [5] in <a href="">Asteroid</a></p>
+              </div>
             </div>
           </div>
           <div class="embedRight">
-            
+            <img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png">
           </div>
         </div>
       </div>

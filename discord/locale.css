@@ -6,11 +6,32 @@
   display: block;
 }
 .web-title{
-  margin-top: 25%;
+  margin-top: 100px;
 }
 .dEmbedContainer{
   padding: 8px;
   width: 469px;
   border-left: 4px solid var(--main-bdr-color);
   border-radius: 8px;
+}
+.embedHeader{
+  display: flex;
+}
+.embedHeader img{
+  height: 16px;
+  width: 16px;
+}
+.embedHeader a{
+  font-size: 12px;
+  font-weight: bold;
+}
+.embedAKA{
+  font-size: 12px;
+}
+.embedRow{
+  display: flex;
+}
+.embedRight a{
+  height: 64px;
+  width: 64px;
 }
