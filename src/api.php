@@ -32,7 +32,6 @@ if (isset($headers)) {
     }
 
     $orgs = "";
-    echo getKey();
     $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/".$version."/user/".$username);
 
     $xmlResult = json_decode($json, true);
