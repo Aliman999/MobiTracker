@@ -1,3 +1,4 @@
+<?php echo $_SERVER['REQUEST_URI']; ?>
 <div id="navMenu" class="navMenu">
   <div class="navTitleContainer">
     <p class="navTitle">NAVIGATE</p>
