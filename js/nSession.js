@@ -319,7 +319,7 @@ window.onscroll = function() {
 function stickHeader(){
   if (window.pageYOffset > stick) {
     if(openBtn.active == true &&  !headerNav.classList.contains("sticky")){
-      headerNav.style.transition = "margin-right 0.5s, box-shadow 0.5s";
+      headerNav.style.transition = "";
       headerNav.style.width = (headerNav.clientWidth)+"px";
       headerNav.style.transition = "margin-right 0.5s, box-shadow 0.5s, width 0.5s";
     }
