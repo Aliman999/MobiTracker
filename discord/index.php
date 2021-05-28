@@ -40,7 +40,7 @@ session_start();
   </head>
 
   <body>
-    <?php include "../global/footer.php"; ?>
+    <?php include "../global/nav.php"; ?>
     <div id="canvas">
       <div class="headerContainer">
         <div id="login_status" class="login_menu">
