@@ -315,7 +315,7 @@
   display: flex;
   justify-content: space-around;
   background-color: #253139;
-  padding: 64px 72px 16px 72px;
+  padding: 64px 72px;
 }
 .fCopy{
   text-align: left;
@@ -363,7 +363,7 @@
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #canvas {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   transition: margin-right .5s;
 }
 
