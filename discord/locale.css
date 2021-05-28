@@ -149,6 +149,9 @@ a img{
   color: #C4D7E6;
   text-decoration: underline !important;
 }
+.inlineHyper:hover{
+  color: #fff;
+}
 
 @media screen and (max-width: 570px){
   .container-header{
