@@ -16,6 +16,9 @@
   font-weight: normal;
   margin: 16px auto 16px auto;
 }
+.discord{
+  height: 32px;
+}
 table a{
   color: #3276c9;
 }
