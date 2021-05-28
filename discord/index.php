@@ -156,8 +156,19 @@ session_start();
           </div>
         </div>
         <div class="aBot">
-          <a href="#" class="rButton"><img src="../src/discord.png" class="discord">Add to Discord</a>
-          <a href="#" class="rButton">Learn More</a>
+          <a href="https://discord.com/oauth2/authorize?client_id=751252617451143219&permissions=67135488&scope=bot" class="rButton"><img src="../src/discord.png" class="discord">Add to Discord</a>
+          <a href="#learnMore" class="rButton">Learn More</a>
+        </div>
+      </div>
+      <div id="learnMore" class="lMore">
+        <div class="lmCont">
+          <div class="lmLeft">
+            <h3>Easily search any citizen at your fingertips</h3>
+            <p>The MobiTracker bot mirrors the website's functionality and adds more. Search for users anywhere anytime.</p>
+          </div>
+          <div class="lmRight">
+
+          </div>
         </div>
       </div>
     </div>
