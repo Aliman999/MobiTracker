@@ -125,6 +125,9 @@ a img{
     display: flex;
     flex-direction: column;
   }
+  .embedRight{
+    position: absolute;
+  }
   .rButton{
     padding: 4px 8px;
   }
