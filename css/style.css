@@ -668,12 +668,6 @@ p.page{
   color: #87d374;
   text-shadow: 0px 0px 5px #87d374;
 }
-.rButton{
-  padding: 4px 8px;
-  background-color: #151f26;
-  border-radius: 4px;
-  display: flex;
-}
 .rDisabled{
   pointer-events: none;
   cursor: default;
