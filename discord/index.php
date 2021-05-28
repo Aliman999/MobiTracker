@@ -2,9 +2,7 @@
 // Initialize the session
 session_start();
 ?>
-
 <!DOCTYPE html>
-
 <html>
   <head>
     <meta charset="utf-8">
@@ -40,7 +38,7 @@ session_start();
   </head>
 
   <body>
-    <?php include "../global/nav.php"; ?>
+    <?php include "../gtemps/nav.php"; ?>
     <div id="canvas">
       <div class="headerContainer">
         <div id="login_status" class="login_menu">
@@ -175,7 +173,7 @@ session_start();
         </div>
       </div>
     </div>
-    <?php include "../global/footer.php"; ?>
+    <?php include "../gtemps/footer.php"; ?>
     <script type="text/javascript" src="../js/socket.js"></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js";}else{echo "../js/nSession.js";} ?>" async></script>
     <script type="text/javascript" src="main.js" async></script>

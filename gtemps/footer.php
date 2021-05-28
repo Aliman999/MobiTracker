@@ -1,3 +1,4 @@
+<?php if(!$_SESSION['session']){exit();} ?>
 <div class="navFooter">
   <div class="fContainer">
     <div class="fCopy">
