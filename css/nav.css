@@ -332,7 +332,7 @@
 }
 .sector>hr{
   width: 100%;
-  background-color: #C4D7E6;
+  border-color: #C4D7E6;
 }
 .sector{
   display: flex;
