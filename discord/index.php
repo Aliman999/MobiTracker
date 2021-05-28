@@ -122,6 +122,8 @@ session_start();
               </tr>
               <tr>
                 <th><p class="eBold">Main Organization</p></th>
+              </tr>
+              <tr>
                 <td><p>Creator [5] in <a href="#">MobiTracker</a></p></td>
               </tr>
               <tr>
