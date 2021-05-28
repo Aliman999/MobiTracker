@@ -21,7 +21,7 @@ th{
 }
 .dEmbedContainer{
   padding: 8px;
-  margin: auto;
+  margin: 0;
   border-left: 4px solid var(--main-bdr-color);
   border-radius: 4px;
   background-color: #2c3434;
