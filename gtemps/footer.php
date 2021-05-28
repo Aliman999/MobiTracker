@@ -1,4 +1,4 @@
-<?php var_dump($_SESSION); ?>
+<?php if(!isset($_SESSION)){exit();} ?>
 <div class="navFooter">
   <div class="fContainer">
     <div class="fCopy">
