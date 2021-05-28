@@ -36,7 +36,7 @@ th{
   margin-left: 4px;
 }
 th p{
-  padding: 0;
+  padding: 0 8px 0 0;
 }
 .eBold{
   font-weight: bold;
