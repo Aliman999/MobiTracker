@@ -95,7 +95,7 @@ session_start();
           <div class="embedLeft">
             <table>
               <tr>
-                <td class="eHeader"><img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png"><a href="#" class="eBold">JamesDusky#153021</a></td>
+                <td class="eHeader"><img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png"><a href="https://mobitracker.co/JamesDusky" target="_blank" class="eBold">JamesDusky#153021</a></td>
               </tr>
             </table>
             <table>
@@ -110,7 +110,7 @@ session_start();
               <tr>
                 <th><p>Vice Admiral</p></th>
                 <th><p>Experienced (2)</p></th>
-                <th><a href="#">JamesDusky</a></th>
+                <th><a href="https://robertsspaceindustries.com/citizens/JamesDusky">JamesDusky</a></th>
               </tr>
               <tr>
                 <th><p class="eBold">Enlisted</p></th>
@@ -128,15 +128,15 @@ session_start();
                 <th><p class="eBold">Main Organization</p></th>
               </tr>
               <tr>
-                <td><p>Creator [5] in <a href="#">MobiTracker</a></p></td>
+                <td><p>Creator [5] in <a href="https://robertsspaceindustries.com/orgs/MOBI" target="_blank">MobiTracker</a></p></td>
               </tr>
               <tr>
                 <th><p class="eBold">Affiliated Organizations</p></th>
               </tr>
               <tr>
-                <td><p>Operator [2] in <a href="">Deep Space Crew</a></p></td>
-                <td><p>Raptor Fodder [0] in <a href="">Banu Merchantman Owner's Club</a></p></td>
-                <td><p>Board Member [5] in <a href="">Asteroid</a></p></td>
+                <td><p>Operator [2] in <a href="https://robertsspaceindustries.com/orgs/DSCREW" target="_blank">Deep Space Crew</a></p></td>
+                <td><p>Raptor Fodder [0] in <a href="https://robertsspaceindustries.com/orgs/BMMOC" target="_blank">Banu Merchantman Owner's Club</a></p></td>
+                <td><p>Board Member [5] in <a href="https://robertsspaceindustries.com/orgs/ASTROLLC" target="_blank">Asteroid</a></p></td>
               </tr>
             </table>
           </div>
