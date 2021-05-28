@@ -27,7 +27,8 @@ th{
   font-weight: normal;
 }
 .container-header{
-  display: flex;
+  display: inline-block;
+  margin: auto;
 }
 .web-title{
   margin-top: 100px;

@@ -148,6 +148,7 @@ session_start();
             </div>
           </div>
         </div>
+        
       </div>
     </div>
     <script type="text/javascript" src="../js/socket.js"></script>
