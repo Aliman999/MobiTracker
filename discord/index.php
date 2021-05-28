@@ -102,10 +102,12 @@ session_start();
               </tr>
               <tr>
                 <th><p class="eBold">Badge</p></th>
-                <td><p>Vice Admiral</p></td>
                 <th><p class="eBold">MobiTracker Vouchers</p></th>
-                <td><p>Experienced (2)</p></td>
                 <th><p class="eBold">RSI Profile</p></th>
+              </tr>
+              <tr>
+                <td><p>Vice Admiral</p></td>
+                <td><p>Experienced (2)</p></td>
                 <td><a href="#">JamesDusky</a></td>
               </tr>
               <tr>
