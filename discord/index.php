@@ -120,6 +120,8 @@ session_start();
                 <th><p>New York, United States</p></th>
                 <th><p>English</p></th>
               </tr>
+            </table>
+            <table>
               <tr>
                 <th><p class="eBold">Main Organization</p></th>
               </tr>
