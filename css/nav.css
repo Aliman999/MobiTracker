@@ -313,6 +313,7 @@
   display: flex;
   justify-content: center;
   background-color: #253139;
+  padding: 64px 72px 16px 72px;
 }
 .fCopy{
   text-align: left;
