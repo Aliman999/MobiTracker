@@ -88,8 +88,8 @@ session_start();
       </div>
 
       <div class="titleContainer">
-        <p class="web-title">Essential to your Organization!</p>
-        <p class="web-slogan">Easily access StarCitizen's player Reputation Hub through discord!</p>
+        <p class="webTitle">Essential to your Organization!</p>
+        <p class="webSlogan">Easily access StarCitizen's player Reputation Hub through discord!</p>
       </div>
       <div class="container-header">
         <div class="dEmbedContainer">
