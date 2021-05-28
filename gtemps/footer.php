@@ -7,19 +7,19 @@
     </div>
     <div class="fLinks">
       <div class="sector">
-        <p>Quick Links</p>
+        <p class="rBold">Quick Links</p>
         <hr>
         <a href="/">Home</a>
         <a href="/discord/">Discord</a>
         <a href="/contracts/">Contracts</a>
       </div>
       <div class="sector">
-        <p>Support the Hub</p>
+        <p class="rBold">Support the Hub</p>
         <hr>
         <a href="/">Patreon</a>
       </div>
       <div class="sector">
-        <p>Contact Us</p>
+        <p class="rBold">Contact Us</p>
         <hr>
         <a href="/discord/">Discord Server</a>
         <a href="mailto: admin@mobitracker.co">Email</a>
