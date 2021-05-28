@@ -97,3 +97,6 @@ td p{
 table:first-of-type{
   margin-bottom: 8px;
 }
+a img{
+  margin: 0;
+}
