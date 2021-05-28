@@ -1,13 +1,13 @@
 :root{
   --main-bdr-color: #44a4dc;
 }
-a{
+table a{
   color: #3276c9;
 }
-a:visited{
+table a:visited{
   color: #fff;
 }
-a:hover{
+table a:hover{
   text-decoration: underline;
 }
 .container-header{
@@ -45,14 +45,14 @@ a:hover{
   height: 64px;
   width: 64px;
 }
-p{
+table p{
   display: flex;
   white-space: pre;
   padding-left: 0;
 }
-img{
+table img{
   margin: 0;
 }
-td{
+table td{
   display: flex;
 }
