@@ -14,6 +14,7 @@
   background-color: #243139;
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in the navMenu */
+  z-index: 999;
 }
 
 .navTitleContainer{
@@ -310,7 +311,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 998;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
