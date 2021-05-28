@@ -36,7 +36,7 @@ session_start();
     }
     ?>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177343701-1"></script>
-    <script type="text/javascript" src="js/ga.js"></script>
+    <script type="text/javascript" src="../js/ga.js"></script>
   </head>
 
   <body>
