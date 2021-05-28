@@ -93,7 +93,7 @@ session_start();
       </div>
       <div class="container-header">
         <div class="dEmbedContainer">
-          <p>!search JamesDusky</p>
+          <p class="eCommand">!search JamesDusky</p>
           <div class="dEmbed">
             <div class="embedLeft">
               <table>
@@ -148,7 +148,7 @@ session_start();
             </div>
           </div>
         </div>
-        
+
       </div>
     </div>
     <script type="text/javascript" src="../js/socket.js"></script>
