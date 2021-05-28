@@ -29,7 +29,6 @@ th{
 }
 .eHeader img{
   height: 30px;
-  width: 30px;
 }
 .eHeader a{
   font-size: 12px;
@@ -40,9 +39,6 @@ th{
 .eBold{
   font-weight: bold;
   color: #fff;
-}
-.eAKA{
-  font-size: 12px;
 }
 .embedRight img{
   height: 114px;
