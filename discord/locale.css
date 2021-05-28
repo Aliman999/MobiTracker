@@ -100,3 +100,6 @@ table:first-of-type{
 a img{
   margin: 0;
 }
+.aBot{
+  display: flex;
+}
