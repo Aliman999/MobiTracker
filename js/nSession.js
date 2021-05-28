@@ -328,5 +328,6 @@ function stickHeader(){
     headerNav.classList.add("sticky");
   } else {
     headerNav.classList.remove("sticky");
+    headerNav.style.width = "";
   }
 }
