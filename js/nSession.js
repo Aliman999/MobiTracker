@@ -319,8 +319,9 @@ window.onscroll = function() {
 function stickHeader(){
   if (window.pageYOffset > stick) {
     if(openBtn.active == true &&  !headerNav.classList.contains("sticky")){
-      headerNav.style.transition;
+      headerNav.style.transition = "margin-right, box-shadow 0.5s";
       headerNav.style.width = (headerNav.clientWidth)+"px";
+      headerNav.style.transition = "margin-right, box-shadow, width 0.5s";
     }
     headerNav.classList.add("sticky");
   } else {
