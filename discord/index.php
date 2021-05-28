@@ -97,6 +97,8 @@ session_start();
               <tr>
                 <td class="eHeader"><img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png"><a href="#" class="eBold">JamesDusky#153021</a></td>
               </tr>
+            </table>
+            <table>
               <tr>
                 <td><p>AKA Aliman</p></td>
               </tr>
