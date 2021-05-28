@@ -1,5 +1,5 @@
 <?php
-$active = dirname($_SERVER['REQUEST_URI']);
+$active = getcwd();
 var_dump($active);
 
 ?>
