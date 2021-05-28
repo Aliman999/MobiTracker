@@ -119,6 +119,6 @@ a img{
     margin: 0px 8px;
   }
   table p{
-    font-size: vb;
+    font-size: calc(4vw + 4vh + 2vmin);
   }
 }
