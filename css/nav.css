@@ -325,7 +325,6 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-right: auto;
 }
 .fCopy>h3{
   margin: 0;
@@ -335,7 +334,6 @@
 }
 .fLinks{
   display: flex;
-  margin-left: auto;
 }
 .sector>p{
   padding: 0;
