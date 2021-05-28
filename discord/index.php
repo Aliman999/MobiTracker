@@ -72,8 +72,8 @@ session_start();
           <a id="mtTitle" class="mtTitle">MOBITRACKER</a>
           <?php
           if(!isset($_SESSION["loggedin"])){
-            echo "<a id='lmLBtn' class='verify_btn lmBtn'>Login</a>";
-            echo "<a id='lmSBtn' class='verify_btn'>Sign Up</a>";
+            echo "<a id='lmLBtn' class='verify_btn lmBtn btnShadow'>Login</a>";
+            echo "<a id='lmSBtn' class='verify_btn btnShadow'>Sign Up</a>";
           }
           if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
             echo "<div class='userContainer'><img class='verified' src='../src/verified.png'><p class='loginName'>".$_SESSION['username']."</p></div>";
@@ -149,7 +149,7 @@ session_start();
           </div>
         </div>
         <div class="aBot">
-          <a href="#" class="rButton highlight-green"><img src="../src/discord.png" class="discord">Add to Discord</a>
+          <a href="#" class="rButton highlight-green btnShadow"><img src="../src/discord.png" class="discord">Add to Discord</a>
           <a href="#" class="rButton"></a>
         </div>
       </div>
