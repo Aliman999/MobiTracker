@@ -92,6 +92,7 @@ session_start();
       </div>
       <div class="container-header">
         <div class="dEmbedContainer">
+          <p class="eP">Have every citizen at your fingertips. Add the MobiTracker Discord bot to your server!</p>
           <div class="dEmbed">
             <div class="embedLeft">
               <table>
@@ -145,7 +146,6 @@ session_start();
               <img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png">
             </div>
           </div>
-          <p class="eP">Have every citizen at your fingertips. Add the MobiTracker Discord bot to your server!</p>
         </div>
       </div>
     </div>
