@@ -215,12 +215,10 @@ session_start();
           <div class="sector">
             <p>Support the Hub</p>
             <a href="/">Patreon</a>
-            <a href="/discord/">MT.co Discord Server</a>
           </div>
           <div class="sector">
             <p>Contact Us</p>
-            <a href="/">Patreon</a>
-            <a href="/discord/">MT.co Discord Server</a>
+            <a href="/discord/">Discord Server</a>
           </div>
         </div>
       </div>
