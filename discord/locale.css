@@ -38,6 +38,9 @@
   height: 64px;
   width: 64px;
 }
+a:visited{
+  color: #3295f7;
+}
 img{
   margin: 0;
 }
