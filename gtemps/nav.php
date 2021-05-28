@@ -1,4 +1,7 @@
-<?php echo $_SERVER['REQUEST_URI']; ?>
+<?php
+echo ltrim($_SERVER['REQUEST_URI'], '/beta');;
+
+?>
 <div id="navMenu" class="navMenu">
   <div class="navTitleContainer">
     <p class="navTitle">NAVIGATE</p>
@@ -16,7 +19,7 @@
     </div>
   </div>
   <div class="eleContainer">
-    <a href="" class="navEle"><img src="https://mobitracker.co/beta/src/repHub.png" class="menuIcon"/><p>Reputation Hub</p></a>
+    <a href="/" class="navEle"><img src="https://mobitracker.co/beta/src/repHub.png" class="menuIcon"/><p>Reputation Hub</p></a>
     <a href="" class="navEle"><img src="https://mobitracker.co/beta/src/contracts.png" class="menuIcon"/><p>Contracts</p></a>
     <a href="" class="navEle"><img src="https://mobitracker.co/beta/src/discord.png" class="menuIcon"/><p>Discord</p></a>
     <a href="" class="navEle"><img src="https://mobitracker.co/beta/src/faq.png" class="menuIcon"/><p>FAQ</p></a>
