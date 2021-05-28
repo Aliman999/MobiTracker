@@ -130,6 +130,7 @@ a img{
 .lmRight>img{
   box-shadow: 0px 0px 11px 0px #0c1214;
   border-radius: 4px;
+  width: 100%;
 }
 .lmLeft>p{
   padding-left: 0;
