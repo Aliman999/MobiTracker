@@ -281,7 +281,7 @@ function openNav() {
     }else{
       document.getElementById("navMenu").style.width = screen.width-(screen.width*0.20)+"px";
     }
-    document.getElementById("navBackDrop").style.zIndex = "9";
+    document.getElementById("navBackDrop").style.zIndex = "998";
     document.getElementById("navBackDrop").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
   }else{
     document.getElementById("navMenu").style.width = "460px";
