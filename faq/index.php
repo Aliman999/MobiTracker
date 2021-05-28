@@ -88,8 +88,8 @@
       </div>
 
       <div class="titleContainer">
-        <p class="webTitle">Essential to your Organization!</p>
-        <p class="webSlogan">Easily access StarCitizen's player Reputation Hub through discord!</p>
+        <p class="webTitle">Frequently Asked Questions</p>
+        <p class="webSlogan">Learn your way around StarCitizen's player Reputation Hub.</p>
       </div>
       <div class="container container-header" id="general">
         <header class="playercard">
