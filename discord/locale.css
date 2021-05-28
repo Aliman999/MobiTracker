@@ -147,7 +147,7 @@ a img{
 }
 .inlineHyper{
   color: #C4D7E6;
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 @media screen and (max-width: 570px){
