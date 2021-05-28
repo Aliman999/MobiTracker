@@ -92,56 +92,58 @@ session_start();
       </div>
       <div class="container-header">
         <div class="dEmbedContainer">
-          <div class="embedLeft">
-            <table>
-              <tr>
-                <td class="eHeader"><img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png"><a href="https://mobitracker.co/JamesDusky" target="_blank" class="eBold">JamesDusky#153021</a></td>
-              </tr>
-            </table>
-            <table>
-              <tr>
-                <td><p>AKA Aliman</p></td>
-              </tr>
-              <tr>
-                <th><p class="eBold">Badge</p></th>
-                <th><p class="eBold">MobiTracker Vouchers</p></th>
-                <th><p class="eBold">RSI Profile</p></th>
-              </tr>
-              <tr>
-                <th><p>Vice Admiral</p></th>
-                <th><p>Experienced (2)</p></th>
-                <th><a href="https://robertsspaceindustries.com/citizens/JamesDusky">JamesDusky</a></th>
-              </tr>
-              <tr>
-                <th><p class="eBold">Enlisted</p></th>
-                <th><p class="eBold">Location</p></th>
-                <th><p class="eBold">Languages</p></th>
-              </tr>
-              <tr>
-                <th><p>06/24/2013</p></th>
-                <th><p>New York, United States</p></th>
-                <th><p>English</p></th>
-              </tr>
-            </table>
-            <table>
-              <tr>
-                <th><p class="eBold">Main Organization</p></th>
-              </tr>
-              <tr>
-                <td><p>Creator [5] in <a href="https://robertsspaceindustries.com/orgs/MOBI" target="_blank">MobiTracker</a></p></td>
-              </tr>
-              <tr>
-                <th><p class="eBold">Affiliated Organizations</p></th>
-              </tr>
-              <tr>
-                <td><p>Operator [2] in <a href="https://robertsspaceindustries.com/orgs/DSCREW" target="_blank">Deep Space Crew</a></p></td>
-                <td><p>Raptor Fodder [0] in <a href="https://robertsspaceindustries.com/orgs/BMMOC" target="_blank">Banu Merchantman Owner's Club</a></p></td>
-                <td><p>Board Member [5] in <a href="https://robertsspaceindustries.com/orgs/ASTROLLC" target="_blank">Asteroid</a></p></td>
-              </tr>
-            </table>
-          </div>
-          <div class="embedRight">
-            <img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png">
+          <div class="dEmbed">
+            <div class="embedLeft">
+              <table>
+                <tr>
+                  <td class="eHeader"><img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png"><a href="https://mobitracker.co/JamesDusky" target="_blank" class="eBold">JamesDusky#153021</a></td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                  <td><p>AKA Aliman</p></td>
+                </tr>
+                <tr>
+                  <th><p class="eBold">Badge</p></th>
+                  <th><p class="eBold">MobiTracker Vouchers</p></th>
+                  <th><p class="eBold">RSI Profile</p></th>
+                </tr>
+                <tr>
+                  <th><p>Vice Admiral</p></th>
+                  <th><p>Experienced (2)</p></th>
+                  <th><a href="https://robertsspaceindustries.com/citizens/JamesDusky">JamesDusky</a></th>
+                </tr>
+                <tr>
+                  <th><p class="eBold">Enlisted</p></th>
+                  <th><p class="eBold">Location</p></th>
+                  <th><p class="eBold">Languages</p></th>
+                </tr>
+                <tr>
+                  <th><p>06/24/2013</p></th>
+                  <th><p>New York, United States</p></th>
+                  <th><p>English</p></th>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                  <th><p class="eBold">Main Organization</p></th>
+                </tr>
+                <tr>
+                  <td><p>Creator [5] in <a href="https://robertsspaceindustries.com/orgs/MOBI" target="_blank">MobiTracker</a></p></td>
+                </tr>
+                <tr>
+                  <th><p class="eBold">Affiliated Organizations</p></th>
+                </tr>
+                <tr>
+                  <td><p>Operator [2] in <a href="https://robertsspaceindustries.com/orgs/DSCREW" target="_blank">Deep Space Crew</a></p></td>
+                  <td><p>Raptor Fodder [0] in <a href="https://robertsspaceindustries.com/orgs/BMMOC" target="_blank">Banu Merchantman Owner's Club</a></p></td>
+                  <td><p>Board Member [5] in <a href="https://robertsspaceindustries.com/orgs/ASTROLLC" target="_blank">Asteroid</a></p></td>
+                </tr>
+              </table>
+            </div>
+            <div class="embedRight">
+              <img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png">
+            </div>
           </div>
         </div>
         <p>Have every citizen at your fingertips. Add the MobiTracker Discord bot to your server!</p>
