@@ -310,12 +310,12 @@ function closeNav() {
 }
 
 //Fixed header control
+var headerNav = document.getElementsByClassName("headerContainer")[0];
+var stick = headerNav.offsetTop;
 stickHeader();
 window.onscroll = function() {
   stickHeader();
 };
-var headerNav = document.getElementsByClassName("headerContainer")[0];
-var stick = headerNav.offsetTop;
 function stickHeader(){
   if (window.pageYOffset > stick) {
     if(openBtn.active == true &&  !headerNav.classList.contains("sticky")){
