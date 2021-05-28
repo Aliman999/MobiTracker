@@ -79,9 +79,17 @@ p.loginName{
   color: #87d374;
   border-radius: 4px;
   margin: auto 2px;
+  transition: 0.1s ease-in-out;
 }
 .verify_btn:hover{
   color: #bee7b4;
+}
+.verify_btn::after{
+  box-shadow: 0px 0px 5px 0px #0f1416;
+  opacity: 0;
+}
+.verify_btn:hover::after{
+  opacity: 1;
 }
 .container{
   max-width: 800px;
