@@ -10,7 +10,6 @@
 }
 .dEmbedContainer{
   padding: 8px;
-  width: 469px;
   border-left: 4px solid var(--main-bdr-color);
   border-radius: 4px;
   background-color: #2c3434;
