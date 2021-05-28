@@ -219,7 +219,7 @@ session_start();
           <div class="sector">
             <p>Contact Us</p>
             <a href="/discord/">Discord Server</a>
-            <a href="mailto: admin@mobitracker.co">admin@mobitracker.co</a>
+            <a href="mailto: admin@mobitracker.co">Email</a>
           </div>
         </div>
       </div>
