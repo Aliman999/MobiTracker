@@ -38,8 +38,11 @@
   height: 64px;
   width: 64px;
 }
-a:visited{
+.embedLeft a:visited{
   color: #3276c9;
+}
+.embedLeft a:hover{
+  text-decoration: underline;
 }
 img{
   margin: 0;
