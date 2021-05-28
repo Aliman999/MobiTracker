@@ -19,6 +19,9 @@
 .embedHeader{
   display: flex;
 }
+.emebedTitle{
+  font-weight: bold;
+}
 .embedHeader img{
   height: 32px;
   width: 32px;
