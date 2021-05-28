@@ -315,7 +315,7 @@
 }
 .fContainer{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 64px 8px;
   max-width: 804px;
