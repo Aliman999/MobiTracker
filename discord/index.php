@@ -215,10 +215,12 @@ session_start();
           </div>
           <div class="sector">
             <p>Support the Hub</p>
+            <hr>
             <a href="/">Patreon</a>
           </div>
           <div class="sector">
             <p>Contact Us</p>
+            <hr>
             <a href="/discord/">Discord Server</a>
             <a href="mailto: admin@mobitracker.co">Email</a>
           </div>
