@@ -104,16 +104,3 @@ a img{
   display: flex;
   margin-top: 24px;
 }
-.rButton{
-  margin: auto;
-  transition: 0.3s ease-in-out;
-}
-
-.rButton::after{
-  box-shadow: 0px 0px 5px 0px #0f1416;
-  opacity: 0;
-}
-
-.rButton:hover::after{
-  opacity: 1;
-}
