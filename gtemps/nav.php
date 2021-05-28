@@ -1,5 +1,6 @@
 <?php
 $active = explode($_SERVER['REQUEST_URI'], "/");
+var_dump($active);
 
 ?>
 <div id="navMenu" class="navMenu">
