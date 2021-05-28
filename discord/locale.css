@@ -102,6 +102,7 @@ a img{
 }
 .aBot{
   display: flex;
+  margin-top: 24px;
 }
 .rButton{
   margin: auto;
