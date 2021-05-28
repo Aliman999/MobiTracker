@@ -199,34 +199,7 @@ session_start();
         </div>
       </div>
     </div>
-    <div class="navFooter">
-      <div class="fContainer">
-        <div class="fCopy">
-          <h3>MobiTracker</h3>
-          <p>Copyright © 2019 - 2021 J. Dusky</p>
-        </div>
-        <div class="fLinks">
-          <div class="sector">
-            <p>Quick Links</p>
-            <hr>
-            <a href="/">Home</a>
-            <a href="/discord/">Discord</a>
-            <a href="/contracts/">Contracts</a>
-          </div>
-          <div class="sector">
-            <p>Support the Hub</p>
-            <hr>
-            <a href="/">Patreon</a>
-          </div>
-          <div class="sector">
-            <p>Contact Us</p>
-            <hr>
-            <a href="/discord/">Discord Server</a>
-            <a href="mailto: admin@mobitracker.co">Email</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php include "../global/footer.php"; ?>
     <script type="text/javascript" src="../js/socket.js"></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js";}else{echo "../js/nSession.js";} ?>" async></script>
     <script type="text/javascript" src="main.js" async></script>
