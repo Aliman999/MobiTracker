@@ -1,6 +1,9 @@
 :root{
   --main-bdr-color: #44a4dc;
 }
+a:visited{
+  color: #fff;
+}
 .titleContainer{
   margin-top: 100px;
 }
