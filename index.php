@@ -108,9 +108,9 @@
           </div>
         </div>
       </div>
-      <div class="web-title">
+      <div class="titleContainer">
         <img class="sc-logo" src="Star-Citizen.png" alt="">
-        <p class="web-slogan">Reputation Hub</p>
+        <p class="webTitle">Reputation Hub</p>
       </div>
       <div class="inputContainer" id="iContainer">
         <input type="text" class="userInput" autofocus value="<?php echo $_SESSION['search'] ?>" placeholder="Enter a Star Citizen's Handle">
