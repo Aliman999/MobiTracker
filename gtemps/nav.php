@@ -15,10 +15,10 @@
     </div>
   </div>
   <div class="eleContainer">
-    <a href="../" class="navEle"><img src="../src/repHub.png" class="menuIcon"/><p>Reputation Hub</p></a>
-    <a href="../contracts" class="navEle"><img src="../src/contracts.png" class="menuIcon"/><p>Contracts</p></a>
-    <a class="navEle navActive"><img src="../src/discord.png" class="menuIcon"/><p>Discord</p></a>
-    <a href="../faq" class="navEle"><img src="../src/faq.png" class="menuIcon"/><p>FAQ</p></a>
+    <a href="" class="navEle"><img src="https://mobitracker.co/beta/src/repHub.png" class="menuIcon"/><p>Reputation Hub</p></a>
+    <a href="" class="navEle"><img src="https://mobitracker.co/beta/src/contracts.png" class="menuIcon"/><p>Contracts</p></a>
+    <a href="" class="navEle"><img src="https://mobitracker.co/beta/src/discord.png" class="menuIcon"/><p>Discord</p></a>
+    <a href="" class="navEle"><img src="https://mobitracker.co/beta/src/faq.png" class="menuIcon"/><p>FAQ</p></a>
     <a href="https://patreon.com/mobitracker" class="navEle"><img src="../src/patreon.png" class="menuIcon"/><p>Patreon</p></a>
   </div>
 </div>
