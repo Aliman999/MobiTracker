@@ -322,6 +322,8 @@
   margin: auto;
 }
 .fCopy{
+  display: flex;
+  flex-direction: column;
   text-align: left;
   margin-right: auto;
 }
@@ -333,6 +335,7 @@
 }
 .fLinks{
   display: flex;
+  flex-direction: column;
   margin-left: auto;
 }
 .sector>p{
