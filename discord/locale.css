@@ -57,3 +57,6 @@ table td{
 td p{
   padding: 0;
 }
+table:first-of-type{
+  margin-bottom: 8px;
+}
