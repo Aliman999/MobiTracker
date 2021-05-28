@@ -88,7 +88,7 @@ session_start();
       </div>
 
       <div class="web-title">
-        <p class="web-slogan">Discord</p>
+        <p class="web-slogan">Essential for your Organization!</p>
       </div>
       <div class="container-header">
         <div class="dEmbedContainer">
@@ -144,6 +144,7 @@ session_start();
             <img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png">
           </div>
         </div>
+
       </div>
     </div>
     <script type="text/javascript" src="../js/socket.js"></script>
