@@ -1,9 +1,12 @@
 :root{
   --main-bdr-color: #44a4dc;
 }
-.web-title p{
+.titleContainer p{
   padding: 8px;
   display: flex;
+}
+.web-title{
+  padding: 8px;
   margin: auto;
 }
 .web-slogan{

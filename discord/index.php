@@ -87,8 +87,8 @@ session_start();
         </div>
       </div>
 
-      <div class="web-title">
-        <p>Essential to your Organization!</p>
+      <div class="titleContainer">
+        <p class="web-title">Essential to your Organization!</p>
         <p class="web-slogan">Easily access StarCitizen's player reputation hub through discord!</p>
       </div>
       <div class="container-header">
