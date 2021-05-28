@@ -88,11 +88,11 @@ session_start();
       </div>
 
       <div class="web-title">
-        <p class="web-slogan">Essential for your Organization!</p>
+        <p class="web-slogan">Essential to your Organization!</p>
+        <p>Easily access StarCitizen's player reputation hub through discord!</p>
       </div>
       <div class="container-header">
         <div class="dEmbedContainer">
-          <p class="eP">Have every citizen at your fingertips. Add the MobiTracker Discord bot to your server!</p>
           <div class="dEmbed">
             <div class="embedLeft">
               <table>
