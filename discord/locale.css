@@ -107,11 +107,3 @@ a img{
 .aBot a{
   margin: auto;
 }
-.aBot a::after{
-  box-shadow: 0px 0px 5px 0px #0f1416;
-  opacity: 0;
-}
-
-.aBot a:hover::after{
-  opacity: 1;
-}
