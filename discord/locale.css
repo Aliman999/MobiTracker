@@ -108,7 +108,7 @@ a img{
 .aBot a{
   margin: auto;
 }
-.rButton{
+.aBot>.rButton{
   padding: 12px 36px;
   font-size: 24px;
   color: #C4D7E6;
