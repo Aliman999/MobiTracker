@@ -112,11 +112,13 @@ session_start();
               </tr>
               <tr>
                 <th><p class="eBold">Enlisted</p></th>
-                <td><p>06/24/2013</p></td>
                 <th><p class="eBold">Location</p></th>
-                <td><p>New York, United States</p></td>
                 <th><p class="eBold">Languages</p></th>
-                <td><p>English</p></td>
+              </tr>
+              <tr>
+                <th><p>06/24/2013</p></th>
+                <th><p>New York, United States</p></th>
+                <th><p>English</p></th>
               </tr>
               <tr>
                 <th><p class="eBold">Main Organization</p></th>
