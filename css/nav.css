@@ -330,6 +330,9 @@
 .sector>p{
   padding: 0 0 16px 0;
 }
+.sector>hr{
+  width: 100%;
+}
 .sector{
   display: flex;
   flex-direction: column;
