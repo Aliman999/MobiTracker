@@ -126,6 +126,12 @@ a img{
   flex-direction: column;
   text-align: left;
 }
+.lmLeft>p{
+  padding-left: 0;
+}
+.lmLeft>h3{
+  padding-left: 0;
+}
 
 @media screen and (max-width: 570px){
   .container-header{
