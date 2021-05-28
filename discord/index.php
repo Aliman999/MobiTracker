@@ -128,6 +128,8 @@ session_start();
               </tr>
               <tr>
                 <th><p class="eBold">Affiliated Organizations</p></th>
+              </tr>
+              <tr>
                 <td><p>Operator [2] in <a href="">Deep Space Crew</a></p></td>
                 <td><p>Raptor Fodder [0] in <a href="">Banu Merchantman Owner's Club</a></p></td>
                 <td><p>Board Member [5] in <a href="">Asteroid</a></p></td>
