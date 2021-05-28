@@ -122,6 +122,8 @@ a img{
 }
 .lmCont>div{
   display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 @media screen and (max-width: 570px){
