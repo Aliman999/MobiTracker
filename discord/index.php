@@ -207,13 +207,13 @@ session_start();
         </div>
         <div class="fOther">
           <div class="sector">
-            <p>Quick Links</p>
             <a href="/">Home</a>
             <a href="/discord/">Discord</a>
             <a href="/contracts/">Contracts</a>
           </div>
           <div class="sector">
-
+            <a href="/">Patreon</a>
+            <a href="/discord/">MT.co Discord Server</a>
           </div>
           <div class="sector">
 
