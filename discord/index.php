@@ -137,9 +137,9 @@ session_start();
             <div class="embedRow">
               <div class="field">
                 <p class="emebedTitle">Affiliated Organizations</p>
-                <p>Operator [2] in<a href=""> Deep Space Crew</a></p>
-                <p>Raptor Fodder [0] in<a href=""> Banu Merchantman Owner's Club</a></p>
-                <p>Board Member [5] in<a href=""> Asteroid</a></p>
+                <p>Operator [2] in <a href="">Deep Space Crew</a></p>
+                <p>Raptor Fodder [0] in <a href="">Banu Merchantman Owner's Club</a></p>
+                <p>Board Member [5] in <a href="">Asteroid</a></p>
               </div>
             </div>
           </div>
