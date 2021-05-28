@@ -1,14 +1,15 @@
 :root{
   --main-bdr-color: #44a4dc;
 }
-.web-slogan{
-  font-size:16px;
-  font-weight: normal;
-}
 .web-title p{
   padding: 8px;
   display: flex;
   margin: auto;
+}
+.web-slogan{
+  font-size:16px;
+  font-weight: normal;
+  margin: 16px auto 16px auto;
 }
 table a{
   color: #3276c9;
