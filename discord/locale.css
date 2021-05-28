@@ -12,7 +12,7 @@
   margin: auto;
 }
 .webSlogan{
-  font-size:16px;
+  font-size: 14px;
   font-weight: normal;
   margin: 16px auto 16px auto;
 }
@@ -119,6 +119,6 @@ a img{
     margin: 0px 8px;
   }
   table>p{
-    font-size: calc(4vw + 4vh + 2vmin);
+    font-size:
   }
 }
