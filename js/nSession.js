@@ -310,9 +310,9 @@ function closeNav() {
 }
 
 //Fixed header control
-
+stickHeader();
 window.onscroll = function() {
-  stickHeader()
+  stickHeader();
 };
 var headerNav = document.getElementsByClassName("headerContainer")[0];
 var stick = headerNav.offsetTop;
