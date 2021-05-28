@@ -312,6 +312,7 @@
 .fContainer{
   display: flex;
   justify-content: center;
+  background-color: #253139;
 }
 .fCopy{
   text-align: left;
