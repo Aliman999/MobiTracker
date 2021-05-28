@@ -515,7 +515,7 @@ input{
 }
 .by{
   color: inherit;
-  text-decoration: underline;
+  text-decoration: underline !important;
   padding: 0;
 }
 .by:hover{
