@@ -218,7 +218,7 @@ function showForm(register){
   container.appendChild(form.pPasswordErr);
 
   form.pSuccess.className = "highlight-green hidden";
-  form.bMain.className = "rButton highlight-green btnShadow";
+  form.bMain.className = "rButton highlight-green";
 
   form.pAlt.className = "form-alt";
   form.iAlt.className = "highlight-green";
