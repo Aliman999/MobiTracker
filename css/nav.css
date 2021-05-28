@@ -329,6 +329,10 @@
   flex-direction: column;
   text-align: left;
 }
+.sector>a{
+  color: #C4D7E6;
+  text-decoration: underline;
+}
 
 .sticky {
   position: fixed;
