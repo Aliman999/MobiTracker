@@ -116,7 +116,7 @@ a img{
   color: #C4D7E6;
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 500px){
   .container-header{
     margin: 0px 8px;
   }
