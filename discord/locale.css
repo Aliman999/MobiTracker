@@ -143,8 +143,6 @@ a img{
   .titleContainer{
     margin-top: 0;
   }
-}
-@media screen and (max-width: 390px){
   .aBot{
     flex-direction: column;
     margin-top: 4px;
