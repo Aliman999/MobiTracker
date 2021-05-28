@@ -310,6 +310,7 @@
 }
 .navFooter{
   margin-top: auto;
+  transition: 0.5s;
 }
 .fContainer{
   display: flex;
