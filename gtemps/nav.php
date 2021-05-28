@@ -1,5 +1,5 @@
 <?php
-$active = explode($_SERVER['REQUEST_URI'], "/");
+$active = dirname($_SERVER['REQUEST_URI']);
 var_dump($active);
 
 ?>
