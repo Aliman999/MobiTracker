@@ -107,22 +107,13 @@ session_start();
                 </tr>
                 <tr>
                   <th><p class="eBold">Badge</p><p>Vice Admiral</p></th>
-                  <th><p class="eBold">MobiTracker Vouchers</p></th>
-                  <th><p class="eBold">RSI Profile</p></th>
+                  <th><p class="eBold">MobiTracker Vouchers</p><p>Experienced (2)</p></th>
+                  <th><p class="eBold">RSI Profile</p><p><a href="https://robertsspaceindustries.com/citizens/JamesDusky">JamesDusky</a></p></th>
                 </tr>
                 <tr>
-                  <th><p>Experienced (2)</p></th>
-                  <th><p><a href="https://robertsspaceindustries.com/citizens/JamesDusky">JamesDusky</a></p></th>
-                </tr>
-                <tr>
-                  <th><p class="eBold">Enlisted</p></th>
-                  <th><p class="eBold">Location</p></th>
-                  <th><p class="eBold">Languages</p></th>
-                </tr>
-                <tr>
-                  <th><p>06/24/2013</p></th>
-                  <th><p>New York, United States</p></th>
-                  <th><p>English</p></th>
+                  <th><p class="eBold">Enlisted</p><p>06/24/2013</p></th>
+                  <th><p class="eBold">Location</p><p>New York, United States</p></th>
+                  <th><p class="eBold">Languages</p><p>English</p></th>
                 </tr>
               </table>
               <table>
