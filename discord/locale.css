@@ -121,6 +121,10 @@ a img{
   table>p{
     font-size:10px;
   }
+  tr{
+    display: flex;
+    flex-direction: column;
+  }
   .rButton{
     padding: 4px 8px;
   }
