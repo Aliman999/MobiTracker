@@ -121,4 +121,7 @@ a img{
   table>p{
     font-size:10px;
   }
+  .rButton{
+    padding: 4px 8px;
+  }
 }
