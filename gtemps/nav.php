@@ -1,6 +1,6 @@
 <?php
 $active = substr($_SERVER['REQUEST_URI'], 6);
-$active = substr($active, -1);
+$active = substr($active, 0);
 echo $active;
 
 ?>
