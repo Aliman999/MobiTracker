@@ -311,7 +311,7 @@
 
 .fContainer{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   background-color: #253139;
   padding: 64px 72px 16px 72px;
 }
