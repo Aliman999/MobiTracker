@@ -5,9 +5,9 @@
   padding: 8px;
   display: flex;
 }
-.web-title{
-  padding: 8px;
+.webTitle{
   margin: auto;
+  margin-top: 100px;
 }
 .web-slogan{
   font-size:16px;
@@ -33,9 +33,6 @@ th{
 .eCommand{
   padding-left: 0;
   text-align: left;
-}
-.web-title{
-  margin-top: 100px;
 }
 .dEmbed{
   padding: 8px;
