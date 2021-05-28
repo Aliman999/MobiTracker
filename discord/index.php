@@ -173,7 +173,7 @@ session_start();
         <div class="lmCont">
           <div class="lmLeft">
             <h3>Register on MobiTracker through discord.</h3>
-            <p>The MobiTracker bot lets you quickly link your RSI accounts with Discord for access to extra features. You can also use any of your registered handles to login to https://mobitracker.co/</p>
+            <p>The MobiTracker bot lets you quickly link your RSI accounts with Discord for access to extra features. You can also use any of your registered handles to login to <a href="https://mobitracker.co/" target="_blank">MobiTracker</a></p>
           </div>
           <div class="lmRight">
             <img src="../src/botRegister.png">
