@@ -185,6 +185,9 @@ a img{
   .lmCont{
     flex-direction: column-reverse;
   }
+  .lmCont>div{
+    text-align: center;
+  }
 }
 @media screen and (max-width: 450px){
   .lmRight>img{
