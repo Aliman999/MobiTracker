@@ -104,3 +104,6 @@ a img{
   display: flex;
   margin-top: 24px;
 }
+.aBot a{
+  margin: auto;
+}
