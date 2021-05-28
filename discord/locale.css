@@ -1,6 +1,13 @@
 :root{
   --main-bdr-color: #44a4dc;
 }
+.web-slogan{
+  font-size:16px;
+}
+.web-title p{
+  display: flex;
+  margin: auto;
+}
 table a{
   color: #3276c9;
 }
