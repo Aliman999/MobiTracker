@@ -179,6 +179,15 @@ session_start();
             <img src="../src/botRegister.png">
           </div>
         </div>
+        <div class="lmCont">
+          <div class="lmLeft">
+            <h3>Discover player contracts.</h3>
+            <p>The MobiTracker bot allows you to browse player-made contracts connecting you with freelancers across the verse. Protected by an escrow system developed in-house, your gaurenteed to receive your aUEC for the work you've completed.</p>
+          </div>
+          <div class="lmRight">
+            <img src="../src/botContracts.png">
+          </div>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="../js/socket.js"></script>
