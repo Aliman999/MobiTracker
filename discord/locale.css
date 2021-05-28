@@ -116,8 +116,11 @@ a img{
   color: #C4D7E6;
 }
 .lmCont{
-  margin-left: auto;
+  margin: auto;
   margin-top:250px;
+  display: flex;
+}
+.lmCont>div{
   display: flex;
 }
 
