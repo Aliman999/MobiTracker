@@ -93,7 +93,6 @@ session_start();
       </div>
       <div class="container-header">
         <div class="dEmbedContainer">
-          <p class="eCommand">!search JamesDusky</p>
           <div class="dEmbed">
             <div class="embedLeft">
               <table>
