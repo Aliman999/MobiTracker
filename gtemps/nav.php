@@ -1,5 +1,5 @@
 <?php
-$active = dirname($_SERVER['REQUEST_URI']);
+$active = basename($_SERVER['REQUEST_URI']);
 var_dump($active);
 
 ?>
