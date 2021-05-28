@@ -145,8 +145,9 @@ a img{
 .lmLeft>h3{
   padding-left: 0;
 }
-.inPatron{
+.inlineHyper{
   color: #C4D7E6;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 570px){
