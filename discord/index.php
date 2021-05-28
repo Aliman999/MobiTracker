@@ -92,6 +92,7 @@ session_start();
         <p class="web-slogan">Easily access StarCitizen's player reputation hub through discord!</p>
       </div>
       <div class="container-header">
+        <p>!search JamesDusky</p>
         <div class="dEmbedContainer">
           <div class="dEmbed">
             <div class="embedLeft">
