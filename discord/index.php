@@ -151,9 +151,7 @@ session_start();
                 </tr>
               </table>
             </div>
-            <div class="embedRight">
-              <img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png">
-            </div>
+            <img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png">
           </div>
         </div>
         <div class="aBot">
