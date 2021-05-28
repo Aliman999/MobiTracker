@@ -17,6 +17,7 @@ html{
 span.highlight{
   font-size: 24px;
   font-weight:500;
+  cursor: default;
 }
 .highlight:hover{
   text-shadow: none;
