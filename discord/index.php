@@ -194,7 +194,7 @@ session_start();
             <p>MobiTracker will send you personalized updates straight to your DM's and let you know who is vouching for you, applying to your contracts, and creating new ones.</p>
           </div>
           <div class="lmRight">
-            <img src="../src/botEscrow.png">
+            <img src="../src/botAlerts.png">
           </div>
         </div>
       </div>
