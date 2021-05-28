@@ -106,9 +106,9 @@ session_start();
                 <th><p class="eBold">RSI Profile</p></th>
               </tr>
               <tr>
-                <td><p>Vice Admiral</p></td>
-                <td><p>Experienced (2)</p></td>
-                <td><a href="#">JamesDusky</a></td>
+                <th><p>Vice Admiral</p></th>
+                <th><p>Experienced (2)</p></th>
+                <th><a href="#">JamesDusky</a></th>
               </tr>
               <tr>
                 <th><p class="eBold">Enlisted</p></th>
