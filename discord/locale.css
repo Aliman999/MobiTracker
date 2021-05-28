@@ -130,7 +130,6 @@ a img{
 .lmRight>img{
   box-shadow: 0px 0px 11px 0px #0c1214;
   border-radius: 4px;
-  width: 100%;
 }
 .lmLeft>p{
   padding-left: 0;
@@ -173,6 +172,9 @@ a img{
   }
   .aBot>a{
     margin: 8px auto;
+  }
+  .lmRight>img{
+    width: 100%;
   }
 }
 @media screen and (max-width: 820px){
