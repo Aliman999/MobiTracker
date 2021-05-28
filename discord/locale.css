@@ -109,7 +109,9 @@ a img{
   margin: auto;
 }
 .aBot>.rButton{
-  padding: 12px 36px;
+  height: 40px;
+  width: 250px;
+  padding: 10px 25px;
   font-size: 24px;
   color: #C4D7E6;
 }
