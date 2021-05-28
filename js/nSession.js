@@ -304,9 +304,7 @@ function closeNav() {
   document.getElementById("navBackDrop").style.zIndex = "-1";
   document.getElementById("navBackDrop").style.backgroundColor = "rgba(0, 0, 0, 0)";
   document.getElementById("navMenu").style.boxShadow = "";
-  if(headerNav.classList.contains("sticky")){
-    headerNav.style.marginRight = "";
-  }
+  headerNav.style.marginRight = "";
   document.getElementById("canvas").style.marginRight = "";
   closeBtn.style.visibility = "hidden";
 }
