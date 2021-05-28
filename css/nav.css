@@ -327,6 +327,9 @@
 .fLinks{
   display: flex;
 }
+.sector>p{
+  padding: 0;
+}
 .sector>hr{
   width: 100%;
   border-color: #C4D7E6;
