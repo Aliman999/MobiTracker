@@ -45,8 +45,8 @@ th{
   font-size: 12px;
 }
 .embedRight img{
-  height: 100px;
-  width: 100px;
+  height: 114px;
+  padding: 8px;
 }
 table p{
   display: flex;
