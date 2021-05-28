@@ -150,7 +150,7 @@ session_start();
         </div>
         <div class="aBot">
           <a href="#" class="rButton highlight-green"><img src="../src/discord.png" class="discord">Add to Discord</a>
-          <a href="#" class="rButton"></a>
+          <a href="#" class="rButton">Learn More</a>
         </div>
       </div>
     </div>
