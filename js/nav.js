@@ -146,6 +146,11 @@ function openNav() {
     document.getElementById("navBackDrop").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
   }else{
     document.getElementById("navMenu").style.width = "460px";
+    if(headerNav.classList.contains("sticky")){
+      headerNav.style.width = (headerNav.clientWidth-460)+"px";
+    }else{
+      headerNav.style.width = "";
+    }
     document.getElementById("canvas").style.marginRight = "460px";
     document.getElementById("navMenu").style.borderLeft = "2px solid rgb(57, 206, 216)";
     document.getElementById("navMenu").style.boxShadow = "0px 0px 15px rgb(57 206 216 / 50%)";
@@ -164,4 +169,26 @@ function closeNav() {
   document.getElementById("navMenu").style.boxShadow = "";
   document.getElementById("canvas").style.marginRight = "";
   closeBtn.style.visibility = "hidden";
+}
+
+//Fixed header control
+var headerNav = document.getElementsByClassName("headerContainer")[0];
+var stick = headerNav.offsetTop;
+stickHeader();
+window.onscroll = function() {
+  stickHeader();
+};
+
+function stickHeader(){
+  if (window.pageYOffset > stick) {
+    if(openBtn.active == true &&  !headerNav.classList.contains("sticky")){
+      headerNav.style.transition = "none";
+      headerNav.style.width = (headerNav.clientWidth)+"px";
+      headerNav.style.transition = "";
+    }
+    headerNav.classList.add("sticky");
+  } else {
+    headerNav.style.width = "";
+    headerNav.classList.remove("sticky");
+  }
 }
