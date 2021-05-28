@@ -1,5 +1,5 @@
 <?php
-echo ltrim($_SERVER['REQUEST_URI'], '/beta');;
+echo substr($_SERVER['REQUEST_URI'], 5);
 
 ?>
 <div id="navMenu" class="navMenu">
