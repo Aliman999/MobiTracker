@@ -23,6 +23,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="https://mobitracker.co/favicon-16x16.png">
     <link rel="manifest" href="https://mobitracker.co/site.webmanifest">
     <link rel="mask-icon" href="https://mobitracker.co/safari-pinned-tab.svg" color="#5bbad5">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177343701-1"></script>
+    <script type="text/javascript" src="js/ga.js"></script>
     <meta property="og:type" content="website">
     <meta property="og:title" content="MobiTracker.co" />
     <meta property="og:description" content="Find who to trust when you need a hand to lead your armed escort or who to avoid letting on your ship" />
@@ -39,8 +41,6 @@
       echo "<meta name='jwt' content=".$_SESSION['jwt'].">";
     }
     ?>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177343701-1"></script>
-    <script type="text/javascript" src="js/ga.js"></script>
   </head>
 
   <body>
