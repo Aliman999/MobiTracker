@@ -29,6 +29,7 @@ th{
 }
 .dEmbedContainer{
   margin: auto;
+  display: flex;
 }
 .eP{
   width: 250px;
