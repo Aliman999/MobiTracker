@@ -35,9 +35,13 @@ th{
   margin: auto 0;
   margin-left: 4px;
 }
+th p{
+  padding: 0;
+}
 .eBold{
   font-weight: bold;
   color: #fff;
+  padding: 8px 8px 8px 0;
 }
 .embedRight img{
   height: 114px;
