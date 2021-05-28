@@ -90,7 +90,7 @@ session_start();
       <div class="web-title">
         <p class="web-slogan">Discord</p>
       </div>
-      <div class="container-header">
+      <div class="container">
         <div class="dEmbedContainer">
           <div class="embedLeft">
             <div class="embedHeader">
