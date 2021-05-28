@@ -164,7 +164,7 @@ session_start();
         <div class="lmCont">
           <div class="lmLeft">
             <h3>Easily search any citizen at your fingertips.</h3>
-            <p>The MobiTracker bot mirrors the website's functionality and adds more. Search for users anywhere anytime. When you join our patreon you'll have access to search in batches!</p>
+            <p>The MobiTracker bot mirrors the website's functionality and adds more. Search for users anywhere anytime. When you join our patreon, you'll have access to search in batches!</p>
           </div>
           <div class="lmRight">
             <img src="../src/botSearch.png">
