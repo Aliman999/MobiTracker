@@ -252,7 +252,7 @@ img.playerbadge{
 .panelLink:hover{
   text-shadow: 0px 0px 5px #C4D7E6;
 }
-.web-title{
+.titleContainer{
   display: flex;
   flex-direction: column;
   position: relative;
@@ -262,13 +262,17 @@ img.playerbadge{
   font-size: 32px;
   font-weight: bold;
 }
-.web-name{
+.webTitle{
+  padding: 0px 8px 8px 8px;
+  margin: auto;
+}
+.webName{
   padding: 8px 8px 0 8px;
   display: inline-block;
   text-shadow: 0px 0px 5px #C4D7E6;
   margin: auto;
 }
-.web-slogan{
+.webSlogan{
   font-size: 24px;
   padding:0px 8px 8px 8px;
 }
