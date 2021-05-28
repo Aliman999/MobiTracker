@@ -39,6 +39,7 @@ th{
   border-radius: 4px;
   background-color: #2c3434;
   display: flex;
+  box-shadow: 0px 0px 11px 0px #0c1214;
 }
 .dEmbedContainer{
   margin: auto;
