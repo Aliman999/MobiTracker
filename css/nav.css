@@ -308,7 +308,11 @@
 .form-control-last{
   margin-bottom: 16px;
 }
-
+.navFooter{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
 .fContainer{
   display: flex;
   justify-content: space-around;
