@@ -1,5 +1,6 @@
 <?php
-echo substr($_SERVER['REQUEST_URI'], 5);
+echo substr($_SERVER['REQUEST_URI'], 6);
+$active = substr($_SERVER['REQUEST_URI'], -1);
 
 ?>
 <div id="navMenu" class="navMenu">
