@@ -44,6 +44,9 @@
 .embedLeft a:hover{
   text-decoration: underline;
 }
+.embedLeft p{
+  display: flex;
+}
 img{
   margin: 0;
 }
