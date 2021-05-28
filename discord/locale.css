@@ -52,3 +52,6 @@ p{
 img{
   margin: 0;
 }
+td{
+  display: flex;
+}
