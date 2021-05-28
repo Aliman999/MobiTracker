@@ -307,6 +307,7 @@ function closeNav() {
   document.getElementById("navBackDrop").style.backgroundColor = "rgba(0, 0, 0, 0)";
   document.getElementById("navMenu").style.boxShadow = "";
   document.getElementById("canvas").style.marginRight = "";
+  headerNav.style.transition = "width 0.5s auto";
   headerNav.style.width = "100%";
   closeBtn.style.visibility = "hidden";
 }
