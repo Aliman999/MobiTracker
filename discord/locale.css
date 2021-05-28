@@ -145,6 +145,9 @@ a img{
 .lmLeft>h3{
   padding-left: 0;
 }
+.inPatron{
+  color: #C4D7E6;
+}
 
 @media screen and (max-width: 570px){
   .container-header{
