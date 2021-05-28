@@ -208,6 +208,7 @@ session_start();
         <div class="fLinks">
           <div class="sector">
             <p>Quick Links</p>
+            <hr>
             <a href="/">Home</a>
             <a href="/discord/">Discord</a>
             <a href="/contracts/">Contracts</a>
