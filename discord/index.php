@@ -113,7 +113,7 @@ session_start();
                 <tr>
                   <th><p>Vice Admiral</p></th>
                   <th><p>Experienced (2)</p></th>
-                  <th><a href="https://robertsspaceindustries.com/citizens/JamesDusky">JamesDusky</a></th>
+                  <th><p><a href="https://robertsspaceindustries.com/citizens/JamesDusky">JamesDusky</a></p></th>
                 </tr>
                 <tr>
                   <th><p class="eBold">Enlisted</p></th>
