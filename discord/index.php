@@ -94,8 +94,8 @@ session_start();
         <div class="dEmbedContainer">
           <div class="embedLeft">
             <table>
-              <tr>
-                <td><img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png"><a>JamesDusky#153021</a></td>
+              <tr class="eHeader">
+                <td><img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png"><a href="#" class="eBold">JamesDusky#153021</a></td>
               </tr>
             </table>
           </div>
