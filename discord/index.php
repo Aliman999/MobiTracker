@@ -102,35 +102,35 @@ session_start();
                 <td><p>AKA Aliman</p></td>
               </tr>
               <tr>
-                <td class="emebedTitle">Badge</td>
+                <th class="emebedTitle">Badge</td>
                 <td><p>Vice Admiral</p></td>
               </tr>
               <tr>
-                <td class="emebedTitle">MobiTracker Vouchers</td>
+                <th class="emebedTitle">MobiTracker Vouchers</td>
                 <td><p>Experienced (2)</p></td>
               </tr>
               <tr>
-                <td class="emebedTitle">RSI Profile</td>
+                <th class="emebedTitle">RSI Profile</td>
                 <td><a>JamesDusky</a></td>
               </tr>
               <tr>
-                <td class="emebedTitle">Enlisted</td>
+                <th class="emebedTitle">Enlisted</td>
                 <td><p>06/24/2013</p></td>
               </tr>
               <tr>
-                <td class="emebedTitle">Location</td>
+                <th class="emebedTitle">Location</td>
                 <td><p>New York, United States</p></td>
               </tr>
               <tr>
-                <td class="emebedTitle">Languages</td>
+                <th class="emebedTitle">Languages</td>
                 <td>English</td>
               </tr>
               <tr>
-                <td class="emebedTitle">Main Organization</td>
+                <th class="emebedTitle">Main Organization</td>
                 <td><p>Creator [5] in <a href="">MobiTracker</a></p></td>
               </tr>
               <tr>
-                <td class="emebedTitle">Affiliated Organizations</td>
+                <th class="emebedTitle">Affiliated Organizations</td>
                 <td>Operator [2] in <a href="">Deep Space Crew</a></td>
                 <td>Raptor Fodder [0] in <a href="">Banu Merchantman Owner's Club</a></td>
                 <td>Board Member [5] in <a href="">Asteroid</a></td>
