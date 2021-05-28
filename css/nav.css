@@ -395,3 +395,8 @@
   .mpLoginContainer div p a {white-space: pre}
   .mpLoginContainer div p {white-space: normal}
 }
+@media screen and (max-width: 820px) {
+  .fContainer{
+    margin: 0 8px;
+  }
+}
