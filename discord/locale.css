@@ -133,6 +133,7 @@ a img{
 }
 .lmLeft>p{
   padding-left: 0;
+  line-height: 30px;
 }
 .lmLeft>h3{
   padding-left: 0;
