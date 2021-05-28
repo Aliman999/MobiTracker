@@ -44,49 +44,7 @@
   </head>
 
   <body>
-    <div id="navMenu" class="navMenu">
-      <div class="navTitleContainer">
-        <p class="navTitle">NAVIGATE</p>
-        <a href="javascript:void(0)" class="closebtn" id="closeNavBtn"><img src="src/close.png" class="navBtn"></a>
-      </div>
-      <div class="miniPlayerDivOut">
-        <div class="miniPlayerOut">
-          <?php
-            if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-              echo "<div class='miniPlayer' id='miniPlayer'></div><div class='miniRep' id='miniRep'></div>";
-            }else{
-              echo "<div class='mpLoginContainer' id='mpLoginContainer'></div>";
-            }
-          ?>
-          <!--
-          <div class="miniPlayer">
-            <img src="src/avatars/avatar_default.jpg" class="avatar circleBorder">
-            <div class="loginNameContainer">
-              <img class="verified" src="src/verified.png">
-              <p class="loginName">JamesDusky</p>
-            </div>
-            <div class="settingsContainer">
-              <a class="rButton highlight settings" href="">Settings</a>
-            </div>
-          </div>
-          <div class="miniRep">
-            <p class="rBold">Experienced</p>
-            <p>Vouches: 54</p>
-            <p>Unique Vouches: 54</p>
-            <p>Completed Contracts: 1</p>
-          </div>
-        -->
-        </div>
-      </div>
-      <div class="eleContainer">
-        <a class="navEle navActive"><img src="src/repHub.png" class="menuIcon"/><p>Reputation Hub</p></a>
-        <a href="contracts" class="navEle"><img src="src/contracts.png" class="menuIcon"/><p>Contracts</p></a>
-        <a href="discord" class="navEle"><img src="src/discord.png" class="menuIcon"/><p>Discord</p></a>
-        <a href="faq" class="navEle"><img src="src/faq.png" class="menuIcon"/><p>FAQ</p></a>
-        <a href="https://patreon.com/mobitracker" class="navEle"><img src="src/patreon.png" class="menuIcon"/><p>Patreon</p></a>
-      </div>
-    </div>
-    <div id="navBackDrop" class="navBackDrop"></div> <!-- REQUIRED FOR NAV -->
+    <?php include "gtemps/nav.php"; ?>
     <div id="canvas">
       <div class="headerContainer">
         <div id="login_status" class="login_menu">
@@ -148,6 +106,7 @@
           </div>
         </div>
     </div>
+    <?php include "gtemps/nav.php"; ?>
     <script type="text/javascript" src="js/socket.js"></script>
     <script type="text/javascript" src="js/main.js" async></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "js/nav.js";}else{echo "js/nSession.js";} ?>" async></script>
