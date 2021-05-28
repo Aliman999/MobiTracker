@@ -106,12 +106,11 @@ session_start();
                   <td><p>AKA Aliman</p></td>
                 </tr>
                 <tr>
-                  <th><p class="eBold">Badge</p></th>
+                  <th><p class="eBold">Badge</p><p>Vice Admiral</p></th>
                   <th><p class="eBold">MobiTracker Vouchers</p></th>
                   <th><p class="eBold">RSI Profile</p></th>
                 </tr>
                 <tr>
-                  <th><p>Vice Admiral</p></th>
                   <th><p>Experienced (2)</p></th>
                   <th><p><a href="https://robertsspaceindustries.com/citizens/JamesDusky">JamesDusky</a></p></th>
                 </tr>
