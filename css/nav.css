@@ -327,7 +327,7 @@
 .fLinks{
   display: flex;
 }
-.fLinks>p{
+.sector>p{
   padding: 8px 0px;
 }
 .sector{
