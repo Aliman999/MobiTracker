@@ -1,8 +1,5 @@
 <?php
-$active = substr($_SERVER['REQUEST_URI'], 6);
-echo $active;
-$active = substr($active, -1);
-echo $active;
+$active = explode($_SERVER['REQUEST_URI']"/");
 
 ?>
 <div id="navMenu" class="navMenu">
