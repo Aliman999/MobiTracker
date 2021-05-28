@@ -188,6 +188,15 @@ session_start();
             <img src="../src/botContracts.png">
           </div>
         </div>
+        <div class="lmCont">
+          <div class="lmLeft">
+            <h3>Keep up to date with MobiTracker</h3>
+            <p>MobiTracker will send you personalized updates straight to your DM's and let you know who is vouching for you, applying to your contracts, and creating new ones.</p>
+          </div>
+          <div class="lmRight">
+            <img src="../src/botEscrow.png">
+          </div>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="../js/socket.js"></script>
