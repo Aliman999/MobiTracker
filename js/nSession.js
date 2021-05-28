@@ -287,6 +287,8 @@ function openNav() {
     document.getElementById("navMenu").style.width = "460px";
     if(headerNav.classList.contains("sticky")){
       headerNav.style.width = (headerNav.clientWidth-460)+"px";
+    }else{
+      headerNav.style.width = "";
     }
     document.getElementById("canvas").style.marginRight = "460px";
     document.getElementById("navMenu").style.borderLeft = "2px solid rgb(57, 206, 216)";
