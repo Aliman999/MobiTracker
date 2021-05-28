@@ -119,6 +119,7 @@ a img{
   margin: auto;
   margin-top:250px;
   display: flex;
+  max-width: 540px
 }
 .lmCont>div{
   display: flex;
