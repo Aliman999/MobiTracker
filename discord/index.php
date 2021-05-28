@@ -201,8 +201,24 @@ session_start();
     </div>
     <div class="navFooter">
       <div class="fContainer">
-        <h3>MobiTracker</h3>
-        <p>Copyright © 2019 - 2021 J. Dusky</p>
+        <div class="fCopy">
+          <h3>MobiTracker</h3>
+          <p>Copyright © 2019 - 2021 J. Dusky</p>
+        </div>
+        <div class="fOther">
+          <div class="sector">
+            <p>Quick Links</p>
+            <a href="/">Home</a>
+            <a href="/discord/">Discord</a>
+            <a href="/contracts/">Contracts</a>
+          </div>
+          <div class="sector">
+
+          </div>
+          <div class="sector">
+
+          </div>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="../js/socket.js"></script>
