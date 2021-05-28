@@ -110,3 +110,12 @@ a img{
 .rButton:hover{
   box-shadow: 0px 0px 5px 0px #0f1416;
 }
+
+.rButton::after{
+  box-shadow: 0px 0px 5px 0px #0f1416;
+  opacity: 0;
+}
+
+.rButton:hover::after{
+  opacity: 1;
+}
