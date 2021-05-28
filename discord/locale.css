@@ -2,8 +2,8 @@
   --main-bdr-color: #44a4dc;
 }
 
-.container{
-  display: block;
+.container-header{
+  display: flex;
 }
 .web-title{
   margin-top: 100px;
