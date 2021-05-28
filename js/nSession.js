@@ -311,7 +311,9 @@ function closeNav() {
 
 //Fixed header control
 
-window.onscroll = function() {stickHeader()};
+window.onscroll = function() {
+  stickHeader()
+};
 var headerNav = document.getElementsByClassName("headerContainer")[0];
 var stick = headerNav.offsetTop;
 function stickHeader(){
