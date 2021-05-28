@@ -176,12 +176,12 @@ a img{
   .aBot>a{
     margin: 8px auto;
   }
-  .lmRight>img{
-    width: 100%;
-  }
 }
-@media screen and (max-width: 820px){
+@media screen and (max-width: 450px){
   .lmCont{
     flex-direction: column-reverse;
+  }
+  .lmRight>img{
+    width: 100%;
   }
 }

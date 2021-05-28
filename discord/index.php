@@ -170,6 +170,15 @@ session_start();
             <img src="../src/botSearch.png">
           </div>
         </div>
+        <div class="lmCont">
+          <div class="lmLeft">
+            <h3></h3>
+            <p></p>
+          </div>
+          <div class="lmRight">
+            <img src="../src/botSearch.png">
+          </div>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="../js/socket.js"></script>
