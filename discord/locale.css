@@ -35,6 +35,9 @@ th{
   margin: auto 0;
   margin-left: 4px;
 }
+.eHeader a:visited{
+  color: #fff;
+}
 th p{
   padding: 0 8px 0 0;
 }
