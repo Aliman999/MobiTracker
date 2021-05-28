@@ -145,5 +145,6 @@ a img{
 @media screen and (max-width: 390px){
   .aBot{
     flex-direction: column;
+    margin: 8px auto;
   }
 }
