@@ -1,5 +1,5 @@
 <?php
-$active = explode($_SERVER['REQUEST_URI']"/");
+$active = explode($_SERVER['REQUEST_URI'], "/");
 
 ?>
 <div id="navMenu" class="navMenu">
