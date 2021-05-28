@@ -325,7 +325,7 @@
   font-size: 14px;
 }
 .fLinks{
-  
+  display: flex;
 }
 .sector{
   display: flex;
