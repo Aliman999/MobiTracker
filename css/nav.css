@@ -327,6 +327,9 @@
 .fLinks{
   display: flex;
 }
+.fLinks>p{
+  padding: 8px 0px;
+}
 .sector{
   display: flex;
   flex-direction: column;
