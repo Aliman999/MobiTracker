@@ -317,7 +317,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 64px 0;
+  padding: 64px 8px;
   max-width: 804px;
   margin: auto;
 }
