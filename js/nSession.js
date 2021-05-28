@@ -286,6 +286,7 @@ function openNav() {
   }else{
     document.getElementById("navMenu").style.width = "460px";
     if(headerNav.classList.contains("sticky")){
+      headerNav.style.transition = "width 0.5s";
       headerNav.style.width = (headerNav.clientWidth-460)+"px";
     }else{
       headerNav.style.width = "";
