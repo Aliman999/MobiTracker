@@ -285,6 +285,9 @@ function openNav() {
     document.getElementById("navBackDrop").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
   }else{
     document.getElementById("navMenu").style.width = "460px";
+    if(headerNav.classList.contains("sticky")){
+      headerNav.style.marginLeft = "460px";
+    }
     document.getElementById("canvas").style.marginRight = "460px";
     document.getElementById("navMenu").style.borderLeft = "2px solid rgb(57, 206, 216)";
     document.getElementById("navMenu").style.boxShadow = "0px 0px 15px rgb(57 206 216 / 50%)";
