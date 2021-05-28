@@ -319,6 +319,9 @@
 .fCopy>h3{
   margin: 0;
 }
+.fCopy>p{
+  font-size: 12px;
+}
 
 .sticky {
   position: fixed;
