@@ -164,7 +164,7 @@ session_start();
         <div class="lmCont">
           <div class="lmLeft">
             <h3>Easily search any citizen at your fingertips.</h3>
-            <p>The MobiTracker bot mirrors the website's functionality and adds more. Search for users anywhere anytime. When you sub to our patreon you'll have access to search in batches!</p>
+            <p>The MobiTracker bot mirrors the website's functionality and adds more. Search for users anywhere anytime. When you join our patreon you'll have access to search in batches!</p>
           </div>
           <div class="lmRight">
             <img src="../src/botSearch.png">
@@ -172,11 +172,11 @@ session_start();
         </div>
         <div class="lmCont">
           <div class="lmLeft">
-            <h3></h3>
-            <p></p>
+            <h3>Register with MobiTracker through discord.</h3>
+            <p>The MobiTracker bot lets you quickly link your RSI accounts with Discord for access to extra features. You can also use any of your registered handles to login to https://mobitracker.co/</p>
           </div>
           <div class="lmRight">
-            <img src="../src/botSearch.png">
+            <img src="../src/botRegister.png">
           </div>
         </div>
       </div>
