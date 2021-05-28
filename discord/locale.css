@@ -130,6 +130,7 @@ a img{
   }
   .embedRight{
     position: absolute;
+    right: 0;
   }
   .rButton{
     padding: 4px 8px;
