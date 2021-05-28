@@ -177,10 +177,12 @@ a img{
     margin: 8px auto;
   }
 }
-@media screen and (max-width: 450px){
+@media screen and (max-width: 820px){
   .lmCont{
     flex-direction: column-reverse;
   }
+}
+@media screen and (max-width: 450px){
   .lmRight>img{
     width: 100%;
   }
