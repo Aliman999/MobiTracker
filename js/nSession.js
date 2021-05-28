@@ -286,7 +286,7 @@ function openNav() {
   }else{
     document.getElementById("navMenu").style.width = "460px";
     if(headerNav.classList.contains("sticky")){
-      headerNav.style.marginRight = "460px";
+      headerNav.style.width = (headerNav.width-460)+"px";
     }
     document.getElementById("canvas").style.marginRight = "460px";
     document.getElementById("navMenu").style.borderLeft = "2px solid rgb(57, 206, 216)";
@@ -304,7 +304,7 @@ function closeNav() {
   document.getElementById("navBackDrop").style.zIndex = "-1";
   document.getElementById("navBackDrop").style.backgroundColor = "rgba(0, 0, 0, 0)";
   document.getElementById("navMenu").style.boxShadow = "";
-  headerNav.style.marginRight = "";
+  headerNav.style.width = "100%";
   document.getElementById("canvas").style.marginRight = "";
   closeBtn.style.visibility = "hidden";
 }
