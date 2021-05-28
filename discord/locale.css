@@ -1,6 +1,9 @@
 :root{
   --main-bdr-color: #44a4dc;
 }
+html {
+  scroll-behavior: smooth;
+}
 .titleContainer{
   margin-top: 100px;
 }
