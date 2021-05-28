@@ -328,13 +328,13 @@
   display: flex;
 }
 .sector>p{
-  padding: 8px 0px;
+  padding: 0 0 16px 0;
 }
 .sector{
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding: 0 0 8px 0;
+  padding: 0 8px;
 }
 .sector>a{
   color: #C4D7E6;
