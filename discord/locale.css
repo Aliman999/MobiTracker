@@ -118,4 +118,7 @@ a img{
   .container-header{
     margin: 0px 8px;
   }
+  table p{
+    font-size: 2vw;
+  }
 }
