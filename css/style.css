@@ -79,7 +79,6 @@ p.loginName{
   color: #87d374;
   border-radius: 4px;
   margin: auto 2px;
-  transition: 0.1s ease-in-out;
 }
 .container{
   max-width: 800px;
