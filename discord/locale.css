@@ -1,7 +1,7 @@
 :root{
   --main-bdr-color: #44a4dc;
 }
-.web-title p{
+.web-title:first-child{
   padding: 8px;
   display: flex;
   margin: auto;
