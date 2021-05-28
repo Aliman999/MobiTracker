@@ -30,6 +30,10 @@ th{
 .dEmbedContainer{
   margin: auto;
 }
+.eP{
+  width: 250px;
+  text-align: left;
+}
 .eHeader img{
   height: 33px;
 }
