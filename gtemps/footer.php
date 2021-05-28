@@ -1,5 +1,5 @@
 <?php if(!isset($_SESSION)){exit();} ?>
-<div class="navFooter">
+<div id="navFooter" class="navFooter">
   <div class="fContainer">
     <div class="fCopy">
       <h3>MobiTracker</h3>

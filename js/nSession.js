@@ -292,6 +292,7 @@ function openNav() {
       headerNav.style.width = "";
     }
     document.getElementById("canvas").style.marginRight = "460px";
+    document.getElementById("navFooter").style.marginRight = "460px";
     document.getElementById("navMenu").style.borderLeft = "2px solid rgb(57, 206, 216)";
     document.getElementById("navMenu").style.boxShadow = "0px 0px 15px rgb(57 206 216 / 50%)";
   }
@@ -308,6 +309,7 @@ function closeNav() {
   document.getElementById("navBackDrop").style.backgroundColor = "rgba(0, 0, 0, 0)";
   document.getElementById("navMenu").style.boxShadow = "";
   document.getElementById("canvas").style.marginRight = "";
+  document.getElementById("navFooter").style.marginRight = "";
   headerNav.style.transition = "width 0.5s";
   headerNav.style.width = "100%";
   closeBtn.style.visibility = "hidden";
