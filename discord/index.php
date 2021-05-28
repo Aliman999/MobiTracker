@@ -101,7 +101,30 @@ session_start();
                 <td class="eAKA"><p>AKA Aliman</p></td>
               </tr>
               <tr>
-                <th></th>
+                <th><p class="eBold">Badge</p></th>
+                <td><p>Vice Admiral</p></td>
+                <th><p class="eBold">MobiTracker Vouchers</p></th>
+                <td><p>Experienced (2)</p></td>
+                <th><p class="eBold">RSI Profile</p></th>
+                <td><a href="#">JamesDusky</a></td>
+              </tr>
+              <tr>
+                <th><p class="eBold">Enlisted</p></th>
+                <td><p>06/24/2013</p></td>
+                <th><p class="eBold">Location</p></th>
+                <td><p>New York, United States</p></td>
+                <th><p class="eBold">Languages</p></th>
+                <td><p>English</p></td>
+              </tr>
+              <tr>
+                <th><p class="eBold">Main Organization</p></th>
+                <td><p>Creator [5] in <a href="#">MobiTracker</a></p></td>
+              </tr>
+              <tr>
+                <th><p class="eBold">Affiliated Organizations</p></th>
+                <td><p>Operator [2] in <a href="">Deep Space Crew</a></p></td>
+                <td><p>Raptor Fodder [0] in <a href="">Banu Merchantman Owner's Club</a></p></td>
+                <td><p>Board Member [5] in <a href="">Asteroid</a></p></td>
               </tr>
             </table>
           </div>
