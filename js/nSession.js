@@ -317,7 +317,7 @@ var stick = headerNav.offsetTop;
 function stickHeader(){
   if (window.pageYOffset > stick) {
     headerNav.classList.add("sticky");
-    if(openBtn.active == true){
+    if(openBtn.active == true &&  !headerNav.classList.contains("sticky")){
       headerNav.style.width = (headerNav.clientWidth-460)+"px";
     }
   } else {
