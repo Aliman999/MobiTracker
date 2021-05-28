@@ -319,6 +319,7 @@
   justify-content: space-around;
   padding: 64px 72px;
   max-width: 804px;
+  margin: auto;
 }
 .fCopy{
   text-align: left;
