@@ -84,7 +84,7 @@
   background-color: #253139;
   transition: auto;
   transition: box-shadow 0.5s;
-  transition: width 0.5s;
+  transition: margin-right 0.5s;
 }
 
 .login_menu{
