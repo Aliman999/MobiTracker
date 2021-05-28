@@ -114,7 +114,7 @@ a img{
   color: #C4D7E6;
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 570px){
   .container-header{
     margin: 0px 8px;
   }
@@ -138,4 +138,10 @@ a img{
   p>a{
     white-space: pre-wrap;
   }
+  .titleContainer{
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 390px){
+
 }
