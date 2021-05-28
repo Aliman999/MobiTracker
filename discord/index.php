@@ -205,18 +205,22 @@ session_start();
           <h3>MobiTracker</h3>
           <p>Copyright © 2019 - 2021 J. Dusky</p>
         </div>
-        <div class="fOther">
+        <div class="fLinks">
           <div class="sector">
+            <p>Quick Links</p>
             <a href="/">Home</a>
             <a href="/discord/">Discord</a>
             <a href="/contracts/">Contracts</a>
           </div>
           <div class="sector">
+            <p>Support the Hub</p>
             <a href="/">Patreon</a>
             <a href="/discord/">MT.co Discord Server</a>
           </div>
           <div class="sector">
-
+            <p>Contact Us</p>
+            <a href="/">Patreon</a>
+            <a href="/discord/">MT.co Discord Server</a>
           </div>
         </div>
       </div>
