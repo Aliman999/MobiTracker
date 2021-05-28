@@ -306,6 +306,17 @@
   margin-bottom: 16px;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 66px;
+}
+
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #canvas {
   transition: margin-right .5s;

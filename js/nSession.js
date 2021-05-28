@@ -304,3 +304,16 @@ function closeNav() {
   document.getElementById("canvas").style.marginRight = "";
   closeBtn.style.visibility = "hidden";
 }
+
+//Fixed header control
+
+window.onscroll = function() {stickHeader()};
+var headerNav = document.getElementsByClassName("headerContainer")[0];
+var stick = headerNav.offsetTop;
+function stickHeader(){
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
