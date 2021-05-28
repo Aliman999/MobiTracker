@@ -323,6 +323,10 @@
 .fCopy>p{
   font-size: 14px;
 }
+.sector{
+  display: flex;
+  flex-direction: column;
+}
 
 .sticky {
   position: fixed;
