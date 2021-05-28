@@ -18,6 +18,9 @@ span.highlight{
   font-size: 24px;
   font-weight:500;
 }
+.highlight:hover{
+  text-shadow: none;
+}
 div.container{
   width: auto;
 }
