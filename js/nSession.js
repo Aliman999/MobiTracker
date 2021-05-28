@@ -316,6 +316,9 @@ var headerNav = document.getElementsByClassName("headerContainer")[0];
 var stick = headerNav.offsetTop;
 function stickHeader(){
   if (window.pageYOffset > stick) {
+    if(openBtn.active == true){
+      headerNav.style.width = (headerNav.clientWidth-460)+"px";
+    }
     headerNav.classList.add("sticky");
   } else {
     headerNav.classList.remove("sticky");
