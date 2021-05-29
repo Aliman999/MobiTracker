@@ -7,19 +7,6 @@ require_once "src/config.php";
 
 $key = $count = $id = "";
 
-function getKey(){
-  global $id, $key, $count, $link;
-  $sql = "SELECT id, apiKey, count FROM apiKeys WHERE note like '%reserved%' GROUP BY id, apiKey, count ORDER BY count desc LIMIT 1;";
-  $result = mysqli_query($link, $sql);
-  $key = mysqli_fetch_assoc($result);
-  $id = $key['id'];
-  $count = $key['count'];
-  $key = $key['apiKey'];
-  $sql = "UPDATE apiKeys SET count = count-1 WHERE id = $id";
-  $result = mysqli_query($link, $sql);
-  return $key;
-}
-
 if(isset($_GET['id'])){
   $updateOrgSID = $_GET['id'];
 
