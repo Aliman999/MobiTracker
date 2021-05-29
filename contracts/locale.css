@@ -272,6 +272,7 @@ p.jobcomp{
 .rButton{
   height: 29px;
   margin: auto 0 auto 8px;
+  background-color: #151f26;
 }
 
 a.highlight-green{
