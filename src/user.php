@@ -54,6 +54,8 @@ if (isset($headers)) {
 
     if(isset($_SESSION['faction'])){
       $user['faction'] = intval($_SESSION['faction']);
+    }else{
+      $user['faction'] = 0;
     }
 
     // TODO: $_SESSION['cPref'] takes JSON object cType |0 = Freelancers, 1 = Requests, 2 = Both| and cOwn |0 = Hide Own, 1 = Exclusively Own Contracts, 2 = Combined Contracts|
@@ -78,7 +80,7 @@ if (isset($headers)) {
     if(isset($_SESSION['debug'])){
       $user['debug'] = $_SESSION['debug'];
     }
-    
+
     echo json_encode($user);
   }
 }else{
