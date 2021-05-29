@@ -154,7 +154,7 @@
         </header>
       </div>
     </div>
-    <?php include "../gtemps/navFooter.php"; ?>
+    <?php include "../gtemps/footer.php"; ?>
   <script type="text/javascript" src="../js/socket.js"></script>
   <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js";}else{echo "../js/nSession.js";} ?>" async></script>
   <script type="text/javascript" src="main.js"></script>
