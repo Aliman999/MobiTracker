@@ -34,8 +34,12 @@ error_reporting(E_ALL);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#253139">
-    <?php echo "<meta name='token' content=".$_SESSION['token'].">"; ?>
-    <?php echo "<meta name='jwt' content=".$_SESSION['jwt'].">"; ?>
+    <?php
+    if($_SESSION['loggedin'] == true){
+      echo "<meta name='token' content=".$_SESSION['token'].">";
+      echo "<meta name='jwt' content=".$_SESSION['jwt'].">";
+    }
+    ?>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177343701-1"></script>
     <script type="text/javascript" src="../js/ga.js"></script>
   </head>
