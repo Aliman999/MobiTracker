@@ -35,7 +35,8 @@ require_once "../src/services.php";
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177343701-1"></script>
     <script type="text/javascript" src="../js/ga.js"></script>
   </head>
-  <body>
+  <body><div id="login_status" class="login_menu">
+  <img class="verified" src="../src/verified.png"><p class="loginName">JamesDusky </p><a href="../" class="verify_btn home_btn">Home</a><a class="verify_btn breadCrumbNav">Contracts</a><a href="../discord" class="verify_btn">Discord Bot</a><a href="../faq" class="verify_btn">FAQ</a><div class="loggedinDiv"></div><a href="../signout" class="logout_btn">Sign out</a></div>
     <?php
     require_once "contract.php";
     ?>
