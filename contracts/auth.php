@@ -23,18 +23,5 @@
 </div>
 
 <?php
-//echo $_SESSION['contract']." | ".$_SESSION['daysleft']." | ".$_SESSION['faction'];
-if($_SESSION['daysleft']<=7 && $_SESSION['daysleft'] > 1){
-  echo "You can change your faction in: ".$_SESSION['daysleft']." Days.";
-}elseif($_SESSION['daysleft'] == 1){
-  echo "You can change your faction in: ".$_SESSION['daysleft']." Day.";
-}
-if($_SESSION['contract'] == 0 || empty($_SESSION['contract']) || $_SESSION['faction'] == -1){
-  require_once "disc.php";
-}else{
-  if($_SESSION['verified'] == 1 && $_SESSION['contract'] == 1 && $_SESSION['faction'] != -1){
-    $verify = 1;
-    require_once "contract.php";
-  }
-}
+require_once "contract.php";
 ?>
