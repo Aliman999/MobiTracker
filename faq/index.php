@@ -40,31 +40,7 @@
     <script type="text/javascript" src="../js/ga.js"></script>
   </head>
   <body>
-    <div id="navMenu" class="navMenu">
-      <div class="navTitleContainer">
-        <p class="navTitle">NAVIGATE</p>
-        <a href="javascript:void(0)" class="closebtn" id="closeNavBtn"><img src="../src/close.png" class="navBtn"></a>
-      </div>
-      <div class="miniPlayerDivOut">
-        <div class="miniPlayerOut">
-          <?php
-            if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-              echo "<div class='miniPlayer' id='miniPlayer'></div><div class='miniRep' id='miniRep'></div>";
-            }else{
-              echo "<div class='mpLoginContainer' id='mpLoginContainer'></div>";
-            }
-          ?>
-        </div>
-      </div>
-      <div class="eleContainer">
-        <a href="../" class="navEle"><img src="../src/repHub.png" class="menuIcon"/><p>Reputation Hub</p></a>
-        <a href="../contracts" class="navEle"><img src="../src/contracts.png" class="menuIcon"/><p>Contracts</p></a>
-        <a href= "../discord" class="navEle"><img src="../src/discord.png" class="menuIcon"/><p>Discord</p></a>
-        <a class="navEle navActive"><img src="../src/faq.png" class="menuIcon"/><p>FAQ</p></a>
-        <a href="https://patreon.com/mobitracker" class="navEle"><img src="../src/patreon.png" class="menuIcon"/><p>Patreon</p></a>
-      </div>
-    </div>
-    <div id="navBackDrop" class="navBackDrop"></div> <!-- REQUIRED FOR NAV -->
+    <?php include "../gtemps/nav.php"; ?>
     <div id="canvas">
       <div class="headerContainer">
         <div id="login_status" class="login_menu">
@@ -178,6 +154,7 @@
         </header>
       </div>
     </div>
+    <?php include "../gtemps/navFooter.php"; ?>
   <script type="text/javascript" src="../js/socket.js"></script>
   <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js";}else{echo "../js/nSession.js";} ?>" async></script>
   <script type="text/javascript" src="main.js"></script>
