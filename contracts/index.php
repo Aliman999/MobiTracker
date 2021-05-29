@@ -60,6 +60,10 @@ require_once "../src/services.php";
           </div>
         </div>
       </div>
+      <div class="titleContainer">
+        <p class="webTitle">Contracts</p>
+        <p class="webSlogan">Find your freelancing niche.</p>
+      </div>
       <?php
       require_once "contract.php";
       ?>
