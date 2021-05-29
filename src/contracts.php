@@ -123,7 +123,7 @@ if (isset($headers)) {
     }else{
       $username = "mtcoGuest";
     }
-    $string = $pref['cOwn'].$showCareers.$pref['cType']." AND t1.archived = 0 ".$faction." AND t1.target != '".$_SESSION['username']."'".$user." ORDER BY t1.created_at DESC";
+    $string = $pref['cOwn'].$showCareers.$pref['cType']." AND t1.archived = 0 ".$faction." AND t1.target != '".$username."'".$user." ORDER BY t1.created_at DESC";
     $sql = "SELECT t1.id AS id, avatar, verify, avgRating, u_creator, careertype, escrow, price, markComplete, target, t1.faction, t1.completed, type, unsecure, secure, apps -> '$.*' AS apps, acc -> '$.*' AS acc, mods -> '$.*' AS mods, t1.created_at FROM contracts t1 INNER JOIN players t2 ON t1.u_creator = t2.username WHERE ".$string;
     $result = mysqli_query($link, $sql);
     $contracts = array();
