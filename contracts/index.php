@@ -32,8 +32,8 @@ if (empty($_SESSION['token'])) {
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#253139">
     <?php
+    echo "<meta name='token' content=".$_SESSION['token'].">";
     if($_SESSION['loggedin'] == true){
-      echo "<meta name='token' content=".$_SESSION['token'].">";
       echo "<meta name='jwt' content=".$_SESSION['jwt'].">";
     }
     ?>
