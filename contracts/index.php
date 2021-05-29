@@ -45,7 +45,7 @@ require_once "../src/services.php";
   </head>
   <body>
     <?php
-    include "auth.php";
+    require_once "contract.php";
     ?>
   </body>
 </html>
