@@ -4,6 +4,9 @@ require_once "../src/services.php";
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
+if (empty($_SESSION['token'])) {
+  $_SESSION['token'] = bin2hex(random_bytes(32));
+}
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -71,6 +74,6 @@ require_once "../src/services.php";
   </body>
   <?php include "../gtemps/footer.php"; ?>
   <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js";}else{echo "../js/nSession.js";} ?>" async></script>
+  <script type="text/javascript" src="../js/socket.js"></script>
   <script type="text/javascript" src="main.js" async></script>
-  <script type="text/javascript" src="../js/push.js" async></script>
 </html>
