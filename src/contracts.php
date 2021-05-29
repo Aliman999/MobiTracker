@@ -118,15 +118,14 @@ if (isset($headers)) {
       $showCareers = " t1.careertype IN (".$career.") ";
     }
     $echo = "";
+    $username = $_SESSION['username'];
     if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
       $username = $_SESSION['username'];
-      $string = $pref['cOwn'].$showCareers.$pref['cType']." AND t1.archived = 0 ".$faction." AND t1.target != '".$_SESSION['username']."'".$user." ORDER BY t1.created_at DESC";
-      $sql = "SELECT t1.id AS id, avatar, verify, avgRating, u_creator, careertype, escrow, price, markComplete, target, t1.faction, t1.completed, type, unsecure, secure, apps -> '$.*' AS apps, acc -> '$.*' AS acc, mods -> '$.*' AS mods, t1.created_at FROM contracts t1 INNER JOIN players t2 ON t1.u_creator = t2.username WHERE ".$string;
     }else{
-      $sql = "SELECT t1.id AS id, avatar, verify, avgRating, u_creator, careertype, escrow, price, markComplete, target, t1.faction, t1.completed, type, unsecure, secure, apps -> '$.*' AS apps, acc -> '$.*' AS acc, mods -> '$.*' AS mods, t1.created_at FROM contracts t1 INNER JOIN players t2 ON t1.u_creator = t2.username WHERE ".$showCareers." t1.archived = 0 ".$user."ORDER BY t1.created_at DESC;";
+      $username = "mtcoGuest";
     }
-
-    echo $sql;
+    $string = $pref['cOwn'].$showCareers.$pref['cType']." AND t1.archived = 0 ".$faction." AND t1.target != '".$_SESSION['username']."'".$user." ORDER BY t1.created_at DESC";
+    $sql = "SELECT t1.id AS id, avatar, verify, avgRating, u_creator, careertype, escrow, price, markComplete, target, t1.faction, t1.completed, type, unsecure, secure, apps -> '$.*' AS apps, acc -> '$.*' AS acc, mods -> '$.*' AS mods, t1.created_at FROM contracts t1 INNER JOIN players t2 ON t1.u_creator = t2.username WHERE ".$string;
     $result = mysqli_query($link, $sql);
     $contracts = array();
     while($row = mysqli_fetch_assoc($result)){
@@ -148,19 +147,17 @@ if (isset($headers)) {
     $emparray = array();
     $temp = array();
     for($x=$setPage; $x<count($contracts) && $x<($setPage+$perPage); $x++){
-      if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
-        if($contracts[$x]['u_creator'] != $username){
-          $contracts[$x]['escrow'] = json_decode($contracts[$x]['escrow'], true);
-          if($contracts[$x]['escrow']['ACTIVE']){
-            if($contracts[$x]['escrow']['ESCROW'] == 1){
-              $contracts[$x]['escrow'] = array("ESCROW"=>1, "EI"=>$contracts[$x]['escrow']['EI']);
-            }elseif($contracts[$x]['escrow']['ESCROW'] == 0){
-              $contracts[$x]['escrow'] = array("ESCROW"=>0);
-            }
-            $contracts[$x]['escrow'] = json_encode($contracts[$x]['escrow']);
-          }else{
-            unset($contracts[$x]);
+      if($contracts[$x]['u_creator'] != $username){
+        $contracts[$x]['escrow'] = json_decode($contracts[$x]['escrow'], true);
+        if($contracts[$x]['escrow']['ACTIVE']){
+          if($contracts[$x]['escrow']['ESCROW'] == 1){
+            $contracts[$x]['escrow'] = array("ESCROW"=>1, "EI"=>$contracts[$x]['escrow']['EI']);
+          }elseif($contracts[$x]['escrow']['ESCROW'] == 0){
+            $contracts[$x]['escrow'] = array("ESCROW"=>0);
           }
+          $contracts[$x]['escrow'] = json_encode($contracts[$x]['escrow']);
+        }else{
+          unset($contracts[$x]);
         }
       }
     }
