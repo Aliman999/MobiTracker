@@ -10,7 +10,11 @@ if (isset($headers)) {
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
     require_once "config.php";
-    $faction = $_SESSION['faction'];
+    if(isset($_SESSION['faction'])){
+      $faction = $_SESSION['faction'];
+    }else{
+      $faction = 0;
+    }
 
     //Racing, Delivery, Security, Scouting, Medical, Charting Regular, Charting Luxury, Head Hunting, VIP Smuggling, Rating
     $r = $d = $s = $st = $md = $cr = $cl = $hh = $vip = $rt = $user = $setPage = $string = $secret = "";
@@ -48,14 +52,16 @@ if (isset($headers)) {
     }
     $search = true;
     $showAll = false;
-    if($pref['cOwn'] == 0){
-      $pref['cOwn'] = "u_creator = '".$_SESSION['username']."'";
-    }elseif($pref['cOwn'] == 1){
-      $pref['cOwn'] = "u_creator = '".$_SESSION['username']."' OR";
-      $showAll = true;
-    }else{
-      $pref['cOwn'] = "u_creator != '".$_SESSION['username']."' AND";
-      $showAll = true;
+    if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+      if($pref['cOwn'] == 0){
+        $pref['cOwn'] = "u_creator = '".$_SESSION['username']."'";
+      }elseif($pref['cOwn'] == 1){
+        $pref['cOwn'] = "u_creator = '".$_SESSION['username']."' OR";
+        $showAll = true;
+      }else{
+        $pref['cOwn'] = "u_creator != '".$_SESSION['username']."' AND";
+        $showAll = true;
+      }
     }
     //var_dump($pref);
     //$rt = $_GET['rt'];
