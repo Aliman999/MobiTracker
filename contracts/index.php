@@ -1,8 +1,9 @@
 <?php
 session_start();
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-  require_once "../src/services.php";
-}
+require_once "../src/services.php";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
