@@ -1,9 +1,9 @@
 <?php
-    // Initialize the session
-    session_start();
-    if (empty($_SESSION['token'])) {
-      $_SESSION['token'] = bin2hex(random_bytes(32));
-    }
+// Initialize the session
+session_start();
+if (empty($_SESSION['token'])) {
+  $_SESSION['token'] = bin2hex(random_bytes(32));
+}
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
