@@ -38,8 +38,12 @@ require_once "../src/services.php";
     <script type="text/javascript" src="../js/ga.js"></script>
   </head>
   <body>
-    <?php
-    require_once "contract.php";
-    ?>
+    <?php include "../gtemps/nav.php"; ?>
+    <div id="canvas">
+      <?php
+      require_once "contract.php";
+      ?>
+    </div>
   </body>
+  <?php include "../gtemps/footer.php"; ?>
 </html>
