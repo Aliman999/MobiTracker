@@ -111,5 +111,3 @@
 
   </section>
 </div>
-<script type="text/javascript" src="main.js" async></script>
-<script type="text/javascript" src="../js/push.js" async></script>
