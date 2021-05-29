@@ -148,17 +148,19 @@ if (isset($headers)) {
     $emparray = array();
     $temp = array();
     for($x=$setPage; $x<count($contracts) && $x<($setPage+$perPage); $x++){
-      if($contracts[$x]['u_creator'] != $username){
-        $contracts[$x]['escrow'] = json_decode($contracts[$x]['escrow'], true);
-        if($contracts[$x]['escrow']['ACTIVE']){
-          if($contracts[$x]['escrow']['ESCROW'] == 1){
-            $contracts[$x]['escrow'] = array("ESCROW"=>1, "EI"=>$contracts[$x]['escrow']['EI']);
-          }elseif($contracts[$x]['escrow']['ESCROW'] == 0){
-            $contracts[$x]['escrow'] = array("ESCROW"=>0);
+      if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+        if($contracts[$x]['u_creator'] != $username){
+          $contracts[$x]['escrow'] = json_decode($contracts[$x]['escrow'], true);
+          if($contracts[$x]['escrow']['ACTIVE']){
+            if($contracts[$x]['escrow']['ESCROW'] == 1){
+              $contracts[$x]['escrow'] = array("ESCROW"=>1, "EI"=>$contracts[$x]['escrow']['EI']);
+            }elseif($contracts[$x]['escrow']['ESCROW'] == 0){
+              $contracts[$x]['escrow'] = array("ESCROW"=>0);
+            }
+            $contracts[$x]['escrow'] = json_encode($contracts[$x]['escrow']);
+          }else{
+            unset($contracts[$x]);
           }
-          $contracts[$x]['escrow'] = json_encode($contracts[$x]['escrow']);
-        }else{
-          unset($contracts[$x]);
         }
       }
     }
