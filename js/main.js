@@ -78,29 +78,6 @@ getUser.onload = function() {
   //init Search
 }
 
-//Responsive UI
-var iContainer = document.getElementById("iContainer");
-iContainer.sibling = document.getElementById("sPContainer");
-iContainer.customChildren = document.getElementsByClassName("container");
-var ro = new ResizeObserver(entries => {
-  for (let entry of entries) {
-    const cr = entry.contentRect;
-    if(cr.width < 800){
-      entry.target.style.margin = "0 8px";
-      entry.target.sibling.style.margin = "0 8px";
-      entry.target.customChildren[0].style.margin = "16px 8px";
-      entry.target.customChildren[1].style.margin = "16px 8px";
-    }else{
-      entry.target.style.margin = "";
-      entry.target.sibling.style.margin = "";
-      entry.target.customChildren[0].style.margin = "";
-      entry.target.customChildren[1].style.margin = "";
-    }
-  }
-});
-ro.observe(iContainer);
-
-
 //USER
 window.onpopstate = function(e){
     if(e.state.search != search && e.state.search != undefined && e.state.search != ""){

@@ -70,10 +70,10 @@
         <img class="sc-logo" src="Star-Citizen.png" alt="">
         <p class="webTitle">Reputation Hub</p>
       </div>
-      <div class="inputContainer" id="iContainer">
+      <div class="inputContainer padded" id="iContainer">
         <input type="text" class="userInput" autofocus value="<?php echo $_SESSION['search'] ?>" placeholder="Enter a Star Citizen's Handle">
       </div>
-      <div class="search-param-container" id="sPContainer">
+      <div class="search-param-container padded" id="sPContainer">
         Search By:
         <div class="search-by">
           <span class="sbc-btn sb-btn">Careers</span>
@@ -89,22 +89,22 @@
       </div>
       <p class='home hidden' id='moto'></p>
       <p class = 'disclaimer home fineprint'>Please leave reviews that are only relating to real ingame interactions.<br>We reserve the right to remove reviews that we believe to be fake or an attempt of harassment.<br/>We are not affiliated or associated with Roberts Space Industries or Cloud Imperium Games.<br>This is simply a fan website created by <a class='loginName by' target="_blank" href="https://robertsspaceindustries.com/citizens/JamesDusky">JamesDusky</a></p>
-        <div class="container container-header" id="hContainer">
-          <div id="pageContainer" class="pageContainer">
-          </div>
-          <header class="playercard">
-          </header>
-          <div id="pageContainer" class="pageContainer">
-          </div>
+      <div class="container container-header padded" id="hContainer">
+        <div id="pageContainer" class="pageContainer">
         </div>
-        <div class="container container-section" id="sContainer">
-          <div id="pageContainer" class="pageContainer">
-          </div>
-          <section class="container-comments">
-          </section>
-          <div id="pageContainer" class="pageContainer">
-          </div>
+        <header class="playercard">
+        </header>
+        <div id="pageContainer" class="pageContainer">
         </div>
+      </div>
+      <div class="container container-section padded" id="sContainer">
+        <div id="pageContainer" class="pageContainer">
+        </div>
+        <section class="container-comments">
+        </section>
+        <div id="pageContainer" class="pageContainer">
+        </div>
+      </div>
     </div>
     <?php include "gtemps/footer.php"; ?>
     <script type="text/javascript" src="js/socket.js"></script>
