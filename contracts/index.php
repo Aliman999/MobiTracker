@@ -42,9 +42,6 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     <?php
     if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
       include "auth.php";
-    }else{
-      require_once "../src/config.php";
-      include_once "login.php";
     }
     ?>
   </body>
