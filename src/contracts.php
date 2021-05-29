@@ -126,7 +126,7 @@ if (isset($headers)) {
       $sql = "SELECT t1.id AS id, avatar, verify, avgRating, u_creator, careertype, escrow, price, markComplete, target, t1.faction, t1.completed, type, unsecure, secure, apps -> '$.*' AS apps, acc -> '$.*' AS acc, mods -> '$.*' AS mods, t1.created_at FROM contracts t1 INNER JOIN players t2 ON t1.u_creator = t2.username WHERE t1.archived = 0 AND".$showCareers.$user."ORDER BY t1.created_at DESC;";
     }
 
-
+    echo $sql;
     $result = mysqli_query($link, $sql);
     $contracts = array();
     while($row = mysqli_fetch_assoc($result)){
