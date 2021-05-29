@@ -88,8 +88,8 @@ var ro = new ResizeObserver(entries => {
     if(cr.width < 800){
       entry.target.style.margin = "0 8px";
       entry.target.sibling.style.margin = "0 8px";
-      entry.target.customChildren[0].style.margin = "8px";
-      entry.target.customChildren[1].style.margin = "8px";
+      entry.target.customChildren[0].style.margin = "16px";
+      entry.target.customChildren[1].style.margin = "16px";
     }else{
       entry.target.style.margin = "";
       entry.target.sibling.style.margin = "";
