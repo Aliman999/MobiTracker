@@ -45,9 +45,7 @@ error_reporting(E_ALL);
   </head>
   <body>
     <?php
-    if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-      include "auth.php";
-    }
+    include "auth.php";
     ?>
   </body>
 </html>
