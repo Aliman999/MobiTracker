@@ -1,6 +1,5 @@
 <?php
 $base = basename($_SERVER['REQUEST_URI']);
-echo $base;
 ?>
 <div id="navMenu" class="navMenu">
   <div class="navTitleContainer">
