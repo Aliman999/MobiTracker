@@ -89,7 +89,7 @@
       </div>
       <p class='home hidden' id='moto'></p>
       <p class = 'disclaimer home fineprint'>Please leave reviews that are only relating to real ingame interactions.<br>We reserve the right to remove reviews that we believe to be fake or an attempt of harassment.<br/>We are not affiliated or associated with Roberts Space Industries or Cloud Imperium Games.<br>This is simply a fan website created by <a class='loginName by' target="_blank" href="https://robertsspaceindustries.com/citizens/JamesDusky">JamesDusky</a></p>
-        <div class="container container-header" id="container">
+        <div class="container container-header" id="hContainer">
           <div id="pageContainer" class="pageContainer">
           </div>
           <header class="playercard">
@@ -97,7 +97,7 @@
           <div id="pageContainer" class="pageContainer">
           </div>
         </div>
-        <div class="container container-section" id="container">
+        <div class="container container-section" id="sContainer">
           <div id="pageContainer" class="pageContainer">
           </div>
           <section class="container-comments">
