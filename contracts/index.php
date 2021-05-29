@@ -11,16 +11,8 @@ require_once "../src/services.php";
     <meta charset="utf-8">
     <title>Contracts - MobiTracker</title>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <?php
-    if(empty($_SESSION['loggedin'])){
-      echo '<link rel="stylesheet" href="https://mobitracker.co/bootstrap/css/bootstrap.css">';
-      echo '<link rel="stylesheet" href="https://mobitracker.co/css/register.css">';
-      echo '<link rel="stylesheet" href="reflogin.css">';
-    }else{
-      echo '<link rel="stylesheet" href="../css/style.css">';
-      echo '<link rel="stylesheet" href="locale.css">';
-    }
-    ?>
+    <link rel="stylesheet" href="locale.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="https://mobitracker.co/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://mobitracker.co/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://mobitracker.co/favicon-16x16.png">
