@@ -118,7 +118,6 @@ if (isset($headers)) {
       $showCareers = " t1.careertype IN (".$career.") ";
     }
     $echo = "";
-    $username = $_SESSION['username'];
     if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
       $username = $_SESSION['username'];
     }else{
