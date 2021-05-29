@@ -1,6 +1,6 @@
 <?php
-require_once "../src/sessionverify.php";
-require_once "clearnoti.php";
+//require_once "../src/sessionverify.php";
+//require_once "clearnoti.php";
 ?>
 <div class="inputContainer">
   <input type="text" class="contractSearch" autofocus="" value="" placeholder="Search for a Creator">

@@ -13,6 +13,8 @@ require_once "../src/services.php";
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="locale.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/patreon.css">
+    <link rel="stylesheet" href="../css/nav.css">
     <link rel="apple-touch-icon" sizes="180x180" href="https://mobitracker.co/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://mobitracker.co/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://mobitracker.co/favicon-16x16.png">
@@ -35,8 +37,7 @@ require_once "../src/services.php";
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177343701-1"></script>
     <script type="text/javascript" src="../js/ga.js"></script>
   </head>
-  <body><div id="login_status" class="login_menu">
-  <img class="verified" src="../src/verified.png"><p class="loginName">JamesDusky </p><a href="../" class="verify_btn home_btn">Home</a><a class="verify_btn breadCrumbNav">Contracts</a><a href="../discord" class="verify_btn">Discord Bot</a><a href="../faq" class="verify_btn">FAQ</a><div class="loggedinDiv"></div><a href="../signout" class="logout_btn">Sign out</a></div>
+  <body>
     <?php
     require_once "contract.php";
     ?>
