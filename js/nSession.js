@@ -32,9 +32,11 @@ closeBtn.onclick = function(){
 
 var loginStatus = document.getElementById("login_status");
 const resizeObserver = new ResizeObserver(ele => {
-  if(ele.target.clientWidth < 804){
-    closeNav();
-    openNav();
+  for (let entry of entries) {
+    if(ele.target.clientWidth < 804){
+      closeNav();
+      openNav();
+    }
   }
 });
 
