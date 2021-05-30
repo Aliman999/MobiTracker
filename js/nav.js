@@ -130,12 +130,12 @@ function checkClick() {
 /* Set the width of the side navigation to 250px */
 function openNav() {
   openBtn.active = true;
-  if(screen.width <= 1282){
+  if(screen.width <= 1280){
     document.addEventListener("click", checkClick);
   }else{
     document.removeEventListener("click", checkClick);
   }
-  if(screen.width <= 1282){
+  if(screen.width <= 1280){
     document.body.style.overflowY = "hidden";
     if(screen.width-(screen.width*0.20) > 460){
       document.getElementById("navMenu").style.width = "460px";
