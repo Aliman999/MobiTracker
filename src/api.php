@@ -1,8 +1,8 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 
 $oldname = $oldavatar = "";
 session_start();
@@ -33,9 +33,6 @@ if (isset($headers)) {
 
     $orgs = "";
     $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/".$version."/user/".$username);
-    if($json == false){
-      echo "failed";
-    }
 
     $xmlResult = json_decode($json, true);
 
