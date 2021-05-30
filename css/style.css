@@ -798,6 +798,9 @@ p.page{
   .fContainer{
     margin: 0 8px;
   }
+  .fineprint{
+    padding: 8px 10px;
+  }
 }
 @media screen and (max-width: 880px) {
   .patreonContainer{
