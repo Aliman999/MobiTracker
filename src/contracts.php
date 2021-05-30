@@ -38,10 +38,12 @@ if (isset($headers)) {
       $vip = $_GET['vip'];
     }
     $pref = json_decode($_GET['pref'], true);
-    if($_SESSION['cPref'] != $pref){
-      $_SESSION['cPref'] = $pref;
-      $sql = "UPDATE players SET contractPref = '".json_encode($_SESSION['cPref'])."' WHERE cID = ".$_SESSION['cID'];
-      mysqli_query($link, $sql);
+    if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+      if($_SESSION['cPref'] != $pref){
+        $_SESSION['cPref'] = $pref;
+        $sql = "UPDATE players SET contractPref = '".json_encode($_SESSION['cPref'])."' WHERE cID = ".$_SESSION['cID'];
+        mysqli_query($link, $sql);
+      }
     }
     if($pref['cType'] == 0){
       $pref['cType'] = " AND type = 'O'";
