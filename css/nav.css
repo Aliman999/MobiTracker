@@ -331,6 +331,9 @@
 .fCopy>p{
   font-size: 14px;
 }
+.fMini{
+  font-size: 10px;
+}
 .fLinks{
   display: flex;
 }
