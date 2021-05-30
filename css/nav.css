@@ -328,13 +328,15 @@
 }
 .fCopy>h3{
   margin: 0;
+  padding-left: 0;
 }
 .fCopy>p{
   font-size: 14px;
+  padding-left: 0;
 }
 .fCopy>span{
   font-size: 10px;
-  padding-left: 8px;
+  padding-left: 0;
 }
 .fLinks{
   display: flex;
