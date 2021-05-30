@@ -4,6 +4,7 @@ var openSignUpBtn = document.getElementById("lmSBtn");
 var closeBtn = document.getElementById("closeNavBtn");
 var eleCount = document.getElementsByClassName("navEle");
 var navMenu = document.getElementById("navMenu");
+var loginStatus = document.getElementById("login_status");
 var query = new XMLHttpRequest();
 openBtn.active = false;
 
@@ -29,6 +30,12 @@ openSignUpBtn.onclick = function(){
 closeBtn.onclick = function(){
   closeNav();
 }
+
+const resizeObserver = new ResizeObserver(entries => {
+  console.log(entries);
+});
+
+resizeObserver.observe(loginStatus);
 
 //EVEMTS
 
