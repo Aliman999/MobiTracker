@@ -733,6 +733,7 @@ p.page{
   margin: auto;
   position: relative;
   bottom: 0px;
+  padding: 8px 2px;
 }
 .ttooltip {
   position: absolute;
