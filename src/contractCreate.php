@@ -120,6 +120,8 @@ if (isset($headers)) {
       $cid = $_SESSION['cID'];
       // TODO: enable contract creation
       if($_SESSION['contractCD'] > time()){
+        $sql = "INSERT INTO contracts ( cID, u_creator, careertype, escrow, price, target, faction, type, unsecure, secure, apps, acc, mods ) VALUES ( $cid, '$u_creator', '$careertype', '$escrow', '$price', '$target', '$faction', '$option', '$unsecure', '$secure', '{}', '{}', '{}' ); INSERT INTO escrow (  cID, u_creator, careertype, active, instructions, dispute, payee, payor, amount, status, servicer, notes ) VALUES ( $cid, '$u_creator', '$careertype', $active, '".$EI."', '$dispute', '$payee', '$payor', '$price', '$ready', '$tempServicer', '' ); UPDATE players SET contractCD = $contractCD WHERE username = '$u_creator' AND cid = $cid;";
+        echo $sql;
         exit(json_encode(['error' => 'Too many contracts too fast!', 'cd' => $_SESSION['contractCD'], 'time' => time()]));
       }else{
         $_SESSION['contractCD'] = time()+(5*60); // 5 min cooldown from now.
