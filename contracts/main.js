@@ -166,6 +166,7 @@ post.addEventListener("click", function(e) {
     }
   }else{
     openNav();
+    showForm(false);
   }
 });
 
