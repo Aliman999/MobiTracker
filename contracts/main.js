@@ -153,15 +153,19 @@ var jobtype = document.getElementsByClassName("select-selected")[1];
 var formfill = 0;
 
 post.addEventListener("click", function(e) {
-  if(formfill == 1){
-    if(service.innerText != " " && jobtype.innerText != "Select Job"){
-      window.location.href = "create?option="+service.innerText+"&service="+jobtype.innerText;
+  if(session){
+    if(formfill == 1){
+      if(service.innerText != " " && jobtype.innerText != "Select Job"){
+        window.location.href = "create?option="+service.innerText+"&service="+jobtype.innerText;
+      }else{
+        postErr.classList.toggle("hidden");
+      }
     }else{
-      postErr.classList.toggle("hidden");
+      formContainer.classList.toggle("hidden");
+      formfill = 1;
     }
   }else{
-    formContainer.classList.toggle("hidden");
-    formfill = 1;
+    openNav();
   }
 });
 
