@@ -12,3 +12,6 @@
 .player>div{
   display: flex;
 }
+.rButton{
+  background-color: #253139;
+}
