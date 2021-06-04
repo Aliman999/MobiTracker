@@ -75,7 +75,7 @@
           </div>
           <div>
             <p><span class="rBold">Password:</span><br><span class="subP">●●●●●●●●●●●●</span></p>
-            <a class="rButton highlight-green">Change Password</a>
+            <a class="rButton highlight-green rightBtn">Change Password</a>
           </div>
         </div>
       </div>
