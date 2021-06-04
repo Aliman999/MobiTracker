@@ -67,13 +67,13 @@
       </div>
       <div class="container container-header">
         <div class="settingsNav">
-          <a class="rButton">Overview</a>
-          <a class="rButton">Email</a>
-          <a class="rButton">Password</a>
-          <a class="rButton">Discord</a>
-          <a class="rButton">Privacy</a>
-          <a class="rButton">Display Name</a>
-          <a class="rButton">Referrals</a>
+          <a class="rButton highlight">Overview</a>
+          <a class="rButton highlight">Email</a>
+          <a class="rButton highlight">Password</a>
+          <a class="rButton highlight">Discord</a>
+          <a class="rButton highlight">Privacy</a>
+          <a class="rButton highlight">Display Name</a>
+          <a class="rButton highlight">Referrals</a>
         </div>
         <div class="player">
           <div>
