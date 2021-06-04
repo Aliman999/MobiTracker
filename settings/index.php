@@ -67,7 +67,7 @@
       </div>
     </div>
     <div class="container container-header">
-
+      <p>Username: <?php echo $_SESSION['username'] ?></p>
     </div>
     <?php include "../gtemps/footer.php"; ?>
     <script type="text/javascript" src="../js/socket.js"></script>
