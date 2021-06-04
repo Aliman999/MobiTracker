@@ -16,6 +16,7 @@
 }
 .player>div>.rButton{
   background-color: #151f26;
+
 }
 a.loginName{
   text-decoration: underline;
@@ -46,4 +47,7 @@ a.loginName{
 }
 hr{
   border-color: #C4D7E6;
+}
+.divider{
+  width: 100%;
 }
