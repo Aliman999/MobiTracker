@@ -27,7 +27,8 @@
   font-size: 18px;
 }
 .settingsNav>a{
-  padding: 16px 0
+  padding: 16px 0;
+  white-space: pre;
 }
 .settingsNav{
   padding: 16px;
