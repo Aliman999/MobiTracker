@@ -68,16 +68,13 @@
       <div class="container container-header">
         <div class="player">
           <div>
-            <p>Username:</p>
-            <?php echo $_SESSION['username'] ?>
+            <p>Username:<br><?php echo $_SESSION['username'] ?></p>
           </div>
           <div>
-            <p>Email:</p>
-            N/A
+            <p>Email:<br>N/A</p>
           </div>
           <div>
-            <p>Password:</p>
-            ●●●●●●●●●●●●
+            <p>Password:<br>●●●●●●●●●●●●</p>
             <a class="rButton highlight-green">Change Password</a>
           </div>
         </div>
