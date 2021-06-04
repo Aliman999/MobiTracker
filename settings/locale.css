@@ -1,5 +1,5 @@
 .container{
-  display: flex;
+  display: block;
   border-radius: 4px;
   background-color: #253139;
   padding: 8px;
