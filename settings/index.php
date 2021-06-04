@@ -68,13 +68,13 @@
       <div class="container container-header">
         <div class="player">
           <div>
-            <p><span class="rBold">Username:</span><br><?php echo $_SESSION['username'] ?></p>
+            <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
           </div>
           <div>
-            <p><span class="rBold">Email:</span><br>N/A</p>
+            <p><span class="rBold">Email:</span><br><span class="subP">N/A</span></p>
           </div>
           <div>
-            <p><span class="rBold">Password:</span><br>●●●●●●●●●●●●</p>
+            <p><span class="rBold">Password:</span><br><span class="subP">●●●●●●●●●●●●</span></p>
             <a class="rButton highlight-green">Change Password</a>
           </div>
         </div>
