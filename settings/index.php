@@ -94,7 +94,7 @@
           </div>
           <div>
             <p><span class="rBold">Discord:</span><br><span class="subP highlight-green">LINKED</span></p>
-            <a class="rButton highlight rightSide">UnLink</a>
+            <a class="rButton highlight-red rightSide">Unlink</a>
           </div>
         </div>
       </div>
