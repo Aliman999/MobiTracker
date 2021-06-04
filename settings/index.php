@@ -1,13 +1,11 @@
 <?php
-    // Initialize the session
-    session_start();
-    //include "vadw.php";
-    if (empty($_SESSION['token'])) {
-        $_SESSION['token'] = bin2hex(random_bytes(32));
-    }
-    if($_SESSION['banned'] == 1){
-      header("location: signout");
-    }
+  session_start();
+  if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
+    header("location: ../");
+  }
+  if($_SESSION['banned'] == 1){
+    header("location: ../signout");
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
