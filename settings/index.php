@@ -69,7 +69,9 @@
         <div class="player">
           <p>Username: <?php echo $_SESSION['username'] ?></p>
           <p>Email: N/A</p>
-          <p>Password: **********</p> <input class="rButton" value="Change Password">
+          <div>
+            <p>Password: **********</p> <input class="rButton" value="Change Password">
+          </div>
         </div>
       </div>
     </div>

@@ -3,3 +3,7 @@
   border-radius: 4px;
   background-color: #253139;
 }
+.player{
+  display: flex;
+  flex-direction: column;
+}
