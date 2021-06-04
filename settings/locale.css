@@ -29,3 +29,6 @@
 .settingsNav>a{
   margin: 8px 0px;
 }
+.settingsNav{
+  padding: 16px;
+}
