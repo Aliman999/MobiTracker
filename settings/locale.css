@@ -26,14 +26,15 @@
 .rBold{
   font-size: 18px;
 }
-.settingsNav>a{
-  padding: 16px 0;
-  white-space: pre;
-}
 .settingsNav{
   padding: 16px;
   display: flex;
   flex-direction: column;
+  background: #151f26;
+}
+.settingsNav>a{
+  padding: 16px 0;
+  white-space: pre;
 }
 .settingsNav>.rButton{
   background-color: #151f26;
