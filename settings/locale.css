@@ -8,12 +8,7 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-right: auto;
-}
-.player>p{
-  margin-right: auto;
 }
 .player>div{
   display: flex;
-  margin-right: auto;
 }
