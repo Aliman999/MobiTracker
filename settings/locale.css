@@ -31,6 +31,8 @@
 }
 .settingsNav{
   padding: 16px;
+  display: flex;
+  flex-direction: column;
 }
 .settingsNav>.rButton{
   background-color: #151f26;
