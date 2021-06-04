@@ -64,10 +64,8 @@
           </div>
         </div>
       </div>
-
       <div class="titleContainer">
-        <p class="webTitle">Frequently Asked Questions</p>
-        <p class="webSlogan">Learn your way around StarCitizen's player Reputation Hub.</p>
+        <p class="webTitle">Settings</p>
       </div>
     </div>
     <div class="container container-header">
