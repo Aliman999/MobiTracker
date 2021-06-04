@@ -72,6 +72,7 @@
           </div>
           <div>
             <p><span class="rBold">Linked RSI:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
+            <a class="rButton highlight-green rightSide">Add RSI</a>
           </div>
           <div>
             <p><span class="rBold">Email:</span><br><span class="subP">N/A</span></p>
