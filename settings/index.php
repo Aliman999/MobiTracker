@@ -67,7 +67,7 @@
       </div>
       <div class="container container-header">
         <div class="settingsNav">
-          <a class="highlight">Overview</a>
+          <a class="highlight active">Overview</a>
           <a class="highlight">Email</a>
           <a class="highlight">Password</a>
           <a class="highlight">Discord</a>
