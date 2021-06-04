@@ -26,3 +26,6 @@
 .rBold{
   font-size: 18px;
 }
+.settingsNav>a{
+  margin: 8px 0px;
+}
