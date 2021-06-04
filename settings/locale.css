@@ -2,7 +2,7 @@
   display: flex;
   border-radius: 4px;
   background-color: #253139;
-  padding: 8px 8px 8px 0;
+  padding: 0 0 8px 0;
 }
 .player{
   display: flex;
