@@ -72,6 +72,7 @@
           </div>
           <div>
             <p><span class="rBold">Email:</span><br><span class="subP">N/A</span></p>
+            <a class="rButton highlight-green rightBtn">Change Email</a>
           </div>
           <div>
             <p><span class="rBold">Password:</span><br><span class="subP">●●●●●●●●●●●●</span></p>
