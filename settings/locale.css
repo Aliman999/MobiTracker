@@ -9,6 +9,10 @@
   flex-direction: column;
   text-align: left;
 }
+.player>p{
+  margin-right: auto;
+}
 .player>div{
   display: flex;
+  margin-right: auto;
 }
