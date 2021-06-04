@@ -48,6 +48,9 @@ a.loginName{
 .settingsNav>a:hover{
   background-color: #253139;
 }
+.active{
+  background-color: #253139;
+}
 .settingsNav>.rButton{
   background-color: #151f26;
 }
