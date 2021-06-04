@@ -76,7 +76,7 @@
         <div class="avi">
           <img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png" alt="">
           <div class="loginNameContainer">
-            <img src="../src/verified.png">
+            <img class="verified" src="../src/verified.png">
             <p class="loginName">JamesDusky</p>
           </div>
         </div>
