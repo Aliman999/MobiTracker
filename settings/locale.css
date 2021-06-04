@@ -31,6 +31,7 @@
   flex-direction: column;
   background: #151f26;
   margin-right: 8px;
+  border-radius: 20px;
 }
 .settingsNav>a{
   padding: 16px 8px;
