@@ -67,17 +67,18 @@
       </div>
       <div class="container container-header">
         <div class="player">
-          <p>Username: <?php echo $_SESSION['username'] ?></p>
-          <p>Email: N/A</p>
           <div>
-            <p>Password: ●●●●●●●●●●●●</p> <a class="rButton highlight-green">Change Password</a>
+            <p>Username:</p>
+            <?php echo $_SESSION['username'] ?>
           </div>
-        </div>
-        <div class="avi">
-          <img class="avatar circleBorder" src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png">
-          <div class="loginNameContainer">
-            <img class="verified" src="../src/verified.png">
-            <p class="loginName">JamesDusky</p>
+          <div>
+            <p>Email:</p>
+            N/A
+          </div>
+          <div>
+            <p>Password:</p>
+            ●●●●●●●●●●●●
+            <a class="rButton highlight-green">Change Password</a>
           </div>
         </div>
       </div>
