@@ -73,6 +73,13 @@
             <p>Password: ●●●●●●●●●●●●</p> <a class="rButton highlight-green">Change Password</a>
           </div>
         </div>
+        <div class="avi">
+          <img src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png" alt="">
+          <div class="loginNameContainer">
+            <img src="../src/verified.png">
+            <p class="loginName">JamesDusky</p>
+          </div>
+        </div>
       </div>
     </div>
     <?php include "../gtemps/footer.php"; ?>
