@@ -75,6 +75,7 @@
           <a class="highlight">Display Name</a>
           <a class="highlight">Referrals</a>
         </div>
+        <hr>
         <div class="player">
           <div>
             <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
