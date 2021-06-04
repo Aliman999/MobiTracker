@@ -70,7 +70,7 @@
           <p>Username: <?php echo $_SESSION['username'] ?></p>
           <p>Email: N/A</p>
           <div>
-            <p>Password: ⬤⬤⬤⬤⬤⬤⬤⬤</p> <a class="rButton highlight-green">Change Password</a>
+            <p>Password: ●●●●●●●●●●●●</p> <a class="rButton highlight-green">Change Password</a>
           </div>
         </div>
       </div>
