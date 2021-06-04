@@ -17,6 +17,10 @@
 .player>div>.rButton{
   background-color: #151f26;
 }
+.player>.loginName{
+  text-decoration: underline;
+  padding-left: 0;
+}
 .rightSide{
   margin: auto 0 auto auto;
 }
