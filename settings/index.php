@@ -65,9 +65,9 @@
       <div class="titleContainer">
         <p class="webTitle">Settings</p>
       </div>
-    </div>
-    <div class="container container-header">
-      <p>Username: <?php echo $_SESSION['username'] ?></p>
+      <div class="container container-header">
+        <p>Username: <?php echo $_SESSION['username'] ?></p>
+      </div>
     </div>
     <?php include "../gtemps/footer.php"; ?>
     <script type="text/javascript" src="../js/socket.js"></script>
