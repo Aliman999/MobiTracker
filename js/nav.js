@@ -87,7 +87,7 @@ function showUser(){
   settingsContainer.className = "settingsContainer";
   var settingsBtn = document.createElement("a");
   settingsBtn.className = "rButton highlight settings";
-  settingsBtn.href = "";
+  settingsBtn.href = "https://mobitracker.co/beta/settings";
   settingsBtn.innerText = "Settings";
   settingsBtn.style.marginRight = "auto";
   var signoutBtn = document.createElement("a");
