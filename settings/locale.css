@@ -6,4 +6,8 @@
 .player{
   display: flex;
   flex-direction: column;
+  text-align: left;
+}
+.player>div{
+  display: flex;
 }
