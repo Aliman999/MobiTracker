@@ -45,6 +45,9 @@ a.loginName{
   padding: 16px 8px;
   white-space: pre;
 }
+.settingsNav>a:hover{
+  background-color: #fff;
+}
 .settingsNav>.rButton{
   background-color: #151f26;
 }
