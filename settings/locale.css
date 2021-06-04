@@ -27,12 +27,11 @@
   font-size: 18px;
 }
 .settingsNav>a{
-  margin: 8px 0px;
+  margin: 16px 0px;
 }
 .settingsNav{
   padding: 16px;
 }
-
 .settingsNav>.rButton{
   background-color: #151f26;
 }
