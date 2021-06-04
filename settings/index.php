@@ -66,6 +66,15 @@
         <p class="webTitle">Settings</p>
       </div>
       <div class="container container-header">
+        <div class="settingsNav">
+          <a class="rButton">Overview</a>
+          <a class="rButton">Email</a>
+          <a class="rButton">Password</a>
+          <a class="rButton">Discord</a>
+          <a class="rButton">Privacy</a>
+          <a class="rButton">Display Name</a>
+          <a class="rButton">Referrals</a>
+        </div>
         <div class="player">
           <div>
             <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
