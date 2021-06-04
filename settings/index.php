@@ -66,7 +66,11 @@
         <p class="webTitle">Settings</p>
       </div>
       <div class="container container-header">
-        <p>Username: <?php echo $_SESSION['username'] ?></p>
+        <div class="player">
+          <p>Username: <?php echo $_SESSION['username'] ?></p>
+          <p>Email: N/A</p>
+          <p>Password: **********</p> <input class="rButton" value="Change Password">
+        </div>
       </div>
     </div>
     <?php include "../gtemps/footer.php"; ?>
