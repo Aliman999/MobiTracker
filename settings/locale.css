@@ -15,4 +15,5 @@
 .player>div>.rButton{
   background-color: #151f26;
   outline: 0;
+  border: 0;
 }
