@@ -17,7 +17,7 @@
 .player>div>.rButton{
   background-color: #151f26;
 }
-.player>div>.loginName{
+a.loginName{
   text-decoration: underline;
   padding-left: 0;
 }
