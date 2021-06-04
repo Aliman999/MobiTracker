@@ -81,7 +81,7 @@
             <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
           </div>
           <div>
-            <p><span class="rBold">Linked RSI:</span><br><a class="subP"><?php echo $_SESSION['username'] ?></a></p>
+            <p><span class="rBold">Linked RSI:</span><br><a href="https://robertsspaceindustries.com/citizens/JamesDusky" class="subP loginName"><?php echo $_SESSION['username'] ?></a></p>
             <a class="rButton highlight rightSide">Add RSI</a>
           </div>
           <div>
@@ -93,7 +93,7 @@
             <a class="rButton highlight rightSide">Change Password</a>
           </div>
           <div>
-            <p><span class="rBold">Discord:</span><br><span class="subP">LINKED</span></p>
+            <p><span class="rBold">Discord:</span><br><span class="subP highlight-green">LINKED</span></p>
             <a class="rButton highlight rightSide">UnLink</a>
           </div>
         </div>
