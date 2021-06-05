@@ -65,9 +65,9 @@ if (empty($_SESSION['token'])) {
 
       <div class="titleContainer">
         <p class="webTitle">Frequently Asked Questions</p>
-        <p id="general" class="webSlogan">Learn your way around StarCitizen's player Reputation Hub.</p>
+        <p class="webSlogan">Learn your way around StarCitizen's player Reputation Hub.</p>
       </div>
-      <div class="container container-header" id="ratings">
+      <div class="container container-header" id="general">
         <header class="playercard">
           <div class="drop" id="faqGeneral">
             <div class="collapseB">
@@ -84,7 +84,7 @@ if (empty($_SESSION['token'])) {
           </div>
         </header>
       </div>
-      <div class="container container-header" id="contracts">
+      <div class="container container-header" id="ratings">
         <header class="playercard">
           <div class="drop" id="faqRatings">
             <div class="collapseB">
@@ -100,7 +100,7 @@ if (empty($_SESSION['token'])) {
           </div>
         </header>
       </div>
-      <div class="container container-header" id="escrow">
+      <div class="container container-header" id="contracts">
         <header class="playercard">
           <div class="drop" id="faqContracts">
             <div class="collapseB">
@@ -119,7 +119,7 @@ if (empty($_SESSION['token'])) {
           </div>
         </header>
       </div>
-      <div class="container container-header" id="bot">
+      <div class="container container-header" id="escrow">
         <header class="playercard">
           <div class="drop" id="faqEscrow">
             <div class="collapseB">
@@ -138,7 +138,7 @@ if (empty($_SESSION['token'])) {
           </div>
         </header>
       </div>
-      <div class="container container-header">
+      <div class="container container-header" id="bot">
         <header class="playercard">
           <div class="drop" id="faqDiscordbot">
             <div class="collapseB">
