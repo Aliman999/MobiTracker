@@ -55,6 +55,9 @@ a.loginName{
 .active{
   background-color: #253139;
 }
+.active:hover{
+  text-shadow: none;
+}
 hr{
   border-color: #C4D7E6;
 }
