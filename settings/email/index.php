@@ -78,23 +78,8 @@
         <hr>
         <div class="setting">
           <div>
-            <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
-          </div>
-          <div>
-            <p><span class="rBold">Linked RSI:</span><br><a href="https://robertsspaceindustries.com/citizens/JamesDusky" class="subP loginName"><?php echo $_SESSION['username'] ?></a></p>
-            <a class="rButton highlight rightSide">Add RSI</a>
-          </div>
-          <div>
             <p><span class="rBold">Email:</span><br><span class="subP">N/A</span></p>
             <a class="rButton highlight rightSide">Change Email</a>
-          </div>
-          <div>
-            <p><span class="rBold">Password:</span><br><span class="subP">●●●●●●●●●●●●</span></p>
-            <a class="rButton highlight rightSide">Change Password</a>
-          </div>
-          <div>
-            <p><span class="rBold">Discord:</span><br><span class="subP highlight-green">LINKED</span></p>
-            <a class="rButton highlight-red rightSide">Unlink</a>
           </div>
         </div>
       </div>
