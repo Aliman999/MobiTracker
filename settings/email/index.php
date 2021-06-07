@@ -2,9 +2,9 @@
   session_start();
   if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
     header("location: ../");
-  }
-  if($_SESSION['banned'] == 1){
-    header("location: ../signout");
+  }else{
+    $_SESSION['activeSetting'] = basename($_SERVER['REQUEST_URI']);
+    echo $_SESSION['activeSetting'];
   }
 ?>
 <!DOCTYPE html>
