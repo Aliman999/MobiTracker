@@ -13,10 +13,10 @@
     <meta charset="utf-8">
     <title>MobiTracker</title>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/patreon.css">
-    <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="locale.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/patreon.css">
+    <link rel="stylesheet" href="../../css/nav.css">
+    <link rel="stylesheet" href="../locale.css">
     <link rel="apple-touch-icon" sizes="180x180" href="https://mobitracker.co/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://mobitracker.co/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://mobitracker.co/favicon-16x16.png">
@@ -40,7 +40,7 @@
     ?>
   </head>
   <body>
-    <?php include "../gtemps/nav.php"; ?>
+    <?php include "../../gtemps/nav.php"; ?>
     <div id="canvas">
       <div class="headerContainer">
         <div id="login_status" class="login_menu">
@@ -99,9 +99,8 @@
         </div>
       </div>
     </div>
-    <?php include "../gtemps/footer.php"; ?>
-    <script type="text/javascript" src="../js/socket.js"></script>
-    <script type="text/javascript" src="../js/main.js" async></script>
-    <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js";}else{echo "../js/nSession.js";} ?>" async></script>
+    <?php include "../../gtemps/footer.php"; ?>
+    <script type="text/javascript" src="../../js/socket.js"></script>
+    <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../../js/nav.js";}else{echo "../../js/nSession.js";} ?>" async></script>
   </body>
 </html>
