@@ -67,13 +67,13 @@
       </div>
       <div class="container container-header">
         <div class="settingsNav">
-          <a class="highlight active">Overview</a>
-          <a class="highlight">Email</a>
-          <a class="highlight">Password</a>
-          <a class="highlight">Discord</a>
-          <a class="highlight">Privacy</a>
-          <a class="highlight">Display Name</a>
-          <a class="highlight">Referrals</a>
+          <a href="../" class="highlight nactive">Overview</a>
+          <a class="highlight active">Email</a>
+          <a href="../password" class="highlight nactive">Password</a>
+          <a href="../discord" class="highlight nactive">Discord</a>
+          <a href="../privacy" class="highlight nactive">Privacy</a>
+          <a href="../displayname" class="highlight nactive">Display Name</a>
+          <a href="../referrals" class="highlight nactive">Referrals</a>
         </div>
         <hr>
         <div class="player">
@@ -101,7 +101,6 @@
     </div>
     <?php include "../gtemps/footer.php"; ?>
     <script type="text/javascript" src="../js/socket.js"></script>
-    <script type="text/javascript" src="../js/main.js" async></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js";}else{echo "../js/nSession.js";} ?>" async></script>
   </body>
 </html>
