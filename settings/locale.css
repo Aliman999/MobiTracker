@@ -46,14 +46,14 @@ a.loginName{
   padding: 16px 8px;
   white-space: pre;
 }
-.nactive{
+.nactive:hover{
   background-color: #1b2429;
-}
-.active{
-  background-color: #253139;
 }
 .settingsNav>.rButton{
   background-color: #151f26;
+}
+.active{
+  background-color: #253139;
 }
 hr{
   border-color: #C4D7E6;
