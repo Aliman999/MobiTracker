@@ -68,12 +68,12 @@
       <div class="container container-header">
         <div class="settingsNav">
           <a class="highlight active">Overview</a>
-          <a class="highlight nactive">Email</a>
-          <a class="highlight nactive">Password</a>
-          <a class="highlight nactive">Discord</a>
-          <a class="highlight nactive">Privacy</a>
-          <a class="highlight nactive">Display Name</a>
-          <a class="highlight nactive">Referrals</a>
+          <a href="email" class="highlight nactive">Email</a>
+          <a href="password" class="highlight nactive">Password</a>
+          <a href="discord" class="highlight nactive">Discord</a>
+          <a href="privacy" class="highlight nactive">Privacy</a>
+          <a href="displayname" class="highlight nactive">Display Name</a>
+          <a href="referrals" class="highlight nactive">Referrals</a>
         </div>
         <hr>
         <div class="player">
