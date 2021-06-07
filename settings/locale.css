@@ -46,7 +46,7 @@ a.loginName{
   padding: 16px 8px;
   white-space: pre;
 }
-.settingsNav>a:hover{
+.nactive{
   background-color: #1b2429;
 }
 .active{
