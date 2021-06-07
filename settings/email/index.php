@@ -4,7 +4,6 @@
     header("location: ../");
   }else{
     $_SESSION['activeSetting'] = basename($_SERVER['REQUEST_URI']);
-    echo $_SESSION['activeSetting'];
   }
 ?>
 <!DOCTYPE html>
