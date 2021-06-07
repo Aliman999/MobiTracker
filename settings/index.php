@@ -76,7 +76,7 @@
           <a href="referrals" class="highlight nactive">Referrals</a>
         </div>
         <hr>
-        <div class="player">
+        <div class="setting">
           <div>
             <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
           </div>
