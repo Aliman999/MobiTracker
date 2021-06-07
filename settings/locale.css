@@ -57,6 +57,7 @@ a.loginName{
 }
 .active:hover{
   text-shadow: none;
+  cursor: default;
 }
 hr{
   border-color: #C4D7E6;
