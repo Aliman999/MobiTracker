@@ -79,7 +79,6 @@
         <div class="setting">
           <div>
             <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
-            <a class="rButton highlight rightSide">Add RSI</a>
           </div>
           <div>
             <p><span class="rBold">Linked RSI:</span><br><a href="https://robertsspaceindustries.com/citizens/JamesDusky" class="subP loginName"><?php echo $_SESSION['username'] ?></a></p>
