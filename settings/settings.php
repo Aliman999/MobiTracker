@@ -4,7 +4,7 @@ if(!isset($_SESSION['loggedin'])){
   //exit("403 Forbidden.");
 }
 $accepted = ["email", "password", "discord", "privacy", "displayname", "referrals"];
-echo $_SERVER['HTTP_REFERER'];
+echo var_dump($_SERVER['HTTP_REFERER']);
 
 if(!in_array($_SESSION['activeSetting'], $accepted)){
   //header('Location: https://mobitracker.co/');
