@@ -7,16 +7,14 @@ if(isset($headers)){
   if ($headers !== $_SESSION['token']){
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
-    if($_POST['setting'] == 'email'){
-
-    }elseif($_POST['setting'] == 'password'){
-
-    }elseif($_POST['setting'] == 'discord'){
-
-    }elseif($_POST['setting'] == 'privacy'){
-
-    }elseif($_POST['setting'] == 'displayName'){
-
+    $sql = "";
+    $result = mysqli_query($link, $sql);
+    $emparray = array();
+    $row = mysqli_fetch_assoc($result);
+    foreach ($registered as $user => $u) {
+      $sqlLeaders = $sqlLeaders."'".$u."',";
+      $leaderName[$x] = $u;
+      $x++;
     }
   }
 }else{

@@ -55,5 +55,5 @@ if(contracts = document.getElementsByClassName("verify_btn home_btn")[0]){
 }
 */
 if(jwt){
-  socket();
+  //socket();
 }
