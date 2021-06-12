@@ -89,7 +89,8 @@ if (empty($_SESSION['token'])) {
           <p><strong>Website</strong> refers to MobiTracker, accessible from <a class="highlight underline" href="https://mobitracker.co" rel="external nofollow noopener" target="_blank">https://mobitracker.co</a></p>
           <p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
           <p class="ppTitle">Collecting and Using Your Personal Data</p>
-          <p class="ppSubTitle"></p>
+          <p class="ppSubTitle">Types of Data Collected</p>
+          <p><strong>Personal Data</strong></p>
         </header>
       </div>
     </div>
