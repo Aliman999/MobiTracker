@@ -163,8 +163,8 @@ if (empty($_SESSION['token'])) {
           <p class="ppTitle">CONTACT US</p>
           <p>In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at:</p>
           <p>Mobi Tracker</p>
-          <p>Email: <a href="mailto:admin@mobitracker.co"></a>admin@mobitracker.co</p>
-          <p>Discord: <a href="https://discord.com/invite/xT4YfcxmrA">MobiTracker</a></p>
+          <p>Email: <a class="highlight underline" href="mailto:admin@mobitracker.co">admin@mobitracker.co</a></p>
+          <p>Discord: <a class="highlight underline" href="https://discord.com/invite/xT4YfcxmrA">MobiTracker</a></p>
         </header>
       </div>
     </div>
