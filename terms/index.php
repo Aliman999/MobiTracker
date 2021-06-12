@@ -70,6 +70,7 @@ if (empty($_SESSION['token'])) {
       <div class="container container-header" id="general">
         <header class="playercard">
           <p class="ppTitle">Agreement to Terms</p>
+          <p>These Terms of Use constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and MobiTracker ("<span class="rBold">Company</span>", "<span class="rBold">We</span>", "<span class="rBold">us</span>" or "<span class="rBold">our</span>"), concerning your access to and use of the <a>https://mobitracker.co/</a> website website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”). You agree that by accessing the Site, you have read, understood, and agreed to be bound by all of these Terms of Use. IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF USE, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SITE AND YOU MUST DISCONTINUE USE IMMEDIATELY.</p>
         </header>
       </div>
     </div>
