@@ -46,12 +46,3 @@ a.pointer{
 .web-name{
   padding: 8px;
 }
-.email{
-  color: #C4D7E6;
-  text-shadow: 0px 0px 5px #C4D7E6;
-  font-weight: bold;
-  font-size: 20px;
-}
-.email:hover{
-  color: #fff;
-}
