@@ -44,7 +44,6 @@ if (isset($headers)) {
 
 
     $sql = "SELECT username, avatar, organization->'$**.*' as organization FROM players WHERE cID = $userID;";
-    echo $sql;
     //$sql = "SELECT username, avatar FROM players WHERE cID = $userID;";
     $result = mysqli_query($link, $sql);
     $emparray = array();

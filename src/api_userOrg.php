@@ -22,7 +22,6 @@ if (isset($headers)) {
       $orgInjext = stripslashes(json_encode($playerOrgs, JSON_FORCE_OBJECT));
       $sql = "UPDATE players SET organization = '$orgInjext' WHERE cID = $userID;";
       mysqli_query($link, $sql);
-      mysqli_close($link);
       //echo $sql;
     }
   }
