@@ -68,3 +68,6 @@ strong{
   font-weight: bold;
   text-decoration: underline !important;
 }
+ul{
+  padding-left: 28px;
+}
