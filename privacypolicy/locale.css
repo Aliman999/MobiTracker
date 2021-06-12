@@ -54,10 +54,12 @@ header, h1, header>p{
 .ppTitle{
   font-size: 24px;
   font-weight: bold;
+  margin-top: 32px;
 }
 .ppSubTitle{
   font-size: 20px;
   font-weight: bold;
+  margin-top: 32px;
 }
 strong{
   font-size: 18px;
