@@ -94,8 +94,8 @@ if (empty($_SESSION['token'])) {
           <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
           <ul>
             <li><strong>Email address</strong></li>
+            <li><strong>Usage Data</strong></li>
           </ul>
-          <p><strong>Usage Data</strong></p>
           <p><strong>Usage Data</strong></p>
         </header>
       </div>
