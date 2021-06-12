@@ -104,9 +104,7 @@ if (empty($_SESSION['token'])) {
           <p><strong>Information from Third-Party Social Media Services</strong></p>
           <p>The Company allows You to create an account and log in to use the Service through the following Third-party Social Media Services:</p>
           <ul>
-            <li><strong>Google</strong></li>
-            <li><strong>Facebook</strong></li>
-            <li><strong>Twitter</strong></li>
+            <li><strong>Discord</strong></li>
           </ul>
         </header>
       </div>
