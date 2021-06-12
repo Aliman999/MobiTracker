@@ -63,5 +63,6 @@ strong{
   font-size: 18px;
 }
 .underline{
+  font-weight: bold;
   text-decoration: underline !important;
 }
