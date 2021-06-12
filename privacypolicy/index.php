@@ -73,6 +73,10 @@ if (empty($_SESSION['token'])) {
           <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
           <p class="ppTitle">Interpretation and Definitions</p>
           <p class="ppSubTitle">Interpretation</p>
+          <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+          <p class="ppSubTitle">Definitions</p>
+          <p>For the purposes of this Privacy Policy:</p>
+          <p><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</p>
         </header>
       </div>
     </div>
