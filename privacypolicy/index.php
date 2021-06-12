@@ -92,14 +92,8 @@ if (empty($_SESSION['token'])) {
           <p class="ppSubTitle">Types of Data Collected</p>
           <p><strong>Personal Data</strong></p>
           <p>While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:</p>
-          <ul>
-          <li>
           <p>Email address</p>
-          </li>
-          <li>
           <p>Usage Data</p>
-          </li>
-          </ul>
         </header>
       </div>
     </div>
