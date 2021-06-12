@@ -31,9 +31,8 @@ div.container{
 }
 header{
   border-radius: 4px;
-  text-align: left;
 }
-h1{
+header, h1, p{
   text-align: left;
 }
 .web-title{
