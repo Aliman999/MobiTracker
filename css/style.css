@@ -37,6 +37,13 @@ h3{
   color: #FFFFFF;
   text-decoration: none;
 }
+.underline{
+  font-weight: bold;
+  text-decoration: underline !important;
+}
+.underline:hover{
+  text-shadow: 0px 0px 5px #c4d7e6;
+}
 .login_btn{
   padding:4px 8px;
   background-color: #151f26;
