@@ -50,3 +50,6 @@ header, h1, header>p{
 .email:hover{
   color: #fff;
 }
+.ppTitle{
+  font-size: 24px;
+}
