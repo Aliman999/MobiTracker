@@ -209,7 +209,7 @@ if (empty($_SESSION['token'])) {
           <p class="ppTitle">Contact Us</p>
           <p>If you have any questions about this Privacy Policy, You can contact us:</p>
           <ul>
-            <li>By email: <a href="mailto: admin@mobitracker.co">admin@mobitracker.co</a></li>
+            <li>By email: <a class="highlight underline" href="mailto: admin@mobitracker.co">admin@mobitracker.co</a></li>
           </ul>
         </header>
       </div>
