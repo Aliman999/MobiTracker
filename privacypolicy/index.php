@@ -181,7 +181,19 @@ if (empty($_SESSION['token'])) {
           <p>Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.</p>
           <p>Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.</p>
           <p class="ppSubTitle">Disclosure of Your Personal Data</p>
-          <p><strong>Disclosure of Your Personal Data</strong></p>
+          <p><strong>Business Transactions</strong></p>
+          <p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
+          <p><strong>Law enforcement</strong></p>
+          <p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
+          <p><strong>Other legal requirements</strong></p>
+          <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
+          <ul>
+            <li>Comply with a legal obligation</li>
+            <li>Protect and defend the rights or property of the Company</li>
+            <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
+            <li>Protect the personal safety of Users of the Service or the public</li>
+            <li>Protect against legal liability</li>
+          </ul>
         </header>
       </div>
     </div>
