@@ -29,8 +29,8 @@ div.container{
 .container{
   display: block;
 }
-header{
-  border-radius: 4px;
+header>p{
+  font-weight: normal;
 }
 header, h1, header>p{
   text-align: left;
