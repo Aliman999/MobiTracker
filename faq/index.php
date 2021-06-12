@@ -148,7 +148,7 @@ if (empty($_SESSION['token'])) {
             <div class="hidden">
               <p class="playerbio"><span class="highlight">Q: How do I add the discord bot to my server?</span><br><br>A: The only way to add the bot to your server is to click the link on the top of the website and then follow those instructions.</p>
               <p class="playerbio"><span class="highlight">Q: What does the discord bot do?</span><br><br>A: Allows users to search players, see their rating and organization information as well as search legal contracts. Illegal contracts are not searchable through the discord bot.</p>
-              <p class="playerbio"><span class="highlight">Q: I have a problem with the discord bot. Who do I contact?</span><br><br>A: You can contact us at <a href="mailto: admin@mobitracker.co" class="email">admin@mobitracker.co</a></p>
+              <p class="playerbio"><span class="highlight">Q: I have a problem with the discord bot. Who do I contact?</span><br><br>A: You can contact us at <a href="mailto: admin@mobitracker.co" class="highlight underline">admin@mobitracker.co</a></p>
             </div>
           </div>
         </header>
