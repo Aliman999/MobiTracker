@@ -32,13 +32,8 @@ div.container{
 header{
   border-radius: 4px;
 }
-a.pointer{
-  font-size: 1.3rem;
-  padding: 8px;
-  margin: 0px;
-  white-space: pre-line;
+header>a{
   color: #C4D7E6;
-  font-family: 'Exo', sans-serif;
 }
 .web-title{
   top: 0;
