@@ -60,7 +60,6 @@ if (isset($headers)) {
       $checkOrg = 0;
       $countOrgs = 0;
       if(isset($xmlResult['data']['organization']['sid'])){
-        echo "01 - ".$xmlResult['data']['organization']['sid']." | ".$checkOrgDif[0]['sid'];
         if($checkOrgDif[0]['sid'] !== $xmlResult['data']['organization']['sid'] || $checkOrgDif[0]['rank'] !== $xmlResult['data']['organization']['stars']){
           $checkOrg = 1;
           //echo "checking orgs";
@@ -71,7 +70,6 @@ if (isset($headers)) {
         $countOrgs++;
       }
       foreach ($xmlResult['data']['affiliation'] as $affil => $a) {
-        echo "02 - ".$a['name'];
         if($a['name'] !== ""){
           if($checkOrgDif[$countOrgs]['sid'] !== $a['sid'] || $checkOrgDif[$countOrgs]['rank'] !== $a['stars']){
             $checkOrg = 1;
