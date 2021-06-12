@@ -136,6 +136,9 @@ if (empty($_SESSION['token'])) {
               Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.
             </li>
           </ul>
+          <p>For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.</p>
+          <p class="ppSubTitle">Use of Your Personal Data</p>
+          <p>The Company may use Personal Data for the following purposes:</p>
         </header>
       </div>
     </div>
