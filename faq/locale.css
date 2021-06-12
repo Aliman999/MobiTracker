@@ -21,7 +21,7 @@ span.highlight{
   text-decoration: underline;
 }
 span.highlight:hover{
-  text-decoration: none;
+  text-shadow: none;
 }
 div.container{
   width: auto;
