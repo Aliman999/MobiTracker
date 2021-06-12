@@ -32,9 +32,6 @@ div.container{
 header{
   border-radius: 4px;
 }
-header>a:-webkit-any-link{
-  color: #C4D7E6;
-}
 .web-title{
   top: 0;
 }
