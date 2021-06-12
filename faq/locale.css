@@ -20,6 +20,9 @@ span.highlight{
   cursor: default;
   text-decoration: underline;
 }
+span.highlight:hover{
+  text-decoration: none;
+}
 div.container{
   width: auto;
 }
