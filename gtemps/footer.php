@@ -13,6 +13,8 @@
         <a href="/">Home</a>
         <a href="/discord/">Discord</a>
         <a href="/contracts/">Contracts</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms and Conditions</a>
       </div>
       <div class="sector">
         <p class="rBold">Support the Hub</p>
@@ -22,7 +24,7 @@
       <div class="sector">
         <p class="rBold">Contact Us</p>
         <hr>
-        <a href="/discord/">Discord Server</a>
+        <a href="https://discord.gg/xT4YfcxmrA">Discord Server</a>
         <a href="mailto: admin@mobitracker.co">Email</a>
       </div>
     </div>

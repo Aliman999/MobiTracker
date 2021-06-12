@@ -1,0 +1,72 @@
+html{
+  scroll-behavior: smooth;
+}
+.container{
+  width: 1000px;
+  border: 2px solid rgb(57, 206, 216);
+  border-radius: 4px;
+}
+.unbold{
+  font-weight: 400;
+  font-size: 16px;
+}
+.bold{
+  font-weight: bold;
+  font-size: 24px;
+}
+span.highlight{
+  font-size: 24px;
+  font-weight:500;
+  cursor: default;
+  text-decoration: underline;
+}
+.highlight:hover{
+  text-shadow: none;
+}
+div.container{
+  width: auto;
+}
+.container{
+  display: block;
+}
+header>p{
+  font-weight: normal;
+  font-size: 16px;
+}
+header, h1, header>p{
+  text-align: left;
+}
+.web-title{
+  top: 0;
+}
+.web-name{
+  padding: 8px;
+}
+.email{
+  color: #C4D7E6;
+  text-shadow: 0px 0px 5px #C4D7E6;
+  font-weight: bold;
+  font-size: 20px;
+}
+.email:hover{
+  color: #fff;
+}
+.ppTitle{
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 32px;
+}
+.ppSubTitle{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 32px;
+}
+strong{
+  font-size: 18px;
+}
+ul{
+  padding-left: 28px;
+}
+li{
+  padding: 8px 0;
+}
