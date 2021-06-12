@@ -22,7 +22,7 @@ $base = basename($_SERVER['REQUEST_URI']);
     <a href="<?php if($base != "contracts"){echo "https://mobitracker.co/beta/contracts";}?>" class="navEle <?php if($base == "contracts"){echo "navActive";} ?>"><img src="https://mobitracker.co/beta/src/contracts.png" class="menuIcon"/><p>Contracts</p></a>
     <a href="<?php if($base != "discord"){echo "https://mobitracker.co/beta/discord";}?>" class="navEle <?php if($base == "discord"){echo "navActive";} ?>"><img src="https://mobitracker.co/beta/src/discord.png" class="menuIcon"/><p>Discord</p></a>
     <a href="<?php if($base != "faq"){echo "https://mobitracker.co/beta/faq";}?>" class="navEle <?php if($base == "faq"){echo "navActive";} ?>"><img src="https://mobitracker.co/beta/src/faq.png" class="menuIcon"/><p>FAQ</p></a>
-    <a href="<?php if($base != "privacypolicy"){echo "https://mobitracker.co/beta/privacypolicy";}?>" class="navEle <?php if($base == "privacypolicy"){echo "navActive";} ?>"><img src="https://mobitracker.co/beta/src/privacy.png" class="menuIcon"/><p>Privacy Policy</p></a>
+    <a href="<?php if($base != "privacy"){echo "https://mobitracker.co/beta/privacy";}?>" class="navEle <?php if($base == "privacy"){echo "navActive";} ?>"><img src="https://mobitracker.co/beta/src/privacy.png" class="menuIcon"/><p>Privacy Policy</p></a>
     <a href="https://patreon.com/mobitracker" class="navEle"><img src="https://mobitracker.co/beta/src/patreon.png" class="menuIcon"/><p>Patreon</p></a>
   </div>
 </div>
