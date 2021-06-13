@@ -155,7 +155,7 @@ function flag(id,bool){
   }
 }
 var player;
-var name;
+var playerUser;
 function showPlayer(node, ns){
   hideHome();
   hideSB();
@@ -170,7 +170,7 @@ function showPlayer(node, ns){
     request.send();
     request.onload = function() {
       var response = JSON.parse(request.response);
-      name = response.data.profile.handle;
+      playerUser = response.data.profile.handle;
       player = response;
       dataCount = Object.keys(player["data"]).length;
       populateHeader(player);
