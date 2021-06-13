@@ -169,7 +169,7 @@ function showPlayer(node, ns){
   request.onload = function() {
     var response = JSON.parse(request.response)
     if(player != response){
-      player = request.response;
+      player = response;
       dataCount = Object.keys(player["data"]).length;
       populateHeader(player);
       if(dataCount>0){
