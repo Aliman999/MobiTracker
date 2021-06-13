@@ -58,7 +58,7 @@ if (isset($headers)) {
       }
       $checkOrg = 0;
       $countOrgs = 0;
-      if(isset($xmlResult['data']['organization']['sid'])){
+      if(isset($checkOrgDif[0]['sid'])){
         if($checkOrgDif[0]['sid'] !== $xmlResult['data']['organization']['sid'] || $checkOrgDif[0]['rank'] !== $xmlResult['data']['organization']['stars']){
           $checkOrg = 1;
           //echo "checking orgs";
