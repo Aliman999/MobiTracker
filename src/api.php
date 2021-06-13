@@ -82,6 +82,7 @@ if (isset($headers)) {
       }
       //var_dump($checkOrgDif);
       if($forceOrgRefresh == true || $checkOrg == 1){
+        echo "updating org";
         include "api_userOrg.php";
       }
     //}
