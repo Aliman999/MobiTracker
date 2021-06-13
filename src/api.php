@@ -50,42 +50,8 @@ if (isset($headers)) {
     $row = mysqli_fetch_assoc($result);
     $oldname = $row['username'];
     $oldavatar = $row['avatar'];
-    //if($version != "auto"){
-      $orgSID = array();
-      if($checkOrgDif = json_decode($row['organization'], true)){
-      }else{
-        $checkOrgDif = array("");
-      }
-      $checkOrg = 0;
-      $countOrgs = 0;
-      if(isset($checkOrgDif[0]['sid'])){
-        if($checkOrgDif[0]['sid'] !== $xmlResult['data']['organization']['sid'] || $checkOrgDif[0]['rank'] !== $xmlResult['data']['organization']['stars']){
-          $checkOrg = 1;
-          //echo "checking orgs";
-        }
-        //echo $checkOrgDif[$countOrgs].":".$xmlResult['data']['organization']['sid']."<br>";
-        $orgSID[$countOrgs]['sid'] = $xmlResult['data']['organization']['sid'];
-        $orgSID[$countOrgs]['rank'] = $xmlResult['data']['organization']['stars'];
-        $countOrgs++;
-      }
-      foreach ($xmlResult['data']['affiliation'] as $affil => $a) {
-        if($a['name'] !== ""){
-          if($checkOrgDif[$countOrgs]['sid'] !== $a['sid'] || $checkOrgDif[$countOrgs]['rank'] !== $a['stars']){
-            $checkOrg = 1;
-            //echo "checking affiliates";
-          }
-          //echo $checkOrgDif[$countOrgs].":".$a['sid']."<br>";
-          $orgSID[$countOrgs]['sid'] = $a['sid'];
-          $orgSID[$countOrgs]['rank'] = $a['stars'];
-          $countOrgs++;
-        }
-      }
-      //var_dump($checkOrgDif);
-      if($forceOrgRefresh == true || $checkOrg == 1){
-        echo "updating org";
-        include "api_userOrg.php";
-      }
-    //}
+
+    include "api_userOrg.php";
 
     if($oldname !== $username){
       $sql = "UPDATE players SET username = '$username', avatar = '$avatar' WHERE cID = $userID;";
