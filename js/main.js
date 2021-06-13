@@ -155,12 +155,12 @@ function flag(id,bool){
   }
 }
 var player;
+var name;
 function showPlayer(node, ns){
   hideHome();
   hideSB();
   clearSB();
   dataCount = 0;
-  var name;
   if(node != name){
     request.open("GET", "src/api.php"+"?username="+node+"&v="+ext);
     if(ext == "live"){
@@ -170,6 +170,7 @@ function showPlayer(node, ns){
     request.send();
     request.onload = function() {
       var response = JSON.parse(request.response);
+      name = response.data.profile.handle;
       player = response;
       dataCount = Object.keys(player["data"]).length;
       populateHeader(player);
