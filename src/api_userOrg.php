@@ -17,12 +17,9 @@ if (isset($headers)) {
             "rank"=>$orgSID[$i]['rank']
         ];
       }
-    }
-    if($countOrgs>0){
       $orgInjext = stripslashes(json_encode($playerOrgs, JSON_FORCE_OBJECT));
       $sql = "UPDATE players SET organization = '$orgInjext' WHERE cID = $userID;";
       mysqli_query($link, $sql);
-      //echo $sql;
     }
   }
 }else{

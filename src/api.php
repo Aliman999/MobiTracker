@@ -52,6 +52,7 @@ if (isset($headers)) {
     $orgSID = array();
 
     $countOrgs = 0;
+
     if(isset($xmlResult['data']['organizations'])){
       $orgSID[$countOrgs]['sid'] = $xmlResult['data']['organization']['sid'];
       $orgSID[$countOrgs]['rank'] = $xmlResult['data']['organization']['stars'];
@@ -64,6 +65,7 @@ if (isset($headers)) {
         $countOrgs++;
       }
     }
+    var_dump($orgSID);
     include "api_userOrg.php";
 
     if($oldname !== $username){
