@@ -44,13 +44,26 @@ if (isset($headers)) {
 
 
     $sql = "SELECT username, avatar, organization->'$**.*' as organization FROM players WHERE cID = $userID;";
-    //$sql = "SELECT username, avatar FROM players WHERE cID = $userID;";
     $result = mysqli_query($link, $sql);
     $emparray = array();
     $row = mysqli_fetch_assoc($result);
     $oldname = $row['username'];
     $oldavatar = $row['avatar'];
+    $orgSID = array();
 
+    $countOrgs = 0;
+    if(isset($xmlResult['data']['organizations'])){
+      $orgSID[$countOrgs]['sid'] = $xmlResult['data']['organization']['sid'];
+      $orgSID[$countOrgs]['rank'] = $xmlResult['data']['organization']['stars'];
+      $countOrgs++;
+    }
+    foreach ($xmlResult['data']['affiliation'] as $affil => $a) {
+      if($a['name'] !== ""){
+        $orgSID[$countOrgs]['sid'] = $a['sid'];
+        $orgSID[$countOrgs]['rank'] = $a['stars'];
+        $countOrgs++;
+      }
+    }
     include "api_userOrg.php";
 
     if($oldname !== $username){
