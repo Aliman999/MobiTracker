@@ -178,6 +178,9 @@ function showPlayer(node, ns){
         showComment(node);
       }
     }
+  }else{
+    populateHeader(player);
+    showComment(node);
   }
 }
 var comment;
