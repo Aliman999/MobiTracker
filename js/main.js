@@ -170,7 +170,7 @@ function showPlayer(node, ns){
     request.onload = function() {
       var response = JSON.parse(request.response);
       player = response.data.profile.handle;
-      dataCount = Object.keys(player["data"]).length;
+      dataCount = Object.keys(response.data).length;
       populateHeader(player);
       if(dataCount>0){
         showComment(node);
