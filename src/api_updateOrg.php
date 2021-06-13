@@ -3,11 +3,9 @@
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
-//$headers = $_SERVER['HTTP_TOKEN'];
-/*
+$headers = $_SERVER['HTTP_TOKEN'];
 if ($headers == $_SESSION['token']) {
   if(isset($_SESSION['loggedin'])){
-    */
     require_once "config.php";
     include "api_unique.php";
     if(!$link ) {
@@ -73,12 +71,10 @@ if ($headers == $_SESSION['token']) {
       mysqli_query($link, $sql);
       mysqli_close($link);
     }
-    /*
   }else{
     exit();
   }
 }else{
   exit();
 }
-*/
 ?>
