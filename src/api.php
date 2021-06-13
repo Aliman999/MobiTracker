@@ -53,7 +53,7 @@ if (isset($headers)) {
 
     $countOrgs = 0;
 
-    if(isset($xmlResult['data']['organizations'])){
+    if(isset($xmlResult['data']['organization'])){
       $orgSID[$countOrgs]['sid'] = $xmlResult['data']['organization']['sid'];
       $orgSID[$countOrgs]['rank'] = $xmlResult['data']['organization']['stars'];
       $countOrgs++;
