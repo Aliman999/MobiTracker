@@ -168,6 +168,9 @@ function showPlayer(node, ns){
   request.send();
   request.onload = function() {
     var response = JSON.parse(request.response)
+    .catch(err){
+      request.send();
+    }
     if(player != response){
       player = response;
       dataCount = Object.keys(player["data"]).length;
