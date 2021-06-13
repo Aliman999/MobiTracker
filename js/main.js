@@ -165,7 +165,7 @@ function showPlayer(node, ns){
     ext = "auto";
   }
   request.setRequestHeader(tokenHeader.name,tokenHeader.content);
-  request.responseType = "json";
+  //request.responseType = "json";
   request.send();
   request.onload = function() {
       if(player != request.response){
