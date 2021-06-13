@@ -160,20 +160,22 @@ function showPlayer(node, ns){
   hideSB();
   clearSB();
   dataCount = 0;
-  request.open("GET", "src/api.php"+"?username="+node+"&v="+ext);
-  if(ext == "live"){
-    ext = "auto";
-  }
-  request.setRequestHeader(tokenHeader.name,tokenHeader.content);
-  request.send();
-  request.onload = function() {
-    var response = JSON.parse(request.response);
-    if(player != response){
-      player = response;
-      dataCount = Object.keys(player["data"]).length;
-      populateHeader(player);
-      if(dataCount>0){
-        showComment(node);
+  if(node != player.data.profile.handle){
+    request.open("GET", "src/api.php"+"?username="+node+"&v="+ext);
+    if(ext == "live"){
+      ext = "auto";
+    }
+    request.setRequestHeader(tokenHeader.name,tokenHeader.content);
+    request.send();
+    request.onload = function() {
+      var response = JSON.parse(request.response);
+      if(player != response){
+        player = response;
+        dataCount = Object.keys(player["data"]).length;
+        populateHeader(player);
+        if(dataCount>0){
+          showComment(node);
+        }
       }
     }
   }
