@@ -167,10 +167,7 @@ function showPlayer(node, ns){
   request.setRequestHeader(tokenHeader.name,tokenHeader.content);
   request.send();
   request.onload = function() {
-    var response = JSON.parse(request.response)
-    .catch(err){
-      request.send();
-    }
+    var response = JSON.parse(request.response);
     if(player != response){
       player = response;
       dataCount = Object.keys(player["data"]).length;
