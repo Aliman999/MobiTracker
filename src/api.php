@@ -65,7 +65,6 @@ if (isset($headers)) {
         $countOrgs++;
       }
     }
-    var_dump($orgSID);
     include "api_userOrg.php";
 
     if($oldname !== $username){
