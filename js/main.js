@@ -160,7 +160,7 @@ function showPlayer(node, ns){
   hideSB();
   clearSB();
   dataCount = 0;
-  if(node != player.data.profile.handle){
+  if(node != player){
     request.open("GET", "src/api.php"+"?username="+node+"&v="+ext);
     if(ext == "live"){
       ext = "auto";
@@ -169,13 +169,11 @@ function showPlayer(node, ns){
     request.send();
     request.onload = function() {
       var response = JSON.parse(request.response);
-      if(player != response){
-        player = response;
-        dataCount = Object.keys(player["data"]).length;
-        populateHeader(player);
-        if(dataCount>0){
-          showComment(node);
-        }
+      player = response.data.profile.handle;
+      dataCount = Object.keys(player["data"]).length;
+      populateHeader(player);
+      if(dataCount>0){
+        showComment(node);
       }
     }
   }
