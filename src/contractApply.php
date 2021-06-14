@@ -42,6 +42,7 @@ if (isset($headers)) {
       $acc = json_decode($row['acc'], true);
     }
     $y=0;
+    $check = false;
     foreach ($apps as $a){
       if($apps[$y]['handle'] == $username){
         unset($apps[$y]);
