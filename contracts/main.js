@@ -1048,6 +1048,7 @@ function populateContracts(obj, p, apps){
         var thisDesc = this.parentElement.parentElement.children[1];
         var thisToC = this.parentElement.parentElement.children[2].children[0];
         if(e.target.innerText == "Apply" || e.target.innerText == "Hire"){
+          thisToC.classList.toggle("hidden");
           thisDesc.classList.toggle("hidden");
           thisDesc.children[0].focus();
         }
