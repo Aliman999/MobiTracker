@@ -43,8 +43,8 @@ if (isset($headers)) {
         $EI = "Payout per Hiree";
       }
       $price = $_POST['price'];
-      if($price > 1000000){
-        $price = 1000000;
+      if($price > 35000000){
+        $price = 35000000;
       }
       if(!$price > 0){
         exit();
