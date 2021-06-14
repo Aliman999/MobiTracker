@@ -48,6 +48,7 @@ if (isset($headers)) {
         unset($apps[$y]);
         $apps = array_values($apps);
         $apps = json_encode($apps,  JSON_FORCE_OBJECT);
+        $apps = mysql_real_escape_string($apps);
         $sql = "UPDATE contracts SET apps = '$apps' WHERE id = $id";
         $result = mysqli_query($link, $sql);
         echo "Removed";
@@ -64,6 +65,7 @@ if (isset($headers)) {
         unset($acc[$y]);
         $acc = array_values($acc);
         $acc = json_encode($acc,  JSON_FORCE_OBJECT);
+        $acc = mysql_real_escape_string($acc);
         $sql = "UPDATE contracts SET acc = '$acc' WHERE id = $id";
         $result = mysqli_query($link, $sql);
         echo "Removed";
@@ -78,6 +80,7 @@ if (isset($headers)) {
       $apps[count($apps)]['handle'] = $username;
       $apps[count($apps)-1]['desc'] = $description;
       $apps = json_encode($apps,  JSON_FORCE_OBJECT);
+      $apps = mysql_real_escape_string($apps);
       $sql = "UPDATE contracts SET apps = '$apps' WHERE id = $id";
       echo $sql;
       $result = mysqli_query($link, $sql);
