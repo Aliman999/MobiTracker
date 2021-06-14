@@ -167,11 +167,11 @@ function showPlayer(node, ns){
       ext = "auto";
     }
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
+    request.responseType = "json";
     request.send();
     request.onload = function() {
-      var response = JSON.parse(request.response);
-      playerUser = response.data.profile.handle;
-      player = response;
+      playerUser = request.response.data.profile.handle;
+      player = request.response;
       dataCount = Object.keys(player["data"]).length;
       populateHeader(player);
       if(dataCount>0){
