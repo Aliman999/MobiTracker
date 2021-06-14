@@ -1062,6 +1062,7 @@ function populateContracts(obj, p, apps){
             apply.send("id="+this.id+"&desc="+thisDesc.children[0].value);
           }
           thisDesc.children[0].value = "";
+          thisToC.classList.toggle("hidden");
           apply.onload = function(){
             var response = apply.response;
             searchCareer(sC);
