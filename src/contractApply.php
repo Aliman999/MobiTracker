@@ -18,6 +18,9 @@ if (isset($headers)) {
       $p = htmlentities($p, ENT_QUOTES, 'UTF-8');
     }
     $username = $_SESSION['username'];
+    if(empty($username)){
+      exit();
+    }
     $id = $_POST['id'];
     if(isset($_POST['desc'])){
       $description = $_POST['desc'];
