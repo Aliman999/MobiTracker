@@ -376,13 +376,13 @@ function searchCareer(sc){
 
   searchCareers.open("GET", "src/searchBy.php" + queryString+"&page="+sC[7]);
   searchCareers.setRequestHeader(tokenHeader.name,tokenHeader.content);
+  searchCareers.responseType = "json";
   searchCareers.send();
   searchCareers.onreadystatechange = function(){
     if(searchCareers.readyState == 4){
-      var searched = JSON.parse(searchCareers.response);
-      pages(sC[7], searched.pages, 0, containerHeader);
-      delete searched.pages;
-      sCount = Object.keys(searched).length;
+      pages(sC[7], searchCareers.response.pages, 0, containerHeader);
+      delete searchCareers.response.pages;
+      sCount = Object.keys(searchCareers.response).length;
       uSearch(searched);
     }
   }
