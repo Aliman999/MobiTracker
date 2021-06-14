@@ -356,8 +356,11 @@
   padding: 0 8px;
 }
 .sector>a{
-  color: #C4D7E6;
+  color: #83919c;
   font-size: 13px;
+}
+.sector>a:hover{
+  color: #C4D7E6;
 }
 
 .sticky {
