@@ -1046,6 +1046,7 @@ function populateContracts(obj, p, apps){
       manageContract.before(appDescCont);
       appBtn.onclick = function(e){
         var thisDesc = this.parentElement.parentElement.children[1];
+        var thisToC = this.parentElement.parentElement.children[2].children[1];
         if(e.target.innerText == "Apply" || e.target.innerText == "Hire"){
           thisDesc.classList.toggle("hidden");
           thisDesc.children[0].focus();
