@@ -137,10 +137,14 @@ function closeAllSelect(elmnt){
     }
   }
   var appDesc = document.querySelectorAll(".appDescCont");
+  var appToC = document.querySelectorAll(".appToC");
   if(!click){
     for(var i = 0; i < appDesc.length; i++){
       appDesc[i].children[0].value = "";
       appDesc[i].classList.add("hidden");
+    }
+    for(var i = 0; i < appToC.length; i++){
+      appToC.classList.add("hidden");
     }
   }
 }
@@ -1029,7 +1033,7 @@ function populateContracts(obj, p, apps){
       appDescCont.className = "appDescCont hidden";
 
       var appToC = document.createElement("p");
-      appToC.className = "hidden";
+      appToC.className = "appToC hidden";
 
       var appDesc = document.createElement("input");
       appDesc.className = "appDesc contractSearch";
