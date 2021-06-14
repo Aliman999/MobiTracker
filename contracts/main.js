@@ -144,7 +144,7 @@ function closeAllSelect(elmnt){
       appDesc[i].classList.add("hidden");
     }
     for(var i = 0; i < appToC.length; i++){
-      appToC.classList.add("hidden");
+      appToC[i].classList.add("hidden");
     }
   }
 }
