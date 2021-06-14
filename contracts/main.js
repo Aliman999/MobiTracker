@@ -1028,7 +1028,7 @@ function populateContracts(obj, p, apps){
       appDescCont = document.createElement("div");
       appDescCont.className = "appDescCont hidden";
 
-      var appToC = document.createElement(obj[i]);
+      var appToC = document.createElement("p");
 
       var appDesc = document.createElement("input");
       appDesc.className = "appDesc contractSearch";
