@@ -86,12 +86,12 @@ function showUser(){
   var settingsContainer = document.createElement("div");
   settingsContainer.className = "settingsContainer";
   var settingsBtn = document.createElement("a");
-  settingsBtn.className = "rButton highlight settings";
+  settingsBtn.className = "rButton highlight settings rDisabled";
   settingsBtn.href = "https://mobitracker.co/beta/settings";
   settingsBtn.innerText = "Settings";
   settingsBtn.style.marginRight = "auto";
   var signoutBtn = document.createElement("a");
-  signoutBtn.className = "rButton highlight-red settings rDisabled";
+  signoutBtn.className = "rButton highlight-red settings";
   signoutBtn.href = "https://mobitracker.co/beta/signout";
   signoutBtn.innerText = "Sign out";
   signoutBtn.style.marginLeft = "auto";
