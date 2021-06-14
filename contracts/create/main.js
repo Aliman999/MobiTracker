@@ -84,10 +84,10 @@ inputNum[0].oninput = function(e){
   }else{
     this.value = temp;
   }
-  if(this.value > 1000000){
-    this.value = 1000000;
+  if(this.value > 35000000){
+    this.value = 35000000;
     temp = this.value;
-    postErr.error = "Current maximum aUEC is 1,000,000";
+    postErr.error = "Current maximum aUEC is 35,000,000";
     error(postErr);
   }else if(this.value < 0){
     this.value = 0;
