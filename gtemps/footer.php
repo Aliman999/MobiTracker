@@ -19,7 +19,7 @@
       <div class="sector">
         <p class="rBold">Support the Hub</p>
         <hr>
-        <a href="/">Patreon</a>
+        <a href="https://www.patreon.com/mobitracker" target="_blank">Patreon</a>
       </div>
       <div class="sector">
         <p class="rBold">Contact Us</p>
