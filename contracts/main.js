@@ -1001,7 +1001,7 @@ function populateContracts(obj, p, apps){
         completeBtn = document.createElement("a");
         completeBtn.complete = playerReview.complete;
         completeBtn.markComplete = playerReview.markComplete;
-        if(completeBtn.complete == 0 && completeBtn.markComplete == 0){ //Escrow info here
+        if(completeBtn.complete == 0 && completeBtn.markComplete == 0){
           completeBtn.className = "rButton highlight-green";
           completeBtn.innerText = "Request Completion";
           completeBtn.id = obj[i]["id"];
@@ -1027,10 +1027,17 @@ function populateContracts(obj, p, apps){
       appBtn.id = obj[i]["id"];
       appDescCont = document.createElement("div");
       appDescCont.className = "appDescCont hidden";
+
+      var appToC = document.createElement(obj[i]);
+
       var appDesc = document.createElement("input");
       appDesc.className = "appDesc contractSearch";
       appDesc.style.borderRadius = "4px";
-      appDesc.placeholder = "Enter a description of your experience or your Discord tag so they may contact you.";
+      if(obj[i]["type"] == "O"){
+        appDesc.placeholder = "Enter a description of your requirements or your Discord tag so they may contact you.";
+      }else if (obj[i]["type"] == "R") {
+        appDesc.placeholder = "Enter a description of your experience or your Discord tag so they may contact you.";
+      }
       appDesc.maxLength = "80";
       appDescCont.appendChild(appDesc);
       manageContract.before(appDescCont);
