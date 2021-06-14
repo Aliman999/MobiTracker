@@ -384,7 +384,7 @@ function searchCareer(sc){
       pages(sC[7], searchCareers.response.pages, 0, containerHeader);
       delete searchCareers.response.pages;
       sCount = Object.keys(searchCareers.response).length;
-      uSearch(searched);
+      uSearch(searchCareers.response);
     }
   }
 }
