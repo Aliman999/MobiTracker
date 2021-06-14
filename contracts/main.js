@@ -1001,7 +1001,7 @@ function populateContracts(obj, p, apps){
         completeBtn = document.createElement("a");
         completeBtn.complete = playerReview.complete;
         completeBtn.markComplete = playerReview.markComplete;
-        if(completeBtn.complete == 0 && completeBtn.markComplete == 0){
+        if(completeBtn.complete == 0 && completeBtn.markComplete == 0){ //Escrow info here
           completeBtn.className = "rButton highlight-green";
           completeBtn.innerText = "Request Completion";
           completeBtn.id = obj[i]["id"];
