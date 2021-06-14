@@ -1045,29 +1045,32 @@ function populateContracts(obj, p, apps){
       manageContract.appendChild(appToC);
       manageContract.before(appDescCont);
       appBtn.onclick = function(e){
-        var thisDesc = this.parentElement.parentElement.children[1];
-        var thisToC = this.parentElement.parentElement.children[2].children[0];
-        if(e.target.innerText == "Apply" || e.target.innerText == "Hire"){
-          thisToC.classList.toggle("hidden");
-          thisDesc.classList.toggle("hidden");
-          thisDesc.children[0].focus();
-        }
-        if(thisDesc.children[0].value != "" || e.target.innerText == "Withdraw"){
-          apply.open("POST", "../src/contractApply.php");
-          apply.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-          apply.setRequestHeader(tokenHeader.name,tokenHeader.content);
-          if(e.target.innerText == "Withdraw"){
-            apply.send("id="+this.id);
-          }else if(e.target.innerText == "Apply" || e.target.innerText == "Hire"){
-            apply.send("id="+this.id+"&desc="+thisDesc.children[0].value);
+        if(session){
+          var thisDesc = this.parentElement.parentElement.children[1];
+          var thisToC = this.parentElement.parentElement.children[2].children[0];
+          if(e.target.innerText == "Apply" || e.target.innerText == "Hire"){
+            thisToC.classList.toggle("hidden");
+            thisDesc.classList.toggle("hidden");
+            thisDesc.children[0].focus();
           }
-          thisDesc.children[0].value = "";
-          apply.onload = function(){
-            var response = apply.response;
-            searchCareer(sC);
-          };
+          if(thisDesc.children[0].value != "" || e.target.innerText == "Withdraw"){
+            apply.open("POST", "../src/contractApply.php");
+            apply.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            apply.setRequestHeader(tokenHeader.name,tokenHeader.content);
+            if(e.target.innerText == "Withdraw"){
+              apply.send("id="+this.id);
+            }else if(e.target.innerText == "Apply" || e.target.innerText == "Hire"){
+              apply.send("id="+this.id+"&desc="+thisDesc.children[0].value);
+            }
+            thisDesc.children[0].value = "";
+            apply.onload = function(){
+              var response = apply.response;
+              searchCareer(sC);
+            };
+          }
         }else{
-
+          openNav();
+          showForm(false);
         }
       }
       manageContract.appendChild(appBtn);
