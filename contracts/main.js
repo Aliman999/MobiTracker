@@ -1041,8 +1041,8 @@ function populateContracts(obj, p, apps){
         appDesc.placeholder = "Enter a description of your experience or your Discord tag so they may contact you.";
       }
       appDesc.maxLength = "80";
-      appDescCont.appendChild(appToC);
       appDescCont.appendChild(appDesc);
+      appDescCont.appendChild(appToC);
       manageContract.before(appDescCont);
       appBtn.onclick = function(e){
         var thisDesc = this.parentElement.parentElement.children[1];
