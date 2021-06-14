@@ -1042,7 +1042,7 @@ function populateContracts(obj, p, apps){
       }
       appDesc.maxLength = "80";
       appDescCont.appendChild(appDesc);
-      appDescCont.appendChild(appToC);
+      manageContract.appendChild(appToC);
       manageContract.before(appDescCont);
       appBtn.onclick = function(e){
         var thisDesc = this.parentElement.parentElement.children[1];
