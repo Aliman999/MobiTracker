@@ -25,7 +25,7 @@
     <link rel="mask-icon" href="https://mobitracker.co/safari-pinned-tab.svg" color="#5bbad5">
     <link href="src/opensearch.xml" rel="search" title="Search MobiTracker" type="application/opensearchdescription+xml">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="MobiTracker.co" />
+    <meta property="og:title" content="MobiTracker.co"/>
     <meta property="og:description" content="Find who to trust when you need a hand to lead your armed escort or who to avoid letting on your ship" />
     <meta property="og:url" content="https://mobitracker.co" />
     <meta property="og:image" content="https://mobitracker.co/android-chrome-512x512.png" />
