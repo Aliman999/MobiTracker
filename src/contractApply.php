@@ -79,6 +79,7 @@ if (isset($headers)) {
       $apps[count($apps)-1]['desc'] = $description;
       $apps = json_encode($apps,  JSON_FORCE_OBJECT);
       $sql = "UPDATE contracts SET apps = '$apps' WHERE id = $id";
+      echo $sql;
       $result = mysqli_query($link, $sql);
       echo "Applied";
     }
