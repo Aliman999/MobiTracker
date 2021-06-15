@@ -3,7 +3,6 @@ $base = basename($_SERVER['REQUEST_URI']);
 if(strpos($base, "?option") !== false){
   $base = "contracts";
 }
-echo $base;
 ?>
 <div id="navMenu" class="navMenu">
   <div class="navTitleContainer">
