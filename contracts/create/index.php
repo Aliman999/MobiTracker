@@ -41,8 +41,6 @@ if(!in_array($_GET['service'], $service)){
       echo "<meta name='jwt' content=".$_SESSION['jwt'].">";
     }
     ?>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177343701-1"></script>
-    <script type="text/javascript" src="../js/ga.js"></script>
   </head>
   <body>
     <?php include "../../gtemps/nav.php"; ?>
@@ -137,7 +135,10 @@ if(!in_array($_GET['service'], $service)){
       }
       ?>
     </div>
+    <?php include "../../gtemps/footer.php"; ?>
   </body>
-  <?php include "../../gtemps/footer.php"; ?>
-  </body>
+
+  <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../../js/nav.js";}else{echo "../../js/nSession.js";} ?>" async></script>
+  <script type="text/javascript" src="../../js/socket.js"></script>
+  <script type="text/javascript" src="main.js" async></script>
 </html>
