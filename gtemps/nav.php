@@ -1,5 +1,8 @@
 <?php
 $base = basename($_SERVER['REQUEST_URI']);
+if($base === "create"){
+  $base = "contracts";
+}
 ?>
 <div id="navMenu" class="navMenu">
   <div class="navTitleContainer">
