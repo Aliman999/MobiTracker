@@ -16,7 +16,7 @@ $_SESSION['search'] = "";
     <meta charset="utf-8">
     <title>MobiTracker</title>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://mobitracker.co/css/style.css">
+    <link rel="stylesheet" href="https://mobitracker.co/css/style.css?v=2.0">
     <link rel="apple-touch-icon" sizes="180x180" href="https://mobitracker.co/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://mobitracker.co/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://mobitracker.co/favicon-16x16.png">

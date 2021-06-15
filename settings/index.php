@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <title>MobiTracker</title>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css?v=2.0">
     <link rel="stylesheet" href="../css/patreon.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="locale.css">
