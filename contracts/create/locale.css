@@ -22,7 +22,7 @@
   white-space: pre-wrap;
 }
 .jpForm>.form-control{
-  width: none;
+  width: -webkit-fill-available;
 }
 textarea{
   border-radius: 4px;
