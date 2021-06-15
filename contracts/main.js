@@ -9,7 +9,6 @@ var careersShort;
 var sC = new Array();
 var queryString = new Array();
 
-var getUser = new XMLHttpRequest();
 var session,
     sessionUser,
     comcount,
@@ -19,6 +18,7 @@ var session,
     flagged,
     faction,
     cPref;
+var getUser = new XMLHttpRequest();
 getUser.open("GET", "../src/user.php");
 getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
