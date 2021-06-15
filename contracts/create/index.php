@@ -21,6 +21,7 @@ if(!in_array($_GET['service'], $service)){
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/patreon.css">
     <link rel="stylesheet" href="../../css/nav.css">
+    <link rel="stylesheet" href="../locale.css">
     <link rel="stylesheet" href="locale.css">
     <link rel="apple-touch-icon" sizes="180x180" href="https://mobitracker.co/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://mobitracker.co/favicon-32x32.png">
