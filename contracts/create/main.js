@@ -8,7 +8,12 @@ var option = document.getElementById("option");
 var post = document.getElementsByClassName("post")[0];
 var postErr = document.getElementsByClassName("error")[0];
 var create = new XMLHttpRequest();
-var getUser = new XMLHttpRequest();
+
+var careersText;
+var careersShort;
+var sC = new Array();
+var queryString = new Array();
+
 var session,
     sessionUser,
     comcount,
@@ -18,15 +23,12 @@ var session,
     flagged,
     faction,
     cPref;
+var getUser = new XMLHttpRequest();
 getUser.open("GET", "../../src/user.php");
 getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
 getUser.responseType = "json";
 getUser.send();
-var careersText;
-var careersShort;
-var sC = new Array();
-var queryString = new Array();
 getUser.onload = function(){
   var response = getUser.response;
   session = response["session"];
