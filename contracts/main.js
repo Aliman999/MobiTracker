@@ -3,6 +3,12 @@ var post = document.getElementsByClassName("post")[0];
 var formContainer = document.getElementsByClassName("jpFormContainer")[0];
 var tokenHeader = document.getElementsByName("token")[0];
 var colD = 0;
+
+var careersText;
+var careersShort;
+var sC = new Array();
+var queryString = new Array();
+
 var getUser = new XMLHttpRequest();
 var session,
     sessionUser,
@@ -18,10 +24,6 @@ getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
 getUser.responseType = "json";
 getUser.send();
-var careersText;
-var careersShort;
-var sC = new Array();
-var queryString = new Array();
 getUser.onload = function(){
   var response = getUser.response;
   session = response["session"];
