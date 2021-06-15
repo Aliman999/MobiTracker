@@ -164,9 +164,9 @@ post.addEventListener("click", function(e){
     if(escrow.checked == true){
       if(post.innerText == "Create"){
         if(option.innerText == "Offering"){
-          postErr.innerText = "Your contract will not be shown publicly until the escrow service confirms they're ready for aUEC transactions. \n\nYou will receive payout only when we've received the aUEC from a contractor.";
+          postErr.innerHTML = "Your contract will not be shown publicly until the escrow service confirms they're ready for aUEC transactions. \n\nYou will receive payout only when we've received the aUEC from a contractor.";
         }else{
-          postErr.innerText = "Your contract will not be shown publicly until the escrow service confirms they've received your aUEC deposit. \n\nPlease send "+(parseInt(inputNum[0].value)+(parseInt(inputNum[0].value)*0.05))+"aUEC (Includes transfer fee) to the ingame name 'Kindmiss'";
+          postErr.innerHTML = "Your contract will not be shown publicly until the escrow service confirms they've received your aUEC deposit. \n\nPlease send "+(parseInt(inputNum[0].value)+(parseInt(inputNum[0].value)*0.05))+"aUEC (Includes transfer fee) to the ingame name <strong>MobiTracker</strong>";
         }
         postErr.classList.remove("highlight-red");
         postErr.classList.add("highlight-green");
