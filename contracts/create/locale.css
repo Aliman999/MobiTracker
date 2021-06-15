@@ -21,6 +21,9 @@
 .jpForm>p{
   white-space: pre-wrap;
 }
+.jpForm>.form-control{
+  width: auto;
+}
 textarea{
   border-radius: 4px;
 }
