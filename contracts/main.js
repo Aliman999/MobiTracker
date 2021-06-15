@@ -22,7 +22,7 @@ var getUser = new XMLHttpRequest();
 getUser.open("GET", "../src/user.php");
 getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
-getUser.responseType = "json";
+//getUser.responseType = "json";
 getUser.send();
 getUser.onload = function(){
   var response = getUser.response;
