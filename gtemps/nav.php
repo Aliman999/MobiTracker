@@ -1,7 +1,7 @@
 <?php
 $base = basename($_SERVER['REQUEST_URI']);
 echo $base;
-if($base === "create"){
+if(strpos($base, "?option") != false){
   $base = "contracts";
 }
 ?>
