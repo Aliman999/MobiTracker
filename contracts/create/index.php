@@ -47,7 +47,7 @@ if(!in_array($_GET['service'], $service)){
     <div id="canvas">
       <div class="headerContainer">
         <div id="login_status" class="login_menu">
-          <a><img id="mtLogo" src="../android-chrome-512x512.png" class="mtLogo"></a>
+          <a><img id="mtLogo" src="../../android-chrome-512x512.png" class="mtLogo"></a>
           <a id="mtTitle" class="mtTitle">MOBITRACKER</a>
           <?php
           if(!isset($_SESSION["loggedin"])){
@@ -55,7 +55,7 @@ if(!in_array($_GET['service'], $service)){
             echo "<a id='lmSBtn' class='verify_btn'>Sign Up</a>";
           }
           if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-            echo "<div class='userContainer'><img class='verified' src='../src/verified.png'><p class='loginName'>".$_SESSION['username']."</p></div>";
+            echo "<div class='userContainer'><img class='verified' src='../../src/verified.png'><p class='loginName'>".$_SESSION['username']."</p></div>";
           }
           ?>
           <div id="navBtnContainer" class="navBtnContainer">
