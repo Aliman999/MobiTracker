@@ -24,7 +24,7 @@
       <div class="sector">
         <p class="rBold">Contact Us</p>
         <hr>
-        <a href="https://discord.gg/xT4YfcxmrA">Discord Server</a>
+        <a href="https://discord.gg/xT4YfcxmrA" target="_blank">Discord Server</a>
         <a href="mailto: admin@mobitracker.co">Email</a>
       </div>
     </div>
