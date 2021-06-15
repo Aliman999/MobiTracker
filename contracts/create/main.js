@@ -24,7 +24,7 @@ var session,
     faction,
     cPref;
 var getUser = new XMLHttpRequest();
-getUser.open("GET", "https://mobitracker.co/beta/src/user.php");
+getUser.open("GET", "../../src/user.php");
 getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
 getUser.responseType = "json";
