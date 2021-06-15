@@ -36,89 +36,99 @@ if(!in_array($_GET['service'], $service)){
     <script type="text/javascript" src="https://mobitracker.co/js/ga.js"></script>
   </head>
   <body>
-    <div id="login_status" class="login_menu">
-      <?php
-      if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-        if($_SESSION['verified'] === 1){
-          echo '<img class="verified" src="https://mobitracker.co/src/verified.png"></a>';
-        }
-        echo "<p class='loginName'>".$_SESSION["username"]." </p>";
-        echo '<a href="https://mobitracker.co" class="verify_btn home_btn">Home</a>';
-        echo '<div class="loggedinDiv"></div>';
-        echo '<a href="https://mobitracker.co/signout" class="logout_btn">Sign out</a>';
-      }
-      ?>
-    </div>
-    <div class="web-title">
-      <a class="web-name web-link" href="https://mobitracker.co/contracts">MobiTracker Contracts</a>
-    </div>
-
-    <?php
-    //echo $_SESSION['contract']." | ".$_SESSION['daysleft']." | ".$_SESSION['faction'];
-    ?>
-    <div class="container container-section">
-      <section class="container-comments">
-        <div class="jpFormContainer">
-          <div class="jpForm jpFormHoldThePad">
-            <p>I am</p>
-            <p id="option"><?php echo $_GET['option']; ?></p>
-            <p>a service</p>
-          </div>
-          <div class="jpForm jpFormHoldThePad">
-            <p>in</p>
-            <p id="service"><?php echo $_GET['service']; ?></p>
-          </div>
-        </div>
-        <div class="jpFormContainer" style="display: block;">
-          <div class="jpForm">
-            <p>Price: </p>
-            <input class="userInput numInput form-control" maxlength="7" type="number" name="" value="">
-            <p>aUEC</p>
-          </div>
+    <?php include "../../gtemps/nav.php"; ?>
+    <div id="canvas">
+      <div class="headerContainer">
+        <div id="login_status" class="login_menu">
+          <a><img id="mtLogo" src="../android-chrome-512x512.png" class="mtLogo"></a>
+          <a id="mtTitle" class="mtTitle">MOBITRACKER</a>
           <?php
-          if(($_GET['service'] == "VIP Smuggling" && $_GET['option'] == "Requesting" || $_GET['service'] == "Head Hunting" && $_GET['option'] == "Requesting") && $_SESSION['faction'] == 1){
-            $hidden = "";
-          }else{
-            $hidden = "hidden";
+          if(!isset($_SESSION["loggedin"])){
+            echo "<a id='lmLBtn' class='verify_btn lmBtn'>Login</a>";
+            echo "<a id='lmSBtn' class='verify_btn'>Sign Up</a>";
           }
-          if($_GET['option'] == "Providing"){
-            $hiddenEscrow = "hidden";
-          }else{
-            $hiddenEscrow = "";
+          if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+            echo "<div class='userContainer'><img class='verified' src='../src/verified.png'><p class='loginName'>".$_SESSION['username']."</p></div>";
           }
           ?>
-          <div class='jpForm <?php echo $hidden; ?>'>
-            <p>Target: </p>
-            <input class='userInput form-control' style='width: 15rem;' maxlength='50' type='text' name=''>
-          </div>
-          <div class="<?php echo $hiddenEscrow;?>">
-            <input class="checkbox" id="escrow" type="checkbox"/>
-            <label for="escrow">Opt-In for Escrow</label>
-          </div>
-          <div class="jpForm" style="display: block;">
-            <p>Unsecure Information about the contract</p>
-            <textarea maxlength="500" class="createComment form-control" name="comment" placeholder="Include non-sensitive information regarding the contract so contractors know what its about. This will direct your contract's expectation."></textarea>
-            <p class="charCounter">0/500</p>
-          </div>
-          <div class="jpForm" style="display: block;">
-            <p>Secure Information about the contract</p>
-            <p>(Only applicants you've accepted will see this)</p>
-            <textarea maxlength="100" class="createComment form-control" name="comment" placeholder="Include information such as Times, Locations, Requirements and anything else you believe will be needed to complete the contract."></textarea>
-            <p class="charCounter">0/100</p>
+          <div id="navBtnContainer" class="navBtnContainer">
+            <div class="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "loggedIn";}else{echo "loggedOut";} ?>"></div>
+            <div class="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "loggedIn";}else{echo "loggedOut";} ?>"></div>
+            <div class="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "loggedIn";}else{echo "loggedOut";} ?>"></div>
           </div>
         </div>
-        <div class="postContainer">
-          <p class="error highlight-red hidden" style="font-size: 16px;"></p>
-          <div class="postBtnContainer">
-            <a class="post" style="margin-top: 0px; margin-bottom: 8px;">Create</a>
+      </div>
+      <div class="titleContainer">
+        <p class="webTitle">Contracts</p>
+        <p class="webSlogan">Find your freelancing niche.</p>
+      </div>
+
+      <div class="container container-section">
+        <section class="container-comments">
+          <div class="jpFormContainer">
+            <div class="jpForm jpFormHoldThePad">
+              <p>I am</p>
+              <p id="option"><?php echo $_GET['option']; ?></p>
+              <p>a service</p>
+            </div>
+            <div class="jpForm jpFormHoldThePad">
+              <p>in</p>
+              <p id="service"><?php echo $_GET['service']; ?></p>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+          <div class="jpFormContainer" style="display: block;">
+            <div class="jpForm">
+              <p>Price: </p>
+              <input class="userInput numInput form-control" maxlength="7" type="number" name="" value="">
+              <p>aUEC</p>
+            </div>
+            <?php
+            if(($_GET['service'] == "VIP Smuggling" && $_GET['option'] == "Requesting" || $_GET['service'] == "Head Hunting" && $_GET['option'] == "Requesting") && $_SESSION['faction'] == 1){
+              $hidden = "";
+            }else{
+              $hidden = "hidden";
+            }
+            if($_GET['option'] == "Providing"){
+              $hiddenEscrow = "hidden";
+            }else{
+              $hiddenEscrow = "";
+            }
+            ?>
+            <div class='jpForm <?php echo $hidden; ?>'>
+              <p>Target: </p>
+              <input class='userInput form-control' style='width: 15rem;' maxlength='50' type='text' name=''>
+            </div>
+            <div class="<?php echo $hiddenEscrow;?>">
+              <input class="checkbox" id="escrow" type="checkbox"/>
+              <label for="escrow">Opt-In for Escrow</label>
+            </div>
+            <div class="jpForm" style="display: block;">
+              <p>Unsecure Information about the contract</p>
+              <textarea maxlength="500" class="createComment form-control" name="comment" placeholder="Include non-sensitive information regarding the contract so contractors know what its about. This will direct your contract's expectation."></textarea>
+              <p class="charCounter">0/500</p>
+            </div>
+            <div class="jpForm" style="display: block;">
+              <p>Secure Information about the contract</p>
+              <p>(Only applicants you've accepted will see this)</p>
+              <textarea maxlength="100" class="createComment form-control" name="comment" placeholder="Include information such as Times, Locations, Requirements and anything else you believe will be needed to complete the contract."></textarea>
+              <p class="charCounter">0/100</p>
+            </div>
+          </div>
+          <div class="postContainer">
+            <p class="error highlight-red hidden" style="font-size: 16px;"></p>
+            <div class="postBtnContainer">
+              <a class="post" style="margin-top: 0px; margin-bottom: 8px;">Create</a>
+            </div>
+          </div>
+        </section>
+      </div>
       <?php
       if($_SESSION['verified'] == 1 && $_SESSION['contract'] == 1){
         echo '<script type="text/javascript" src="main.js"></script>';
       }
       ?>
+    </div>
+  </body>
+  <?php include "../../gtemps/footer.php"; ?>
   </body>
 </html>
