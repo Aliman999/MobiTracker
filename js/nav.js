@@ -72,7 +72,7 @@ function showUser(){
   nameContainer.className = "loginNameContainer";
   if(user.verified){
     var verifiedImg = document.createElement("img");
-    verifiedImg.src = "../src/verified.png";
+    verifiedImg.src = "https://mobitracker.co/src/verified.png";
     verifiedImg.className = "verified";
     nameContainer.appendChild(verifiedImg);
   }
