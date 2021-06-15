@@ -1040,7 +1040,9 @@ function populateContracts(obj, p, apps){
       appDesc.style.borderRadius = "4px";
       if(obj[i]["type"] == "O"){
         appDesc.placeholder = "Enter a description of your requirements or your Discord tag so they may contact you.";
-        appToC.innerHTML = "Hiring <strong>"+obj[i].u_creator+"</strong> means you agree to send the agreed-upon aUEC to the escrow account <strong>MobiTracker</strong> ingame before <strong>"+obj[i].u_creator+"</strong> completes your job. \n This aUEC is refundable in the case that <strong>"+obj[i].u_creator+"</strong> breaks your agreement and you must contact MobiTracker staff regarding broken contracts and agreements.";
+        if(escrow.ESCROW){
+          appToC.innerHTML = "Hiring <strong>"+obj[i].u_creator+"</strong> means you agree to send the agreed-upon aUEC to the escrow account <strong>MobiTracker</strong> ingame before <strong>"+obj[i].u_creator+"</strong> completes your job. \n This aUEC is refundable in the case that <strong>"+obj[i].u_creator+"</strong> breaks your agreement and you must contact MobiTracker staff regarding broken contracts and agreements.";
+        }
       }else if (obj[i]["type"] == "R") {
         appDesc.placeholder = "Enter a description of your experience or your Discord tag so they may contact you.";
       }
