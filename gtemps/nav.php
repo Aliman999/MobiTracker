@@ -1,6 +1,6 @@
 <?php
 $base = basename($_SERVER['REQUEST_URI']);
-if(strpos($base, "?option") != false){
+if(strpos($base, "?option") !== false){
   $base = "contracts";
 }
 echo $base;
