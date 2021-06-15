@@ -18,7 +18,7 @@ var session,
     flagged,
     faction,
     cPref;
-getUser.open("GET", "../../../src/user.php");
+getUser.open("GET", "../../src/user.php");
 getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 getUser.setRequestHeader(tokenHeader.name,tokenHeader.content);
 getUser.responseType = "json";
