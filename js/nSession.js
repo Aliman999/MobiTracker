@@ -250,6 +250,7 @@ function showForm(register){
     form.pAgree.appendChild(form.cAgree);
     form.pAgree.innerHTML += "I acknowledge that I have read and agree to the <a class='highlight underline' style='white-space: pre;'>Terms and Conditions</a> and <a class='highlight underline' style='white-space: pre;'>Privacy Policy</a>";
 
+    form.lContainer.appendChild(form.pAgree);
 
     form.pAlt.innerHTML = "Already have an account? ";
     form.iAlt.innerText = "Login";
@@ -268,9 +269,6 @@ function showForm(register){
     form.iAlt.onclick = function(){
       showForm(true);
     }
-  }
-  if(register){
-    form.pAlt.appendChild(form.pAgree);
   }
   form.pAlt.appendChild(form.iAlt);
 
