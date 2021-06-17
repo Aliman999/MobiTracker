@@ -262,7 +262,10 @@ function showForm(register){
     form.pAgree.innerHTML += "I acknowledge that I have read and agree to the <a class='highlight underline' style='white-space: pre;' target='_blank' href='https://mobitracker.co/terms'>Terms and Conditions</a> and <a class='highlight underline' style='white-space: pre;' target='_blank' href='https://mobitracker.co/privacy'>Privacy Policy</a>";
 
     form.pAgree.onclick = function(e){
-      if(e.target.nodeName != "A" || e.target.nodeName == "INPUT"){
+      if(e.target.nodeName == "INPUT"){
+        return;
+      }
+      if(e.target.nodeName != "A"){
         if(form.pAgree.children[0].checked == true){
           form.pAgree.children[0].checked = false;
         }else{
