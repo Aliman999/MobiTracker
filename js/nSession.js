@@ -241,7 +241,12 @@ function showForm(register){
     form.bMain.id = "signUp";
     form.bMain.innerText = "Sign Up";
     form.bMain.onclick = function(){
-      registerUser(form.iUsername.value, form.iEmail.value, form.iPassword.value);
+      if(form.pAgree.children[0].checked){
+        registerUser(form.iUsername.value, form.iEmail.value, form.iPassword.value);
+      }else{
+        form.pEmailErr.classList.remove("hidden");
+        form.pEmailErr.innerText = "You must agree to our Terms and Conditions and Privacy Policy before signing up to MobiTracker.";
+      }
     }
 
     form.cAgree.type = "checkbox";
