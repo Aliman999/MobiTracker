@@ -249,7 +249,7 @@ function showForm(register){
     form.pAgree.style.whiteSpace = "break-spaces";
     form.pAgree.appendChild(form.cAgree);
     form.pAgree.innerHTML += "I acknowledge that I have read and agree to the <a class='highlight underline' style='white-space: pre;'>Terms and Conditions</a> and <a class='highlight underline' style='white-space: pre;'>Privacy Policy</a>";
-    form.pAlt.appendChild(form.pAgree);
+
 
     form.pAlt.innerHTML = "Already have an account? ";
     form.iAlt.innerText = "Login";
@@ -275,6 +275,9 @@ function showForm(register){
   form.lContainer.appendChild(form.pSuccess);
   form.lContainer.appendChild(form.pAlt);
   container.appendChild(form.lContainer);
+  if(register){
+    form.pAlt.appendChild(form.pAgree);
+  }
 }
 
 function checkClick() {
