@@ -573,7 +573,7 @@ function populateHeader(jsonObj) {
     copyUrl.onclick = function(){
       copyUrlTT.style.display = "block";
       var copy = document.createElement("input");
-      copy.value = "https://www.mobitracker.co/"+node.value;
+      copy.value = "https://www.mobitracker.co/"+jsonObj.data.profile.handle;
       document.body.appendChild(copy);
       copy.select();
       document.execCommand("copy");
