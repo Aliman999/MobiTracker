@@ -4,7 +4,7 @@ session_start();
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
 if (empty($_SESSION['loggedin'])) {
-  header("location: https://mobitracker.co/beta/contracts");
+  header("location: https://mobitracker.co/contracts");
 }else{
   require_once "../../src/services.php";
 }

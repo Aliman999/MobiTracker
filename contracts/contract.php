@@ -17,25 +17,25 @@
   <div>
     <span class="sbc-btn sb-btn">Career</span>
     <div class="sbc-content sb-content">
-      <img class="sbc-img notSelected" src="https://mobitracker.co/beta/src/racing.png">
-      <img class="sbc-img notSelected" src="https://mobitracker.co/beta/src/trader.png">
-      <img class="sbc-img notSelected" src="https://mobitracker.co/beta/src/escort.png">
+      <img class="sbc-img notSelected" src="https://mobitracker.co/src/racing.png">
+      <img class="sbc-img notSelected" src="https://mobitracker.co/src/trader.png">
+      <img class="sbc-img notSelected" src="https://mobitracker.co/src/escort.png">
       <?php
         if($_SESSION['faction'] == 1){
-          echo '<img class="sbc-img notSelected" src="https://mobitracker.co/beta/src/pirate.png">';
+          echo '<img class="sbc-img notSelected" src="https://mobitracker.co/src/pirate.png">';
         }
       ?>
-      <img class="sbc-img notSelected" src="https://mobitracker.co/beta/src/explorer.png">
-      <img class="sbc-img notSelected" src="https://mobitracker.co/beta/src/medical.png">
+      <img class="sbc-img notSelected" src="https://mobitracker.co/src/explorer.png">
+      <img class="sbc-img notSelected" src="https://mobitracker.co/src/medical.png">
       <?php
         if($_SESSION['faction'] == 0){
-          echo '<img class="sbc-img notSelected" src="https://mobitracker.co/beta/src/charterRegular.png">';
-          echo '<img class="sbc-img notSelected" src="https://mobitracker.co/beta/src/charterLuxury.png">';
+          echo '<img class="sbc-img notSelected" src="https://mobitracker.co/src/charterRegular.png">';
+          echo '<img class="sbc-img notSelected" src="https://mobitracker.co/src/charterLuxury.png">';
         }
       ?>
       <?php
         if($_SESSION['faction'] == 1){
-          echo '<img class="sbc-img notSelected" src="https://mobitracker.co/beta/src/smuggling.png">';
+          echo '<img class="sbc-img notSelected" src="https://mobitracker.co/src/smuggling.png">';
         }
       ?>
     </div>

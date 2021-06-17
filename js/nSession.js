@@ -78,9 +78,9 @@ function xp(rep){
 //FORM CTRL
 
 function registerUser(username, email, password){
-  query.open("POST", "https://mobitracker.co/beta/src/register.php");
+  query.open("POST", "https://mobitracker.co/src/register.php");
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  query.send("username="+username+"&email="+email+"&password="+password);
+  query.send("username="+username+"&email="+email+"&password="+password+"&tcpp=1");
   query.onload = function(){
     var response = JSON.parse(query.response);
     if(response.username || response.email || response.password){
@@ -119,7 +119,7 @@ function registerUser(username, email, password){
 }
 
 function login(username, password){
-  query.open("POST", "https://mobitracker.co/beta/src/login.php");
+  query.open("POST", "https://mobitracker.co/src/login.php");
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   query.send("username="+username+"&password="+password);
   query.onload = function(){
