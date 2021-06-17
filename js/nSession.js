@@ -244,8 +244,12 @@ function showForm(register){
       if(form.pAgree.children[0].checked){
         registerUser(form.iUsername.value, form.iEmail.value, form.iPassword.value);
       }else{
-        form.pEmailErr.classList.remove("hidden");
-        form.pEmailErr.innerText = "You must agree to our Terms and Conditions and Privacy Policy before signing up to MobiTracker.";
+        form.pPasswordErr.classList.remove("hidden");
+        form.pPasswordErr.style.whiteSpace = "break-spaces";
+        form.pPasswordErr.innerText = "You must agree to our Terms and Conditions and Privacy Policy before signing up to MobiTracker.";
+        setTimeout(function(){
+          form.pPasswordErr.classList.add("hidden");
+        }, 2000);
       }
     }
 
