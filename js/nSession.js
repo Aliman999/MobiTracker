@@ -247,11 +247,11 @@ function showForm(register){
         registerUser(form.iUsername.value, form.iEmail.value, form.iPassword.value);
       }else{
         form.pAgree.style.color = "FF5A5A";
-        form.pAgree.children.forEach((item, i) => {
+        for(var i = 0; i < form.pAgree.children.length; i++){
           if(i > 0){
-            item.style.color = "FF5A5A";
+            form.pAgree.children[i].style.color = "FF5A5A";
           }
-        });
+        }
       }
     }
 
