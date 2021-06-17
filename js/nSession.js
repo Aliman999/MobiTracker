@@ -171,7 +171,6 @@ var form = {
 
   cAgree: document.createElement("input"),
   pAgree: document.createElement("p"),
-  pAgreeErr: document.createElement("p"),
 
   bMain: document.createElement("a"),
   pAlt: document.createElement("p"),
@@ -247,12 +246,7 @@ function showForm(register){
       if(form.pAgree.children[0].checked){
         registerUser(form.iUsername.value, form.iEmail.value, form.iPassword.value);
       }else{
-        form.pAgreeErr.classList.remove("hidden");
-        form.pAgreeErr.style.whiteSpace = "break-spaces";
-        form.pAgreeErr.innerText = "You must agree to our Terms and Conditions and Privacy Policy before signing up to MobiTracker.";
-        setTimeout(function(){
-          form.pAgreeErr.classList.add("hidden");
-        }, 5000);
+        form.pAgree.style.color = "#FF5A5A";
       }
     }
 
@@ -271,11 +265,8 @@ function showForm(register){
         }
       }
     }
-    
-    form.pAgreeErr.className = "highlight-red hidden";
 
     form.lContainer.appendChild(form.pAgree);
-    form.lContainer.appendChild(form.pAgreeErr);
 
     form.pAlt.innerHTML = "Already have an account? ";
     form.iAlt.innerText = "Login";
