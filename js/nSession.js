@@ -269,15 +269,15 @@ function showForm(register){
       showForm(true);
     }
   }
+  if(register){
+    form.pAlt.appendChild(form.pAgree);
+  }
   form.pAlt.appendChild(form.iAlt);
 
   form.lContainer.appendChild(form.bMain);
   form.lContainer.appendChild(form.pSuccess);
   form.lContainer.appendChild(form.pAlt);
   container.appendChild(form.lContainer);
-  if(register){
-    form.pAlt.appendChild(form.pAgree);
-  }
 }
 
 function checkClick() {
