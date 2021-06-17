@@ -267,6 +267,10 @@
   text-shadow: none;
 }
 
+.colorRed{
+  color: #FF5A5A;
+}
+
 .mpLoginContainer div p a{
   padding: 4px 4px
 }

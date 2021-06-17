@@ -246,7 +246,12 @@ function showForm(register){
       if(form.pAgree.children[0].checked){
         registerUser(form.iUsername.value, form.iEmail.value, form.iPassword.value);
       }else{
-        form.pAgree.style.color = "#FF5A5A";
+        form.pAgree.style.color = "FF5A5A";
+        form.pAgree.children.forEach((item, i) => {
+          if(i > 0){
+            item.style.color = "FF5A5A";
+          }
+        });
       }
     }
 
