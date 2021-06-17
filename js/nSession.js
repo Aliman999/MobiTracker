@@ -249,6 +249,9 @@ function showForm(register){
     form.pAgree.style.whiteSpace = "break-spaces";
     form.pAgree.appendChild(form.cAgree);
     form.pAgree.innerHTML += "I acknowledge that I have read and agree to the <a class='highlight underline' style='white-space: pre;'>Terms and Conditions</a> and <a class='highlight underline' style='white-space: pre;'>Privacy Policy</a>";
+    form.pAgree.onclick = function(){
+      form.cAgree.checked = true;
+    }
 
     form.lContainer.appendChild(form.pAgree);
 
