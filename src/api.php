@@ -36,7 +36,7 @@ if (isset($headers)) {
 
     $xmlResult = json_decode($json, true);
 
-    echo $json;
+    echo json_encode($json);
 
     $userID = substr($xmlResult['data']['profile']['id'], 1);
     $username = $xmlResult['data']['profile']['handle'];
