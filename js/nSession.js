@@ -168,6 +168,8 @@ var form = {
 
   lContainer: document.createElement("div"),
   pSuccess: document.createElement("p"),
+  cAgree: document.createElement("input"),
+  pAgree: document.createElement("p"),
   bMain: document.createElement("a"),
   pAlt: document.createElement("p"),
   iAlt: document.createElement("a")
@@ -241,6 +243,13 @@ function showForm(register){
     form.bMain.onclick = function(){
       registerUser(form.iUsername.value, form.iEmail.value, form.iPassword.value);
     }
+
+    form.cAgree.type = "checkbox";
+    form.pAgree.className = "form-alt cAgree";
+    form.pAgree.style.whiteSpace = "break-spaces";
+    form.pAgree.appendChild(form.cAgree);
+    form.pAgree.innerHTML += "I acknowledge that I have read and agree to the <a class='highlight underline' style='white-space: pre;'>Terms and Conditions</a> and <a class='highlight underline' style='white-space: pre;'>Privacy Policy</a>";
+    form.pAlt.appendChild(form.pAgree);
 
     form.pAlt.innerHTML = "Already have an account? ";
     form.iAlt.innerText = "Login";
