@@ -168,8 +168,11 @@ var form = {
 
   lContainer: document.createElement("div"),
   pSuccess: document.createElement("p"),
+
   cAgree: document.createElement("input"),
   pAgree: document.createElement("p"),
+  pAgreeErr: document.createElement("p"),
+
   bMain: document.createElement("a"),
   pAlt: document.createElement("p"),
   iAlt: document.createElement("a")
@@ -244,11 +247,11 @@ function showForm(register){
       if(form.pAgree.children[0].checked){
         registerUser(form.iUsername.value, form.iEmail.value, form.iPassword.value);
       }else{
-        form.pPasswordErr.classList.remove("hidden");
-        form.pPasswordErr.style.whiteSpace = "break-spaces";
-        form.pPasswordErr.innerText = "You must agree to our Terms and Conditions and Privacy Policy before signing up to MobiTracker.";
+        form.pAgreeErr.classList.remove("hidden");
+        form.pAgreeErr.style.whiteSpace = "break-spaces";
+        form.pAgreeErr.innerText = "You must agree to our Terms and Conditions and Privacy Policy before signing up to MobiTracker.";
         setTimeout(function(){
-          form.pPasswordErr.classList.add("hidden");
+          form.pAgreeErr.classList.add("hidden");
         }, 5000);
       }
     }
@@ -258,6 +261,7 @@ function showForm(register){
     form.pAgree.style.whiteSpace = "break-spaces";
     form.pAgree.appendChild(form.cAgree);
     form.pAgree.innerHTML += "I acknowledge that I have read and agree to the <a class='highlight underline' style='white-space: pre;' target='_blank' href='https://mobitracker.co/terms'>Terms and Conditions</a> and <a class='highlight underline' style='white-space: pre;' target='_blank' href='https://mobitracker.co/privacy'>Privacy Policy</a>";
+
     form.pAgree.onclick = function(e){
       if(e.target.nodeName != "A"){
         if(form.pAgree.children[0].checked == true){
@@ -267,8 +271,11 @@ function showForm(register){
         }
       }
     }
+    
+    form.pAgreeErr.className = "highlight-red hidden";
 
     form.lContainer.appendChild(form.pAgree);
+    form.lContainer.appendChild(form.pAgreeErr);
 
     form.pAlt.innerHTML = "Already have an account? ";
     form.iAlt.innerText = "Login";
