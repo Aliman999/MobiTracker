@@ -258,6 +258,8 @@ function showForm(register){
       showForm(false);
     }
   }else{
+    form.pAgree.innerHTML = "";
+
     form.bMain.id = "login";
     form.bMain.innerText = "Login";
     form.bMain.onclick = function(){
