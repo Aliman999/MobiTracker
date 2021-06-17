@@ -1,8 +1,8 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 
 $oldname = $oldavatar = "";
 session_start();
@@ -36,59 +36,61 @@ if (isset($headers)) {
 
     $xmlResult = json_decode($json, true);
 
-    echo json_encode($json);
-
-    $userID = substr($xmlResult['data']['profile']['id'], 1);
-    $username = $xmlResult['data']['profile']['handle'];
-    $avatar = $xmlResult['data']['profile']['image'];
+    echo $json;
 
 
-    $sql = "SELECT username, avatar, organization->'$**.*' as organization FROM players WHERE cID = $userID;";
-    $result = mysqli_query($link, $sql);
-    $emparray = array();
-    $row = mysqli_fetch_assoc($result);
-    $oldname = $row['username'];
-    $oldavatar = $row['avatar'];
-    $orgSID = array();
+    if(count($xmlResult['data'])>0){
+      $userID = substr($xmlResult['data']['profile']['id'], 1);
+      $username = $xmlResult['data']['profile']['handle'];
+      $avatar = $xmlResult['data']['profile']['image'];
 
-    $countOrgs = 0;
+      $sql = "SELECT username, avatar, organization->'$**.*' as organization FROM players WHERE cID = $userID;";
+      $result = mysqli_query($link, $sql);
+      $emparray = array();
+      $row = mysqli_fetch_assoc($result);
+      $oldname = $row['username'];
+      $oldavatar = $row['avatar'];
+      $orgSID = array();
 
-    if(isset($xmlResult['data']['organization'])){
-      $orgSID[$countOrgs]['sid'] = $xmlResult['data']['organization']['sid'];
-      $orgSID[$countOrgs]['rank'] = $xmlResult['data']['organization']['stars'];
-      $countOrgs++;
-    }
-    foreach ($xmlResult['data']['affiliation'] as $affil => $a) {
-      if($a['name'] !== ""){
-        $orgSID[$countOrgs]['sid'] = $a['sid'];
-        $orgSID[$countOrgs]['rank'] = $a['stars'];
+      $countOrgs = 0;
+
+      if(isset($xmlResult['data']['organization'])){
+        $orgSID[$countOrgs]['sid'] = $xmlResult['data']['organization']['sid'];
+        $orgSID[$countOrgs]['rank'] = $xmlResult['data']['organization']['stars'];
         $countOrgs++;
       }
-    }
-    include "api_userOrg.php";
-
-    if($oldname !== $username){
-      $sql = "UPDATE players SET username = '$username', avatar = '$avatar' WHERE cID = $userID;";
-      $result = mysqli_query($link, $sql);
-
-      $sql = "SELECT u_creator, r_player FROM comments WHERE u_creator = '$oldname' OR r_player = '$oldname';";
-      if($result = mysqli_query($link, $sql)){
-        $row = mysqli_fetch_assoc($result);
-        while($row = mysqli_fetch_assoc($result)){
-          $emparray[] = $row;
-        }
-        if(count($emparray)>0){
-          $sql = "UPDATE comments SET u_creator = '$username' WHERE u_creator = '$oldname';";
-          $result = mysqli_query($link, $sql);
-          $sql = "UPDATE comments SET r_player = '$username' WHERE r_player = '$oldname';";
-          $result = mysqli_query($link, $sql);
+      foreach ($xmlResult['data']['affiliation'] as $affil => $a) {
+        if($a['name'] !== ""){
+          $orgSID[$countOrgs]['sid'] = $a['sid'];
+          $orgSID[$countOrgs]['rank'] = $a['stars'];
+          $countOrgs++;
         }
       }
-    }elseif ($oldavatar !== $avatar) {
-      $sql = "UPDATE players SET avatar = '$avatar' WHERE cID = $userID;";
-      $result = mysqli_query($link, $sql);
+      include "api_userOrg.php";
+
+      if($oldname !== $username){
+        $sql = "UPDATE players SET username = '$username', avatar = '$avatar' WHERE cID = $userID;";
+        $result = mysqli_query($link, $sql);
+
+        $sql = "SELECT u_creator, r_player FROM comments WHERE u_creator = '$oldname' OR r_player = '$oldname';";
+        if($result = mysqli_query($link, $sql)){
+          $row = mysqli_fetch_assoc($result);
+          while($row = mysqli_fetch_assoc($result)){
+            $emparray[] = $row;
+          }
+          if(count($emparray)>0){
+            $sql = "UPDATE comments SET u_creator = '$username' WHERE u_creator = '$oldname';";
+            $result = mysqli_query($link, $sql);
+            $sql = "UPDATE comments SET r_player = '$username' WHERE r_player = '$oldname';";
+            $result = mysqli_query($link, $sql);
+          }
+        }
+      }elseif ($oldavatar !== $avatar) {
+        $sql = "UPDATE players SET avatar = '$avatar' WHERE cID = $userID;";
+        $result = mysqli_query($link, $sql);
+      }
+      mysqli_close($link);
     }
-    mysqli_close($link);
   }
 }else{
  exit();
