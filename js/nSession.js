@@ -246,10 +246,10 @@ function showForm(register){
       if(form.pAgree.children[0].checked){
         registerUser(form.iUsername.value, form.iEmail.value, form.iPassword.value);
       }else{
-        form.pAgree.style.color = "FF5A5A";
+        form.pAgree.classList.add("colorRed");
         for(var i = 0; i < form.pAgree.children.length; i++){
           if(i > 0){
-            form.pAgree.children[i].style.color = "FF5A5A";
+            form.pAgree.children[i].classList.add("colorRed");
           }
         }
       }
