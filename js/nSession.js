@@ -251,7 +251,11 @@ function showForm(register){
     form.pAgree.innerHTML += "I acknowledge that I have read and agree to the <a class='highlight underline' style='white-space: pre;'>Terms and Conditions</a> and <a class='highlight underline' style='white-space: pre;'>Privacy Policy</a>";
     form.pAgree.onclick = function(e){
       if(e.target.nodeName != "A"){
-        form.pAgree.children[0].checked = true;
+        if(form.pAgree.children[0].checked == true){
+          form.pAgree.children[0].checked = false;
+        }else{
+          form.pAgree.children[0].checked = true;
+        }
       }
     }
 
