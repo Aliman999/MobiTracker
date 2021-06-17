@@ -249,7 +249,7 @@ function showForm(register){
         form.pPasswordErr.innerText = "You must agree to our Terms and Conditions and Privacy Policy before signing up to MobiTracker.";
         setTimeout(function(){
           form.pPasswordErr.classList.add("hidden");
-        }, 2000);
+        }, 5000);
       }
     }
 
