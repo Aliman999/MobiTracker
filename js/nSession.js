@@ -248,7 +248,7 @@ function showForm(register){
     form.pAgree.className = "form-alt cAgree";
     form.pAgree.style.whiteSpace = "break-spaces";
     form.pAgree.appendChild(form.cAgree);
-    form.pAgree.innerHTML += "I acknowledge that I have read and agree to the <a class='highlight underline' style='white-space: pre;' target='_blank'>Terms and Conditions</a> and <a class='highlight underline' style='white-space: pre;' target='_blank'>Privacy Policy</a>";
+    form.pAgree.innerHTML += "I acknowledge that I have read and agree to the <a class='highlight underline' style='white-space: pre;' target='_blank' href='https://mobitracker.co/terms'>Terms and Conditions</a> and <a class='highlight underline' style='white-space: pre;' target='_blank' href='https://mobitracker.co/privacy'>Privacy Policy</a>";
     form.pAgree.onclick = function(e){
       if(e.target.nodeName != "A"){
         if(form.pAgree.children[0].checked == true){
