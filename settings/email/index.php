@@ -4,13 +4,12 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
   header("location: ../");
 }else{
   $_SESSION['activeSetting'] = basename($_SERVER['REQUEST_URI']);
+  include "settings.php";
 }
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
-include "../../src/config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
