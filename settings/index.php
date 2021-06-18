@@ -102,6 +102,7 @@
           </div>
           <div>
             <p><span class="rBold">Faction:</span><br><span class="subP"><?php echo $row['faction'] ?></span></p>
+            <a class="rButton highlight rightSide">Change Faction</a>
           </div>
           <div>
             <p><span class="rBold">Discord:</span><br><span class="subP highlight-green">LINKED</span></p>

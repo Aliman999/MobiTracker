@@ -9,7 +9,6 @@ include "../src/config.php";
 $headers = $_SESSION['token'];
 if(isset($headers)){
   $sql = "SELECT *, players.username username, players.cID cID FROM players LEFT JOIN discord ON discord.username LIKE CONCAT('%', '".$_SESSION['username']."', '%') WHERE players.username = '".$_SESSION['username']."';";
-  echo $sql."\n\n";
   $result = mysqli_query($link, $sql);
   $row = mysqli_fetch_assoc($result);
   function xp($rep){
