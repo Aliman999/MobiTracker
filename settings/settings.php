@@ -42,7 +42,7 @@ if(isset($headers)){
     $row['verifyClass'] = 'highlight-red';
     $row['verify'] = 'Not Verified';
   }
-  if(strpos($row['email'], "$2y$10$")){
+  if(strpos($row['email'], "$2y$10$") !== false){
     $row['email'] = "Encrypted";
   }
   var_dump($row);
