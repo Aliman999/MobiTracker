@@ -70,7 +70,7 @@
       <div class="container container-header">
         <div class="settingsNav">
           <a class="highlight active">Overview</a>
-          <a href="displayname" class="highlight nactive">Linked RSI</a>
+          <a href="displayname" class="highlight nactive">RSI Profile</a>
           <a href="email" class="highlight nactive">Email</a>
           <a href="password" class="highlight nactive">Password</a>
           <a href="verify" class="highlight nactive">Verify</a>
