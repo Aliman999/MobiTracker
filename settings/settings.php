@@ -30,6 +30,11 @@ if(isset($headers)){
     }
   }
   $row['xp'] = xp($row['reviewed_count'])." (".$row['reviewed_count'].")";
+  if($row['faction'] === '0'){
+    $row['faction'] = "Legal";
+  }else{
+    $row['faction'] = "Illegal";
+  }
   var_dump($row);
 }else{
    exit(json_encode(['error' => 'No token.']));
