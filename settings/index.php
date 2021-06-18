@@ -82,15 +82,8 @@
         <div class="setting">
           <div>
             <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
-            <p><span class="rBold">Experience:</span><br><span class="subP"><?php echo $row['xp'] ?></span></p>
-          </div>
-          <div>
-            <p><span class="rBold">Verification:</span><br><span class="subP <?php echo $row['verifyClass'] ?>"><?php echo $row['verify'] ?></span></p>
-            <?php
-            if($row['verify'] !== 'Verified'){
-              echo '<a class="rButton highlight rightSide">Verify</a>';
-            }
-            ?>
+            <p><span class="rBold">Experience:</span> <span class="subP"><?php echo $row['xp'] ?></span></p>
+            <p><span class="rBold">Vouches:</span> <span class="subP"><?php echo $row['reviewed_count'] ?></span></p>
           </div>
           <div>
             <p><span class="rBold">Email:</span><br><span class="subP"><?php echo $row['email'] ?></span></p>
@@ -101,8 +94,20 @@
             <a class="rButton highlight rightSide">Change Password</a>
           </div>
           <div>
+            <p><span class="rBold">Verification:</span><br><span class="subP <?php echo $row['verifyClass'] ?>"><?php echo $row['verify'] ?></span></p>
+            <?php
+            if($row['verify'] !== 'Verified'){
+              echo '<a class="rButton highlight rightSide">Verify</a>';
+            }
+            ?>
+          </div>
+          <div>
             <p><span class="rBold">Faction:</span><br><span class="subP"><?php echo $row['faction'] ?></span></p>
             <a class="rButton highlight rightSide">Change Faction</a>
+          </div>
+          <div>
+            <p><span class="rBold">Career:</span><br><span class="subP"><?php echo $row['faction'] ?></span></p>
+            <a class="rButton highlight rightSide">Change Careers</a>
           </div>
           <div>
             <p><span class="rBold">Discord:</span><br><span class="subP highlight-green">LINKED</span></p>

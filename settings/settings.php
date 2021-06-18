@@ -46,6 +46,26 @@ if(isset($headers)){
   if(strpos($row['email'], "$2y$10$") !== false){
     $row['email'] = "Encrypted";
   }
+  $row['career'] = array();
+  if($row['crew'] == 1){
+    $row['crew'] = "Crew";
+    array_push($row['career'], "Crew");
+  }
+  if($row['escort'] == 1){
+    array_push($row['career'], "Escort");
+  }
+  if($row['explorer'] == 1){
+    array_push($row['career'], "Explorer");
+  }
+  if($row['miner'] == 1){
+    array_push($row['career'], "Miner");
+  }
+  if($row['pirate'] == 1){
+    array_push($row['career'], "Pirate");
+  }
+  if($row['trader'] == 1){
+    array_push($row['career'], "Trader");
+  }
   echo json_encode($row);
 }else{
    exit(json_encode(['error' => 'No token.']));
