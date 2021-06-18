@@ -1,11 +1,10 @@
 <?php
-session_start();
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 include "../src/config.php";
+
 $headers = $_SESSION['token'];
 if(isset($headers)){
   $sql = "SELECT *, players.username username, players.cID cID FROM players LEFT JOIN discord ON discord.username LIKE CONCAT('%', '".$_SESSION['username']."', '%') WHERE players.username = '".$_SESSION['username']."';";
