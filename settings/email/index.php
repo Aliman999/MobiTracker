@@ -4,7 +4,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
   header("location: ../");
 }else{
   $_SESSION['activeSetting'] = basename($_SERVER['REQUEST_URI']);
-  include "settings.php";
+  include "../settings.php";
 }
 
 ini_set('display_errors', 1);
