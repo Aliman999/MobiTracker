@@ -70,18 +70,19 @@
       <div class="container container-header">
         <div class="settingsNav">
           <a class="highlight active">Overview</a>
+          <a href="displayname" class="highlight nactive">Display Name</a>
           <a href="email" class="highlight nactive">Email</a>
           <a href="password" class="highlight nactive">Password</a>
           <a href="verify" class="highlight nactive">Verify</a>
           <a href="discord" class="highlight nactive">Discord</a>
           <a href="privacy" class="highlight nactive">Privacy</a>
-          <a href="displayname" class="highlight nactive">Display Name</a>
           <a href="referrals" class="highlight nactive">Referrals</a>
         </div>
         <hr>
         <div class="setting">
           <div>
             <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
+            <p><span class="rBold">Experience:</span><br><span class="subP"></span></p>
           </div>
           <div>
             <p><span class="rBold">Linked RSI:</span><br><a href="https://robertsspaceindustries.com/citizens/JamesDusky" class="subP loginName"><?php echo $_SESSION['username'] ?></a></p>
