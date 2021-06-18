@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include "../src/config.php";
 $headers = $_SESSION['token'];
 
 if(isset($headers)){
