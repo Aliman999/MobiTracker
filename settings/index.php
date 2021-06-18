@@ -85,11 +85,7 @@
             <div class="">
 
             </div>
-            <p>
-              <span class="rBold">Experience:</span> <span class="subP"><?php echo $row['xp'] ?></span>
-              <br>
-              <span class="rBold">Vouches:</span> <span class="subP"><?php echo $row['reviewed_count'] ?></span>
-            </p>
+            <p><span class="rBold">Experience:</span> <span class="subP"><?php echo $row['xp'] ?></span><br><span class="rBold">Vouches:</span> <span class="subP"><?php echo $row['reviewed_count'] ?></span></p>
           </div>
           <div>
             <p><span class="rBold">Email:</span><br><span class="subP"><?php echo $row['email'] ?></span></p>
