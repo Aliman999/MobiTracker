@@ -93,11 +93,7 @@
             ?>
           </div>
           <div>
-            <p><span class="rBold">Verified:</span><br><a href="https://robertsspaceindustries.com/citizens/JamesDusky" class="subP loginName"></a></p>
-            <a class="rButton highlight rightSide">Add RSI</a>
-          </div>
-          <div>
-            <p><span class="rBold">Email:</span><br><span class="subP">N/A</span></p>
+            <p><span class="rBold">Email:</span><br><span class="subP"><?php echo $row['email'] ?></span></p>
             <a class="rButton highlight rightSide">Change Email</a>
           </div>
           <div>

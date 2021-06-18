@@ -42,6 +42,9 @@ if(isset($headers)){
     $row['verifyClass'] = 'highlight-red';
     $row['verify'] = 'Not Verified';
   }
+  if(strpos($row['email'], "$2y$10$")){
+    $row['email'] = "Encrypted";
+  }
   var_dump($row);
 }else{
    exit(json_encode(['error' => 'No token.']));
