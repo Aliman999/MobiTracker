@@ -3,7 +3,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-include "../src/config.php";
+$current_file_path = dirname(__FILE__);
+include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '/src/config.php');
 
 $headers = $_SESSION['token'];
 if(isset($headers)){
