@@ -11,7 +11,7 @@ if(isset($headers)){
   $sql = "SELECT * FROM players WHERE username = '".$_SESSION['username']."';";
   $result = mysqli_query($link, $sql);
   $row = mysqli_fetch_assoc($result);
-  function xp(rep){
+  function xp($rep){
     $rep = intval($rep);
     if($rep < 0){
       if($rep < -5){
