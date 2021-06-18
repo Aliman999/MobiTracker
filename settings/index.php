@@ -105,6 +105,7 @@
           </div>
           <div>
             <p><span class="rBold">Faction:</span><br><span class="subP"><?php echo $row['faction'] ?></span></p>
+            <p class="rightSide"><?php echo $row['daysleft'] ?></p>
             <a class="rButton highlight rightSide">Change Faction</a>
           </div>
           <div>
