@@ -16,6 +16,7 @@ if(isset($headers)){
       }
       var_dump($emparray);
     }
+    init();
   }
 }else{
    exit(json_encode(['error' => 'No token.']));
