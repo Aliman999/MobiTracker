@@ -82,7 +82,7 @@
         <div class="setting">
           <div>
             <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
-            <p><span class="rBold">Experience:</span><br><span class="subP"></span></p>
+            <p><span class="rBold">Experience:</span><br><span class="subP"><?php echo $row['xp'] ?></span></p>
           </div>
           <div>
             <p><span class="rBold">Linked RSI:</span><br><a href="https://robertsspaceindustries.com/citizens/JamesDusky" class="subP loginName"><?php echo $_SESSION['username'] ?></a></p>
