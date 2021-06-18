@@ -1,8 +1,12 @@
 <?php
 session_start();
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include "../src/config.php";
 $headers = $_SESSION['token'];
-
 if(isset($headers)){
   $sql = "SELECT * FROM players WHERE username = '".$_SESSION['username']."';";
   $result = mysqli_query($link, $sql);
