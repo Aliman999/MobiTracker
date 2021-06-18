@@ -1,10 +1,16 @@
 <?php
-  session_start();
-  if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
-    header("location: ../");
-  }else{
-    $_SESSION['activeSetting'] = basename($_SERVER['REQUEST_URI']);
-  }
+session_start();
+if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
+  header("location: ../");
+}else{
+  $_SESSION['activeSetting'] = basename($_SERVER['REQUEST_URI']);
+}
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+include "../../src/config.php";
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -67,11 +73,12 @@
       <div class="container container-header">
         <div class="settingsNav">
           <a href="../" class="highlight nactive">Overview</a>
+          <a href="../profile" class="highlight nactive">RSI Profile</a>
           <a class="highlight active">Email</a>
           <a href="../password" class="highlight nactive">Password</a>
+          <a href="../verify" class="highlight nactive">Verify</a>
           <a href="../discord" class="highlight nactive">Discord</a>
           <a href="../privacy" class="highlight nactive">Privacy</a>
-          <a href="../displayname" class="highlight nactive">Display Name</a>
           <a href="../referrals" class="highlight nactive">Referrals</a>
         </div>
         <hr>
