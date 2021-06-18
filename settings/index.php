@@ -85,7 +85,7 @@
             <p><span class="rBold">Experience:</span><br><span class="subP"><?php echo $row['xp'] ?></span></p>
           </div>
           <div>
-            <p><span class="rBold">Verified:</span><br><span class="subP"><?php echo $_SESSION['verify'] ?></span></p>
+            <p><span class="rBold">Verified:</span><br><span class="subP"><?php echo $row['verify'] ?></span></p>
             <a class="rButton highlight rightSide">Add RSI</a>
           </div>
           <div>
