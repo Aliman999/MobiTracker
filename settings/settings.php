@@ -35,6 +35,13 @@ if(isset($headers)){
   }else{
     $row['faction'] = "Illegal";
   }
+  if($row['verify'] === '1'){
+    $row['verifyClass'] = 'highlight-green';
+    $row['verify'] = 'Verified';
+  }else{
+    $row['verifyClass'] = 'highlight-red';
+    $row['verify'] = 'Not Verified';
+  }
   var_dump($row);
 }else{
    exit(json_encode(['error' => 'No token.']));
