@@ -9,8 +9,6 @@ include "../src/config.php";
 $headers = $_SESSION['token'];
 if(isset($headers)){
   $sql = "SELECT * FROM players LEFT JOIN discord ON discord.username LIKE CONCAT('%', '".$_SESSION['username']."', '%') WHERE players.username = '".$_SESSION['username']."';";
-  echo $sql;
-  /*
   $result = mysqli_query($link, $sql);
   $row = mysqli_fetch_assoc($result);
   function xp($rep){
@@ -48,8 +46,7 @@ if(isset($headers)){
   if(strpos($row['email'], "$2y$10$") !== false){
     $row['email'] = "Encrypted";
   }
-  var_dump($row);
-  */
+  echo json_encode($row);
 }else{
    exit(json_encode(['error' => 'No token.']));
 }
