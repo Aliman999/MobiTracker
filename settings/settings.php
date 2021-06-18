@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 include "../src/config.php";
 $headers = $_SESSION['token'];
 if(isset($headers)){
-  $sql = "SELECT * FROM players INNER JOIN discord ON discord.username LIKE CONCAT('%', '".$_SESSION['username']."', '%') WHERE players.username = '".$_SESSION['username']."';";
+  $sql = "SELECT * FROM players LEFT JOIN discord ON discord.username LIKE CONCAT('%', '".$_SESSION['username']."', '%') WHERE players.username = '".$_SESSION['username']."';";
   echo $sql;
   /*
   $result = mysqli_query($link, $sql);
