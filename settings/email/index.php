@@ -87,7 +87,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           <div>
             <?php
             if($row['email'] === "Encrypted"){
-              echo '<p><span class="rBold">Your email is encrypted</span></p>'
+              echo '<p><span class="rBold">Your email is encrypted</span></p>';
             }
             ?>
             <p><span class="rBold">Email:</span><br><span class="subP"><?php echo $row['email'] ?></span></p>
