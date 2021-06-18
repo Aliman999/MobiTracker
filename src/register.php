@@ -138,7 +138,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       // Prepare an insert statement
       $param_username = $username;
       $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
-      $param_email = password_hash($email, PASSWORD_DEFAULT); // email hash
+      $param_email = $email; // email hash
       $param_avatar = $avatar;
       $sql = "INSERT INTO players (cID, username, password, email, organization, avatar, signup) VALUES ($cID, '$param_username', '$param_password', '$param_email', '{}', '$param_avatar', 1);";
       mysqli_query($link, $sql);
@@ -155,7 +155,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
               // Set parameters
               $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
-              $param_email = password_hash($email, PASSWORD_DEFAULT);
+              $param_email = $email;
               $param_avatar = $avatar;
               $param_username = $username;
 
