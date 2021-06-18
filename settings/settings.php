@@ -46,7 +46,7 @@ if(isset($headers)){
   if(strpos($row['email'], "$2y$10$") !== false){
     $row['email'] = "Encrypted";
   }
-  var_dump($row);
+  echo json_encode($row);
 }else{
    exit(json_encode(['error' => 'No token.']));
 }
