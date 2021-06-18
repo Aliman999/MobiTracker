@@ -263,10 +263,6 @@
   margin-top: 12px;
 }
 
-.highlight-red:hover{
-  text-shadow: none;
-}
-
 .colorRed{
   color: #FF5A5A;
 }
@@ -398,6 +394,9 @@ a.colorRed:hover{
 .settingsContainer{
   display: flex;
   margin: 8px 0;
+}
+.settingsContainer>.highlight-red:hover{
+  text-shadow: none;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the navMenu (less padding and a smaller font size) */
