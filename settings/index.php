@@ -108,7 +108,7 @@
             <a class="rButton highlight rightSide">Change Faction</a>
           </div>
           <div>
-            <p><span class="rBold">Career:</span><br><span class="subP"><?php echo $row['faction'] ?></span></p>
+            <p><span class="rBold">Career:</span><br><span class="subP"><?php echo join(", ", $row['careers']) ?></span></p>
             <a class="rButton highlight rightSide">Change Careers</a>
           </div>
           <div>
