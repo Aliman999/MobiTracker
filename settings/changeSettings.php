@@ -8,13 +8,18 @@ if(isset($headers)){
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
     function init(){
-      $sql = "SELECT * FROM players WHERE username = '".$_SESSION['username']."';";
+    }
+
+    changeSetting($_POST['job'], $setting);
+    function changeSetting(job, setting){
+      if($job === "email"){
+        $sql = "UPDATE";
+      }
       $result = mysqli_query($link, $sql);
       $emparray = array();
       while($row = mysqli_fetch_assoc($result)){
         $emparray[] = $row;
       }
-      var_dump($emparray);
     }
   }
 }else{

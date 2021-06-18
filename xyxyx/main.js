@@ -51,7 +51,7 @@ getUser.onload = function() {
   verified = userResponse["verified"];
   flagged = userResponse["flagged"];
   faction = userResponse["faction"];
-  if(search.includes("/")){
+  if(search.includes("/beta/")){
     search = "";
   }
 }
