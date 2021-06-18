@@ -1,19 +1,19 @@
 <?php
 session_start();
 
-$headers = $_SERVER['HTTP_TOKEN'];
+$headers = $_SESSION['token'];
 
 if(isset($headers)){
-  function init(){
-    $sql = "SELECT * FROM players WHERE username = '".$_SESSION['username']."';";
-    $result = mysqli_query($link, $sql);
-    $emparray = array();
-    while($row = mysqli_fetch_assoc($result)){
-      $emparray[] = $row;
+    function init(){
+      $sql = "SELECT * FROM players WHERE username = '".$_SESSION['username']."';";
+      $result = mysqli_query($link, $sql);
+      $emparray = array();
+      while($row = mysqli_fetch_assoc($result)){
+        $emparray[] = $row;
+      }
+      var_dump($emparray);
     }
-    var_dump($emparray);
-  }
-  init();
+    init();
 }else{
    exit(json_encode(['error' => 'No token.']));
 }
