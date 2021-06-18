@@ -82,7 +82,7 @@
         <div class="setting">
           <div>
             <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
-            <p><span class="rBold">Experience:</span> <span class="subP"><?php echo $row['xp'] ?></span></p>
+            <p><span class="rBold">Experience:</span> <span class="subP"><?php echo $row['xp'] ?></span></p><br>
             <p><span class="rBold">Vouches:</span> <span class="subP"><?php echo $row['reviewed_count'] ?></span></p>
           </div>
           <div>
