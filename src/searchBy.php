@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 $headers = $_SERVER['HTTP_TOKEN'];
 if(isset($headers)){
   if($headers !== $_SESSION['token']){
