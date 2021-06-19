@@ -2,6 +2,9 @@
 session_start();
 
 $headers = $_SERVER['HTTP_TOKEN'];
+
+echo $headers;
+
 if(isset($headers)){
   if($headers !== $_SESSION['token']){
     exit(json_encode(['error' => 'Wrong token.']));
