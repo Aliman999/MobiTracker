@@ -5,7 +5,7 @@ $headers = $_SERVER['HTTP_TOKEN'];
 
 if(isset($headers)){
   if($headers !== $_SESSION['token']){
-    exit(json_encode(['error' => 'Wrong token.']));
+    exit(json_encode(['error' => 'Wrong token.'.$headers]));
   }else{
     require_once "config.php";
     $c = $e = $x = $m = $p = $t = $career = $order =  "";
