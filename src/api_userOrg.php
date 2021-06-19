@@ -7,7 +7,8 @@
 $headers = $_SERVER['HTTP_TOKEN'];
 if (isset($headers)) {
   if($headers !== $_SESSION['token']){
-    exit(json_encode(['error' => 'Wrong token.']));
+    unset($_SESSION['token']);
+  exit(json_encode(['error' => 'Wrong token.']));
   }else{
     $playerOrgs = array();
     if($countOrgs>0){
