@@ -1,4 +1,3 @@
-'use strict';
 var header = document.querySelector("header");
 var section = document.querySelector("section");
 var body = document.getElementsByTagName("body");
