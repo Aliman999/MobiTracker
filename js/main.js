@@ -1368,7 +1368,7 @@ function uSearch(searched){
     tooltip.style.visibility = "hidden";
     sbrc.appendChild(tooltip);
 
-    selectedCareer = [searched[i]["crew"],searched[i]["escort"],searched[i]["explorer"],searched[i]["miner"],searched[i]["pirate"],searched[i]["trader"]];
+    const selectedCareer = [searched[i]["crew"],searched[i]["escort"],searched[i]["explorer"],searched[i]["miner"],searched[i]["pirate"],searched[i]["trader"]];
     for(var x = 0; x<selectedCareer.length; x++){
       if(selectedCareer[x] == 1){
         sbrcImg.className = "sbr-careers";
