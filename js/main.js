@@ -1356,7 +1356,7 @@ function uSearch(searched){
     header.appendChild(sb);
     var sbrc = document.createElement("div");
     sbrc.className = "sbr";
-    sbrcImg = document.createElement("img");
+    const sbrcImg = document.createElement("img");
     sbrcImg.className = "sbr-careers notSelected";
     var tooltiptext = document.createElement("span");
     tooltiptext.className = "tooltiptext";
