@@ -1102,7 +1102,7 @@ function showReview(){
     playerminContainer.appendChild(commentContainer);
     //Comment END
     //Manage
-    manageComment = document.createElement("div");
+    const manageComment = document.createElement("div");
     manageComment.className = "manageComment";
     if(comment[i]["u_creator"] != sessionUser){
       var flagComment = document.createElement("button");
