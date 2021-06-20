@@ -572,7 +572,7 @@ function populateHeader(jsonObj) {
   }
   //Copy url
   if(dataCount > 0){
-    copyUrlTT = document.createElement("span");
+    var copyUrlTT = document.createElement("span");
     copyUrlTT.className = "copyURL refresh copyToolTip";
     copyUrlTT.innerHTML = "Profile Url Copied!";
     copyUrl = document.createElement("img");
