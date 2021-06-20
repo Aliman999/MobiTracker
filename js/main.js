@@ -174,6 +174,8 @@ function showPlayer(node, ns){
       dataCount = Object.keys(player["data"]).length;
       if(dataCount > 0){
         playerUser = request.response.data.profile.handle;
+      }else{
+        playerUser = node;
       }
       populateHeader(player);
       if(dataCount>0){
@@ -993,13 +995,13 @@ function populateHeader(jsonObj) {
   //Add Comment END
 }
 
-function noVouchers(){
+function noVouchers(usr){
   if(session == 1){
     var firstContainer = document.createElement("div");
     var notFound = document.createElement("p");
     firstContainer.className = "firstContainer";
     notFound.className = "notFound";
-    notFound.textContent = "Be the first to leave this user a review.";
+    notFound.textContent = "Be the first to vouch for "+usr+".";
     firstContainer.appendChild(notFound);
     containerSection.style.display = "block";
     section.appendChild(firstContainer);
@@ -1012,7 +1014,7 @@ function noVouchers(){
     signup.innerHTML = "Sign up";
     signup.href = "register";
     notFound.className = "notFound";
-    notFound.textContent = "Be the first to leave this user a review.";
+    notFound.textContent = "Be the first to vouch for "+usr+".";
     firstContainer.appendChild(notFound);
     firstContainer.appendChild(signup);
     containerSection.style.display = "block";
@@ -1025,7 +1027,7 @@ function showReview(){
   if(commentCount > 0){
     containerSection.style.display = "block";
   }else{
-    noVouchers();
+    noVouchers(playerUser);
     return;
   }
   for(var i = 0; i < commentCount; i++){
