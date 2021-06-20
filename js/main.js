@@ -514,7 +514,7 @@ function hideSB(){
   sbcContainer.style.height = null;
   sbcContainer.children[0].style.color = "C4D7E6";
   //Reset selected
-  resetsbc = document.getElementsByClassName("sbc-img");
+  var resetsbc = document.getElementsByClassName("sbc-img");
   //Reset END
   boolsbc= false;
 }
