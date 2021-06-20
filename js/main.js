@@ -156,7 +156,7 @@ function flag(id,bool){
 }
 var player;
 var playerUser;
-function showPlayer(node, ns){
+function showPlayer(node){
   hideHome();
   hideSB();
   clearSB();
@@ -266,10 +266,7 @@ node.addEventListener("keydown", function(event) {
     mtco();
   }
 });
-function mtco(ns){
-  if(!ns){
-    ns="";
-  }
+function mtco(){
   headerHeight = 0;
   clearBox(header);
   clearBox(section);
@@ -279,7 +276,7 @@ function mtco(ns){
     showHome();
   }else{
     node.value = node.value.replace(/\s/g,"");
-    showPlayer(node.value, ns);
+    showPlayer(node.value);
   }
 };
 
