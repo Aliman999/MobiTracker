@@ -999,7 +999,7 @@ function noVouchers(usr){
     var notFound = document.createElement("p");
     firstContainer.className = "firstContainer";
     notFound.className = "notFound";
-    notFound.textContent = "Has "+usr+" left a lasting impression? \n Be the first to Vouch for "+usr+".";
+    notFound.textContent = "Has "+usr+" left a lasting impression? \nBe the first to Vouch for "+usr+".";
     firstContainer.appendChild(notFound);
     containerSection.style.display = "block";
     section.appendChild(firstContainer);
@@ -1012,7 +1012,7 @@ function noVouchers(usr){
     signup.innerHTML = "Sign up";
     signup.href = "register";
     notFound.className = "notFound";
-    notFound.textContent = "Be the first to Vouch for "+usr+".";
+    notFound.textContent = "Has "+usr+" left a lasting impression? \nBe the first to Vouch for "+usr+".";
     firstContainer.appendChild(notFound);
     firstContainer.appendChild(signup);
     containerSection.style.display = "block";
