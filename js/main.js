@@ -172,13 +172,13 @@ function showPlayer(node){
     var retries = 0;
     request.onload = function() {
       player = request.response;
+      if(player == null){
+        showPlayer(node);
+      }
       dataCount = Object.keys(player["data"]).length;
       if(dataCount > 0){
         playerUser = request.response.data.profile.handle;
       }else{
-        if(retries == 0){
-          showPlayer(node);
-        }
       }
       populateHeader(player);
       if(dataCount>0){
