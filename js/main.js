@@ -572,10 +572,10 @@ function populateHeader(jsonObj) {
   }
   //Copy url
   if(dataCount > 0){
-    const copyUrlTT = document.createElement("span");
+    var copyUrlTT = document.createElement("span");
     copyUrlTT.className = "copyURL refresh copyToolTip";
     copyUrlTT.innerHTML = "Profile Url Copied!";
-    const copyUrl = document.createElement("img");
+    var copyUrl = document.createElement("img");
     copyUrl.className = "copyURL refresh";
     copyUrl.src = "src/copy.png";
     copyUrl.onclick = function(){
@@ -595,7 +595,7 @@ function populateHeader(jsonObj) {
   }
   //Copy url END
   //Refresh
-  const forceRefresh = document.createElement("img");
+  var forceRefresh = document.createElement("img");
   forceRefresh.className = "refresh";
   forceRefresh.src = "src/refresh.png";
   forceRefresh.onclick = function(){
@@ -1102,7 +1102,7 @@ function showReview(){
     playerminContainer.appendChild(commentContainer);
     //Comment END
     //Manage
-    const manageComment = document.createElement("div");
+    var manageComment = document.createElement("div");
     manageComment.className = "manageComment";
     if(comment[i]["u_creator"] != sessionUser){
       var flagComment = document.createElement("button");
@@ -1356,7 +1356,7 @@ function uSearch(searched){
     header.appendChild(sb);
     var sbrc = document.createElement("div");
     sbrc.className = "sbr";
-    const sbrcImg = document.createElement("img");
+    var sbrcImg = document.createElement("img");
     sbrcImg.className = "sbr-careers notSelected";
     var tooltiptext = document.createElement("span");
     tooltiptext.className = "tooltiptext";
@@ -1368,7 +1368,7 @@ function uSearch(searched){
     tooltip.style.visibility = "hidden";
     sbrc.appendChild(tooltip);
 
-    const selectedCareer = [searched[i]["crew"],searched[i]["escort"],searched[i]["explorer"],searched[i]["miner"],searched[i]["pirate"],searched[i]["trader"]];
+    var selectedCareer = [searched[i]["crew"],searched[i]["escort"],searched[i]["explorer"],searched[i]["miner"],searched[i]["pirate"],searched[i]["trader"]];
     for(var x = 0; x<selectedCareer.length; x++){
       if(selectedCareer[x] == 1){
         sbrcImg.className = "sbr-careers";
