@@ -572,7 +572,7 @@ function populateHeader(jsonObj) {
   }
   //Copy url
   if(dataCount > 0){
-    var copyUrlTT = document.createElement("span");
+    const copyUrlTT = document.createElement("span");
     copyUrlTT.className = "copyURL refresh copyToolTip";
     copyUrlTT.innerHTML = "Profile Url Copied!";
     copyUrl = document.createElement("img");
@@ -595,7 +595,7 @@ function populateHeader(jsonObj) {
   }
   //Copy url END
   //Refresh
-  forceRefresh = document.createElement("img");
+  const forceRefresh = document.createElement("img");
   forceRefresh.className = "refresh";
   forceRefresh.src = "src/refresh.png";
   forceRefresh.onclick = function(){
