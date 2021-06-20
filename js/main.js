@@ -510,15 +510,16 @@ function showSBC(){
 function hideSB(){
   var sbc = document.getElementsByClassName("sbc-content")[0];
   var sbcContainer = document.getElementsByClassName("search-param-container")[0];
+  var resetsbc = document.getElementsByClassName("sbc-img");
   sbc.style.display = "none";
   sbcContainer.style.height = null;
   sbcContainer.children[0].style.color = "C4D7E6";
   //Reset selected
-  var resetsbc = document.getElementsByClassName("sbc-img");
   //Reset END
   boolsbc= false;
 }
 function clearSB(){
+  var resetsbc = document.getElementsByClassName("sbc-img");
   for(var n=0; n<resetsbc.length; n++){
     resetsbc[n].className = "sbc-img notSelected";
   }
