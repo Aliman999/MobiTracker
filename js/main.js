@@ -177,7 +177,7 @@ function showPlayer(node, ns){
         playerUser = request.response.data.profile.handle;
       }else{
         if(retries == 0){
-          request.send();
+          showPlayer(node);
         }
       }
       populateHeader(player);
