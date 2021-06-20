@@ -575,7 +575,7 @@ function populateHeader(jsonObj) {
     const copyUrlTT = document.createElement("span");
     copyUrlTT.className = "copyURL refresh copyToolTip";
     copyUrlTT.innerHTML = "Profile Url Copied!";
-    copyUrl = document.createElement("img");
+    const copyUrl = document.createElement("img");
     copyUrl.className = "copyURL refresh";
     copyUrl.src = "src/copy.png";
     copyUrl.onclick = function(){
