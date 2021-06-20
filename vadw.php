@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_GET['search'])){
+if(!empty($_GET['search'])){
   $_SESSION['search'] = $_GET['search'];
 }
 ?>
