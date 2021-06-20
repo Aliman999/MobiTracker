@@ -170,11 +170,16 @@ function showPlayer(node, ns){
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
     request.responseType = "json";
     request.send();
+    var retries = 0;
     request.onload = function() {
       player = request.response;
       dataCount = Object.keys(player["data"]).length;
       if(dataCount > 0){
         playerUser = request.response.data.profile.handle;
+      }else{
+        if(retries == 0){
+          request.send();
+        }
       }
       populateHeader(player);
       if(dataCount>0){
