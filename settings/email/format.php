@@ -43,7 +43,7 @@
       word-wrap: break-word;
       flex-direction: column;
     }
-    .rButton {
+    .lButton {
       border-radius: 4px;
       display: flex;
       background-color: #243139;
@@ -55,6 +55,24 @@
       height: 40px;
       width: 210px;
       padding: 10px 25px;
+      font-size: 24px;
+      color: #C4D7E6;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .lButton:hover{
+      box-shadow: 0px 0px 11px 0px #1f2b2f;
+    }
+    .rButton {
+      border-radius: 4px;
+      display: flex;
+      background-color: #243139;
+      white-space: nowrap;
+      box-shadow: 0px 0px 11px 0px #0c1214;
+      transition: 0.1s ease-in-out;
+      margin: auto;
+      background-color: #151f26;
+      padding: 4px 8px;
       font-size: 24px;
       color: #C4D7E6;
       border-radius: 4px;
@@ -98,7 +116,7 @@
       </div>
       <h1>Email Verification</h1>
     </div>
-    <a href="https://mobitracker.co/auth/email?token=<?php echo $_SESSION['jwt'] ?>" class="rButton highlight">Verify Email</a>
+    <a href="https://mobitracker.co/auth/email?token=<?php echo $_SESSION['jwt'] ?>" class="lButton highlight">Verify Email</a>
     <br><br>
     <p>This is an automated email to verify your email. If it wasnt you please ignore this.<br><br>If it persists please join our discord for staff support. <a href="https://discord.com/invite/xT4YfcxmrA" class="rButton">Discord</a></p>
   </div>
