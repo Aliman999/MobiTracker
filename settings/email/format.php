@@ -65,7 +65,6 @@
     }
     .rButton {
       border-radius: 4px;
-      display: flex;
       background-color: #243139;
       white-space: nowrap;
       box-shadow: 0px 0px 11px 0px #0c1214;
