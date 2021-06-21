@@ -70,6 +70,7 @@
     }
     .header{
       margin: 0 0 64px 0;
+      display: flex;
     }
   </style>
 </head>
