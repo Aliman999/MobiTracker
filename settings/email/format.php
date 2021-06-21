@@ -30,6 +30,8 @@
     }
     .container{
       display: flex;
+      position: relative;
+      top: 128px;
       width: auto;
       background-color: #253139;
       padding: 8px 16px;
