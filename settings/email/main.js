@@ -12,9 +12,9 @@ eBtn.onclick = function(){
   //verifyEmail.responseType = "json";
   verifyEmail.send("email=jamesdusky@dustytavern.com");
   verifyEmail.onload = function() {
+    var userResponse = verifyEmail.response;
   }
   */
-  var userResponse = verifyEmail.response;
   if(status.classList.contains("hidden")){
     status.classList.toggle("hidden");
     status.innerText = "test";
