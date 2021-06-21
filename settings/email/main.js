@@ -2,7 +2,7 @@
 var eBtn = document.getElementById("email");
 var tokenHeader = document.getElementsByName("token")[0];
 var input = document.getElementById("status");
-var status = document.getElementById("status");
+var rStatus = document.getElementById("status");
 eBtn.onclick = function(){
   /*
   var verifyEmail = new XMLHttpRequest();
