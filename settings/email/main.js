@@ -8,19 +8,18 @@ eBtn.onclick = function(){
   verifyEmail.open("POST", "sendEmail.php");
   verifyEmail.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   verifyEmail.setRequestHeader(tokenHeader.name,tokenHeader.content);
-  //verifyEmail.responseType = "json";
+  verifyEmail.responseType = "json";
   verifyEmail.send("email=jamesdusky@dustytavern.com");
   verifyEmail.onload = function() {
     var userResponse = verifyEmail.response;
     if(userResponse){
-
+      if(rStatus.classList.contains("hidden")){
+        rStatus.classList.toggle("hidden");
+        rStatus.innerText = "test";
+      }
+      setTimeout(()=>{
+        rStatus.classList.add("hidden");
+      }, 2000);
     }
-    if(rStatus.classList.contains("hidden")){
-      rStatus.classList.toggle("hidden");
-      rStatus.innerText = "test";
-    }
-    setTimeout(()=>{
-      rStatus.classList.add("hidden");
-    }, 2000);
   }
 }
