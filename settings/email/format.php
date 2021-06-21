@@ -14,7 +14,7 @@
       margin: 0 auto;
       background-color: #151f26;
       color: #C4D7E6;
-      display: flex;
+      display: inline-block;
     }
     a, a:visited, a:active, a:link{
       color: #C4D7E6;
