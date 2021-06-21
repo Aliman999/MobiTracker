@@ -2,7 +2,7 @@
 var eBtn = document.getElementById("email");
 var tokenHeader = document.getElementsByName("token")[0];
 var input = document.getElementById("emailInput");
-var status = document.getElementById("responseStatus");
+var status = document.getElementById("status");
 eBtn.onclick = function(){
   /*
   var verifyEmail = new XMLHttpRequest();
@@ -15,8 +15,8 @@ eBtn.onclick = function(){
     var userResponse = verifyEmail.response;
   }
   */
-  if(status.classList.contains("hidden")){
-    status.classList.toggle("hidden");
-    status.innerText = "test";
+  if(rStatus.classList.contains("hidden")){
+    rStatus.classList.toggle("hidden");
+    rStatus.innerText = "test";
   }
 }
