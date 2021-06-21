@@ -31,13 +31,19 @@
       border-radius: 4px;
       word-wrap: break-word;
     }
+    .rButton{
+
+    }
+    .highlight{
+      
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Verification Code</h1>
-    <p><?php echo "test"; ?></p>
+    <a href="https://mobitracker.co/auth/email?token=<?php echo $_SESSION['jwt'] ?>" style="font-weight: bold;">Verify Email</a>
     <br><br>
-    <p>This is an automated email to verify your email. If it wasnt you please ignore this.<br><br>If it persists please reply and message Aliman#5518 on discord<br><br>Copy and paste this code at the link provided: <a href="https://mobitracker.co/auth/email?token=<?php echo $_SESSION['jwt'] ?>" style="font-weight: bold;">Verify Email</a></p>
+    <p>This is an automated email to verify your email. If it wasnt you please ignore this.<br><br>If it persists please reply and message Aliman#5518 on discord.</p>
   </div>
 </body>
