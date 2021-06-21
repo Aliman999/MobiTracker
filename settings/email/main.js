@@ -50,10 +50,11 @@ function verify(email){
       rStatus.classList.remove("hidden");
       rStatus.classList.add("highlight-red");
       rStatus.innerText = "Please enter a valid email.";
+      
+      rStatus.reset = setTimeout(()=>{
+        rStatus.classList.add("hidden");
+        rStatus.classList.remove("highlight-red");
+      }, 5000);
     }
-    rStatus.reset = setTimeout(()=>{
-      rStatus.classList.add("hidden");
-      rStatus.classList.remove("highlight-red");
-    }, 5000);
   }
 }
