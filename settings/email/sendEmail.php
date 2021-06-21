@@ -55,7 +55,7 @@ if(isset($headers)){
           echo json_encode([
             "status" => 0,
             "data" => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"
-          ])
+          ]);
         }
       }
     }else{
