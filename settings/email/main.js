@@ -14,6 +14,9 @@ eBtn.onclick = function(){
         verify(input.value);
       }
     });
+    input.oninput = function(e){
+
+    }
   }
 }
 
