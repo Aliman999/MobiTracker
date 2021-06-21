@@ -34,7 +34,7 @@
       flex-direction: column;
     }
     .rButton {
-      padding: 4px 8px;
+      padding: 8px 16px;
       border-radius: 4px;
       display: flex;
       background-color: #243139;
@@ -42,6 +42,7 @@
       box-shadow: 0px 0px 11px 0px #0c1214;
       transition: 0.1s ease-in-out;
       margin: auto;
+      background-color: #151f26;
     }
     .rButton:hover{
       box-shadow: 0px 0px 11px 0px #1f2b2f;
