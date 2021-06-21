@@ -63,12 +63,18 @@
     .highlight {
       color: #C4D7E6;
     }
+    .header>img{
+      height: 64px;
+      width: 64px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://mobitracker.co/android-chrome-512x512.png" alt="">
-    <h1>Email Verification</h1>
+    <div class="header">
+      <img src="https://mobitracker.co/android-chrome-512x512.png" alt="">
+      <h1>Email Verification</h1>
+    </div>
     <a href="https://mobitracker.co/auth/email?token=<?php echo $_SESSION['jwt'] ?>" class="rButton highlight">Verify Email</a>
     <br><br>
     <p>This is an automated email to verify your email. If it wasnt you please ignore this.<br><br>If it persists please reply and message Aliman#5518 on discord.</p>
