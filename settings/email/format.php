@@ -12,10 +12,6 @@
       margin: 0 auto;
       background-color: #151f26;
       color: #C4D7E6;
-      font-family: "Exo", sans-serif;
-      font-weight: 300;
-      text-align: center;
-      outline: 0;
       display: flex;
     }
     a, a:visited, a:active, a:link{
