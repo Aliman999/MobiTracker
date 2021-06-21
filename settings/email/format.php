@@ -112,8 +112,7 @@
   <div class="container">
     <div class="header">
       <div class="mtHeader">
-        <img src="https://mobitracker.co/android-chrome-512x512.png" alt="">
-        <a class="mtTitle">MOBITRACKER</a>
+        <a class="mtTitle"><img src="https://mobitracker.co/android-chrome-512x512.png" alt=""> MOBITRACKER</a>
       </div>
       <h1>Email Verification</h1>
     </div>
