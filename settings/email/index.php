@@ -104,7 +104,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             </div>
           </div>
           <div id="status">
-            <p class="subP"></p>
+            <p class="subP hidden"></p>
           </div>
         </div>
       </div>
