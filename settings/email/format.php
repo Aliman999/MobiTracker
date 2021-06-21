@@ -72,7 +72,7 @@
       margin: auto;
       background-color: #151f26;
       padding: 4px 8px;
-      font-size: 24px;
+      font-size: 18px;
       color: #C4D7E6;
       border-radius: 4px;
       white-space: nowrap;
