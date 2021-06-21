@@ -3,7 +3,7 @@ var eBtn = document.getElementById("email");
 var tokenHeader = document.getElementsByName("token")[0];
 var eContainer = document.getElementById("emailInput");
 var rStatus = document.getElementById("status");
-var input = document.getElementByClassName("userInput")[0];
+var input = document.getElementByClassname("userInput")[0];
 
 eBtn.onclick = function(){
   if(!eContainer.classList.contains("hidden")){
