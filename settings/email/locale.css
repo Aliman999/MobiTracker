@@ -6,3 +6,7 @@
 .userInput{
   border-radius: 4px;
 }
+#status:hover{
+  color:inherit;
+  text-shadow: none;
+}
