@@ -47,11 +47,13 @@ function verify(email){
     }
   }else{
     if(rStatus.classList.contains("hidden")){
-      rStatus.classList.toggle("hidden");
+      rStatus.classList.remove("hidden");
+      rStatus.classList.add("highlight-red");
       rStatus.innerText = "Please enter a valid email.";
     }
     setTimeout(()=>{
       rStatus.classList.add("hidden");
+      rStatus.classList.remove("highlight-red");
     }, 2000);
   }
 }
