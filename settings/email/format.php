@@ -56,9 +56,6 @@
     .highlight {
       color: #C4D7E6;
     }
-    .highlight:hover{
-      text-shadow: 0px 0px 5px #c4d7e6;
-    }
   </style>
 </head>
 <body>
