@@ -68,9 +68,11 @@
       color: #C4D7E6;
       font-size: 27px;
       padding: 8px;
+      margin: auto;
     }
     .mtHeader{
       margin-right: auto;
+      display: flex;
     }
     h1{
       margin: auto auto auto 4px;
