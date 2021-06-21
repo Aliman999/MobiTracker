@@ -1,5 +1,13 @@
 <head>
   <style>
+    html {
+      color: #C4D7E6;
+      font-family: 'Exo', sans-serif;
+      font-weight: 400;
+      text-align: center;
+      outline: 0;
+      height: 100%;
+    }
     body{
       margin: 0 auto;
       background-color: #151f26;
