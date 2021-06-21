@@ -26,7 +26,7 @@
       color: #fff;
     }
     h1{
-      margin: 0 0 64px 0;
+      margin: 0;
     }
     .container{
       display: flex;
@@ -39,6 +39,7 @@
       border-radius: 4px;
       word-wrap: break-word;
       flex-direction: column;
+      margin: 0 0 64px 0;
     }
     .rButton {
       border-radius: 4px;
