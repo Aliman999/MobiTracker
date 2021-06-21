@@ -15,7 +15,7 @@ eBtn.onclick = function(){
       }
     });
     input.oninput = function(e){
-      if(e){
+      if(e.data.includes("@")){
 
       }
     }
