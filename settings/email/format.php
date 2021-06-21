@@ -39,7 +39,6 @@
       border-radius: 4px;
       word-wrap: break-word;
       flex-direction: column;
-      margin: 0 0 64px 0;
     }
     .rButton {
       border-radius: 4px;
@@ -67,6 +66,9 @@
     .header>img{
       height: 64px;
       width: 64px;
+    }
+    .header{
+      margin: 0 0 64px 0;
     }
   </style>
 </head>
