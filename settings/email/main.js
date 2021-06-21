@@ -18,6 +18,7 @@ eBtn.onclick = function(){
 }
 
 function verify(email){
+  input.classList.add("hidden");
   var verifyEmail = new XMLHttpRequest();
   verifyEmail.open("POST", "sendEmail.php");
   verifyEmail.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
