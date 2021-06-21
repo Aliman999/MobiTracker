@@ -6,7 +6,7 @@ eBtn.onclick = function(){
   verifyEmail.open("POST", "sendEmail.php");
   verifyEmail.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   verifyEmail.setRequestHeader(tokenHeader.name,tokenHeader.content);
-  verifyEmail.responseType = "json";
+  //verifyEmail.responseType = "json";
   verifyEmail.send("email=jamesdusky@dustytavern.com");
   verifyEmail.onload = function() {
     var userResponse = verifyEmail.response;
