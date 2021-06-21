@@ -5,6 +5,10 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '/vendor/autoload.php');
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 $headers = $_SERVER['HTTP_TOKEN'];
 
 if(isset($headers)){
@@ -13,9 +17,6 @@ if(isset($headers)){
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
 
-    include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '/vendor/autoload.php');
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\Exception;
 
     if(!empty($_POST['email'])){
       $email = $_POST['email'];
