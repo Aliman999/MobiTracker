@@ -9,6 +9,11 @@ eBtn.onclick = function(){
     verify(input.value);
   }else{
     input.classList.remove("hidden");
+    input.addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        verify(input.value);
+      }
+    });
   }
 }
 
