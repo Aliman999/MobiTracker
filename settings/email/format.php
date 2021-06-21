@@ -1,9 +1,5 @@
 <?php
 session_start();
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 ?>
 <head>
   <meta charset="utf-8">
@@ -125,7 +121,7 @@ error_reporting(E_ALL);
       </div>
       <h1>Email Verification</h1>
     </div>
-    <a href="https://mobitracker.co/auth/email?token=<?php $_GET['token'] ?>" class="lButton highlight">Verify Email</a>
+    <a href="https://mobitracker.co/auth/email?token=<?php echo $_GET['token'] ?>" class="lButton highlight">Verify Email</a>
     <br><br>
     <p>This is an automated email to verify your email. If it wasnt you please ignore this.<br><br>If it persists please join our discord for help. <a href="https://discord.com/invite/xT4YfcxmrA" class="rButton">Discord</a></p>
   </div>
