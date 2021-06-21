@@ -40,7 +40,7 @@ if(isset($headers)){
         $mail->isHTML(true);                                  // Set email format to HTML
 
         $mail->Subject = 'MobiTracker Verification';
-        $mail->Body    = file_get_contents('format.php');
+        $mail->Body    = file_get_contents('https://mobitracker.co/beta/settings/email/format.php');
 
         $mail->send();
         $emailConfirm = 'Successfully sent to ' .$email;
