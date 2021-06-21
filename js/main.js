@@ -156,6 +156,7 @@ function flag(id,bool){
 }
 var player;
 var playerUser;
+var retries = 0;
 function showPlayer(node){
   hideHome();
   hideSB();
@@ -169,19 +170,16 @@ function showPlayer(node){
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
     request.responseType = "json";
     request.send();
-    var retries = 0;
     request.onload = function() {
       player = request.response;
-      if(player == null){
+      if(player == null && retry < 2){
         showPlayer(node);
+        retry++;
       }
       dataCount = Object.keys(player["data"]).length;
-      if(dataCount > 0){
-        playerUser = request.response.data.profile.handle;
-      }else{
-      }
       populateHeader(player);
       if(dataCount>0){
+        playerUser = request.response.data.profile.handle;
         showComment(node);
       }
     }
@@ -544,6 +542,7 @@ function clearBox(elementID){
 }
 
 function populateHeader(jsonObj) {
+  retries = 0;
   if(dataCount > 0){
     header.style.padding = "8px 16px";
     containerHeader.style.display = "block";
