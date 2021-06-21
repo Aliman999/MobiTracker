@@ -16,7 +16,7 @@ eBtn.onclick = function(){
         verify(eContainer.value);
       }
     });
-    eContainer.oninput = function(e){
+    input.oninput = function(e){
       if(e.target.value.includes("@")){
         eContainer.verified = true;
       }else{
