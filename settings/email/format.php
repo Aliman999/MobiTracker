@@ -63,7 +63,7 @@
     .header>img{
       height: 64px;
       width: 64px;
-      margin: 0 4px 0 auto;
+      margin-right: auto;
     }
     h1{
       margin: auto auto auto 4px;
@@ -78,6 +78,7 @@
   <div class="container">
     <div class="header">
       <img src="https://mobitracker.co/android-chrome-512x512.png" alt="">
+      <p>MOBITRACKER</p>
       <h1>Email Verification</h1>
     </div>
     <a href="https://mobitracker.co/auth/email?token=<?php echo $_SESSION['jwt'] ?>" class="rButton highlight">Verify Email</a>
