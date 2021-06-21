@@ -9,6 +9,7 @@ eBtn.onclick = function(){
     verify(input.value);
   }else{
     input.classList.remove("hidden");
+    input.focus();
     input.addEventListener('keypress', function (e) {
       if (e.key === 'Enter') {
         verify(input.value);
@@ -50,7 +51,7 @@ function verify(email){
       rStatus.classList.remove("hidden");
       rStatus.classList.add("highlight-red");
       rStatus.innerText = "Please enter a valid email.";
-      
+
       rStatus.reset = setTimeout(()=>{
         rStatus.classList.add("hidden");
         rStatus.classList.remove("highlight-red");
