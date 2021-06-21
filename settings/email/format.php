@@ -38,6 +38,6 @@
     <h1>Verification Code</h1>
     <p><?php echo "test"; ?></p>
     <br><br>
-    <p>Someone requested to reset your password. If it wasnt you please ignore this. <br><br> If it persists please reply and message Aliman#5518 on discord<br><br>Copy and paste this code at the link provided: <a href="https://mobitracker.co/resetpassword/" style="font-weight: bold;">Reset Password</a></p>
+    <p>This is an automated email to verify your email. If it wasnt you please ignore this.<br><br>If it persists please reply and message Aliman#5518 on discord<br><br>Copy and paste this code at the link provided: <a href="https://mobitracker.co/auth/email?token=<?php echo $_SESSION['jwt'] ?>" style="font-weight: bold;">Verify Email</a></p>
   </div>
 </body>
