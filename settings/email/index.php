@@ -38,7 +38,7 @@ function sendMail($email){
 
     header( "refresh:3" );
   }catch (Exception $e) {
-    echo $email_err"Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    $email_err = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
   }
 }
 
