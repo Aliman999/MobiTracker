@@ -62,6 +62,7 @@
     }
     .lButton:hover{
       box-shadow: 0px 0px 11px 0px #1f2b2f;
+      text-shadow: 0px 0px 5px #c4d7e6;
     }
     .rButton {
       border-radius: 4px;
@@ -79,6 +80,7 @@
     }
     .rButton:hover{
       box-shadow: 0px 0px 11px 0px #1f2b2f;
+      text-shadow: 0px 0px 5px #c4d7e6;
     }
     .highlight {
       color: #C4D7E6;
@@ -92,6 +94,9 @@
       font-size: 27px;
       padding: 8px;
       margin: auto;
+    }
+    .mtTitle:hover{
+      text-shadow: 0px 0px 5px #c4d7e6;
     }
     .mtHeader{
       margin-right: auto;
