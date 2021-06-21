@@ -31,7 +31,6 @@
     .container{
       display: flex;
       width: auto;
-      margin: auto;
       background-color: #253139;
       padding: 8px 16px;
       border: 2px solid rgb(57, 206, 216);
