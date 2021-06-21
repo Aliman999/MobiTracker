@@ -31,11 +31,23 @@
       border-radius: 4px;
       word-wrap: break-word;
     }
-    .rButton{
-
+    .rButton {
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: flex;
+      background-color: #243139;
+      white-space: nowrap;
+      box-shadow: 0px 0px 11px 0px #0c1214;
+      transition: 0.1s ease-in-out;
     }
-    .highlight{
-
+    .rButton:hover{
+      box-shadow: 0px 0px 11px 0px #1f2b2f;
+    }
+    .highlight {
+      color: #C4D7E6;
+    }
+    .highlight:hover{
+      text-shadow: 0px 0px 5px #c4d7e6;
     }
   </style>
 </head>
