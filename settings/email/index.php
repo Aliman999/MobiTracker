@@ -98,9 +98,9 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <p><span class="rBold">Email:</span><br><span class="subP"><?php echo $row['email'] ?></span></p>
             <a class="rButton highlight rightSide" id="email">Change Email</a>
           </div>
-          <div class="hidden" id="emailInput">
+          <div class="hidden">
             <div class="inputContainer padded" id="iContainer">
-              <input type="text" class="userInput" autofocus="" autocomplete="email" value="" placeholder="Enter your Email">
+              <input type="text" class="userInput" id="emailInput" autofocus="" autocomplete="email" value="" placeholder="Enter your Email">
             </div>
           </div>
           <div class="hidden" id="status">

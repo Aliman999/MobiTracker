@@ -16,7 +16,6 @@ if(isset($headers)){
     unset($_SESSION['token']);
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
-
     if(!empty($_POST['email'])){
       $email = $_POST['email'];
       $mail = new PHPMailer;
