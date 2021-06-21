@@ -1,4 +1,6 @@
 <head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     html {
       color: #C4D7E6;
