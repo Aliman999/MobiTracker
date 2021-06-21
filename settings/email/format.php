@@ -15,6 +15,13 @@
       text-decoration: none;
       outline: 0;
     }
+    a, a:link, a:hover, a:visited, a:active {
+      text-decoration: none;
+      outline: 0;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+    }
     a:hover{
       color: #fff;
     }
