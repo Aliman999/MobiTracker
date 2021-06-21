@@ -60,7 +60,7 @@
     .highlight {
       color: #C4D7E6;
     }
-    .header>img{
+    .mtHeader>img{
       height: 64px;
       width: 64px;
     }
