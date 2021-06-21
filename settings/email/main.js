@@ -15,7 +15,9 @@ eBtn.onclick = function(){
       }
     });
     input.oninput = function(e){
+      if(e){
 
+      }
     }
   }
 }
