@@ -3,7 +3,6 @@
     body{
       margin: 0 auto;
       background-color: #151f26;
-      padding-bottom: 32px;
       color: #C4D7E6;
       font-family: "Exo", sans-serif;
       font-weight: 300;
