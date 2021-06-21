@@ -18,6 +18,9 @@
     a:hover{
       color: #fff;
     }
+    h1{
+      margin-top: 0;
+    }
     .container{
       display: flex;
       width: auto;
