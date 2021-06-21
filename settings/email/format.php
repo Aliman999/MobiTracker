@@ -30,6 +30,7 @@
       box-shadow: 0px 0px 15px rgba(57, 206, 216, 0.5);
       border-radius: 4px;
       word-wrap: break-word;
+      flex-direction: column;
     }
     .rButton {
       padding: 4px 8px;
