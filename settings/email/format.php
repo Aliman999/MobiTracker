@@ -81,7 +81,7 @@
       display: flex;
     }
     h1{
-      margin: auto auto auto 4px;
+      margin: auto 0 auto auto;
     }
     .header{
       margin: 0 0 64px 0;
