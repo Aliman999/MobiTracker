@@ -98,9 +98,9 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <a class="rButton highlight rightSide" id="email">Change Email</a>
           </div>
           <div class="hidden" id="emailInput">
-            <input type="text" value="" placeholder="Enter your Email.">
+            <input type="text" value="" placeholder="Enter your Email."/>
           </div>
-          <div class="" id="status">
+          <div id="status">
             <p>Worked</p>
           </div>
         </div>
