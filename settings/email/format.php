@@ -28,9 +28,6 @@
       justify-content: center;
       align-items: center;
     }
-    a:hover{
-      color: #fff;
-    }
     .container{
       display: flex;
       width: auto;
