@@ -65,6 +65,11 @@
       width: 64px;
       margin-right: auto;
     }
+    .mtTitle{
+      color: #C4D7E6;
+      font-size: 27px;
+      padding: 8px;
+    }
     h1{
       margin: auto auto auto 4px;
     }
@@ -78,7 +83,7 @@
   <div class="container">
     <div class="header">
       <img src="https://mobitracker.co/android-chrome-512x512.png" alt="">
-      <p>MOBITRACKER</p>
+      <a class="mtTitle">MOBITRACKER</a>
       <h1>Email Verification</h1>
     </div>
     <a href="https://mobitracker.co/auth/email?token=<?php echo $_SESSION['jwt'] ?>" class="rButton highlight">Verify Email</a>
