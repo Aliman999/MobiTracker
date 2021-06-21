@@ -47,6 +47,8 @@
       padding: 10px 25px;
       font-size: 24px;
       color: #C4D7E6;
+      border-radius: 4px;
+      white-space: nowrap;
     }
     .rButton:hover{
       box-shadow: 0px 0px 11px 0px #1f2b2f;
