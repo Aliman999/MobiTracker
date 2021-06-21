@@ -12,7 +12,7 @@ eBtn.onclick = function(){
   verifyEmail.send("email=jamesdusky@dustytavern.com");
   verifyEmail.onload = function() {
     var userResponse = verifyEmail.response;
-    if(userResponse){
+    if(userResponse.status){
       if(rStatus.classList.contains("hidden")){
         rStatus.classList.toggle("hidden");
         rStatus.innerText = "test";
