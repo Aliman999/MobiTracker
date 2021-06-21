@@ -20,7 +20,7 @@
     }
     .container{
       position: relative;
-      display: inline-block;
+      display: flex;
       width: auto;
       margin: auto;
       top: 128px;
