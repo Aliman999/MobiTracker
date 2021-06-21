@@ -38,6 +38,7 @@
       white-space: nowrap;
       box-shadow: 0px 0px 11px 0px #0c1214;
       transition: 0.1s ease-in-out;
+      margin: auto;
     }
     .rButton:hover{
       box-shadow: 0px 0px 11px 0px #1f2b2f;
