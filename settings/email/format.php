@@ -54,7 +54,7 @@
 <body>
   <div class="container">
     <h1>Verify Email</h1>
-    <a href="https://mobitracker.co/auth/email?token=<?php echo $_SESSION['jwt'] ?>" style="font-weight: bold;">Verify Email</a>
+    <a href="https://mobitracker.co/auth/email?token=<?php echo $_SESSION['jwt'] ?>" class="rButton highlight">Verify Email</a>
     <br><br>
     <p>This is an automated email to verify your email. If it wasnt you please ignore this.<br><br>If it persists please reply and message Aliman#5518 on discord.</p>
   </div>
