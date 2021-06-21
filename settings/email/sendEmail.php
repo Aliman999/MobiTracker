@@ -17,6 +17,8 @@ if(isset($headers)){
     use PHPMailer\PHPMailer\Exception;
 
     if(isset($_POST['email'])){
+      $email = $_POST['email'];
+      sendMail($email);
       function sendMail($email){
         $mail = new PHPMailer;
         try {
@@ -55,9 +57,8 @@ if(isset($headers)){
         }
       }
     }else{
-      exit(json_encode(['error' => 'Email not entered.']));
+      exit(json_encode(['error' => 'Invalid Args.']));
     }
-
   }
 }else{
    exit(json_encode(['error' => 'No token.']));
