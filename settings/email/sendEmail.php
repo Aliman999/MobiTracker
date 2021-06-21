@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'vendor/autoload.php');
+require_once "../../../vendor/autoload.php";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -16,7 +16,6 @@ if(isset($headers)){
     unset($_SESSION['token']);
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
-
 
     if(!empty($_POST['email'])){
       $email = $_POST['email'];
@@ -55,7 +54,7 @@ if(isset($headers)){
           echo json_encode([
             "status" => 0,
             "data" => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"
-          ]);
+          ])
         }
       }
     }else{
