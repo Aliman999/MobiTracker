@@ -19,7 +19,7 @@
       color: #fff;
     }
     h1{
-      margin-top: 0;
+      margin: 0 0 64px 0;
     }
     .container{
       display: flex;
