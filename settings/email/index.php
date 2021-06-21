@@ -100,7 +100,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           </div>
           <div class="hidden" id="emailInput">
             <div class="inputContainer padded" id="iContainer">
-              <input type="text" class="userInput" autofocus="" value="JamesDusky" placeholder="Enter your Email">
+              <input type="text" class="userInput" autofocus="" value="" placeholder="Enter your Email">
             </div>
           </div>
           <div id="status">
