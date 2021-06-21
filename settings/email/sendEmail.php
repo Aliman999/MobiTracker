@@ -16,7 +16,7 @@ if(isset($headers)){
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
-    if(isset($_POST['email'])){
+    if(!empty($_POST['email'])){
       $email = $_POST['email'];
       sendMail($email);
       function sendMail($email){
