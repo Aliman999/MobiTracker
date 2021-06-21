@@ -16,7 +16,7 @@ eBtn.onclick = function(){
       }
     });
     input.oninput = function(e){
-      if(e.data.includes("@")){
+      if(e.target.value.includes("@")){
         input.verified = true;
       }else{
         input.verified = false;
