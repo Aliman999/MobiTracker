@@ -12,7 +12,9 @@ if(isset($headers)){
     unset($_SESSION['token']);
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
-    require_once "../../../vendor/autoload.php";
+    if(require_once "../../../vendor/autoload.php"){
+      echo "true";
+    }
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
