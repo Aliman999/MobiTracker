@@ -9,6 +9,7 @@
       font-weight: 300;
       text-align: center;
       outline: 0;
+      display: flex;
     }
     a, a:visited, a:active, a:link{
       color: #C4D7E6;
