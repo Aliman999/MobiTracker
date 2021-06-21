@@ -18,7 +18,7 @@ $param_username = $param_password = $email = "";
 $username_err = $email_err = "";
 
 // Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+//if($_SERVER["REQUEST_METHOD"] == "POST"){//
 
     // Validate username
     if(empty(trim($_POST["username"]))){
@@ -105,7 +105,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       }
 
     }
-  }
+//  }
 ?>
 
 <!DOCTYPE html>
