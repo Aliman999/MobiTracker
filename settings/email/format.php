@@ -82,7 +82,7 @@
     .highlight {
       color: #C4D7E6;
     }
-    .mtTitle>img{
+    .mtHeader>img{
       height: 64px;
       width: 64px;
     }
@@ -112,7 +112,8 @@
   <div class="container">
     <div class="header">
       <div class="mtHeader">
-        <a class="mtTitle"><img src="https://mobitracker.co/android-chrome-512x512.png" alt=""> MOBITRACKER</a>
+        <img src="https://mobitracker.co/android-chrome-512x512.png" alt="">
+        <a class="mtTitle">MOBITRACKER</a>
       </div>
       <h1>Email Verification</h1>
     </div>
