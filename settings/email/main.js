@@ -1,33 +1,34 @@
 'use strict';
 var eBtn = document.getElementById("email");
 var tokenHeader = document.getElementsByName("token")[0];
-var input = document.getElementById("emailInput");
+var eContainer = document.getElementById("emailInput");
 var rStatus = document.getElementById("status");
+var input = document.getElementByClassName("userInput")[0];
 
 eBtn.onclick = function(){
-  if(!input.classList.contains("hidden")){
-    verify(input.value);
+  if(!eContainer.classList.contains("hidden")){
+    verify(eContainer.value);
   }else{
-    input.classList.remove("hidden");
-    input.focus();
-    input.addEventListener('keypress', function (e) {
+    eContainer.classList.remove("hidden");
+    eContainer.focus();
+    eContainer.addEventListener('keypress', function (e) {
       if (e.key === 'Enter') {
-        verify(input.value);
+        verify(eContainer.value);
       }
     });
-    input.oninput = function(e){
+    eContainer.oninput = function(e){
       if(e.target.value.includes("@")){
-        input.verified = true;
+        eContainer.verified = true;
       }else{
-        input.verified = false;
+        eContainer.verified = false;
       }
     }
   }
 }
 
 function verify(email){
-  if(input.verified){
-    input.classList.add("hidden");
+  if(eContainer.verified){
+    eContainer.classList.add("hidden");
     var verifyEmail = new XMLHttpRequest();
     verifyEmail.open("POST", "sendEmail.php");
     verifyEmail.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
