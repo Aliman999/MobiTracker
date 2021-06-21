@@ -1,5 +1,6 @@
 'use strict';
 var eBtn = document.getElementById("email");
+var tokenHeader = document.getElementsByName("token")[0];
 eBtn.onclick = function(){
   var verifyEmail = new XMLHttpRequest();
   verifyEmail.open("POST", "sendEmail.php");
