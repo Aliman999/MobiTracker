@@ -25,9 +25,6 @@
     a:hover{
       color: #fff;
     }
-    h1{
-      margin: 0;
-    }
     .container{
       display: flex;
       width: auto;
@@ -66,6 +63,10 @@
     .header>img{
       height: 64px;
       width: 64px;
+      margin: 0 4px 0 auto;
+    }
+    h1{
+      margin: auto auto auto 4px;
     }
     .header{
       margin: 0 0 64px 0;
