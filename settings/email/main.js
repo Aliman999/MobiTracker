@@ -42,7 +42,7 @@ function verify(email){
         }
         setTimeout(()=>{
           rStatus.classList.add("hidden");
-        }, 2000);
+        }, 5000);
       }
     }
   }else{
@@ -54,6 +54,6 @@ function verify(email){
     rStatus.reset = setTimeout(()=>{
       rStatus.classList.add("hidden");
       rStatus.classList.remove("highlight-red");
-    }, 2000);
+    }, 5000);
   }
 }
