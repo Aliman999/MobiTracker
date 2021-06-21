@@ -1,7 +1,7 @@
 'use strict';
 var eBtn = document.getElementById("email");
 var tokenHeader = document.getElementsByName("token")[0];
-var input = document.getElementById("status");
+var input = document.getElementById("emailInput");
 var rStatus = document.getElementById("status");
 eBtn.onclick = function(){
   /*
@@ -19,4 +19,7 @@ eBtn.onclick = function(){
     rStatus.classList.toggle("hidden");
     rStatus.innerText = "test";
   }
+  setTimeout(()=>{
+    rStatus.classList.add("hidden");
+  }, 2000);
 }
