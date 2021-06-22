@@ -89,6 +89,8 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
               echo '<a class="rButton highlight rightSide">Verify</a>';
             }
             ?>
+            <p><span class="rBold">Career:</span><br><span class="subP"><?php echo join(", ", $row['career']) ?></span></p>
+            <p><span class="rBold">Faction:</span><br><span class="subP"><?php echo $row['faction'] ?></span></p>
           </div>
           <div>
             <p><span class="rBold">Email:</span><br><span class="subP"><?php echo $row['email'] ?></span></p>
@@ -97,14 +99,6 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           <div>
             <p><span class="rBold">Password:</span><br><span class="subP">●●●●●●●●●●●●</span></p>
             <a class="rButton highlight rightSide">Change Password</a>
-          </div>
-          <div>
-            <p><span class="rBold">Faction:</span><br><span class="subP"><?php echo $row['faction'] ?></span></p>
-            <a class="rButton highlight rightSide">Change Faction</a>
-          </div>
-          <div>
-            <p><span class="rBold">Career:</span><br><span class="subP"><?php echo join(", ", $row['career']) ?></span></p>
-            <a class="rButton highlight rightSide">Change Careers</a>
           </div>
           <div>
             <p><span class="rBold">Discord:</span><br><span class="subP highlight-green">LINKED</span></p>
