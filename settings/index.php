@@ -72,7 +72,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
         <div class="settingsNav">
           <a class="highlight active">Overview</a>
           <a href="displayname" class="highlight nactive">RSI Profile</a>
-          <a href="security" class="highlight nactive">Account Security</a>
+          <a href="security" class="highlight nactive">Security</a>
           <a href="email" class="highlight nactive">Email</a>
           <a href="password" class="highlight nactive">Password</a>
           <a href="discord" class="highlight nactive">Discord</a>
