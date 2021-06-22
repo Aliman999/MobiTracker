@@ -72,21 +72,23 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
         <div class="settingsNav">
           <a class="highlight active">Overview</a>
           <a href="displayname" class="highlight nactive">RSI Profile</a>
+          <a href="security" class="highlight nactive">Account Security</a>
           <a href="email" class="highlight nactive">Email</a>
           <a href="password" class="highlight nactive">Password</a>
-          <a href="verify" class="highlight nactive">Verify</a>
           <a href="discord" class="highlight nactive">Discord</a>
-          <a href="privacy" class="highlight nactive">Privacy</a>
           <a href="referrals" class="highlight nactive">Referrals</a>
         </div>
         <hr>
         <div class="setting">
           <div>
             <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
-            <div class="">
-
-            </div>
             <p><span class="rBold">Reputation:</span><br><span class="subP"><?php echo $row['xp'] ?></span></p>
+            <p><span class="rBold">Verification:</span><br><span class="subP <?php echo $row['verifyClass'] ?>"><?php echo $row['verify'] ?></span></p>
+            <?php
+            if($row['verify'] !== 'Verified'){
+              echo '<a class="rButton highlight rightSide">Verify</a>';
+            }
+            ?>
           </div>
           <div>
             <p><span class="rBold">Email:</span><br><span class="subP"><?php echo $row['email'] ?></span></p>
@@ -95,14 +97,6 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           <div>
             <p><span class="rBold">Password:</span><br><span class="subP">●●●●●●●●●●●●</span></p>
             <a class="rButton highlight rightSide">Change Password</a>
-          </div>
-          <div>
-            <p><span class="rBold">Verification:</span><br><span class="subP <?php echo $row['verifyClass'] ?>"><?php echo $row['verify'] ?></span></p>
-            <?php
-            if($row['verify'] !== 'Verified'){
-              echo '<a class="rButton highlight rightSide">Verify</a>';
-            }
-            ?>
           </div>
           <div>
             <p><span class="rBold">Faction:</span><br><span class="subP"><?php echo $row['faction'] ?></span></p>
