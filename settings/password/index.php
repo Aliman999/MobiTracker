@@ -1,11 +1,21 @@
 <?php
-  session_start();
-  if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
-    header("location: ../");
-  }
-  if($_SESSION['banned'] == 1){
-    header("location: ../signout");
-  }
+session_start();
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+require_once "../../vendor/autoload.php";
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
+  header("location: ../");
+}else{
+  $_SESSION['activeSetting'] = basename($_SERVER['REQUEST_URI']);
+  include "../settings.php";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
