@@ -88,9 +88,9 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
               echo '<a class="rButton highlight rightSide">Verify</a>';
             }
             ?>
-            <p><span class="rBold">Reputation:</span><br><span class="subP"><?php echo $row['xp'] ?></span></p>
           </div>
           <div>
+            <p><span class="rBold">Reputation:</span><br><span class="subP"><?php echo $row['xp'] ?></span></p>
             <p><span class="rBold">Career:</span><br><span class="subP"><?php echo join(", ", $row['career']) ?></span></p>
             <p><span class="rBold">Faction:</span><br><span class="subP"><?php echo $row['faction'] ?></span></p>
           </div>
