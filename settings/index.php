@@ -83,6 +83,8 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           <div>
             <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
             <p><span class="rBold">Reputation:</span><br><span class="subP"><?php echo $row['xp'] ?></span></p>
+          </div>
+          <div>
             <p><span class="rBold">Verification:</span><br><span class="subP <?php echo $row['verifyClass'] ?>"><?php echo $row['verify'] ?></span></p>
             <?php
             if($row['verify'] !== 'Verified'){
