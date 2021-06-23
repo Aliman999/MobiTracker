@@ -12,7 +12,7 @@
       Please do your due diligence and leave out compromising information on public contracts.
     <span class='highlight-green'>Please Vet applicants thoroughly by clicking on their username.</span></p>
     <p class='disclaimer home'>You will be locked to this choice for 30 days.
-    <br>Selecting the legal or illegal role will bar you from seeing contracts of the opposite faction.</p>
+    <br>Selecting the Lawful or Unlawful role will bar you from seeing contracts of the opposite faction.</p>
     <p class='disclaimer home'>Current Balance of Contracts</p>
     <div class="displayFlex">
       <p class="disclaimer home statusPercent"></p><div class="statusContainer displayFlex"><div class="status"></div><div class="status"></div></div><p class="disclaimer home statusPercent"></p>
@@ -24,8 +24,8 @@
       <div class='custom-select' style='width: 175px;'>
         <select class='userInput' name='faction'>
           <option value=''>Select Faction</option>
-          <option class='factionOption legal' value='Legal'>Legal</option>
-          <option class='factionOption illegal' value='Illegal'>Illegal</option>
+          <option class='factionOption lawful' value='lawful'>Lawful</option>
+          <option class='factionOption unlawful' value='unlawful'>Unlawful</option>
         </select>
       </div>
     </div>

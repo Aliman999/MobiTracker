@@ -31,9 +31,9 @@ if(isset($headers)){
   unset($row['password']);
   $row['xp'] = xp($row['reviewed_count'])." (".$row['reviewed_count'].")";
   if($row['faction'] === '0'){
-    $row['faction'] = "Legal";
+    $row['faction'] = "Lawful";
   }else{
-    $row['faction'] = "Illegal";
+    $row['faction'] = "Unlawful";
   }
   if($row['verify'] === '1'){
     $row['verifyClass'] = 'highlight-green';

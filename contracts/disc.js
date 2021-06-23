@@ -43,7 +43,7 @@ for (i = 0; i < l; i++) {
     this.nextSibling.classList.toggle("select-hide");
     this.classList.toggle("select-arrow-active");
 
-    if(document.getElementsByClassName("same-as-selected")[0].innerText == "Legal"){
+    if(document.getElementsByClassName("same-as-selected")[0].innerText == "lawful"){
       document.getElementsByClassName("select-selected")[0].style.color = "#87d374";
       document.getElementsByClassName("select-selected")[0].style.textShadow = "0px 0px 5px #87d374";
     }else{
@@ -109,7 +109,7 @@ disagree.addEventListener("click", function(e) {
     window.location.href = "https://mobitracker.co";
   }, 2000)
 });
-var contracts = { legal: 0, illegal: 0 };
+var contracts = { lawful: 0, unlawful: 0 };
 var percent = { total: 0 };
 var getPercent = new XMLHttpRequest();
 getPercent.open("GET", "../src/contractPercent.php");
@@ -117,8 +117,8 @@ getPercent.setRequestHeader(tokenHeader.name, tokenHeader.content);
 getPercent.send();
 getPercent.onload = function(){
   var response = JSON.parse(getPercent.response);
-  contracts.legal = response.legal;
-  contracts.illegal = response.illegal;
+  contracts.lawful = response.lawful;
+  contracts.unlawful = response.unlawful;
   percent.total = response.total;
   balance();
 }
@@ -126,23 +126,23 @@ function balance(){
   var multiplier = document.getElementsByClassName("statusContainer")[0].clientWidth/100;
   document.getElementsByClassName("statusTotal")[0].innerText = percent.total+" Contracts";
   percent.nums = new Array();
-  percent.nums[0] = percent.illegal = Math.round((contracts.illegal/percent.total)*100);
-  percent.nums[1] = percent.legal = Math.round((contracts.legal/percent.total)*100);
+  percent.nums[0] = percent.unlawful = Math.round((contracts.unlawful/percent.total)*100);
+  percent.nums[1] = percent.lawful = Math.round((contracts.lawful/percent.total)*100);
   var statusbar = document.getElementsByClassName("status");
   var statusPercent = document.getElementsByClassName("statusPercent");
   for(var i = 0; i < statusPercent.length; i++){
     statusPercent[i].innerText = percent.nums[i]+"%";
     if(i == 0){
-      statusPercent[i].innerText = "Illegal "+statusPercent[i].innerText;
+      statusPercent[i].innerText = "unlawful "+statusPercent[i].innerText;
     }else{
-      statusPercent[i].innerText = statusPercent[i].innerText+" Legal";
+      statusPercent[i].innerText = statusPercent[i].innerText+" Lawful";
     }
   }
-  var color = { legal:"#00f", illegal:"#C00" };
-  statusbar[0].style.backgroundColor = color.illegal;
-  statusbar[0].style.width = percent.illegal*multiplier+"px";
-  statusbar[1].style.backgroundColor = color.legal;
-  statusbar[1].style.width = percent.legal*multiplier+"px";
+  var color = { lawful:"#00f", unlawful:"#C00" };
+  statusbar[0].style.backgroundColor = color.unlawful;
+  statusbar[0].style.width = percent.unlawful*multiplier+"px";
+  statusbar[1].style.backgroundColor = color.lawful;
+  statusbar[1].style.width = percent.lawful*multiplier+"px";
 }
 
 document.addEventListener("click", closeAllSelect);

@@ -9,12 +9,12 @@ if (isset($headers)) {
     require_once "config.php";
     $sql = "SELECT faction FROM contracts WHERE faction = 0 OR faction = 1 AND archived = 0 AND completed = 0";
     $result = mysqli_query($link, $sql);
-    $emparray = array( "legal"=>0, "illegal"=>0, "total"=>0 );
+    $emparray = array( "lawful"=>0, "unlawful"=>0, "total"=>0 );
     while($row = mysqli_fetch_assoc($result)){
       if($row['faction'] == 0){
-        $emparray['legal']++;
+        $emparray['lawful']++;
       }else{
-        $emparray['illegal']++;
+        $emparray['unlawful']++;
       }
       $emparray['total']++;
     }

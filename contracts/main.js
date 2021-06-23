@@ -665,7 +665,7 @@ function populateContracts(obj, p, apps){
       var status = document.createElement("span");
       status.classList.add("highlight-red");
       status.classList.add("rBold");
-      status.innerText = " ILLEGAL";
+      status.innerText = " unlawful";
       editAssist++;
       jpType.appendChild(status);
     }

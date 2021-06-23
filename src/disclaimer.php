@@ -21,10 +21,10 @@ if (isset($headers)) {
 
       $_SESSION['contract'] = 1;
 
-      if($f == "Legal"){
+      if($f == "Lawful"){
         $f = 0;
         $_SESSION['faction'] = $f;
-      }elseif($f == "Illegal") {
+      }elseif($f == "Unlawful") {
         $f = 1;
         $_SESSION['faction'] = $f;
       }
