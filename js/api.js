@@ -28,13 +28,12 @@ function socket(){
     };
     webSocket.send(JSON.stringify(message));
     console.log("Authentication Sent");
-    api(user.sessionUser);
     heartbeat();
   }
   webSocket.onmessage = function(event){
     console.log("Authentication Response");
     var data = JSON.parse(event.data);
-    callback();
+    api(user.sessionUser);
   }
   webSocket.onerror = function(err){
     console.log("Error");
