@@ -29,11 +29,12 @@ function socket(){
     };
     webSocket.send(JSON.stringify(message));
     */
+    console.log("Authentication Sent");
     api(user.sessionUser);
     heartbeat();
   }
   webSocket.onmessage = function(event){
-    console.log("Authentication Sent");
+    console.log("Authentication Response");
     var data = JSON.parse(event.data);
     callback();
   }
@@ -55,6 +56,7 @@ function heartbeat() {
 }
 
 function api(name){
+  console.log("Job Sent");
   webSocket.send(JSON.stringify({
     type:"job",
     token:name
