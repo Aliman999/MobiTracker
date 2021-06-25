@@ -18,8 +18,10 @@ function requestUser(){
     })
   }
 }
-*/
 requestUser();
+*/
+
+socket();
 
 function socket(){
   return new Promise(callback => {
