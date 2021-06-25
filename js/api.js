@@ -11,41 +11,37 @@ function requestUser(){
   query.responseType = "json";
   query.async = false;
   query.send();
-  query.onload = async function(){
+  query.onload = function(){
     user = query.response;
-    await socket()
-    .then(()=>{
-    })
+    socket();
   }
 }
 
 requestUser();
 
 function socket(){
-  return new Promise(callback => {
-    webSocket = new WebSocket("wss://mobitracker.co:2599");
-    webSocket.onopen = function(){
-      /*
-      message = {
-        type:"auth",
-        token:jwt.content
-      };
-      webSocket.send(JSON.stringify(message));
-      */
-      api(user.sessionUser);
-      heartbeat();
-    }
-    webSocket.onmessage = function(event){
-      var data = JSON.parse(event.data);
-      callback();
-    }
-    webSocket.onerror = function(err){
-      setTimeout(socket, 3000);
-    }
-    webSocket.onclose = function(){
-      setTimeout(socket, 3000);
+  webSocket = new WebSocket("wss://mobitracker.co:2599");
+  webSocket.onopen = function(){
+    /*
+    message = {
+      type:"auth",
+      token:jwt.content
     };
-  });
+    webSocket.send(JSON.stringify(message));
+    */
+    api(user.sessionUser);
+    heartbeat();
+  }
+  webSocket.onmessage = function(event){
+    var data = JSON.parse(event.data);
+    callback();
+  }
+  webSocket.onerror = function(err){
+    setTimeout(socket, 3000);
+  }
+  webSocket.onclose = function(){
+    setTimeout(socket, 3000);
+  };
 }
 
 function heartbeat() {
