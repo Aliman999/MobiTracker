@@ -101,11 +101,11 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <div class="inputContainer padded" id="iContainer">
               <input type="text" class="userInput" autofocus="" autocomplete="email" value="" placeholder="Enter your Email">
             </div>
-            <a class="rButton highlight rightSide" id="submit">Submit</a>
           </div>
           <div class="hidden" id="status">
             <p class="subP"></p>
           </div>
+          <a class="rButton highlight rightSide" id="submit">Submit</a>
         </div>
       </div>
     </div>
