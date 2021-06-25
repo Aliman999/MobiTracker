@@ -13,6 +13,9 @@ function requestUser(){
   query.send();
   query.onload = async function(){
     user = query.response;
+    await socket()
+    .then(()=>{
+    })
   }
 }
 
