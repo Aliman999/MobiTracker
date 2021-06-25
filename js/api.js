@@ -22,13 +22,11 @@ requestUser();
 function socket(){
   webSocket = new WebSocket("wss://mobitracker.co:2599");
   webSocket.onopen = function(){
-    /*
     message = {
       type:"auth",
       token:jwt.content
     };
     webSocket.send(JSON.stringify(message));
-    */
     console.log("Authentication Sent");
     api(user.sessionUser);
     heartbeat();
