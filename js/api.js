@@ -23,24 +23,27 @@ function requestUser(){
 requestUser();
 
 function socket(){
-  webSocket = new WebSocket("wss://mobitracker.co:2599");
-  webSocket.onopen = function(){
-    message = {
-      type:"auth",
-      token:jwt.content
-    };
-    webSocket.send(JSON.stringify(message));
-    heartbeat();
-  }
-  webSocket.onmessage = function(event){
-    data = JSON.parse(event.data);
-  }
-  webSocket.onerror = function(err){
+  return new Promise(callback => {
+    webSocket = new WebSocket("wss://mobitracker.co:2599");
+    webSocket.onopen = function(){
+      message = {
+        type:"auth",
+        token:jwt.content
+      };
+      webSocket.send(JSON.stringify(message));
+      heartbeat();
+    }
+    webSocket.onmessage = function(event){
+      var data = JSON.parse(event.data);
+      callback();
+    }
+    webSocket.onerror = function(err){
 
-  }
-  webSocket.onclose = function(){
-    setTimeout(socket, 3000);
-  };
+    }
+    webSocket.onclose = function(){
+      setTimeout(socket, 3000);
+    };
+  });
 }
 
 function heartbeat() {
