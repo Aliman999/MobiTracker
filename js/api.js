@@ -15,7 +15,6 @@ function requestUser(){
     user = query.response;
     await socket()
     .then(()=>{
-      api(user.sessionUser);
     })
   }
 }
@@ -26,11 +25,14 @@ function socket(){
   return new Promise(callback => {
     webSocket = new WebSocket("wss://mobitracker.co:2599");
     webSocket.onopen = function(){
+      /*
       message = {
         type:"auth",
         token:jwt.content
       };
       webSocket.send(JSON.stringify(message));
+      */
+      api(user.sessionUser);
       heartbeat();
     }
     webSocket.onmessage = function(event){
