@@ -4,12 +4,15 @@ var tokenHeader = document.getElementsByName("token")[0];
 var eContainer = document.getElementById("emailInput");
 var rStatus = document.getElementById("status");
 var input = document.getElementsByClassName("userInput")[0];
+var sContainer = document.getElementById("subContainer");
 var submit = document.getElementById("submit");
 
 eBtn.onclick = function(){
   if(!eContainer.classList.contains("hidden")){
     eContainer.classList.add("hidden");
+    sContainer.classList.add("hidden");
   }else{
+    sContainer.classList.remove("hidden");
     eContainer.classList.remove("hidden");
     eContainer.focus();
     eContainer.addEventListener('keypress', function (e){
