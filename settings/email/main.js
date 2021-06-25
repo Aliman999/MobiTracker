@@ -7,22 +7,26 @@ var input = document.getElementsByClassName("userInput")[0];
 var submit = document.getElementById("submit");
 
 eBtn.onclick = function(){
-  eContainer.classList.remove("hidden");
-  eContainer.focus();
-  eContainer.addEventListener('keypress', function (e){
-    if(e.key === 'Enter'){
+  if(!eContainer.classList.contains("hidden")){
+    eContainer.classList.add("hidden");
+  }else{
+    eContainer.classList.remove("hidden");
+    eContainer.focus();
+    eContainer.addEventListener('keypress', function (e){
+      if(e.key === 'Enter'){
+        verify(eContainer.value);
+      }
+    });
+    input.oninput = function(e){
+      if(e.target.value.includes("@")){
+        eContainer.verified = true;
+      }else{
+        eContainer.verified = false;
+      }
+    }
+    submit.onclick = function(){
       verify(eContainer.value);
     }
-  });
-  input.oninput = function(e){
-    if(e.target.value.includes("@")){
-      eContainer.verified = true;
-    }else{
-      eContainer.verified = false;
-    }
-  }
-  submit.onclick = function(){
-    verify(eContainer.value);
   }
 }
 
