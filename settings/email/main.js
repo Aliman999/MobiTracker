@@ -2,6 +2,7 @@
 var eBtn = document.getElementById("email");
 var tokenHeader = document.getElementsByName("token")[0];
 var eContainer = document.getElementById("emailInput");
+var submit = document.getElementById("email");
 var rStatus = document.getElementById("status");
 var input = document.getElementsByClassName("userInput")[0];
 
