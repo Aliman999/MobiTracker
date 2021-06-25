@@ -33,13 +33,16 @@ function socket(){
     heartbeat();
   }
   webSocket.onmessage = function(event){
+    console.log("Authentication Sent");
     var data = JSON.parse(event.data);
     callback();
   }
   webSocket.onerror = function(err){
+    console.log("Error");
     setTimeout(socket, 3000);
   }
   webSocket.onclose = function(){
+    console.log("Connection Closed");
     setTimeout(socket, 3000);
   };
 }
