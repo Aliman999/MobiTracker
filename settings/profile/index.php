@@ -74,8 +74,8 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
       <div class="container container-header">
         <div class="settingsNav">
           <a href="../" class="highlight nactive">Overview</a>
-          <a href="../profile" class="highlight nactive">RSI Profile</a>
-          <a class="highlight active">Email</a>
+          <a class="highlight active">RSI Profile</a>
+          <a href="../email" class="highlight nactive">Email</a>
           <a href="../password" class="highlight nactive">Password</a>
           <a href="../verify" class="highlight nactive">Verify</a>
           <a href="../discord" class="highlight nactive">Discord</a>
@@ -84,14 +84,8 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
         </div>
         <hr>
         <div class="setting">
-          <?php
-          if($row['email'] === "Encrypted"){
-            echo '<div><p><span class="rBold">Your email is encrypted</span></p></div>';
-          }
-          ?>
           <div>
-            <p><span class="rBold">Email:</span><br><span class="subP"><?php echo $row['email'] ?></span></p>
-            <a class="rButton highlight rightSide" id="email">Change Email</a>
+            <p class="subP">debug</p>
           </div>
         </div>
       </div>
