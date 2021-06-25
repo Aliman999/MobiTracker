@@ -1,3 +1,4 @@
+var tokenHeader = document.getElementsByName("token")[0];
 var jwt = document.getElementsByName("jwt")[0];
 var query = new XMLHttpRequest();
 var webSocket = null;
