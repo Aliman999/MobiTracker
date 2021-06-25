@@ -47,7 +47,7 @@ function verify(email){
       var userResponse = verifyEmail.response;
       if(userResponse.status){
         if(rStatus.parentElement.classList.contains("hidden")){
-          rStatus.classList.toggle("hidden");
+          rStatus.parentElement.classList.toggle("hidden");
           rStatus.innerText = userResponse.data;
         }
         setTimeout(()=>{
