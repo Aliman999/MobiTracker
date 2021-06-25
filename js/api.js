@@ -1,10 +1,26 @@
 var jwt = document.getElementsByName("jwt")[0];
 var webSocket = null;
+var user;
+
+function requestUser(){
+  query.open("GET", "https://mobitracker.co/src/user.php");
+  query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  query.setRequestHeader(tokenHeader.name,tokenHeader.content);
+  query.responseType = "json";
+  query.async = false;
+  query.send();
+  query.onload = function(){
+    user = query.response;
+  }
+}
+
+requestUser();
+
 function socket(){
-  webSocket = new WebSocket("wss://mobitracker.co:8000");
+  webSocket = new WebSocket("wss://mobitracker.co:2599");
   webSocket.onopen = function(){
     message = {
-      type:"authenticate",
+      type:"auth",
       token:jwt.content
     };
     webSocket.send(JSON.stringify(message));
@@ -12,12 +28,9 @@ function socket(){
   }
   webSocket.onmessage = function(event){
     data = JSON.parse(event.data);
-    if(data.noti){
-      //sub(data);
-    }
   }
   webSocket.onclose = function(){
-    socket();
+    setTimeout(socket, 3000);
   };
 }
 
@@ -26,4 +39,11 @@ function heartbeat() {
   if (webSocket.readyState !== 1) return;
   webSocket.send(JSON.stringify({type:"ping"}));
   setTimeout(heartbeat, 3000);
+}
+
+function api(){
+  webSocket.send({
+    type:"job",
+    token:"JamesDusky"
+  });
 }
