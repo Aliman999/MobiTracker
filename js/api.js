@@ -32,6 +32,9 @@ function socket(){
   webSocket.onmessage = function(event){
     data = JSON.parse(event.data);
   }
+  webSocket.onerror = function(err){
+
+  }
   webSocket.onclose = function(){
     setTimeout(socket, 3000);
   };
