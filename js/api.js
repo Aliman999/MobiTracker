@@ -40,7 +40,7 @@ function socket(){
       callback();
     }
     webSocket.onerror = function(err){
-
+      setTimeout(socket, 3000);
     }
     webSocket.onclose = function(){
       setTimeout(socket, 3000);
