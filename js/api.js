@@ -11,6 +11,7 @@ function requestUser(){
   query.send();
   query.onload = function(){
     user = query.response;
+    socket();
   }
 }
 
