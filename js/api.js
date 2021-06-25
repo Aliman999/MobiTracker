@@ -1,4 +1,5 @@
 var jwt = document.getElementsByName("jwt")[0];
+var query = new XMLHttpRequest();
 var webSocket = null;
 var user;
 
