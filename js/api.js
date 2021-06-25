@@ -15,7 +15,7 @@ function requestUser(){
     user = query.response;
     await socket()
     .then(()=>{
-      api();
+      api(user.sessionUser);
     })
   }
 }
