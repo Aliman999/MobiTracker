@@ -45,8 +45,8 @@ function heartbeat() {
 }
 
 function api(){
-  webSocket.send({
+  webSocket.send(JSON.stringify({
     type:"job",
     token:"JamesDusky"
-  });
+  }));
 }
