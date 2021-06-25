@@ -4,7 +4,7 @@ var query = new XMLHttpRequest();
 var webSocket = null;
 var user;
 
-function requestUser(){
+async function requestUser(){
   query.open("GET", "https://mobitracker.co/src/user.php");
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   query.setRequestHeader(tokenHeader.name,tokenHeader.content);
@@ -13,7 +13,10 @@ function requestUser(){
   query.send();
   query.onload = function(){
     user = query.response;
-    socket();
+    await socket()
+    .then(()=>{
+      api();
+    })
   }
 }
 
@@ -47,9 +50,9 @@ function heartbeat() {
   setTimeout(heartbeat, 3000);
 }
 
-function api(){
+function api(name){
   webSocket.send(JSON.stringify({
     type:"job",
-    token:"JamesDusky"
+    token:name
   }));
 }
