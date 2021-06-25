@@ -35,6 +35,7 @@ eBtn.onclick = function(){
 
 function verify(email){
   if(eContainer.verified){
+    sContainer.classList.add("hidden");
     eContainer.classList.add("hidden");
     var verifyEmail = new XMLHttpRequest();
     verifyEmail.open("POST", "sendEmail.php");
