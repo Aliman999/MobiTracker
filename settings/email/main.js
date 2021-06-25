@@ -2,26 +2,28 @@
 var eBtn = document.getElementById("email");
 var tokenHeader = document.getElementsByName("token")[0];
 var eContainer = document.getElementById("emailInput");
-var submit = document.getElementById("email");
 var rStatus = document.getElementById("status");
 var input = document.getElementsByClassName("userInput")[0];
+var submit = document.getElementById("submit");
 
 eBtn.onclick = function(){
-  if(!eContainer.classList.contains("hidden")){
-    verify(eContainer.value);
-  }else{
-    eContainer.classList.remove("hidden");
-    eContainer.focus();
-    eContainer.addEventListener('keypress', function (e) {
-      if (e.key === 'Enter') {
-        verify(eContainer.value);
-      }
-    });
-    input.oninput = function(e){
-      if(e.target.value.includes("@")){
-        eContainer.verified = true;
-      }else{
-        eContainer.verified = false;
+  submit.onclick = function(){
+    if(!eContainer.classList.contains("hidden")){
+      verify(eContainer.value);
+    }else{
+      eContainer.classList.remove("hidden");
+      eContainer.focus();
+      eContainer.addEventListener('keypress', function (e){
+        if(e.key === 'Enter'){
+          verify(eContainer.value);
+        }
+      });
+      input.oninput = function(e){
+        if(e.target.value.includes("@")){
+          eContainer.verified = true;
+        }else{
+          eContainer.verified = false;
+        }
       }
     }
   }
