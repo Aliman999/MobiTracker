@@ -85,7 +85,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
         <hr>
         <div class="setting">
           <div>
-            <p class="subP">debug</p>
+            <p><span class="rBold">Email:</span><br><span class="subP"></span></p>
           </div>
         </div>
       </div>
