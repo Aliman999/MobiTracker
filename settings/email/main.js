@@ -17,7 +17,7 @@ eBtn.onclick = function(){
     eContainer.focus();
     eContainer.addEventListener('keypress', function (e){
       if(e.key === 'Enter'){
-        verify(eContainer.value);
+        verify(input.value);
       }
     });
     input.oninput = function(e){
@@ -28,7 +28,7 @@ eBtn.onclick = function(){
       }
     }
     submit.onclick = function(){
-      verify(eContainer.value);
+      verify(input.value);
     }
   }
 }
