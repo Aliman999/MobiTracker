@@ -3,7 +3,7 @@ var jwt = document.getElementsByName("jwt")[0];
 var query = new XMLHttpRequest();
 var webSocket = null;
 var user;
-/*
+
 function requestUser(){
   query.open("GET", "https://mobitracker.co/src/user.php");
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -18,10 +18,8 @@ function requestUser(){
     })
   }
 }
-requestUser();
-*/
 
-socket();
+requestUser();
 
 function socket(){
   return new Promise(callback => {
