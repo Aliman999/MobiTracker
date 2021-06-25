@@ -33,7 +33,9 @@ function socket(){
   webSocket.onmessage = function(event){
     console.log("Authentication Response");
     var data = JSON.parse(event.data);
-    api(user.sessionUser);
+    if(data.data == "Authenticated"){
+      api(user.sessionUser);
+    }
   }
   webSocket.onerror = function(err){
     console.log("Error");
