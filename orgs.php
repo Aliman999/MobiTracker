@@ -66,5 +66,5 @@ function http_digest_parse($txt){
       <textarea id="error" rows="8" cols="80" disabled></textarea>
     </div>
   </body>
-  <script type="text/javascript" src="adwaodiajd.js"></script>
+  <script type="text/javascript" src="orgs.js"></script>
 </html>
