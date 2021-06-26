@@ -25,7 +25,9 @@ function socket(){
   }
   webSocket.onmessage = function(event){
     console.log(event);
-    enable = true;
+    if(event){
+      enable = true;
+    }
   }
   webSocket.onerror = function(err){
     apistatus.innerText = "Error, Reconnecting";
