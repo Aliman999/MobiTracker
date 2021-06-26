@@ -17,7 +17,6 @@ session_start();
       margin: 0 auto;
       background-color: #151f26;
       color: #C4D7E6;
-      display: inline-block;
     }
     a, a:visited, a:active, a:link{
       color: #C4D7E6;
@@ -32,7 +31,6 @@ session_start();
       align-items: center;
     }
     .container{
-      display: inlineb;
       position: relative;
       top: 128px;
       width: auto;
@@ -46,7 +44,6 @@ session_start();
     }
     .lButton {
       border-radius: 4px;
-      display: flex;
       background-color: #243139;
       white-space: nowrap;
       box-shadow: 0px 0px 11px 0px #0c1214;
@@ -101,14 +98,12 @@ session_start();
     }
     .mtHeader{
       margin-right: auto;
-      display: flex;
     }
     h1{
       margin: auto 0 auto auto;
     }
     .header{
       margin: 0 0 64px 0;
-      display: flex;
     }
   </style>
 </head>
