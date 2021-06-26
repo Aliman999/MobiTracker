@@ -14,8 +14,7 @@ function socket(){
       type:"orgs",
       token:""
     }));
-
-    apistatus.innerText = "Ready";
+    enable = true;
     input.addEventListener('keypress', function (e){
       if(e.key === 'Enter' && enable == true){
         orgs(input.value);
@@ -31,6 +30,7 @@ function socket(){
     }else if (response.type === "status") {
       apistatus.innerText = response.data;
     }else if (response.type === "finished") {
+      apistatus.innerText = response.message;
       output.value = "!search "+response.data.join(" ");
     }
   }
