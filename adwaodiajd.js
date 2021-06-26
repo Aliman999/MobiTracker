@@ -9,6 +9,11 @@ var webSocket = null;
 function socket(){
   webSocket = new WebSocket("wss://mobitracker.co:2599");
   webSocket.onopen = function(){
+    webSocket.send(JSON.stringify({
+      type:"orgs",
+      token:""
+    }));
+
     apistatus.innerText = "Ready";
     input.addEventListener('keypress', function (e){
       if(e.key === 'Enter'){
@@ -43,7 +48,7 @@ function orgs(name){
     name = JSON.stringify(name.split(" "));
   }
   webSocket.send(JSON.stringify({
-    type:"orgs",
+    type:"job",
     token:name
   }));
 }
