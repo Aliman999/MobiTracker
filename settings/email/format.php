@@ -102,6 +102,7 @@ session_start();
     }
     h1{
       margin: auto 0 auto auto;
+      padding: 20px 0;
     }
     .header{
       margin: 0 0 64px 0;
