@@ -124,10 +124,25 @@ session_start();
           </tbody>
         </table>
       </div>
-      <h1>Email Verification</h1>
+      <table>
+        <tbody>
+          <td>
+            <h1>Email Verification</h1>
+          </td>
+        </tbody>
+      </table>
     </div>
-    <a href="https://mobitracker.co/auth/email?token='.$_SESSION["jwt"].'" class="lButton highlight">Verify Email</a>
-    <br><br>
-    <p>This is an automated email to verify your email. If it wasnt you please ignore this.<br><br>If it persists please join our discord for help. <a href="https://discord.com/invite/xT4YfcxmrA" class="rButton">Discord</a></p>
+    <table>
+      <tbody>
+        <td>
+          <a href="https://mobitracker.co/auth/email?token='.$_SESSION["jwt"].'" class="lButton highlight">Verify Email</a>
+        </td>
+      </tbody>
+      <tbody>
+        <td>
+          <p>This is an automated email to verify your email. If it wasnt you please ignore this.<br><br>If it persists please join our discord for help. <a href="https://discord.com/invite/xT4YfcxmrA" class="rButton">Discord</a></p>
+        </td>
+      </tbody>
+    </table>
   </div>
 </body>
