@@ -5,18 +5,16 @@ session_start();
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    html {
+    body{
+      margin: 0 auto;
+      background-color: #151f26;
+      color: #C4D7E6;
       color: #C4D7E6;
       font-family: 'Exo', sans-serif;
       font-weight: 400;
       text-align: center;
       outline: 0;
       height: 100%;
-    }
-    body{
-      margin: 0 auto;
-      background-color: #151f26;
-      color: #C4D7E6;
     }
     a, a:visited, a:active, a:link{
       color: #C4D7E6;
