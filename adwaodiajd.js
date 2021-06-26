@@ -35,7 +35,7 @@ function socket(){
       output.value = "!search "+response.data.join(" ");
     }else if (response.type === "error") {
       enable = true;
-      error.value = response.message;
+      error.value += response.message+"\n";
     }
   }
   webSocket.onerror = function(err){
