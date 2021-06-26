@@ -30,6 +30,7 @@ function socket(){
     }else if (response.type === "status") {
       apistatus.innerText = response.data;
     }else if (response.type === "finished") {
+      enable = true;
       apistatus.innerText = response.message;
       output.value = "!search "+response.data.join(" ");
     }else if (response.type === "error") {
