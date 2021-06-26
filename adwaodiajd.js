@@ -4,7 +4,7 @@ var jwt = document.getElementsByName("jwt")[0];
 var apistatus = document.getElementById("status");
 var input = document.getElementById("input");
 var output = document.getElementById("output");
-var enable;
+var enable = true;
 var webSocket = null;
 
 function socket(){
