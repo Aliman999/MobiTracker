@@ -115,7 +115,9 @@ session_start();
         <table>
           <tbody>
             <td>
-            <a class="mtTitle" href="https://mobitracker.co"><img src="https://mobitracker.co/android-chrome-512x512.png" alt="">MOBITRACKER</a>
+              <img src="https://mobitracker.co/android-chrome-512x512.png" alt=""></td>
+            <td>
+              <a class="mtTitle" href="https://mobitracker.co">MOBITRACKER</a>
             </td>
           </tbody>
         </table>
