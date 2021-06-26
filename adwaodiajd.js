@@ -26,7 +26,6 @@ function socket(){
   }
   webSocket.onerror = function(err){
     apistatus.innerText = "Error, Reconnecting";
-    setTimeout(socket, 3000);
   }
   webSocket.onclose = function(){
     apistatus.innerText = "Connection Closed, Reconnecting";
