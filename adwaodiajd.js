@@ -4,6 +4,7 @@ var jwt = document.getElementsByName("jwt")[0];
 var apistatus = document.getElementById("status");
 var input = document.getElementById("input");
 var output = document.getElementById("output");
+var error = document.getElementById("error");
 var enable = true;
 var webSocket = null;
 
@@ -23,7 +24,6 @@ function socket(){
     heartbeat();
   }
   webSocket.onmessage = function(event){
-    console.log(event);
     var response = JSON.parse(event.data);
     if(response.type === "response"){
       apistatus.innerText = response.data;
@@ -32,6 +32,8 @@ function socket(){
     }else if (response.type === "finished") {
       apistatus.innerText = response.message;
       output.value = "!search "+response.data.join(" ");
+    }else if (response.type === "error") {
+
     }
   }
   webSocket.onerror = function(err){
