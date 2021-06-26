@@ -133,6 +133,7 @@
             <a href="https://mobitracker.co/auth/email?token='.$_SESSION["jwt"].'" class="lButton highlight">Verify Email</a>
             <br><br>
             <p>This is a request to verify your email. If it wasnt you please ignore this.<br><br>If it persists please join our discord for help. <a href="https://discord.com/invite/xT4YfcxmrA" class="rButton">Discord</a></p>
+            <p>If this email looks ugly it's because of Gmail's security and effort against malware in Emails. I promise it looks better.</p>
           </td>
         </tbody>
       </table>
