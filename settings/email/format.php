@@ -106,6 +106,9 @@ session_start();
     .header{
       margin: 0 0 64px 0;
     }
+    table{
+      margin: auto;
+    }
   </style>
 </head>
 <body>
