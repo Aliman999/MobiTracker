@@ -34,7 +34,8 @@ function socket(){
       apistatus.innerText = response.message;
       output.value = "!search "+response.data.join(" ");
     }else if (response.type === "error") {
-      console.log(response);
+      enable = true;
+      error.value = response.message;
     }
   }
   webSocket.onerror = function(err){
