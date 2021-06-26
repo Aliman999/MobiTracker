@@ -57,6 +57,7 @@ function heartbeat() {
 
 function orgs(name){
   enable = false;
+  error.value = "";
   apistatus.innerText = "Job Sent";
   if(name.indexOf(' ') >= 0){
     name = JSON.stringify(name.split(" "));
