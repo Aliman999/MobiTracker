@@ -20,11 +20,11 @@ function socket(){
   webSocket.onmessage = function(event){
   }
   webSocket.onerror = function(err){
-    console.log("Error");
+    apistatus.innerText = "Error, Reconnecting";
     setTimeout(socket, 3000);
   }
   webSocket.onclose = function(){
-    console.log("Connection Closed");
+    apistatus.innerText = "Connection Closed, Reconnecting";
     setTimeout(socket, 3000);
   };
 }
