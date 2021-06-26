@@ -28,6 +28,7 @@ function socket(){
     setTimeout(socket, 3000);
   };
 }
+socket();
 
 function heartbeat() {
   if (!webSocket) return;
