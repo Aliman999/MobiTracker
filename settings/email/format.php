@@ -5,7 +5,7 @@
     body{
       margin: 0 auto;
       background-color: #151f26;
-      color: #253139;
+      color: #C4D7E6;
       font-family: "Exo", sans-serif;
       font-weight: 400;
       text-align: center;
@@ -13,7 +13,7 @@
       height: 100%;
     }
     a, a:visited, a:active, a:link{
-      color: #253139;
+      color: #C4D7E6;
       text-decoration: none;
       outline: 0;
     }
@@ -29,7 +29,7 @@
       top: 128px;
       margin: auto;
       width: 600px;
-      background-color: #C4D7E6;
+      background-color: #253139;
       padding: 8px 16px;
       border: 2px solid rgb(57, 206, 216);
       box-shadow: 0px 0px 15px rgba(57, 206, 216, 0.5);
@@ -50,7 +50,7 @@
       width: 210px;
       padding: 10px 25px;
       font-size: 24px;
-      color: #253139;
+      color: #C4D7E6;
       border-radius: 4px;
       white-space: nowrap;
     }
@@ -68,7 +68,7 @@
       background-color: #151f26;
       padding: 4px 8px;
       font-size: 18px;
-      color: #253139;
+      color: #C4D7E6;
       border-radius: 4px;
       white-space: nowrap;
     }
@@ -77,14 +77,14 @@
       text-shadow: 0px 0px 5px #c4d7e6;
     }
     .highlight {
-      color: #253139;
+      color: #C4D7E6;
     }
     td>img{
       height: 64px;
       width: 64px;
     }
     .mtTitle{
-      color: #253139;
+      color: #C4D7E6;
       font-size: 27px;
       padding: 8px;
       margin: auto;
