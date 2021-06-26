@@ -17,7 +17,7 @@ function socket(){
 
     apistatus.innerText = "Ready";
     input.addEventListener('keypress', function (e){
-      if(e.key === 'Enter' && enable = true){
+      if(e.key === 'Enter' && enable == true){
         orgs(input.value);
       }
     });
