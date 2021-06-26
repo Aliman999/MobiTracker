@@ -9,15 +9,15 @@ var webSocket = null;
 function socket(){
   webSocket = new WebSocket("wss://mobitracker.co:2599");
   webSocket.onopen = function(){
-    heartbeat();
-  }
-  webSocket.onmessage = function(event){
     status.innerText = "Ready";
     input.addEventListener('keypress', function (e){
       if(e.key === 'Enter'){
         orgs();
       }
     });
+    heartbeat();
+  }
+  webSocket.onmessage = function(event){
   }
   webSocket.onerror = function(err){
     console.log("Error");
