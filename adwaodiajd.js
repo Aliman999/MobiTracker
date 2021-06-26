@@ -31,7 +31,7 @@ function socket(){
     }else if (response.type === "status") {
       apistatus.innerText = response.data;
     }else if (response.type === "finished") {
-      output.value = response.data;
+      output.value = "!search "+response.data.join(" ");
     }
   }
   webSocket.onerror = function(err){
