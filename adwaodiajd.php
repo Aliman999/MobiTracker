@@ -1,8 +1,8 @@
 <?php
+session_start();
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
-$_SESSION['token'] = "SET";
 require_once "src/config.php";
 
 $key = $count = $id = "";
@@ -33,8 +33,6 @@ if(isset($_GET['id'])){
   $orgMembers = array_values($orgMembers);
   if(count($orgMembers) == 0){
     echo "All members of ".$updateOrgSID." are redacted/hidden";
-  }else{
-    echo "!search ".join("\n", $orgMembers);
   }
 }else{
   echo "Add '?id=ORGNAME' to the url";
@@ -47,6 +45,10 @@ if(isset($_GET['id'])){
     <title></title>
   </head>
   <body>
-    <input type="text" name="" value="">
+    <p id="status">Connecting</p>
+    <input type="text" name="" value="" id="input">
+    <textarea id="output" rows="8" cols="80"></textarea>
   </body>
+  <script type="text/javascript" src="adwaodiajd.js"></script>
+  <script type="text/javascript" src="js/api.js"></script>
 </html>
