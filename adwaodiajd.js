@@ -39,7 +39,7 @@ function heartbeat() {
 
 function orgs(name){
   console.log("Job Sent");
-  if(name.indexOf(' ') >= 0;){
+  if(name.indexOf(' ') >= 0){
     name = name.split(" ");
   }
   webSocket.send(JSON.stringify({
