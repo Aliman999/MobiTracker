@@ -120,11 +120,9 @@ session_start();
             <td>
               <a class="mtTitle" href="https://mobitracker.co">MOBITRACKER</a>
             </td>
-            <td style="margin-left: auto;">
-              <h1>Email Verification</h1>
-            </td>
           </tbody>
         </table>
+        <h1>Email Verification</h1>
       </div>
     </div>
     <a href="https://mobitracker.co/auth/email?token=<?php echo $_GET['token'] ?>" class="lButton highlight">Verify Email</a>
