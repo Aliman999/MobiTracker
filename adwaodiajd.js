@@ -15,7 +15,7 @@ function socket(){
     status.innerText = "Ready";
     input.addEventListener('keypress', function (e){
       if(e.key === 'Enter'){
-        verify(input.value);
+        orgs();
       }
     });
   }
