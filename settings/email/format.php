@@ -96,9 +96,6 @@ session_start();
     .mtTitle:hover{
       text-shadow: 0px 0px 5px #c4d7e6;
     }
-    .mtHeader{
-      margin-right: auto;
-    }
     h1{
       margin: auto 0 auto auto;
     }
@@ -117,7 +114,8 @@ session_start();
         <table>
           <tbody>
             <td>
-              <img src="https://mobitracker.co/android-chrome-512x512.png" alt=""></td>
+              <img src="https://mobitracker.co/android-chrome-512x512.png" alt="">
+            </td>
             <td>
               <a class="mtTitle" href="https://mobitracker.co">MOBITRACKER</a>
             </td>
@@ -135,11 +133,10 @@ session_start();
     <div class="">
       <table style="margin:8px 0;">
         <tbody>
-          <td>
-            <a href="https://mobitracker.co/auth/email?token='.$_SESSION["jwt"].'" class="lButton highlight">Verify Email</a>
+
+            <td><a href="https://mobitracker.co/auth/email?token='.$_SESSION["jwt"].'" class="lButton highlight">Verify Email</a></td>
             <br><br>
             <p>This is an automated email to verify your email. If it wasnt you please ignore this.<br><br>If it persists please join our discord for help. <a href="https://discord.com/invite/xT4YfcxmrA" class="rButton">Discord</a></p>
-          </td>
         </tbody>
       </table>
     </div>
