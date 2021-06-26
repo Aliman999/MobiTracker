@@ -112,8 +112,13 @@ session_start();
   <div class="container">
     <div class="header">
       <div class="mtHeader">
-
-        <a class="mtTitle" href="https://mobitracker.co"><img src="https://mobitracker.co/android-chrome-512x512.png" alt="">MOBITRACKER</a>
+        <table>
+          <tbody>
+            <td>
+            <a class="mtTitle" href="https://mobitracker.co"><img src="https://mobitracker.co/android-chrome-512x512.png" alt="">MOBITRACKER</a>
+            </td>
+          </tbody>
+        </table>
       </div>
       <h1>Email Verification</h1>
     </div>
