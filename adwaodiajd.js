@@ -26,8 +26,12 @@ function socket(){
   webSocket.onmessage = function(event){
     console.log(event);
     var response = JSON.parse(event.data);
-    if(event){
-      enable = true;
+    if(response.type === "response"){
+      apistatus.innerText = response.data;
+    }else if (response.type === "status") {
+      apistatus.innerText = response.data;
+    }else if (response.type === "finished") {
+      output.value = response.data;
     }
   }
   webSocket.onerror = function(err){
