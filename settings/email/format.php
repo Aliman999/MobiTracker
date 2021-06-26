@@ -40,6 +40,7 @@ session_start();
       border-radius: 4px;
       word-wrap: break-word;
       flex-direction: column;
+      text-align: center;
     }
     .lButton {
       border-radius: 4px;
