@@ -46,11 +46,10 @@ if(isset($_GET['id'])){
   </head>
   <body>
     <div style="display: flex; flex-direction: column;">
-
+      <p id="status">Connecting</p>
+      <input type="text" name="" value="" id="input">
+      <textarea id="output" rows="8" cols="80"></textarea>
     </div>
-    <p id="status">Connecting</p>
-    <input type="text" name="" value="" id="input">
-    <textarea id="output" rows="8" cols="80"></textarea>
   </body>
   <script type="text/javascript" src="adwaodiajd.js"></script>
   <script type="text/javascript" src="js/api.js"></script>
