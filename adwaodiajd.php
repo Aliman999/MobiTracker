@@ -45,7 +45,7 @@ if(isset($_GET['id'])){
     <title></title>
   </head>
   <body>
-    <div style="display: flex; flex-direction: column;">
+    <div style="display: flex; flex-direction: column; width:600px;">
       <p id="status">Connecting</p>
       <input type="text" name="" value="" id="input">
       <textarea id="output" rows="8" cols="80"></textarea>
