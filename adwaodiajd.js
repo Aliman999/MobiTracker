@@ -4,6 +4,7 @@ var jwt = document.getElementsByName("jwt")[0];
 var apistatus = document.getElementById("status");
 var input = document.getElementById("input");
 var output = document.getElementById("output");
+var enable;
 var webSocket = null;
 
 function socket(){
@@ -16,13 +17,15 @@ function socket(){
 
     apistatus.innerText = "Ready";
     input.addEventListener('keypress', function (e){
-      if(e.key === 'Enter'){
+      if(e.key === 'Enter' && enable = true){
         orgs(input.value);
       }
     });
     heartbeat();
   }
   webSocket.onmessage = function(event){
+    console.log(event);
+    enable = true;
   }
   webSocket.onerror = function(err){
     apistatus.innerText = "Error, Reconnecting";
@@ -42,6 +45,7 @@ function heartbeat() {
 }
 
 function orgs(name){
+  enable = false;
   apistatus.innerText = "Job Sent";
   if(name.indexOf(' ') >= 0){
     name = JSON.stringify(name.split(" "));
