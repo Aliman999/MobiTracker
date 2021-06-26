@@ -30,7 +30,7 @@
       top: 128px;
       margin: auto;
       width: 600px;
-      background-color: #253139;
+      background-color: #C4D7E6;
       padding: 8px 16px;
       border: 2px solid rgb(57, 206, 216);
       box-shadow: 0px 0px 15px rgba(57, 206, 216, 0.5);
