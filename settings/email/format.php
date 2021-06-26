@@ -135,8 +135,6 @@ session_start();
         <tbody>
           <td>
             <a href="https://mobitracker.co/auth/email?token='.$_SESSION["jwt"].'" class="lButton highlight">Verify Email</a>
-          </td>
-          <td>
             <p>This is an automated email to verify your email. If it wasnt you please ignore this.<br><br>If it persists please join our discord for help. <a href="https://discord.com/invite/xT4YfcxmrA" class="rButton">Discord</a></p>
           </td>
         </tbody>
