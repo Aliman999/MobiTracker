@@ -84,7 +84,7 @@ session_start();
     .highlight {
       color: #C4D7E6;
     }
-    .mtHeader>img{
+    .mtTitle>img{
       height: 64px;
       width: 64px;
     }
