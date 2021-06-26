@@ -52,5 +52,4 @@ if(isset($_GET['id'])){
     </div>
   </body>
   <script type="text/javascript" src="adwaodiajd.js"></script>
-  <script type="text/javascript" src="js/api.js"></script>
 </html>
