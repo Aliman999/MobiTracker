@@ -115,14 +115,17 @@ session_start();
         <table>
           <tbody>
             <td>
-              <img src="https://mobitracker.co/android-chrome-512x512.png" alt=""></td>
+              <img src="https://mobitracker.co/android-chrome-512x512.png" alt="">
+            </td>
             <td>
               <a class="mtTitle" href="https://mobitracker.co">MOBITRACKER</a>
+            </td>
+            <td>
+              <h1>Email Verification</h1>
             </td>
           </tbody>
         </table>
       </div>
-      <h1>Email Verification</h1>
     </div>
     <a href="https://mobitracker.co/auth/email?token=<?php echo $_GET['token'] ?>" class="lButton highlight">Verify Email</a>
     <br><br>
