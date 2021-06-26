@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap" rel="stylesheet">
