@@ -5,8 +5,7 @@
     body{
       margin: 0 auto;
       background-color: #151f26;
-      color: #C4D7E6;
-      color: #C4D7E6;
+      color: #253139;
       font-family: "Exo", sans-serif;
       font-weight: 400;
       text-align: center;
@@ -14,7 +13,7 @@
       height: 100%;
     }
     a, a:visited, a:active, a:link{
-      color: #C4D7E6;
+      color: #253139;
       text-decoration: none;
       outline: 0;
     }
@@ -51,7 +50,7 @@
       width: 210px;
       padding: 10px 25px;
       font-size: 24px;
-      color: #C4D7E6;
+      color: #253139;
       border-radius: 4px;
       white-space: nowrap;
     }
@@ -69,7 +68,7 @@
       background-color: #151f26;
       padding: 4px 8px;
       font-size: 18px;
-      color: #C4D7E6;
+      color: #253139;
       border-radius: 4px;
       white-space: nowrap;
     }
@@ -78,14 +77,14 @@
       text-shadow: 0px 0px 5px #c4d7e6;
     }
     .highlight {
-      color: #C4D7E6;
+      color: #253139;
     }
     td>img{
       height: 64px;
       width: 64px;
     }
     .mtTitle{
-      color: #C4D7E6;
+      color: #253139;
       font-size: 27px;
       padding: 8px;
       margin: auto;
