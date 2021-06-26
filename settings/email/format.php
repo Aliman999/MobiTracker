@@ -120,7 +120,7 @@ session_start();
             <td>
               <a class="mtTitle" href="https://mobitracker.co">MOBITRACKER</a>
             </td>
-            <td>
+            <td style="margin-left: auto;">
               <h1>Email Verification</h1>
             </td>
           </tbody>
