@@ -25,6 +25,7 @@ function socket(){
   }
   webSocket.onmessage = function(event){
     console.log(event);
+    var response = JSON.parse(event.data);
     if(event){
       enable = true;
     }
