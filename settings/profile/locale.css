@@ -7,7 +7,9 @@
   margin: auto 0;
   animation: rotation 2s infinite linear;
 }
-
+#loadingContainer{
+  transition: .25s ease-in-out;
+}
 .faded{
   opacity: 0;
   transition: .25s ease-in-out;
