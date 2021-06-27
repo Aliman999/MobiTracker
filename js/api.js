@@ -2,7 +2,7 @@ var tokenHeader = document.getElementsByName("token")[0];
 var jwt = document.getElementsByName("jwt")[0];
 var webSocket = null;
 
-var load = setInterval(()=>{
+var waitUser = setInterval(()=>{
   if(user){
     socket();
     clearInterval(load);
