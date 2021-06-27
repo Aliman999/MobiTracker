@@ -12,6 +12,7 @@
 }
 .badgeImg{
   height: 32px;
+  margin: auto 0;
 }
 .badgeCont{
   display: flex;
