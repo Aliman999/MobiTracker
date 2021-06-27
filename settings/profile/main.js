@@ -1,6 +1,6 @@
 var display = setInterval(()=>{
   if(user){
-    init();
+    //init();
     clearInterval(display);
   }
 }, 1000);

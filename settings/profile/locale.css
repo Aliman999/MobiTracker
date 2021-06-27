@@ -10,10 +10,13 @@
 #loadingContainer{
   transition: .25s ease-in-out;
 }
+
+/*
 .faded{
   opacity: 0;
   transition: .25s ease-in-out;
 }
+*/
 
 @keyframes rotation {
   from {
