@@ -98,6 +98,12 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           <div class="faded">
             <p><span class="rBold">Citizen ID:</span><br><span class="subP">#153021</span></p>
             <p><span class="rBold">Enlisted:</span><br><span class="subP">June 24, 2013</span></p>
+            <p><span class="rBold">Languages:</span><br><span class="subP">English</span></p>
+          </div>
+          <div class="faded">
+            <p><span class="rBold">Organizations</span></p>
+            <p><span class="rBold">Enlisted:</span><br><span class="subP">June 24, 2013</span></p>
+            <p><span class="rBold">Languages:</span><br><span class="subP">English</span></p>
           </div>
           <div class="faded divLeft">
             <p><span class="rBold">Bio:</span><br>Eye Color: Light Brown</p>
