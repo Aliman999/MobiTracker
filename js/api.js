@@ -1,23 +1,13 @@
 var tokenHeader = document.getElementsByName("token")[0];
 var jwt = document.getElementsByName("jwt")[0];
-var query = new XMLHttpRequest();
 var webSocket = null;
-var user;
 
-function requestUser(){
-  query.open("GET", "https://mobitracker.co/src/user.php");
-  query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  query.setRequestHeader(tokenHeader.name,tokenHeader.content);
-  query.responseType = "json";
-  query.async = false;
-  query.send();
-  query.onload = function(){
-    user = query.response;
-    socket();
+var load = setInterval(()=>{
+  if(user){
+    console.log(user);
+    //socket();
   }
-}
-
-requestUser();
+}, 1000);
 
 function socket(){
   webSocket = new WebSocket("wss://mobitracker.co:2599");
