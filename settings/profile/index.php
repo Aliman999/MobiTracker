@@ -100,22 +100,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <p><span class="rBold">Enlisted:</span><br><span class="subP">June 24, 2013</span></p>
           </div>
           <div class="faded">
-            <p><span class="rBold">Bio:</span><br>Eye Color: Light Brown
-Hair Color: Dark Brown
-Hair Style: Slicked Back
-Father: Smuggler from the Oso system.
-Mother: Infiltrator from Pallas.
-Home: Nyx system.
-
-James Dusky started flying in a 325a. Last seen in a convoy, piloting a Banu Merchant Man incognito and blockade running UEE Navy checkpoints carrying a plethora of illegal goods and convicts from Rihlah to Vagabond.
-
-Carries a golden Atzkav “Deadeye” sniper rifle and a golden Yubarev “Deadeye” pistol stolen off a Russian bounty hunter "Nightstalker" in Stanton.
-
-James Dusky's currently a smuggler  in the Pyro system.
-
-Creator of Mobitracker.co
-
-U2FsdGVkX18aAi7HmMKTTmf1aXYYxmCykBKCrc4dOjw=</p>
+            <p><span class="rBold">Bio:</span><br>Eye Color: Light Brown</p>
           </div>
         </div>
       </div>
