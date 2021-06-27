@@ -5,4 +5,5 @@
   height: 32px;
   width: 32px;
   margin: auto 0;
+  animation: rotation 2s infinite linear;
 }
