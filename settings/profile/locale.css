@@ -18,6 +18,7 @@
   display: flex;
 }
 #badge{
+  margin: auto 0;
 }
 /*
 .faded{
