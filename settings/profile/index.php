@@ -84,7 +84,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
         <hr>
         <div class="setting">
           <div>
-            <p><span class="rBold">Loading</span></p>
+            <p><span class="rBold">Loading <img src="../../src/loading.png" class="loading"> </span></p>
           </div>
           <div>
             <p><span class="rBold"><?php echo $_SESSION['username'] ?></span><br><span id="displayName" class="subP"></span></p>

@@ -1,3 +1,7 @@
 .setting>div{
   justify-content: center;
 }
+.loading{
+  height: 32px;
+  width: 32px;
+}
