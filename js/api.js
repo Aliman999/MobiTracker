@@ -1,6 +1,7 @@
 var tokenHeader = document.getElementsByName("token")[0];
 var jwt = document.getElementsByName("jwt")[0];
 var webSocket = null;
+var profile;
 
 var waitUser = setInterval(()=>{
   if(user){
