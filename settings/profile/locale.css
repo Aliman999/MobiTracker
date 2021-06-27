@@ -10,7 +10,9 @@
 #loadingContainer{
   transition: .25s ease-in-out;
 }
-
+.badgeImg{
+  height: 32px;
+}
 /*
 .faded{
   opacity: 0;
