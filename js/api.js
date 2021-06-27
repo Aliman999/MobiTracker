@@ -27,6 +27,7 @@ function socket(){
     if(response.type == "authentication"){
       api(user.sessionUser);
     }else if (response.type == "response") {
+      profile = response.data;
       console.log(response.data);
     }
   }
