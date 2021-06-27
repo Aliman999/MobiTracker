@@ -8,6 +8,10 @@
   animation: rotation 2s infinite linear;
 }
 
+.faded{
+  opacity: 0;
+}
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);
