@@ -25,6 +25,9 @@
   opacity: 0;
   transition: .25s ease-in-out;
 }
+.divLeft{
+  justify-content: flex-start;
+}
 
 @keyframes rotation {
   from {
