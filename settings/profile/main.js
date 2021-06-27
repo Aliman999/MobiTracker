@@ -7,5 +7,5 @@ var display = setInterval(()=>{
 
 function init(){
   var field = document.getElementsByClassName("setting")[0];
-
+  
 }
