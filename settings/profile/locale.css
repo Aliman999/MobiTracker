@@ -16,8 +16,8 @@
 .badgeCont{
   display: flex;
 }
-.badgeCont>span{
-  margin: auto 0;
+#badge{
+  padding: 8px;
 }
 /*
 .faded{
