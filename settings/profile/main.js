@@ -1,1 +1,5 @@
-console.log("loaded");
+var load = setInterval(()=>{
+  if(){
+
+  }
+}, 1000);
