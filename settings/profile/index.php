@@ -100,6 +100,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <p><span class="rBold">Enlisted:</span><br><span class="subP">June 24, 2013</span></p>
           </div>
           <div class="faded">
+            <p><span class="rBold">Bio:</span><br></p>
           </div>
         </div>
       </div>
