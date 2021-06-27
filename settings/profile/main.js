@@ -16,7 +16,8 @@ function init(){
     faded[x].style.opacity = 1;
     if(x == faded.length-1){
       clearInterval(display);
+    }else{
+      x++;
     }
-    x++;
   }, 250);
 }
