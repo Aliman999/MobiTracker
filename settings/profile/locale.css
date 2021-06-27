@@ -13,6 +13,12 @@
 .badgeImg{
   height: 32px;
 }
+.badgeCont{
+  display: flex;
+}
+.badgeCont>span{
+  margin: auto 0;
+}
 /*
 .faded{
   opacity: 0;
