@@ -90,6 +90,10 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <p><span class="rBold"><?php echo $_SESSION['username'] ?></span><br><span id="displayName" class="subP"></span></p>
             <p><span class="rBold">Badge:</span><br><img class="badgeImg" src=""><span id="Badge" class="subP"></span></p>
           </div>
+          <div class="faded">
+            <p><span class="rBold"><?php echo $_SESSION['username'] ?></span><br><span id="displayName" class="subP"></span></p>
+            <p><span class="rBold">Badge:</span><br><img class="badgeImg" src=""><span id="Badge" class="subP"></span></p>
+          </div>
         </div>
       </div>
     </div>

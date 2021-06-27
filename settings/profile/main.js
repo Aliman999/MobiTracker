@@ -10,6 +10,13 @@ function init(){
   loading.style.opacity = 0;
   loading.remove();
   var field = document.getElementsByClassName("setting")[0];
-  var faded = document.getElementsByClassName("faded")[0];
-  faded.style.opacity = 1;
+  var faded = document.getElementsByClassName("faded");
+  var x = 0;
+  var display = setInterval(()=>{
+    faded[x].style.opacity = 1;
+    if(x == faded.length-1){
+      clearInterval(display);
+    }
+    x++;
+  }, 250);
 }
