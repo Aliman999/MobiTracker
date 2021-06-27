@@ -6,6 +6,7 @@ var load = setInterval(()=>{
   if(user){
     console.log(user);
     //socket();
+    clearInterval(load);
   }
 }, 1000);
 
