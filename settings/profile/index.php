@@ -92,8 +92,8 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
       </div>
     </div>
     <?php include "../../gtemps/footer.php"; ?>
-    <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../../js/nav.js";}else{echo "../../js/nSession.js";} ?>" async></script>
-    <script type="text/javascript" src="../../js/api.js"></script>
+    <script type="text/javascript" src="../../js/api.js" async></script>
+    <script type="text/javascript" src="main.js" async></script>
   </body>
 </html>
