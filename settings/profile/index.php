@@ -84,7 +84,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
         <hr>
         <div class="setting">
           <div>
-            <p><span class="rBold">Email:</span><br><span class="subP"></span></p>
+            <p><span class="rBold">RSI Profile:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
           </div>
         </div>
       </div>
