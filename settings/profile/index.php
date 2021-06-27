@@ -93,6 +93,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <img class="badgeImg" src="https://robertsspaceindustries.com/media/cs5xmnc9byun2r/heap_thumb/Vice-Admiral.png"><span class="rBold" id="Badge">Vice Admiral</span>
           </div>
           <div class="faded">
+            <p><span class="rBold">Citizen ID:</span><br><span class="subP">#153021</span></p>
             <p><span class="rBold">Enlisted:</span><br><span class="subP">June 24, 2013</span></p>
           </div>
           <div class="faded">
