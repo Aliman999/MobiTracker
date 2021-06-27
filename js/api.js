@@ -4,8 +4,7 @@ var webSocket = null;
 
 var load = setInterval(()=>{
   if(user){
-    console.log(user);
-    //socket();
+    socket();
     clearInterval(load);
   }
 }, 1000);
