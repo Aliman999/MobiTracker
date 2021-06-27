@@ -101,8 +101,9 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <p><span class="rBold">Languages:</span><br><span class="subP">English</span></p>
           </div>
           <div class="faded">
-            <p><span class="rBold">Organizations</span></p><br>
-            <p>debug</p>
+            <p><span class="rBold">Organizations</span></p>
+            <img class="badgeImg" src="https://robertsspaceindustries.com/media/rgej1c8cnu8qcr/heap_infobox/MOBI-Logo.png"><p><span class="rBold">Enlisted:</span><br><span class="subP">June 24, 2013</span></p>
+            <p><span class="rBold">Languages:</span><br><span class="subP">English</span></p>
           </div>
           <div class="faded divLeft">
             <p><span class="rBold">Bio:</span><br>Eye Color: Light Brown</p>
