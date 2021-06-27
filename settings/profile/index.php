@@ -90,7 +90,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <p><span class="rBold"><?php echo $_SESSION['username'] ?></span><br><span id="displayName" class="subP"></span></p>
           </div>
           <div class="faded">
-            <img class="badgeImg" src="https://robertsspaceindustries.com/media/cs5xmnc9byun2r/heap_thumb/Vice-Admiral.png"><p><span class="rBold" id="Badge">Vice Admiral</span></p>
+            <img class="badgeImg" src="https://robertsspaceindustries.com/media/cs5xmnc9byun2r/heap_thumb/Vice-Admiral.png"><span class="rBold" id="Badge">Vice Admiral</span>
             <p><span class="rBold">Enlisted:</span><br><span class="subP">June 24, 2013</span></p>
           </div>
           <div class="faded">
