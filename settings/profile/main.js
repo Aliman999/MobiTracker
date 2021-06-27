@@ -1,5 +1,5 @@
 var load = setInterval(()=>{
-  if(){
-
+  if(user){
+    clearInterval(load);
   }
 }, 1000);
