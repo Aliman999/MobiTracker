@@ -5,7 +5,7 @@ var webSocket = null;
 var waitUser = setInterval(()=>{
   if(user){
     socket();
-    clearInterval(load);
+    clearInterval(waitUser);
   }
 }, 1000);
 
