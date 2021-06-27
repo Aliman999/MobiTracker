@@ -32,9 +32,11 @@ function socket(){
   }
   webSocket.onmessage = function(event){
     console.log("Authentication Response");
-    var data = JSON.parse(event.data);
-    if(data.data == "Authenticated"){
+    var(response = JSON.parse(event.data);
+    if(response.type == "authentication"){
       api(user.sessionUser);
+    }else if (response.type == "response") {
+      console.log(response.data);
     }
   }
   webSocket.onerror = function(err){
