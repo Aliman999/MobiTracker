@@ -30,7 +30,7 @@ function socket(){
       }
     }else if (response.type == "response") {
       profile = response.data;
-      console.log(response.data);
+      console.log(response);
     }
   }
   webSocket.onerror = function(err){
