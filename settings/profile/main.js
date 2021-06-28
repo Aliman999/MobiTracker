@@ -24,9 +24,26 @@ function init(){
     settingAvi.className = "settingAvi";
     faded.image.appendChild(settingAvi);
   }
-  if(){
-    
+
+  
+
+  const idCont = document.createElement("p");
+  const boldSpan = document.createElement("span");
+  boldSpan.innerText = "Citizen ID:";
+  const subP = document.createElement("span");
+  subP.className = "subP";
+  if(profile.id === "n/a"){
+    subP.innerText = "No Citizen ID";
+  }else{
+    subP.innerText = profile.id;
   }
+
+  idCont.appendChild(boldSpan);
+  idCont.appendChild(document.createElement("br"));
+  idCont.appendChild(subP);
+
+  faded.meta.appendChild(idCont);
+
   var x = 0;
   var display = setInterval(()=>{
     faded[x]
