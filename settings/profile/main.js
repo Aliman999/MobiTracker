@@ -87,16 +87,24 @@ function init(){
   subP = document.createElement("span");
   subP.className = "subP";
 
+  var month=new Array();
+  month[0]="Jan";
+  month[1]="Feb";
+  month[2]="Mar";
+  month[3]="Apr";
+  month[4]="May";
+  month[5]="Jun";
+  month[6]="Jul";
+  month[7]="Aug";
+  month[8]="Sep";
+  month[9]="Oct";
+  month[10]="Nov";
+  month[11]="Dec";
   var t = profile.profile.enlisted.split(/[- :]/);
   var d = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]));
-  subP.innerText = d.toLocaleString("en-US", {
-    weekday: "short",
-    month: "long",
-    day: "2-digit",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit"
-  });
+  subP.innerText = "";
+  profile.enlisted = new Date(profile.enlisted);
+  profile.enlisted = ((profile.enlisted.getMonth() > 8) ? (profile.enlisted.getMonth() + 1) : ('0' + (profile.enlisted.getMonth() + 1))) + '/' + ((profile.enlisted.getDate() > 9) ? profile.enlisted.getDate() : ('0' + profile.enlisted.getDate())) + '/' + profile.enlisted.getFullYear();
   enlistCont.appendChild(boldSpan);
   enlistCont.appendChild(document.createElement("br"));
   enlistCont.appendChild(subP);
