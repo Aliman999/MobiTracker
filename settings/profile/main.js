@@ -155,7 +155,11 @@ function init(){
     boldSpan.className = "rBold";
     subP = document.createElement("span");
     subP.className = "subP";
-    subP.innerText = "";
+    if(x == 0){
+      subP.innerText = profile.organization.rank;
+    }else{
+      subP.innerText = profile.affiliation[x-1].rank;
+    }
   }
 
   orgCont.appendChild(boldSpan);
