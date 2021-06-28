@@ -145,6 +145,7 @@ function init(){
     orgCont.className = "rFlex";
 
     orgImg = document.createElement("img")
+    orgImg.className = "badgeImg";
     if(x == 0){
       orgImg.src = profile.organization.image;
     }else{
