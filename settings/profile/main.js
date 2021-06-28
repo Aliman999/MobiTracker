@@ -141,7 +141,7 @@ function init(){
     boldSpan.className = "rBold";
     subP = document.createElement("span");
     subP.className = "subP";
-    subP.innerText = ;
+    subP.innerText = "";
   }
 
   orgCont.appendChild(boldSpan);
