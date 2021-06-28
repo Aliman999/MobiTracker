@@ -160,13 +160,13 @@ function init(){
     }else{
       subP.innerText = profile.affiliation[x-1].rank;
     }
+
+    orgCont.appendChild(boldSpan);
+    orgCont.appendChild(document.createElement("br"));
+    orgCont.appendChild(subP);
   }
-
-  orgCont.appendChild(boldSpan);
-  orgCont.appendChild(document.createElement("br"));
-  orgCont.appendChild(subP);
-
-  faded.meta.appendChild(enlistCont);
+  
+  faded.meta.appendChild(orgCont);
 
   var x = 0;
   var display = setInterval(()=>{
