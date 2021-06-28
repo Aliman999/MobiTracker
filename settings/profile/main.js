@@ -11,8 +11,14 @@ function init(){
   loading.remove();
   var field = document.getElementsByClassName("setting")[0];
   var faded = document.getElementsByClassName("faded");
+
+  //var faded = createElement("div");
+  profile.forEach((item, i) => {
+    console.log(item);
+  });
   var x = 0;
   var display = setInterval(()=>{
+    faded[x]
     faded[x].style.opacity = 1;
     if(x == faded.length-1){
       clearInterval(display);
