@@ -142,6 +142,8 @@ function init(){
   }
   for(var x = 0; x < profile.orgLength; x++){
     orgCont = document.createElement("div");
+    orgCont.className = "rFlex";
+
     orgImg = document.createElement("img")
     if(x == 0){
       orgImg.src = profile.organization.image;
@@ -163,6 +165,7 @@ function init(){
       subP.innerText = profile.affiliation[x-1].rank;
     }
 
+    orgCont.appendChild(orgImg);
     orgCont.appendChild(boldSpan);
     orgCont.appendChild(document.createElement("br"));
     orgCont.appendChild(subP);
