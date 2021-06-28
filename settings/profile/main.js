@@ -195,10 +195,12 @@ function init(){
   field.appendChild(faded.orgs);
   field.appendChild(faded.bio);
 
+  faded = document.getElementsByClassName("faded");
+
   var x = 0;
   var display = setInterval(()=>{
     faded[x].style.opacity = 1;
-    if(x == test.length-1){
+    if(x == faded.length-1){
       clearInterval(display);
     }else{
       x++;
