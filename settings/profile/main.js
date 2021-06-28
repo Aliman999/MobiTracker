@@ -168,7 +168,7 @@ function init(){
     orgCont.appendChild(subP);
   }
 
-  faded.org.appendChild(orgCont);
+  faded.orgs.appendChild(orgCont);
 
   //Bio
   const bioCont = document.createElement("p");
@@ -187,7 +187,7 @@ function init(){
   enlistCont.appendChild(document.createElement("br"));
   enlistCont.appendChild(subP);
 
-  faded.meta.appendChild(enlistCont);
+  faded.bio.appendChild(enlistCont);
 
   var x = 0;
   var display = setInterval(()=>{
