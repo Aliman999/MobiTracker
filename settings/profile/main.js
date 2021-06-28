@@ -141,8 +141,10 @@ function init(){
     var orgImg;
   }
   for(var x = 0; x < profile.orgLength; x++){
-    orgCont = document.createElement("div");
-    orgCont.className = "rFlex";
+    orgDiv = document.createElement("div");
+    orgDiv.className = "rFlex";
+
+    orgCont = document.createElement("p");
 
     orgImg = document.createElement("img")
     orgImg.className = "badgeImg";
@@ -170,6 +172,8 @@ function init(){
     orgCont.appendChild(boldSpan);
     orgCont.appendChild(document.createElement("br"));
     orgCont.appendChild(subP);
+
+    orgDiv.appendChild(orgCont);
   }
 
   faded.orgs.appendChild(orgCont);
