@@ -11,21 +11,21 @@ function init(){
   loading.remove();
   var field = document.getElementsByClassName("setting")[0];
   var faded = {
-    image:document.createElement("div"),
-    handle:document.createElement("div"),
-    badge:document.createElement("div"),
-    meta:document.createElement("div"),
-    orgs:document.createElement("div"),
-    bio:document.createElement("div")
+    image:document.createElement("div").className = "faded",
+    handle:document.createElement("div").className = "faded",
+    badge:document.createElement("div").className = "faded",
+    meta:document.createElement("div").className = "faded",
+    orgs:document.createElement("div").className = "faded",
+    bio:document.createElement("div").className = "faded"
   }
 
-  if(profile.image){
-    const settingAvi = document.createElement("img");
-    settingAvi.src = profile.image;
-    settingAvi.className = "settingAvi";
-    faded.image.appendChild(settingAvi);
-  }
+  //Avitar
+  const settingAvi = document.createElement("img");
+  settingAvi.src = profile.image;
+  settingAvi.className = "settingAvi";
+  faded.image.appendChild(settingAvi);
 
+  //Handle
   const handleCont = document.createElement("p");
   const boldSpan = document.createElement("span");
   boldSpan.innerText = profile.handle;
@@ -35,6 +35,24 @@ function init(){
   subP.className = "subP";
   subP.innerText = "AKA "+profile.display;
 
+  handleCont.appendChild(boldSpan);
+  handleCont.appendChild(document.createElement("br"));
+  handleCont.appendChild(subP);
+  faded.handle.appendChild(handleCont);
+
+  const badgeCont = document.createElement("p");
+  const badge = document.createElement("img");
+  badge.src = profile.badge_image;
+  badge.className = "badgeImg";
+  const boldSpan = document.createElement("span");
+  boldSpan.innerText = profile.badge;
+  boldSpan.className = "rBold";
+  boldSpan.id = "Badge";
+
+  faded.handle.appendChild(badge);
+  faded.handle.appendChild(boldSpan);
+
+  //Citizen ID
   const idCont = document.createElement("p");
   const boldSpan = document.createElement("span");
   boldSpan.innerText = "Citizen ID:";
