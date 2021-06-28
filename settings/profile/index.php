@@ -90,7 +90,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <img class="settingAvi" src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png" alt="">
           </div>
           <div class="faded">
-            <span class="rBold"><?php echo $_SESSION['username'] ?></span><br><span id="displayName" class="subP"></span>
+            <span class="rBold"><?php echo $_SESSION['username'] ?></span><br><span id="displayName" class="subP">AKA Aliman</span>
           </div>
           <div class="faded">
             <img class="badgeImg" src="https://robertsspaceindustries.com/media/cs5xmnc9byun2r/heap_thumb/Vice-Admiral.png"><span class="rBold" id="Badge">Vice Admiral</span>
