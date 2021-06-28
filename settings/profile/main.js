@@ -50,7 +50,7 @@ function init(){
   //Badge
   const badgeCont = document.createElement("p");
   var badge = document.createElement("img");
-  badge.src = profile.badge_image;
+  badge.src = profile.profile.badge_image;
   badge.className = "badgeImg";
 
   boldSpan = document.createElement("span");
