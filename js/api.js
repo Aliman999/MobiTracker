@@ -51,7 +51,7 @@ function heartbeat() {
 }
 
 function api(name){
-  name = "Novagybe";
+  name = "Bo-Fone";
   console.log("Job Sent");
   webSocket.send(JSON.stringify({
     type:"job",
