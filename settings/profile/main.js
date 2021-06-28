@@ -27,19 +27,19 @@ function init(){
 
   //Avatar
   const settingAvi = document.createElement("img");
-  settingAvi.src = profile.image;
+  settingAvi.src = profile.profile.image;
   settingAvi.className = "settingAvi";
   faded.image.appendChild(settingAvi);
 
   //Handle
   const handleCont = document.createElement("p");
   var boldSpan = document.createElement("span");
-  boldSpan.innerText = profile.handle;
+  boldSpan.innerText = profile.profile.handle;
   boldSpan.className = "rBold";
   var subP = document.createElement("span");
   subP.id = "displayName";
   subP.className = "subP";
-  subP.innerText = "AKA "+profile.display;
+  subP.innerText = "AKA "+profile.profile.display;
 
   handleCont.appendChild(boldSpan);
   handleCont.appendChild(document.createElement("br"));
@@ -53,7 +53,7 @@ function init(){
   badge.className = "badgeImg";
 
   boldSpan = document.createElement("span");
-  boldSpan.innerText = profile.badge;
+  boldSpan.innerText = profile.profile.badge;
   boldSpan.className = "rBold";
   boldSpan.id = "Badge";
 
@@ -67,10 +67,10 @@ function init(){
   boldSpan.className = "rBold";
   subP = document.createElement("span");
   subP.className = "subP";
-  if(profile.id === "n/a"){
+  if(profile.profile.id === "n/a"){
     subP.innerText = "No Citizen ID";
   }else{
-    subP.innerText = profile.id;
+    subP.innerText = profile.profile.id;
   }
 
   idCont.appendChild(boldSpan);
