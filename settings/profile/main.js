@@ -13,7 +13,7 @@ function init(){
   var faded = document.getElementsByClassName("faded");
 
   //var faded = createElement("div");
-  profile.forEach((item, i) => {
+  profile.data.forEach((item, i) => {
     console.log(item);
   });
   var x = 0;
