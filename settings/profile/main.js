@@ -1,7 +1,7 @@
 var display = setInterval(()=>{
   if(profile){
-    init();
     clearInterval(display);
+    init();
   }
 }, 1000);
 
