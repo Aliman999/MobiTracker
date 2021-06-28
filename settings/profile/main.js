@@ -86,9 +86,8 @@ function init(){
   boldSpan.className = "rBold";
   subP = document.createElement("span");
   subP.className = "subP";
-
-  var t = profile.profile.enlisted.split(/[- :]/);
-  var d = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]));
+  
+  var d = new Date(profile.profile.enlisted);
   subP.innerText = d.toLocaleString("en-US", {
     weekday: "short",
     month: "long",
