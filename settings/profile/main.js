@@ -87,7 +87,7 @@ function init(){
   subP = document.createElement("span");
   subP.className = "subP";
 
-  var t = profile.enlisted.split(/[- :]/);
+  var t = profile.data.enlisted.split(/[- :]/);
   var d = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]));
   subP.innerText = d.toLocaleString("en-US", {
     weekday: "short",
