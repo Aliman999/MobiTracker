@@ -101,13 +101,18 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <p><span class="rBold">Languages:</span><br><span class="subP">English</span></p>
           </div>
           <div class="faded">
-            <div>
+            <div class="rFlex">
               <img class="badgeImg" src="https://robertsspaceindustries.com/media/rgej1c8cnu8qcr/heap_infobox/MOBI-Logo.png"><p><span class="rBold">MobiTracker</span><br><span class="subP">Creator</span></p>
             </div>
-
-            <img class="badgeImg" src="https://robertsspaceindustries.com/media/0imgxnxs8mbi4r/heap_infobox/DSCREW-Logo.jpg"><p><span class="rBold">Deep Space Crew</span><br><span class="subP">Operator</span></p>
-            <img class="badgeImg" src="https://robertsspaceindustries.com/media/lozs32lwrkw2dr/heap_infobox/BMMOC-Logo.jpg"><p><span class="rBold">Banu Merchantman Owner's Club</span><br><span class="subP">Raptor Fodder</span></p>
-            <img class="badgeImg" src="https://robertsspaceindustries.com/media/gwbkwpyg5hbj3r/heap_infobox/ASTROLLC-Logo.png"><p><span class="rBold">Asteroid</span><br><span class="subP">Board Member</span></p>
+            <div class="rFlex">
+              <img class="badgeImg" src="https://robertsspaceindustries.com/media/0imgxnxs8mbi4r/heap_infobox/DSCREW-Logo.jpg"><p><span class="rBold">Deep Space Crew</span><br><span class="subP">Operator</span></p>
+            </div>
+            <div class="rFlex">
+              <img class="badgeImg" src="https://robertsspaceindustries.com/media/lozs32lwrkw2dr/heap_infobox/BMMOC-Logo.jpg"><p><span class="rBold">Banu Merchantman Owner's Club</span><br><span class="subP">Raptor Fodder</span></p>
+            </div>
+            <div class="rFlex">
+              <img class="badgeImg" src="https://robertsspaceindustries.com/media/gwbkwpyg5hbj3r/heap_infobox/ASTROLLC-Logo.png"><p><span class="rBold">Asteroid</span><br><span class="subP">Board Member</span></p>
+            </div>
           </div>
           <div class="faded divLeft">
             <p><span class="rBold">Bio:</span><br>Eye Color: Light Brown</p>
