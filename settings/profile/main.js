@@ -136,11 +136,9 @@ function init(){
   }
 
   //Orgs
-  if(profile.orgLength > 0){
-  }
   for(var x = 0; x < profile.orgLength; x++){
     var orgCont = document.createElement("p");
-    
+
     var orgImg = document.createElement("img");
     orgImg.className = "badgeImg";
 
