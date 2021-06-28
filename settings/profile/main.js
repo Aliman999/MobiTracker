@@ -89,7 +89,6 @@ function init(){
 
   var d = new Date(profile.profile.enlisted);
   subP.innerText = d.toLocaleString("en-US", {
-    weekday: "short",
     month: "long",
     day: "2-digit",
     year: "numeric",
