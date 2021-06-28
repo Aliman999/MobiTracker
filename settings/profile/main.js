@@ -10,7 +10,6 @@ function init(){
   loading.style.opacity = 0;
   loading.remove();
   var field = document.getElementsByClassName("setting")[0];
-  var test = document.getElementsByClassName("faded");
   var faded = {
     image:document.createElement("div"),
     handle:document.createElement("div"),
@@ -189,10 +188,16 @@ function init(){
 
   faded.bio.appendChild(enlistCont);
 
+  field.appendChild(faded.image);
+  field.appendChild(faded.handle);
+  field.appendChild(faded.badge);
+  field.appendChild(faded.meta);
+  field.appendChild(faded.orgs);
+  field.appendChild(faded.bio);
+
   var x = 0;
   var display = setInterval(()=>{
-    faded[x]
-    test[x].style.opacity = 1;
+    faded[x].style.opacity = 1;
     if(x == test.length-1){
       clearInterval(display);
     }else{
