@@ -1,5 +1,5 @@
 var display = setInterval(()=>{
-  if(profile){
+  if(profile.profile){
     clearInterval(display);
     init();
   }
