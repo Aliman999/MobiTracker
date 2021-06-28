@@ -126,7 +126,7 @@ function init(){
     boldSpan.className = "rBold";
     subP = document.createElement("span");
     subP.className = "subP";
-    subP.innerText = profile.profile.region+", "+profile.profile.country;
+    subP.innerText = profile.profile.location.region+", "+profile.profile.location.country;
 
     locCont.appendChild(boldSpan);
     locCont.appendChild(document.createElement("br"));
