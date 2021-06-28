@@ -186,9 +186,9 @@ function init(){
   subP = document.createElement("span");
   subP.className = "subP";
   if(profile.profile.bio){
-    subP.className = profile.profile.bio;
+    subP.innerText = profile.profile.bio;
   }else{
-    subP.className = "Nothing Here";
+    subP.innerText = "Nothing Here";
   }
 
   bioCont.appendChild(boldSpan);
