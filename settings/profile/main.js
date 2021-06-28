@@ -115,7 +115,7 @@ function init(){
     langCont.appendChild(document.createElement("br"));
     langCont.appendChild(subP);
 
-    faded.meta.appendChild(enlistCont);
+    faded.meta.appendChild(langCont);
   }
 
   //Location
@@ -132,7 +132,7 @@ function init(){
     locCont.appendChild(document.createElement("br"));
     locCont.appendChild(subP);
 
-    faded.meta.appendChild(enlistCont);
+    faded.meta.appendChild(locCont);
   }
 
   //Orgs
