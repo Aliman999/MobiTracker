@@ -191,9 +191,9 @@ function init(){
     subP.className = "Nothing Here";
   }
 
-  enlistCont.appendChild(boldSpan);
-  enlistCont.appendChild(document.createElement("br"));
-  enlistCont.appendChild(subP);
+  bioCont.appendChild(boldSpan);
+  bioCont.appendChild(document.createElement("br"));
+  bioCont.appendChild(subP);
 
   faded.bio.appendChild(enlistCont);
 
