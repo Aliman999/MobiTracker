@@ -18,9 +18,12 @@ function init(){
     orgs:document.createElement("div"),
     bio:document.createElement("div")
   }
-  faded.forEach((item, i) => {
-    item.className = "faded";
-  });
+  faded.image.className = "faded";
+  faded.handle.className = "faded";
+  faded.badge.className = "faded";
+  faded.meta.className = "faded";
+  faded.orgs.className = "faded";
+  faded.bio.className = "faded";
 
   //Avitar
   const settingAvi = document.createElement("img");
