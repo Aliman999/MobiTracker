@@ -10,7 +10,7 @@ function init(){
   loading.style.opacity = 0;
   loading.remove();
   var field = document.getElementsByClassName("setting")[0];
-  var faded = [];
+  var faded = document.getElementsByClassName("faded");
 
   //var faded = createElement("div");
   if(profile){
