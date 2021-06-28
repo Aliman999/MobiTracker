@@ -115,7 +115,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             </div>
           </div>
           <div class="faded divLeft">
-            <p><span class="rBold">Bio:</span><br>"Eye Color: Light Brown
+            <p><span class="rBold">Bio:</span><br><span>Eye Color: Light Brown
 Hair Color: Dark Brown
 Hair Style: Slicked Back
 Father: Smuggler from the Oso system.
@@ -130,7 +130,7 @@ James Dusky's currently a smuggler  in the Pyro system.
 
 Creator of Mobitracker.co
 
-U2FsdGVkX18aAi7HmMKTTmf1aXYYxmCykBKCrc4dOjw="</p>
+U2FsdGVkX18aAi7HmMKTTmf1aXYYxmCykBKCrc4dOjw=</span></p>
           </div>
         </div>
       </div>
