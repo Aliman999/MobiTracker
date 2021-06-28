@@ -24,7 +24,7 @@ function init(){
   faded.badge.className = "faded";
   faded.meta.className = "faded";
   faded.orgs.className = "faded";
-  faded.bio.className = "faded";
+  faded.bio.className = "faded divLeft";
 
   //Avatar
   const settingAvi = document.createElement("img");
