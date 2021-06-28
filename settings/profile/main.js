@@ -141,8 +141,17 @@ function init(){
   for(var x = 0; x < profile.orgLength; x++){
     orgCont = document.createElement("div");
     orgImg = document.createElement("img")
+    if(x == 0){
+      orgImg.src = profile.organization.image;
+    }else{
+      orgImg.src = profile.affiliation[x].image;
+    }
     boldSpan = document.createElement("span");
-    boldSpan.innerText = "Enlisted:";
+    if(x == 0){
+      boldSpan.innerText = profile.organization.name;
+    }else{
+      boldSpan.innerText = profile.affiliation[x].name;
+    }
     boldSpan.className = "rBold";
     subP = document.createElement("span");
     subP.className = "subP";
