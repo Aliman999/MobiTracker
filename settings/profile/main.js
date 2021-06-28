@@ -25,7 +25,7 @@ function init(){
   faded.orgs.className = "faded";
   faded.bio.className = "faded";
 
-  //Avitar
+  //Avatar
   const settingAvi = document.createElement("img");
   settingAvi.src = profile.image;
   settingAvi.className = "settingAvi";
@@ -73,6 +73,30 @@ function init(){
     subP.innerText = profile.id;
   }
 
+  idCont.appendChild(boldSpan);
+  idCont.appendChild(document.createElement("br"));
+  idCont.appendChild(subP);
+
+  faded.meta.appendChild(idCont);
+
+  //Enlisted
+  const enlistCont = document.createElement("p");
+  boldSpan = document.createElement("span");
+  boldSpan.innerText = "Enlisted:";
+  boldSpan.className = "rBold";
+  subP = document.createElement("span");
+  subP.className = "subP";
+
+  var t = profile.profile.enlisted.split(/[- :]/);
+  var d = new Date(Date.UTC(t[0], t[1]-1, t[2], t[3], t[4], t[5]));
+  subP.innerText = d.toLocaleString("en-US", {
+    weekday: "short",
+    month: "long",
+    day: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
   idCont.appendChild(boldSpan);
   idCont.appendChild(document.createElement("br"));
   idCont.appendChild(subP);
