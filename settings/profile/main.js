@@ -144,7 +144,7 @@ function init(){
     if(x == 0){
       orgImg.src = profile.organization.image;
     }else{
-      orgImg.src = profile.affiliation[x].image;
+      orgImg.src = profile.affiliation[x-1].image;
     }
     boldSpan = document.createElement("span");
     if(x == 0){
