@@ -137,17 +137,16 @@ function init(){
 
   //Orgs
   if(profile.orgLength > 0){
-    var orgCont;
-    var orgImg;
   }
   for(var x = 0; x < profile.orgLength; x++){
+    var orgCont = document.createElement("p");
+    
+    var orgImg = document.createElement("img");
+    orgImg.className = "badgeImg";
+
     orgDiv = document.createElement("div");
     orgDiv.className = "rFlex";
 
-    orgCont = document.createElement("p");
-
-    orgImg = document.createElement("img")
-    orgImg.className = "badgeImg";
     if(x == 0){
       orgImg.src = profile.organization.image;
     }else{
