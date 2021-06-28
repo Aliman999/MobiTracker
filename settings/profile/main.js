@@ -176,7 +176,7 @@ function init(){
     orgDiv.appendChild(orgCont);
   }
 
-  faded.orgs.appendChild(orgCont);
+  faded.orgs.appendChild(orgDiv);
 
   //Bio
   const bioCont = document.createElement("p");
