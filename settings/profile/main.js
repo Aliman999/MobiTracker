@@ -150,7 +150,7 @@ function init(){
     if(x == 0){
       boldSpan.innerText = profile.organization.name;
     }else{
-      boldSpan.innerText = profile.affiliation[x].name;
+      boldSpan.innerText = profile.affiliation[x-1].name;
     }
     boldSpan.className = "rBold";
     subP = document.createElement("span");
