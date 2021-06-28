@@ -86,6 +86,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           <div id="loadingContainer">
             <p><span class="rBold">Loading</span></p><img src="../../src/loading.png" class="loading">
           </div>
+          <!--
           <div class="faded">
             <img class="settingAvi" src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png" alt="">
           </div>
@@ -132,6 +133,7 @@ Creator of Mobitracker.co
 
 U2FsdGVkX18aAi7HmMKTTmf1aXYYxmCykBKCrc4dOjw=</span></p>
           </div>
+          -->
         </div>
       </div>
     </div>
