@@ -192,7 +192,7 @@ function init(){
   var x = 0;
   var display = setInterval(()=>{
     faded[x]
-    //faded[x].style.opacity = 1;
+    test[x].style.opacity = 1;
     if(x == test.length-1){
       clearInterval(display);
     }else{
