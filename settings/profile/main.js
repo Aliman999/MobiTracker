@@ -10,12 +10,12 @@ function init(){
   loading.style.opacity = 0;
   loading.remove();
   var field = document.getElementsByClassName("setting")[0];
-  var faded = document.getElementsByClassName("faded");
+  var faded = [];
 
   //var faded = createElement("div");
-  profile.data.forEach((item, i) => {
-    console.log(item);
-  });
+  if(profile){
+
+  }
   var x = 0;
   var display = setInterval(()=>{
     faded[x]
