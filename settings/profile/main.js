@@ -48,7 +48,7 @@ function init(){
 
   //Badge
   const badgeCont = document.createElement("p");
-  const badge = document.createElement("img");
+  var badge = document.createElement("img");
   badge.src = profile.badge_image;
   badge.className = "badgeImg";
 
@@ -134,8 +134,13 @@ function init(){
   }
 
   //Orgs
-  if(profile.profile.orgLength > 0){
-    const orgCont = document.createElement("");
+  if(profile.orgLength > 0){
+    var orgCont;
+    var orgImg;
+  }
+  for(var x = 0; x < profile.orgLength; x++){
+    orgCont = document.createElement("div");
+    orgImg = document.createElement("img")
     boldSpan = document.createElement("span");
     boldSpan.innerText = "Enlisted:";
     boldSpan.className = "rBold";
