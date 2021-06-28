@@ -117,6 +117,7 @@ function init(){
     faded.meta.appendChild(enlistCont);
   }
 
+  //Location
   if(profile.profile.location){
     const locCont = document.createElement("p");
     boldSpan = document.createElement("span");
@@ -165,8 +166,27 @@ function init(){
     orgCont.appendChild(document.createElement("br"));
     orgCont.appendChild(subP);
   }
-  
-  faded.meta.appendChild(orgCont);
+
+  faded.org.appendChild(orgCont);
+
+  //Bio
+  const bioCont = document.createElement("p");
+  boldSpan = document.createElement("span");
+  boldSpan.innerText = "Bio:";
+  boldSpan.className = "rBold";
+  subP = document.createElement("span");
+  subP.className = "subP";
+  if(profile.profile.bio){
+    subP.className = profile.profile.bio;
+  }else{
+    subP.className = "Nothing Here";
+  }
+
+  enlistCont.appendChild(boldSpan);
+  enlistCont.appendChild(document.createElement("br"));
+  enlistCont.appendChild(subP);
+
+  faded.meta.appendChild(enlistCont);
 
   var x = 0;
   var display = setInterval(()=>{
