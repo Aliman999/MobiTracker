@@ -117,23 +117,36 @@ function init(){
     faded.meta.appendChild(enlistCont);
   }
 
-  //Orgs
-  const enlistCont = document.createElement("p");
-  boldSpan = document.createElement("span");
-  boldSpan.innerText = "Enlisted:";
-  boldSpan.className = "rBold";
-  subP = document.createElement("span");
-  subP.className = "subP";
+  if(profile.profile.location){
+    const locCont = document.createElement("p");
+    boldSpan = document.createElement("span");
+    boldSpan.innerText = "Location:";
+    boldSpan.className = "rBold";
+    subP = document.createElement("span");
+    subP.className = "subP";
+    subP.innerText = profile.profile.region+", "+profile.profile.country;
 
-  var d = new Date(profile.profile.enlisted);
-  subP.innerText = d.toLocaleString("en-US", {
-    month: "long",
-    day: "2-digit",
-    year: "numeric",
-  });
-  enlistCont.appendChild(boldSpan);
-  enlistCont.appendChild(document.createElement("br"));
-  enlistCont.appendChild(subP);
+    enlistCont.appendChild(boldSpan);
+    enlistCont.appendChild(document.createElement("br"));
+    enlistCont.appendChild(subP);
+
+    faded.meta.appendChild(enlistCont);
+  }
+
+  //Orgs
+  if(profile.profile.orgLength > 0){
+    const orgCont = document.createElement("");
+    boldSpan = document.createElement("span");
+    boldSpan.innerText = "Enlisted:";
+    boldSpan.className = "rBold";
+    subP = document.createElement("span");
+    subP.className = "subP";
+    subP.innerText = ;
+  }
+
+  orgCont.appendChild(boldSpan);
+  orgCont.appendChild(document.createElement("br"));
+  orgCont.appendChild(subP);
 
   faded.meta.appendChild(enlistCont);
 
