@@ -1,5 +1,6 @@
 .setting>div{
   justify-content: center;
+  flex-wrap: wrap;
 }
 .loading{
   height: 32px;
