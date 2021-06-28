@@ -86,15 +86,13 @@ function init(){
   boldSpan.className = "rBold";
   subP = document.createElement("span");
   subP.className = "subP";
-  
+
   var d = new Date(profile.profile.enlisted);
   subP.innerText = d.toLocaleString("en-US", {
     weekday: "short",
     month: "long",
     day: "2-digit",
     year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit"
   });
   enlistCont.appendChild(boldSpan);
   enlistCont.appendChild(document.createElement("br"));
