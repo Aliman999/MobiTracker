@@ -11,13 +11,16 @@ function init(){
   loading.remove();
   var field = document.getElementsByClassName("setting")[0];
   var faded = {
-    image:document.createElement("div").className = "faded",
-    handle:document.createElement("div").className = "faded",
-    badge:document.createElement("div").className = "faded",
-    meta:document.createElement("div").className = "faded",
-    orgs:document.createElement("div").className = "faded",
-    bio:document.createElement("div").className = "faded"
+    image:document.createElement("div"),
+    handle:document.createElement("div"),
+    badge:document.createElement("div"),
+    meta:document.createElement("div"),
+    orgs:document.createElement("div"),
+    bio:document.createElement("div")
   }
+  faded.forEach((item, i) => {
+    item.className = "faded";
+  });
 
   //Avitar
   const settingAvi = document.createElement("img");
