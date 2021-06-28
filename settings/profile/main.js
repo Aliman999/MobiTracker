@@ -44,6 +44,7 @@ function init(){
   handleCont.appendChild(boldSpan);
   handleCont.appendChild(document.createElement("br"));
   handleCont.appendChild(subP);
+
   faded.handle.appendChild(handleCont);
 
   //Badge
@@ -57,8 +58,8 @@ function init(){
   boldSpan.className = "rBold";
   boldSpan.id = "Badge";
 
-  faded.handle.appendChild(badge);
-  faded.handle.appendChild(boldSpan);
+  faded.badge.appendChild(badge);
+  faded.badge.appendChild(boldSpan);
 
   //Citizen ID
   const idCont = document.createElement("p");
