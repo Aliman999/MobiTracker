@@ -168,11 +168,11 @@ function init(){
       subP.innerText = profile.affiliation[x-1].rank;
     }
 
-    orgCont.appendChild(orgImg);
     orgCont.appendChild(boldSpan);
     orgCont.appendChild(document.createElement("br"));
     orgCont.appendChild(subP);
 
+    orgDiv.appendChild(orgImg);
     orgDiv.appendChild(orgCont);
   }
 
