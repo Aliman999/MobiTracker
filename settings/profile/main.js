@@ -111,9 +111,9 @@ function init(){
     subP.innerText = profile.profile.fluency.join(", ");
 
 
-    enlistCont.appendChild(boldSpan);
-    enlistCont.appendChild(document.createElement("br"));
-    enlistCont.appendChild(subP);
+    langCont.appendChild(boldSpan);
+    langCont.appendChild(document.createElement("br"));
+    langCont.appendChild(subP);
 
     faded.meta.appendChild(enlistCont);
   }
@@ -128,9 +128,9 @@ function init(){
     subP.className = "subP";
     subP.innerText = profile.profile.region+", "+profile.profile.country;
 
-    enlistCont.appendChild(boldSpan);
-    enlistCont.appendChild(document.createElement("br"));
-    enlistCont.appendChild(subP);
+    locCont.appendChild(boldSpan);
+    locCont.appendChild(document.createElement("br"));
+    locCont.appendChild(subP);
 
     faded.meta.appendChild(enlistCont);
   }
