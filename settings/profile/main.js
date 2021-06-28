@@ -10,6 +10,7 @@ function init(){
   loading.style.opacity = 0;
   loading.remove();
   var field = document.getElementsByClassName("setting")[0];
+  var test = document.getElementsByClassName("faded");
   var faded = {
     image:document.createElement("div"),
     handle:document.createElement("div"),
@@ -192,7 +193,7 @@ function init(){
   var display = setInterval(()=>{
     faded[x]
     //faded[x].style.opacity = 1;
-    if(x == faded.length-1){
+    if(x == test.length-1){
       clearInterval(display);
     }else{
       x++;
