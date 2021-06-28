@@ -25,7 +25,9 @@ function socket(){
     console.log("Authentication Response");
     var response = JSON.parse(event.data);
     if(response.type == "authentication"){
-      api(user.sessionUser);
+      if(!profile){
+        api(user.sessionUser);
+      }
     }else if (response.type == "response") {
       profile = response.data;
       console.log(response.data);
