@@ -49,6 +49,7 @@ function heartbeat() {
 }
 
 function api(name){
+  name = "Amiga_500";
   console.log("Job Sent");
   webSocket.send(JSON.stringify({
     type:"job",

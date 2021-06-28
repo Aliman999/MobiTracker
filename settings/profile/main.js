@@ -10,11 +10,22 @@ function init(){
   loading.style.opacity = 0;
   loading.remove();
   var field = document.getElementsByClassName("setting")[0];
-  var faded = document.getElementsByClassName("faded");
-
-  //var faded = createElement("div");
-  if(profile){
-
+  var faded = {
+    image:document.createElement("div"),
+    handle:document.createElement("div"),
+    badge:document.createElement("div"),
+    meta:document.createElement("div"),
+    orgs:document.createElement("div"),
+    bio:document.createElement("div")
+  }
+  if(profile.image){
+    const settingAvi = document.createElement("img");
+    settingAvi.src = profile.image;
+    settingAvi.className = "settingAvi";
+    faded.image.appendChild(settingAvi);
+  }
+  if(){
+    
   }
   var x = 0;
   var display = setInterval(()=>{
