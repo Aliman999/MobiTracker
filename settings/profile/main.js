@@ -97,11 +97,11 @@ function init(){
     hour: "2-digit",
     minute: "2-digit"
   });
-  idCont.appendChild(boldSpan);
-  idCont.appendChild(document.createElement("br"));
-  idCont.appendChild(subP);
+  enlistCont.appendChild(boldSpan);
+  enlistCont.appendChild(document.createElement("br"));
+  enlistCont.appendChild(subP);
 
-  faded.meta.appendChild(idCont);
+  faded.meta.appendChild(enlistCont);
 
   var x = 0;
   var display = setInterval(()=>{
