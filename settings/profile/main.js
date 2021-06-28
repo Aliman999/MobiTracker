@@ -195,7 +195,7 @@ function init(){
   bioCont.appendChild(document.createElement("br"));
   bioCont.appendChild(subP);
 
-  faded.bio.appendChild(enlistCont);
+  faded.bio.appendChild(bioCont);
 
   field.appendChild(faded.image);
   field.appendChild(faded.handle);
