@@ -27,10 +27,10 @@ function init(){
 
   //Handle
   const handleCont = document.createElement("p");
-  const boldSpan = document.createElement("span");
+  var boldSpan = document.createElement("span");
   boldSpan.innerText = profile.handle;
   boldSpan.className = "rBold";
-  const subP = document.createElement("span");
+  var subP = document.createElement("span");
   subP.id = "displayName";
   subP.className = "subP";
   subP.innerText = "AKA "+profile.display;
@@ -40,11 +40,13 @@ function init(){
   handleCont.appendChild(subP);
   faded.handle.appendChild(handleCont);
 
+  //Badge
   const badgeCont = document.createElement("p");
   const badge = document.createElement("img");
   badge.src = profile.badge_image;
   badge.className = "badgeImg";
-  const boldSpan = document.createElement("span");
+
+  boldSpan = document.createElement("span");
   boldSpan.innerText = profile.badge;
   boldSpan.className = "rBold";
   boldSpan.id = "Badge";
@@ -54,10 +56,10 @@ function init(){
 
   //Citizen ID
   const idCont = document.createElement("p");
-  const boldSpan = document.createElement("span");
+  boldSpan = document.createElement("span");
   boldSpan.innerText = "Citizen ID:";
   boldSpan.className = "rBold";
-  const subP = document.createElement("span");
+  subP = document.createElement("span");
   subP.className = "subP";
   if(profile.id === "n/a"){
     subP.innerText = "No Citizen ID";
