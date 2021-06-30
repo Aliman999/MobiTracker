@@ -36,7 +36,6 @@
     echo "<meta name='token' content=".$_SESSION['token'].">";
     ?>
     <?php
-    //Test
     if($_SESSION["loggedin"]){
       echo "<meta name='jwt' content=".$_SESSION['jwt'].">";
     }
