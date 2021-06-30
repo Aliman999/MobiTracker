@@ -57,7 +57,7 @@ loadMessage("Set your username", null, null, true);
 
 
 function connect(){
-  webSocket = new WebSocket("wss://mobitracker.co:8000");
+  webSocket = new WebSocket("wss://ws.mobitracker.co:8000");
   webSocket.onopen = function(){
     loadMessage(null, null, null, true);
     var joined = sessionUser+" Joined the chat."

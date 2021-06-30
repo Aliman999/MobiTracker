@@ -9,7 +9,7 @@ var enable = true;
 var webSocket = null;
 
 function socket(){
-  webSocket = new WebSocket("wss://mobitracker.co:2599");
+  webSocket = new WebSocket("wss://ws.mobitracker.co:2599");
   webSocket.onopen = function(){
     webSocket.send(JSON.stringify({
       type:"orgs",

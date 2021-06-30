@@ -11,7 +11,7 @@ var waitUser = setInterval(()=>{
 }, 1000);
 
 function socket(){
-  webSocket = new WebSocket("wss://mobitracker.co:2599");
+  webSocket = new WebSocket("wss://ws.mobitracker.co:2599");
   webSocket.onopen = function(){
     message = {
       type:"auth",

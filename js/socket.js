@@ -2,7 +2,7 @@
 var jwt = document.getElementsByName("jwt")[0];
 var webSocket = null;
 function socket(){
-  webSocket = new WebSocket("wss://mobitracker.co:8000");
+  webSocket = new WebSocket("wss://ws.mobitracker.co:8000");
   webSocket.onopen = function(){
     message = {
       type:"authenticate",
