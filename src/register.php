@@ -37,10 +37,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         mysqli_stmt_store_result($stmt);
 
         if(mysqli_stmt_num_rows($stmt) == 1){
-          echo "Running name";
           $username_err = "This handle has been taken";
         }else{
-          echo "Running name";
           $obj = json_decode(file_get_contents($requestURL.$_POST['username']), true);
           $sql = "SELECT id, username, signup FROM players WHERE (username = ? AND signup = 0)";
           if($obj['data']['profile']){
