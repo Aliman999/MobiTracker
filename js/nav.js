@@ -79,7 +79,7 @@ function tcpp(){
   container.style.zIndex = "10";
 
   var disclaimer = document.createElement("p");
-  disclaimer.innerText = "Test";
+  disclaimer.innerText = "We've recently changed our Terms and Conditions and Privacy Policies after your account was created. You're required to agree to the Terms and Conditions and Privacy Policy to allow MobiTracker to provide the service it does. Thank you. -James";
 
   container.appendChild(disclaimer);
 
