@@ -25,6 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   }else{
     // Prepare a select statement
     $sql = "SELECT id, username, signup FROM players WHERE (username = ? AND signup = 1)";
+    echo $sql;
     if($stmt = mysqli_prepare($link, $sql)){
       // Bind variables to the prepared statement as parameters
       mysqli_stmt_bind_param($stmt, "s", $param_username);
@@ -41,6 +42,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }else{
           $obj = json_decode(file_get_contents($requestURL.$_POST['username']), true);
           $sql = "SELECT id, username, signup FROM players WHERE (username = ? AND signup = 0)";
+          echo $sql;
           if($obj['data']['profile']){
             if($stmt = mysqli_prepare($link, $sql)){
 
@@ -67,6 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           $username = $obj['data']['profile']['handle'];
 
           $sql = "SELECT cID FROM players WHERE cID = ?";
+          echo $sql;
 
           if($stmt = mysqli_prepare($link, $sql)){
             mysqli_stmt_bind_param($stmt, "s", $cID);
@@ -79,8 +82,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
               if(mysqli_stmt_num_rows($stmt) == 1){
                 $sql = "SELECT players WHERE cID = $cID AND signup = 1;";
+                echo $sql;
                 if($result = mysqli_query($link, $sql)){
                   $sql = "UPDATE players SET username = '$username' WHERE cID = $cID AND signup = 1;";
+                  echo $sql;
                   $result = mysqli_query($link, $sql);
                   $username_err = "You changed your username. <br>Login with your new username.";
                 }else{
@@ -115,6 +120,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       $email_err = "Please enter an Email";
   }else{
     $sql = "SELECT email FROM players WHERE (email = ?)";
+    echo $sql;
     if($stmt = mysqli_prepare($link, $sql)){
       mysqli_stmt_bind_param($stmt, "s", $param_email);
       $param_email = trim($_POST["email"]);
@@ -138,6 +144,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       $param_email = $email; // email hash
       $param_avatar = $avatar;
       $sql = "INSERT INTO players (cID, username, password, email, organization, avatar, signup) VALUES ($cID, '$param_username', '$param_password', '$param_email', '{}', '$param_avatar', 1);";
+        echo $sql;
       mysqli_query($link, $sql);
       // Close statement
       mysqli_stmt_close($stmt);
@@ -145,7 +152,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   if(empty($username_err) && empty($password_err) && empty($email_err) && $update == 1){
           // Prepare an insert statement
           $sql = "UPDATE players SET password = ?, email = ?, avatar = ?, signup = 1 WHERE username = ?";
-
+          echo $sql;
           if($stmt = mysqli_prepare($link, $sql)){
               // Bind variables to the prepared statement as parameters
               mysqli_stmt_bind_param($stmt, "ssss",  $param_password, $param_email, $param_avatar, $param_username);
