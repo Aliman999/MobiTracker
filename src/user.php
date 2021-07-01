@@ -83,7 +83,7 @@ if (isset($headers)) {
     }
 
     if(isset($_SESSION['tcpp'])){
-      $user['tcpp'] = $_SESSION['tcpp'];
+      $user['tcpp'] = intval($_SESSION['tcpp']);
     }
 
     echo json_encode($user);

@@ -62,11 +62,13 @@ function xp(rep){
 }
 
 function tcpp(){
-  console.log(user);
+  
 }
 
 function showUser(){
-  tcpp();
+  if(!user.tcpp){
+    tcpp();
+  }
   var avatar = document.createElement("img");
   avatar.src = user.avatar;
   avatar.onerror = function(){
