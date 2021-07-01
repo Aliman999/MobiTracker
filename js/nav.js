@@ -66,6 +66,7 @@ function tcpp(){
 }
 
 function showUser(){
+  tcpp();
   var avatar = document.createElement("img");
   avatar.src = user.avatar;
   avatar.onerror = function(){
