@@ -6,6 +6,7 @@ if (empty($_SESSION['token'])) {
 // Include config file
 require_once "../src/config.php";
 $requestURL = 'https://api.starcitizen-api.com/'.getKey().'/v1/live/user/';
+echo "test";
 
 if($_POST['tcpp'] != 0){
   exit();
