@@ -32,6 +32,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $result = mysqli_query($link, $sql);
     $row = mysqli_fetch_assoc($result);
     if(is_null($row)){
+      echo $row;
       if(count($row)>0){
         $username_err = "This RSI Handle has already been taken.";
       }
