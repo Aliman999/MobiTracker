@@ -74,7 +74,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           if($stmt = mysqli_prepare($link, $sql)){
             mysqli_stmt_bind_param($stmt, "s", $cID);
             $cID = $obj['data']['profile']['id'];
-            $cID = substr($cID, 1);
+            if($cID == "n/a"){
+              $cID = 0;
+            }else{
+              $cID = substr($cID, 1);
+            }
 
             if(mysqli_stmt_execute($stmt)){
 
