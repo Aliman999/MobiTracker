@@ -70,6 +70,9 @@ function tcpp(){
   container.style.boxShadow = "0px 0px 15px rgb(57 206 216 / 50%)";
   container.style.borderRadius = "4px";
 
+  container.style.top = "50%";
+  container.style.left = "50%";
+
   var disclaimer = document.createElement("p");
   disclaimer.innerText = "Test";
 
