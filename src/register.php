@@ -42,7 +42,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           $obj = json_decode(file_get_contents($requestURL.$_POST['username']), true);
           $sql = "SELECT id, username, signup FROM players WHERE (username = ? AND signup = 0)";
           if($obj['data']['profile']){
-            $username_err = 0;
             if($stmt = mysqli_prepare($link, $sql)){
 
               mysqli_stmt_bind_param($stmt, "s", $param_username);
@@ -125,7 +124,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         if(mysqli_stmt_num_rows($stmt) == 1){
           $email_err = "This email has already been used";
         }else{
-          $email_err = 0;
           $email = trim($_POST["email"]);
         }
       }
@@ -159,9 +157,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               $param_username = $username;
 
               // Attempt to execute the prepared statement
-              if(mysqli_stmt_execute($stmt)){
-                $username_err = 0;
-              }
+              mysqli_stmt_execute($stmt);
 
               // Close statement
               mysqli_stmt_close($stmt);
