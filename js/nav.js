@@ -62,7 +62,7 @@ function xp(rep){
 }
 
 function tcpp(){
-  var html = document.querySelector("html");
+  var body = document.querySelector("body");
   var container = document.createElement("div");
   container.style.position = "relative";
   container.style.backgroundColor = "Black";
