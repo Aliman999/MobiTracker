@@ -7,6 +7,8 @@ var tokenHeader = document.getElementsByName("token")[0];
 var miniPlayer = document.getElementById("miniPlayer");
 var miniRep = document.getElementById("miniRep");
 
+import { test } from tcpp;
+
 var query = new XMLHttpRequest();
 openBtn.active = false;
 
