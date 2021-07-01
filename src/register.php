@@ -21,12 +21,13 @@ $cID = 0;
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+  $param_username = trim($_POST["username"]);
+  $obj = file_get_contents("https://api.dustytavern.com/user/".$param_username);
   // Validate username
   if(empty(trim($_POST["username"]))){
     $username_err = "Please enter a username.";
   }else{
     // Prepare a select statement
-    $param_username = trim($_POST["username"]);
     $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND signup = 1)";
     // Attempt to execute the prepared statement
     $result = mysqli_query($link, $sql);
@@ -36,8 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       if(count($row)>0){
         $username_err = "This RSI Handle has already been taken.";
       }else{
-        $obj = file_get_contents("https://api.dustytavern.com/user/".$param_username);//json_decode();
-        echo "https://api.dustytavern.com/user/".$param_username;
+        //json_decode();
         $cID = $obj['data']['profile']['id'];
         if($cID == "n/a"){
           $cID = 0;
