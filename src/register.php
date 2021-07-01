@@ -67,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       $username = $obj['data']['profile']['handle'];
 
 
-      $sql = "SELECT cID FROM players WHERE username = $username";
+      $sql = "SELECT cID FROM players WHERE cID = $cID AND username = $username";
       if($result = mysqli_query($link, $sql)){
         $row = mysqli_fetch_assoc($result);
         if(count($row) > 0){
