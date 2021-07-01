@@ -17,6 +17,7 @@ error_reporting(E_ALL);
 $username = $password = $email = $avatar = "";
 $username_err = $password_err = $email_err = "";
 $update = 0;
+$cID = 0;
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -37,6 +38,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       }else{
         $obj = json_decode(file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/live/user/".$_POST['username']), true);
         $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND signup = 0);";
+        var_dump($obj);
+        $cID = $obj['data']['profile']['id'];
+        if($cID == "n/a"){
+          $cID = 0;
+        }else{
+          $cID = substr($cID, 1);
+        }
 
         if($obj['data']['profile']){
           $result = mysqli_query($link, $sql);
@@ -56,13 +64,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $avatar = $obj['data']['profile']['image'];
         $username = $obj['data']['profile']['handle'];
 
-        var_dump($obj);
-        $cID = $obj['data']['profile']['id'];
-        if($cID == "n/a"){
-          $cID = 0;
-        }else{
-          $cID = substr($cID, 1);
-        }
 
         $sql = "SELECT cID FROM players WHERE cID = $cID";
         if($result = mysqli_query($link, $sql)){
