@@ -12,7 +12,9 @@ if (isset($headers)) {
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
     require_once "config.php";
-    $sql = "UPDATE players SET tcpp = 1 WHERE cID = $_SESSION['cID'] AND username = $_SESSION['username'];";
+    $cID = $_SESSION['cID'];
+    $username = $_SESSION['username'];
+    $sql = "UPDATE players SET tcpp = 1 WHERE cID = $cID AND username = '$username';";
     $result = mysqli_query($link, $sql);
   }
 }else{
