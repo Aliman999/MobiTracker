@@ -62,7 +62,17 @@ function xp(rep){
 }
 
 function tcpp(){
+  var html = document.querySelector("html");
+  var container = document.createElement("div");
+  container.style.position = "relative";
+  container.style.backgroundColor = "Black";
+
+  var disclaimer = document.createElement("p");
+  disclaimer.innerText = "Test";
+
+  container.appendChild(disclaimer);
   
+  html.appendChild(html);
 }
 
 function showUser(){
