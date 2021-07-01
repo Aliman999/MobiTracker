@@ -22,6 +22,7 @@ $cID = 0;
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
   $param_username = trim($_POST["username"]);
+  $email = trim($_POST["username"]);
   // Validate username
   if(empty(trim($_POST["username"]))){
     $username_err = "Please enter a username.";
