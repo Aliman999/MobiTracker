@@ -6,6 +6,7 @@ var display = setInterval(()=>{
 }, 1000);
 
 function init(){
+  profile = profile;
   var loading = document.getElementById("loadingContainer");
   loading.style.opacity = 0;
   loading.remove();
@@ -27,19 +28,19 @@ function init(){
 
   //Avatar
   const settingAvi = document.createElement("img");
-  settingAvi.src = profile.profile.image;
+  settingAvi.src = profile.image;
   settingAvi.className = "settingAvi";
   faded.image.appendChild(settingAvi);
 
   //Handle
   const handleCont = document.createElement("p");
   var boldSpan = document.createElement("span");
-  boldSpan.innerText = profile.profile.handle;
+  boldSpan.innerText = profile.handle;
   boldSpan.className = "rBold";
   var subP = document.createElement("span");
   subP.id = "displayName";
   subP.className = "subP";
-  subP.innerText = "AKA "+profile.profile.display;
+  subP.innerText = "AKA "+profile.display;
 
   handleCont.appendChild(boldSpan);
   handleCont.appendChild(document.createElement("br"));
@@ -50,11 +51,11 @@ function init(){
   //Badge
   const badgeCont = document.createElement("p");
   var badge = document.createElement("img");
-  badge.src = profile.profile.badge_image;
+  badge.src = profile.badge_image;
   badge.className = "badgeImg";
 
   boldSpan = document.createElement("span");
-  boldSpan.innerText = profile.profile.badge;
+  boldSpan.innerText = profile.badge;
   boldSpan.className = "rBold";
   boldSpan.id = "Badge";
 
@@ -68,10 +69,10 @@ function init(){
   boldSpan.className = "rBold";
   subP = document.createElement("span");
   subP.className = "subP";
-  if(profile.profile.id === "n/a"){
+  if(profile.id === "n/a"){
     subP.innerText = "No Citizen ID";
   }else{
-    subP.innerText = profile.profile.id;
+    subP.innerText = profile.id;
   }
 
   idCont.appendChild(boldSpan);
@@ -88,7 +89,7 @@ function init(){
   subP = document.createElement("span");
   subP.className = "subP";
 
-  var d = new Date(profile.profile.enlisted);
+  var d = new Date(profile.enlisted);
   subP.innerText = d.toLocaleString("en-US", {
     month: "long",
     day: "2-digit",
@@ -101,14 +102,14 @@ function init(){
   faded.meta.appendChild(enlistCont);
 
   //Languages
-  if(profile.profile.fluency.length > 0){
+  if(profile.fluency.length > 0){
     const langCont = document.createElement("p");
     boldSpan = document.createElement("span");
     boldSpan.innerText = "Languages:";
     boldSpan.className = "rBold";
     subP = document.createElement("span");
     subP.className = "subP";
-    subP.innerText = profile.profile.fluency.join(", ");
+    subP.innerText = profile.fluency.join(", ");
 
 
     langCont.appendChild(boldSpan);
@@ -119,14 +120,14 @@ function init(){
   }
 
   //Location
-  if(profile.profile.location){
+  if(profile.location){
     const locCont = document.createElement("p");
     boldSpan = document.createElement("span");
     boldSpan.innerText = "Location:";
     boldSpan.className = "rBold";
     subP = document.createElement("span");
     subP.className = "subP";
-    subP.innerText = profile.profile.location.region+", "+profile.profile.location.country;
+    subP.innerText = profile.location.region+", "+profile.location.country;
 
     locCont.appendChild(boldSpan);
     locCont.appendChild(document.createElement("br"));
@@ -185,8 +186,8 @@ function init(){
   boldSpan.className = "rBold";
   subP = document.createElement("span");
   subP.className = "subP";
-  if(profile.profile.bio){
-    subP.innerText = profile.profile.bio;
+  if(profile.bio){
+    subP.innerText = profile.bio;
   }else{
     subP.innerText = "Nothing Here";
   }
