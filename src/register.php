@@ -7,6 +7,8 @@ $requestURL = 'https://api.starcitizen-api.com/'.getKey().'/v1/live/user/';
 
 if($_POST['tcpp'] != 0){
   exit();
+}else{
+  echo "test";
 }
 
 ini_set('display_errors', 1);
@@ -18,7 +20,6 @@ $username = $password = $email = $avatar = "";
 $username_err = $password_err = $email_err = "";
 
 // Processing form data when form is submitted
-echo $_SERVER["REQUEST_METHOD"];
 if($_SERVER["REQUEST_METHOD"] == "POST"){
   // Validate username
   if(empty(trim($_POST["username"]))){
