@@ -72,6 +72,7 @@ function tcpp(){
   container.style.border = "2px solid rgb(57, 206, 216)";
   container.style.boxShadow = "0px 0px 15px rgb(57 206 216 / 50%)";
   container.style.borderRadius = "4px";
+  container.style.transform = "translate(-50%, -50%)";
 
   container.style.top = "50%";
   container.style.left = "50%";
