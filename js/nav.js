@@ -63,6 +63,8 @@ function xp(rep){
 
 function tcpp(){
   var body = document.querySelector("body");
+  document.getElementById("navBackDrop").style.zIndex = "9";
+  document.getElementById("navBackDrop").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
   var container = document.createElement("div");
   container.style.position = "absolute";
   container.style.backgroundColor = "Black";
