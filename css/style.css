@@ -613,6 +613,13 @@ p.sbrc{
   color: #87d374;
   text-shadow: 0px 0px 5px #87d374;
 }
+.highlightSoftGreen{
+  color: #87d374;
+}
+.highlightSoftGreen:hover{
+  color: #87d374;
+  text-shadow: 0px 0px 5px #87d374;
+}
 .highlight{
   color: #C4D7E6;
 }
