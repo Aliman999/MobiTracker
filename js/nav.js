@@ -71,8 +71,8 @@ function tcpp(){
   disclaimer.innerText = "Test";
 
   container.appendChild(disclaimer);
-  
-  html.appendChild(html);
+
+  html.appendChild(container);
 }
 
 function showUser(){
