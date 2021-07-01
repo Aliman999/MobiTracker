@@ -21,11 +21,6 @@ if (isset($headers)) {
     }else{
       $username = $_SESSION['username'];
     }
-    if(isset($_GET['v'])){
-      $version = htmlentities($_GET['v'], ENT_QUOTES, 'UTF-8');
-    }else{
-      $version = "auto";
-    }
     if(isset($_GET['force'])){
       $forceOrgRefresh = htmlentities($_GET['force'], ENT_QUOTES, 'UTF-8');
     }else{
@@ -33,7 +28,7 @@ if (isset($headers)) {
     }
 
     $orgs = "";
-    $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/".$version."/user/".$username);
+    $json = file_get_contents("https://api.mobitracker.co.com/".$username);
 
     $xmlResult = json_decode($json, true);
 

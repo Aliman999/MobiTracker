@@ -163,10 +163,7 @@ function showPlayer(node){
   clearSB();
   if(node != playerUser){
     dataCount = 0;
-    request.open("GET", "src/api.php"+"?username="+node+"&v="+ext);
-    if(ext == "live"){
-      ext = "auto";
-    }
+    request.open("GET", "src/api.php"+"?username="+node);
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
     request.responseType = "json";
     request.send();
@@ -594,7 +591,6 @@ function populateHeader(jsonObj) {
   forceRefresh.className = "refresh";
   forceRefresh.src = "src/refresh.png";
   forceRefresh.onclick = function(){
-    ext = "live";
     clearBox(header);
     clearBox(section);
     showPlayer(node.value);
