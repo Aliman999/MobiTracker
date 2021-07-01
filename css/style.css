@@ -4,11 +4,13 @@ html{
   font-weight: 400;
   text-align: center;
   outline: 0;
+  height: 100%;
 }
 body{
   width: auto;
   margin: 0 auto;
   background-color: #151f26;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
