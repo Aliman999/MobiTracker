@@ -16,6 +16,7 @@ error_reporting(E_ALL);
 // Define variables and initialize with empty values
 $username = $password = $email = $avatar = "";
 $username_err = $password_err = $email_err = "";
+$update = 0;
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
