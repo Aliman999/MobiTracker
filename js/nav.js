@@ -88,7 +88,6 @@ function tcpp(){
 function showUser(){
   if(!user.tcpp){
     tcpp();
-    return;
   }
   var avatar = document.createElement("img");
   avatar.src = user.avatar;
