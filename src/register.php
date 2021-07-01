@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       if($obj['data']['profile']){
         $result = mysqli_query($link, $sql);
         $row = mysqli_fetch_assoc($result);
-        echo $row;
+        var_dump($row);
         if($row !== null){
           $update = 1;
         }
