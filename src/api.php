@@ -26,7 +26,7 @@ if (isset($headers)) {
     }else{
       $forceOrgRefresh = false;
     }
-    if(isset($_GET['ext']){
+    if(isset($_GET['ext'])){
       $ext = $_GET['ext'];
     }else{
       $ext = "auto";
