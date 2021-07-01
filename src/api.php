@@ -26,9 +26,14 @@ if (isset($headers)) {
     }else{
       $forceOrgRefresh = false;
     }
+    if(isset($_GET['ext']){
+      $ext = $_GET['ext'];
+    }else{
+      $ext = "auto";
+    }
 
     $orgs = "";
-    $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/user/".$username);
+    $json = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/".$ext."/user/".$username);
 
     $xmlResult = json_decode($json, true);
 
