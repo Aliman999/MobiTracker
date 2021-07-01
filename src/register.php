@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username_err = "This RSI Handle has already been taken.";
       }
     }else{
-      $obj = json_decode(file_get_contents("https://api.dustytavern.com/user/".$param_username), true);
+      $obj = json_decode(file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/auto/user/".$param_username), true);
       $cID = $obj['data']['profile']['id'];
       if($cID == "n/a"){
         $cID = 0;
