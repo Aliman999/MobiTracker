@@ -66,6 +66,7 @@ function tcpp(){
   var container = document.createElement("div");
   container.style.position = "absolute";
   container.style.backgroundColor = "Black";
+  container.style.border = "2px solid rgb(57, 206, 216)";
 
   var disclaimer = document.createElement("p");
   disclaimer.innerText = "Test";
