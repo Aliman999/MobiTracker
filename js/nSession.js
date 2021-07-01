@@ -78,7 +78,7 @@ function xp(rep){
 //FORM CTRL
 
 function registerUser(username, email, password){
-  query.open("POST", "https://mobitracker.co/beta/src/register.php");
+  query.open("POST", "https://mobitracker.co/src/register.php");
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   query.send("username="+username+"&email="+email+"&password="+password+"&tcpp=1");
   query.onload = function(){
