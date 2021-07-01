@@ -45,6 +45,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       }
 
       $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND signup = 0);";
+      echo $sql;
       if($obj['data']['profile']){
         $result = mysqli_query($link, $sql);
         $row = mysqli_fetch_assoc($result);
