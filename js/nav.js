@@ -68,7 +68,7 @@ function tcpp(){
   document.getElementById("navBackDrop").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
   var container = document.createElement("div");
   container.style.position = "absolute";
-  container.style.backgroundColor = "Black";
+  container.style.backgroundColor = "#243139";
   container.style.border = "2px solid rgb(57, 206, 216)";
   container.style.boxShadow = "0px 0px 15px rgb(57 206 216 / 50%)";
   container.style.borderRadius = "4px";
