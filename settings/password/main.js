@@ -1,7 +1,7 @@
 'use strict';
-var eBtn = document.getElementById("email");
+var eBtn = document.getElementById("changeBtn");
 var tokenHeader = document.getElementsByName("token")[0];
-var eContainer = document.getElementById("emailInput");
+var eContainer = document.getElementById("passInput");
 var rStatus = document.getElementById("status");
 var input = document.getElementsByClassName("userInput")[0];
 
