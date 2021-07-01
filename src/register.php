@@ -44,7 +44,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $cID = substr($cID, 1);
       }
 
-      $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND signup = 0);";
+      $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND cID = $cID AND signup = 0);";
       echo $sql;
       if($obj['data']['profile']){
         $result = mysqli_query($link, $sql);
