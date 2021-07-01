@@ -4,10 +4,10 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
-if(dirname($_SERVER['REQUEST_URI']) != "beta" && dirname($_SERVER['REQUEST_URI']) != "/"){
-  $ref = dirname($_SERVER['REQUEST_URI']);
-}else{
+if(dirname($_SERVER['REQUEST_URI']) == "beta" || dirname($_SERVER['REQUEST_URI']) == "/"){
   $ref = "";
+}else{
+  $ref = dirname($_SERVER['REQUEST_URI']);
 }
 unset($_SESSION);
 session_destroy();
