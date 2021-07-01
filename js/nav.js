@@ -64,7 +64,7 @@ function xp(rep){
 function tcpp(){
   var body = document.querySelector("body");
   var container = document.createElement("div");
-  container.style.position = "relative";
+  container.style.position = "absolute";
   container.style.backgroundColor = "Black";
 
   var disclaimer = document.createElement("p");
