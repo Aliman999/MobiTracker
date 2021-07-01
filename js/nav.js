@@ -91,12 +91,29 @@ function tcpp(){
   agree.style.marginRight = "8px";
   agree.style.padding = "16px 32px";
   agree.innerText = "Agree";
+
+  agree.onclick = function(){
+    var query = new XMLHttpRequest();
+    query.open("GET", "https://mobitracker.co/beta/src/tcpp.php");
+    query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    query.setRequestHeader(tokenHeader.name,tokenHeader.content);
+    query.send();
+    container.remove();
+    document.getElementById("navBackDrop").style.zIndex = "-1";
+    document.getElementById("navBackDrop").style.backgroundColor = "rgba(0, 0, 0, 0)";
+  }
+
   //"<a class='rButton highlightSoftGreen' style='margin-right:8px; padding:16px 32px;'>Agree</a>"
   var disagree = document.createElement("a");
   disagree.className = "rButton highlight-red";
   disagree.style.marginLeft = "8px";
   disagree.style.padding = "16px 32px";
   disagree.innerText = "Disagree";
+
+  disagree.onclick = function(){
+    window.location.href = "https://mobitracker.co/signout";
+  }
+
   //"<a class='rButton highlight-red' style='margin-left:8px; padding:16px 32px;'>Disagree</a>"
   clickCont.appendChild(agree);
   clickCont.appendChild(disagree);
