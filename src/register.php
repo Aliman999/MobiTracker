@@ -63,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
       $sql = "SELECT cID FROM players WHERE cID = $cID";
       if($result = mysqli_query($link, $sql)){
-        $row = mysqli_fetch_assoc($result)
+        $row = mysqli_fetch_assoc($result);
         if(count($row) > 0){
           $sql = "SELECT players WHERE cID = $cID AND signup = 1;";
 
