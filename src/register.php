@@ -1,8 +1,6 @@
 <?php
 session_start();
-if (empty($_SESSION['token'])) {
-    $_SESSION['token'] = bin2hex(random_bytes(32));
-}
+
 // Include config file
 require_once "../src/config.php";
 $requestURL = 'https://api.starcitizen-api.com/'.getKey().'/v1/live/user/';
@@ -21,6 +19,7 @@ $username_err = $password_err = $email_err = "";
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+  echo "test";
   // Validate username
   if(empty(trim($_POST["username"]))){
     $username_err = "Please enter a username.";
@@ -39,6 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         mysqli_stmt_store_result($stmt);
 
         if(mysqli_stmt_num_rows($stmt) == 1){
+          echo "Running name";
           $username_err = "This handle has been taken";
         }else{
           echo "Running name";
