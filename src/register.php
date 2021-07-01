@@ -109,7 +109,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
       $param_email = $email; // email hash
       $param_avatar = $avatar;
-      $sql = "INSERT INTO players (cID, username, password, email, organization, avatar, signup, `tc-and-pp`) VALUES ($cID, '$param_username', '$param_password', '$param_email', '{}', '$param_avatar', 1, 1);";
+      $sql = "INSERT INTO players (cID, username, password, email, organization, avatar, signup, tcpp) VALUES ($cID, '$param_username', '$param_password', '$param_email', '{}', '$param_avatar', 1, 1);";
       //echo $sql;
       mysqli_query($link, $sql);
   }
@@ -117,7 +117,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $param_email = $email;
     $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
-    $sql = "UPDATE players SET password = '$param_password', email = '$param_email', avatar = '$avatar', signup = 1, `tc-and-pp` = 1 WHERE username = '$username'";
+    $sql = "UPDATE players SET password = '$param_password', email = '$param_email', avatar = '$avatar', signup = 1, tcpp = 1 WHERE username = '$username'";
     //echo $sql;
     mysqli_query($link, $sql);
   }
