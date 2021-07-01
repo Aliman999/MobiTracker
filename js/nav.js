@@ -79,7 +79,7 @@ function tcpp(){
   container.style.zIndex = "10";
 
   var disclaimer = document.createElement("p");
-  disclaimer.innerHTML = "<p>We've recently changed our Terms and Conditions and Privacy Policies after your account was created. You're required to agree to the Terms and Conditions and Privacy Policy to allow MobiTracker to provide the service it does. Thank you. -James</p><br><p><a href='https://mobitracker.co/terms' class='highlight'>Terms and Conditions</a><br><a href='https://mobitracker.co/privacy' class='highlight'>Privacy Policy</a></p><div style='margin:32px 0 16px 0; display:flex; justify-content:center;'><a class='rButton highlightSoftGreen' style='margin-right:8px; padding:32px;'>Agree</a><a class='rButton highlight-red' style='margin-left:8px; padding:32px;'>Disagree</a></div>";
+  disclaimer.innerHTML = "<p>We've recently changed our Terms and Conditions and Privacy Policies after your account was created. You're required to agree to the Terms and Conditions and Privacy Policy to allow MobiTracker to provide the service it does. Thank you. -James</p><br><p><a href='https://mobitracker.co/terms' class='highlight'>Terms and Conditions</a><br><a href='https://mobitracker.co/privacy' class='highlight'>Privacy Policy</a></p><div style='margin:32px 0 16px 0; display:flex; justify-content:center;'><a class='rButton highlightSoftGreen' style='margin-right:8px; padding:16px 32px;'>Agree</a><a class='rButton highlight-red' style='margin-left:8px; padding:16px 32px;'>Disagree</a></div>";
 
   container.appendChild(disclaimer);
 
