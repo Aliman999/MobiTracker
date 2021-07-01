@@ -30,53 +30,55 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $result = mysqli_query($link, $sql);
     $row = mysqli_fetch_assoc($result);
     var_dump($row);
-    if(count($row)>0){
-      $username_err = "This RSI Handle has already been taken.";
-    }else{
-      $obj = json_decode(file_get_contents($requestURL.$_POST['username']), true);
-      $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND signup = 0);";
-
-      if($obj['data']['profile']){
-        $result = mysqli_query($link, $sql);
-        $row = mysqli_fetch_assoc($result);
-        if(count($row)>0){
-          $username_err = "This RSI Handle has already been taken.";
-        }
+    if(isset($row)){
+      if(count($row)>0){
+        $username_err = "This RSI Handle has already been taken.";
       }else{
-        $username_err = "This is not a RSI Handle";
-      }
+        $obj = json_decode(file_get_contents($requestURL.$_POST['username']), true);
+        $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND signup = 0);";
 
-      $res = $obj['data']['profile']['badge'];
-      if($res == "Developer" || $res == "Administrator" || $res == "Moderator" || $res == "Staff" || $res == "Creator"){
-        $username_err = "You cannot use this Handle";
-        $username = "";
-      }
-      $avatar = $obj['data']['profile']['image'];
-      $username = $obj['data']['profile']['handle'];
-
-      $cID = $obj['data']['profile']['id'];
-      if($cID == "n/a"){
-        $cID = 0;
-      }else{
-        $cID = substr($cID, 1);
-      }
-
-      $sql = "SELECT cID FROM players WHERE cID = $cID";
-      if($result = mysqli_query($link, $sql)){
-        $row = mysqli_fetch_assoc($result);
-        if(count($row) > 0){
-          $sql = "SELECT players WHERE cID = $cID AND signup = 1;";
-
-          if($result = mysqli_query($link, $sql)){
-            $sql = "UPDATE players SET username = '$username' WHERE cID = $cID AND signup = 1;";
-
-            $result = mysqli_query($link, $sql);
-            $username_err = "You changed your username. <br>Login with your new username.";
-          }else{
-            $update = 1;
+        if($obj['data']['profile']){
+          $result = mysqli_query($link, $sql);
+          $row = mysqli_fetch_assoc($result);
+          if(count($row)>0){
+            $username_err = "This RSI Handle has already been taken.";
           }
         }else{
-          $update = 0;
+          $username_err = "This is not a RSI Handle";
+        }
+
+        $res = $obj['data']['profile']['badge'];
+        if($res == "Developer" || $res == "Administrator" || $res == "Moderator" || $res == "Staff" || $res == "Creator"){
+          $username_err = "You cannot use this Handle";
+          $username = "";
+        }
+        $avatar = $obj['data']['profile']['image'];
+        $username = $obj['data']['profile']['handle'];
+
+        $cID = $obj['data']['profile']['id'];
+        if($cID == "n/a"){
+          $cID = 0;
+        }else{
+          $cID = substr($cID, 1);
+        }
+
+        $sql = "SELECT cID FROM players WHERE cID = $cID";
+        if($result = mysqli_query($link, $sql)){
+          $row = mysqli_fetch_assoc($result);
+          if(count($row) > 0){
+            $sql = "SELECT players WHERE cID = $cID AND signup = 1;";
+
+            if($result = mysqli_query($link, $sql)){
+              $sql = "UPDATE players SET username = '$username' WHERE cID = $cID AND signup = 1;";
+
+              $result = mysqli_query($link, $sql);
+              $username_err = "You changed your username. <br>Login with your new username.";
+            }else{
+              $update = 1;
+            }
+          }else{
+            $update = 0;
+          }
         }
       }
     }
