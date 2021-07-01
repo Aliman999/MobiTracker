@@ -24,8 +24,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $username_err = "Please enter a username.";
   }else{
     // Prepare a select statement
-    $sql = "SELECT id, username, signup FROM players WHERE (username = ? AND signup = 1)";
     $param_username = trim($_POST["username"]);
+    $sql = "SELECT id, username, signup FROM players WHERE (username = $param_username AND signup = 1)";
     // Attempt to execute the prepared statement
     $result = mysqli_query($link, $sql);
     $row = mysqli_fetch_assoc($result);
