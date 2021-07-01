@@ -41,20 +41,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           $username_err = "This handle has been taken";
         }else{
           $obj = json_decode(file_get_contents($requestURL.$_POST['username']), true);
-          $sql = "SELECT id, username, signup FROM players WHERE (username = ? AND signup = 0)";
+          $sql = "SELECT id, username, signup FROM players WHERE (username = $param_username AND signup = 0);";
 
           if($obj['data']['profile']){
-            if($stmt = mysqli_prepare($link, $sql)){
-
-              mysqli_stmt_bind_param($stmt, "s", $param_username);
-              $param_username = trim($_POST["username"]);
-
-              if(mysqli_stmt_execute($stmt)){
-                mysqli_stmt_store_result($stmt);
-                if(mysqli_stmt_num_rows($stmt) == 1){
-                  $update = 1;
-                }
-              }
+            $result = mysqli_query($link, $sql);
+            $emparray = array();
+            $row = mysqli_fetch_assoc($result);
+            if(count($row)>0){
+              $username_err = "This RSI Handle has already been taken.";
             }
           }else{
             $username_err = "This is not a RSI Handle";
@@ -156,7 +150,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   if(empty($username_err) && empty($password_err) && empty($email_err) && $update == 1){
           // Prepare an insert statement
           $sql = "UPDATE players SET password = ?, email = ?, avatar = ?, signup = 1 WHERE username = ?";
-
           if($stmt = mysqli_prepare($link, $sql)){
               // Bind variables to the prepared statement as parameters
               mysqli_stmt_bind_param($stmt, "ssss",  $param_password, $param_email, $param_avatar, $param_username);
