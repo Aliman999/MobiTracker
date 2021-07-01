@@ -118,6 +118,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION['completed'] = $row['completed'];
                             $_SESSION['avatar'] = $row['avatar'];
                             $_SESSION['tcpp'] = $row['tcpp'];
+
                             //$_SESSION['debug'] = $sql;
                             require_once "../src/jwt/generate_jwt.php";
 
