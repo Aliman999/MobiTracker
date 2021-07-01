@@ -72,7 +72,7 @@ function tcpp(){
 
   container.appendChild(disclaimer);
 
-  html.appendChild(container);
+  body.appendChild(container);
 }
 
 function showUser(){
