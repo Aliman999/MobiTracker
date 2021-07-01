@@ -108,7 +108,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       mysqli_query($link, $sql);
   }
   if(empty($username_err) && empty($password_err) && empty($email_err) && $update == 1){
-  
+
     $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
     $sql = "UPDATE players SET password = $param_password, email = $email, avatar = $avatar, signup = 1 WHERE username = $username";
     mysqli_query($link, $sql);
