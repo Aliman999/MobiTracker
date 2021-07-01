@@ -68,7 +68,7 @@ function tcpp(){
   document.getElementById("navBackDrop").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
   var container = document.createElement("div");
   container.style.position = "absolute";
-  container.style.backgroundColor = "#243139";
+  container.style.backgroundColor = "#151f26";
   container.style.border = "2px solid rgb(57, 206, 216)";
   container.style.boxShadow = "0px 0px 15px rgb(57 206 216 / 50%)";
   container.style.borderRadius = "4px";
@@ -79,7 +79,7 @@ function tcpp(){
   container.style.zIndex = "10";
 
   var disclaimer = document.createElement("p");
-  disclaimer.innerHTML = "<p>We've recently changed our Terms and Conditions and Privacy Policies after your account was created. You're required to agree to the Terms and Conditions and Privacy Policy to allow MobiTracker to provide the service it does. Thank you. -James</p><br><p><a href='https://mobitracker.co/terms' class='highlight'>Terms and Conditions</a><br><a href='https://mobitracker.co/privacy' class='highlight'>Privacy Policy</a></p><div style='display:flex; justify-content:center;'><a class='rButton highlightSoftGreen' style='margin-right:8px; background-color:#151f26;'>Agree</a><a class='rButton highlight-red' style='background-color:#151f26;'>Disagree</a></div>";
+  disclaimer.innerHTML = "<p>We've recently changed our Terms and Conditions and Privacy Policies after your account was created. You're required to agree to the Terms and Conditions and Privacy Policy to allow MobiTracker to provide the service it does. Thank you. -James</p><br><p><a href='https://mobitracker.co/terms' class='highlight'>Terms and Conditions</a><br><a href='https://mobitracker.co/privacy' class='highlight'>Privacy Policy</a></p><div style='display:flex; justify-content:center;'><a class='rButton highlightSoftGreen' style='margin-right:8px;'>Agree</a><a class='rButton highlight-red'>Disagree</a></div>";
 
   container.appendChild(disclaimer);
 
