@@ -75,7 +75,7 @@ function tcpp(){
   container.style.top = "50%";
   container.style.left = "50%";
 
-  container.style.zIdex = "10";
+  container.style.zIdex = "6";
 
   var disclaimer = document.createElement("p");
   disclaimer.innerText = "Test";
