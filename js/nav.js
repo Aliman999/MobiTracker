@@ -63,6 +63,7 @@ function xp(rep){
 
 function tcpp(){
   var body = document.querySelector("body");
+  body.style.overflowY = "hidden";
   document.getElementById("navBackDrop").style.zIndex = "9";
   document.getElementById("navBackDrop").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
   var container = document.createElement("div");
