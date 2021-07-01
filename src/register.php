@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   }else{
     // Prepare a select statement
     $param_username = trim($_POST["username"]);
-    $sql = "SELECT id, username, signup FROM players WHERE (username = $param_username AND signup = 1)";
+    $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND signup = 1)";
     // Attempt to execute the prepared statement
     $result = mysqli_query($link, $sql);
     $row = mysqli_fetch_assoc($result);
@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       $username_err = "This RSI Handle has already been taken.";
     }else{
       $obj = json_decode(file_get_contents($requestURL.$_POST['username']), true);
-      $sql = "SELECT id, username, signup FROM players WHERE (username = $param_username AND signup = 0);";
+      $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND signup = 0);";
 
       if($obj['data']['profile']){
         $result = mysqli_query($link, $sql);
@@ -110,7 +110,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   if(empty($username_err) && empty($password_err) && empty($email_err) && $update == 1){
 
     $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
-    $sql = "UPDATE players SET password = $param_password, email = $email, avatar = $avatar, signup = 1 WHERE username = $username";
+    $sql = "UPDATE players SET password = '$param_password', email = '$emai'l, avatar = '$avatar', signup = 1 WHERE username = '$username'";
     mysqli_query($link, $sql);
   }
 
