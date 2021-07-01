@@ -175,7 +175,7 @@ function showPlayer(node){
         dataCount = Object.keys(player["data"]).length;
         populateHeader(player);
         if(dataCount>0){
-          playerUser = request.response.data.profile.handle;
+          playerUser = player.data.profile.handle;
           showComment(node);
         }
       }
