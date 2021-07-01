@@ -51,6 +51,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $result = mysqli_query($link, $sql);
         $row = mysqli_fetch_assoc($result);
         if($row !== NULL){
+          echo "updating";
           $update = 1;
         }
       }else{
