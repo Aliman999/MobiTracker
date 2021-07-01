@@ -36,8 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username_err = "This RSI Handle has already been taken.";
       }
     }else{
-      //json_decode();
-      $obj = file_get_contents("https://api.dustytavern.com/user/".$param_username);
+      $obj = json_decode(file_get_contents("https://api.dustytavern.com/user/".$param_username));
       $cID = $obj['data']['profile']['id'];
       if($cID == "n/a"){
         $cID = 0;
