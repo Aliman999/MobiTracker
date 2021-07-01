@@ -165,7 +165,7 @@ function showPlayer(node){
     dataCount = 0;
     request.open("GET", "src/api.php"+"?username="+node);
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
-    request.responseType = "json";
+    //request.responseType = "json";
     request.send();
     request.onload = function() {
       player = request.response;
