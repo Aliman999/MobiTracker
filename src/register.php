@@ -6,7 +6,6 @@ if (empty($_SESSION['token'])) {
 // Include config file
 require_once "../src/config.php";
 $requestURL = 'https://api.starcitizen-api.com/'.getKey().'/v1/live/user/';
-echo "test";
 
 if($_POST['tcpp'] != 0){
   exit();
@@ -42,6 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         if(mysqli_stmt_num_rows($stmt) == 1){
           $username_err = "This handle has been taken";
         }else{
+          echo "Running name";
           $obj = json_decode(file_get_contents($requestURL.$_POST['username']), true);
           $sql = "SELECT id, username, signup FROM players WHERE (username = ? AND signup = 0)";
           if($obj['data']['profile']){
