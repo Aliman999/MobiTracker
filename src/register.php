@@ -37,7 +37,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       }
     }else{
       $obj = json_decode(file_get_contents("https://api.dustytavern.com/user/".$param_username), true);
-      var_dump($obj);
       $cID = $obj['data']['profile']['id'];
       if($cID == "n/a"){
         $cID = 0;
