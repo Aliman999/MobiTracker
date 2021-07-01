@@ -28,7 +28,7 @@ if (isset($headers)) {
     }
 
     $orgs = "";
-    $json = file_get_contents("https://api.mobitracker.co.com/".$username);
+    $json = file_get_contents("https://api.mobitracker.co/".$username);
 
     $xmlResult = json_decode($json, true);
 
