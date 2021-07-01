@@ -31,8 +31,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Attempt to execute the prepared statement
     $result = mysqli_query($link, $sql);
     $row = mysqli_fetch_assoc($result);
-    if(count($row)>0){
-      $username_err = "This RSI Handle has already been taken.";
+    if(!isset($row)){
+      if(count($row)>0){
+        $username_err = "This RSI Handle has already been taken.";
+      }
     }else{
       //json_decode();
       $obj = file_get_contents("https://api.dustytavern.com/user/".$param_username);
