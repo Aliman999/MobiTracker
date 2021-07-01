@@ -61,7 +61,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $cID = substr($cID, 1);
       }
 
-      $sql = "SELECT cID FROM players WHERE cID = ?";
+      $sql = "SELECT cID FROM players WHERE cID = $cID";
       if($result = mysqli_query($link, $sql)){
         $row = mysqli_fetch_assoc($result)
         if(count($row) > 0){
