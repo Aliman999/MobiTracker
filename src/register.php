@@ -32,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Attempt to execute the prepared statement
     $result = mysqli_query($link, $sql);
     $row = mysqli_fetch_assoc($result);
-    if($row !== null){
+    if($row !== NULL){
       if(count($row)>0){
         $username_err = "This RSI Handle has already been taken.";
       }
@@ -50,8 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       if($obj['data']['profile']){
         $result = mysqli_query($link, $sql);
         $row = mysqli_fetch_assoc($result);
-        var_dump($row);
-        if($row !== null){
+        if($row !== NULL){
           $update = 1;
         }
       }else{
