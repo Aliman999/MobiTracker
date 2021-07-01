@@ -82,7 +82,12 @@ function registerUser(username, email, password){
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   query.send("username="+username+"&email="+email+"&password="+password+"&tcpp=1");
   query.onload = function(){
-    var response = JSON.parse(query.response);
+    var response;
+    try{
+      response = JSON.parse(query.response);
+    }catch{
+      response = "";
+    }
     if(response.username || response.email || response.password){
       if(response.username){
         form.pUsernameErr.classList.remove("hidden");
