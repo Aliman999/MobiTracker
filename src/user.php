@@ -82,6 +82,10 @@ if (isset($headers)) {
       $user['debug'] = $_SESSION['debug'];
     }
 
+    if(isset($_SESSION['tcpp'])){
+      $user['tcpp'] = $_SESSION['tcpp'];
+    }
+
     echo json_encode($user);
   }
 }else{
