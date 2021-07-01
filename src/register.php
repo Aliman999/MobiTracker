@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       if(count($row)>0){
         $username_err = "This RSI Handle has already been taken.";
       }else{
-        $obj = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/live/user/".$_POST['username']);//json_decode();
+        $obj = file_get_contents("https://api.dustytavern.com/user/".$_POST['username']);//json_decode();
         $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND signup = 0);";
         var_dump($obj);
         $cID = $obj['data']['profile']['id'];
