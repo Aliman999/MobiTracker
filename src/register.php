@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       if(count($row)>0){
         $username_err = "This RSI Handle has already been taken.";
       }else{
-        $obj = json_decode(file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/live/user/".$_POST['username']), true);
+        $obj = file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/live/user/".$_POST['username']);//json_decode();
         $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND signup = 0);";
         var_dump($obj);
         $cID = $obj['data']['profile']['id'];
@@ -104,11 +104,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   // Check input errors before inserting in database
   if(empty($username_err) && empty($password_err) && empty($email_err) && $update == 0){
       // Prepare an insert statement
+      $cID = $cID;
       $param_username = $username;
       $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
       $param_email = $email; // email hash
       $param_avatar = $avatar;
-      $sql = "INSERT INTO players (cID, username, password, email, organization, avatar, signup) VALUES ($cID, '$username', '$param_password', '$param_email', '{}', '$param_avatar', 1);";
+      $sql = "INSERT INTO players (cID, username, password, email, organization, avatar, signup) VALUES ($cID, '$param_username', '$param_password', '$param_email', '{}', '$param_avatar', 1);";
       echo $sql;
       mysqli_query($link, $sql);
   }
