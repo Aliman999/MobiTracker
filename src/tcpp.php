@@ -16,6 +16,7 @@ if (isset($headers)) {
     $username = $_SESSION['username'];
     $sql = "UPDATE players SET tcpp = 1 WHERE cID = $cID AND username = '$username';";
     $result = mysqli_query($link, $sql);
+    $_SESSION['tcpp'] = 1;
     echo $sql;
   }
 }else{
