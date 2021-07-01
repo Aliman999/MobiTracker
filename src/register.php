@@ -56,7 +56,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $avatar = $obj['data']['profile']['image'];
         $username = $obj['data']['profile']['handle'];
 
-        echo $obj['data']['profile']['id'];
+        echo $obj['data']['profile'];
         $cID = $obj['data']['profile']['id'];
         if($cID == "n/a"){
           $cID = 0;
