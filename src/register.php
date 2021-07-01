@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Attempt to execute the prepared statement
     $result = mysqli_query($link, $sql);
     $row = mysqli_fetch_assoc($result);
-
+    var_dump($row);
     if(count($row)>0){
       $username_err = "This RSI Handle has already been taken.";
     }else{
