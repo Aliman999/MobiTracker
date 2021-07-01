@@ -4,8 +4,8 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
-if(basename($_SERVER['HTTP_REFERER']) != "beta" || basename($_SERVER['HTTP_REFERER']) != "mobitracker.co"){
-  $ref = basename($_SERVER['HTTP_REFERER']);
+if(dirname($_SERVER['HTTP_REFERER']) != "beta"){
+  $ref = dirname($_SERVER['HTTP_REFERER']);
 }else{
   $ref = "";
 }
