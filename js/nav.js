@@ -80,7 +80,29 @@ function tcpp(){
   container.style.zIndex = "10";
 
   var disclaimer = document.createElement("p");
-  disclaimer.innerHTML = "<p>We've recently changed our Terms and Conditions and Privacy Policies after your account was created. You're required to agree to the Terms and Conditions and Privacy Policy to allow MobiTracker to provide the service it does. Thank you. -James</p><br><p><a href='https://mobitracker.co/terms' class='highlight'>Terms and Conditions</a><br><a href='https://mobitracker.co/privacy' class='highlight'>Privacy Policy</a></p><div style='margin:32px 0 16px 0; display:flex; justify-content:center;'><a class='rButton highlightSoftGreen' style='margin-right:8px; padding:16px 32px;'>Agree</a><a class='rButton highlight-red' style='margin-left:8px; padding:16px 32px;'>Disagree</a></div>";
+
+  var clickCont = document.createElement("div");
+  //"<div style='margin:32px 0 16px 0; display:flex; justify-content:center;'></div>"
+  clickCont.style.margin = "32px 0 16px 0";
+  clickCont.style.display = "flex";
+  clickCont.style.justifyContent = "center";
+  var agree = document.createElement("a");
+  agree.className = "rButton highlightSoftGreen";
+  agree.style.marginRight = "8px";
+  agree.style.padding = "16px 32px";
+  agree.innerText = "Agree";
+  //"<a class='rButton highlightSoftGreen' style='margin-right:8px; padding:16px 32px;'>Agree</a>"
+  var disagree = document.createElement("a");
+  disagree.className = "rButton highlight-red";
+  disagree.style.marginLeft = "8px";
+  disagree.style.padding = "16px 32px";
+  disagree.innerText = "Disagree";
+  //"<a class='rButton highlight-red' style='margin-left:8px; padding:16px 32px;'>Disagree</a>"
+  clickCont.appendChild(agree);
+  clickCont.appendChild(disagree);
+
+  disclaimer.innerHTML = "<p>We've recently changed our Terms and Conditions and Privacy Policies after your account was created. You're required to agree to the Terms and Conditions and Privacy Policy to allow MobiTracker to provide the service it does. Thank you. -James</p><br><p><a href='https://mobitracker.co/terms' class='highlight'>Terms and Conditions</a><br><a href='https://mobitracker.co/privacy' class='highlight'>Privacy Policy</a></p>";
+  disclaimer.appendChild(clickCont);
 
   container.appendChild(disclaimer);
 
