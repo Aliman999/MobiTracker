@@ -156,7 +156,7 @@ function flag(id,bool){
 }
 var player;
 var playerUser;
-var retries = 0;
+var retry = 0;
 function showPlayer(node){
   hideHome();
   hideSB();
