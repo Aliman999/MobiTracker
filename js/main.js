@@ -161,8 +161,8 @@ function showPlayer(node){
   hideHome();
   hideSB();
   clearSB();
-  dataCount = 0;
   if(node != playerUser){
+    dataCount = 0;
     request.open("GET", "src/api.php"+"?username="+node+"&v="+ext);
     if(ext == "live"){
       ext = "auto";

@@ -86,54 +86,6 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           <div id="loadingContainer">
             <p><span class="rBold">Loading</span></p><img src="../../src/loading.png" class="loading">
           </div>
-          <!--
-          <div class="faded">
-            <img class="settingAvi" src="https://robertsspaceindustries.com/media/yghlu2ruwolagr/heap_infobox/Avatar.png" alt="">
-          </div>
-          <div class="faded">
-            <p><span class="rBold"><?php echo $_SESSION['username'] ?></span><br><span id="displayName" class="subP">AKA Aliman</span></p>
-          </div>
-          <div class="faded">
-            <img class="badgeImg" src="https://robertsspaceindustries.com/media/cs5xmnc9byun2r/heap_thumb/Vice-Admiral.png"><span class="rBold" id="Badge">Vice Admiral</span>
-          </div>
-          <div class="faded">
-            <p><span class="rBold">Citizen ID:</span><br><span class="subP">#153021</span></p>
-            <p><span class="rBold">Enlisted:</span><br><span class="subP">June 24, 2013</span></p>
-            <p><span class="rBold">Languages:</span><br><span class="subP">English</span></p>
-          </div>
-          <div class="faded">
-            <div class="rFlex">
-              <img class="badgeImg" src="https://robertsspaceindustries.com/media/rgej1c8cnu8qcr/heap_infobox/MOBI-Logo.png"><p><span class="rBold">MobiTracker</span><br><span class="subP">Creator</span></p>
-            </div>
-            <div class="rFlex">
-              <img class="badgeImg" src="https://robertsspaceindustries.com/media/0imgxnxs8mbi4r/heap_infobox/DSCREW-Logo.jpg"><p><span class="rBold">Deep Space Crew</span><br><span class="subP">Operator</span></p>
-            </div>
-            <div class="rFlex">
-              <img class="badgeImg" src="https://robertsspaceindustries.com/media/lozs32lwrkw2dr/heap_infobox/BMMOC-Logo.jpg"><p><span class="rBold">Banu Merchantman Owner's Club</span><br><span class="subP">Raptor Fodder</span></p>
-            </div>
-            <div class="rFlex">
-              <img class="badgeImg" src="https://robertsspaceindustries.com/media/gwbkwpyg5hbj3r/heap_infobox/ASTROLLC-Logo.png"><p><span class="rBold">Asteroid</span><br><span class="subP">Board Member</span></p>
-            </div>
-          </div>
-          <div class="faded divLeft">
-            <p><span class="rBold">Bio:</span><br><span>Eye Color: Light Brown
-Hair Color: Dark Brown
-Hair Style: Slicked Back
-Father: Smuggler from the Oso system.
-Mother: Infiltrator from Pallas.
-Home: Nyx system.
-
-James Dusky started flying in a 325a. Last seen in a convoy, piloting a Banu Merchant Man incognito and blockade running UEE Navy checkpoints carrying a plethora of illegal goods and convicts from Rihlah to Vagabond.
-
-Carries a golden Atzkav “Deadeye” sniper rifle and a golden Yubarev “Deadeye” pistol stolen off a Russian bounty hunter "Nightstalker" in Stanton.
-
-James Dusky's currently a smuggler  in the Pyro system.
-
-Creator of Mobitracker.co
-
-U2FsdGVkX18aAi7HmMKTTmf1aXYYxmCykBKCrc4dOjw=</span></p>
-          </div>
-          -->
         </div>
       </div>
     </div>
