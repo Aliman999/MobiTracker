@@ -98,6 +98,9 @@ function tcpp(){
     query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     query.setRequestHeader(tokenHeader.name,tokenHeader.content);
     query.send();
+    query.onload = function(){
+      console.log(query.response);
+    }
     container.remove();
     document.getElementById("navBackDrop").style.zIndex = "-1";
     document.getElementById("navBackDrop").style.backgroundColor = "rgba(0, 0, 0, 0)";
