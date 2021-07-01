@@ -172,12 +172,13 @@ function showPlayer(node){
       if(player == null && retry < 2){
         showPlayer(node);
         retry++;
-      }
-      dataCount = Object.keys(player["data"]).length;
-      populateHeader(player);
-      if(dataCount>0){
-        playerUser = request.response.data.profile.handle;
-        showComment(node);
+      }else{
+        dataCount = Object.keys(player["data"]).length;
+        populateHeader(player);
+        if(dataCount>0){
+          playerUser = request.response.data.profile.handle;
+          showComment(node);
+        }
       }
     }
   }else{
