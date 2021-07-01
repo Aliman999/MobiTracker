@@ -49,7 +49,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       if($obj['data']['profile']){
         $result = mysqli_query($link, $sql);
         $row = mysqli_fetch_assoc($result);
-        if(count($row)>0){
+        if($row !== null){
           $update = 1;
         }
       }else{
