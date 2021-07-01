@@ -42,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           $username_err = "This handle has been taken";
         }else{
           $obj = json_decode(file_get_contents($requestURL.$_POST['username']), true);
-
+          echo $obj;
           $sql = "SELECT id, username, signup FROM players WHERE (username = ? AND signup = 0)";
           if($obj['data']['profile']){
             if($stmt = mysqli_prepare($link, $sql)){
