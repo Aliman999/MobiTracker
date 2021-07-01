@@ -5,10 +5,8 @@ session_start();
 require_once "../src/config.php";
 $requestURL = 'https://api.starcitizen-api.com/'.getKey().'/v1/live/user/';
 
-if($_POST['tcpp'] != 0){
+if($_POST['tcpp'] == 0){
   exit();
-}else{
-  echo "test";
 }
 
 ini_set('display_errors', 1);
