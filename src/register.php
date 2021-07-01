@@ -19,6 +19,7 @@ $username_err = $password_err = $email_err = "";
 $update = 0;
 $cID = 0;
 
+echo "https://api.dustytavern.com/user/".$param_username;
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
   // Validate username
@@ -37,7 +38,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username_err = "This RSI Handle has already been taken.";
       }else{
         $obj = file_get_contents("https://api.dustytavern.com/user/".$param_username);//json_decode();
-        echo "https://api.dustytavern.com/user/".$param_username;
         $cID = $obj['data']['profile']['id'];
         if($cID == "n/a"){
           $cID = 0;
