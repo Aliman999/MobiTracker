@@ -36,8 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       if(count($row)>0){
         $username_err = "This RSI Handle has already been taken.";
       }else{
-        $obj = file_get_contents("https://api.dustytavern.com/user/".$_POST['username']);//json_decode();
-        $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND signup = 0);";
+        $obj = file_get_contents("https://api.dustytavern.com/user/".$param_username);//json_decode();
         var_dump($obj);
         $cID = $obj['data']['profile']['id'];
         if($cID == "n/a"){
@@ -46,6 +45,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           $cID = substr($cID, 1);
         }
 
+        $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND signup = 0);";
         if($obj['data']['profile']){
           $result = mysqli_query($link, $sql);
           $row = mysqli_fetch_assoc($result);
