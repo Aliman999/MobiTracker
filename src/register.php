@@ -44,15 +44,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $cID = substr($cID, 1);
       }
 
-      $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND cID = $cID AND signup = 0);";
-      echo $sql;
-      if($obj['data']['profile']){
-        $result = mysqli_query($link, $sql);
-        $row = mysqli_fetch_assoc($result);
-        if(count($row)>0){
-          $username_err = "This RSI Handle has already been taken.";
-        }
-      }else{
+      if(!$obj['data']['profile']){
         $username_err = "This is not a RSI Handle";
       }
 
