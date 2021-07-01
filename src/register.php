@@ -56,13 +56,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $avatar = $obj['data']['profile']['image'];
         $username = $obj['data']['profile']['handle'];
 
+        echo $obj['data']['profile']['id'];
         $cID = $obj['data']['profile']['id'];
         if($cID == "n/a"){
           $cID = 0;
         }else{
           $cID = substr($cID, 1);
         }
-        echo $cID;
 
         $sql = "SELECT cID FROM players WHERE cID = $cID";
         if($result = mysqli_query($link, $sql)){
