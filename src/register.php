@@ -45,7 +45,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       }
 
       $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND cID = $cID AND signup = 0);";
-      echo $sql;
+
       if($obj['data']['profile']){
         $result = mysqli_query($link, $sql);
         $row = mysqli_fetch_assoc($result);
@@ -116,6 +116,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
     $sql = "UPDATE players SET password = '$param_password', email = '$email', avatar = '$avatar', signup = 1 WHERE username = '$username'";
+    echo $sql;
     mysqli_query($link, $sql);
   }
 
