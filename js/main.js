@@ -157,13 +157,18 @@ function flag(id,bool){
 var player;
 var playerUser;
 var retry = 0;
-function showPlayer(node){
+function showPlayer(node, live){
+  if(live){
+    var ext = "live";
+  }else{
+    var ext = "auto";
+  }
   hideHome();
   hideSB();
   clearSB();
   if(node != playerUser){
     dataCount = 0;
-    request.open("GET", "src/api.php"+"?username="+node);
+    request.open("GET", "src/api.php"+"?username="+node+"&ext="+ext);
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
     request.send();
     request.onload = function() {
@@ -593,7 +598,7 @@ function populateHeader(jsonObj) {
   forceRefresh.onclick = function(){
     clearBox(header);
     clearBox(section);
-    showPlayer(node.value);
+    showPlayer(node.value, true);
   };
   header.appendChild(forceRefresh);
   //Refresh END
