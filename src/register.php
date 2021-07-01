@@ -3,7 +3,7 @@ session_start();
 
 // Include config file
 require_once "../src/config.php";
-$requestURL = 'https://api.starcitizen-api.com/'.getKey().'/v1/live/user/';
+$requestURL = '';
 
 if($_POST['tcpp'] == 0){
   exit();
@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       if(count($row)>0){
         $username_err = "This RSI Handle has already been taken.";
       }else{
-        $obj = json_decode(file_get_contents($requestURL.$_POST['username']), true);
+        $obj = json_decode(file_get_contents("https://api.starcitizen-api.com/".getKey()."/v1/live/user/".$_POST['username']), true);
         $sql = "SELECT id, username, signup FROM players WHERE (username = '$param_username' AND signup = 0);";
 
         if($obj['data']['profile']){
