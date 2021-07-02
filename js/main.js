@@ -170,12 +170,11 @@ function showPlayer(node, live){
     dataCount = 0;
     request.open("GET", "src/api.php"+"?username="+node+"&ext="+ext);
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
+    request.responseType = "json";
     request.send();
     request.onload = function() {
-      try{
-        player = JSON.parse(request.response);
-        dataCount = Object.keys(player["data"]).length;
-      }
+      player = request.response;
+      dataCount = Object.keys(player["data"]).length;
       if(player == null && retry < 2){
         showPlayer(node);
         retry++;
