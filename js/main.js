@@ -172,7 +172,11 @@ function showPlayer(node, live){
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
     request.send();
     request.onload = function() {
-      player = JSON.parse(request.response);
+      try{
+        player = JSON.parse(request.response);
+      }catch{
+        player = null;
+      }
       if(player == null && retry < 2){
         showPlayer(node);
         retry++;
