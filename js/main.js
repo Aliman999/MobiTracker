@@ -174,6 +174,7 @@ function showPlayer(node, live){
     request.onload = function() {
       try{
         player = JSON.parse(request.response);
+        dataCount = Object.keys(player["data"]).length;
       }catch{
         player = null;
       }
@@ -181,7 +182,6 @@ function showPlayer(node, live){
         showPlayer(node);
         retry++;
       }else{
-        dataCount = Object.keys(player["data"]).length;
         populateHeader(player);
         if(dataCount>0){
           playerUser = player.data.profile.handle;
