@@ -174,11 +174,11 @@ function showPlayer(node, live){
     request.send();
     request.onload = function() {
       player = request.response;
-      dataCount = Object.keys(player["data"]).length;
       if(player == null && retry < 2){
         showPlayer(node);
         retry++;
       }else{
+        dataCount = Object.keys(player["data"]).length;
         populateHeader(player);
         if(dataCount>0){
           playerUser = player.data.profile.handle;
