@@ -175,7 +175,7 @@ function showPlayer(node, live){
       try{
         player = JSON.parse(request.response);
         dataCount = Object.keys(player["data"]).length;
-      }catch(){
+      }catch{
         player = null;
       }
       if(player == null && retry < 2){
