@@ -180,7 +180,11 @@ function showPlayer(node, live){
 
     var loading = document.createElement("span");
     loading.className = "rBold";
-    loading.innerText = "Loading";
+    if(retry){
+      loading.innerText = "Loading "+retry+"/3";
+    }else{
+      loading.innerText = "Loading";
+    }
 
     var loadingImg = document.createElement("img");
     loadingImg.className = "loading";
@@ -191,7 +195,6 @@ function showPlayer(node, live){
     loadingContainer.appendChild(loadingImg);
     header.appendChild(loadingContainer);
   }
-
   load();
   if(node != playerUser || live){
     dataCount = 0;
