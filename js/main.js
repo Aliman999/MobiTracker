@@ -748,9 +748,11 @@ async function populateHeader(jsonObj){
 
   //Player Org
   console.log(jsonObj.data);
+  var orgPanel = document.createElement("div");
+
   orgPanel.className = "ptitle";
   orgPanel.style.flexWrap = "wrap";
-  var orgPanel = document.createElement("div");
+  
   if(jsonObj.data.organization){
     if(jsonObj.data.organization.name){
       var orgCont = document.createElement("div");
