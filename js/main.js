@@ -1576,7 +1576,11 @@ function uSearch(searched){
     sba.onerror = function(){
       this.src = "src/avatars/avatar_default.jpg";
     }
-    sba.src = searched[i]["avatar"];
+    if(searched[i]["avatar"]){
+      sba.src = searched[i]["avatar"];
+    }else{
+      sba.src = "src/avatars/avatar_default.jpg";
+    }
     console.log(i);
     sb[i].appendChild(sba);
     var sbName = document.createElement("div");
