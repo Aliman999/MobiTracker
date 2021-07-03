@@ -854,7 +854,6 @@ function populateHeader(jsonObj){
 
 
   //Player Org
-  console.log(jsonObj.data);
   var orgPanel = document.createElement("div");
 
   orgPanel.className = "ptitle faded";
@@ -1272,7 +1271,7 @@ function showReview(){
     editing = 0;
     //Creator Container
     var playerReview = document.createElement("div");
-    playerReview.className = "player-review";
+    playerReview.className = "player-review faded-section";
     var playerminContainer = document.createElement("div");
     playerminContainer.className = "player-min-container";
     playerReview.appendChild(playerminContainer);
@@ -1530,6 +1529,16 @@ function showReview(){
       commented = 0;
     }
   }
+  var x = 0;
+  var faded = document.getElementsByClassName("faded-section");
+  var display = setInterval(()=>{
+    faded[x].style.opacity = 1;
+    if(x == faded.length-1){
+      clearInterval(display);
+    }else{
+      x++;
+    }
+  }, 250);
 }
 //Searched Users
 function uSearch(searched){
