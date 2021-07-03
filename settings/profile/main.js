@@ -149,7 +149,7 @@ function init(){
     orgCont = document.createElement("p");
 
     orgImg = document.createElement("img")
-    orgImg.className = "badgeImg";
+    orgImg.className = "orgLogo";
     if(x == 0){
       orgImg.src = profile.organization.image;
     }else{
