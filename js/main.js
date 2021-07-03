@@ -1573,10 +1573,10 @@ function uSearch(searched){
     sb[i].className = "sbCont faded-section";
     var sba  = document.createElement("img");
     sba.className = "sba";
-    sba.src = searched[i]["avatar"];
     sba.onerror = function(){
       this.src = "src/avatars/avatar_default.jpg";
     }
+    sba.src = searched[i]["avatar"];
     sb[i].appendChild(sba);
     var sbName = document.createElement("div");
     sbName.className = "player-min-name";
