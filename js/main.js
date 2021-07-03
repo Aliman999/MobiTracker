@@ -1000,6 +1000,7 @@ function populateHeader(jsonObj){
     header.appendChild(createButton);
 
     var x = 0;
+    var faded = document.getElementsByClassName("faded");
     var display = setInterval(()=>{
       faded[x].style.opacity = 1;
       if(x == faded.length-1){
