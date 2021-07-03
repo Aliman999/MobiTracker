@@ -747,6 +747,7 @@ async function populateHeader(jsonObj){
   //Rating Container END
 
   //Player Org
+  console.log(jsonObj.data);
   var orgLogo = document.createElement("img");
   var orgName = document.createElement("p");
   var orgLink = document.createElement("a");
