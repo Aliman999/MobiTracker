@@ -778,7 +778,8 @@ async function populateHeader(jsonObj){
 
       header.appendChild(orgPanel);
 
-
+      orgName.innerHTML += "<br>";
+      orgName.appendChild(orgRank);
       orgLink.appendChild(orgName);
       orgCont.appendChild(orgLogo);
       orgCont.appendChild(orgLink);
