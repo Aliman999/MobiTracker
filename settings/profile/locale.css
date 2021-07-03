@@ -31,9 +31,6 @@
 .divLeft{
   justify-content: flex-start !important;
 }
-.rFlex{
-  display: flex;
-}
 
 @keyframes rotation {
   from {

@@ -288,6 +288,12 @@ img.playeravatar{
   height:110px;
   width:110px;
 }
+.orgName{
+
+}
+.rFlex{
+  display: flex;
+}
 .userInput{
   padding: 8px;
   height: 100%;
