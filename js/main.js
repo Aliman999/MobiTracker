@@ -764,8 +764,33 @@ async function populateHeader(jsonObj){
   idCont.appendChild(document.createElement("br"));
   idCont.appendChild(subP);
   ptitle.appendChild(idCont);
-  header.appendChild(ptitle);
   //Player Info END
+
+  //Enlisted
+  const enlistCont = document.createElement("p");
+  boldSpan = document.createElement("span");
+
+  boldSpan.innerText = "Citizen ID:";
+  boldSpan.className = "rBold";
+
+  subP = document.createElement("span");
+  subP.className = "subP";
+  var d = new Date(jsonObj.data.profile.enlisted);
+  subP.innerText = d.toLocaleString("en-US", {
+    month: "long",
+    day: "2-digit",
+    year: "numeric",
+  });
+
+  enlistCont.appendChild(boldSpan);
+  enlistCont.appendChild(document.createElement("br"));
+  enlistCont.appendChild(subP);
+  ptitle.appendChild(enlistCont);
+  //Enlisted END
+
+
+  header.appendChild(ptitle);
+
 
   //Player Org
   console.log(jsonObj.data);

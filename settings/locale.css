@@ -28,9 +28,6 @@ a.loginName{
 .rightSide{
   margin: auto 0 auto auto;
 }
-.rBold{
-  font-size: 18px;
-}
 .settingsNav{
   display: flex;
   flex-direction: column;
