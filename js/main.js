@@ -790,6 +790,7 @@ async function populateHeader(jsonObj){
       var orgLogo = document.createElement("img");
       var orgName = document.createElement("p");
       var orgLink = document.createElement("a");
+      var orgRank = document.createElement("span");
       orgLink.className = "panelLink";
 
       orgLogo.className = "orgLogo";
@@ -799,12 +800,20 @@ async function populateHeader(jsonObj){
       orgName.className = "orgName";
       orgName.textContent = "REDACTED";
 
+      orgRank.className = "subP";
+      orgRank.innerText = "REDACTED";
+
+      orgLink.href = "";
+      orgLink.target = "_blank";
 
       header.appendChild(orgPanel);
 
+      orgName.innerHTML += "<br>";
+      orgName.appendChild(orgRank);
       orgLink.appendChild(orgName);
-      orgPanel.appendChild(orgLogo);
-      orgPanel.appendChild(orgLink);
+      orgCont.appendChild(orgLogo);
+      orgCont.appendChild(orgLink);
+      orgPanel.appendChild(orgCont);
     }
   }
   if(jsonObj.data.affiliation){
