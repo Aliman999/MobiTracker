@@ -672,14 +672,14 @@ function populateHeader(jsonObj){
 
   //Player ID
   var playerid = document.createElement("p");
-  playerid.className = "playerid";
+  playerid.className = "playerid faded";
   playerid.textContent = "Citizen "+jsonObj["data"]["profile"]["id"];
   header.appendChild(playerid);
   //Player ID END
 
   //Player Avatar
   var playeravatar = document.createElement("img");
-  playeravatar.className = "playeravatar";
+  playeravatar.className = "playeravatar faded";
   playeravatar.src = jsonObj["data"]["profile"]["image"];
   playeravatar.onerror = function(){
     this.src = "src/avatars/avatar_default.jpg";
@@ -695,7 +695,7 @@ function populateHeader(jsonObj){
 
   handleLink.className = "panelLink";
   playerinfo.className = "playerinfo";
-  playerPanel.className = "ptitle";
+  playerPanel.className = "ptitle faded";
 
   playerinfo.textContent = jsonObj["data"]["profile"]["handle"];
 
