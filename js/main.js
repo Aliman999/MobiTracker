@@ -560,8 +560,10 @@ function populateHeader(jsonObj){
     notFound.className = "notFound faded";
     notFound.textContent = "Citizen Not Found";
     header.appendChild(notFound);
-    notFound.style.opacity = "1";
     document.title = "Citizen Not Found - MobiTracker";
+    setTimeout(()=>{
+      notFound.style.opacity = "1";
+    }, 250);
   }
   updateSearch(jsonObj['data']['profile']['handle']);
   document.title = jsonObj['data']['profile']['handle']+" - MobiTracker";
