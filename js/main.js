@@ -999,18 +999,19 @@ function populateHeader(jsonObj){
     header.appendChild(createErr);
     header.appendChild(createButton);
 
-    var x = 0;
-    var faded = document.getElementsByClassName("faded");
-    var display = setInterval(()=>{
-      faded[x].style.opacity = 1;
-      if(x == faded.length-1){
-        clearInterval(display);
-      }else{
-        x++;
-      }
-    }, 250);
   }
   //Add Comment END
+
+  var x = 0;
+  var faded = document.getElementsByClassName("faded");
+  var display = setInterval(()=>{
+    faded[x].style.opacity = 1;
+    if(x == faded.length-1){
+      clearInterval(display);
+    }else{
+      x++;
+    }
+  }, 250);
 }
 
 function noVouchers(usr){
