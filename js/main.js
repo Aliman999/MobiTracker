@@ -1576,13 +1576,13 @@ function uSearch(searched, length){
       this.src = "src/avatars/avatar_default.jpg";
     }
 
-    sba.src = searched[i]?.avatar;
+    sba.src = searched[i].avatar;
     console.log(i);
     sb[i].appendChild(sba);
     var sbName = document.createElement("div");
     sbName.className = "player-min-name";
 
-    if(searched[i]?.verify == 1){
+    if(searched[i].verify == 1){
       var sbVerified = document.createElement("img");
       sbVerified.className = "verified";
       sbVerified.src = "src/verified.png";
@@ -1590,10 +1590,10 @@ function uSearch(searched, length){
     }
 
     var sbUsername = document.createElement("a");
-    sbUsername.innerHTML = searched[i]?.username;
-    sbUsername.id = searched[i]?.username;
+    sbUsername.innerHTML = searched[i].username;
+    sbUsername.id = searched[i].username;
     sbUsername.className = "sbu player-username";
-    sbUsername.href = "https://mobitracker.co/"+searched[i]?.username;
+    sbUsername.href = "https://mobitracker.co/"+searched[i].username;
     sbName.appendChild(sbUsername);
     sb[i].appendChild(sbName);
 
