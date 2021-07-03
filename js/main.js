@@ -167,7 +167,7 @@ function showPlayer(node, live){
   hideSB();
   clearSB();
 
-  function loading(){
+  function load(){
     containerHeader.style.display = "block";
     containerSection.style.display = "none";
     header.style.padding = "8px 16px";
@@ -183,7 +183,7 @@ function showPlayer(node, live){
   }
 
   if(node != playerUser || live){
-    loading();
+    load();
     dataCount = 0;
     request.open("GET", "src/api.php"+"?username="+node+"&ext="+ext);
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
