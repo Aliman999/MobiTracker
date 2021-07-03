@@ -905,7 +905,6 @@ function populateHeader(jsonObj){
       orgRank.innerText = "REDACTED";
 
       orgLink.href = "";
-      orgLink.target = "_blank";
 
       header.appendChild(orgPanel);
 
@@ -969,7 +968,6 @@ function populateHeader(jsonObj){
         orgRank.innerText = "REDACTED";
 
         orgLink.href = "";
-        orgLink.target = "_blank";
 
         header.appendChild(orgPanel);
 
