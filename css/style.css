@@ -725,12 +725,6 @@ p.page{
   opacity: 0.85;
   text-shadow: none;
 }
-.rFaded-section{
-  pointer-events: none;
-  cursor: default;
-  opacity: 0.85;
-  text-shadow: none;
-}
 .rBold{
   font-weight: bold;
 }
@@ -802,6 +796,10 @@ p.page{
   left:5px;
 }
 .faded{
+  opacity: 0;
+  transition: .25s ease-in-out;
+}
+.faded-section{
   opacity: 0;
   transition: .25s ease-in-out;
 }

@@ -1272,7 +1272,7 @@ function showReview(){
     editing = 0;
     //Creator Container
     playerReview.push(document.createElement("div"));
-    playerReview[i].className = "player-review rFaded-section";
+    playerReview[i].className = "player-review faded-section";
     var playerminContainer = document.createElement("div");
     playerminContainer.className = "player-min-container";
     playerReview[i].appendChild(playerminContainer);
