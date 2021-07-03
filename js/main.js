@@ -741,25 +741,6 @@ async function populateHeader(jsonObj){
 
 
   //Player Info
-
-
-  const idCont = document.createElement("p");
-  boldSpan = document.createElement("span");
-  boldSpan.innerText = "Citizen ID:";
-  boldSpan.className = "rBold";
-  subP = document.createElement("span");
-  subP.className = "subP";
-  if(profile.profile.id === "n/a"){
-    subP.innerText = "No Citizen ID";
-  }else{
-    subP.innerText = profile.profile.id;
-  }
-
-  idCont.appendChild(boldSpan);
-  idCont.appendChild(document.createElement("br"));
-  idCont.appendChild(subP);
-
-
   var ptitle = document.createElement("div");
   ptitle.className = "ptitle faded";
 
