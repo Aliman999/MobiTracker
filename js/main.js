@@ -1543,7 +1543,7 @@ function showReview(){
         x++;
       }
     }
-  }, 250);
+  }, 150);
 }
 //Searched Users
 function uSearch(searched){
