@@ -593,7 +593,7 @@ function populateHeader(jsonObj){
     loading.style.opacity = 0;
     setTimeout(()=>{
       loading.remove();
-    }, 250);
+    }, 150);
   }else{
     containerHeader.style.display = "block";
     containerSection.style.display = "none";
