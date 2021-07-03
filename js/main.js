@@ -177,7 +177,7 @@ function showPlayer(node, live){
     loading.className = "rBold";
     loading.innerText = "Loading";
 
-    var loadingImg = document.createElement("span");
+    var loadingImg = document.createElement("img");
     loadingImg.className = "loading";
     loadingImg.src = "src/loading.png";
 
@@ -185,7 +185,7 @@ function showPlayer(node, live){
     loadcont.appendChild(loadingImg);
     header.appendChild(loadcont);
   }
-  
+
   if(node != playerUser || live){
     load();
     dataCount = 0;
