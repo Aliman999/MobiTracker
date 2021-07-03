@@ -579,6 +579,10 @@ async function populateHeader(jsonObj){
     header.style.padding = "8px 16px";
     containerHeader.style.display = "block";
     header.style.display = "flex";
+    
+    var loading = document.getElementById("loadingContainer");
+    loading.style.opacity = 0;
+    loading.remove();
   }else{
     containerHeader.style.display = "block";
     containerSection.style.display = "none";
