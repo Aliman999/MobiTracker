@@ -102,21 +102,23 @@ function init(){
   faded.meta.appendChild(enlistCont);
 
   //Languages
-  if(profile.fluency.length > 0){
-    const langCont = document.createElement("p");
-    boldSpan = document.createElement("span");
-    boldSpan.innerText = "Languages:";
-    boldSpan.className = "rBold";
-    subP = document.createElement("span");
-    subP.className = "subP";
-    subP.innerText = profile.fluency.join(", ");
+  if(profile.fluency){
+    if(profile.fluency.length > 0){
+      const langCont = document.createElement("p");
+      boldSpan = document.createElement("span");
+      boldSpan.innerText = "Languages:";
+      boldSpan.className = "rBold";
+      subP = document.createElement("span");
+      subP.className = "subP";
+      subP.innerText = profile.fluency.join(", ");
 
 
-    langCont.appendChild(boldSpan);
-    langCont.appendChild(document.createElement("br"));
-    langCont.appendChild(subP);
+      langCont.appendChild(boldSpan);
+      langCont.appendChild(document.createElement("br"));
+      langCont.appendChild(subP);
 
-    faded.meta.appendChild(langCont);
+      faded.meta.appendChild(langCont);
+    }
   }
 
   //Location
