@@ -253,10 +253,10 @@ img.playerbadge{
   border-radius: 360px;
 }
 .panelLink{
-  /*
-  color: #83919c;
-  */
   color: #C4D7E6;
+}
+.rFlex>.panelLink{
+  padding: 8px;
 }
 .panelLink:hover{
   text-shadow: 0px 0px 2px #C4D7E6;
