@@ -1224,13 +1224,13 @@ function populateHeader(jsonObj){
   var faded = document.getElementsByClassName("faded");
   var display = setInterval(()=>{
     faded[x].style.opacity = 1;
+    if (x == faded.length-2) {
+      ready = true;
+    }
     if(x == faded.length-1){
       clearInterval(display);
     }else{
       x++;
-    }
-    if (x == faded.length-2) {
-      ready = true;
     }
   }, 250);
 }
