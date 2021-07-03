@@ -295,7 +295,7 @@ img.playeravatar{
   font-size: 13px;
 }
 .orgName>.subP{
-  padding-left: 2px;
+  padding-left: 1px;
 }
 .rFlex{
   display: flex;
