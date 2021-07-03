@@ -1226,10 +1226,11 @@ function populateHeader(jsonObj){
     faded[x].style.opacity = 1;
     if(x == faded.length-1){
       clearInterval(display);
-    }else if (x == faded.length-2) {
-      ready = true;
     }else{
       x++;
+    }
+    if (x == faded.length-2) {
+      ready = true;
     }
   }, 250);
 }
