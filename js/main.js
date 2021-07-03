@@ -181,7 +181,9 @@ function showPlayer(node, live){
     loadingImg.className = "loading";
     loadingImg.src = "src/loading.png";
   }
+
   if(node != playerUser || live){
+    loading();
     dataCount = 0;
     request.open("GET", "src/api.php"+"?username="+node+"&ext="+ext);
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
