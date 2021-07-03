@@ -171,6 +171,7 @@ function showPlayer(node, live){
     if(!retry){
       header.style.padding = "8px 16px";
       containerHeader.style.display = "block";
+      containerSection.style.display = "none";
       header.style.display = "flex";
 
       var loadingContainer = document.createElement("div");
