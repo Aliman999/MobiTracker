@@ -877,7 +877,7 @@ function populateHeader(jsonObj){
       orgLogo.src = jsonObj.data.organization.image;
 
 
-      orgName.className = "orgName";
+      orgName.className = "orgName rBold";
       orgName.textContent = jsonObj.data.organization.name;
 
       orgRank.className = "subP";
