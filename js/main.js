@@ -748,6 +748,33 @@ async function populateHeader(jsonObj){
 
   //Player Org
   console.log(jsonObj.data);
+  if(json.organization){
+    if(json.organization.name){
+      var orgLogo = document.createElement("img");
+      var orgName = document.createElement("p");
+      var orgLink = document.createElement("a");
+      var orgPanel = document.createElement("div");
+      orgPanel.className = "ptitle";
+      orgLink.className = "panelLink";
+
+      orgLogo.className = "orgLogo";
+      orgLogo.src = jsonObj["data"]["organization"]["image"];
+
+
+      orgName.className = "orgName";
+      orgName.textContent = jsonObj["data"]["organization"]["name"];
+
+      orgLink.href = orgURL+jsonObj["data"]["organization"]["sid"];
+      orgLink.target = "_blank";
+
+      header.appendChild(orgPanel);
+
+      orgLink.appendChild(orgName);
+      orgPanel.appendChild(orgLogo);
+      orgPanel.appendChild(orgLink);
+    }
+  }
+  /*
   var orgLogo = document.createElement("img");
   var orgName = document.createElement("p");
   var orgLink = document.createElement("a");
@@ -770,10 +797,7 @@ async function populateHeader(jsonObj){
   orgLink.appendChild(orgName);
   orgPanel.appendChild(orgLogo);
   orgPanel.appendChild(orgLink);
-
-  if(!jsonObj["data"]["organization"]["image"]){
-    clearBox(orgPanel);
-  }
+  */
   //Player Org END
 
   //Tag
