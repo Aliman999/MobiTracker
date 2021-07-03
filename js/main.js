@@ -607,10 +607,6 @@ function populateHeader(jsonObj){
     showPlayer(node.value, true);
   };
   header.appendChild(forceRefresh);
-  setTimeout(()=>{
-    forceRefresh.style.opacity = "1";
-    copyUrl.style.opacity = "1";
-  }, 250);
   //Refresh END
 
   //Data Source
@@ -667,6 +663,11 @@ function populateHeader(jsonObj){
   }
 
   header.appendChild(created_at);
+  setTimeout(()=>{
+    forceRefresh.style.opacity = "1";
+    copyUrl.style.opacity = "1";
+    created_at.style.opacity = "1";
+  }, 250);
   //Data Source
 
   //Player ID
