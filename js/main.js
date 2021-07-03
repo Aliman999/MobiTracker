@@ -800,7 +800,7 @@ async function populateHeader(jsonObj){
 
       subP = document.createElement("span");
       subP.className = "subP";
-      subP.innerText = profile.profile.fluency.join(", ");
+      subP.innerText = jsonObj.data.profile.fluency.join(", ");
 
       langCont.appendChild(boldSpan);
       langCont.appendChild(document.createElement("br"));
