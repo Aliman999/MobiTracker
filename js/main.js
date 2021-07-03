@@ -1223,10 +1223,10 @@ function populateHeader(jsonObj){
   var x = 0;
   var faded = document.getElementsByClassName("faded");
   var display = setInterval(()=>{
+    faded[x].style.opacity = 1;
     if(x == faded.length-1){
       clearInterval(display);
     }else{
-      faded[x].style.opacity = 1;
       x++;
     }
   }, 250);
