@@ -254,10 +254,12 @@ img.playerbadge{
   border-radius: 360px;
 }
 .panelLink{
+  /*
   color: #83919c;
+  */
+  color: #C4D7E6;
 }
 .panelLink:hover{
-  color: #C4D7E6;
   text-shadow: 0px 0px 3px #C4D7E6;
 }
 .panelLink>.playerinfo{
