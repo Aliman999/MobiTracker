@@ -795,17 +795,12 @@ async function populateHeader(jsonObj){
       const langCont = document.createElement("p");
       boldSpan = document.createElement("span");
 
-      boldSpan.innerText = "Enlisted:";
+      boldSpan.innerText = "Languages:";
       boldSpan.className = "rBold";
 
       subP = document.createElement("span");
       subP.className = "subP";
-      var d = new Date(jsonObj.data.profile.enlisted);
-      subP.innerText = d.toLocaleString("en-US", {
-        month: "long",
-        day: "2-digit",
-        year: "numeric",
-      });
+      subP.innerText = profile.profile.fluency.join(", ");
 
       langCont.appendChild(boldSpan);
       langCont.appendChild(document.createElement("br"));
