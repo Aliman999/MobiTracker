@@ -2,12 +2,6 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-.loading{
-  height: 32px;
-  width: 32px;
-  margin: auto 0;
-  animation: rotation 2s infinite linear;
-}
 #loadingContainer{
   transition: .25s ease-in-out;
 }
@@ -30,13 +24,4 @@
 }
 .divLeft{
   justify-content: flex-start !important;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
 }

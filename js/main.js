@@ -180,8 +180,12 @@ function showPlayer(node, live){
     var loadingImg = document.createElement("span");
     loadingImg.className = "loading";
     loadingImg.src = "src/loading.png";
-  }
 
+    loadcont.appendChild(loading);
+    loadcont.appendChild(loadingImg);
+    header.appendChild(loadcont);
+  }
+  
   if(node != playerUser || live){
     load();
     dataCount = 0;
