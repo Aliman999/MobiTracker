@@ -653,7 +653,7 @@ function populateHeader(jsonObj){
   });
 
   var cacheContainer = document.createElement("div");
-  cacheContainer.className = "ptitle";
+  cacheContainer.className = "ptitle faded";
 
   created_at.style.textAlign = "start";
 
