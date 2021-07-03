@@ -907,7 +907,7 @@ function populateHeader(jsonObj){
       orgLogo.src = "https://robertsspaceindustries.com/rsi/static/images/organization/public-orgs-thumb-redacted-bg.png";
 
 
-      orgName.className = "orgName";
+      orgName.className = "orgName rBold";
       orgName.textContent = "REDACTED";
 
       orgRank.className = "subP";
