@@ -748,8 +748,8 @@ async function populateHeader(jsonObj){
 
   //Player Org
   console.log(jsonObj.data);
-  if(jsonObj.organization){
-    if(jsonObj.organization.name){
+  if(jsonObj.data.organization){
+    if(jsonObj.data.organization.name){
       var orgLogo = document.createElement("img");
       var orgName = document.createElement("p");
       var orgLink = document.createElement("a");
