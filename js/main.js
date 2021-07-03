@@ -954,7 +954,7 @@ async function populateHeader(jsonObj){
   //Tag
   var selectedCareer = [];
   var tagContainer = document.createElement("div");
-  tagContainer.className  = "ptitle tooltip";
+  tagContainer.className  = "ptitle tooltip faded";
   var tooltiptext = document.createElement("span");
   tooltiptext.className = "tooltiptext";
   var tags = document.createElement("img");
