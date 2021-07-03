@@ -818,7 +818,7 @@ async function populateHeader(jsonObj){
   console.log(jsonObj.data);
   var orgPanel = document.createElement("div");
 
-  orgPanel.className = "ptitle";
+  orgPanel.className = "ptitle faded";
   orgPanel.style.flexWrap = "wrap";
 
   if(jsonObj.data.organization){
