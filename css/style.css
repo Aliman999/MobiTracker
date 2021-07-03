@@ -289,7 +289,7 @@ img.playeravatar{
   width:110px;
 }
 .orgName{
-
+  text-align: left;
 }
 .subP{
   font-size: 13px;
