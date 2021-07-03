@@ -1637,6 +1637,7 @@ function uSearch(searched){
     header.appendChild(sb[i]);
   }
 
+
   var x = 0;
   var display = setInterval(()=>{
     if(active == "career"){
@@ -1648,6 +1649,7 @@ function uSearch(searched){
       }
     }
   }, 50);
+
   header.style.removeProperty("height");
   headerHeight = header.offsetHeight;
 }
