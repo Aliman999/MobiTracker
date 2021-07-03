@@ -293,6 +293,7 @@ img.playeravatar{
 }
 .subP{
   font-size: 13px;
+  text-decoration: none;
 }
 .rFlex{
   display: flex;
