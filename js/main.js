@@ -1576,7 +1576,7 @@ function uSearch(searched){
     sba.onerror = function(){
       this.src = "src/avatars/avatar_default.jpg";
     }
-    if(searched[i]["avatar"]){
+    if(searched[i]){
       sba.src = searched[i]["avatar"];
     }else{
       sba.src = "src/avatars/avatar_default.jpg";
