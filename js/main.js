@@ -1570,7 +1570,7 @@ function uSearch(searched){
   var sb = [];
   for(var i = 0; i<sCount; i++){
     sb.push(document.createElement("div"));
-    sb[i].className = "sbCont";
+    sb[i].className = "sbCont faded-section";
     var sba  = document.createElement("img");
     sba.className = "sba";
     sba.src = searched[i]["avatar"];
@@ -1634,13 +1634,14 @@ function uSearch(searched){
       }
     }
     sb[i].appendChild(sbrc);
+    header.appendChild(sb[i]);
   }
 
   var x = 0;
   var display = setInterval(()=>{
     if(active == "career"){
-      header.appendChild(sb[x]);
-      if(x == playerReview.length-1){
+      sb[x].style.opacity = "1";
+      if(x == sb.length-1){
         clearInterval(display);
       }else{
         x++;
