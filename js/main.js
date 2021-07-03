@@ -167,35 +167,37 @@ function showPlayer(node, live){
   hideSB();
   clearSB();
 
-  function load(){
-    header.style.padding = "8px 16px";
-    containerHeader.style.display = "block";
-    header.style.display = "flex";
+  function load(retry){
+    if(!retry){
+      header.style.padding = "8px 16px";
+      containerHeader.style.display = "block";
+      header.style.display = "flex";
 
-    var loadingContainer = document.createElement("div");
-    loadingContainer.id = "loadingContainer";
-    loadingContainer.style.margin = "auto";
-    loadingContainer.style.display = "flex";
-    var loadcont = document.createElement("p");
+      var loadingContainer = document.createElement("div");
+      loadingContainer.id = "loadingContainer";
+      loadingContainer.style.margin = "auto";
+      loadingContainer.style.display = "flex";
+      var loadcont = document.createElement("p");
 
-    var loading = document.createElement("span");
-    loading.className = "rBold";
+      var loading = document.createElement("span");
+      loading.className = "rBold";
+
+      var loadingImg = document.createElement("img");
+      loadingImg.className = "loading";
+      loadingImg.src = "src/loading.png";
+
+      loadcont.appendChild(loading);
+      loadingContainer.appendChild(loadcont);
+      loadingContainer.appendChild(loadingImg);
+      header.appendChild(loadingContainer);
+    }
     if(retry){
       loading.innerText = "Loading "+retry+"/3";
     }else{
       loading.innerText = "Loading";
     }
-
-    var loadingImg = document.createElement("img");
-    loadingImg.className = "loading";
-    loadingImg.src = "src/loading.png";
-
-    loadcont.appendChild(loading);
-    loadingContainer.appendChild(loadcont);
-    loadingContainer.appendChild(loadingImg);
-    header.appendChild(loadingContainer);
   }
-  load();
+  load(retry);
   if(node != playerUser || live){
     dataCount = 0;
     request.open("GET", "src/api.php"+"?username="+node+"&ext="+ext);
