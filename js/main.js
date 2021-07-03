@@ -21,6 +21,7 @@ var ext = "auto";
 var careers = ["src/crew.png","src/escort.png","src/explorer.png","src/miner.png","src/pirate.png","src/trader.png"];
 var careersText = ["Crew","Escort","Explorer","Miner","Pirate","Trader"];
 var orgURL = "https://robertsspaceindustries.com/orgs/";
+var active;
 
 var request = new XMLHttpRequest();
 var readComments = new XMLHttpRequest();
@@ -581,6 +582,7 @@ function clearBox(elementID){
 }
 var ready = false;
 function populateHeader(jsonObj){
+  active = "user";
   retries = 0;
   if(dataCount > 0){
     header.style.padding = "8px 16px";
@@ -1224,14 +1226,16 @@ function populateHeader(jsonObj){
   var x = 0;
   var faded = document.getElementsByClassName("faded");
   var display = setInterval(()=>{
-    faded[x].style.opacity = 1;
-    if (x == faded.length-2) {
-      ready = true;
-    }
-    if(x == faded.length-1){
-      clearInterval(display);
-    }else{
-      x++;
+    if(active == "user"){
+      faded[x].style.opacity = 1;
+      if (x == faded.length-2) {
+        ready = true;
+      }
+      if(x == faded.length-1){
+        clearInterval(display);
+      }else{
+        x++;
+      }
     }
   }, 150);
 }
@@ -1548,6 +1552,7 @@ function showReview(){
 }
 //Searched Users
 function uSearch(searched){
+  active = "career";
   document.title = "MobiTracker";
   if(sCount > 0){
     containerHeader.style.display = "block";
@@ -1633,11 +1638,13 @@ function uSearch(searched){
 
   var x = 0;
   var display = setInterval(()=>{
-    header.appendChild(sb[x]);
-    if(x == playerReview.length-1){
-      clearInterval(display);
-    }else{
-      x++;
+    if(active == "career"){
+      header.appendChild(sb[x]);
+      if(x == playerReview.length-1){
+        clearInterval(display);
+      }else{
+        x++;
+      }
     }
   }, 50);
   header.style.removeProperty("height");
