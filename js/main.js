@@ -773,8 +773,9 @@ async function populateHeader(jsonObj){
       header.appendChild(orgPanel);
 
       orgLink.appendChild(orgName);
-      orgPanel.appendChild(orgLogo);
-      orgPanel.appendChild(orgLink);
+      orgCont.appendChild(orgLogo);
+      orgCont.appendChild(orgLink);
+      orgPanel.appendChild(orgCont);
     }else{
       var orgCont = document.createElement("div");
       orgCont.className = "rFlex";
