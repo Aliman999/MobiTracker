@@ -607,6 +607,10 @@ function populateHeader(jsonObj){
     showPlayer(node.value, true);
   };
   header.appendChild(forceRefresh);
+  setTimeout(()=>{
+    forceRefresh.style.opacity = "1";
+    copyUrl.style.opacity = "1";
+  }, 250);
   //Refresh END
 
   //Data Source
