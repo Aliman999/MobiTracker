@@ -676,6 +676,9 @@ function populateHeader(jsonObj){
   playerid.textContent = "Citizen "+jsonObj["data"]["profile"]["id"];
   header.appendChild(playerid);
   //Player ID END
+  setTimeout(()=>{
+    playerid.style.opacity = "1";
+  }, 250);
 
   //Player Avatar
   var playeravatar = document.createElement("img");
