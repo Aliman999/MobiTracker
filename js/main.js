@@ -1232,7 +1232,7 @@ function populateHeader(jsonObj){
     }else{
       x++;
     }
-  }, 250);
+  }, 150);
 }
 
 function noVouchers(usr){
