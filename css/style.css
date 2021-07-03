@@ -384,6 +384,9 @@ input{
 .player-review:last-child{
   border-bottom: 0;
 }
+.player-review>.created_at{
+  text-align: center;
+}
 .select-rating{
   display: flex;
   margin: auto;
