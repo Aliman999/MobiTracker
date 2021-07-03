@@ -546,7 +546,7 @@ function clearBox(elementID){
   elementID.style.marginTop = "";
 }
 
-function populateHeader(jsonObj){
+async function populateHeader(jsonObj){
   retries = 0;
   if(dataCount > 0){
     header.style.padding = "8px 16px";
@@ -663,7 +663,7 @@ function populateHeader(jsonObj){
   }
 
   header.appendChild(created_at);
-  setTimeout(()=>{
+  await setTimeout(()=>{
     forceRefresh.style.opacity = "1";
     copyUrl.style.opacity = "1";
     created_at.style.opacity = "1";
@@ -676,7 +676,7 @@ function populateHeader(jsonObj){
   playerid.textContent = "Citizen "+jsonObj["data"]["profile"]["id"];
   header.appendChild(playerid);
   //Player ID END
-  setTimeout(()=>{
+  await setTimeout(()=>{
     playerid.style.opacity = "1";
   }, 250);
 
@@ -709,7 +709,7 @@ function populateHeader(jsonObj){
   playerPanel.appendChild(handleLink);
   header.appendChild(playerPanel);
   //Player Handle END
-  setTimeout(()=>{
+  await setTimeout(()=>{
     playeravatar.style.opacity = "1";
     playerPanel.style.opacity = "1";
   }, 250);
