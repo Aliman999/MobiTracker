@@ -127,6 +127,7 @@ div.ptitle{
   justify-content: center;
   word-break: break-all;
   margin: auto;
+  padding: 8px;
 }
 div.ptitle img.playerbadge{
   margin:auto 0px auto 0px;

@@ -770,7 +770,7 @@ async function populateHeader(jsonObj){
   const enlistCont = document.createElement("p");
   boldSpan = document.createElement("span");
 
-  boldSpan.innerText = "Citizen ID:";
+  boldSpan.innerText = "Enlisted:";
   boldSpan.className = "rBold";
 
   subP = document.createElement("span");
