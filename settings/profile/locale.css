@@ -28,10 +28,6 @@
   margin: auto 0;
   padding-left: 4px;
 }
-.faded{
-  opacity: 0;
-  transition: .25s ease-in-out;
-}
 .divLeft{
   justify-content: flex-start !important;
 }

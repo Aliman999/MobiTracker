@@ -993,8 +993,19 @@ function populateHeader(jsonObj){
         createErr.textContent = "Unverified accounts are limited to 3 reviews. "+comcount+"/3";
       }
     };
+
     header.appendChild(createErr);
     header.appendChild(createButton);
+
+    var x = 0;
+    var display = setInterval(()=>{
+      faded[x].style.opacity = 1;
+      if(x == faded.length-1){
+        clearInterval(display);
+      }else{
+        x++;
+      }
+    }, 250);
   }
   //Add Comment END
 }

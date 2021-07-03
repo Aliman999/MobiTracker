@@ -767,6 +767,10 @@ p.page{
   bottom:-5px;
   left:5px;
 }
+.faded{
+  opacity: 0;
+  transition: .25s ease-in-out;
+}
 
 @media screen and (max-width: 410px) {
   header p{
