@@ -168,6 +168,7 @@ function showPlayer(node, live){
   clearSB();
 
   function load(retry){
+    ready = false;
     if(!retry){
       header.style.padding = "8px 16px";
       containerHeader.style.display = "block";
