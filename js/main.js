@@ -1534,7 +1534,7 @@ function showReview(){
   var display = setInterval(()=>{
     section.appendChild(playerReview[x]);
     faded[x].style.opacity = 1;
-    if(x == faded.length-1){
+    if(x == playerReview.length-1){
       clearInterval(display);
     }else{
       x++;
