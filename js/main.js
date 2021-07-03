@@ -796,7 +796,7 @@ async function populateHeader(jsonObj){
     }
   }
   if(jsonObj.data.affiliation){
-    for(var x = 0; x < jsonObj.affiliation.lenght; x++){
+    for(var x = 0; x < jsonObj.affiliation.length; x++){
       if(jsonObj.data.affiliation[x].name){
         var orgLogo = document.createElement("img");
         var orgName = document.createElement("p");
