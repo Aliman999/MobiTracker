@@ -192,8 +192,8 @@ function showPlayer(node, live){
     header.appendChild(loadingContainer);
   }
 
+  load();
   if(node != playerUser || live){
-    load();
     dataCount = 0;
     request.open("GET", "src/api.php"+"?username="+node+"&ext="+ext);
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
@@ -579,7 +579,7 @@ async function populateHeader(jsonObj){
     header.style.padding = "8px 16px";
     containerHeader.style.display = "block";
     header.style.display = "flex";
-    
+
     var loading = document.getElementById("loadingContainer");
     loading.style.opacity = 0;
     loading.remove();
