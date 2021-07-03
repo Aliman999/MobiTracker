@@ -1238,7 +1238,7 @@ function populateHeader(jsonObj){
         x++;
       }
     }
-  }, 150);
+  }, 250);
 }
 
 function noVouchers(usr){
@@ -1549,7 +1549,7 @@ function showReview(){
         x++;
       }
     }
-  }, 150);
+  }, 250);
 }
 //Searched Users
 function uSearch(searched, length){
