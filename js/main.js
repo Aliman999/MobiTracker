@@ -748,12 +748,12 @@ async function populateHeader(jsonObj){
 
   //Player Org
   console.log(jsonObj.data);
+  var orgPanel = document.createElement("div");
   if(jsonObj.data.organization){
     if(jsonObj.data.organization.name){
       var orgLogo = document.createElement("img");
       var orgName = document.createElement("p");
       var orgLink = document.createElement("a");
-      var orgPanel = document.createElement("div");
       orgPanel.className = "ptitle";
       orgLink.className = "panelLink";
 
@@ -776,7 +776,6 @@ async function populateHeader(jsonObj){
       var orgLogo = document.createElement("img");
       var orgName = document.createElement("p");
       var orgLink = document.createElement("a");
-      var orgPanel = document.createElement("div");
       orgPanel.className = "ptitle";
       orgLink.className = "panelLink";
 
@@ -801,7 +800,6 @@ async function populateHeader(jsonObj){
         var orgLogo = document.createElement("img");
         var orgName = document.createElement("p");
         var orgLink = document.createElement("a");
-        var orgPanel = document.createElement("div");
         orgPanel.className = "ptitle";
         orgLink.className = "panelLink";
 
@@ -824,7 +822,6 @@ async function populateHeader(jsonObj){
         var orgLogo = document.createElement("img");
         var orgName = document.createElement("p");
         var orgLink = document.createElement("a");
-        var orgPanel = document.createElement("div");
         orgPanel.className = "ptitle";
         orgLink.className = "panelLink";
 
