@@ -605,7 +605,7 @@ function populateHeader(jsonObj){
     document.title = "Citizen Not Found - MobiTracker";
     setTimeout(()=>{
       notFound.style.opacity = "1";
-    }, 250);
+    }, 150);
   }
   updateSearch(jsonObj['data']['profile']['handle']);
   document.title = jsonObj['data']['profile']['handle']+" - MobiTracker";
