@@ -1532,8 +1532,8 @@ function showReview(){
   var x = 0;
   var faded = document.getElementsByClassName("rFaded-section");
   var display = setInterval(()=>{
+    section.appendChild(playerReview[x]);
     faded[x].style.opacity = 1;
-    section.appendChild(playerReview);
     if(x == faded.length-1){
       clearInterval(display);
     }else{
