@@ -138,11 +138,11 @@ function init(){
   }
 
   //Orgs
-  if(profile.profile.orgLength > 0){
+  if(profile.orgLength > 0){
     var orgCont;
     var orgImg;
   }
-  for(var x = 0; x < profile.profile.orgLength; x++){
+  for(var x = 0; x < profile.orgLength; x++){
     orgDiv = document.createElement("div");
     orgDiv.className = "rFlex";
 
@@ -151,23 +151,23 @@ function init(){
     orgImg = document.createElement("img")
     orgImg.className = "badgeImg";
     if(x == 0){
-      orgImg.src = profile.profile.organization.image;
+      orgImg.src = profile.organization.image;
     }else{
-      orgImg.src = profile.profile.affiliation[x-1].image;
+      orgImg.src = profile.affiliation[x-1].image;
     }
     boldSpan = document.createElement("span");
     if(x == 0){
-      boldSpan.innerText = profile.profile.organization.name;
+      boldSpan.innerText = profile.organization.name;
     }else{
-      boldSpan.innerText = profile.profile.affiliation[x-1].name;
+      boldSpan.innerText = profile.affiliation[x-1].name;
     }
     boldSpan.className = "rBold";
     subP = document.createElement("span");
     subP.className = "subP";
     if(x == 0){
-      subP.innerText = profile.profile.organization.rank;
+      subP.innerText = profile.organization.rank;
     }else{
-      subP.innerText = profile.profile.affiliation[x-1].rank;
+      subP.innerText = profile.affiliation[x-1].rank;
     }
 
     orgCont.appendChild(boldSpan);
