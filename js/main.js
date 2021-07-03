@@ -789,6 +789,33 @@ async function populateHeader(jsonObj){
   //Enlisted END
 
 
+  //Languages
+  if(jsonObj.data.profile.fluency){
+    if(jsonObj.data.profile.fluency.length > 0){
+      const langCont = document.createElement("p");
+      boldSpan = document.createElement("span");
+
+      boldSpan.innerText = "Enlisted:";
+      boldSpan.className = "rBold";
+
+      subP = document.createElement("span");
+      subP.className = "subP";
+      var d = new Date(jsonObj.data.profile.enlisted);
+      subP.innerText = d.toLocaleString("en-US", {
+        month: "long",
+        day: "2-digit",
+        year: "numeric",
+      });
+
+      langCont.appendChild(boldSpan);
+      langCont.appendChild(document.createElement("br"));
+      langCont.appendChild(subP);
+      ptitle.appendChild(langCont);
+    }
+  }
+  //Languages
+
+
   header.appendChild(ptitle);
 
 
