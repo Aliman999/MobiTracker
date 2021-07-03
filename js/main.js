@@ -166,6 +166,21 @@ function showPlayer(node, live){
   hideHome();
   hideSB();
   clearSB();
+
+  function loading(){
+    containerHeader.style.display = "block";
+    containerSection.style.display = "none";
+    header.style.padding = "8px 16px";
+    var loadcont = document.createElement("p");
+
+    var loading = document.createElement("span");
+    loading.className = "rBold";
+    loading.innerText = "Loading";
+
+    var loadingImg = document.createElement("span");
+    loadingImg.className = "loading";
+    loadingImg.src = "src/loading.png";
+  }
   if(node != playerUser || live){
     dataCount = 0;
     request.open("GET", "src/api.php"+"?username="+node+"&ext="+ext);
