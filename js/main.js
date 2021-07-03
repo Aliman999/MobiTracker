@@ -705,11 +705,9 @@ function populateHeader(jsonObj){
   }
 
   header.appendChild(created_at);
-  setTimeout(()=>{
-    forceRefresh.style.opacity = "1";
-    copyUrl.style.opacity = "1";
-    created_at.style.opacity = "1";
-  }, 150);
+  forceRefresh.style.opacity = "1";
+  copyUrl.style.opacity = "1";
+  created_at.style.opacity = "1";
   //Data Source
 
   //Player Avatar
