@@ -702,10 +702,10 @@ function populateHeader(jsonObj){
   }
 
   header.appendChild(created_at);
+  setTimeout(()=>{
     forceRefresh.style.opacity = "1";
     copyUrl.style.opacity = "1";
     created_at.style.opacity = "1";
-  setTimeout(()=>{
   }, 250);
   //Data Source
 
