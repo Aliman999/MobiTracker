@@ -305,6 +305,9 @@ img.playeravatar{
 .rFlex{
   display: flex;
 }
+.rBold{
+  font-size: 18px;
+}
 .userInput{
   padding: 8px;
   height: 100%;
