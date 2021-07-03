@@ -578,7 +578,7 @@ function clearBox(elementID){
   elementID.style.border = "";
   elementID.style.marginTop = "";
 }
-var ready = false;
+
 function populateHeader(jsonObj){
   retries = 0;
   if(dataCount > 0){
@@ -1533,13 +1533,11 @@ function showReview(){
   }
   var x = 0;
   var display = setInterval(()=>{
-    if(ready){
-      playerReview[x].style.opacity = 1;
-      if(x == playerReview.length-1){
-        clearInterval(display);
-      }else{
-        x++;
-      }
+    playerReview[x].style.opacity = 1;
+    if(x == playerReview.length-1){
+      clearInterval(display);
+    }else{
+      x++;
     }
   }, 250);
 }
