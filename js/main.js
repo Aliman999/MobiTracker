@@ -663,7 +663,7 @@ async function populateHeader(jsonObj){
   }
 
   header.appendChild(created_at);
-  await setTimeout(()=>{
+  setTimeout(()=>{
     forceRefresh.style.opacity = "1";
     copyUrl.style.opacity = "1";
     created_at.style.opacity = "1";
@@ -676,9 +676,6 @@ async function populateHeader(jsonObj){
   playerid.textContent = "Citizen "+jsonObj["data"]["profile"]["id"];
   header.appendChild(playerid);
   //Player ID END
-  await setTimeout(()=>{
-    playerid.style.opacity = "1";
-  }, 250);
 
   //Player Avatar
   var playeravatar = document.createElement("img");
@@ -709,16 +706,12 @@ async function populateHeader(jsonObj){
   playerPanel.appendChild(handleLink);
   header.appendChild(playerPanel);
   //Player Handle END
-  await setTimeout(()=>{
-    playeravatar.style.opacity = "1";
-    playerPanel.style.opacity = "1";
-  }, 250);
 
   //Player Badge
   var playerbadge = document.createElement("img");
   var playertitle = document.createElement("p");
   var ptitle = document.createElement("div");
-  ptitle.className = "ptitle";
+  ptitle.className = "ptitle faded";
 
   playertitle.className = "playertitle";
   playertitle.textContent = jsonObj["data"]["profile"]["badge"];
@@ -733,7 +726,7 @@ async function populateHeader(jsonObj){
 
   //Rating Container
   var ratingContainer = document.createElement("div");
-  ratingContainer.className  = "ptitle";
+  ratingContainer.className  = "ptitle faded";
   var showCount = document.createElement("p");
   showCount.className = "ratingCount";
   var queryString = "?username=" + node.value;
