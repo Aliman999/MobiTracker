@@ -1532,7 +1532,9 @@ function showReview(){
   var x = 0;
   var display = setInterval(()=>{
     section.appendChild(playerReview[x]);
-    playerReview[x].style.opacity = 1;
+    setTimeout(()=>{
+      playerReview[x].style.opacity = 1;
+    }, 250)
     if(x == playerReview.length-1){
       clearInterval(display);
     }else{
