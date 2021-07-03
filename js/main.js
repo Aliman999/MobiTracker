@@ -573,7 +573,7 @@ function clearBox(elementID){
   elementID.style.marginTop = "";
 }
 
-function populateHeader(jsonObj){//test
+function populateHeader(jsonObj){
   retries = 0;
   if(dataCount > 0){
     header.style.padding = "8px 16px";
