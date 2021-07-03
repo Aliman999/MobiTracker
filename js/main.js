@@ -579,7 +579,7 @@ function populateHeader(jsonObj){
     copyUrlTT.className = "copyURL refresh copyToolTip";
     copyUrlTT.innerHTML = "Profile Url Copied!";
     var copyUrl = document.createElement("img");
-    copyUrl.className = "copyURL refresh";
+    copyUrl.className = "copyURL refresh faded";
     copyUrl.src = "src/copy.png";
     copyUrl.onclick = function(){
       copyUrlTT.style.display = "block";
@@ -599,7 +599,7 @@ function populateHeader(jsonObj){
   //Copy url END
   //Refresh
   var forceRefresh = document.createElement("img");
-  forceRefresh.className = "refresh";
+  forceRefresh.className = "refresh faded";
   forceRefresh.src = "src/refresh.png";
   forceRefresh.onclick = function(){
     clearBox(header);
