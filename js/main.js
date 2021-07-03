@@ -1,4 +1,3 @@
-var orgName = document.createElement("span");
 var header = document.querySelector("header");
 var section = document.querySelector("section");
 var body = document.getElementsByTagName("body");
@@ -753,8 +752,9 @@ async function populateHeader(jsonObj){
   if(jsonObj.data.organization){
     if(jsonObj.data.organization.name){
       var orgCont = document.createElement("div");
+      orgCont.className = "rFlex";
       var orgLogo = document.createElement("img");
-      var orgName = document.createElement("span");
+      var orgName = document.createElement("p");
       var orgLink = document.createElement("a");
       orgPanel.className = "ptitle";
       orgLink.className = "panelLink";
@@ -763,7 +763,7 @@ async function populateHeader(jsonObj){
       orgLogo.src = jsonObj["data"]["organization"]["image"];
 
 
-      orgName.className = "rBold";
+      orgName.className = "orgName";
       orgName.textContent = jsonObj["data"]["organization"]["name"];
 
       orgLink.href = orgURL+jsonObj["data"]["organization"]["sid"];
@@ -776,8 +776,9 @@ async function populateHeader(jsonObj){
       orgPanel.appendChild(orgLink);
     }else{
       var orgCont = document.createElement("div");
+      orgCont.className = "rFlex";
       var orgLogo = document.createElement("img");
-      var orgName = document.createElement("span");
+      var orgName = document.createElement("p");
       var orgLink = document.createElement("a");
       orgPanel.className = "ptitle";
       orgLink.className = "panelLink";
@@ -786,7 +787,7 @@ async function populateHeader(jsonObj){
       orgLogo.src = "https://robertsspaceindustries.com/rsi/static/images/organization/public-orgs-thumb-redacted-bg.png";
 
 
-      orgName.className = "rBold";
+      orgName.className = "orgName";
       orgName.textContent = "REDACTED";
 
 
@@ -801,8 +802,9 @@ async function populateHeader(jsonObj){
     for(var x = 0; x < jsonObj.data.affiliation.length; x++){
       if(jsonObj.data.affiliation[x].name){
         var orgCont = document.createElement("div");
+        orgCont.className = "rFlex";
         var orgLogo = document.createElement("img");
-        var orgName = document.createElement("span");
+        var orgName = document.createElement("p");
         var orgLink = document.createElement("a");
         orgPanel.className = "ptitle";
         orgLink.className = "panelLink";
@@ -811,7 +813,7 @@ async function populateHeader(jsonObj){
         orgLogo.src = jsonObj.data.affiliation[x].image;
 
 
-        orgName.className = "rBold";
+        orgName.className = "orgName";
         orgName.textContent = jsonObj.data.affiliation[x].name;
 
         orgLink.href = orgURL+jsonObj.data.affiliation[x].sid;
@@ -826,7 +828,7 @@ async function populateHeader(jsonObj){
         var orgCont = document.createElement("div");
         orgCont.className = "rFlex";
         var orgLogo = document.createElement("img");
-        var orgName = document.createElement("span");
+        var orgName = document.createElement("p");
         var orgLink = document.createElement("a");
         orgPanel.className = "ptitle";
         orgLink.className = "panelLink";
@@ -835,7 +837,7 @@ async function populateHeader(jsonObj){
         orgLogo.src = "https://robertsspaceindustries.com/rsi/static/images/organization/public-orgs-thumb-redacted-bg.png";
 
 
-        orgName.className = "rBold";
+        orgName.className = "orgName";
         orgName.textContent = "REDACTED";
 
         header.appendChild(orgPanel);
