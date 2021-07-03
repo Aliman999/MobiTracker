@@ -578,7 +578,7 @@ function clearBox(elementID){
   elementID.style.border = "";
   elementID.style.marginTop = "";
 }
-
+var ready = false;
 function populateHeader(jsonObj){
   retries = 0;
   if(dataCount > 0){
@@ -1225,8 +1225,9 @@ function populateHeader(jsonObj){
   var display = setInterval(()=>{
     faded[x].style.opacity = 1;
     if(x == faded.length-1){
-      ready = true;
       clearInterval(display);
+    }else if (x == faded.length-2) {
+      ready = true;
     }else{
       x++;
     }
@@ -1533,11 +1534,13 @@ function showReview(){
   }
   var x = 0;
   var display = setInterval(()=>{
-    playerReview[x].style.opacity = 1;
-    if(x == playerReview.length-1){
-      clearInterval(display);
-    }else{
-      x++;
+    if(ready){
+      playerReview[x].style.opacity = 1;
+      if(x == playerReview.length-1){
+        clearInterval(display);
+      }else{
+        x++;
+      }
     }
   }, 250);
 }
