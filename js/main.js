@@ -1047,7 +1047,7 @@ async function populateHeader(jsonObj){
   //Tag END
   //Player Bio
   var playerbio = document.createElement("p");
-  playerbio.className = "playerbio";
+  playerbio.className = "playerbio faded";
   if(jsonObj["data"]["profile"]["bio"]){
     playerbio.textContent = "Bio:"+ newline + jsonObj["data"]["profile"]["bio"];
   }else{
