@@ -741,8 +741,7 @@ async function populateHeader(jsonObj){
 
 
   //Player Info
-  var meta = document.createElement("div");
-  ptitle.className = "ptitle faded";
+
 
   const idCont = document.createElement("p");
   boldSpan = document.createElement("span");
@@ -750,18 +749,40 @@ async function populateHeader(jsonObj){
   boldSpan.className = "rBold";
   subP = document.createElement("span");
   subP.className = "subP";
-  if(jsonObj.data.profile.id === "n/a"){
+  if(profile.profile.id === "n/a"){
     subP.innerText = "No Citizen ID";
   }else{
-    subP.innerText = jsonObj.data.profile.id;
+    subP.innerText = profile.profile.id;
   }
 
   idCont.appendChild(boldSpan);
   idCont.appendChild(document.createElement("br"));
   idCont.appendChild(subP);
 
-  meta.appendChild(idCont);
-  header.appendChild(meta);
+
+  var ptitle = document.createElement("div");
+  ptitle.className = "ptitle faded";
+
+
+  var infoCont = document.createElement("div");
+  infoCont.className = "rFlex";
+
+
+  var idCont = document.createElement("p");
+  var boldSpan = document.createElement("span");
+
+  boldSpan.innerText = "Citizen ID:";
+  boldSpan.className = "rBold";
+
+  var subP = document.createElement("span");
+  subP.className = "subP";
+  subP.innerText = jsonObj.data.profile.id
+
+  idCont.appendChild(boldSpan);
+  idCont.appendChild(document.createElement("br"));
+  idCont.appendChild(subP);
+  ptitle.appendChild(idCont);
+  header.appendChild(ptitle);
   //Player Info END
 
   //Player Org
