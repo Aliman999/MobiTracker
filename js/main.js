@@ -588,8 +588,8 @@ function populateHeader(jsonObj){
 
     var loading = document.getElementById("loadingContainer");
     loading.style.opacity = 0;
-    loading.remove();
     setTimeout(()=>{
+      loading.remove();
     }, 250);
   }else{
     containerHeader.style.display = "block";
@@ -702,10 +702,10 @@ function populateHeader(jsonObj){
   }
 
   header.appendChild(created_at);
-  setTimeout(()=>{
     forceRefresh.style.opacity = "1";
     copyUrl.style.opacity = "1";
     created_at.style.opacity = "1";
+  setTimeout(()=>{
   }, 250);
   //Data Source
 
