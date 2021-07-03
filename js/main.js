@@ -1,4 +1,5 @@
-var orgName = document.createElement("span")var header = document.querySelector("header");
+var orgName = document.createElement("span");
+var header = document.querySelector("header");
 var section = document.querySelector("section");
 var body = document.getElementsByTagName("body");
 var containerHeader = document.getElementsByClassName("container-header")[0];
