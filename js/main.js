@@ -785,6 +785,7 @@ function populateHeader(jsonObj){
   //Player Info
   var ptitle = document.createElement("div");
   ptitle.className = "ptitle faded";
+  ptitle.style.flexWrap = "wrap";
 
 
   var infoCont = document.createElement("div");
