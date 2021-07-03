@@ -670,13 +670,6 @@ async function populateHeader(jsonObj){
   }, 250);
   //Data Source
 
-  //Player ID
-  var playerid = document.createElement("p");
-  playerid.className = "playerid faded";
-  playerid.textContent = "Citizen "+jsonObj["data"]["profile"]["id"];
-  header.appendChild(playerid);
-  //Player ID END
-
   //Player Avatar
   var playeravatar = document.createElement("img");
   playeravatar.className = "playeravatar faded";
@@ -745,6 +738,17 @@ async function populateHeader(jsonObj){
 
   header.appendChild(ratingContainer);
   //Rating Container END
+
+
+  //Player Info
+  var ptitle = document.createElement("div");
+  ptitle.className = "ptitle faded";
+  var playerid = document.createElement("p");
+  playerid.className = "playerid";
+  playerid.textContent = "Citizen "+jsonObj.data.profile.id;
+  ptitle.appendChild(playerid);
+  header.appendChild(ptitle);
+  //Player Info END
 
   //Player Org
   console.log(jsonObj.data);
