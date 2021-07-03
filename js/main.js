@@ -424,7 +424,7 @@ function searchCareer(sc){
     var response = searchCareers.response;
     delete response.pages;
     const sCount = Object.keys(response).length;
-    uSearch(response.response, sCount);
+    uSearch(response, sCount);
   }
 }
 
