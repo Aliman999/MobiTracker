@@ -557,9 +557,10 @@ function populateHeader(jsonObj){
     containerSection.style.display = "none";
     header.style.padding = "8px 16px";
     var notFound = document.createElement("p");
-    notFound.className = "notFound";
+    notFound.className = "notFound faded";
     notFound.textContent = "Citizen Not Found";
     header.appendChild(notFound);
+    notfound.style.opacity = "1";
     document.title = "Citizen Not Found - MobiTracker";
   }
   updateSearch(jsonObj['data']['profile']['handle']);
