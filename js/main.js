@@ -752,7 +752,7 @@ async function populateHeader(jsonObj){
 
   orgPanel.className = "ptitle";
   orgPanel.style.flexWrap = "wrap";
-  
+
   if(jsonObj.data.organization){
     if(jsonObj.data.organization.name){
       var orgCont = document.createElement("div");
@@ -760,19 +760,24 @@ async function populateHeader(jsonObj){
       var orgLogo = document.createElement("img");
       var orgName = document.createElement("p");
       var orgLink = document.createElement("a");
+      var orgRank = document.createElement("span");
       orgLink.className = "panelLink";
 
       orgLogo.className = "orgLogo";
-      orgLogo.src = jsonObj["data"]["organization"]["image"];
+      orgLogo.src = jsonObj.data.organization.image;
 
 
       orgName.className = "orgName";
-      orgName.textContent = jsonObj["data"]["organization"]["name"];
+      orgName.textContent = jsonObj.data.organization.name;
 
-      orgLink.href = orgURL+jsonObj["data"]["organization"]["sid"];
+      orgRank.className = "subP";
+      orgRank.innerText = jsonObj.data.organization.rank+" ["+jsonObj.data.organization.stars+"]";
+
+      orgLink.href = orgURL+jsonObj.data.organization.sid;
       orgLink.target = "_blank";
 
       header.appendChild(orgPanel);
+
 
       orgLink.appendChild(orgName);
       orgCont.appendChild(orgLogo);
