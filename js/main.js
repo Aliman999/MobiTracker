@@ -1562,16 +1562,17 @@ function uSearch(searched){
     notFound.textContent = "No users meet this criteria";
     header.appendChild(notFound);
   }
+  var sb = [];
   for(var i = 0; i<sCount; i++){
-    var sb = document.createElement("div");
-    sb.className = "sbCont";
+    sb.push(document.createElement("div"));
+    sb[i].className = "sbCont";
     var sba  = document.createElement("img");
     sba.className = "sba";
     sba.src = searched[i]["avatar"];
     sba.onerror = function(){
       this.src = "src/avatars/avatar_default.jpg";
     }
-    sb.appendChild(sba);
+    sb[i].appendChild(sba);
     var sbName = document.createElement("div");
     sbName.className = "player-min-name";
 
@@ -1588,7 +1589,7 @@ function uSearch(searched){
     sbUsername.className = "sbu player-username";
     sbUsername.href = "https://mobitracker.co/"+searched[i]["username"];
     sbName.appendChild(sbUsername);
-    sb.appendChild(sbName);
+    sb[i].appendChild(sbName);
 
     var sbr = document.createElement("div");
     sbr.className = "sbr";
@@ -1600,8 +1601,7 @@ function uSearch(searched){
     showsbrc.textContent = xp(searched[i].reviewed_count)+" ("+searched[i].reviewed_count+")";
 
     sbr.appendChild(showsbrc);
-    sb.appendChild(sbr);
-    header.appendChild(sb);
+    sb[i].appendChild(sbr);
     var sbrc = document.createElement("div");
     sbrc.className = "sbr";
     var sbrcImg = document.createElement("img");
@@ -1628,8 +1628,18 @@ function uSearch(searched){
         sbrc.appendChild(sbrcImg.cloneNode(true));
       }
     }
-    sb.appendChild(sbrc);
+    sb[i].appendChild(sbrc);
   }
+
+  var x = 0;
+  var display = setInterval(()=>{
+    header.appendChild(sb);
+    if(x == playerReview.length-1){
+      clearInterval(display);
+    }else{
+      x++;
+    }
+  }, 50);
   header.style.removeProperty("height");
   headerHeight = header.offsetHeight;
 }
