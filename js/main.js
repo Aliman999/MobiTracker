@@ -772,6 +772,78 @@ async function populateHeader(jsonObj){
       orgLink.appendChild(orgName);
       orgPanel.appendChild(orgLogo);
       orgPanel.appendChild(orgLink);
+    }else{
+      var orgLogo = document.createElement("img");
+      var orgName = document.createElement("p");
+      var orgLink = document.createElement("a");
+      var orgPanel = document.createElement("div");
+      orgPanel.className = "ptitle";
+      orgLink.className = "panelLink";
+
+      orgLogo.className = "orgLogo";
+      orgLogo.src = "https://robertsspaceindustries.com/rsi/static/images/organization/public-orgs-thumb-redacted-bg.png";
+
+
+      orgName.className = "orgName";
+      orgName.textContent = "REDACTED";
+
+
+      header.appendChild(orgPanel);
+
+      orgLink.appendChild(orgName);
+      orgPanel.appendChild(orgLogo);
+      orgPanel.appendChild(orgLink);
+    }
+  }
+  if(jsonObj.data.affiliation){
+    for(var x = 0; x < json.affiliation.lenght; x++){
+      if(jsonObj.data.affiliation[x].name){
+        var orgLogo = document.createElement("img");
+        var orgName = document.createElement("p");
+        var orgLink = document.createElement("a");
+        var orgPanel = document.createElement("div");
+        orgPanel.className = "ptitle";
+        orgLink.className = "panelLink";
+
+        orgLogo.className = "orgLogo";
+        orgLogo.src = jsonObj["data"]["organization"]["image"];
+
+
+        orgName.className = "orgName";
+        orgName.textContent = jsonObj["data"]["organization"]["name"];
+
+        orgLink.href = orgURL+jsonObj["data"]["organization"]["sid"];
+        orgLink.target = "_blank";
+
+        header.appendChild(orgPanel);
+
+        orgLink.appendChild(orgName);
+        orgPanel.appendChild(orgLogo);
+        orgPanel.appendChild(orgLink);
+      }else{
+        var orgLogo = document.createElement("img");
+        var orgName = document.createElement("p");
+        var orgLink = document.createElement("a");
+        var orgPanel = document.createElement("div");
+        orgPanel.className = "ptitle";
+        orgLink.className = "panelLink";
+
+        orgLogo.className = "orgLogo";
+        orgLogo.src = jsonObj["data"]["organization"]["image"];
+
+
+        orgName.className = "orgName";
+        orgName.textContent = "REDACTED";
+
+        orgLink.href = orgURL+jsonObj["data"]["organization"]["sid"];
+        orgLink.target = "_blank";
+
+        header.appendChild(orgPanel);
+
+        orgLink.appendChild(orgName);
+        orgPanel.appendChild(orgLogo);
+        orgPanel.appendChild(orgLink);
+      }
     }
   }
   /*
