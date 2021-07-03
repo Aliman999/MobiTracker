@@ -171,10 +171,11 @@ function showPlayer(node, live){
     header.style.padding = "8px 16px";
     containerHeader.style.display = "block";
     header.style.display = "flex";
-    
+
     var loadingContainer = document.createElement("div");
     loadingContainer.id = "loadingContainer";
     loadingContainer.style.margin = "auto";
+    loadingContainer.style.display = "flex";
     var loadcont = document.createElement("p");
 
     var loading = document.createElement("span");
