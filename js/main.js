@@ -168,9 +168,10 @@ function showPlayer(node, live){
   clearSB();
 
   function load(){
-    containerHeader.style.display = "block";
-    containerSection.style.display = "none";
     header.style.padding = "8px 16px";
+    containerHeader.style.display = "block";
+    header.style.display = "flex";
+    
     var loadingContainer = document.createElement("div");
     loadingContainer.id = "loadingContainer";
     loadingContainer.style.margin = "auto";
@@ -190,8 +191,8 @@ function showPlayer(node, live){
     header.appendChild(loadingContainer);
   }
 
-  load();
   if(node != playerUser || live){
+    load();
     dataCount = 0;
     request.open("GET", "src/api.php"+"?username="+node+"&ext="+ext);
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
