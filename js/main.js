@@ -750,8 +750,10 @@ async function populateHeader(jsonObj){
   playerid.textContent = "Citizen ID";
 
   playerid.innerHTML += "<br>";
-
-  playerid.appendChild(jsonObj.data.profile.id);
+  var id = document.createElement("span");
+  id.className = "subP";
+  id.innerText = jsonObj.data.profile.id;
+  playerid.appendChild(id);
 
   infoCont.appendChild(playerid);
   ptitle.appendChild(infoCont);
