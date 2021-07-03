@@ -1590,7 +1590,7 @@ function uSearch(searched, length){
     }
 
     var sbUsername = document.createElement("a");
-    sbUsername.innerHTML = searched[i]["username"];
+    sbUsername.innerHTML = searched[i]?.username;
     sbUsername.id = searched[i]["username"];
     sbUsername.className = "sbu player-username";
     sbUsername.href = "https://mobitracker.co/"+searched[i]["username"];
