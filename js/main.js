@@ -806,13 +806,13 @@ async function populateHeader(jsonObj){
         orgLink.className = "panelLink";
 
         orgLogo.className = "orgLogo";
-        orgLogo.src = jsonObj["data"]["organization"]["image"];
+        orgLogo.src = jsonObj.data.affiliation[x].image;
 
 
         orgName.className = "orgName";
-        orgName.textContent = jsonObj["data"]["organization"]["name"];
+        orgName.textContent = jsonObj.data.affiliation[x].name;
 
-        orgLink.href = orgURL+jsonObj["data"]["organization"]["sid"];
+        orgLink.href = orgURL+jsonObj.data.affiliation[x].sid;
         orgLink.target = "_blank";
 
         header.appendChild(orgPanel);
@@ -829,14 +829,11 @@ async function populateHeader(jsonObj){
         orgLink.className = "panelLink";
 
         orgLogo.className = "orgLogo";
-        orgLogo.src = jsonObj["data"]["organization"]["image"];
+        orgLogo.src = "https://robertsspaceindustries.com/rsi/static/images/organization/public-orgs-thumb-redacted-bg.png";
 
 
         orgName.className = "orgName";
         orgName.textContent = "REDACTED";
-
-        orgLink.href = orgURL+jsonObj["data"]["organization"]["sid"];
-        orgLink.target = "_blank";
 
         header.appendChild(orgPanel);
 
