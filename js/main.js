@@ -613,6 +613,7 @@ function populateHeader(jsonObj){
 
   var created_at = document.createElement("p");
 
+
   function now() {
     var date = new Date();
     var aaaa = date.getFullYear();
@@ -651,9 +652,6 @@ function populateHeader(jsonObj){
     hour: "2-digit",
     minute: "2-digit"
   });
-
-  var cacheContainer = document.createElement("div");
-  cacheContainer.className = "ptitle faded";
 
   created_at.style.textAlign = "start";
 
