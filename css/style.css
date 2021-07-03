@@ -820,6 +820,20 @@ p.page{
     font-size: 13px;
   }
 }
+.loading{
+  height: 32px;
+  width: 32px;
+  margin: auto 0;
+  animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 @media screen and (max-width: 391px) {
   .player-min-container{
     flex-direction: column;
