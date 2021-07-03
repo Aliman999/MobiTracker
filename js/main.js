@@ -421,10 +421,10 @@ function searchCareer(sc){
   searchCareers.send();
   searchCareers.onload = function(){
     pages(sC[7], searchCareers.response.pages, 0, containerHeader);
-    var test = searchCareers.response;
-    delete test.pages;
-    const sCount = Object.keys(searchCareers.response).length;
-    uSearch(searchCareers.response, sCount);
+    var response = searchCareers.response;
+    delete response.pages;
+    const sCount = Object.keys(response).length;
+    uSearch(response.response, sCount);
   }
 }
 
