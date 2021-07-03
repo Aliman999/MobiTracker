@@ -295,12 +295,13 @@ img.playeravatar{
 }
 .orgName{
   text-align: left;
-}
-.subP{
-  font-size: 13px;
+  word-break: normal;
 }
 .orgName>.subP{
   padding-left: 1px;
+}
+.subP{
+  font-size: 13px;
 }
 .rFlex{
   display: flex;
