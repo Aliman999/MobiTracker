@@ -173,6 +173,7 @@ function showPlayer(node, live){
     header.style.padding = "8px 16px";
     var loadingContainer = document.createElement("div");
     loadingContainer.id = "loadingContainer";
+    loadingContainer.style.margin = "auto";
     var loadcont = document.createElement("p");
 
     var loading = document.createElement("span");
