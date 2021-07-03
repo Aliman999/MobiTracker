@@ -612,6 +612,7 @@ function populateHeader(jsonObj){
   //Data Source
 
   var created_at = document.createElement("p");
+  created_at.className = "faded";
 
 
   function now() {
