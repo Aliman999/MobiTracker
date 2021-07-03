@@ -707,7 +707,7 @@ function populateHeader(jsonObj){
   header.appendChild(playerPanel);
   //Player Handle END
   setTimeout(()=>{
-    playerAvatar.style.opacity = "1";
+    playeravatar.style.opacity = "1";
     playerPanel.style.opacity = "1";
   }, 250);
 
