@@ -423,7 +423,7 @@ function searchCareer(sc){
   searchCareers.onload = function(){
     pages(sC[7], searchCareers.response.pages, 0, containerHeader);
     delete searchCareers.response.pages;
-    sCount = Object.keys(searchCareers.response).length;
+    sCount = searchCareers.response.length;
     uSearch(searchCareers.response);
   }
 }
@@ -1576,11 +1576,7 @@ function uSearch(searched){
     sba.onerror = function(){
       this.src = "src/avatars/avatar_default.jpg";
     }
-    if(searched[i]){
-      sba.src = searched[i]["avatar"];
-    }else{
-      sba.src = "src/avatars/avatar_default.jpg";
-    }
+    sba.src = searched[i]["avatar"];
     console.log(i);
     sb[i].appendChild(sba);
     var sbName = document.createElement("div");
