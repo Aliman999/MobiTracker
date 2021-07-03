@@ -1267,14 +1267,15 @@ function showReview(){
     noVouchers(playerUser);
     return;
   }
+  var playerReview = [];
   for(var i = 0; i < commentCount; i++){
     editing = 0;
     //Creator Container
-    var playerReview = document.createElement("div");
-    playerReview.className = "player-review faded-section";
+    playerReview.push(document.createElement("div"));
+    playerReview[i].className = "player-review rFaded-section";
     var playerminContainer = document.createElement("div");
     playerminContainer.className = "player-min-container";
-    playerReview.appendChild(playerminContainer);
+    playerReview[i].appendChild(playerminContainer);
 
     var playerMin = document.createElement("div");
     playerMin.className = "player-min";
@@ -1520,9 +1521,8 @@ function showReview(){
           hour: "2-digit",
           minute: "2-digit"
       });
-    playerReview.appendChild(created_at);
+    playerReview[i].appendChild(created_at);
     //Creation END
-    section.appendChild(playerReview);
     if(comment[0]["u_creator"] == sessionUser){
       commented = 1;
     }else{
@@ -1530,9 +1530,10 @@ function showReview(){
     }
   }
   var x = 0;
-  var faded = document.getElementsByClassName("faded-section");
+  var faded = document.getElementsByClassName("rFaded-section");
   var display = setInterval(()=>{
     faded[x].style.opacity = 1;
+    section.appendChild(playerReview);
     if(x == faded.length-1){
       clearInterval(display);
     }else{

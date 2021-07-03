@@ -725,6 +725,9 @@ p.page{
   opacity: 0.85;
   text-shadow: none;
 }
+.rFaded-section{
+  
+}
 .rBold{
   font-weight: bold;
 }
