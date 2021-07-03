@@ -1633,7 +1633,7 @@ function uSearch(searched){
 
   var x = 0;
   var display = setInterval(()=>{
-    header.appendChild(sb);
+    header.appendChild(sb[x]);
     if(x == playerReview.length-1){
       clearInterval(display);
     }else{
