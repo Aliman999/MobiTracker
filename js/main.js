@@ -1528,10 +1528,10 @@ function showReview(){
     }else{
       commented = 0;
     }
+    section.appendChild(playerReview[i]);
   }
   var x = 0;
   var display = setInterval(()=>{
-    section.appendChild(playerReview[x]);
     playerReview[x].style.opacity = 1;
     if(x == playerReview.length-1){
       clearInterval(display);
