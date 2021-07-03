@@ -741,23 +741,27 @@ async function populateHeader(jsonObj){
 
 
   //Player Info
-  var ptitle = document.createElement("div");
+  var meta = document.createElement("div");
   ptitle.className = "ptitle faded";
-  var infoCont = document.createElement("div");
-  infoCont.className = "rFlex";
-  var playerid = document.createElement("p");
-  playerid.className = "playerid";
-  playerid.textContent = "Citizen ID";
 
-  playerid.innerHTML += "<br>";
-  var id = document.createElement("span");
-  id.className = "subP";
-  id.innerText = jsonObj.data.profile.id;
-  playerid.appendChild(id);
+  const idCont = document.createElement("p");
+  boldSpan = document.createElement("span");
+  boldSpan.innerText = "Citizen ID:";
+  boldSpan.className = "rBold";
+  subP = document.createElement("span");
+  subP.className = "subP";
+  if(profile.profile.id === "n/a"){
+    subP.innerText = "No Citizen ID";
+  }else{
+    subP.innerText = profile.profile.id;
+  }
 
-  infoCont.appendChild(playerid);
-  ptitle.appendChild(infoCont);
-  header.appendChild(ptitle);
+  idCont.appendChild(boldSpan);
+  idCont.appendChild(document.createElement("br"));
+  idCont.appendChild(subP);
+
+  meta.appendChild(idCont);
+  header.appendChild(meta);
   //Player Info END
 
   //Player Org
