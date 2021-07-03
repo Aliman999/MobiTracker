@@ -2,9 +2,6 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-#loadingContainer{
-  transition: .25s ease-in-out;
-}
 .settingAvi{
   border-radius: 360px;
   border: 2px solid rgb(57, 206, 216);

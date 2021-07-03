@@ -796,6 +796,15 @@ p.page{
   opacity: 0;
   transition: .25s ease-in-out;
 }
+.loading{
+  height: 32px;
+  width: 32px;
+  margin: auto 0;
+  animation: rotation 2s infinite linear;
+}
+#loadingContainer{
+  transition: .25s ease-in-out;
+}
 
 @media screen and (max-width: 410px) {
   header p{
@@ -819,12 +828,6 @@ p.page{
   .createErr{
     font-size: 13px;
   }
-}
-.loading{
-  height: 32px;
-  width: 32px;
-  margin: auto 0;
-  animation: rotation 2s infinite linear;
 }
 @keyframes rotation {
   from {

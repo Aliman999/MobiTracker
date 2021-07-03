@@ -171,6 +171,8 @@ function showPlayer(node, live){
     containerHeader.style.display = "block";
     containerSection.style.display = "none";
     header.style.padding = "8px 16px";
+    var loadingContainer = document.createElement("div");
+    loadingContainer.id = "loadingContainer";
     var loadcont = document.createElement("p");
 
     var loading = document.createElement("span");
@@ -181,9 +183,10 @@ function showPlayer(node, live){
     loadingImg.className = "loading";
     loadingImg.src = "src/loading.png";
 
+    loadingContainer.appendChild(loadcont);
     loadcont.appendChild(loading);
     loadcont.appendChild(loadingImg);
-    header.appendChild(loadcont);
+    header.appendChild(loadingContainer);
   }
 
   if(node != playerUser || live){
