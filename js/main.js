@@ -1639,6 +1639,8 @@ function uSearch(searched, length){
     header.appendChild(sb[i]);
   }
 
+
+  var x = 0;
   var display = setInterval(()=>{
     if(active == "career"){
       sb[x].style.opacity = "1";
