@@ -750,10 +750,10 @@ async function populateHeader(jsonObj){
   boldSpan.className = "rBold";
   subP = document.createElement("span");
   subP.className = "subP";
-  if(profile.profile.id === "n/a"){
+  if(jsonObj.data.profile.id === "n/a"){
     subP.innerText = "No Citizen ID";
   }else{
-    subP.innerText = profile.profile.id;
+    subP.innerText = jsonObj.data.profile.id;
   }
 
   idCont.appendChild(boldSpan);
