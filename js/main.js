@@ -931,8 +931,8 @@ function populateHeader(jsonObj){
         var orgCont = document.createElement("div");
         orgCont.className = "rFlex";
         var orgLogo = document.createElement("img");
-        var orgName = document.createElement("p");
         var orgLink = document.createElement("a");
+        var orgName = document.createElement("span");
         var orgRank = document.createElement("span");
         orgLink.className = "panelLink";
 
@@ -940,7 +940,7 @@ function populateHeader(jsonObj){
         orgLogo.src = jsonObj.data.affiliation[x].image;
 
 
-        orgName.className = "orgName";
+        orgName.className = "orgName rBold";
         orgName.textContent = jsonObj.data.affiliation[x].name;
 
         orgRank.className = "subP";
@@ -951,9 +951,9 @@ function populateHeader(jsonObj){
 
         header.appendChild(orgPanel);
 
-        orgName.innerHTML += "<br>";
-        orgName.appendChild(orgRank);
         orgLink.appendChild(orgName);
+        orgLink.appendChild(document.createElement("br"));
+        orgLink.appendChild(orgRank);
         orgCont.appendChild(orgLogo);
         orgCont.appendChild(orgLink);
         orgPanel.appendChild(orgCont);
