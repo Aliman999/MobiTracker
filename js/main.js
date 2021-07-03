@@ -1576,7 +1576,7 @@ function uSearch(searched, length){
       this.src = "src/avatars/avatar_default.jpg";
     }
 
-    sba.src = searched[i].avatar?;
+    sba.src = searched[i]?.avatar;
     console.log(i);
     sb[i].appendChild(sba);
     var sbName = document.createElement("div");
