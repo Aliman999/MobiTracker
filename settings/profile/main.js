@@ -6,7 +6,6 @@ var display = setInterval(()=>{
 }, 1000);
 
 function init(){
-  profile = profile;
   var loading = document.getElementById("loadingContainer");
   loading.style.opacity = 0;
   loading.remove();
