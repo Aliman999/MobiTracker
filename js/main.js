@@ -743,10 +743,18 @@ async function populateHeader(jsonObj){
   //Player Info
   var ptitle = document.createElement("div");
   ptitle.className = "ptitle faded";
+  var infoCont = document.createElement("div");
+  infoCont.className = "rFlex";
   var playerid = document.createElement("p");
   playerid.className = "playerid";
-  playerid.textContent = "Citizen "+jsonObj.data.profile.id;
-  ptitle.appendChild(playerid);
+  playerid.textContent = "Citizen ID";
+
+  playerid.innerHTML += "<br>";
+
+  playerid.appendChild(jsonObj.data.profile.id);
+
+  infoCont.appendChild(playerid);
+  ptitle.appendChild(infoCont);
   header.appendChild(ptitle);
   //Player Info END
 
