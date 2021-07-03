@@ -9,7 +9,6 @@ var createButton = document.createElement("button");
 var newline = "\r\n";
 var node = document.getElementsByClassName("userInput")[0];
 var commentCount;
-var sCount;
 var dataCount;
 var bioExist;
 var player = null;
@@ -423,8 +422,8 @@ function searchCareer(sc){
   searchCareers.onload = function(){
     pages(sC[7], searchCareers.response.pages, 0, containerHeader);
     delete searchCareers.response.pages;
-    sCount = searchCareers.response.length;
-    uSearch(searchCareers.response);
+    const sCount = Object.keys(searchCareers.response).length;
+    uSearch(searchCareers.response, sCount);
   }
 }
 
@@ -1551,10 +1550,10 @@ function showReview(){
   }, 150);
 }
 //Searched Users
-function uSearch(searched){
+function uSearch(searched, length){
   active = "career";
   document.title = "MobiTracker";
-  if(sCount > 0){
+  if(length > 0){
     containerHeader.style.display = "block";
     containerSection.style.display = "none";
     var pageContainer = document.createElement("pageContainer");
@@ -1568,7 +1567,7 @@ function uSearch(searched){
     header.appendChild(notFound);
   }
   var sb = [];
-  for(var i = 0; i<sCount; i++){
+  for(var i = 0; i<length; i++){
     sb.push(document.createElement("div"));
     sb[i].className = "sbCont faded-section";
     var sba  = document.createElement("img");
