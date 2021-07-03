@@ -186,9 +186,9 @@ function showPlayer(node, live){
     loadingImg.className = "loading";
     loadingImg.src = "src/loading.png";
 
-    loadingContainer.appendChild(loadcont);
     loadcont.appendChild(loading);
-    loadcont.appendChild(loadingImg);
+    loadingContainer.appendChild(loadcont);
+    loadingContainer.appendChild(loadingImg);
     header.appendChild(loadingContainer);
   }
 
