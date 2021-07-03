@@ -1582,7 +1582,7 @@ function uSearch(searched, length){
     var sbName = document.createElement("div");
     sbName.className = "player-min-name";
 
-    if(searched[i]["verify"] == 1){
+    if(searched[i]?.verify == 1){
       var sbVerified = document.createElement("img");
       sbVerified.className = "verified";
       sbVerified.src = "src/verified.png";
