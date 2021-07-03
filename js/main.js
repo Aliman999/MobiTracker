@@ -582,7 +582,9 @@ async function populateHeader(jsonObj){
 
     var loading = document.getElementById("loadingContainer");
     loading.style.opacity = 0;
-    loading.remove();
+    setTimeout(()=>{
+      loading.remove();
+    }, 250);
   }else{
     containerHeader.style.display = "block";
     containerSection.style.display = "none";
