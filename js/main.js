@@ -164,8 +164,10 @@ function showPlayer(node, live, clean){
     var ext = "auto";
   }
   function clear(){
-    var loading = document.getElementById("loading");
-    loading.remove();
+    var loading
+    if(loading = document.getElementById("loading")){
+      loading.remove();
+    }
     hideHome();
     hideSB();
     clearSB();
