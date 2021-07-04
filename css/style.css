@@ -261,6 +261,9 @@ img.playerbadge{
   padding: 8px;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
 }
 .panelLink:hover{
   text-shadow: 0px 0px 2px #C4D7E6;
@@ -313,6 +316,7 @@ img.playeravatar{
 }
 .rFlex{
   display: flex;
+  overflow: hidden;
 }
 .userInput{
   padding: 8px;
