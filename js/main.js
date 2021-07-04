@@ -592,16 +592,16 @@ var ready = false;
 function populateHeader(jsonObj){
   active = "user";
   retries = 0;
+
+  var loading = document.getElementById("loadingContainer");
+  loading.style.opacity = 0;
+  setTimeout(()=>{
+    loading.remove();
+  }, 150);
   if(dataCount > 0){
     header.style.padding = "8px 16px";
     containerHeader.style.display = "block";
     header.style.display = "flex";
-
-    var loading = document.getElementById("loadingContainer");
-    loading.style.opacity = 0;
-    setTimeout(()=>{
-      loading.remove();
-    }, 150);
   }else{
     containerHeader.style.display = "block";
     containerSection.style.display = "none";
