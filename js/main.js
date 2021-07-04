@@ -157,7 +157,7 @@ function flag(id,bool){
 var player;
 var playerUser;
 var retry = 0;
-function showPlayer(node, live, clear){
+function showPlayer(node, live, clean){
   if(live){
     var ext = "live";
   }else{
@@ -168,7 +168,7 @@ function showPlayer(node, live, clear){
     hideSB();
     clearSB();
   }
-  if(!clear){
+  if(!clean{
     clear();
   }
 
