@@ -164,10 +164,6 @@ function showPlayer(node, live, clean){
     var ext = "auto";
   }
   function clear(){
-    var loading
-    if(loading = document.getElementById("loadingContainer")){
-      loading.remove();
-    }
     hideHome();
     hideSB();
     clearSB();
