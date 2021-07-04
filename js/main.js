@@ -163,13 +163,13 @@ function showPlayer(node, live, clear){
   }else{
     var ext = "auto";
   }
-  if(!clear){
-    clear();
-  }
   function clear(){
     hideHome();
     hideSB();
     clearSB();
+  }
+  if(!clear){
+    clear();
   }
 
   function load(retry){
