@@ -221,6 +221,7 @@ function showPlayer(node, live, clear){
         if(player){
           dataCount = Object.keys(player["data"]).length;
         }
+        clear();
         populateHeader(player);
         if(dataCount>0){
           playerUser = player.data.profile.handle;
