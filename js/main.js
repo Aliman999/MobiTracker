@@ -170,35 +170,38 @@ function showPlayer(node, live){
   function load(retry){
     active = "";
     ready = false;
-
-    header.style.padding = "8px 16px";
-    containerHeader.style.display = "block";
-    containerSection.style.display = "none";
-    header.style.display = "flex";
-
-    var loadingContainer = document.createElement("div");
-    loadingContainer.id = "loadingContainer";
-    loadingContainer.style.margin = "auto";
-    loadingContainer.style.display = "flex";
-    var loadcont = document.createElement("p");
-
-    var loading = document.createElement("span");
-    loading.className = "rBold";
-    loading.id = "";
-
-    var loadingImg = document.createElement("img");
-    loadingImg.className = "loading";
-    loadingImg.src = "src/loading.png";
-
-    loadcont.appendChild(loading);
-    loadingContainer.appendChild(loadcont);
-    loadingContainer.appendChild(loadingImg);
-    header.appendChild(loadingContainer);
-    
-    if(retry){
+    var loading;
+    if(loading = document.getElementById("loading")){
       loading.innerText = "Loading "+retry+"/3";
     }else{
+      header.style.padding = "8px 16px";
+      containerHeader.style.display = "block";
+      containerSection.style.display = "none";
+      header.style.display = "flex";
+
+      var loadingContainer = document.createElement("div");
+      loadingContainer.id = "loadingContainer";
+      loadingContainer.style.margin = "auto";
+      loadingContainer.style.display = "flex";
+      var loadcont = document.createElement("p");
+
+      var loading = document.createElement("span");
+      loading.className = "rBold";
+      loading.id = "loading";
       loading.innerText = "Loading";
+
+      var loadingImg = document.createElement("img");
+      loadingImg.className = "loading";
+      loadingImg.src = "src/loading.png";
+
+      loadcont.appendChild(loading);
+      loadingContainer.appendChild(loadcont);
+      loadingContainer.appendChild(loadingImg);
+      header.appendChild(loadingContainer);
+    }
+
+    if(retry){
+    }else{
     }
   }
   load(retry);
@@ -211,8 +214,8 @@ function showPlayer(node, live){
     request.onload = function() {
       player = request.response;
       if(player == null && retry < 2){
-        showPlayer(node);
         retry++;
+        showPlayer(node);
       }else{
         if(player){
           dataCount = Object.keys(player["data"]).length;
