@@ -157,11 +157,16 @@ function flag(id,bool){
 var player;
 var playerUser;
 var retry = 0;
-function showPlayer(node, live){
+function showPlayer(node, live, clear){
   if(live){
     var ext = "live";
   }else{
     var ext = "auto";
+  }
+  if(!clear){
+    hideHome();
+    hideSB();
+    clearSB();
   }
 
   function load(retry){
@@ -196,12 +201,9 @@ function showPlayer(node, live){
       loadingContainer.appendChild(loadingImg);
       header.appendChild(loadingContainer);
     }
-    hideHome();
-    hideSB();
-    clearSB();
   }
+  load(retry);
   if(node != playerUser || live){
-    load(retry);
     dataCount = 0;
     request.open("GET", "src/aapi.php"+"?username="+node+"&ext="+ext);
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
@@ -211,7 +213,7 @@ function showPlayer(node, live){
       player = request.response;
       if(player == null && retry < 2){
         retry++;
-        showPlayer(node);
+        showPlayer(node, live, true);
       }else{
         if(player){
           dataCount = Object.keys(player["data"]).length;
