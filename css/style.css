@@ -255,7 +255,7 @@ img.playerbadge{
   color: #C4D7E6;
 }
 .panelLink>span{
-  
+
 }
 .rFlex>.panelLink{
   padding: 8px;
@@ -306,6 +306,7 @@ img.playeravatar{
 }
 .subP{
   font-size: 13px;
+  font-weight: normal;
 }
 .rSpace{
 
