@@ -314,9 +314,6 @@ img.playeravatar{
 .rFlex{
   display: flex;
 }
-.rBold{
-  font-size: 18px;
-}
 .userInput{
   padding: 8px;
   height: 100%;
@@ -732,6 +729,7 @@ p.page{
 }
 .rBold{
   font-weight: bold;
+  font-size: 18px;
 }
 .hidden{
   display: none !important;
