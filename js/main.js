@@ -163,48 +163,46 @@ function showPlayer(node, live){
   }else{
     var ext = "auto";
   }
+  hideHome();
+  hideSB();
+  clearSB();
 
   function load(retry){
     active = "";
     ready = false;
-    if(!retry){
-      header.style.padding = "8px 16px";
-      containerHeader.style.display = "block";
-      containerSection.style.display = "none";
-      header.style.display = "flex";
 
-      var loadingContainer = document.createElement("div");
-      loadingContainer.id = "loadingContainer";
-      loadingContainer.style.margin = "auto";
-      loadingContainer.style.display = "flex";
-      var loadcont = document.createElement("p");
+    header.style.padding = "8px 16px";
+    containerHeader.style.display = "block";
+    containerSection.style.display = "none";
+    header.style.display = "flex";
 
-      var loading = document.createElement("span");
-      loading.className = "rBold";
-      loading.id = "loading";
+    var loadingContainer = document.createElement("div");
+    loadingContainer.id = "loadingContainer";
+    loadingContainer.style.margin = "auto";
+    loadingContainer.style.display = "flex";
+    var loadcont = document.createElement("p");
 
-      var loadingImg = document.createElement("img");
-      loadingImg.className = "loading";
-      loadingImg.src = "src/loading.png";
+    var loading = document.createElement("span");
+    loading.className = "rBold";
+    loading.id = "";
 
-      loadcont.appendChild(loading);
-      loadingContainer.appendChild(loadcont);
-      loadingContainer.appendChild(loadingImg);
-      header.appendChild(loadingContainer);
-    }
+    var loadingImg = document.createElement("img");
+    loadingImg.className = "loading";
+    loadingImg.src = "src/loading.png";
+
+    loadcont.appendChild(loading);
+    loadingContainer.appendChild(loadcont);
+    loadingContainer.appendChild(loadingImg);
+    header.appendChild(loadingContainer);
+    
     if(retry){
-      loading.document.getElementById("loading");
       loading.innerText = "Loading "+retry+"/3";
     }else{
-      loading.document.getElementById("loading");
       loading.innerText = "Loading";
     }
   }
   load(retry);
   if(node != playerUser || live){
-    hideHome();
-    hideSB();
-    clearSB();
     dataCount = 0;
     request.open("GET", "src/aapi.php"+"?username="+node+"&ext="+ext);
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
