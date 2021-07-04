@@ -793,7 +793,6 @@ function populateHeader(jsonObj){
 
 
   var idCont = document.createElement("p");
-  idCont.className = "textLeft";
   var boldSpan = document.createElement("span");
 
   boldSpan.innerText = "Citizen ID:";
