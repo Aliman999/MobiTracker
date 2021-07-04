@@ -163,9 +163,6 @@ function showPlayer(node, live){
   }else{
     var ext = "auto";
   }
-  hideHome();
-  hideSB();
-  clearSB();
 
   function load(retry){
     active = "";
@@ -199,13 +196,12 @@ function showPlayer(node, live){
       loadingContainer.appendChild(loadingImg);
       header.appendChild(loadingContainer);
     }
-
-    if(retry){
-    }else{
-    }
   }
-  load(retry);
   if(node != playerUser || live){
+    hideHome();
+    hideSB();
+    clearSB();
+    load(retry);
     dataCount = 0;
     request.open("GET", "src/aapi.php"+"?username="+node+"&ext="+ext);
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
