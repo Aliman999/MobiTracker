@@ -208,7 +208,7 @@ function showPlayer(node, live, clean){
   load(retry);
   if(node != playerUser || live){
     dataCount = 0;
-    request.open("GET", "src/api.php"+"?username="+node+"&ext="+ext);
+    request.open("GET", "src/aapi.php"+"?username="+node+"&ext="+ext);
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
     request.responseType = "json";
     request.send();
