@@ -165,7 +165,7 @@ function showPlayer(node, live, clean){
   }
   function clear(){
     var loading
-    if(loading = document.getElementById("loading")){
+    if(loading = document.getElementById("loadingContainer")){
       loading.remove();
     }
     hideHome();
