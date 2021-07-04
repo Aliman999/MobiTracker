@@ -254,6 +254,9 @@ img.playerbadge{
 .panelLink{
   color: #C4D7E6;
 }
+.panelLink>span{
+  
+}
 .rFlex>.panelLink{
   padding: 8px;
   display: flex;
