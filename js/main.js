@@ -811,6 +811,8 @@ function populateHeader(jsonObj){
 
   //Enlisted
   const enlistCont = document.createElement("p");
+  enlistCont.style.display = "flex";
+  enlistCont.style.flexDirection = "column";
   boldSpan = document.createElement("span");
 
   boldSpan.innerText = "Enlisted:";
@@ -835,6 +837,8 @@ function populateHeader(jsonObj){
   if(jsonObj.data.profile.fluency){
     if(jsonObj.data.profile.fluency.length > 0){
       const langCont = document.createElement("p");
+      langCont.style.display = "flex";
+      langCont.style.flexDirection = "column";
       boldSpan = document.createElement("span");
 
       boldSpan.innerText = "Languages:";
