@@ -196,11 +196,11 @@ function showPlayer(node, live){
       loadingContainer.appendChild(loadingImg);
       header.appendChild(loadingContainer);
     }
-  }
-  if(node != playerUser || live){
     hideHome();
     hideSB();
     clearSB();
+  }
+  if(node != playerUser || live){
     load(retry);
     dataCount = 0;
     request.open("GET", "src/aapi.php"+"?username="+node+"&ext="+ext);
