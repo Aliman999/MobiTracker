@@ -163,11 +163,7 @@ function showPlayer(node, live){
   }else{
     var ext = "auto";
   }
-  hideHome();
-  hideSB();
-  clearSB();
 
-  var loading = document.createElement("span");
   function load(retry){
     active = "";
     ready = false;
@@ -183,7 +179,9 @@ function showPlayer(node, live){
       loadingContainer.style.display = "flex";
       var loadcont = document.createElement("p");
 
+      var loading = document.createElement("span");
       loading.className = "rBold";
+      loading.id = "loading";
 
       var loadingImg = document.createElement("img");
       loadingImg.className = "loading";
@@ -195,13 +193,18 @@ function showPlayer(node, live){
       header.appendChild(loadingContainer);
     }
     if(retry){
+      loading.document.getElementById("loading");
       loading.innerText = "Loading "+retry+"/3";
     }else{
+      loading.document.getElementById("loading");
       loading.innerText = "Loading";
     }
   }
   load(retry);
   if(node != playerUser || live){
+    hideHome();
+    hideSB();
+    clearSB();
     dataCount = 0;
     request.open("GET", "src/aapi.php"+"?username="+node+"&ext="+ext);
     request.setRequestHeader(tokenHeader.name,tokenHeader.content);
