@@ -168,7 +168,7 @@ function showPlayer(node, live, clean){
     hideSB();
     clearSB();
   }
-  if(!clean{
+  if(!clean){
     clear();
   }
 
