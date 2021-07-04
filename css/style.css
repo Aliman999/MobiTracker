@@ -256,6 +256,8 @@ img.playerbadge{
 }
 .rFlex>.panelLink{
   padding: 8px;
+  display: flex;
+  flex-direction: column;
 }
 .panelLink:hover{
   text-shadow: 0px 0px 2px #C4D7E6;

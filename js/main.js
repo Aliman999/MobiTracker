@@ -804,7 +804,6 @@ function populateHeader(jsonObj){
   subP.innerText = jsonObj.data.profile.id
 
   idCont.appendChild(boldSpan);
-  idCont.appendChild(document.createElement("br"));
   idCont.appendChild(subP);
   ptitle.appendChild(idCont);
   //Player Info END
@@ -826,7 +825,6 @@ function populateHeader(jsonObj){
   });
 
   enlistCont.appendChild(boldSpan);
-  enlistCont.appendChild(document.createElement("br"));
   enlistCont.appendChild(subP);
   ptitle.appendChild(enlistCont);
   //Enlisted END
@@ -846,7 +844,6 @@ function populateHeader(jsonObj){
       subP.innerText = jsonObj.data.profile.fluency.join(", ");
 
       langCont.appendChild(boldSpan);
-      langCont.appendChild(document.createElement("br"));
       langCont.appendChild(subP);
       ptitle.appendChild(langCont);
     }
@@ -889,7 +886,6 @@ function populateHeader(jsonObj){
       header.appendChild(orgPanel);
 
       orgLink.appendChild(orgName);
-      orgLink.appendChild(document.createElement("br"));
       orgLink.appendChild(orgRank);
       orgCont.appendChild(orgLogo);
       orgCont.appendChild(orgLink);
