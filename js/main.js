@@ -793,6 +793,8 @@ function populateHeader(jsonObj){
 
 
   var idCont = document.createElement("p");
+  idCont.style.display = "flex";
+  idCont.style.flexDirection = "column";
   var boldSpan = document.createElement("span");
 
   boldSpan.innerText = "Citizen ID:";
