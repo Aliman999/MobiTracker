@@ -211,7 +211,7 @@ function showPlayer(node, live, clear){
     request.send();
     request.onload = function() {
       player = request.response;
-      if(player == null && retry < 3){
+      if(player == null && retry < 2){
         retry++;
         showPlayer(node, live, true);
       }else{
@@ -226,6 +226,7 @@ function showPlayer(node, live, clear){
       }
     }
   }else{
+    showPlayer(node);
     populateHeader(player);
     showComment(node);
   }
