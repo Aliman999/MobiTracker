@@ -167,6 +167,7 @@ function showPlayer(node, live){
   hideSB();
   clearSB();
 
+  var loading = document.createElement("span");
   function load(retry){
     active = "";
     ready = false;
@@ -182,7 +183,6 @@ function showPlayer(node, live){
       loadingContainer.style.display = "flex";
       var loadcont = document.createElement("p");
 
-      var loading = document.createElement("span");
       loading.className = "rBold";
 
       var loadingImg = document.createElement("img");
