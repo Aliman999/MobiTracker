@@ -38,6 +38,7 @@ th{
 .container-header{
   display: flex;
   margin: auto;
+  flex-direction: column;
 }
 .eCommand{
   padding-left: 0;
