@@ -36,7 +36,7 @@ th{
   font-weight: normal;
 }
 .container-header{
-  display: inline-block;
+  display: flex;
   margin: auto;
 }
 .eCommand{
