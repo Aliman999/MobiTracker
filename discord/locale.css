@@ -107,7 +107,8 @@ a img{
 }
 .aBot{
   display: flex;
-  margin-top: 24px;
+  margin: 24px auto auto;
+  width: 560px;
 }
 .aBot a{
   margin: auto;
