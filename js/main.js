@@ -927,7 +927,6 @@ function populateHeader(jsonObj){
       header.appendChild(orgPanel);
 
       orgLink.appendChild(orgName);
-      orgLink.appendChild(document.createElement("br"));
       orgLink.appendChild(orgRank);
       orgCont.appendChild(orgLogo);
       orgCont.appendChild(orgLink);
