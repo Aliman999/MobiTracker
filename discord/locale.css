@@ -188,7 +188,7 @@ a img{
     margin-top: 4px;
   }
   .aBot>a{
-    margin: 8px auto;
+    margin: 8px auto !important;
   }
   .lmRight>img{
     width: 100%;
