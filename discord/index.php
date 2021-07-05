@@ -133,8 +133,8 @@ if (empty($_SESSION['token'])) {
           </div>
         </div>
         <div class="aBot">
-          <a href="https://discord.com/oauth2/authorize?client_id=751252617451143219&permissions=67135488&scope=bot" class="rButton"><img src="../src/discord.png" class="discord">Add to Discord</a>
-          <a href="#learnMore" class="rButton">Learn More</a>
+          <a href="https://discord.com/oauth2/authorize?client_id=751252617451143219&permissions=67135488&scope=bot" class="rButton" id="leftBtn"><img src="../src/discord.png" class="discord">Add to Discord</a>
+          <a href="#learnMore" class="rButton" id="rightBtn">Learn More</a>
         </div>
       </div>
       <div id="learnMore" class="lMore">
