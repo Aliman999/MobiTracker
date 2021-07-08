@@ -17,7 +17,7 @@ class Thesaurus
     {
       $data = array(
         "word" => $word,
-        "synonyms" => $this?->thesaurus[$word] : array()
+        "synonyms" => $this?->thesaurus[$word] ? $this->thesaurus array()
       );
       return json_encode($data);
       /*
