@@ -15,7 +15,7 @@ class Thesaurus
 
     public function getSynonyms(string $word) : string
     {
-        var_dump($this->thesurus);
+        var_dump($this->thesaurus);
     }
 }
 
