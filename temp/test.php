@@ -15,10 +15,10 @@ class Thesaurus
 
     public function getSynonyms(string $word) : string
     {
-      return $this?->thesaurus[$word];
+      return json_encode($this?->thesaurus[$word]);
       return json_encode(
         "word" -> $word,
-        "synonyms" -> join($this->thesaurus[$word])
+        "synonyms" ->
       );
     }
 }
