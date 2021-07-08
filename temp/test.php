@@ -15,7 +15,7 @@ class Thesaurus
 
     public function getSynonyms(string $word) : string
     {
-      return json_encode($this?->thesaurus[$word], JSON_FORCE_OBJECT);
+      return json_encode($this?->thesaurus[$word]);
       /*
       return json_encode(
         "word" -> $word,
