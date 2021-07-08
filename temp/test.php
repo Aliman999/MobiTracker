@@ -17,7 +17,7 @@ class Thesaurus
     {
       return JSON_ENCODE(
         "word" -> $word,
-        "synonyms" -> $this?->thesaurus[$word]
+        "synonyms" -> join($this?->thesaurus[$word])
       );
     }
 }
