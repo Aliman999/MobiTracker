@@ -5,7 +5,7 @@ function make_pipeline(...$funcs)
     return function($arg) use ($funcs)
     {
         foreach ($funcs as $function) {
-          $arg = $func($arg);
+          $arg = $function($arg);
         }
         return $arg;
     };
