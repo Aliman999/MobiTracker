@@ -22,7 +22,7 @@ if(strpos($base, "?option") !== false){
   </div>
   <div class="eleContainer">
     <a href="<?php if($base != ""){echo "https://mobitracker.co/";} ?>" class="navEle <?php if($base == ""){echo "navActive";} ?>"><img src="https://mobitracker.co/src/repHub.png" class="menuIcon"/><p>Reputation Hub</p></a>
-    <a href="<?php if($base != "contracts"){echo "";}?>" class="navEle <?php if($base == ""){echo "navActive";} ?>"><img src="https://mobitracker.co/src/contracts.png" class="menuIcon"/><p>Information Hub</p></a>
+    <!--<a href="<?php if($base != "contracts"){echo "";}?>" class="navEle <?php if($base == ""){echo "navActive";} ?>"><img src="https://mobitracker.co/src/contracts.png" class="menuIcon"/><p>Information Hub</p></a>-->
     <a href="<?php if($base != "contracts"){echo "https://mobitracker.co/contracts";}?>" class="navEle <?php if($base == "contracts"){echo "navActive";} ?>"><img src="https://mobitracker.co/src/contracts.png" class="menuIcon"/><p>Contracts</p></a>
     <a href="<?php if($base != "discord"){echo "https://mobitracker.co/discord";}?>" class="navEle <?php if($base == "discord"){echo "navActive";} ?>"><img src="https://mobitracker.co/src/discord.png" class="menuIcon"/><p>Discord</p></a>
     <a href="<?php if($base != "faq"){echo "https://mobitracker.co/faq";}?>" class="navEle <?php if($base == "faq"){echo "navActive";} ?>"><img src="https://mobitracker.co/src/faq.png" class="menuIcon"/><p>FAQ</p></a>
