@@ -14,7 +14,7 @@ function socket(){
   webSocket = new WebSocket("wss://ws.mobitracker.co:2599");
   webSocket.onopen = function(){
     message = {
-      type:"auth",
+      type:"internal",
       token:jwt.content
     };
     webSocket.send(JSON.stringify(message));
