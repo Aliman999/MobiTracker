@@ -2,7 +2,7 @@
 $realm = 'Restricted area';
 
 //user => password
-$users = array('JDusky' => 'ouhBtUOis6gAxmTOn', 'bofone' => '$ui6TZzUkFJbHVV5RtiEf');
+$users = array('JDusky' => 'ouhBtUOis6gAxmTOn', 'bofone' => '$ui6TZzUkFJbHVV5RtiEf', 'ffk' => '12345');
 
 
 if (empty($_SERVER['PHP_AUTH_DIGEST'])) {
