@@ -1,6 +1,7 @@
 <?php
 // Initialize the session
 session_start();
+header("location: ../");
 if (empty($_SESSION['token'])) {
     $_SESSION['token'] = bin2hex(random_bytes(32));
 }
