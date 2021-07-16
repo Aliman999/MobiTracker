@@ -13,7 +13,7 @@ var bars = [
     "fill": '#25b',
     "fill-background": '#fff',
     "fill-background-extrude": 3,
-    "pattern-size": null,
+    "pattern-size": 3,
     "stroke-dir": 'normal',
     "stroke-width": '6',
     "stroke-trail": '#ddd',
