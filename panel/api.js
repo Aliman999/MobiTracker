@@ -6,72 +6,12 @@ var bool = true;
 socket();
 
 function display(response){
-  if(bool){
-    var container = document.getElementsByClassName("centerCont")[0]
+  var bar = document.getElementsByClassName("mkCharts");
 
-    var barCont = document.createElement("div");
-    barCont.opacity = 0;
-
-    var bar = document.createElement("div");
-    bar.className = "ldBar label-center";
-
-    bar.dataset.value = Math.round((response.data.player.current / response.data.player.max * 100));
-    bar.id = "player";
-
-    barCont.appendChild(bar);
-    var barText = document.createElement("p");
-    barText.innerText = "Player Scanner";
-    barCont.appendChild(bar);
-    barCont.appendChild(barText);
-
-    container.appendChild(barCont);
-
-
-    barCont = document.createElement("div");
-    barCont.opacity = 0;
-
-    bar = document.createElement("div");
-    bar.className = "ldBar label-center";
-
-    bar.dataset.value = Math.round((response.data.crawler.current / response.data.crawler.max * 100));
-    bar.dataset.preset = "circle";
-    bar.id = "crawler";
-
-    barCont.appendChild(bar);
-    var barText = document.createElement("p");
-    barText.innerText = "Org Crawler";
-    barCont.appendChild(bar);
-    barCont.appendChild(barText);
-
-    container.appendChild(barCont);
-
-
-    barCont = document.createElement("div");
-    barCont.opacity = 0;
-
-    bar = document.createElement("div");
-    bar.className = "ldBar label-center";
-
-    bar.dataset.value = Math.round((response.data.scanner.current / response.data.scanner.max * 100));
-    bar.id = "scanner";
-
-    barCont.appendChild(bar);
-    var barText = document.createElement("p");
-    barText.innerText = "Org Scanner";
-    barCont.appendChild(bar);
-    barCont.appendChild(barText);
-
-    container.appendChild(barCont);
-
-    console.log(ldBar);
-  }else{
-    var bar = document.getElementsByClassName("mkCharts");
-
-    bar[0].dataset.value = Math.round((response.data.player.current / response.data.player.max * 100));
-    bar[1].dataset.value = Math.round((response.data.crawler.current / response.data.crawler.max * 100));
-    bar[2].dataset.value = Math.round((response.data.scanner.current / response.data.scanner.max * 100))
-    run();
-  }
+  bar[0].dataset.value = Math.round((response.data.player.current / response.data.player.max * 100));
+  bar[1].dataset.value = Math.round((response.data.crawler.current / response.data.crawler.max * 100));
+  bar[2].dataset.value = Math.round((response.data.scanner.current / response.data.scanner.max * 100))
+  run();
 }
 
 function socket(){
