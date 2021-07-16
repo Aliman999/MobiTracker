@@ -20,11 +20,10 @@ function socket(){
     if(response.type == "authentication"){
       console.log(response.message);
       var loading = document.getElementById("loadingContainer");
-      //loading.remove();
-      var progressBars = document.getElementsByClassName("centerCont")[0];
-      progressBars.children.array.forEach(element => {
-        element.style.opacity = 1;
-      });
+      loading.style.opacity = 0;
+      setTimeout(() => {
+        loading.remove();
+      }, 250);
     }else{
       console.log(response);
     }
