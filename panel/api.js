@@ -12,8 +12,6 @@ function display(response){
     var barCont = document.createElement("div");
     barCont.opacity = 0;
 
-    console.log(ldBar);
-
     var bar = document.createElement("div");
     bar.className = "ldBar label-center";
 
@@ -65,7 +63,7 @@ function display(response){
 
     container.appendChild(barCont);
 
-    run();
+    ldBar.start();
   }else{
     var bar = document.getElementsByClassName("mkCharts");
 
