@@ -5,7 +5,7 @@ var bool = true;
 
 socket();
 
-var player = new ldBar(".centerCont", {
+var player = new ldBar(".players", {
   "type": 'stroke',
   "img": '',
   "path": 'M10 10L90 10M90 8M90 12',
@@ -32,7 +32,7 @@ var player = new ldBar(".centerCont", {
   "precision": 0,
   "padding": undefined
 });
-var crawler = new ldBar(".centerCont", {
+var crawler = new ldBar(".crawler", {
   "type": 'stroke',
   "img": '',
   "path": 'M10 10L90 10M90 8M90 12',
@@ -59,7 +59,7 @@ var crawler = new ldBar(".centerCont", {
   "precision": 0,
   "padding": undefined
 });
-var scanner = new ldBar(".centerCont", {
+var scanner = new ldBar(".scanner", {
   "type": 'stroke',
   "img": '',
   "path": 'M10 10L90 10M90 8M90 12',
