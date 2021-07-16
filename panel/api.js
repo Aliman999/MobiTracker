@@ -38,6 +38,7 @@ function socket(){
       barCont.appendChild(bar);
       var barText = document.createElement("p");
       barText.innerText = "Player Scanner";
+      barCont.appendChild(bar);
       barCont.appendChild(barText);
 
       container.appendChild(barCont);
