@@ -70,10 +70,10 @@ if (empty($_SESSION['token'])) {
         <p class="webSlogan"></p>
       </div>
       <div class="container-header">
-        <div id="loadingContainer">
-          <p><span class="rBold">Loading</span></p><img src="../../src/loading.png" class="loading">
-        </div>
         <div class="centerCont hidden">
+          <div id="loadingContainer">
+            <p><span class="rBold">Loading</span></p><img src="../../src/loading.png" class="loading">
+          </div>
           <div>
             <div class="mkCharts" data-percent="0" data-color="#91A6FF" data-size="100" data-stroke="3"></div>
             <p>Player Scanner</p>
