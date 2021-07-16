@@ -24,6 +24,20 @@ function socket(){
       setTimeout(() => {
         loading.remove();
       }, 250);
+
+      var barCont = document.createElement("div");
+      barCont.opacity = 0;
+      var bar = document.createElement("div");
+      bar.className = "mkCharts";
+      bar.dataset.size = response.data.player.max;
+      bar.dataset.percent = response.data.player.current;
+      barCont.appendChild(bar);
+      var barText = document.createElement("p");
+      barText.innerText = "Player Scanner";
+      barCont.appendChild(barText);
+
+      document.getElementsByClassName("loadingContainer")[0].appendChild(barCont);
+      
     }else{
       console.log(response);
     }
