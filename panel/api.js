@@ -38,7 +38,7 @@ function display(response){
     bar.dataset.percent = Math.ceil(response.data.crawler.current / response.data.crawler.max);
     bar.dataset.color = "#91A6FF";
     bar.dataset.stroke = "3";
-    bar.id = "player";
+    bar.id = "crawler";
     barCont.appendChild(bar);
     var barText = document.createElement("p");
     barText.innerText = "Player Scanner";
@@ -58,7 +58,7 @@ function display(response){
     bar.dataset.percent = Math.ceil(response.data.scanner.current / response.data.scanner.max);
     bar.dataset.color = "#91A6FF";
     bar.dataset.stroke = "3";
-    bar.id = "player";
+    bar.id = "scanner";
     barCont.appendChild(bar);
     var barText = document.createElement("p");
     barText.innerText = "Player Scanner";
