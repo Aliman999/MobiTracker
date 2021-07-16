@@ -33,7 +33,7 @@ html {
   justify-content: space-evenly;
 }
 
-.loadingContainer{
+#loadingContainer{
   display: flex;
 }
 
