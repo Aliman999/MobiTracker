@@ -63,7 +63,7 @@ function display(response){
 
     container.appendChild(barCont);
 
-    ldBar.start();
+    console.log(ldBar);
   }else{
     var bar = document.getElementsByClassName("mkCharts");
 
