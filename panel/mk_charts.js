@@ -13,7 +13,7 @@ function createCircleChart(percent, color, size, stroke) {
 }
 
 let charts = document.getElementsByClassName('mkCharts');
-console.log("test");
+
 for(let i=0;i<charts.length;i++) {
     let chart = charts[i];
     let percent = chart.dataset.percent;

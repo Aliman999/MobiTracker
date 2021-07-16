@@ -39,7 +39,7 @@ if (empty($_SESSION['token'])) {
     ?>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177343701-1"></script>
     <script type="text/javascript" src="../js/ga.js"></script>
-    <script src="mk_charts.js"></script>
+    <script type="text/javascript" src="mk_charts.js"></script>
   </head>
 
   <body>
