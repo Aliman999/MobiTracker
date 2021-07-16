@@ -21,6 +21,9 @@ html {
 }
 
 .centerCont{
+  border: 2px solid rgb(57, 206, 216);
+  box-shadow: 0px 0px 15px rgb(57 206 216 / 50%);
+  border-radius: 4px 4px 0px 0px;
   display: flex;
   margin: auto;
   padding: 64px 8px;
