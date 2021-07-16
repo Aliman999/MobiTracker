@@ -33,6 +33,7 @@ function display(response){
     bar.className = "ldBar label-center";
 
     bar.dataset.value = Math.round((response.data.crawler.current / response.data.crawler.max * 100));
+    bar.dataset.preset = "circle";
     bar.id = "crawler";
 
     barCont.appendChild(bar);
@@ -65,9 +66,9 @@ function display(response){
   }else{
     var bar = document.getElementsByClassName("mkCharts");
 
-    bar[0].dataset.percent = Math.round((response.data.player.current / response.data.player.max * 100));
-    bar[1].dataset.percent = Math.round((response.data.crawler.current / response.data.crawler.max * 100));
-    bar[2].dataset.percent = Math.round((response.data.scanner.current / response.data.scanner.max * 100))
+    bar[0].dataset.value = Math.round((response.data.player.current / response.data.player.max * 100));
+    bar[1].dataset.value = Math.round((response.data.crawler.current / response.data.crawler.max * 100));
+    bar[2].dataset.value = Math.round((response.data.scanner.current / response.data.scanner.max * 100))
     run();
   }
 }
