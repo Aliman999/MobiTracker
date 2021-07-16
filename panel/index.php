@@ -39,7 +39,6 @@ if (empty($_SESSION['token'])) {
     ?>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177343701-1"></script>
     <script type="text/javascript" src="../js/ga.js"></script>
-    <script type="text/javascript" src="mk_charts.js"></script>
   </head>
 
   <body>
@@ -75,6 +74,7 @@ if (empty($_SESSION['token'])) {
       </div>
     </div>
     <?php include "../gtemps/footer.php"; ?>
+    <script type="text/javascript" src="mk_charts.js"></script>
     <script type="text/javascript" src="../js/api.js"></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js";}else{echo "../js/nSession.js";} ?>" async></script>
   </body>
