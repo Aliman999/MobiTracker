@@ -33,6 +33,10 @@ html {
   justify-content: space-evenly;
 }
 
+.mkCharts{
+  display: flex;
+}
+
 .mkc_circle-chart{
   margin: auto;
 }
