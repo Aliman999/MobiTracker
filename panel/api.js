@@ -19,7 +19,7 @@ function socket(){
     var response = JSON.parse(event.data);
     if(response.type == "authentication"){
       console.log(response.message);
-      var loading = document.getElementsByClassName("loadingContainer");
+      var loading = document.getElementById("loadingContainer");
       loading.remove();
     }else{
       console.log(response);
