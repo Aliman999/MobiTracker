@@ -27,7 +27,7 @@ html {
   background-color: #253139;
   max-width: 784px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .mkCharts{
