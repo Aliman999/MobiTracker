@@ -12,13 +12,11 @@ function display(response){
     var barCont = document.createElement("div");
     barCont.opacity = 0;
     var bar = document.createElement("div");
-    bar.className = "mkCharts";
-    bar.dataset.size = "100";
+    bar.className = "ldBar label-center";
 
-    bar.dataset.percent = Math.round((response.data.player.current / response.data.player.max * 100));
-    bar.dataset.color = "#91A6FF";
-    bar.dataset.stroke = "3";
+    bar.dataset.value = Math.round((response.data.player.current / response.data.player.max * 100));
     bar.id = "player";
+
     barCont.appendChild(bar);
     var barText = document.createElement("p");
     barText.innerText = "Player Scanner";
@@ -32,13 +30,11 @@ function display(response){
     barCont.opacity = 0;
 
     bar = document.createElement("div");
-    bar.className = "mkCharts";
-    bar.dataset.size = "100";
+    bar.className = "ldBar label-center";
 
-    bar.dataset.percent = Math.round((response.data.crawler.current / response.data.crawler.max * 100));
-    bar.dataset.color = "#91A6FF";
-    bar.dataset.stroke = "3";
+    bar.dataset.value = Math.round((response.data.crawler.current / response.data.crawler.max * 100));
     bar.id = "crawler";
+
     barCont.appendChild(bar);
     var barText = document.createElement("p");
     barText.innerText = "Org Crawler";
@@ -52,13 +48,11 @@ function display(response){
     barCont.opacity = 0;
 
     bar = document.createElement("div");
-    bar.className = "mkCharts";
-    bar.dataset.size = "100";
+    bar.className = "ldBar label-center";
 
-    bar.dataset.percent = Math.round((response.data.scanner.current / response.data.scanner.max * 100));
-    bar.dataset.color = "#91A6FF";
-    bar.dataset.stroke = "3";
+    bar.dataset.value = Math.round((response.data.scanner.current / response.data.scanner.max * 100));
     bar.id = "scanner";
+
     barCont.appendChild(bar);
     var barText = document.createElement("p");
     barText.innerText = "Org Scanner";
