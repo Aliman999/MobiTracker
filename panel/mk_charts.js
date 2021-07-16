@@ -12,13 +12,22 @@ function createCircleChart(percent, color, size, stroke) {
     return svg;
 }
 
-let charts = document.getElementsByClassName('mkCharts');
+var timer = setInterval(() => {
+    if(webSocket){
+        run();
+        clearInterval(timer);
+    }
+}, 2000);
 
-for(let i=0;i<charts.length;i++) {
-    let chart = charts[i];
-    let percent = chart.dataset.percent;
-    let color = ('color' in chart.dataset) ? chart.dataset.color : "#2F4F4F";
-    let size = ('size' in chart.dataset) ? chart.dataset.size : "100";
-    let stroke = ('stroke' in chart.dataset) ? chart.dataset.stroke : "1";
-    charts[i].innerHTML = createCircleChart(percent, color, size, stroke);
+function run(){
+    let charts = document.getElementsByClassName('mkCharts');
+
+    for (let i = 0; i < charts.length; i++) {
+        let chart = charts[i];
+        let percent = chart.dataset.percent;
+        let color = ('color' in chart.dataset) ? chart.dataset.color : "#2F4F4F";
+        let size = ('size' in chart.dataset) ? chart.dataset.size : "100";
+        let stroke = ('stroke' in chart.dataset) ? chart.dataset.stroke : "1";
+        charts[i].innerHTML = createCircleChart(percent, color, size, stroke);
+    }
 }
