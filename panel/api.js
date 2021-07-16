@@ -6,11 +6,12 @@ var bool = true;
 socket();
 
 var players = new ldBar(".players", {
+  "preset":'fan',
   "type": 'stroke',
   "img": '',
   "path": 'M10 10L90 10M90 8M90 12',
   "fill-dir": 'btt',
-  "fill": 'fan',
+  "fill": '#25b',
   "fill-background": '#ddd',
   "fill-background-extrude": 3,
   "pattern-size": null,
