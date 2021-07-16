@@ -25,8 +25,10 @@ html {
 }
 
 .centerCont{
-  margin: auto;
   display: flex;
+  padding: 64px 8px;
+  background-color: #253139;
+  max-width: 784px;
 }
 
 @media screen and (max-width: 570px){
