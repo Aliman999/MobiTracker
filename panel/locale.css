@@ -37,10 +37,6 @@ html {
   display: flex;
 }
 
-.mainline{
-  stroke:aqua;
-}
-
 .ldBar{
   margin: auto;
 }
