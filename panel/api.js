@@ -15,7 +15,7 @@ var bars = [
     "fill-background-extrude": 3,
     "pattern-size": null,
     "stroke-dir": 'normal',
-    "stroke-width": '3',
+    "stroke-width": '6',
     "stroke-trail": '#ddd',
     "stroke-trail-width": 0.5,
     "duration": 1,
