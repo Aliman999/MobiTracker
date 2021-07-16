@@ -8,7 +8,7 @@ simpleStr = function(arr){
 wrap = function(content){
   return "data:image/svg+xml;base64," + btoa(content);
 };
-(function(){
+(function init(){
   var make, handler, ldBar;
   make = {
     head: function(viewBox){
