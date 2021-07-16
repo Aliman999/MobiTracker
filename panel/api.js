@@ -15,7 +15,7 @@ function display(response){
     bar.className = "mkCharts";
     bar.dataset.size = "100";
 
-    bar.dataset.percent = Math.ceil(response.data.player.current / response.data.player.max);
+    bar.dataset.percent = (Math.ceil(response.data.player.current / response.data.player.max)*100);
     bar.dataset.color = "#91A6FF";
     bar.dataset.stroke = "3";
     bar.id = "player";
@@ -35,7 +35,7 @@ function display(response){
     bar.className = "mkCharts";
     bar.dataset.size = "100";
 
-    bar.dataset.percent = Math.ceil(response.data.crawler.current / response.data.crawler.max);
+    bar.dataset.percent = (Math.ceil(response.data.crawler.current / response.data.crawler.max)*100);
     bar.dataset.color = "#91A6FF";
     bar.dataset.stroke = "3";
     bar.id = "crawler";
@@ -55,7 +55,7 @@ function display(response){
     bar.className = "mkCharts";
     bar.dataset.size = "100";
 
-    bar.dataset.percent = Math.ceil(response.data.scanner.current / response.data.scanner.max);
+    bar.dataset.percent = (Math.ceil(response.data.scanner.current / response.data.scanner.max)*100);
     bar.dataset.color = "#91A6FF";
     bar.dataset.stroke = "3";
     bar.id = "scanner";
