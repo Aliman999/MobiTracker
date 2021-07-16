@@ -17,7 +17,7 @@ var timer = setInterval(() => {
         run();
         clearInterval(timer);
     }
-}, 2000);
+}, 1000);
 
 function run(){
     let charts = document.getElementsByClassName('mkCharts');
