@@ -70,7 +70,9 @@ if (empty($_SESSION['token'])) {
         <p class="webSlogan"></p>
       </div>
       <div class="container-header">
-        <div class="mkCharts" data-percent="45" data-color="#654321" data-size="125" data-stroke="3"></div>
+        <div class="centerCont">
+          <div class="mkCharts" data-percent="45" data-color="#654321" data-size="125" data-stroke="3"></div>
+        </div>
       </div>
     </div>
     <?php include "../gtemps/footer.php"; ?>
