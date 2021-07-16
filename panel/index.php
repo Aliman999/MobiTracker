@@ -15,7 +15,10 @@ if (empty($_SESSION['token'])) {
     <link rel="stylesheet" href="../css/patreon.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="locale.css">
+
     <link rel="stylesheet" href="mk_charts.css" />
+    <link rel="stylesheet" href="loading-bar.css" />
+
     <link rel="apple-touch-icon" sizes="180x180" href="https://mobitracker.co/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://mobitracker.co/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://mobitracker.co/favicon-16x16.png">
@@ -80,6 +83,7 @@ if (empty($_SESSION['token'])) {
     </div>
     <?php include "../gtemps/footer.php"; ?>
     <script type="text/javascript" src="mk_charts.js"></script>
+    <script src="loading-bar.js"></script>
     <script type="text/javascript" src="api.js"></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js";}else{echo "../js/nSession.js";} ?>" async></script>
   </body>
