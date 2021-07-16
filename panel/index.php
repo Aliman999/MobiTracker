@@ -67,8 +67,8 @@ if (empty($_SESSION['token'])) {
       </div>
 
       <div class="titleContainer">
-        <p class="webTitle">Essential to your Organization!</p>
-        <p class="webSlogan">Easily access StarCitizen's player Reputation Hub through discord!</p>
+        <p class="webTitle">MobiTracker Systems Panel</p>
+        <p class="webSlogan"></p>
       </div>
       <div class="container-header">
         <div class="container">
