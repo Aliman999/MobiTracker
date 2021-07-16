@@ -81,9 +81,9 @@ var bars = [
 ];
 
 function display(response){
-  bars[0].set(Math.round((response.data.player.current / response.data.player.max * 100)));
-  bars[1].set(Math.round((response.data.crawler.current / response.data.crawler.max * 100)));
-  bars[2].set(Math.round((response.data.scanner.current / response.data.scanner.max * 100)));
+  bars[0].set(Math.floor((response.data.player.current / response.data.player.max * 100)));
+  bars[1].set(Math.floor((response.data.crawler.current / response.data.crawler.max * 100)));
+  bars[2].set(Math.floor((response.data.scanner.current / response.data.scanner.max * 100)));
 }
 
 function socket(){
