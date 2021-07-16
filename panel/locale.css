@@ -20,10 +20,6 @@ html {
   margin: 16px auto 16px auto;
 }
 
-.container-header{
-  display: flex;
-}
-
 .centerCont{
   display: flex;
   padding: 64px 8px;
