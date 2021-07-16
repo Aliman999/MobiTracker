@@ -41,7 +41,7 @@ function display(response){
     bar.id = "crawler";
     barCont.appendChild(bar);
     var barText = document.createElement("p");
-    barText.innerText = "Player Scanner";
+    barText.innerText = "Org Crawler";
     barCont.appendChild(bar);
     barCont.appendChild(barText);
 
@@ -61,7 +61,7 @@ function display(response){
     bar.id = "scanner";
     barCont.appendChild(bar);
     var barText = document.createElement("p");
-    barText.innerText = "Player Scanner";
+    barText.innerText = "Org Scanner";
     barCont.appendChild(bar);
     barCont.appendChild(barText);
 
