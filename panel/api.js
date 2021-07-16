@@ -6,7 +6,7 @@ var bool = true;
 socket();
 
 function display(response){
-  var myBar = new ldBar(".myContainer", {
+  var myBar = new ldBar(".centerCont", {
     "type": 'stroke',
     "img": '',
     "path": 'M10 10L90 10M90 8M90 12',
