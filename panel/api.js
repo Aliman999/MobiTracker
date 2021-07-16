@@ -7,7 +7,7 @@ socket();
 
 var bars = [
   new ldBar(".players", {
-    "preset": 'fan',
+    "preset": 'circle',
     "img": '',
     "fill-dir": 'btt',
     "fill": '#25b',
@@ -31,7 +31,7 @@ var bars = [
     "padding": undefined
   }),
   new ldBar(".crawler", {
-    "preset": 'fan',
+    "preset": 'circle',
     "img": '',
     "fill-dir": 'btt',
     "fill": '#25b',
@@ -55,7 +55,7 @@ var bars = [
     "padding": undefined
   }),
   new ldBar(".scanner", {
-    "preset": 'fan',
+    "preset": 'circle',
     "img": '',
     "fill-dir": 'btt',
     "fill": '#25b',
