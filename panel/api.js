@@ -11,8 +11,9 @@ function display(response){
   barCont.opacity = 0;
   var bar = document.createElement("div");
   bar.className = "mkCharts";
-  bar.dataset.size = response.data.player.max;
-  bar.dataset.percent = response.data.player.current;
+  bar.dataset.size = "100";
+
+  bar.dataset.percent = (response.data.player.current/response.data.player.max);
   bar.dataset.color = "#91A6FF";
   bar.dataset.stroke = "3";
   barCont.appendChild(bar);
