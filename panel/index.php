@@ -15,7 +15,7 @@ if (empty($_SESSION['token'])) {
     <link rel="stylesheet" href="../css/patreon.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="locale.css">
-    <link rel="stylesheet" href="css/mk_charts.css" />
+    <link rel="stylesheet" href="mk_charts.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="https://mobitracker.co/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://mobitracker.co/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://mobitracker.co/favicon-16x16.png">
@@ -39,7 +39,7 @@ if (empty($_SESSION['token'])) {
     ?>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177343701-1"></script>
     <script type="text/javascript" src="../js/ga.js"></script>
-    <script src="js/mk_charts.js"></script>
+    <script src="mk_charts.js"></script>
   </head>
 
   <body>
