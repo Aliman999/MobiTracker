@@ -26,13 +26,12 @@ var players = new ldBar(".players", {
   "bbox": null,
   "set-dim": true,
   "aspect-ratio": "xMidYMid",
-  "transition-in": false,
+  "transition-in": true,
   "min": 0,
   "max": 100,
   "precision": 0,
   "padding": undefined
 });
-players.set(50);
 var crawler = new ldBar(".crawler", {
   "type": 'stroke',
   "img": '',
