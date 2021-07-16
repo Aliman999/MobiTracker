@@ -4,9 +4,8 @@ var webSocket = null;
 var bool = true;
 
 function getColor() {
-  return "hsl(" + 360 * Math.random() + ',' +
-    (25 + 70 * Math.random()) + '%,' +
-    (85 + 10 * Math.random()) + '%)'
+  var hue = Math.floor(Math.random() * 360);
+  return 'hsl(' + hue + ', 100%, 80%)';
 }
 
 socket();
