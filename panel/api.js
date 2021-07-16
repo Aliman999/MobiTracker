@@ -22,9 +22,12 @@ function socket(){
     heartbeat();
   }
   webSocket.onmessage = function(event){
-    console.log("Authentication Response");
     var response = JSON.parse(event.data);
-    console.log(response);
+    if(response.type == "authentication"){
+      console.log("Authentication Response");
+    }else{
+      console.log(response);
+    }
   }
   webSocket.onerror = function(err){
     console.log("Error");
