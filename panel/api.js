@@ -30,16 +30,14 @@ var players = new ldBar(".players", {
   "padding": undefined
 });
 var crawler = new ldBar(".crawler", {
-  "type": 'stroke',
+  "preset": 'fan',
   "img": '',
-  "path": 'M10 10L90 10M90 8M90 12',
   "fill-dir": 'btt',
   "fill": '#25b',
   "fill-background": '#ddd',
   "fill-background-extrude": 3,
   "pattern-size": null,
   "stroke-dir": 'normal',
-  "stroke": '#25b',
   "stroke-width": '3',
   "stroke-trail": '#ddd',
   "stroke-trail-width": 0.5,
@@ -47,7 +45,6 @@ var crawler = new ldBar(".crawler", {
   "easing": 'linear',
   "value": 0,
   "img-size": null,
-  "bbox": null,
   "set-dim": true,
   "aspect-ratio": "xMidYMid",
   "transition-in": false,
@@ -57,16 +54,14 @@ var crawler = new ldBar(".crawler", {
   "padding": undefined
 });
 var scanner = new ldBar(".scanner", {
-  "type": 'stroke',
+  "preset": 'fan',
   "img": '',
-  "path": 'M10 10L90 10M90 8M90 12',
   "fill-dir": 'btt',
   "fill": '#25b',
   "fill-background": '#ddd',
   "fill-background-extrude": 3,
   "pattern-size": null,
   "stroke-dir": 'normal',
-  "stroke": '#25b',
   "stroke-width": '3',
   "stroke-trail": '#ddd',
   "stroke-trail-width": 0.5,
@@ -74,7 +69,6 @@ var scanner = new ldBar(".scanner", {
   "easing": 'linear',
   "value": 0,
   "img-size": null,
-  "bbox": null,
   "set-dim": true,
   "aspect-ratio": "xMidYMid",
   "transition-in": false,
