@@ -1,29 +1,76 @@
 var tokenHeader = document.getElementsByName("token")[0];
 var jwt = document.getElementsByName("jwt")[0];
 var webSocket = null;
+var bool = true;
 
 socket();
 
 function display(response){
-  var container = document.getElementsByClassName("centerCont")[0]
+  if(bool){
+    var container = document.getElementsByClassName("centerCont")[0]
 
-  var barCont = document.createElement("div");
-  barCont.opacity = 0;
-  var bar = document.createElement("div");
-  bar.className = "mkCharts";
-  bar.dataset.size = "100";
+    var barCont = document.createElement("div");
+    barCont.opacity = 0;
+    var bar = document.createElement("div");
+    bar.className = "mkCharts";
+    bar.dataset.size = "100";
 
-  bar.dataset.percent = Math.ceil(response.data.player.current/response.data.player.max);
-  bar.dataset.color = "#91A6FF";
-  bar.dataset.stroke = "3";
-  barCont.appendChild(bar);
-  var barText = document.createElement("p");
-  barText.innerText = "Player Scanner";
-  barCont.appendChild(bar);
-  barCont.appendChild(barText);
+    bar.dataset.percent = Math.ceil(response.data.player.current / response.data.player.max);
+    bar.dataset.color = "#91A6FF";
+    bar.dataset.stroke = "3";
+    bar.id = "player";
+    barCont.appendChild(bar);
+    var barText = document.createElement("p");
+    barText.innerText = "Player Scanner";
+    barCont.appendChild(bar);
+    barCont.appendChild(barText);
 
-  container.appendChild(barCont);
-  run();
+    container.appendChild(barCont);
+
+
+    barCont = document.createElement("div");
+    barCont.opacity = 0;
+
+    bar = document.createElement("div");
+    bar.className = "mkCharts";
+    bar.dataset.size = "100";
+
+    bar.dataset.percent = Math.ceil(response.data.crawler.current / response.data.crawler.max);
+    bar.dataset.color = "#91A6FF";
+    bar.dataset.stroke = "3";
+    bar.id = "player";
+    barCont.appendChild(bar);
+    var barText = document.createElement("p");
+    barText.innerText = "Player Scanner";
+    barCont.appendChild(bar);
+    barCont.appendChild(barText);
+
+    container.appendChild(barCont);
+
+
+    barCont = document.createElement("div");
+    barCont.opacity = 0;
+
+    bar = document.createElement("div");
+    bar.className = "mkCharts";
+    bar.dataset.size = "100";
+
+    bar.dataset.percent = Math.ceil(response.data.scanner.current / response.data.scanner.max);
+    bar.dataset.color = "#91A6FF";
+    bar.dataset.stroke = "3";
+    bar.id = "player";
+    barCont.appendChild(bar);
+    var barText = document.createElement("p");
+    barText.innerText = "Player Scanner";
+    barCont.appendChild(bar);
+    barCont.appendChild(barText);
+
+    container.appendChild(barCont);
+
+    run();
+  }else{
+    
+  }
 }
 
 function socket(){
@@ -49,6 +96,7 @@ function socket(){
     }else{
       console.log(response);
       display(response);
+      bool = false;
     }
   }
   webSocket.onerror = function(err){
