@@ -33,6 +33,10 @@ html {
   justify-content: space-evenly;
 }
 
+.loadingContainer{
+  display: flex;
+}
+
 .mkCharts{
   display: flex;
 }
