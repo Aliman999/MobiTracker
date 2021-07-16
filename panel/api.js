@@ -5,8 +5,8 @@ var bool = true;
 
 socket();
 
-var player = new ldBar(".players", {
-  "type": 'stroke',
+var players = new ldBar(".players", {
+  "type": 'fan',
   "img": '',
   "path": 'M10 10L90 10M90 8M90 12',
   "fill-dir": 'btt',
