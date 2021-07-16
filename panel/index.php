@@ -74,17 +74,19 @@ if (empty($_SESSION['token'])) {
           <div id="loadingContainer">
             <p><span class="rBold">Loading</span></p><img src="../../src/loading.png" class="loading">
           </div>
-          <div class="faded">
-            <div class="mkCharts" data-percent="0" data-color="#91A6FF" data-size="100" data-stroke="3"></div>
-            <p>Player Scanner</p>
-          </div>
-          <div class="faded">
-            <div class="mkCharts" data-percent="0" data-color="#78FFD6" data-size="100" data-stroke="3"></div>
-            <p>Org Crawler</p>
-          </div>
-          <div class="faded">
-            <div class="mkCharts" data-percent="0" data-color="#EB9486" data-size="100" data-stroke="3"></div>
-            <p>Org Scanner</p>
+          <div class="loadingBars">
+            <div class="faded">
+              <div class="mkCharts" data-percent="0" data-color="#91A6FF" data-size="100" data-stroke="3"></div>
+              <p>Player Scanner</p>
+            </div>
+            <div class="faded">
+              <div class="mkCharts" data-percent="0" data-color="#78FFD6" data-size="100" data-stroke="3"></div>
+              <p>Org Crawler</p>
+            </div>
+            <div class="faded">
+              <div class="mkCharts" data-percent="0" data-color="#EB9486" data-size="100" data-stroke="3"></div>
+              <p>Org Scanner</p>
+            </div>
           </div>
         </div>
       </div>
