@@ -5,27 +5,23 @@ var webSocket = null;
 socket();
 
 function display(response){
-  if(!webSocket){
-    var container = document.getElementsByClassName("centerCont")[0]
+  var container = document.getElementsByClassName("centerCont")[0]
 
-    var barCont = document.createElement("div");
-    barCont.opacity = 0;
-    var bar = document.createElement("div");
-    bar.className = "mkCharts";
-    bar.dataset.size = response.data.player.max;
-    bar.dataset.percent = response.data.player.current;
-    bar.dataset.color = "#91A6FF";
-    bar.dataset.stroke = "3";
-    barCont.appendChild(bar);
-    var barText = document.createElement("p");
-    barText.innerText = "Player Scanner";
-    barCont.appendChild(bar);
-    barCont.appendChild(barText);
+  var barCont = document.createElement("div");
+  barCont.opacity = 0;
+  var bar = document.createElement("div");
+  bar.className = "mkCharts";
+  bar.dataset.size = response.data.player.max;
+  bar.dataset.percent = response.data.player.current;
+  bar.dataset.color = "#91A6FF";
+  bar.dataset.stroke = "3";
+  barCont.appendChild(bar);
+  var barText = document.createElement("p");
+  barText.innerText = "Player Scanner";
+  barCont.appendChild(bar);
+  barCont.appendChild(barText);
 
-    container.appendChild(barCont);
-  }else{
-
-  }
+  container.appendChild(barCont);
 }
 
 function socket(){
