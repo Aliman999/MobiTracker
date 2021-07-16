@@ -21,6 +21,10 @@ function socket(){
       console.log(response.message);
       var loading = document.getElementById("loadingContainer");
       loading.remove();
+      var progressBars = document.getElementsByClassName("centerCont")[0];
+      progressBars.children.array.forEach(element => {
+        element.className = "";
+      });
     }else{
       console.log(response);
     }
