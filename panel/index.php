@@ -79,6 +79,7 @@ if (empty($_SESSION['token'])) {
           </div>
           <div>
             <div class="ldBar label-center" data-value="0" data-preset="fan"></div>
+            <p>Player Scanner</p>
           </div>
         </div>
       </div>
