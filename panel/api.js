@@ -24,6 +24,8 @@ function socket(){
       setTimeout(() => {
         loading.remove();
       }, 250);
+    }else{
+      console.log(response);
 
       var barCont = document.createElement("div");
       barCont.opacity = 0;
@@ -37,9 +39,6 @@ function socket(){
       barCont.appendChild(barText);
 
       document.getElementsByClassName("loadingContainer")[0].appendChild(barCont);
-      
-    }else{
-      console.log(response);
     }
   }
   webSocket.onerror = function(err){
