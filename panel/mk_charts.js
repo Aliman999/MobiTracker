@@ -12,13 +12,6 @@ function createCircleChart(percent, color, size, stroke) {
     return svg;
 }
 
-var timer = setInterval(() => {
-    if(webSocket){
-        run();
-        clearInterval(timer);
-    }
-}, 1000);
-
 function run(){
     let charts = document.getElementsByClassName('mkCharts');
 

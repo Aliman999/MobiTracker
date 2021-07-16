@@ -23,6 +23,7 @@ function display(response){
   barCont.appendChild(barText);
 
   container.appendChild(barCont);
+  run();
 }
 
 function socket(){
