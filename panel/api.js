@@ -14,7 +14,7 @@ function socket(){
   webSocket = new WebSocket("wss://ws.mobitracker.co:2599");
   webSocket.onopen = function(){
     message = {
-      type:"internal",
+      type:"panel",
       token:jwt.content
     };
     webSocket.send(JSON.stringify(message));
@@ -24,14 +24,7 @@ function socket(){
   webSocket.onmessage = function(event){
     console.log("Authentication Response");
     var response = JSON.parse(event.data);
-    if(response.type == "authentication"){
-      if(!profile){
-        api(user.sessionUser);
-      }
-    }else if (response.type == "response") {
-      profile = response.data;
-      console.log(response);
-    }
+    console.log(response);
   }
   webSocket.onerror = function(err){
     console.log("Error");
@@ -48,12 +41,4 @@ function heartbeat() {
   if (webSocket.readyState !== 1) return;
   webSocket.send(JSON.stringify({type:"ping"}));
   setTimeout(heartbeat, 3000);
-}
-
-function api(name){
-  console.log("Job Sent");
-  webSocket.send(JSON.stringify({
-    type:"job",
-    token:name
-  }));
 }
