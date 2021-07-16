@@ -21,6 +21,7 @@ html {
 }
 
 .centerCont{
+  display: flex;
   margin: auto;
   padding: 64px 8px;
   background-color: #253139;
