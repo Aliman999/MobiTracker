@@ -1,14 +1,8 @@
 var tokenHeader = document.getElementsByName("token")[0];
 var jwt = document.getElementsByName("jwt")[0];
 var webSocket = null;
-var profile;
 
-var waitUser = setInterval(()=>{
-  if(user){
-    socket();
-    clearInterval(waitUser);
-  }
-}, 1000);
+socket();
 
 function socket(){
   webSocket = new WebSocket("wss://ws.mobitracker.co:2599");
