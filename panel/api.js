@@ -13,7 +13,7 @@ function display(response){
   bar.className = "mkCharts";
   bar.dataset.size = "100";
 
-  bar.dataset.percent = (response.data.player.current/response.data.player.max);
+  bar.dataset.percent = Math.ceil(response.data.player.current/response.data.player.max);
   bar.dataset.color = "#91A6FF";
   bar.dataset.stroke = "3";
   barCont.appendChild(bar);
