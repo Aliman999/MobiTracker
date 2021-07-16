@@ -32,6 +32,7 @@ var players = new ldBar(".players", {
   "precision": 0,
   "padding": undefined
 });
+players.set(50);
 var crawler = new ldBar(".crawler", {
   "type": 'stroke',
   "img": '',
