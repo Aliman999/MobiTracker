@@ -73,6 +73,7 @@ if (empty($_SESSION['token'])) {
         <div class="centerCont">
           <div id="loadingContainer">
             <p><span class="rBold">Loading</span></p><img src="../../src/loading.png" class="loading">
+            <div class="ldBar" data-value="60"></div>
           </div>
         </div>
       </div>
