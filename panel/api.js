@@ -23,7 +23,7 @@ function socket(){
       loading.remove();
       var progressBars = document.getElementsByClassName("centerCont")[0];
       progressBars.children.array.forEach(element => {
-        element.className = "";
+        element.style.opacity = 1;
       });
     }else{
       console.log(response);
