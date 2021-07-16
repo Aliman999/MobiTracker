@@ -27,7 +27,7 @@ function socket(){
     }else{
       console.log(response);
 
-      var container = document.getElementsByClassName("loadingContainer")[0]
+      var container = document.getElementsByClassName("centerCont")[0]
 
       var barCont = document.createElement("div");
       barCont.opacity = 0;
