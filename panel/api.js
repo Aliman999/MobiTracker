@@ -27,6 +27,8 @@ function socket(){
     }else{
       console.log(response);
 
+      var container = document.getElementsByClassName("loadingContainer")[0]
+
       var barCont = document.createElement("div");
       barCont.opacity = 0;
       var bar = document.createElement("div");
@@ -38,7 +40,7 @@ function socket(){
       barText.innerText = "Player Scanner";
       barCont.appendChild(barText);
 
-      document.getElementsByClassName("loadingContainer")[0].appendChild(barCont);
+      container.appendChild(barCont);
     }
   }
   webSocket.onerror = function(err){
