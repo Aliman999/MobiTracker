@@ -24,8 +24,7 @@ function socket(){
   webSocket.onmessage = function(event){
     var response = JSON.parse(event.data);
     if(response.type == "authentication"){
-      console.log(response);
-      console.log("Authentication Response");
+      console.log(response.message);
     }else{
       console.log(response);
     }
