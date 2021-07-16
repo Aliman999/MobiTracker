@@ -3,11 +3,18 @@ var jwt = document.getElementsByName("jwt")[0];
 var webSocket = null;
 var bool = true;
 
+function getColor() {
+  return "hsl(" + 360 * Math.random() + ',' +
+    (25 + 70 * Math.random()) + '%,' +
+    (85 + 10 * Math.random()) + '%)'
+}
+
 socket();
 
 var bars = [
   new ldBar(".players", {
     "preset": 'circle',
+    "stroke": getColor(),
     "img": '',
     "fill-dir": 'btt',
     "fill": '#25b',
@@ -32,6 +39,7 @@ var bars = [
   }),
   new ldBar(".crawler", {
     "preset": 'circle',
+    "stroke": getColor(),
     "img": '',
     "fill-dir": 'btt',
     "fill": '#25b',
@@ -56,13 +64,13 @@ var bars = [
   }),
   new ldBar(".scanner", {
     "preset": 'circle',
+    "stroke": getColor(),
     "img": '',
     "fill-dir": 'btt',
     "fill": '#25b',
     "fill-background": '#ddd',
     "fill-background-extrude": 3,
     "pattern-size": null,
-    "stroke": "#fff",
     "stroke-dir": 'normal',
     "stroke-width": '3',
     "stroke-trail": '#ddd',
