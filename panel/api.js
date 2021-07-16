@@ -26,6 +26,7 @@ function socket(){
     if(response.type == "authentication"){
       console.log(response.message);
     }else{
+      var data = JSON.parse(response.data);
       console.log(response);
     }
   }

@@ -71,15 +71,15 @@ if (empty($_SESSION['token'])) {
       </div>
       <div class="container-header">
         <div class="centerCont">
-          <div>
+          <div class="hidden">
             <div class="mkCharts" data-percent="0" data-color="#91A6FF" data-size="100" data-stroke="3"></div>
             <p>Player Scanner</p>
           </div>
-          <div>
+          <div class="hidden">
             <div class="mkCharts" data-percent="0" data-color="#78FFD6" data-size="100" data-stroke="3"></div>
             <p>Org Crawler</p>
           </div>
-          <div>
+          <div class="hidden">
             <div class="mkCharts" data-percent="0" data-color="#EB9486" data-size="100" data-stroke="3"></div>
             <p>Org Scanner</p>
           </div>
