@@ -71,7 +71,7 @@ if (empty($_SESSION['token'])) {
       </div>
       <div class="container-header">
         <div class="centerCont">
-          <div class="mkCharts" data-percent="45" data-color="#654321" data-size="125" data-stroke="3"></div>
+          <div class="mkCharts" data-percent="45" data-color="#654321" data-size="100" data-stroke="3"></div>
         </div>
       </div>
     </div>
