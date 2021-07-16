@@ -35,7 +35,7 @@ function display(response){
     bar.className = "mkCharts";
     bar.dataset.size = "100";
 
-    var test = (Math.round(response.data.crawler.current / response.data.crawler.max));
+    var test = Math.round((response.data.crawler.current / response.data.crawler.max) * 100);
 
     bar.dataset.percent = (Math.round(response.data.crawler.current / response.data.crawler.max)*100);
     bar.dataset.color = "#91A6FF";
