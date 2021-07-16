@@ -78,15 +78,15 @@ if (empty($_SESSION['token'])) {
             <p><span class="rBold">Loading</span></p><img src="../../src/loading.png" class="loading">
           </div>
           <div>
-            <div class="players label-center" data-value="0" data-preset="fan"></div>
+            <div class="players label-center"></div>
             <p>Player Scanner</p>
           </div>
           <div>
-            <div class="crawler label-center" data-value="0" data-preset="fan"></div>
+            <div class="crawler label-center"></div>
             <p>Org Crawler</p>
           </div>
           <div>
-            <div class="scanner label-center" data-value="0" data-preset="fan"></div>
+            <div class="scanner label-center"></div>
             <p>Org Scanner</p>
           </div>
         </div>
