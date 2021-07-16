@@ -10,7 +10,7 @@ var bars = [
     "preset": 'circle',
     "img": '',
     "fill-dir": 'btt',
-    "fill": '#25b',
+    "fill": '#fff',
     "fill-background": '#ddd',
     "fill-background-extrude": 3,
     "pattern-size": null,
