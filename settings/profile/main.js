@@ -42,6 +42,7 @@ function verify(){
         query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         query.setRequestHeader(tokenHeader.name, tokenHeader.content);
         query.send();
+        query.onload = null;
       }
       init();
     }
