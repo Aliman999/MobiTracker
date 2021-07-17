@@ -41,7 +41,7 @@ function init(){
     verifyBtn.style.alignItems = "center";
 
     dContainer = document.createElement("div");
-    dContainer.className = "hidden";
+    dContainer.className = "hidden dContainer";
     dContainer.style.margin = "auto";
     dContainer.style.opacity = "0";
     dContainer.style.transition = ".25s ease-in-out";
