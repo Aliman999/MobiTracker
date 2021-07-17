@@ -12,11 +12,11 @@ function verify(){
   container.innerHTML = "";
   container.append(savedLoading);
   setTimeout(() => {
-    init();
-  }, 100);
+    init(true);
+  }, 1000);
 }
 
-function init(){
+function init(verifying){
   var loading = document.getElementById("loadingContainer");
   loading.style.opacity = 0;
   loading.remove();
@@ -39,7 +39,6 @@ function init(){
   faded.bio.className = "faded divLeft";
 
   console.log(user);
-
   if(!user.verified){
     const verifyImg = document.createElement("img");
     verifyImg.src = "https://mobitracker.co/beta/src/verified.png";
