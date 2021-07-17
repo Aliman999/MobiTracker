@@ -10,6 +10,9 @@ var savedLoading = document.getElementById("loadingContainer");
 function verify(){
   const container = document.getElementsByClassName("setting")[0];
   container.append(savedLoading);
+  setTimeout(() => {
+    init();
+  }, 100);
 }
 
 function init(){
