@@ -44,7 +44,7 @@ html {
   margin: auto;
 }
 
-.blob {
+.offline{
 	background: #87d374;
 	border-radius: 50%;
 	margin: 10px;
@@ -53,7 +53,19 @@ html {
 
 	box-shadow: 0 0 0 #87d374;
 	transform: scale(1);
-	animation: pulse 2s infinite;
+	animation: pulseOffline 2s infinite;
+}
+
+.live {
+	background: #87d374;
+	border-radius: 50%;
+	margin: 10px;
+	height: 20px;
+	width: 20px;
+
+	box-shadow: 0 0 0 #87d374;
+	transform: scale(1);
+	animation: pulseLive 2s infinite;
 }
 
 .conContainer{
@@ -67,7 +79,23 @@ html {
   margin: auto;
 }
 
-@keyframes pulse {
+@keyframes pulseLive {
+	0% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(59, 100, 49, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(59, 100, 49, 0);
+	}
+
+	100% {
+		transform: scale(1);
+		box-shadow: 0 0 0 0 rgba(59, 100, 49, 0);
+	}
+}
+@keyframes pulseOffline {
 	0% {
 		transform: scale(1);
 		box-shadow: 0 0 0 0 rgba(59, 100, 49, 0.7);
