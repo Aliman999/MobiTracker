@@ -4,9 +4,7 @@
 html {
   scroll-behavior: smooth;
 }
-.titleContainer{
-  margin-top: 100px;
-}
+
 .titleContainer p{
   padding: 8px;
   display: flex;

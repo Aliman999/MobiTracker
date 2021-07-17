@@ -62,7 +62,6 @@ if (empty($_SESSION['token'])) {
 
       <div class="titleContainer">
         <p class="webTitle">Systems</p>
-        <p class="webSlogan"></p>
       </div>
       <div class="container-header">
         <div class="centerCont">
