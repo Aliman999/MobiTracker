@@ -27,8 +27,8 @@ function init(){
   faded.orgs.className = "faded";
   faded.bio.className = "faded divLeft";
 
-  console.log(profile);
-  
+  console.log(user);
+
   if(profile){
 
   }
