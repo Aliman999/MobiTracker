@@ -100,8 +100,8 @@ function socket(){
   var connection = document.getElementsByClassName("conContainer")[0];
   webSocket = new WebSocket("wss://ws.mobitracker.co:2599");
   webSocket.onopen = function(){
-    connection.childNodes[1].innerText = "CONNECTING";
-    connection.childNodes[2].className = "connecting";
+    connection.children[0].innerText = "CONNECTING";
+    connection.children[1].className = "connecting";
     message = {
       type:"panel",
       token:jwt.content
