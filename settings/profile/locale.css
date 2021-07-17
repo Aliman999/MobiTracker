@@ -40,5 +40,6 @@
 }
 
 .dContainer>input{
-  margin: 0 8px;
+  width: calc(100% - 16px);
+  margin: 0 8px 16px 8px;
 }
