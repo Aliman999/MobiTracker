@@ -127,11 +127,10 @@ function socket(){
       bool = false;
     }
   }
-  webSocket.onerror = function(err){
-    console.log("Error");
-    setTimeout(socket, 3000);
-  }
-  webSocket.onclose = function(){
+  
+  webSocket.onclose = function () {
+    connection.children[0].innerText = "DISCONNECTED";
+    connection.children[1].className = "offline";
     console.log("Connection Closed");
     setTimeout(socket, 3000);
   };
