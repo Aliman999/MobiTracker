@@ -38,7 +38,7 @@ function verify(){
       if (profile.profile.bio.includes("mt.co")) {
         user.verified = 1;
 
-        query.open("GET", "https://mobitracker.co/src/beta/verify.php");
+        query.open("GET", "https://mobitracker.co/beta/src/verify.php");
         query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         query.setRequestHeader(tokenHeader.name, tokenHeader.content);
         query.send();
