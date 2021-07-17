@@ -1,4 +1,4 @@
-<<?php
+<?php
   session_start();
   if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
     header("location: ../");
@@ -71,13 +71,20 @@
         <div class="setting">
           <div>
             <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
+            <p><span class="rBold">Verification:</span><br><span class="subP <?php echo $row['verifyClass'] ?>"><?php echo $row['verify'] ?></span></p>
+            <?php
+            if($row['verify'] !== 'Verified'){
+              echo '<a class="rButton highlight rightSide">Verify</a>';
+            }
+            ?>
           </div>
           <div>
-            <p><span class="rBold">Linked RSI:</span><br><a href="https://robertsspaceindustries.com/citizens/JamesDusky" class="subP loginName"><?php echo $_SESSION['username'] ?></a></p>
-            <a class="rButton highlight rightSide">Add RSI</a>
+            <p><span class="rBold">Reputation:</span><br><span class="subP"><?php echo $row['xp'] ?></span></p>
+            <p><span class="rBold">Career:</span><br><span class="subP"><?php echo join(", ", $row['career']) ?></span></p>
+            <p><span class="rBold">Faction:</span><br><span class="subP"><?php echo $row['faction'] ?></span></p>
           </div>
           <div>
-            <p><span class="rBold">Email:</span><br><span class="subP">N/A</span></p>
+            <p><span class="rBold">Email:</span><br><span class="subP"><?php echo $row['email'] ?></span></p>
             <a class="rButton highlight rightSide">Change Email</a>
           </div>
           <div>
