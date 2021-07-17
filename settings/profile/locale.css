@@ -39,6 +39,6 @@
   margin: 0 10px 0 0;
 }
 
-.faded>textarea{
-  margin-left: 8px;
+.faded>input{
+  margin: 0 8px;
 }
