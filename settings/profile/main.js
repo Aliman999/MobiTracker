@@ -210,6 +210,9 @@ function init(){
 
   faded.bio.appendChild(bioCont);
 
+  if(!user.verify){
+    field.appendChild(faded.verify);
+  }
   field.appendChild(faded.image);
   field.appendChild(faded.handle);
   field.appendChild(faded.badge);
