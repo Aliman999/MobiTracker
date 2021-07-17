@@ -37,6 +37,7 @@ function init(){
     verifyBtn.className = "verify_btn";
     verifyBtn.appendChild(verifyImg);
     faded.verify.appendChild(verifyBtn);
+    faded.verify.display = "flex";
   }
 
   //Avatar
