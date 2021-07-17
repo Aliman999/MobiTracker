@@ -10,6 +10,12 @@ function getColor() {
 
 if(jwt){
   socket();
+}else{
+  var loading = document.getElementById("loadingContainer")
+  loading.style.opacity = 0;
+  setTimeout(() => {
+    loading.remove();
+  }, 250);
 }
 
 var bars = [
@@ -127,7 +133,7 @@ function socket(){
       bool = false;
     }
   }
-  
+
   webSocket.onclose = function () {
     connection.children[0].innerText = "DISCONNECTED";
     connection.children[1].className = "offline";
