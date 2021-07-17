@@ -39,6 +39,22 @@ function init(){
     verifyBtn.className = "rButton";
     verifyBtn.style.display = "flex";
     verifyBtn.style.alignItems = "center";
+
+    dContainer = document.createElement("div");
+
+    verifyDirections = document.createElement("p");
+    verifyDirections.innerText = "Place the following into your RSI Profile.";
+    verifyText = document.createElement("textarea");
+    verifyText.value = "mt.co";
+    verifyText.readOnly = true;
+
+    dContainer.appendChild(verifyDirections);
+    dContainer.appendChild(verifyText);
+
+    verifyBtn.onclick = function(){
+
+    }
+    faded.verify.appendChild(verifyText);
     faded.verify.appendChild(verifyBtn);
   }
 
