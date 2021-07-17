@@ -33,9 +33,9 @@ function init(){
     const verifyImg = document.createElement("img");
     verifyImg.src = "https://mobitracker.co/beta/src/verified.png";
     const verifyBtn = document.createElement("a");
+    verifyBtn.appendChild(verifyImg);
     verifyBtn.innerText = "Verify";
     verifyBtn.className = "verify_btn";
-    verifyBtn.appendChild(verifyImg);
     faded.verify.appendChild(verifyBtn);
     faded.verify.display = "flex";
   }
