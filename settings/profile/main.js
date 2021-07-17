@@ -47,7 +47,7 @@ function init(){
     dContainer.style.transition = ".25s ease-in-out";
 
     verifyDirections = document.createElement("p");
-    verifyDirections.innerText = "Place the following into your RSI Profile.";
+    verifyDirections.innerText = "Place the following into your RSI Bio and click Verify.";
 
     verifyText = document.createElement("input");
 
