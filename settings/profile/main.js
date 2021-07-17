@@ -11,6 +11,7 @@ function init(){
   loading.remove();
   var field = document.getElementsByClassName("setting")[0];
   var faded = {
+    verify:document.createElement("div"),
     image:document.createElement("div"),
     handle:document.createElement("div"),
     badge:document.createElement("div"),
@@ -18,12 +19,19 @@ function init(){
     orgs:document.createElement("div"),
     bio:document.createElement("div")
   }
+  faded.verify.className = "faded";
   faded.image.className = "faded";
   faded.handle.className = "faded";
   faded.badge.className = "faded";
   faded.meta.className = "faded";
   faded.orgs.className = "faded";
   faded.bio.className = "faded divLeft";
+
+  console.log(profile);
+  
+  if(profile){
+
+  }
 
   //Avatar
   const settingAvi = document.createElement("img");
