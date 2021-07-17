@@ -49,7 +49,7 @@ function init(){
     verifyDirections = document.createElement("p");
     verifyDirections.innerText = "Place the following into your RSI Profile.";
 
-    verifyText = document.createElement("textarea");
+    verifyText = document.createElement("input");
 
     verifyText.value = "mt.co";
 
