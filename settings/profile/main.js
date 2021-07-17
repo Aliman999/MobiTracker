@@ -44,6 +44,7 @@ function init(){
     dContainer.style.margin = "auto";
 
     verifyDirections = document.createElement("p");
+    verifyDirections.style.paddingLeft = "0";
     verifyDirections.innerText = "Place the following into your RSI Profile.";
 
     verifyText = document.createElement("textarea");
