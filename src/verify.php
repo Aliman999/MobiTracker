@@ -13,7 +13,7 @@ if (isset($headers)) {
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
     require_once "config.php";
-    $sql = "UPDATE players SET verified = 1 WHERE username = '".$_SESSION['username']."';";
+    $sql = "UPDATE players SET verify = 1 WHERE username = '".$_SESSION['username']."';";
     if(mysqli_query($link, $sql)){
         $_SESSION['verified'] = 1;
     }else{
