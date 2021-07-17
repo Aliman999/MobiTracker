@@ -5,6 +5,24 @@ var display = setInterval(()=>{
   }
 }, 1000);
 
+var display = {
+  setTimer:function(interval){
+    this.timer = interval;
+  },
+  clear:function(){
+    clearInterval(this.interval)
+  },
+  startTimer:function(...func){
+    this.interval = setInterval(() => {
+      func();
+    }, this.timer);
+  },
+  timer:1000,
+  interval:setInterval(() => {
+    
+  }, this.timer),
+}
+
 var savedLoading = document.getElementById("loadingContainer");
 
 function verify(){
@@ -13,7 +31,6 @@ function verify(){
   container.innerHTML = "";
   container.append(savedLoading);
   savedLoading.style.opacity = 1;
-  display(1000);
 }
 
 function init(){
