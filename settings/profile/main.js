@@ -14,7 +14,7 @@ function verify(){
   savedLoading.style.opacity = 1;
   setTimeout(() => {
     init(true);
-  }, 1000);
+  }, 500);
 }
 
 function init(){
