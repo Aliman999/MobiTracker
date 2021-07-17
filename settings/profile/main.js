@@ -29,8 +29,10 @@ function init(){
 
   console.log(user);
 
-  if(profile){
-
+  if(!user.verified){
+    const verifyBtn = document.createElement("a");
+    verifyBtn.className = "verifyBtn";
+    faded.verify.appendChild(verifyBtn);
   }
 
   //Avatar
