@@ -36,6 +36,8 @@ html {
 
 #loadingContainer{
   display: flex;
+  position: absolute;
+  top: 8px;
 }
 
 .ldBar{
