@@ -8,7 +8,9 @@ function getColor() {
   return 'hsl(' + hue + ', 100%, 80%)';
 }
 
-socket();
+if(jwt){
+  socket();
+}
 
 var bars = [
   new ldBar(".players", {
@@ -95,8 +97,11 @@ function display(response){
 }
 
 function socket(){
+  var connection = document.getElementsByClassName("conConnect")[0];
   webSocket = new WebSocket("wss://ws.mobitracker.co:2599");
   webSocket.onopen = function(){
+    connection.childNodes[0].innerText = "CONNECTING";
+    connection.childNodes[1].className = "connecting";
     message = {
       type:"panel",
       token:jwt.content
