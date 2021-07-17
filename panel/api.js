@@ -113,7 +113,6 @@ function socket(){
       token:jwt.content
     };
     webSocket.send(JSON.stringify(message));
-    console.log("Authentication Sent");
     heartbeat();
   }
   webSocket.onmessage = function(event){
