@@ -41,6 +41,7 @@ function init(){
     verifyBtn.style.alignItems = "center";
 
     dContainer = document.createElement("div");
+    dContainer.style.margin = "auto";
 
     verifyDirections = document.createElement("p");
     verifyDirections.innerText = "Place the following into your RSI Profile.";
