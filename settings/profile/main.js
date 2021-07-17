@@ -35,7 +35,7 @@ function init(){
     const verifyBtn = document.createElement("a");
     verifyBtn.innerText = "Verify";
     verifyBtn.className = "verify_btn";
-    faded.verify.appendChild(verifyImg);
+    verifyBtn.appendChild(verifyImg);
     faded.verify.appendChild(verifyBtn);
   }
 
