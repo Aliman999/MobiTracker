@@ -50,6 +50,7 @@ function init(){
 
     verifyDirections = document.createElement("p");
     verifyDirections.innerText = "Place the following into your RSI Bio and click Verify.";
+    verifyDirections.style.margin = "auto";
 
     verifyText = document.createElement("input");
 
