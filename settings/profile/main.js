@@ -88,7 +88,7 @@ function init(){
   const handleCont = document.createElement("p");
   var boldSpan = document.createElement("a");
   boldSpan.innerText = profile.profile.handle;
-  boldSpan.className = "rBold";
+  boldSpan.className = "rBold panelLink";
   boldSpan.href = "https://robertspaceindustries.com/citizen/"+profile.profile.handle;
   var subP = document.createElement("span");
   subP.id = "displayName";
