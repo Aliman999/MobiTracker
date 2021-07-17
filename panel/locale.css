@@ -52,8 +52,6 @@ html {
 	width: 20px;
 
 	box-shadow: 0 0 0 #FF5A5A;
-	transform: scale(1);
-	animation: pulseOffline 2s infinite;
 }
 
 .connecting{
@@ -122,23 +120,6 @@ html {
 	100% {
 		transform: scale(1);
 		box-shadow: 0 0 0 0 rgba(187, 165, 37, 0);
-	}
-}
-
-@keyframes pulseOffline {
-	0% {
-		transform: scale(1);
-		box-shadow: 0 0 0 0 rgba(204, 0, 0, 0.7);
-	}
-
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 10px rgba(204, 0, 0, 0);
-	}
-
-	100% {
-		transform: scale(1);
-		box-shadow: 0 0 0 0 rgba(204, 0, 0, 0);
 	}
 }
 
