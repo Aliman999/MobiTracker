@@ -1,6 +1,6 @@
 var display = {
-  setTimer:function(interval){
-    this.timer = interval;
+  setTimer:function(int){
+    this.timer = int;
   },
   clear:function(){
     clearInterval(this.interval)
