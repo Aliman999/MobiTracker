@@ -90,6 +90,7 @@ function init(){
   boldSpan.innerText = profile.profile.handle;
   boldSpan.className = "rBold panelLink";
   boldSpan.href = "https://robertsspaceindustries.com/citizens/"+profile.profile.handle;
+  boldSpan.target = "_blank";
   var subP = document.createElement("span");
   subP.id = "displayName";
   subP.className = "subP";
@@ -212,6 +213,7 @@ function init(){
     boldSpan = document.createElement("a");
     boldSpan.className = "rBold panelLink";
     boldSpan.href = "https://robertsspaceindustries.com/orgs/" + profile.organization.sid;
+    boldSpan.target = "_blank";
     if(x == 0){
       boldSpan.innerText = profile.organization.name;
     }else{
