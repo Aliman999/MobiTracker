@@ -53,6 +53,11 @@ html {
 	animation: pulse 2s infinite;
 }
 
+.conContainer{
+  display: flex;
+  flex-direction: column;
+}
+
 @keyframes pulse {
 	0% {
 		transform: scale(0.95);
