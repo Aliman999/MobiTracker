@@ -16,6 +16,8 @@ if (isset($headers)) {
     $sql = "UPDATE players SET verified = 1 WHERE username = '".$_SESSION['username']."';";
     if(mysqli_query($link, $sql)){
         $_SESSION['verified'] = 1;
+    }else{
+      mysql_error($link)
     }
   }
 } else {
