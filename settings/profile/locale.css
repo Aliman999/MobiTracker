@@ -31,3 +31,8 @@
   color: #C4D7E6;
   margin: 0 10px;
 }
+
+.rButton>img{
+  height: 32px;
+  margin: 0 10px 0 0;
+}
