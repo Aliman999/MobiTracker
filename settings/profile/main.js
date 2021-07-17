@@ -31,6 +31,13 @@ function verify(){
   container.innerHTML = "";
   container.append(savedLoading);
   savedLoading.style.opacity = 1;
+  api(user.user);
+  display.startTimer(async () => {
+    if (profile) {
+      display.clear();
+      init();
+    }
+  })
 }
 
 function init(){
