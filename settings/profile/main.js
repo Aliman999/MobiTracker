@@ -60,9 +60,9 @@ function init(){
 
     verifyBtn.onclick = function(){
       dContainer.classList.remove("hidden");
-      setTimeout(() => {
+      setTimeout(() => {  
         dContainer.style.opacity = "1";
-      }, 250);
+      }, 100);
     }
     faded.verify.appendChild(verifyBtn);
     faded.verify.appendChild(dContainer);
