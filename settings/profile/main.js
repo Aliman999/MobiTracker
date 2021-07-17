@@ -217,7 +217,6 @@ function init(){
     }else{
       boldSpan.innerText = profile.affiliation[x-1].name;
     }
-    boldSpan.className = "rBold";
     subP = document.createElement("span");
     subP.className = "subP";
     if(x == 0){
