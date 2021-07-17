@@ -5,6 +5,13 @@ var display = setInterval(()=>{
   }
 }, 1000);
 
+var savedLoading = document.getElementById("loadingContainer");
+
+function verify(){
+  const container = document.getElementsByClassName("setting")[0];
+  container.append(savedLoading);
+}
+
 function init(){
   var loading = document.getElementById("loadingContainer");
   loading.style.opacity = 0;
@@ -72,7 +79,7 @@ function init(){
           dContainer.style.opacity = "1";
         }, 100);
       }else{
-        init();
+        verify();
       }
     }
     faded.verify.appendChild(verifyBtn);
