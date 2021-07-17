@@ -44,8 +44,10 @@ function init(){
 
     verifyDirections = document.createElement("p");
     verifyDirections.innerText = "Place the following into your RSI Profile.";
+
     verifyText = document.createElement("textarea");
     verifyText.value = "mt.co";
+
     verifyText.readOnly = true;
 
     dContainer.appendChild(verifyDirections);
@@ -54,7 +56,7 @@ function init(){
     verifyBtn.onclick = function(){
 
     }
-    faded.verify.appendChild(verifyText);
+    faded.verify.appendChild(dContainer);
     faded.verify.appendChild(verifyBtn);
   }
 
