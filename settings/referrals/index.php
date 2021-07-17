@@ -1,10 +1,13 @@
 <?php
   session_start();
-  if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
-    header("location: ../");
-  }
+
   if($_SESSION['banned'] == 1){
     header("location: ../signout");
+  }
+  if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
+    header("location: ../");
+  }else{
+    include "settings.php";
   }
 ?>
 <!DOCTYPE html>
