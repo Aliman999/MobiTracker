@@ -31,6 +31,7 @@ function init(){
 
   if(!user.verified){
     const verifyBtn = document.createElement("a");
+    verifyBtn.innerText = "Verify";
     verifyBtn.className = "verifyBtn";
     faded.verify.appendChild(verifyBtn);
   }
