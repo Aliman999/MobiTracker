@@ -41,13 +41,15 @@ function init(){
     verifyBtn.style.alignItems = "center";
 
     dContainer = document.createElement("div");
+    dContainer.className = "hidden";
     dContainer.style.margin = "auto";
+    dContainer.style.opacity = "0";
 
     verifyDirections = document.createElement("p");
-    verifyDirections.style.paddingLeft = "0";
     verifyDirections.innerText = "Place the following into your RSI Profile.";
 
     verifyText = document.createElement("textarea");
+
     verifyText.value = "mt.co";
 
     verifyText.readOnly = true;
@@ -56,10 +58,10 @@ function init(){
     dContainer.appendChild(verifyText);
 
     verifyBtn.onclick = function(){
-
+      dContainer.classList.remove("hidden");
     }
-    faded.verify.appendChild(dContainer);
     faded.verify.appendChild(verifyBtn);
+    faded.verify.appendChild(dContainer);
     faded.verify.style.flexDirection = "column";
     faded.verify.style.justifyContent = "center";
   }
