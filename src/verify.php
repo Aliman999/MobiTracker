@@ -17,7 +17,7 @@ if (isset($headers)) {
     if(mysqli_query($link, $sql)){
         $_SESSION['verified'] = 1;
     }else{
-      mysql_error($link)
+      mysqli_error($link);
     }
   }
 } else {
