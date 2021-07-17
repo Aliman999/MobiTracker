@@ -7,7 +7,7 @@ var display = {
   },
   startTimer:function(...func){
     this.interval = setInterval(() => {
-      func();
+      func;
     }, this.timer);
   },
   interval:null,
