@@ -74,8 +74,7 @@ function init(){
     }
     faded.verify.appendChild(verifyBtn);
     faded.verify.appendChild(dContainer);
-    faded.verify.style.flexDirection = "column";
-    faded.verify.style.justifyContent = "center";
+    faded.verify.style.display = "block";
   }
 
   //Avatar
