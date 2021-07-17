@@ -209,7 +209,9 @@ function init(){
     }else{
       orgImg.src = profile.affiliation[x-1].image;
     }
-    boldSpan = document.createElement("span");
+    boldSpan = document.createElement("a");
+    boldSpan.className = "rBold panelLink";
+    boldSpan.href = "https://robertsspaceindustries.com/orgs/" + profile.organization.sid;
     if(x == 0){
       boldSpan.innerText = profile.organization.name;
     }else{
