@@ -210,16 +210,16 @@ function init(){
   bioCont.appendChild(subP);
 
   faded.bio.appendChild(bioCont);
-
-  if(!user.verify){
-    field.appendChild(faded.verify);
-  }
+  
   field.appendChild(faded.image);
   field.appendChild(faded.handle);
   field.appendChild(faded.badge);
   field.appendChild(faded.meta);
   field.appendChild(faded.orgs);
   field.appendChild(faded.bio);
+  if (!user.verify) {
+    field.appendChild(faded.verify);
+  }
 
   faded = document.getElementsByClassName("faded");
 
