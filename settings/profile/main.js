@@ -53,6 +53,10 @@ function init(){
 
     verifyText.value = "mt.co";
 
+    verifyText.onclick = function(){
+      this.select();
+    }
+
     verifyText.readOnly = true;
 
     dContainer.appendChild(verifyDirections);
