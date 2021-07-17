@@ -144,6 +144,7 @@ function showUser(){
   var nameContainer = document.createElement("div");
   nameContainer.className = "loginNameContainer";
   if(user.verified){
+    console.log(user.verified);
     var verifiedImg = document.createElement("img");
     verifiedImg.src = "https://mobitracker.co/src/verified.png";
     verifiedImg.className = "verified";
