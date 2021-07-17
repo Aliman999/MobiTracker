@@ -44,6 +44,7 @@ function init(){
     dContainer.className = "hidden";
     dContainer.style.margin = "auto";
     dContainer.style.opacity = "0";
+    dContainer.style.transition = ".25s ease-in-out";
 
     verifyDirections = document.createElement("p");
     verifyDirections.innerText = "Place the following into your RSI Profile.";
