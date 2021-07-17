@@ -63,7 +63,7 @@ function init(){
     dContainer.appendChild(verifyText);
 
     verifyBtn.onclick = function(){
-      if(dContainer.classList.includes("hidden")){
+      if(dContainer.classList.contains("hidden")){
         dContainer.classList.remove("hidden");
         setTimeout(() => {
           dContainer.style.opacity = "1";
