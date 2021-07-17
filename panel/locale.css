@@ -60,6 +60,10 @@ html {
   top: 0px;
   right: 0px;
 }
+.conContainer>p{
+  padding: 0 8px;
+  margin: auto;
+}
 
 @keyframes pulse {
 	0% {
