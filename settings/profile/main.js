@@ -7,7 +7,9 @@ var display = {
   },
   startTimer:function(...func){
     this.interval = setInterval(() => {
-      func;
+      func.forEach((item)=>{
+        item();
+      })
     }, this.timer);
   },
   interval:null,
