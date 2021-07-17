@@ -55,7 +55,7 @@ html {
 
 .conContainer{
   display: flex;
-  flex-direction: column;
+  position: absolute;
 }
 
 @keyframes pulse {
