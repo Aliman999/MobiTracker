@@ -31,6 +31,7 @@ function verify(){
   container.innerHTML = "";
   container.append(savedLoading);
   savedLoading.style.opacity = 1;
+  console.log(user);
   api(user.user);
   display.startTimer(async () => {
     if (profile) {
