@@ -122,7 +122,7 @@ function socket(){
       }
     } else {
       connection.children[0].innerText = "LIVE";
-      connection.children[1].className = "connected";
+      connection.children[1].className = "live";
       display(response);
       bool = false;
     }
