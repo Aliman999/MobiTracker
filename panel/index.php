@@ -61,7 +61,7 @@ if (empty($_SESSION['token'])) {
       </div>
 
       <div class="titleContainer">
-        <p class="webTitle">MobiTracker Systems Panel</p>
+        <p class="webTitle">Systems</p>
         <p class="webSlogan"></p>
       </div>
       <div class="container-header">
