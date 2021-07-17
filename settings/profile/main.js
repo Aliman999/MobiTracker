@@ -42,6 +42,8 @@ function init(){
 
     dContainer = document.createElement("div");
     dContainer.className = "hidden dContainer";
+    dContainer.style.display = "flex";
+    dContainer.style.flexDirection = "column";
     dContainer.style.margin = "auto";
     dContainer.style.opacity = "0";
     dContainer.style.transition = ".25s ease-in-out";
