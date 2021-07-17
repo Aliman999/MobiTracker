@@ -59,6 +59,7 @@ function init(){
     faded.verify.appendChild(dContainer);
     faded.verify.appendChild(verifyBtn);
     faded.verify.style.flexDirection = "column";
+    faded.verify.style.justifyContent = "center";
   }
 
   //Avatar
