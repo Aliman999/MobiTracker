@@ -1,26 +1,22 @@
-<?php
-session_start();
-
-if($_SESSION['banned'] == 1){
-  header("location: ../signout");
-}
-if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
-  header("location: ../");
-}else{
-  include "settings.php";
+<<?php
+  session_start();
+  if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
+    header("location: ../");
+  }
+  if($_SESSION['banned'] == 1){
+    header("location: ../signout");
   }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Settings - MobiTracker</title>
+    <title>MobiTracker</title>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css?v=2.0">
     <link rel="stylesheet" href="../../css/patreon.css">
     <link rel="stylesheet" href="../../css/nav.css">
     <link rel="stylesheet" href="../locale.css">
-    <link rel="stylesheet" href="locale.css">
     <link rel="apple-touch-icon" sizes="180x180" href="https://mobitracker.co/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://mobitracker.co/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://mobitracker.co/favicon-16x16.png">
@@ -44,13 +40,13 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
     ?>
   </head>
   <body>
-    <?php include "../gtemps/nav.php"; ?>
+    <?php include "../../gtemps/nav.php"; ?>
     <div id="canvas">
       <div class="headerContainer">
         <div id="login_status" class="login_menu">
-          <a><img id="mtLogo" src="../android-chrome-512x512.png" class="mtLogo"></a>
+          <a><img id="mtLogo" src="../../android-chrome-512x512.png" class="mtLogo"></a>
           <a id="mtTitle" class="mtTitle">MOBITRACKER</a>
-          <?php include "../gtemps/titleBar.php" ?>
+          <?php include "../../gtemps/titleBar.php" ?>
           <div id="navBtnContainer" class="navBtnContainer">
             <div class="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "loggedIn";}else{echo "loggedOut";} ?>"></div>
             <div class="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "loggedIn";}else{echo "loggedOut";} ?>"></div>
@@ -75,20 +71,13 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
         <div class="setting">
           <div>
             <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
-            <p><span class="rBold">Verification:</span><br><span class="subP <?php echo $row['verifyClass'] ?>"><?php echo $row['verify'] ?></span></p>
-            <?php
-            if($row['verify'] !== 'Verified'){
-              echo '<a class="rButton highlight rightSide">Verify</a>';
-            }
-            ?>
           </div>
           <div>
-            <p><span class="rBold">Reputation:</span><br><span class="subP"><?php echo $row['xp'] ?></span></p>
-            <p><span class="rBold">Career:</span><br><span class="subP"><?php echo join(", ", $row['career']) ?></span></p>
-            <p><span class="rBold">Faction:</span><br><span class="subP"><?php echo $row['faction'] ?></span></p>
+            <p><span class="rBold">Linked RSI:</span><br><a href="https://robertsspaceindustries.com/citizens/JamesDusky" class="subP loginName"><?php echo $_SESSION['username'] ?></a></p>
+            <a class="rButton highlight rightSide">Add RSI</a>
           </div>
           <div>
-            <p><span class="rBold">Email:</span><br><span class="subP"><?php echo $row['email'] ?></span></p>
+            <p><span class="rBold">Email:</span><br><span class="subP">N/A</span></p>
             <a class="rButton highlight rightSide">Change Email</a>
           </div>
           <div>
@@ -102,8 +91,8 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
         </div>
       </div>
     </div>
-    <?php include "../gtemps/footer.php"; ?>
-    <script type="text/javascript" src="../js/socket.js"></script>
-    <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js";}else{echo "../js/nSession.js";} ?>" async></script>
+    <?php include "../../gtemps/footer.php"; ?>
+    <script type="text/javascript" src="../../js/socket.js"></script>
+    <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../../js/nav.js";}else{echo "../../js/nSession.js";} ?>" async></script>
   </body>
 </html>
