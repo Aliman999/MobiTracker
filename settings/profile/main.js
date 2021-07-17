@@ -58,6 +58,7 @@ function init(){
     }
     faded.verify.appendChild(dContainer);
     faded.verify.appendChild(verifyBtn);
+    faded.verify.style.flexDirection = "column";
   }
 
   //Avatar
