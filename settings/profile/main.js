@@ -16,7 +16,12 @@ var display = {
   timer: 1000
 }
 
-display.startTimer(init);
+display.startTimer(()=>{
+  if(profile){
+    this.clear();
+    init();
+  }
+});
 
 var savedLoading = document.getElementById("loadingContainer");
 
