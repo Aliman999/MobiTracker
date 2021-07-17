@@ -256,12 +256,13 @@ function init(){
     }
     boldSpan = document.createElement("a");
     boldSpan.className = "rBold panelLink";
-    boldSpan.href = "https://robertsspaceindustries.com/orgs/" + profile.organization.sid;
     boldSpan.target = "_blank";
     if(x == 0){
       boldSpan.innerText = profile.organization.name;
+      boldSpan.href = "https://robertsspaceindustries.com/orgs/" + profile.organization.sid;
     }else{
-      boldSpan.innerText = profile.affiliation[x-1].name;
+      boldSpan.innerText = profile.affiliation[x - 1].name;
+      boldSpan.href = "https://robertsspaceindustries.com/orgs/" + profile.affiliation[x - 1].sid;
     }
     subP = document.createElement("span");
     subP.className = "subP";
