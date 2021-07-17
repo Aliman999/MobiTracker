@@ -62,7 +62,6 @@ function init(){
   faded.orgs.className = "faded";
   faded.bio.className = "faded divLeft";
 
-  console.log(user);
   if(!user.verified){
     const verifyImg = document.createElement("img");
     verifyImg.src = "https://mobitracker.co/beta/src/verified.png";
