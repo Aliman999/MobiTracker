@@ -1,29 +1,25 @@
 <?php
-session_start();
+  session_start();
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
-  header("location: ../");
-}else{
-  $_SESSION['activeSetting'] = basename($_SERVER['REQUEST_URI']);
-  include "../settings.php";
-}
-
+  if($_SESSION['banned'] == 1){
+    header("location: ../signout");
+  }
+  if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
+    header("location: ../");
+  }else{
+    include "../settings.php";
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Settings - MobiTracker</title>
+    <title>MobiTracker</title>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css?v=2.0">
     <link rel="stylesheet" href="../../css/patreon.css">
     <link rel="stylesheet" href="../../css/nav.css">
     <link rel="stylesheet" href="../locale.css">
-    <link rel="stylesheet" href="locale.css">
     <link rel="apple-touch-icon" sizes="180x180" href="https://mobitracker.co/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://mobitracker.co/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://mobitracker.co/favicon-16x16.png">
@@ -39,7 +35,8 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
     <meta name="theme-color" content="#253139">
     <?php
     echo "<meta name='token' content=".$_SESSION['token'].">";
-
+    ?>
+    <?php
     if($_SESSION["loggedin"]){
       echo "<meta name='jwt' content=".$_SESSION['jwt'].">";
     }
@@ -76,23 +73,36 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
         <hr>
         <div class="setting">
           <div>
+            <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
+            <p><span class="rBold">Verification:</span><br><span class="subP <?php echo $row['verifyClass'] ?>"><?php echo $row['verify'] ?></span></p>
+            <?php
+            if($row['verify'] !== 'Verified'){
+              echo '<a class="rButton highlight rightSide">Verify</a>';
+            }
+            ?>
+          </div>
+          <div>
+            <p><span class="rBold">Reputation:</span><br><span class="subP"><?php echo $row['xp'] ?></span></p>
+            <p><span class="rBold">Career:</span><br><span class="subP"><?php echo join(", ", $row['career']) ?></span></p>
+            <p><span class="rBold">Faction:</span><br><span class="subP"><?php echo $row['faction'] ?></span></p>
+          </div>
+          <div>
+            <p><span class="rBold">Email:</span><br><span class="subP"><?php echo $row['email'] ?></span></p>
+            <a class="rButton highlight rightSide">Change Email</a>
+          </div>
+          <div>
             <p><span class="rBold">Password:</span><br><span class="subP">●●●●●●●●●●●●</span></p>
-            <a class="rButton highlight rightSide" id="changeBtn">Change Password</a>
+            <a class="rButton highlight rightSide">Change Password</a>
           </div>
-          <div class="hidden" id="passInput">
-            <div class="inputContainer padded" id="iContainer">
-              <input type="text" class="userInput" autofocus="" autocomplete="email" value="" placeholder="Enter your Email">
-            </div>
-          </div>
-          <div class="hidden" id="status">
-            <p class="subP"></p>
+          <div>
+            <p><span class="rBold">Discord:</span><br><span class="subP highlight-green">LINKED</span></p>
+            <a class="rButton highlight-red rightSide">Unlink</a>
           </div>
         </div>
       </div>
     </div>
     <?php include "../../gtemps/footer.php"; ?>
     <script type="text/javascript" src="../../js/socket.js"></script>
-    <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../../js/nav.js";}else{echo "../../js/nSession.js";} ?>" async></script>
   </body>
 </html>
