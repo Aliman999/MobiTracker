@@ -36,6 +36,7 @@ function requestUser(){
   query.send();
   query.onload = function(){
     user = query.response;
+    console.log(user);
     showUser();
   }
 }
