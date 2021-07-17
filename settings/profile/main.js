@@ -18,7 +18,7 @@ var display = {
 
 display.startTimer(()=>{
   if(profile){
-    this.clear();
+    display.clear();
     init();
   }
 });
