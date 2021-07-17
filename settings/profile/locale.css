@@ -31,11 +31,11 @@
   font-size: 24px;
   color: #C4D7E6;
   margin: 16px 10px;
-  box-shadow: 0;
+  box-shadow: none;
 }
 
 .faded>.rButton:hover{
-  box-shadow: 0;
+  box-shadow: none;
 }
 
 .rButton>img{
