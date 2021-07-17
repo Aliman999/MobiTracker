@@ -97,7 +97,7 @@ function display(response){
 }
 
 function socket(){
-  var connection = document.getElementsByClassName("conConnect")[0];
+  var connection = document.getElementsByClassName("conContainer")[0];
   webSocket = new WebSocket("wss://ws.mobitracker.co:2599");
   webSocket.onopen = function(){
     connection.childNodes[0].innerText = "CONNECTING";
