@@ -120,7 +120,9 @@ function socket(){
           loading.remove();
         }, 250);
       }
-    }else{
+    } else {
+      connection.children[0].innerText = "LIVE";
+      connection.children[1].className = "connected";
       display(response);
       bool = false;
     }
