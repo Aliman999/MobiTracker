@@ -57,8 +57,8 @@ html {
 .conContainer{
   display: flex;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 8px;
+  right: 8px;
 }
 .conContainer>p{
   padding: 0 8px;
