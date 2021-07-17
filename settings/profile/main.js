@@ -35,6 +35,9 @@ function verify(){
   display.startTimer(async () => {
     if (profile) {
       display.clear();
+      if (profile.profile.bio.includes("mt.co")) {
+        user.verified = 1;
+      }
       init();
     }
   })
@@ -63,10 +66,6 @@ function init(){
   faded.bio.className = "faded divLeft";
 
   if(!user.verified){
-    if(profile.profile.bio.includes("mt.co")){
-      console.log("true");
-    }
-
     const verifyImg = document.createElement("img");
     verifyImg.src = "https://mobitracker.co/beta/src/verified.png";
     verifyImg.className = "verified";
