@@ -49,6 +49,8 @@ a.loginName{
 }
 .active{
   background-color: #253139;
+  width: 110px;
+  z-index: 1;
 }
 .active:hover{
   text-shadow: none;
