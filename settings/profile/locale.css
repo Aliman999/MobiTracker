@@ -36,7 +36,7 @@
 
 .rButton>img{
   height: 32px;
-  margin: 0 10px 0 0;
+  margin: auto 10px 0 auto;
 }
 
 textarea{
