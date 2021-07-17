@@ -36,8 +36,9 @@ function init(){
     const verifyBtn = document.createElement("a");
     verifyBtn.appendChild(verifyImg);
     verifyBtn.innerHTML += "Verify";
-    verifyBtn.className = "verify_btn";
+    verifyBtn.className = "rButton";
     verifyBtn.style.display = "flex";
+    verifyBtn.style.alignItems = "center";
     faded.verify.appendChild(verifyBtn);
   }
 
