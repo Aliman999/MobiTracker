@@ -1,10 +1,3 @@
-var display = setInterval(()=>{
-  if(profile){
-    clearInterval(display);
-    init();
-  }
-}, 1000);
-
 var display = {
   setTimer:function(interval){
     this.timer = interval;
@@ -17,11 +10,11 @@ var display = {
       func();
     }, this.timer);
   },
-  timer:1000,
-  interval:setInterval(() => {
-    
-  }, this.timer),
+  interval:null,
+  timer: 1000
 }
+
+display.startTimer(init);
 
 var savedLoading = document.getElementById("loadingContainer");
 
