@@ -31,6 +31,7 @@ html {
   max-width: 784px;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  position: relative;
 }
 
 #loadingContainer{
@@ -56,6 +57,8 @@ html {
 .conContainer{
   display: flex;
   position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 @keyframes pulse {
