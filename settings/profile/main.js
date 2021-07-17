@@ -32,6 +32,7 @@ function init(){
   if(!user.verified){
     const verifyImg = document.createElement("img");
     verifyImg.src = "https://mobitracker.co/beta/src/verified.png";
+    verifyImg.className = "verified";
     const verifyBtn = document.createElement("a");
     verifyBtn.appendChild(verifyImg);
     verifyBtn.innerHTML += "Verify";
