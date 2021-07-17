@@ -37,6 +37,11 @@ function verify(){
       display.clear();
       if (profile.profile.bio.includes("mt.co")) {
         user.verified = 1;
+        var userContainer = document.getElementsByClassName("userContainer")[0];
+        var verified = document.createElement("img");
+        verified.className = "verified";
+        verified.src = "https://mobitracker.co/src/verified.png";
+        userContainer.appendChild(verified);
 
         query.open("GET", "https://mobitracker.co/beta/src/verify.php");
         query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
