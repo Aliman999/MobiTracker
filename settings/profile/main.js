@@ -222,7 +222,7 @@ function init(){
     if(x == 0){
       subP.innerText = profile.organization.rank + " [" + profile.organization.stars + "]";
     }else{
-      subP.innerText = profile.affiliation[x - 1].rank + " [" + profile.organization.rank + "]";
+      subP.innerText = profile.affiliation[x - 1].rank + " [" + profile.affiliation[x - 1].stars + "]";
     }
 
     orgCont.appendChild(boldSpan);
