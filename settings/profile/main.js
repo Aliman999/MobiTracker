@@ -11,12 +11,13 @@ function verify(){
   const container = document.getElementsByClassName("setting")[0];
   container.innerHTML = "";
   container.append(savedLoading);
+  savedLoading.style.opacity = 1;
   setTimeout(() => {
     init(true);
   }, 1000);
 }
 
-function init(verifying){
+function init(){
   var loading = document.getElementById("loadingContainer");
   loading.style.opacity = 0;
   loading.remove();
