@@ -41,7 +41,7 @@ function verify(){
         var verified = document.createElement("img");
         verified.className = "verified";
         verified.src = "https://mobitracker.co/src/verified.png";
-        userContainer.appendChild(verified);
+        userContainer.insertBefore(verified, list.userContainer[0]);
 
         query.open("GET", "https://mobitracker.co/beta/src/verify.php");
         query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
