@@ -108,14 +108,14 @@ function socket(){
   webSocket.onmessage = function(event){
     var response = JSON.parse(event.data);
     if(response.type == "authentication"){
-      console.log(response.message);
-      var loading = document.getElementById("loadingContainer");
-      loading.style.opacity = 0;
-      setTimeout(() => {
-        loading.remove();
-      }, 250);
+      var loading;
+      if (loading = document.getElementById("loadingContainer")){
+        loading.style.opacity = 0;
+        setTimeout(() => {
+          loading.remove();
+        }, 250);
+      }
     }else{
-      console.log(response);
       display(response);
       bool = false;
     }

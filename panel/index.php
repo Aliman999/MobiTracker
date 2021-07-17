@@ -78,6 +78,9 @@ if (empty($_SESSION['token'])) {
             <p><span class="rBold">Loading</span></p><img src="../../src/loading.png" class="loading">
           </div>
           <div>
+            <p>LIVE</p><div class="blob"></div>
+          </div>
+          <div>
             <div class="players label-center"></div>
             <p>Player Scanner</p>
           </div>
