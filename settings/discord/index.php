@@ -70,17 +70,11 @@
         <hr>
         <div class="setting">
           <div>
-            <?php
-              if($row['discUser']){
-                echo '<p><span class="rBold">Discord:</span><br><span class="subP">'.$row["discUser"].'</span></p>';
-              }else{
-                echo '';
-              }
-            ?>
+            <p><span class="rBold">Discord:</span><br><span class="subP<?php if($row['discUser']){echo 'highlight-green';}else{echo 'highlight-red';}  ?>"><?php if($row['discUser']){echo 'LINKED';}else{echo 'NOT LINKED';} ?></span></p>
           </div>
           <div>
             <?php
-              if($row['discUser']){
+              if($row["dusername"]){
                 echo '<p><span class="rBold">Linked RSI:</span><br><span class="subP">';
                 for($x = 0; $x<count($row["dusername"]); $x++){
                   echo $row["dcID"][$x]." - ".$row["dusername"][$x];
