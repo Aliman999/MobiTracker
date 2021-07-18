@@ -67,7 +67,7 @@ if(isset($headers)){
     array_push($row['career'], "Trader");
   }
   //echo json_encode($row);
-  var_dump(json_encode($row));
+  var_dump($row);
 }else{
    exit(json_encode(['error' => 'No token.']));
 }
