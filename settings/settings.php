@@ -50,15 +50,17 @@ if(isset($headers)){
   }
   $row['dusername'] = json_decode($row['dusername']);
   $row['dcID'] = json_decode($row['dcID']);
-  if(count($row['dcID']) > 0){
-    $x = 0;
-    foreach($row['dcID'] as $cid){
-      if($cid === ""){
-        $row['dcID'][$x] = "N/A";
-      }else{
-        $row['dcID'][$x] = '#'.$cid;
+  if($row['dcID']){
+    if(count($row['dcID']) > 0){
+      $x = 0;
+      foreach($row['dcID'] as $cid){
+        if($cid === ""){
+          $row['dcID'][$x] = "N/A";
+        }else{
+          $row['dcID'][$x] = '#'.$cid;
+        }
+        $x++;
       }
-      $x++;
     }
   }
   if(strpos($row['email'], "$2y$10$") !== false){
