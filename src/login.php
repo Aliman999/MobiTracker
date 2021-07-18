@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             }else{
                               $contractCD = $row['contractCD'];
                             }
-                            require_once "../src/whitelist.php";
+                            require_once "whitelist.php";
 
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
@@ -130,10 +130,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             if (empty($_SESSION['token'])) {
                               $_SESSION['token'] = bin2hex(random_bytes(32));
                             }
-
-                            if(strpos($staff, $_SESSION['username']) !== false){
-                              $_SESSION['privilage'] = "staff";
-                            }
+                            
                             if(in_array($_SESSION['username'], $staff)){
                               $_SESSION['privilage'] = true;
                             }else{
