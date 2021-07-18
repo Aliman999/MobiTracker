@@ -23,8 +23,7 @@ if(strpos($base, "?option") !== false){
   <div class="eleContainer">
     <?php
     if($_SESSION['privilage'] === true){
-      echo "<a href="; 
-      if($base != ""){echo "https://mobitracker.co/panel";};
+      echo "<a href='https://mobitracker.co/panel'"; 
       echo " class='navEle ";
       if($base == ""){echo "navActive";};
       echo "'><img src='https://mobitracker.co/beta/src/panel.png' class='menuIcon'/><p>Staff - Systems</p></a>";
