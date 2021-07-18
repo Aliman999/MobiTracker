@@ -15,7 +15,7 @@ if(strpos($base, "?option") !== false){
         if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
           echo "<div class='miniPlayer' id='miniPlayer'></div><div class='miniRep' id='miniRep'></div>";
           if($_SESSION['privilage'] === true){
-            echo "<p>Test</p>"
+            echo "<p>Test</p>";
           }
         }else{
           echo "<div class='mpLoginContainer' id='mpLoginContainer'></div>";
