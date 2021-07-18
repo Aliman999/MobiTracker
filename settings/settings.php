@@ -43,6 +43,7 @@ if(isset($headers)){
     $row['verify'] = 'Not Verified';
   }
   $row['dusername'] = json_decode($row['dusername']);
+  $row['dcID'] = json_decode($row['dcID']);
   if(strpos($row['email'], "$2y$10$") !== false){
     $row['email'] = "Encrypted";
   }
