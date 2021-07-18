@@ -44,6 +44,13 @@ if(isset($headers)){
   }
   $row['dusername'] = json_decode($row['dusername']);
   $row['dcID'] = json_decode($row['dcID']);
+  foreach($row['dcID'] as $cid){
+    if($cid === ""){
+      $cid = "N/A";
+    }else{
+      $cid = '#'.$cid;
+    }
+  }
   if(strpos($row['email'], "$2y$10$") !== false){
     $row['email'] = "Encrypted";
   }
