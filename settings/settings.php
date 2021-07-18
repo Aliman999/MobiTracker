@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 if(!$_SESSION['privilage']){
-  exit("This is not publicly accessible at this time.");
+  exit("503 Forbidden. This is not publicly accessible at this time.");
 }
 
 include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '/src/config.php');
