@@ -70,7 +70,7 @@
         <hr>
         <div class="setting">
           <div>
-            <p><span class="rBold">Discord:</span><br><span class="subP<?php if($row['discUser']){echo 'highlight-green';}else{echo 'highlight-red';}  ?>"><?php if($row['discUser']){echo 'LINKED';}else{echo 'NOT LINKED';} ?></span></p>
+            <p><span class="rBold">Discord:</span><br><span class="subP <?php if($row['discUser']){echo 'highlight-green';}else{echo 'highlight-red';}  ?>"><?php if($row['discUser']){echo 'LINKED';}else{echo 'NOT LINKED';} ?></span></p>
           </div>
           <div>
             <?php
