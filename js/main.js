@@ -66,6 +66,7 @@ getUser.onload = function() {
   //init Search
   if(node.value){
     showPlayer(search);
+    updateSearch(node.value);
   }else if(sessionUser){
     node.value = sessionUser;
     updateSearch(sessionUser);
