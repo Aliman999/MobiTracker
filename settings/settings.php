@@ -42,6 +42,7 @@ if(isset($headers)){
     $row['verifyClass'] = 'highlight-red';
     $row['verify'] = 'Not Verified';
   }
+  $row['dusername'] = json_decode($row['dusername']);
   if(strpos($row['email'], "$2y$10$") !== false){
     $row['email'] = "Encrypted";
   }
@@ -65,7 +66,8 @@ if(isset($headers)){
   if($row['trader'] == 1){
     array_push($row['career'], "Trader");
   }
-  echo json_encode($row);
+  //echo json_encode($row);
+  var_dump(json_encode($row));
 }else{
    exit(json_encode(['error' => 'No token.']));
 }
