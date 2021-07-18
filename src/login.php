@@ -134,6 +134,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             if(strpos($staff, $_SESSION['username']) !== false){
                               $_SESSION['privilage'] = "staff";
                             }
+                            if(in_array($_SESSION['username'], $staff)){
+                              $_SESSION['privilage'] = true;
+                            }else{
+                              $_SESSION['privilage'] = false;
+                            }
                             $orgs = json_decode($row['sid'], true);
                             $ranks = json_decode($row['orgRank'], true);
                             $x=0;
