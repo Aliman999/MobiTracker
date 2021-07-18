@@ -64,12 +64,8 @@ getUser.onload = function() {
     search = "";
   }
   //init Search
-  if(search){
-    if(search != "" && search != "undefined"){
-      showPlayer(search);
-    }else{
-      document.title = "MobiTracker";
-    }
+  if(node.value){
+    showPlayer(search);
   }else if(sessionUser){
     node.value = sessionUser;
     updateSearch(sessionUser);
