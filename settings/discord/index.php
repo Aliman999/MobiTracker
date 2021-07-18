@@ -70,6 +70,9 @@
         <hr>
         <div class="setting">
           <div>
+            <p><span class="rBold"><?php echo $_SESSION['discUser'] ?></span><br><span class="subP"></span></p>
+          </div>
+          <div>
             <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
             <p><span class="rBold">Verification:</span><br><span class="subP <?php echo $row['verifyClass'] ?>"><?php echo $row['verify'] ?></span></p>
             <?php

@@ -7,7 +7,7 @@ include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '
 
 $headers = $_SESSION['token'];
 if(isset($headers)){
-  $sql = "SELECT *, players.username username, players.cID cID FROM players LEFT JOIN discord ON discord.username LIKE CONCAT('%', '".$_SESSION['username']."', '%') WHERE players.username = '".$_SESSION['username']."';";
+  $sql = "SELECT *, players.username username, players.cID cID, discord.cID dcID, discord.username dusername  FROM players LEFT JOIN discord ON discord.username LIKE CONCAT('%', '".$_SESSION['username']."', '%') WHERE players.username = '".$_SESSION['username']."';";
   $result = mysqli_query($link, $sql);
   $row = mysqli_fetch_assoc($result);
   function xp($rep){
@@ -41,6 +41,9 @@ if(isset($headers)){
   }else{
     $row['verifyClass'] = 'highlight-red';
     $row['verify'] = 'Not Verified';
+  }
+  if($row['username']){
+
   }
   if(strpos($row['email'], "$2y$10$") !== false){
     $row['email'] = "Encrypted";
