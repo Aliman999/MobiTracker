@@ -70,7 +70,7 @@
         <hr>
         <div class="setting">
           <div>
-            <p><span class="rBold"><?php echo $_SESSION['discUser'] ?></span><br><span class="subP"><?php for($x = 0; $x<count($row['dusername']); $x++){echo $row['dcID'][$x].' - '.$row['dusername'][$x];} ?></span></p>
+            <p><span class="rBold"><?php echo $row['discUser'] ?></span><br><span class="subP"><?php for($x = 0; $x<count($row['dusername']); $x++){echo $row['dcID'][$x].' - '.$row['dusername'][$x];} ?></span></p>
           </div>
           <div>
             <p><span class="rBold">Username:</span><br><span class="subP"><?php echo $_SESSION['username'] ?></span></p>
