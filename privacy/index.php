@@ -35,6 +35,7 @@ if (empty($_SESSION['token'])) {
     if($_SESSION["loggedin"]){
       echo "<meta name='jwt' content=".$_SESSION['jwt'].">";
     }
+    echo "<meta name='tcpp' content='true'>";
     ?>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177343701-1"></script>
     <script type="text/javascript" src="../js/ga.js"></script>
