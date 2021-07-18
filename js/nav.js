@@ -122,7 +122,7 @@ function tcpp(){
   clickCont.appendChild(agree);
   clickCont.appendChild(disagree);
 
-  disclaimer.innerHTML = "<p>We've recently changed our Terms and Conditions and Privacy Policies after your account was created. You're required to agree to the Terms and Conditions and Privacy Policy to allow MobiTracker to provide the service it does. Thank you. -James</p><br><p style='text-align:center;'><a href='https://mobitracker.co/terms' class='highlight' style='margin:8px, 0;'>Terms and Conditions</a><br><a href='https://mobitracker.co/privacy' class='highlight' style='margin:8px, 0;'>Privacy Policy</a></p>";
+  disclaimer.innerHTML = "<p>We've recently changed our Terms and Conditions and Privacy Policies after your account was created. You're required to agree to the Terms and Conditions and Privacy Policy to allow MobiTracker to provide the service it does. Thank you. -James</p><br><p style='text-align:center;'><a href='https://mobitracker.co/terms' class='highlight' style='margin:8px 0;'>Terms and Conditions</a><br><a href='https://mobitracker.co/privacy' class='highlight' style='margin:8px 0;'>Privacy Policy</a></p>";
   disclaimer.appendChild(clickCont);
 
   container.appendChild(disclaimer);
