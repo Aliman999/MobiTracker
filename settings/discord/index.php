@@ -69,8 +69,13 @@
         </div>
         <hr>
         <div class="setting">
+          <?php
+          if($row['discUser']){
+            echo '<p><span class="rBold">Discord:</span><br><span class="subP">'.$row["discUser"].'</span></p>';
+          }
+          ?>
           <div>
-            <p><span class="rBold">Discord:</span><br><span class="subP"><?php echo $row['discUser'] ?></span></p>
+            
           </div>
           <div>
             <p><span class="rBold">Linked RSI:</span><br><span class="subP"><?php for($x = 0; $x<count($row['dusername']); $x++){echo $row['dcID'][$x].' - '.$row['dusername'][$x];} ?></span></p>
