@@ -7,6 +7,7 @@ include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '
 
 $headers = $_SESSION['token'];
 if(isset($headers)){
+  $debug = "";
   if(!isset($_GET['debug'] )){
     $debug = $_SESSION['username'];
   }else{
