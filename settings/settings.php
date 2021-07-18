@@ -44,7 +44,7 @@ if(isset($headers)){
   }
   $row['dusername'] = json_decode($row['dusername']);
   $row['dcID'] = json_decode($row['dcID']);
-  if(count($row['dcID'] > 0)){
+  if(count($row['dcID']) > 0){
     $x = 0;
     foreach($row['dcID'] as $cid){
       if($cid === ""){
