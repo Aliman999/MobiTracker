@@ -19,6 +19,11 @@ if(strpos($base, "?option") !== false){
     </div>
   </div>
   <div class="eleContainer">
+    <?php
+    if($_SESSION['privilage'] === true){
+      echo "<p>STAFF MENU</p>";
+    }
+    ?>
     <a href="<?php if($base != ""){echo "https://mobitracker.co/";} ?>" class="navEle <?php if($base == ""){echo "navActive";} ?>"><img src="https://mobitracker.co/src/repHub.png" class="menuIcon"/><p>Reputation Hub</p></a>
     <!--<a href="<?php if($base != "contracts"){echo "";}?>" class="navEle <?php if($base == ""){echo "navActive";} ?>"><img src="https://mobitracker.co/src/contracts.png" class="menuIcon"/><p>Information Hub</p></a>-->
     <a href="<?php if($base != "contracts"){echo "https://mobitracker.co/contracts";}?>" class="navEle <?php if($base == "contracts"){echo "navActive";} ?>"><img src="https://mobitracker.co/src/contracts.png" class="menuIcon"/><p>Contracts</p></a>
