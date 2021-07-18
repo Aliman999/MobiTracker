@@ -64,32 +64,18 @@ getUser.onload = function() {
     search = "";
   }
   //init Search
-  if(node.value){
-    showPlayer(search);
+  if (node.value) {
     updateSearch(node.value);
-  }else if(sessionUser){
+    showPlayer(search);
+  }else if (sessionUser) {
     node.value = sessionUser;
     updateSearch(sessionUser);
     showPlayer(sessionUser);
   }
   //init Search
 }
-
 //USER
-window.onpopstate = function(e){
-    if(e.state.search != search && e.state.search != undefined && e.state.search != ""){
-      search = e.state.search;
-      if(search != ""){
-        node.value = search;
-      }else{
-        document.title = "MobiTracker";
-      }
-      mtco();
-    }else if(e.state.sC){
-      search = "";
-      searchCareer(e.state.sC);
-    }
-};
+
 //PUSH Search
 var pushSearch = new XMLHttpRequest();
 function updateSearch(sUser){
@@ -98,15 +84,6 @@ function updateSearch(sUser){
   pushSearch.send();
 }
 //PUSH Search
-
-var mtLogo = document.getElementById("mtLogo");
-mtLogo.onclick = function(){
-  mtco();
-}
-var mtTitle = document.getElementById("mtTitle");
-mtTitle.onclick = function(){
-  mtco();
-}
 
 var usr = document.getElementsByClassName("loginName")[0];
 usr.onclick = function(){clickUser(this.innerText)};
