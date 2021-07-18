@@ -74,7 +74,7 @@ if (empty($_SESSION['token'])) {
                 <tr>
                   <th>
                     <p class="eBold">Badge</p>
-                    <p>Most Valuable Poster</p>
+                    <p>Vice Admiral</p>
                   </th>
                   <th>
                     <p class="eBold">MobiTracker Vouchers</p>
