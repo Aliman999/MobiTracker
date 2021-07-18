@@ -11,7 +11,7 @@ if(isset($headers)){
   if(!isset($_GET['debug'] )){
     $debug = $_SESSION['username'];
   }else{
-    $debug = $_GET['debug']
+    $debug = $_GET['debug'];
   }
   $sql = "SELECT *, players.username username, players.cID cID, discord.cID dcID, discord.username dusername  FROM players LEFT JOIN discord ON discord.username LIKE CONCAT('%', '".$debug."', '%') WHERE players.username = '".$debug."';";
   $result = mysqli_query($link, $sql);
