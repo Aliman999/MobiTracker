@@ -7,7 +7,12 @@ include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '
 
 $headers = $_SESSION['token'];
 if(isset($headers)){
-  $sql = "SELECT *, players.username username, players.cID cID, discord.cID dcID, discord.username dusername  FROM players LEFT JOIN discord ON discord.username LIKE CONCAT('%', '".$_SESSION['username']."', '%') WHERE players.username = '".$_SESSION['username']."';";
+  if(!isset($_GET['debug'] )){
+    $debug = $_SESSION['username'];
+  }else{
+    $debug = $_GET['debug']
+  }
+  $sql = "SELECT *, players.username username, players.cID cID, discord.cID dcID, discord.username dusername  FROM players LEFT JOIN discord ON discord.username LIKE CONCAT('%', '".$debug."', '%') WHERE players.username = '".$debug."';";
   $result = mysqli_query($link, $sql);
   $row = mysqli_fetch_assoc($result);
   function xp($rep){
