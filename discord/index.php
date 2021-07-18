@@ -92,7 +92,7 @@ if (empty($_SESSION['token'])) {
                   </th>
                   <th>
                     <p class="eBold">Location</p>
-                    <p>New York, United States</p>
+                    <p>REDACTED</p>
                   </th>
                   <th>
                     <p class="eBold">Languages</p>
