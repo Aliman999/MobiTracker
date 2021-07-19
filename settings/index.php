@@ -4,15 +4,17 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+  include "settings.php";
+  /*
 if($_SESSION['banned'] == 1){
   header("location: ../signout");
 }
-  include "settings.php";
 if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
   //header("location: ../");
 }else{
   include "settings.php";
 }
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
