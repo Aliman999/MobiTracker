@@ -94,8 +94,14 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <a class="rButton highlight rightSide">Change Password</a>
           </div>
           <div>
-            <p><span class="rBold">Discord:</span><br><span class="subP highlight-green">LINKED</span></p>
-            <a class="rButton highlight-red rightSide">Unlink</a>
+            <p><span class="rBold">Discord:</span><br><span class="subP<?php if($row['discUser']){echo ' highlight-green';}else{echo ' highlight-red';}  ?>"><?php if($row['discUser']){echo 'LINKED';}else{echo 'NOT LINKED';} ?></span></p>
+            <?php
+            if($row['dusername']){
+              echo '<a class="rButton highlight-red rightSide unlink">Unlink</a>';
+            }else{
+              echo '<a class="rButton highlight-green rightSide link">Link</a>';
+            }
+            ?>
           </div>
         </div>
       </div>
