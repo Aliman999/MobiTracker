@@ -27,7 +27,7 @@ if(get('action') == 'login') {
   echo '<meta name="username" content="'.$_SESSION['username'].'">';
   echo '<meta name="id" content="'.$_SESSION['cID'].'">';
   echo '<script src="cookie.js"></script>';
-  //header('Location: https://discord.com/api/oauth2/authorize' . '?' . http_build_query($params));
+  header('Location: https://discord.com/api/oauth2/authorize' . '?' . http_build_query($params));
 }
 
 
