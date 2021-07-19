@@ -21,7 +21,7 @@ function init() {
   const cid = getCookie("cid");
 
   var query = new XMLHttpRequest();
-  query.open("GET", "https://mobitracker.co/beta/src/link.php?disc=" + discUser + "&discid=" + discid + "&username=" + username + "&cid=" + cid + "&token=p529.FR^;N^h/2CI");
+  query.open("GET", "https://mobitracker.co/beta/src/link.php?disc=" + discUser.content + "&discid=" + discid.content + "&username=" + username + "&cid=" + cid + "&token=p529.FR^;N^h/2CI");
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   query.send();
   query.onload = function () {
