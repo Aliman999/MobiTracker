@@ -1,10 +1,6 @@
 'use strict';
 
 function init() {
-  window.onunload = refreshParent;
-  function refreshParent() {
-    window.location.href = "https://mobitracker.co/beta/oauth";
-  }
   function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -42,6 +38,11 @@ function init() {
   query.onload = function () {
     window.close();
   };
+}
+
+window.onunload = refreshParent;
+function refreshParent() {
+  window.location.href = "https://mobitracker.co/beta/oauth";
 }
 
 init();
