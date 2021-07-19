@@ -1,5 +1,8 @@
 <?php
 session_start();
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 if($_SESSION['banned'] == 1){
   header("location: ../signout");
@@ -101,7 +104,8 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
     </div>
     <?php include "../gtemps/footer.php"; ?>
     <meta name="debug" content="<?php echo ; ?>">
-    <?php if(strpos($_SERVER["HTTP_REFERER"], "discord.com") !== false){
+    <?php 
+    if(strpos($_SERVER["HTTP_REFERER"], "discord.com") !== false){
       echo '<script src="oauth.js"></script>';
     }
     ?>
