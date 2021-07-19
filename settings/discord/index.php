@@ -7,9 +7,9 @@
   if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
     header("location: ../");
   }else{
-    include "../settings.php";
   }
   */
+    include "../settings.php";
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
