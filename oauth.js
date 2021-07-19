@@ -9,7 +9,7 @@ window.onload = () => {
       'grant_type': 'identify',
       'code':accessToken,
       'Access-Control-Allow-Headers'
-    },
+    }
   })
   .then(res => res.json())
   .then(json => console.log(json))
