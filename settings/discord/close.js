@@ -1,5 +1,6 @@
 function init() {
   const x = document.cookie;
+  console.log(x);
   /*
   var query = new XMLHttpRequest();
   query.open("GET", "https://mobitracker.co/beta/src/link.php");
