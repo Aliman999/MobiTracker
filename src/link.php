@@ -7,11 +7,11 @@ include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '
 
 $headers = "p529.FR^;N^h/2CI";
 if(isset($headers)){
-  var_dump($_POST);
-  if($_POST['token'] === $headers){
-    $cid = json_encode(array($_POST['cid']));
-    $username = json_encode(array($_POST['username']));
-    $sql = "INSERT INTO `discord` (`discUser`, `discID`, `cID`, `username`, `priority`) VALUES (`".$_POST['disc']."`, `".$_POST['discid']."`, `".$cid."`, `".$username."`, `7`)";
+  var_dump($_GET);
+  if($_GET['token'] === $headers){
+    $cid = json_encode(array($_GET['cid']));
+    $username = json_encode(array($_GET['username']));
+    $sql = "INSERT INTO `discord` (`discUser`, `discID`, `cID`, `username`, `priority`) VALUES (`".$_GET['disc']."`, `".$_GET['discid']."`, `".$cid."`, `".$username."`, `7`)";
     if(mysqli_query($link, $sql)){
       echo "Success";
     }else{
