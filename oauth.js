@@ -10,7 +10,7 @@ window.onload = () => {
     .then(result => result.json())
     .then(response => {
       const { username, discriminator } = response;
-      document.getElementById('info').innerText += ` ${username}#${discriminator}`;
+      console.log(`${username}#${discriminator}`);
     })
     .catch(console.error);
 };
