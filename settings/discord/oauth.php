@@ -43,13 +43,19 @@ if(get('code')) {
   ));
   $logout_token = $token->access_token;
   $_SESSION['access_token'] = $token->access_token;
+
+  $user = apiRequest($apiURLBase);
+
+  echo '<meta name="username" content="'.$user->username."#".$user->discriminator.'">';
+  echo '<meta name="discid" content="'.$user->id.'">';
+
   echo '<script src="close.js"></script>';
   //header('Location: ' . $_SERVER['PHP_SELF']);
 }
 
 if(session('access_token')) {
 
-  $user = apiRequest($apiURLBase);
+  
   echo '<meta name="" content="">';
   echo '<h3>Logged In</h3>';
   echo '<h4>Welcome, ' . $user->username . '</h4>';
