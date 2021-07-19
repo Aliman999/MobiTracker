@@ -7,7 +7,7 @@ window.onload = () => {
     'client_id': '751252617451143219',
     'client_secret': 'a7p2OQShjYQApq99f9zv2rjsz2_6Dg1Q',
     'grant_type': 'authorization_code',
-    'code': code,
+    'code': accessToken,
     'redirect_uri': 'https://mobitracker.co/beta/',
     'scope': 'identify'
   }
