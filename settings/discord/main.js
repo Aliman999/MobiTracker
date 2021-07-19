@@ -11,9 +11,6 @@ function auth(){
   let previousUrl = null;
 
   const openSignInWindow = (url, name) => {
-    // remove any existing event listeners
-    window.removeEventListener('message', receiveMessage);
-
     // window features
     const strWindowFeatures =
       'toolbar=no, menubar=no, width=600, height=700, top=100, left=100';
