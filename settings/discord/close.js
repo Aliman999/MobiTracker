@@ -17,8 +17,12 @@ function init() {
     return "";
   }
 
-  const discUser = document.getElementsByName("dusername")[0];
-  const discid = document.getElementsByName("discid")[0];
+  var discUser = document.getElementsByName("dusername")[0];
+  discUser = discUser.content;
+
+  var discid = document.getElementsByName("discid")[0];
+  discid = discid.content;
+
   const username = getCookie("username");
   const cid = getCookie("cid");
 
