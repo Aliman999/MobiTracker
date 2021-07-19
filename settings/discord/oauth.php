@@ -58,7 +58,7 @@ if(session('access_token')) {
 
 } else {
   echo '<h3>Not logged in</h3>';
-  echo '<p><a href="?action=login">Log In</a></p>';
+  echo '<p><a href="?action=login" target="_blank">Log In</a></p>';
 }
 
 
