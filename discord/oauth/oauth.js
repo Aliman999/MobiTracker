@@ -17,5 +17,5 @@ window.onload = () => {
     document.getElementById('info').innerText += ` ${username}#${discriminator}`;
   })
   .catch(console.error);
-  window.location.href = "https://mobitracker.co/settings/discord";
+  //window.location.href = "https://mobitracker.co/settings/discord";
 };
