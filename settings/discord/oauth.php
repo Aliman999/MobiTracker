@@ -16,7 +16,6 @@ $apiURLBase = 'https://discord.com/api/users/@me';
 
 // Start the login process by sending the user to Discord's authorization page
 if(get('action') == 'login') {
-
   $params = array(
     'client_id' => OAUTH2_CLIENT_ID,
     'redirect_uri' => 'https://mobitracker.co/beta/settings/discord/oauth.php',
@@ -25,13 +24,13 @@ if(get('action') == 'login') {
   );
 
   // Redirect the user to Discord's authorization page
+  echo '<script src="cookie.js"></script>';
   header('Location: https://discord.com/api/oauth2/authorize' . '?' . http_build_query($params));
 }
 
 
 // When Discord redirects the user back here, there will be a "code" and "state" parameter in the query string
 if(get('code')) {
-  var_dump($_SESSION);
   // Exchange the auth code for a token
   $token = apiRequest($tokenURL, array(
     "grant_type" => "authorization_code",
