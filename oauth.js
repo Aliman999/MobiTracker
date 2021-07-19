@@ -16,6 +16,6 @@ window.onload = () => {
     'Content-Type': 'application/x-www-form-urlencoded',
     'payload': data
   }
-  fetch("UserUrl", header)
+  fetch(UserUrl, header)
   .then(res => console.log(res))
 };
