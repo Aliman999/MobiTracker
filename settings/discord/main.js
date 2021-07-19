@@ -46,6 +46,13 @@ function auth(){
     previousUrl = url;
   };
 
+  var timer = setInterval(function () {
+    if (windowObjectReference.closed) {
+      clearInterval(timer);
+      window.location.href = "https://mobitracker.co/beta/oauth";
+    }
+  }, 1000);
+
   openSignInWindow("https://mobitracker.co/beta/settings/discord/oauth.php?action=login", "Debug");
 }
 

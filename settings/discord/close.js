@@ -40,9 +40,4 @@ function init() {
   };
 }
 
-window.onunload = refreshParent;
-function refreshParent() {
-  window.location.href = "https://mobitracker.co/beta/oauth";
-}
-
 init();
