@@ -1,22 +1,16 @@
 window.onload = () => {
-  const fragment = new URLSearchParams(window.location.search);
-  const code = fragment.get('code');
+  const fragment = new URLSearchParams(window.location.hash.slice(1));
+  const [accessToken, tokenType] = [fragment.get('access_token'), ];
 
-  if (!code) {
+  if (!accessToken) {
     return document.getElementById('login').style.display = 'block';
   }
 
-  fetch('https://discord.com/api/users/@me', {
-    headers: {
-      authorization: `${code}`,
-    },
-  })
-  .then(result => result.json())
-  .then(response => {
-    const { username, discriminator } = response;
-    document.getElementById('info').innerText += ` ${username}#${discriminator}`;
-  })
-  .catch(console.error);
-  
-  //window.location.href = "https://mobitracker.co/settings/discord";
+
+  const genAuth = new XMLHttpRequest();
+  genAuth.open("POST", "https://discordapp.com/api/oauth2/token?grant_type=identify&code="+code.accessToken);
+  genAuth.send();
+  genAuth.onload = function (result) {
+    console.log(result);
+  }
 };
