@@ -48,5 +48,8 @@ function auth(){
 
   openSignInWindow("https://discord.com/api/oauth2/authorize?client_id=751252617451143219&redirect_uri=https%3A%2F%2Fmobitracker.co%2Fbeta%2Fsettings%2Fdiscord&response_type=code&scope=identify", "Debug");
 }
+function close() {
+  window.close();
+}
 
 auth();
