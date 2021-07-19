@@ -16,9 +16,6 @@ if (empty($_SESSION['token'])) {
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="locale.css">
 
-    <link rel="stylesheet" href="mk_charts.css" />
-    <link rel="stylesheet" href="loading-bar.css" />
-
     <link rel="apple-touch-icon" sizes="180x180" href="https://mobitracker.co/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://mobitracker.co/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://mobitracker.co/favicon-16x16.png">
