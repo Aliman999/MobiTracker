@@ -33,7 +33,6 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#253139">
-    <meta name="debug" content="<?php echo $_SERVER["HTTP_REFERER"]; ?>">
     <?php
     echo "<meta name='token' content=".$_SESSION['token'].">";
     ?>
@@ -101,7 +100,11 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
       </div>
     </div>
     <?php include "../gtemps/footer.php"; ?>
-    <script src="oauth.js"></script>
+    <meta name="debug" content="<?php echo ; ?>">
+    <?php if(strpos($_SERVER["HTTP_REFERER"], "discord.com") !== false){
+      echo '<script src="oauth.js"></script>';
+    }
+    ?>
     <script type="text/javascript" src="../js/socket.js"></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js";}else{echo "../js/nSession.js";} ?>" async></script>
   </body>
