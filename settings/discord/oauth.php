@@ -103,3 +103,4 @@ function session($key, $default=NULL) {
   return array_key_exists($key, $_SESSION) ? $_SESSION[$key] : $default;
 }
 ?>
+<script src="main.js" type="text/javascript"></script>
