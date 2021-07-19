@@ -79,7 +79,9 @@
           <div>
             <p><span class="rBold">Discord:</span><br><span class="subP<?php if($row['discUser']){echo ' highlight-green';}else{echo ' highlight-red';}  ?>"><?php if($row['discUser']){echo 'LINKED';}else{echo 'NOT LINKED';} ?></span></p>
             <?php
-            if(!$row['dusername']){
+            if($row['dusername']){
+              echo '<a class="rButton highlight-red rightSide">Unlink</a>';
+            }else{
               echo '<a class="rButton highlight-green rightSide">Link</a>';
             }
             ?>
