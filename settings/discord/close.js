@@ -15,21 +15,19 @@ function init() {
     return "";
   }
 
+  const discUser = document.getElementsByName("dusername")[0];
+  const discid = document.getElementsByName("discid")[0];
   const username = getCookie("username");
   const cid = getCookie("cid");
 
-  
-
-  /*
   var query = new XMLHttpRequest();
-  query.open("GET", "https://mobitracker.co/beta/src/link.php");
+  query.open("GET", "https://mobitracker.co/beta/src/link.php?disc="+discUser+"&discid="+discid+"&username="+username+"&cid"+cid);
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   query.setRequestHeader(tokenHeader.name, tokenHeader.content);
   query.send();
   query.onload = function () {
     window.close();
   };
-  */
 }
 
 init();
