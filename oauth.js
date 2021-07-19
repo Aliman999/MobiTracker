@@ -4,6 +4,7 @@ window.onload = () => {
 
   fetch('https://discord.com/api/users/@me', {
     headers: {
+      method: 'post',
       authorization: `${tokenType} ${accessToken}`,
     },
   })
