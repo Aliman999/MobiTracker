@@ -26,8 +26,10 @@ function init() {
   const username = getCookie("username");
   const cid = getCookie("cid");
 
+  const endpoint = "https://mobitracker.co/beta/src/link.php?disc=" + discUser.content + "&discid=" + discid.content + "&username=" + username + "&cid=" + cid + "&token=p529.FR^;N^h/2CI";
+
   var query = new XMLHttpRequest();
-  query.open("GET", "https://mobitracker.co/beta/src/link.php?disc=" + discUser.content + "&discid=" + discid.content + "&username=" + username + "&cid=" + cid + "&token=p529.FR^;N^h/2CI");
+  query.open("GET", endpoint);
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   query.send();
   query.onload = function () {
