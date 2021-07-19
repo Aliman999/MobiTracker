@@ -104,6 +104,8 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
     <?php 
       if(isset($_GET['code'])){
         echo '<script src="oauth.js"></script>';
+      }else{
+        echo '<script src="oauth.js"></script>';
       }
     ?>
     <script type="text/javascript" src="../js/socket.js"></script>
