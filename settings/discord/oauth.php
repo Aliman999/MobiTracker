@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-$headers = $_SERVER['HTTP_TOKEN'];
 if (isset($_SESSION['token'])) {
   require_once "config.php";
   ini_set('display_errors', 1);
