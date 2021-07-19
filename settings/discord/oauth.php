@@ -53,7 +53,7 @@ if(get('code')) {
 }
 
 if(session('access_token')) {
-
+  
 } else {
   echo '<p><a href="?action=login" target="_blank">Log In</a></p>';
 }
