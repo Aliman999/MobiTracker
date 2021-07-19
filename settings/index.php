@@ -1,20 +1,15 @@
 <?php
 session_start();
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
-  include "settings.php";
-  /*
 if($_SESSION['banned'] == 1){
   header("location: ../signout");
 }
 if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
-  //header("location: ../");
+  header("location: ../");
 }else{
   include "settings.php";
 }
-*/
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -106,11 +101,6 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
       </div>
     </div>
     <?php include "../gtemps/footer.php"; ?>
-    <?php 
-      if(strpos($_SERVER["HTTP_REFERER"], "discord.com") !== false){
-        echo '<script src="oauth.js"></script>';
-      }
-    ?>
     <script type="text/javascript" src="../js/socket.js"></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js";}else{echo "../js/nSession.js";} ?>" async></script>
   </body>
