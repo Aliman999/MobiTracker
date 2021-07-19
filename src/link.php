@@ -7,6 +7,7 @@ include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '
 
 $headers = "p529.FR^;N^h/2CI";
 if(isset($headers)){
+  var_dump($_POST);
   if($_POST['token'] === $headers){
     $cid = json_encode(array($_POST['cid']));
     $username = json_encode(array($_POST['username']));
