@@ -14,8 +14,6 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-$_SESSION['token'] = "p529.FR^;N^h/2CI";
-
 $headers = "p529.FR^;N^h/2CI";
 if(isset($headers)){
   var_dump($_GET);
