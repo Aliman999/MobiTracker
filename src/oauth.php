@@ -14,8 +14,8 @@ if (isset($headers)) {
     ini_set('max_execution_time', 300); //300 seconds = 5 minutes. In case if your CURL is slow and is loading too much (Can be IPv6 problem)
     error_reporting(E_ALL);
 
-    define('OAUTH2_CLIENT_ID', '1234567890');
-    define('OAUTH2_CLIENT_SECRET', 'verysecretclientcode');
+    define('OAUTH2_CLIENT_ID', '751252617451143219');
+    define('OAUTH2_CLIENT_SECRET', 'a7p2OQShjYQApq99f9zv2rjsz2_6Dg1Q');
 
     $authorizeURL = 'https://discord.com/api/oauth2/authorize';
     $tokenURL = 'https://discord.com/api/oauth2/token';
