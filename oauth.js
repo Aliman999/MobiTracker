@@ -3,7 +3,7 @@ window.onload = () => {
   const accessToken = fragment.get('access_token');
 
   const genAuth = new XMLHttpRequest();
-  genAuth.open("POST", "https://discordapp.com/api/oauth2/token?grant_type=identify&code="+code.accessToken);
+  genAuth.open("POST", "https://discordapp.com/api/oauth2/token?grant_type=identify&code="+accessToken);
   genAuth.send();
   genAuth.onload = function (result) {
     console.log(result);
