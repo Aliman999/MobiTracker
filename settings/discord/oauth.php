@@ -47,7 +47,7 @@ if(get('code')) {
 if(session('access_token')) {
 
   $user = apiRequest($apiURLBase);
-  echo '<meta name="" content="">'
+  echo '<meta name="" content="">';
   echo '<h3>Logged In</h3>';
   echo '<h4>Welcome, ' . $user->username . '</h4>';
   echo '<pre>';
