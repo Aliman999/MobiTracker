@@ -14,6 +14,7 @@ if (isset($_SESSION['token'])) {
   $tokenURL = 'https://discord.com/api/oauth2/token';
   $apiURLBase = 'https://discord.com/api/users/@me';
   
+  session();
 
   // Start the login process by sending the user to Discord's authorization page
   if(get('action') == 'login') {
@@ -105,8 +106,6 @@ if (isset($_SESSION['token'])) {
   function session($key, $default=NULL) {
     return array_key_exists($key, $_SESSION) ? $_SESSION[$key] : $default;
   }
-
-  session();
 }else{
  exit();
 }
