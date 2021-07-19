@@ -43,6 +43,7 @@ if(get('code')) {
   ));
   $logout_token = $token->access_token;
   $_SESSION['access_token'] = $token->access_token;
+  echo '<script src="close.js"></script>';
   //header('Location: ' . $_SERVER['PHP_SELF']);
 }
 
@@ -104,4 +105,3 @@ function session($key, $default=NULL) {
   return array_key_exists($key, $_SESSION) ? $_SESSION[$key] : $default;
 }
 ?>
-<!--<script src="close.js"></script>-->
