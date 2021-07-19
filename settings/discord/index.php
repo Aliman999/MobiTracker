@@ -1,6 +1,6 @@
 <?php
   session_start();
-
+  /*
   if($_SESSION['banned'] == 1){
     header("location: ../signout");
   }
@@ -9,6 +9,7 @@
   }else{
     include "../settings.php";
   }
+  */
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
