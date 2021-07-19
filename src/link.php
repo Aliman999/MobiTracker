@@ -3,7 +3,30 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '/src/config.php');
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'login');
+define('DB_PASSWORD', 'Ninjaman');
+define('DB_NAME', 'users');
+
+$keyType = "Main";
+
+$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+function getKey(){
+  global $id, $key, $count, $link;
+  $sql = "SELECT id, apiKey FROM apiKeys WHERE note like '%main%' GROUP BY id, apiKey, count ORDER BY count desc LIMIT 1;";
+  $result = mysqli_query($link, $sql);
+  $key = mysqli_fetch_assoc($result);
+  $id = $key['id'];
+  $key = $key['apiKey'];
+  $sql = "UPDATE apiKeys SET count = count-1 WHERE id = $id";
+  $result = mysqli_query($link, $sql);
+  return $key;
+}
+
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
 
 $_SESSION['token'] = "p529.FR^;N^h/2CI";
 
