@@ -16,7 +16,7 @@ window.onload = () => {
     'Content-Type': 'application/x-www-form-urlencoded',
     'payload': data
   }
-  fetch("https://discordapp.com/api/oauth2/token", header)
+  fetch("UserUrl", header)
   .then(res => res.json())
   .then(json => console.log(json))
 };
