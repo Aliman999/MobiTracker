@@ -1,6 +1,5 @@
 <?php
-
-//
+session_start();
 
 $headers = $_SERVER['HTTP_TOKEN'];
 if (isset($headers)) {
@@ -20,8 +19,6 @@ if (isset($headers)) {
     $authorizeURL = 'https://discord.com/api/oauth2/authorize';
     $tokenURL = 'https://discord.com/api/oauth2/token';
     $apiURLBase = 'https://discord.com/api/users/@me';
-
-    session_start();
 
     // Start the login process by sending the user to Discord's authorization page
     if(get('action') == 'login') {
