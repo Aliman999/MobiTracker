@@ -41,6 +41,8 @@ function auth(){
     // assign the previous URL
     previousUrl = url;
   };
+
+  openSignInWindow("https://mobitracker.co/beta", "Debug");
 }
 
 auth();
