@@ -5,6 +5,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 ini_set('max_execution_time', 300); //300 seconds = 5 minutes. In case if your CURL is slow and is loading too much (Can be IPv6 problem)
 error_reporting(E_ALL);
+$ch = curl_init();
 
 define('OAUTH2_CLIENT_ID', '751252617451143219');
 define('OAUTH2_CLIENT_SECRET', 'a7p2OQShjYQApq99f9zv2rjsz2_6Dg1Q');
