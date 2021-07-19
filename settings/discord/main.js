@@ -20,7 +20,7 @@ function auth(){
 
     // window features
     const strWindowFeatures =
-      'toolbar=no, menubar=no, width=600, height=700, top=100, left=100';
+      'toolbar=no, menubar=no, width=600, height=800, top=100, left=100';
 
     if (windowObjectReference === null || windowObjectReference.closed) {
       /* if the pointer to the window object in memory does not exist
