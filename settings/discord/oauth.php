@@ -41,8 +41,6 @@ if(get('code')) {
   ));
   $logout_token = $token->access_token;
   $_SESSION['access_token'] = $token->access_token;
-
-  echo $_token;
   //header('Location: ' . $_SERVER['PHP_SELF']);
 }
 
