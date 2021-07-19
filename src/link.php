@@ -7,7 +7,7 @@ if(isset($headers)){
   if($_POST['token'] === $headers){
     $cid = json_encode(array($_POST['cid']));
     $username = json_encode(array($_POST['username']));
-    $sql = "INSERT INTO `discord` (`discUser`, `discID`) VALUES (`".$_POST['disc']."`, `".$_POST['discid']."`, `".$_POST['']."`)";
+    $sql = "INSERT INTO `discord` (`discUser`, `discID`, `cID`, `username`, `priority`) VALUES (`".$_POST['disc']."`, `".$_POST['discid']."`, `".$cid."`, `".$username."`, `7`)";
     if(mysqli_query($link, $sql)){
       echo "Success";
     }else{
