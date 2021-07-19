@@ -10,7 +10,7 @@ if(!$_SESSION['privilage']){
 */
 
 include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '/src/config.php');
-
+$_SESSION['token'] = true;
 $headers = $_SESSION['token'];
 if(isset($headers)){
   $debug = "";
