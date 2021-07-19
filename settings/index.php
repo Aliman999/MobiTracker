@@ -33,7 +33,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#253139">
-    <meta name="debug" content="<?php $_SERVER["HTTP_REFERER"] ?>">
+    <meta name="debug" content="<?php echo $_SERVER["HTTP_REFERER"]; ?>">
     <?php
     echo "<meta name='token' content=".$_SESSION['token'].">";
     ?>
