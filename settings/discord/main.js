@@ -49,7 +49,7 @@ function auth(){
   var timer = setInterval(function () {
     if (windowObjectReference.closed) {
       clearInterval(timer);
-      window.location.href = "https://mobitracker.co/beta/oauth";
+      window.location.href = "https://mobitracker.co/oauth";
     }
   }, 1000);
 
