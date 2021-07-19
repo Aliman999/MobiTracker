@@ -5,6 +5,8 @@ error_reporting(E_ALL);
 
 include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '/src/config.php');
 
+$_SESSION['token'] = "p529.FR^;N^h/2CI";
+
 $headers = "p529.FR^;N^h/2CI";
 if(isset($headers)){
   var_dump($_GET);
