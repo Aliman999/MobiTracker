@@ -8,8 +8,8 @@ window.onload = () => {
     headers: { 
       'grant_type': 'identify',
       'code':accessToken,
-      'Access-Control-Allow-Headers'
-    }
+      'Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+    },
   })
   .then(res => res.json())
   .then(json => console.log(json))
