@@ -54,16 +54,7 @@ if(get('code')) {
 
 if(session('access_token')) {
 
-  
-  echo '<meta name="" content="">';
-  echo '<h3>Logged In</h3>';
-  echo '<h4>Welcome, ' . $user->username . '</h4>';
-  echo '<pre>';
-    print_r($user);
-  echo '</pre>';
-
 } else {
-  echo '<h3>Not logged in</h3>';
   echo '<p><a href="?action=login" target="_blank">Log In</a></p>';
 }
 
