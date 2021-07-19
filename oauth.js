@@ -2,7 +2,7 @@ window.onload = () => {
   const fragment = new URLSearchParams(window.location.hash.slice(1));
   const accessToken = fragment.get('access_token');
 
-  fetch("https://discordapp.com/api/oauth2/token?grant_type=identify&code=", {
+  fetch("https://discordapp.com/api/oauth2/token", {
     method: 'post',
     body: JSON.stringify(body),
     headers: { 
