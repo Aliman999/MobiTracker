@@ -31,7 +31,6 @@ if(get('action') == 'login') {
 
 // When Discord redirects the user back here, there will be a "code" and "state" parameter in the query string
 if(get('code')) {
-
   // Exchange the auth code for a token
   $token = apiRequest($tokenURL, array(
     "grant_type" => "authorization_code",
@@ -43,8 +42,8 @@ if(get('code')) {
   $logout_token = $token->access_token;
   $_SESSION['access_token'] = $token->access_token;
 
-
-  header('Location: ' . $_SERVER['PHP_SELF']);
+  echo $_token;
+  //header('Location: ' . $_SERVER['PHP_SELF']);
 }
 
 if(session('access_token')) {
@@ -60,8 +59,6 @@ if(session('access_token')) {
   echo '<h3>Not logged in</h3>';
   echo '<p><a href="?action=login" target="_blank">Log In</a></p>';
 }
-
-var_dump($_SESSION);
 
 
 if(get('action') == 'logout') {
