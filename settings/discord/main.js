@@ -48,8 +48,10 @@ function auth(){
 
   openSignInWindow("https://mobitracker.co/beta/settings/discord/oauth.php?action=login", "Debug");
 }
-function close(){
-  window.close();
+
+window.onunload = refreshParent;
+function refreshParent() {
+  window.opener.location.reload();
 }
 
 auth();

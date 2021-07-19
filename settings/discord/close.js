@@ -1,0 +1,4 @@
+window.onunload = refreshParent;
+function refreshParent() {
+    window.opener.location.reload();
+}
