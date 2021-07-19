@@ -25,7 +25,7 @@ if(get('action') == 'login') {
 
   // Redirect the user to Discord's authorization page
   echo '<meta name="username" content="'.$_SESSION['username'].'">';
-  echo '<meta name="username" content="'.$_SESSION['cID'].'">';
+  echo '<meta name="id" content="'.$_SESSION['cID'].'">';
   echo '<script src="cookie.js"></script>';
   header('Location: https://discord.com/api/oauth2/authorize' . '?' . http_build_query($params));
 }
