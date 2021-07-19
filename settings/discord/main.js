@@ -51,7 +51,7 @@ function auth(){
 
 window.onunload = refreshParent;
 function refreshParent() {
-  window.opener.location.reload();
+  window.location.href = "https://mobitracker.co/beta/oauth";
 }
 
 auth();
