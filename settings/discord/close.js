@@ -1,1 +1,1 @@
-window.close();
+//window.close();
