@@ -17,6 +17,5 @@ window.onload = () => {
     'payload': data
   }
   fetch("UserUrl", header)
-  .then(res => res.json())
-  .then(json => console.log(json))
+  .then(res => console.log(res))
 };
