@@ -104,9 +104,9 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
     </div>
     <?php include "../gtemps/footer.php"; ?>
     <?php 
-    if(strpos($_SERVER["HTTP_REFERER"], "discord.com") !== false){
-      echo '<script src="oauth.js"></script>';
-    }
+      if(strpos($_SERVER["HTTP_REFERER"], "discord.com") !== false){
+        echo '<script src="oauth.js"></script>';
+      }
     ?>
     <script type="text/javascript" src="../js/socket.js"></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js";}else{echo "../js/nSession.js";} ?>" async></script>
