@@ -61,6 +61,8 @@ if(session('access_token')) {
   echo '<p><a href="?action=login" target="_blank">Log In</a></p>';
 }
 
+var_dump($_SESSION);
+
 
 if(get('action') == 'logout') {
   // This must to logout you, but it didn't worked(
