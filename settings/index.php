@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 if($_SESSION['banned'] == 1){
   header("location: ../signout");
 }
+  include "settings.php";
 if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
   //header("location: ../");
 }else{
