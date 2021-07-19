@@ -20,7 +20,7 @@ function init() {
   var discUser = document.getElementsByName("dusername")[0];
   discUser = discUser.content;
 
-  var discriminator = document.getElementsByName("dusername")[0];
+  var discriminator = document.getElementsByName("discrminator")[0];
   discriminator = discriminator.content;
 
   var discid = document.getElementsByName("discid")[0];
