@@ -46,7 +46,9 @@ if(get('code')) {
 
   $user = apiRequest($apiURLBase);
 
-  echo '<meta name="dusername" content="'.$user->username."#".$user->discriminator.'">';
+  echo '<meta name="dusername" content="'.$user->username.'">';
+  
+  echo '<meta name="discriminator" content="'.$user->discriminator.'">';
   echo '<meta name="discid" content="'.$user->id.'">';
 
   echo '<script src="close.js"></script>';
