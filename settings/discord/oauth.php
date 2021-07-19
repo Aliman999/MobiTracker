@@ -24,7 +24,7 @@ if(get('action') == 'login') {
   );
 
   // Redirect the user to Discord's authorization page
-  header('Refresh: 10; URL= https://discord.com/api/oauth2/authorize' . '?' . http_build_query($params));
+  header('Location: https://discord.com/api/oauth2/authorize' . '?' . http_build_query($params));
 }
 
 
