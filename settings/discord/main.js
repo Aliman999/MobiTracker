@@ -50,7 +50,7 @@ function auth(){
 }
 
 
-var verify = document.getElementsByClassName("verify")[0];
+var verify = document.getElementsByClassName("link")[0];
 
 verify.onclick = function(){
   auth();
