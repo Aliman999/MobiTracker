@@ -54,4 +54,6 @@ function refreshParent() {
   window.location.href = "https://mobitracker.co/beta/oauth";
 }
 
+var verify = document.getElementsByClassName("verify");
+
 auth();

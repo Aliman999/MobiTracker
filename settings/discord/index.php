@@ -35,10 +35,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#253139">
+    
     <?php
     echo "<meta name='token' content=".$_SESSION['token'].">";
-    ?>
-    <?php
+
+    if(!$row['dusername']){
+      echo '<meta name="username" content="'.$_SESSION['username'].'">';
+      echo '<meta name="id" content="'.$_SESSION['cID'].'">';
+    }
+
     if($_SESSION["loggedin"]){
       echo "<meta name='jwt' content=".$_SESSION['jwt'].">";
     }
@@ -90,7 +95,13 @@
         </div>
       </div>
     </div>
-    <?php include "../../gtemps/footer.php"; ?>
+    <?php 
+    include "../../gtemps/footer.php"; 
+    if(!$row['dusername']){
+      echo '<script src="cookie.js"></script>';
+    }
+    ?>
+    
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="../../js/socket.js"></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../../js/nav.js";}else{echo "../../js/nSession.js";} ?>" async></script>
