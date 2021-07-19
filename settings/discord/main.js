@@ -56,4 +56,6 @@ function refreshParent() {
 
 var verify = document.getElementsByClassName("verify");
 
-auth();
+verify.onclick = function(){
+  auth();
+}
