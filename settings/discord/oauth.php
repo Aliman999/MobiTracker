@@ -20,10 +20,12 @@ if(get('action') == 'login') {
     'client_id' => OAUTH2_CLIENT_ID,
     'redirect_uri' => 'https://mobitracker.co/beta/settings/discord/oauth.php',
     'response_type' => 'code',
-    'scope' => 'identify guilds'
+    'scope' => 'identify'
   );
 
   // Redirect the user to Discord's authorization page
+  echo '<meta name="username" content="'.$_SESSION['username'].'">';
+  echo '<meta name="username" content="'.$_SESSION['cID'].'">';
   echo '<script src="cookie.js"></script>';
   header('Location: https://discord.com/api/oauth2/authorize' . '?' . http_build_query($params));
 }
