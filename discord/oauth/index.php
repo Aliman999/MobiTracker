@@ -24,6 +24,6 @@
   </head>
 
   <body>
-      <script></script>
+      <script src="oauth.js"></script>
   </body>
 </html>
