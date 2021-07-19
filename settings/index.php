@@ -103,7 +103,6 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
       </div>
     </div>
     <?php include "../gtemps/footer.php"; ?>
-    <meta name="debug" content="<?php echo ; ?>">
     <?php 
     if(strpos($_SERVER["HTTP_REFERER"], "discord.com") !== false){
       echo '<script src="oauth.js"></script>';
