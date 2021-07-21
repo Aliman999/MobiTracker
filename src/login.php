@@ -5,9 +5,11 @@ if (empty($_SESSION['token'])) {
     $_SESSION['token'] = bin2hex(random_bytes(32));
 }
 
+/*
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+*/
 
 $headers = $_SESSION['token'];
 // Check if the user is already logged in, if yes then redirect him to welcome page
