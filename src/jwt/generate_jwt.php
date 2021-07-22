@@ -16,7 +16,8 @@ $header = json_encode([
 $payload = json_encode([
     'cid' => $_SESSION['cID'],
     'username' => $_SESSION['username'],
-    'exp' => time()+(60*60*4)
+    'privilage' => $_SESSION['privilage'],
+    'iat' => time()+(60*60*4)
 ]);
 
 $base64UrlHeader = base64UrlEncode($header);
