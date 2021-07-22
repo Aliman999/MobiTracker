@@ -74,7 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     mysqli_stmt_bind_result($stmt, $cID, $username, $hashed_password);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
-                            $sql = "SELECT JSON_EXTRACT(organization, '$**.sid') AS sid, JSON_EXTRACT(organization, '$**.rank') AS orgRank, avatar, verify, contracts, players.faction, daysleft, avatar, tcpp, contractPref, banned, com_count, contractCD, reviewed_count, COUNT(contracts.markComplete) AS completed FROM players LEFT JOIN contracts  ON username = u_creator WHERE username = '$param_username' GROUP BY sid, orgRank, verify, contracts, players.faction, daysleft, avatar, contractPref, banned, com_count, contractCD, reviewed_count, avatar, tcpp;";
+                            $sql = "SELECT JSON_EXTRACT(organization, '$**.sid') AS sid, JSON_EXTRACT(organization, '$**.rank') AS orgRank, avatar, verify, contracts, players.faction, daysleft, avatar, tcpp, contractPref, banned, com_count, contractCD, reviewed_count, COUNT(contracts.markComplete) AS completed FROM players LEFT JOIN contracts ON username = u_creator LEFT JOIN discord ON discord.username LIKE CONCAT('%', '".$param_username."', '%') WHERE players.username = '".$param_username."' GROUP BY sid, orgRank, verify, contracts, players.faction, daysleft, avatar, contractPref, banned, com_count, contractCD, reviewed_count, avatar, tcpp;";
                             $result = mysqli_query($link, $sql);
                             $row = mysqli_fetch_assoc($result);
                             if($row['verify'] == 1){
