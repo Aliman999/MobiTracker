@@ -73,7 +73,6 @@
           <a href="../email" class="highlight nactive">Email</a>
           <a href="../password" class="highlight nactive">Password</a>
           <a class="highlight active">Discord</a>
-          <a href="../referrals" class="highlight nactive">Referrals</a>
         </div>
         <hr>
         <div class="setting">
