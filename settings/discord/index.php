@@ -69,6 +69,7 @@
         <div class="settingsNav">
           <a href="../" class="highlight nactive">Overview</a>
           <a href="../profile" class="highlight nactive">RSI Profile</a>
+          <a href="../history" class="highlight nactive">History</a>
           <a href="../email" class="highlight nactive">Email</a>
           <a href="../password" class="highlight nactive">Password</a>
           <a class="highlight active">Discord</a>
