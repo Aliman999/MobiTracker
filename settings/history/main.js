@@ -20,7 +20,7 @@ var waitUser = setInterval(async () => {
   if (user) {
     clearInterval(waitUser);
     await socket();
-    api(user.sessionUser);
+    await api(user.sessionUser);
   }
 }, 1000);
 
