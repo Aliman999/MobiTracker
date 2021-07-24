@@ -72,5 +72,5 @@ function send(type, message) {
     data: message
   }
   console.log(message);
-  ws.send(JSON.stringify(message));
+  webSocket.send(JSON.stringify(message));
 }
