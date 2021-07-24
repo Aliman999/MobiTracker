@@ -1,3 +1,4 @@
+var profile = null;
 var display = {
   setTimer:function(int){
     this.timer = int;
@@ -15,6 +16,17 @@ var display = {
   interval:null,
   timer: 1000
 }
+
+var waitUser = setInterval(async () => {
+  if (user) {
+    clearInterval(waitUser);
+    await socket().then(async (conn) => {
+      if (conn) {
+        profile = await api(user.sessionUser);
+      }
+    })
+  }
+}, 1000);
 
 display.startTimer(()=>{
   if(profile){
