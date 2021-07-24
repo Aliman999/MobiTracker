@@ -4,6 +4,11 @@ session_start();
 if (empty($_SESSION['token'])) {
   $_SESSION['token'] = bin2hex(random_bytes(32));
 }
+if(!$_SESSION['privilage']){
+  unset($_SESSION);
+  session_destroy();
+  session_write_close();
+}
 ?>
 <!DOCTYPE html>
 <html>
