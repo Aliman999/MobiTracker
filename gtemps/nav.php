@@ -27,6 +27,13 @@ if(strpos($base, "?option") !== false){
       echo " class='navEle ";
       if($base == "system"){echo "navActive";};
       echo "'><img src='https://mobitracker.co/beta/src/system.png' class='menuIcon'/><p>Staff - Systems</p></a>";
+
+      if($_SESSION['username'] === "JamesDusky"){
+        echo "<a href='https://mobitracker.co/admin'";
+        echo " class='navEle ";
+        if($base == "system"){echo "navActive";};
+        echo "'><img src='https://mobitracker.co/beta/src/system.png' class='menuIcon'/><p>Staff - Admin</p></a>";
+      }
     }
     ?>
     <a href="<?php if($base != ""){echo "https://mobitracker.co/";} ?>" class="navEle <?php if($base == ""){echo "navActive";} ?>"><img src="https://mobitracker.co/src/repHub.png" class="menuIcon"/><p>Reputation Hub</p></a>
