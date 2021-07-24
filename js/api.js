@@ -18,7 +18,7 @@ function socket() {
       console.log("Authentication Response");
       var response = JSON.parse(event.data);
       if (response.type == "authentication") {
-        callback();
+        callback(response.status);
       }
     }
     webSocket.onerror = function (err) {

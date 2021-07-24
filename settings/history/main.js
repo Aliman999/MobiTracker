@@ -20,9 +20,10 @@ var display = {
 var waitUser = setInterval(async () => {
   if (user) {
     clearInterval(waitUser);
-    await socket().then((debug)=>{
-      console.log(debug);
-      console.log(api(user.sessionUser));
+    await socket().then((conn)=>{
+      if(conn){
+        profile = api(user.sessionUser);
+      }
     })
   }
 }, 1000);
