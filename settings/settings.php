@@ -93,7 +93,6 @@ if(isset($headers)){
   }
   //echo json_encode($row);
   var_dump($row);
-  echo $_SESSION['debug'];
 }else{
    exit(json_encode(['error' => 'No token.']));
 }
