@@ -19,8 +19,6 @@ function socket() {
       var response = JSON.parse(event.data);
       if (response.type == "authentication") {
         callback();
-      } else if (response.type == "response") {
-        callback(response.data);
       }
     }
     webSocket.onerror = function (err) {
@@ -45,7 +43,7 @@ function api(name){
   if(!name){
     throw new error("Input Required");
   }else{
-    send("job", name);
+    return send("job", name);
   }
 }
 
@@ -53,15 +51,21 @@ function history(obj = { type: 'user', datatype: 'username', input: '' }){
   if(!input){
     throw new error("Input Required");
   }else{
-    send("history", obj);
+    return send("history", obj);
   }
 }
 
 function send(type, message) {
-  message = {
-    type: type,
-    data: message
-  }
-  console.log(message);
-  webSocket.send(JSON.stringify(message));
+  return new Promise(callback => {
+    message = {
+      type: type,
+      data: message
+    }
+    console.log(message);
+    webSocket.send(JSON.stringify(message));
+
+    webSocket.onmessage = function (event) {
+      callback(response.data);
+    }
+  });
 }
