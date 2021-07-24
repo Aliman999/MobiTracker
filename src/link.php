@@ -26,7 +26,6 @@ if(isset($headers)){
       echo "Success";
     }else{
       echo "Failed";
-      echo "\n".$sql;
       mysqli_error($link);
     }
   }else{
