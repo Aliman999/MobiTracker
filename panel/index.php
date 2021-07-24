@@ -83,6 +83,28 @@ if (empty($_SESSION['token'])) {
           </div>
         </div>
       </div>
+      <div class="container-header">
+        <div class="centerCont">
+          <div id="loadingContainer">
+            <p><span class="rBold">Loading</span></p><img src="../../src/loading.png" class="loading">
+          </div>
+          <div class="conContainer">
+            <p>DISCONNECTED</p><div class="offline"></div>
+          </div>
+          <div>
+            <div class="players label-center"></div>
+            <p>Player Scanner</p>
+          </div>
+          <div>
+            <div class="crawler label-center"></div>
+            <p>Org Crawler</p>
+          </div>
+          <div>
+            <div class="scanner label-center"></div>
+            <p>Org Scanner</p>
+          </div>
+        </div>
+      </div>
     </div>
     <?php include "../gtemps/footer.php"; ?>
     <script type="text/javascript" src="mk_charts.js"></script>
