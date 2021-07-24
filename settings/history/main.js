@@ -17,10 +17,10 @@ var display = {
 }
 
 var waitUser = setInterval(async () => {
-  if(user){
+  if (user) {
+    clearInterval(waitUser);
     await socket();
     api(user.sessionUser);
-    clearInterval(waitUser);
   }
 }, 1000);
 
