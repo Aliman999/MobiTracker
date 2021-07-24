@@ -21,8 +21,8 @@ if(isset($headers)){
     $cid = json_encode(array($_GET['cid']));
     $username = json_encode(array($_GET['username']));
     $discord = $_GET['disc']."#".$_GET['discriminator'];
-    $sql = "INSERT INTO `discord` (`discUser`, `discID`, `cID`, `username`, `priority`) VALUES ('".$discord."', ".$_GET['discid'].", '".$cid."', '".$username."', 7);";
-    if(mysqli_query($link, $sql)){
+    $sql = "INSERT INTO `discord` (`discUser`, `discID`, `cID`, `username`) VALUES ('".$discord."', ".$_GET['discid'].", '".$cid."', '".$username."'); INSERT INTO `priority` (`discID`, `cID`) VALUES (".$_GET['discid']", ".$cid.");";
+    if(mysqli_multi_query($link, $sql)){
       echo "Success";
     }else{
       echo "Failed";
