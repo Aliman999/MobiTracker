@@ -1,3 +1,4 @@
+var profile = null;
 var display = {
   setTimer:function(int){
     this.timer = int;
