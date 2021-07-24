@@ -19,7 +19,8 @@ var display = {
 var waitUser = setInterval(async () => {
   if (user) {
     clearInterval(waitUser);
-    await socket().then(()=>{
+    await socket().then((debug)=>{
+      console.log(debug);
       api(user.sessionUser);
     })
   }

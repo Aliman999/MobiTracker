@@ -1,39 +1,37 @@
 var tokenHeader = document.getElementsByName("token")[0];
 var jwt = document.getElementsByName("jwt")[0];
 var webSocket = null;
-var profile;
 
-function socket(){
-  webSocket = new WebSocket("wss://ws.mobitracker.co:2599");
-  webSocket.onopen = function(){
-    message = {
-      type:"internal",
-      token:jwt.content
-    };
-    webSocket.send(JSON.stringify(message));
-    console.log("Authentication Sent");
-    heartbeat();
-  }
-  webSocket.onmessage = function(event){
-    console.log("Authentication Response");
-    var response = JSON.parse(event.data);
-    if(response.type == "authentication"){
-      if(!profile){
-        api(user.sessionUser);
-      }
-    }else if (response.type == "response") {
-      profile = response.data;
-      console.log(response);
+function socket() {
+  return new Promise(callback => {
+    webSocket = new WebSocket("wss://ws.mobitracker.co:2599");
+    webSocket.onopen = function () {
+      message = {
+        type: "internal",
+        token: jwt.content
+      };
+      webSocket.send(JSON.stringify(message));
+      console.log("Authentication Sent");
+      heartbeat();
     }
-  }
-  webSocket.onerror = function(err){
-    console.log("Error");
-    setTimeout(socket, 3000);
-  }
-  webSocket.onclose = function(){
-    console.log("Connection Closed");
-    setTimeout(socket, 3000);
-  };
+    webSocket.onmessage = function (event) {
+      console.log("Authentication Response");
+      var response = JSON.parse(event.data);
+      if (response.type == "authentication") {
+        callback();
+      } else if (response.type == "response") {
+        callback(response.data);
+      }
+    }
+    webSocket.onerror = function (err) {
+      console.log("Error");
+      setTimeout(socket, 3000);
+    }
+    webSocket.onclose = function () {
+      console.log("Connection Closed");
+      setTimeout(socket, 3000);
+    };
+  })
 }
 
 function heartbeat() {
