@@ -23,10 +23,10 @@ if(isset($headers)){
     $sql = "INSERT INTO `discord` (`discUser`, `discID`, `cID`, `username`) VALUES ('".$discord."', ".$_GET['discid'].", '".$cid."', '".$username."'); INSERT INTO `priority` (`discID`, `cID`, `value`) VALUES (".$_GET['discid'].", ".$_GET['cid'].", 8);";
     if(mysqli_multi_query($link, $sql)){
       echo "Success";
-      echo $sql;
+      //echo $sql;
     }else{
       echo "Failed";
-      mysqli_error($link);
+      //mysqli_error($link);
     }
   }else{
 
