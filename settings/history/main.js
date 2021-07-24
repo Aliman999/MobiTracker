@@ -16,43 +16,20 @@ var display = {
   timer: 1000
 }
 
+var waitUser = setInterval(async () => {
+  if(user){
+    await socket();
+    api(user.sessionUser);
+    clearInterval(waitUser);
+  }
+}, 1000);
+
 display.startTimer(()=>{
   if(profile){
     display.clear();
     init();
   }
 });
-
-var savedLoading = document.getElementById("loadingContainer");
-
-function verify(){
-  profile = null;
-  const container = document.getElementsByClassName("setting")[0];
-  container.innerHTML = "";
-  container.append(savedLoading);
-  savedLoading.style.opacity = 1;
-  api(user.sessionUser);
-  display.startTimer(async () => {
-    if (profile) {
-      display.clear();
-      if (profile.profile.bio.includes("mt.co")) {
-        user.verified = 1;
-        var userContainer = document.getElementsByClassName("userContainer")[0];
-        var verified = document.createElement("img");
-        verified.className = "verified";
-        verified.src = "https://mobitracker.co/src/verified.png";
-        userContainer.insertBefore(verified, userContainer.childNodes[0]);
-
-        query.open("GET", "https://mobitracker.co/beta/src/verify.php");
-        query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        query.setRequestHeader(tokenHeader.name, tokenHeader.content);
-        query.onload = null;
-        query.send();
-      }
-      init();
-    }
-  })
-}
 
 function init(){
   var loading = document.getElementById("loadingContainer");

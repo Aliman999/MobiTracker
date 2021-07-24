@@ -3,13 +3,6 @@ var jwt = document.getElementsByName("jwt")[0];
 var webSocket = null;
 var profile;
 
-var waitUser = setInterval(()=>{
-  if(user){
-    socket();
-    clearInterval(waitUser);
-  }
-}, 1000);
-
 function socket(){
   webSocket = new WebSocket("wss://ws.mobitracker.co:2599");
   webSocket.onopen = function(){
