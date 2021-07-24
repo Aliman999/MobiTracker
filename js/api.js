@@ -51,7 +51,11 @@ function heartbeat() {
 }
 
 function api(name){
-  send("job", name);
+  if(!name){
+    throw new error("Input Required");
+  }else{
+    send("job", name);
+  }
 }
 
 function history(obj = { type: 'user', datatype: 'username', input: '' }){
@@ -61,6 +65,7 @@ function history(obj = { type: 'user', datatype: 'username', input: '' }){
     send("history", obj);
   }
 }
+
 function send(type, message) {
   message = {
     type: type,
