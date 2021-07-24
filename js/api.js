@@ -51,9 +51,21 @@ function heartbeat() {
 }
 
 function api(name){
-  console.log("Job Sent");
-  webSocket.send(JSON.stringify({
-    type:"job",
-    token:name
-  }));
+  send("job", name);
+}
+
+function history(obj = { type: 'user', datatype: 'username', input: '' }){
+  if(!input){
+    throw new error("Input Required");
+  }else{
+    send("history", obj);
+  }
+}
+function send(type, message) {
+  message = {
+    type: type,
+    data: message
+  }
+  console.log(message);
+  ws.send(JSON.stringify(message));
 }
