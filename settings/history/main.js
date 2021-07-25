@@ -17,6 +17,21 @@ var display = {
 }
 
 var result = null;
+
+function history(obj = { type: 'user', datatype: 'username', input: "" }) {
+  if (!obj.type) {
+    obj.type = "user";
+  }
+  if (!obj.datatype) {
+    obj.datatype = "username";
+  }
+  if (!obj.input) {
+    throw new error("Input Required");
+  } else {
+    return send("history", obj);
+  }
+}
+
 var waitUser = setInterval(async () => {
   if (user) {
     clearInterval(waitUser);

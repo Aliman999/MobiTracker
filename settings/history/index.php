@@ -75,17 +75,12 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           <div id="loadingContainer">
             <p><span class="rBold">Loading</span></p><img src="../../src/loading.png" class="loading">
           </div>
-          <div class="faded">
-
-          </div>
-          <div class="faded">
-
-          </div>
-          <div class="faded">
-
-          </div>
-          <div class="faded">
-
+          <div>
+            <p>
+              <a class="rBold panelLink" href="https://robertsspaceindustries.com/citizens/JamesDusky" target="_blank">JamesDusky</a>
+              <br>
+              <span id="displayName" class="subP">AKA Aliman</span>
+            </p>
           </div>
         </div>
       </div>

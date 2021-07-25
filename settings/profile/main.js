@@ -17,6 +17,14 @@ var display = {
   timer: 1000
 }
 
+function api(name) {
+  if (!name) {
+    throw new error("Input Required");
+  } else {
+    return send("job", name);
+  }
+}
+
 var waitUser = setInterval(async () => {
   if (user) {
     clearInterval(waitUser);

@@ -39,28 +39,6 @@ function heartbeat() {
   setTimeout(heartbeat, 3000);
 }
 
-function api(name){
-  if(!name){
-    throw new error("Input Required");
-  }else{
-    return send("job", name);
-  }
-}
-
-function history(obj = { type: 'user', datatype: 'username', input: ""}){
-  if(!obj.type){
-    obj.type = "user";
-  }
-  if(!obj.datatype){
-    obj.datatype = "username";
-  }
-  if(!obj.input){
-    throw new error("Input Required");
-  }else{
-    return send("history", obj);
-  }
-}
-
 function send(type, message) {
   return new Promise(callback => {
     message = {
