@@ -48,7 +48,7 @@ function api(name){
 }
 
 function history(obj = { type: 'user', datatype: 'username', input: '' }){
-  if(!input){
+  if(!obj.input){
     throw new error("Input Required");
   }else{
     return send("history", obj);
