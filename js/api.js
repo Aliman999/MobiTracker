@@ -51,7 +51,7 @@ function history(obj = { type: 'user', datatype: 'username', input: ""}){
   if(!obj.type){
     obj.type = "user";
   }
-  if(obj.datatype){
+  if(!obj.datatype){
     obj.datatype = "username";
   }
   if(!input){
