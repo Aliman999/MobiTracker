@@ -26,18 +26,18 @@ var waitUser = setInterval(async () => {
         if(result){
           console.log(result);
         }
+        display.startTimer(() => {
+          if (result.type === "response") {
+            console.log(result);
+            display.clear();
+            init();
+          }
+        });
       }
     })
   }
 }, 1000);
 
-display.startTimer(()=>{
-  if(result.type === "response"){
-    console.log(result);
-    display.clear();
-    init();
-  }
-});
 
 function init(){
   var loading = document.getElementById("loadingContainer");
