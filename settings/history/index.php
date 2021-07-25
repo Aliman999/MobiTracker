@@ -81,7 +81,8 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           </div>
           <div class="timeline">
             <div class="timeline__bar"></div>
-            <div class="timeline__elem timeline__elem--left">
+
+            <div class="timeline__elem">
               <div class="timeline__date"><span class="timeline__date-day">10</span><span class="timeline__date-month">Jul</span></div>
               <div class="timeline__event">
                 <div class="timeline__event-date-time">
@@ -95,6 +96,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
                 <div class="timeline__event-actions"><a class="timeline__event-action" href="#" title="Learn More">Learn More </a><a class="timeline__event-action" href="#" title="Contact Us">Contact Us</a></div>
               </div>
             </div>
+
             <div class="timeline__elem timeline__elem--right">
               <div class="timeline__date"><span class="timeline__date-day">18</span><span class="timeline__date-month">Jul</span></div>
               <div class="timeline__event">
@@ -109,6 +111,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
                 <div class="timeline__event-actions"><a class="timeline__event-action" href="#" title="Learn More">Learn More </a><a class="timeline__event-action" href="#" title="Contact Us">Contact Us</a></div>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
