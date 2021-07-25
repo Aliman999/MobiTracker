@@ -47,7 +47,13 @@ function api(name){
   }
 }
 
-function history(obj = { type: 'user', datatype: 'username' }, input = ""){
+function history(obj = { type: 'user', datatype: 'username', input: ""}){
+  if(!obj.type){
+    obj.type = "user";
+  }
+  if(obj.datatype){
+    obj.datatype = "username";
+  }
   if(!input){
     throw new error("Input Required");
   }else{
