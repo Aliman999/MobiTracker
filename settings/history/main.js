@@ -1,4 +1,3 @@
-var history = null;
 var display = {
   setTimer:function(int){
     this.timer = int;
@@ -17,20 +16,21 @@ var display = {
   timer: 1000
 }
 
+var result = null;
 var waitUser = setInterval(async () => {
   if (user) {
     clearInterval(waitUser);
     await socket().then(async (conn)=>{
       if(conn){
-        history = await history({ input: user.sessionUser });
+        result = await history({ input: user.sessionUser });
       }
     })
   }
 }, 1000);
 
 display.startTimer(()=>{
-  if(history){
-    console.log(history);
+  if(result){
+    console.log(result);
     display.clear();
     init();
   }
