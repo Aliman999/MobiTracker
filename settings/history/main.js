@@ -30,6 +30,7 @@ var waitUser = setInterval(async () => {
 
 display.startTimer(()=>{
   if(history){
+    console.log(history);
     display.clear();
     init();
   }
