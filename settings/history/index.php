@@ -82,7 +82,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           <div class="timeline">
             <div class="timeline__bar"></div>
 
-            <div class="timeline__elem timeline__elem--center">
+            <div class="timeline__elem timeline__elem--left">
               <div class="timeline__date"><span class="timeline__date-day">10</span><span class="timeline__date-month">Jul</span></div>
               <div class="timeline__event">
                 <div class="timeline__event-date-time">
