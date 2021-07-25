@@ -69,10 +69,9 @@ function send(type, message) {
     }
     webSocket.onmessage = function (event) {
       var response = JSON.parse(event.data);
-      callback(response.data);
+      callback(response);
     }
     console.log(JSON.stringify(message));
     webSocket.send(JSON.stringify(message));
-
   });
 }
