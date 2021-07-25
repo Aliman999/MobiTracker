@@ -54,7 +54,7 @@ function history(obj = { type: 'user', datatype: 'username', input: ""}){
   if(!obj.datatype){
     obj.datatype = "username";
   }
-  if(!input){
+  if(!obj.input){
     throw new error("Input Required");
   }else{
     return send("history", obj);
