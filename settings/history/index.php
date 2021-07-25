@@ -24,6 +24,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
     <link rel="stylesheet" href="../../css/nav.css">
     <link rel="stylesheet" href="../locale.css">
     <link rel="stylesheet" href="locale.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="https://mobitracker.co/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://mobitracker.co/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://mobitracker.co/favicon-16x16.png">
@@ -82,6 +83,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
       </div>
     </div>
     <?php include "../../gtemps/footer.php"; ?>
+    <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../../js/nav.js";}else{echo "../../js/nSession.js";} ?>"></script>
     <script type="text/javascript" src="../../js/api.js"></script>
