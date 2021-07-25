@@ -32,7 +32,7 @@ var waitUser = setInterval(async () => {
 }, 1000);
 
 display.startTimer(()=>{
-  if(result){
+  if(result.type === "response"){
     console.log(result);
     display.clear();
     init();
