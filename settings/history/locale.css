@@ -1,5 +1,6 @@
 .setting>div{
   display: block;
+  margin: 10px 0;
 }
 .settingAvi{
   border-radius: 360px;
