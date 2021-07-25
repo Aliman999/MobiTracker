@@ -42,13 +42,14 @@ function init(){
   loading.remove();
   var field = document.getElementsByClassName("setting")[0];
   var faded = {
-    verify:document.createElement("div"),
-    image:document.createElement("div"),
-    handle:document.createElement("div"),
-    badge:document.createElement("div"),
+    avatar:document.createElement("div"),
+    username:document.createElement("div"),
     meta:document.createElement("div"),
-    orgs:document.createElement("div"),
-    bio:document.createElement("div")
+    badge:document.createElement("div"),
+    event:document.createElement("div"),
+    bio:document.createElement("div"),
+    organization:document.createElement("div"),
+    timestamp:document.createElement("div")
   }
   faded.verify.className = "faded";
   faded.image.className = "faded";

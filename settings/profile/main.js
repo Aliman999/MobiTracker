@@ -30,6 +30,7 @@ var waitUser = setInterval(async () => {
 
 display.startTimer(()=>{
   if(profile){
+    profile = profile.data
     display.clear();
     init();
   }
