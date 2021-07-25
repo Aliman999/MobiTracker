@@ -62,6 +62,7 @@ function init(){
 
   faded = document.getElementsByClassName("faded");
 
+  /*
   var x = 0;
   var display = setInterval(()=>{
     faded[x].style.opacity = 1;
@@ -71,4 +72,5 @@ function init(){
       x++;
     }
   }, 250);
+  */
 }
