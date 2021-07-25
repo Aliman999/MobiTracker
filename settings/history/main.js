@@ -23,21 +23,18 @@ var waitUser = setInterval(async () => {
     await socket().then(async (conn)=>{
       if(conn){
         result = await history({ input: user.sessionUser });
-        if(result){
-          console.log(result);
-        }
-        display.startTimer(() => {
-          if (result.type === "response") {
-            console.log(result);
-            display.clear();
-            init();
-          }
-        });
       }
     })
   }
 }, 1000);
 
+display.startTimer(() => {
+  if (result) {
+    console.log(result);
+    display.clear();
+    init();
+  }
+});
 
 function init(){
   var loading = document.getElementById("loadingContainer");
