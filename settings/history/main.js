@@ -60,6 +60,9 @@ function init(){
     container: function(){
       const timelineContainer = document.createElement("div");
       timelineContainer.className = "timeline";
+
+      timelineContainer.appendChild(timeline.bar());
+
       return timelineContainer;
     },
     bar: function(){
@@ -154,8 +157,8 @@ function init(){
   }
 
   var field = document.getElementsByClassName("setting")[0];
-  
-  field.appendChild();
+  var line = timeline.container();
+  field.appendChild(timeline.);
 
   field.appendChild(timeline.elem("First Entry", "Welcome JamesDusky into the System", 19, "Jul", "01/12/05", "12:30", [{href:"#", text:"Hello World"}]));
 
