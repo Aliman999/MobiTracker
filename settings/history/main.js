@@ -103,9 +103,14 @@ function init(){
 
       return timelineDate;
     },
-    event: function(title, description, date, time, actions){
+    event: function(title, description, date, time, direction, actions){
       const timelineEvent = document.createElement("div");
       timelineEvent.className = "timeline__event";
+      if(direction === 0){
+        timelineEvent.classList.add("timeline__event--left");
+      }else{
+        timelineEvent.classList.add("timeline__event--right");
+      }
 
       const eventDateTime = document.createElement("div");
       eventDateTime.className = "timeline__event-date-time";
