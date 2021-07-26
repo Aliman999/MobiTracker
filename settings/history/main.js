@@ -71,9 +71,14 @@ function init(){
       timelineBar.className = "timeline__bar";
       return timelineBar;
     },
-    elem: function(title, description, day, month, date, time, direction, actions){
+    elem: function(title, description, day, month, date, time, direction = 0, actions){
       const timelineElement = document.createElement("div");
       timelineElement.className = "timeline__elem";
+      if (direction === 0) {
+        timelineEvent.classList.add("timeline__elem--left");
+      } else {
+        timelineEvent.classList.add("timeline__elem--right");
+      }
 
       timelineElement.appendChild(timeline.date(day, month));
       timelineElement.appendChild(timeline.event(title, description, date, time, direction, actions));
@@ -103,14 +108,9 @@ function init(){
 
       return timelineDate;
     },
-    event: function(title, description, date, time, direction = 0, actions){
+    event: function(title, description, date, time, actions){
       const timelineEvent = document.createElement("div");
       timelineEvent.className = "timeline__event";
-      if(direction === 0){
-        timelineEvent.classList.add("timeline__event--left");
-      }else{
-        timelineEvent.classList.add("timeline__event--right");
-      }
 
       const eventDateTime = document.createElement("div");
       eventDateTime.className = "timeline__event-date-time";
