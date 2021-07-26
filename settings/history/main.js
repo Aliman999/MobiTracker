@@ -75,9 +75,9 @@ function init(){
       const timelineElement = document.createElement("div");
       timelineElement.className = "timeline__elem";
       if (direction === 0) {
-        timelineEvent.classList.add("timeline__elem--left");
+        timelineElement.classList.add("timeline__elem--left");
       } else {
-        timelineEvent.classList.add("timeline__elem--right");
+        timelineElement.classList.add("timeline__elem--right");
       }
 
       timelineElement.appendChild(timeline.date(day, month));
