@@ -16,7 +16,7 @@ var display = {
   timer: 1000
 }
 
-
+var DOM;
 var result = null;
 
 function history(obj = { type: 'user', datatype: 'username', input: "" }) {
@@ -182,7 +182,7 @@ function init(){
 
 
 
-  const DOM = {
+  DOM = {
     timelineDate: document.querySelectorAll('.timeline__date'),
     timelineElem: document.querySelectorAll('.timeline__elem'),
     timelineBar: document.querySelector('.timeline__bar')
