@@ -2,7 +2,8 @@
 const DOM = {
   timelineDate: document.querySelectorAll('.timeline__date'),
   timelineElem: document.querySelectorAll('.timeline__elem'),
-  timelineBar: document.querySelector('.timeline__bar') };
+  timelineBar: document.querySelector('.timeline__bar') 
+};
 
 
 //TIMELINE ELEM SET DIRECTION TO EVENT ITEMS (left or right oriented)

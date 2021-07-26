@@ -182,6 +182,11 @@ function init(){
 
 
 
+  const DOM = {
+    timelineDate: document.querySelectorAll('.timeline__date'),
+    timelineElem: document.querySelectorAll('.timeline__elem'),
+    timelineBar: document.querySelector('.timeline__bar')
+  };
 
   setDirEvent();
   setDateBG();
