@@ -74,17 +74,16 @@ function init(){
       const timelineElement = document.createElement("div");
       timelineElement.className = "timeline_elem";
 
-      function left(){
-        return timelineEvent.classList.add("timeline__elem--left");
-      }
-      function right() {
-        return timelineEvent.classList.add("timeline__elem--right");
-      }
-
       timelineElement.appendChild(timeline.date(day, month));
       timelineElement.appendChild(timeline.event(title, description, date, time, actions));
 
       return timelineElement;
+    },
+    left: function(e){
+      return e.classList.add("timeline__elem--left");
+    },
+    right: function (e) {
+      return e.classList.add("timeline__elem--right");
     },
     date: function(day, month){
       const timelineDate = document.createElement("div");
@@ -159,7 +158,7 @@ function init(){
 
   var field = document.getElementsByClassName("setting")[0];
   var line = timeline.container();
-  line.appendChild(timeline.elem("First Entry", "Welcome JamesDusky into the System", 19, "Jul", "01/12/05", "12:30", [{ href: "#", text: "Hello World" }]).left());
+  line.appendChild(timeline.left(timeline.elem("First Entry", "Welcome JamesDusky into the System", 19, "Jul", "01/12/05", "12:30", [{ href: "#", text: "Hello World" }])));
   field.appendChild(line);
 
   
