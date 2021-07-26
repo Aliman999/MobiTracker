@@ -74,16 +74,17 @@ function init(){
       const timelineElement = document.createElement("div");
       timelineElement.className = "timeline_elem";
 
+      function left(){
+        return timelineEvent.classList.add("timeline__elem--left");
+      }
+      function right() {
+        return timelineEvent.classList.add("timeline__elem--right");
+      }
+
       timelineElement.appendChild(timeline.date(day, month));
       timelineElement.appendChild(timeline.event(title, description, date, time, actions));
 
       return timelineElement;
-    },
-    left: function(e){
-      return e.classList.add("timeline__elem--left");
-    },
-    right: function (e) {
-      return e.classList.add("timeline__elem--right");
     },
     date: function(day, month){
       const timelineDate = document.createElement("div");
