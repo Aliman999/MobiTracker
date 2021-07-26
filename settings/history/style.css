@@ -64,7 +64,7 @@
   height: 100%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background-image: linear-gradient(#ffce79, #9b74ff);
+  background-image: linear-gradient(#151f26, rgb(57, 206, 216));
 }
 .timeline__bar:before, .timeline__bar:after {
   position: absolute;
