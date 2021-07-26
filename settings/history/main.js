@@ -138,6 +138,11 @@ function init(){
       const desc = document.createElement("p");
       desc.innerText = description;
 
+      eventDesc.appendChild(desc);
+
+      timelineEvent.appendChild(eventTitle);
+      timelineEvent.appendChild(eventDesc);
+
       if(actions){
         const eventActions = document.createElement("div");
         eventActions.className = "timeline__event-actions";
