@@ -49,7 +49,7 @@ display.startTimer(() => {
     console.log(result);
     display.clear();
     const event = new Event('init');
-    init.emit('init');
+    init.emit(event);
     init();
   }
 });
