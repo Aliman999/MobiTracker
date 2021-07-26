@@ -116,10 +116,10 @@
   width: 70px;
   height: 70px;
   margin: auto;
-  color: #fff;
+  color: #C4D7E6;
   background-repeat: no-repeat;
   border-radius: 50%;
-  border: 6px solid #fff;
+  border: 6px solid #C4D7E6;
 }
 @media (min-width: 900px) {
   .timeline__date {
@@ -188,7 +188,7 @@
 
 .timeline__event--left:before {
   right: -8px;
-  border-left: 8px solid #fff;
+  border-left: 8px solid #C4D7E6;
 }
 .timeline__event--left:after {
   right: -7px;
@@ -197,7 +197,7 @@
 
 .timeline__event--right:before {
   left: -8px;
-  border-right: 8px solid #fff;
+  border-right: 8px solid #C4D7E6;
 }
 .timeline__event--right:after {
   left: -7px;
