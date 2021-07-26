@@ -55,24 +55,11 @@ function init(){
   var loading = document.getElementById("loadingContainer");
   loading.style.opacity = 0;
   loading.remove();
-  var field = document.getElementsByClassName("setting")[0];
-  var faded = {
-    avatar:document.createElement("div"),
-    username:document.createElement("div"),
-    meta:document.createElement("div"),
-    badge:document.createElement("div"),
-    event:document.createElement("div"),
-    bio:document.createElement("div"),
-    organization:document.createElement("div"),
-    timestamp:document.createElement("div")
+
+  for(var x = 0; x < result.length; x++){
+    console.log(result);
   }
-  faded.verify.className = "faded";
-  faded.image.className = "faded";
-  faded.handle.className = "faded";
-  faded.badge.className = "faded";
-  faded.meta.className = "faded";
-  faded.orgs.className = "faded";
-  faded.bio.className = "faded divLeft";
+
 
 
 
