@@ -175,7 +175,6 @@ function init(){
   result = result.data;
   result.forEach((item, i) =>{
     var elem = timeline.elem(item.event, item.description, item.day, item.month, item.date, item.time, item.direction);
-    timeline.left(elem);
     line.appendChild(elem);
     field.appendChild(line);
   })
