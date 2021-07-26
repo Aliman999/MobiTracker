@@ -173,7 +173,8 @@ function init(){
   //var elem = timeline.elem("First Entry", "Welcome JamesDusky into the System", 19, "Jul", "01/12/05", "12:30", 0, [{ href: "#", text: "Hello World" }]);
   
   result = result.data;
-  result.forEach((item, i) =>{
+  result.forEach((item, i) => {
+    console.log(item.description);
     var elem = timeline.elem(item.event, item.description, item.day, item.month, item.date, item.time, item.direction);
     line.appendChild(elem);
     field.appendChild(line);
