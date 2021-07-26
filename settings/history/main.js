@@ -16,6 +16,7 @@ var display = {
   timer: 1000
 }
 
+
 var result = null;
 
 function history(obj = { type: 'user', datatype: 'username', input: "" }) {
@@ -47,6 +48,8 @@ display.startTimer(() => {
   if (result) {
     console.log(result);
     display.clear();
+    const event = new Event('init');
+    init.dispatchEvent(event);
     init();
   }
 });
@@ -72,7 +75,7 @@ function init(){
     },
     elem: function(title, description, day, month, date, time, actions){
       const timelineElement = document.createElement("div");
-      timelineElement.className = "timeline_elem";
+      timelineElement.className = "timeline__elem";
 
       timelineElement.appendChild(timeline.date(day, month));
       timelineElement.appendChild(timeline.event(title, description, date, time, actions));
