@@ -158,7 +158,7 @@ function init(){
 
   var field = document.getElementsByClassName("setting")[0];
   var line = timeline.container();
-  field.appendChild(timeline.);
+  field.appendChild(line);
 
   field.appendChild(timeline.elem("First Entry", "Welcome JamesDusky into the System", 19, "Jul", "01/12/05", "12:30", [{href:"#", text:"Hello World"}]));
 
