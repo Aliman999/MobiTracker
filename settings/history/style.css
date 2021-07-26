@@ -79,11 +79,11 @@
 }
 .timeline__bar:before {
   top: -1px;
-  background-color: #ffce79;
+  background-color: #151f26;
 }
 .timeline__bar:after {
   bottom: -1px;
-  background-color: #9b74ff;
+  background-color: rgb(57, 206, 216);
 }
 
 .timeline__elem {
