@@ -103,7 +103,7 @@ function init(){
 
       return timelineDate;
     },
-    event: function(title, description, date, time, direction, actions){
+    event: function(title, description, date, time, direction = 0, actions){
       const timelineEvent = document.createElement("div");
       timelineEvent.className = "timeline__event";
       if(direction === 0){
