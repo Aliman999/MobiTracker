@@ -71,12 +71,12 @@ function init(){
       timelineBar.className = "timeline__bar";
       return timelineBar;
     },
-    elem: function(title, description, day, month, date, time, actions){
+    elem: function(title, description, day, month, date, time, direction, actions){
       const timelineElement = document.createElement("div");
       timelineElement.className = "timeline__elem";
 
       timelineElement.appendChild(timeline.date(day, month));
-      timelineElement.appendChild(timeline.event(title, description, date, time, actions));
+      timelineElement.appendChild(timeline.event(title, description, date, time, direction, actions));
 
       return timelineElement;
     },
