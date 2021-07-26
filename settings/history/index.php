@@ -79,6 +79,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           <div>
             <p><a class="rBold panelLink" href="https://robertsspaceindustries.com/citizens/JamesDusky" target="_blank">JamesDusky</a><br><span id="displayName" class="subP">AKA Aliman</span></p>
           </div>
+          <!--
           <div class="timeline">
             <div class="timeline__bar"></div>
 
@@ -113,6 +114,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             </div>
             
           </div>
+          -->
         </div>
       </div>
     </div>
