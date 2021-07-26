@@ -83,12 +83,3 @@ const setDateBG = () => {
   });
 
 };
-
-//ONLOAD FUNCTION
-init.addEventListener('init', ()=>{
-  //setting direction class to the timeline event block
-  setDirEvent();
-
-  //set date background styles
-  setDateBG();
-})
