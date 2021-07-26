@@ -57,7 +57,7 @@ function init(){
   loading.remove();
 
   for(var x = 0; x < result.data.length; x++){
-    console.log(result[x].data);
+    console.log(result.data[x]);
   }
 
 
