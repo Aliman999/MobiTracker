@@ -56,7 +56,7 @@ function init(){
   loading.style.opacity = 0;
   loading.remove();
 
-  for(var x = 0; x < result.length; x++){
+  for(var x = 0; x < result.data.length; x++){
     console.log(result);
   }
 
