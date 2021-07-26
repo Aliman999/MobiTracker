@@ -48,8 +48,6 @@ display.startTimer(() => {
   if (result) {
     console.log(result);
     display.clear();
-    setDirEvent();
-    setDateBG();
     init();
   }
 });
@@ -180,6 +178,8 @@ function init(){
 
 
 
+  setDirEvent();
+  setDateBG();
 
   faded = document.getElementsByClassName("faded");
 
