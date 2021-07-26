@@ -16,7 +16,7 @@ var display = {
   timer: 1000
 }
 
-var DOM;
+var DOM = {};
 var result = null;
 
 function history(obj = { type: 'user', datatype: 'username', input: "" }) {
