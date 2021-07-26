@@ -169,16 +169,16 @@ function init(){
 
   var field = document.getElementsByClassName("setting")[0];
   var line = timeline.container();
+
   var elem = timeline.elem("First Entry", "Welcome JamesDusky into the System", 19, "Jul", "01/12/05", "12:30", 0, [{ href: "#", text: "Hello World" }]);
   timeline.left(elem);
   line.appendChild(elem);
   field.appendChild(line);
-
   
-
-  for(var x = 0; x < result.data.length; x++){
-    console.log(result.data[x]);
-  }
+  result = result.data;
+  result.forEach((item, i) =>{
+    timeline.elem(item.event, item.description, item.day, item.month, item.date, item.time);
+  })
 
 
 
