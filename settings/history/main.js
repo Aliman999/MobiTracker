@@ -48,8 +48,8 @@ display.startTimer(() => {
   if (result) {
     console.log(result);
     display.clear();
-    const event = new Event('init');
-    init.emit(event);
+    setDirEvent();
+    setDateBG();
     init();
   }
 });
