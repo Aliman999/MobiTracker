@@ -56,9 +56,110 @@ function init(){
   loading.style.opacity = 0;
   loading.remove();
 
+  var timeline = {
+    container: function(){
+      const timelineContainer = document.createElement("div");
+      timelineContainer.className = "timeline";
+      return timelineContainer;
+    },
+    bar: function(){
+      const timelineBar = document.createElement("div");
+      timelineBar.className = "timeline__bar";
+      return timelineBar;
+    },
+    elem: function(title, description, day, month, date, time, actions){
+      const timelineElement = document.createElement("div");
+      timelineElement.className = "timeline_elem";
+
+      timelineElement.appendChild(timeline.date(day, month));
+      timelineElement.appendChild(timeline.event(title, description, date, time, actions));
+
+      return timelineElement;
+    },
+    left: function(e){
+      return e.classList.add("timeline__elem--left");
+    },
+    right: function (e) {
+      return e.classList.add("timeline__elem--right");
+    },
+    date: function(day, month){
+      const timelineDate = document.createElement("div");
+      timelineDate.className = "timeline__date";
+
+      var dateDay = document.createElement("span");
+      dateDay.className = "timeline__date-day";
+      dateDay.innerText = day;
+
+      var dateMonth = document.createElement("span");
+      dateMonth.className = "timeline__date-month";
+      dateMonth.innerText = month;
+
+      timelineDate.appendChild(dateDay);
+      timelineDate.appendChild(dateMonth);
+
+      return timelineDate;
+    },
+    event: function(title, description, date, time, actions){
+      const timelineEvent = document.createElement("div");
+      timelineEvent.className = "timeline__event";
+
+      const eventDateTime = document.createElement("div");
+      eventDateTime.className = "timeline__event-date-time";
+
+      const eventDate = document.createElement("div");
+      eventDate.className = "timeline__event-dat";
+      const dateSpan = document.createElement("span");
+      dateSpan.innerText = date;
+      eventDate.appendChild(dateSpan);
+
+      const eventTime = document.createElement("div");
+      eventTime.className = "timeline__event-time";
+      const timeSpan = document.createElement("span");
+      timeSpan.innerText = time;
+      eventTime.appendChild(timeSpan);
+
+      eventDateTime.appendChild(eventDate);
+      eventDateTime.appendChild(eventTime);
+
+      timelineEvent.appendChild(eventDateTime);
+
+      const eventTitle = document.createElement("h4");
+      eventTitle.className = "timeline__event-title";
+      eventTitle.innerText = title;
+
+      const eventDesc = document.createElement("div");
+      eventDesc.className = "timeline__event-descr";
+      const desc = document.createElement("p");
+      desc.innerText = description;
+
+      if(actions){
+        const eventActions = document.createElement("div");
+        eventActions.className = "timeline__event-actions";
+
+        for(var x = 0; x < actions.length; x++){
+          const action = document.createElement("a");
+          action.className = "timeline__event-action";
+          action.href = actions[x].href;
+          action.title = actions[x].text;
+          action.innerText = actions[x].text;
+
+          eventActions.appendChild(action);
+        }
+
+        timelineEvent.appendChild(eventActions);
+      }
+
+      return timelineEvent;
+    }
+  }
+
+  var field = document.getElementsByClassName("setting")[0];
+  field.appendChild(timeline.elem("First Entry", "Welcome JamesDusky into the System", 19, "Jul", "01/12/05", "12:30", [{href:"#", text:"Hello World"}]));
+
   for(var x = 0; x < result.data.length; x++){
     console.log(result.data[x]);
   }
+
 
 
 

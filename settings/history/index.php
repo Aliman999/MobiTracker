@@ -80,13 +80,13 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <p><a class="rBold panelLink" href="https://robertsspaceindustries.com/citizens/JamesDusky" target="_blank">JamesDusky</a><br><span id="displayName" class="subP">AKA Aliman</span></p>
           </div>
           <div class="timeline">
-            <div class="timeline__bar faded"></div>
+            <div class="timeline__bar"></div>
 
-            <div class="timeline__elem timeline__elem--left faded">
+            <div class="timeline__elem timeline__elem--left">
               <div class="timeline__date"><span class="timeline__date-day">10</span><span class="timeline__date-month">Jul</span></div>
               <div class="timeline__event">
                 <div class="timeline__event-date-time">
-                  <div class="timeline__event-date"> <span>10/07/2019</span></div>
+                  <div class="timeline__event-date"><span>10/07/2019</span></div>
                   <div class="timeline__event-time"><span>12:30</span></div>
                 </div>
                 <h4 class="timeline__event-title">Event 1</h4>
@@ -97,7 +97,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
               </div>
             </div>
 
-            <div class="timeline__elem timeline__elem--right faded">
+            <div class="timeline__elem timeline__elem--right">
               <div class="timeline__date"><span class="timeline__date-day">18</span><span class="timeline__date-month">Jul</span></div>
               <div class="timeline__event">
                 <div class="timeline__event-date-time">
