@@ -107,7 +107,7 @@ function init(){
       eventDateTime.className = "timeline__event-date-time";
 
       const eventDate = document.createElement("div");
-      eventDate.className = "timeline__event-dat";
+      eventDate.className = "timeline__event-date";
       const dateSpan = document.createElement("span");
       dateSpan.innerText = date;
       eventDate.appendChild(dateSpan);
