@@ -124,11 +124,11 @@ if (isset($headers)) {
 
                 if($param_rating > 0){
                   $sql = "UPDATE players SET reviewed_count = reviewed_count + 1 WHERE username = '$param_r_player';";
+                  $result = mysqli_query($link, $sql);
                 }else{
-                  $sql = "UPDATE players SET reviewed_count = reviewed_count - 1 WHERE username = '$param_r_player';";
+                  //$sql = "UPDATE players SET reviewed_count = reviewed_count - 1 WHERE username = '$param_r_player';";
                 }
 
-                $result = mysqli_query($link, $sql);
 
                 if(isset($_SESSION['com_count'])){
                   $_SESSION['com_count']++;
