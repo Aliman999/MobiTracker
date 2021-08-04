@@ -204,6 +204,7 @@ function showPlayer(node, live, clean){
       }
     }
   }else{
+    playerUser = node;
     clear();
     populateHeader(player);
     showComment(node);
