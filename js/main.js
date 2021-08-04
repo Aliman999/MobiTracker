@@ -188,7 +188,7 @@ function showPlayer(node, live, clean){
     request.send();
     request.onload = function() {
       player = request.response;
-      if (Object.keys(player.data).length && retry < 3){
+      if (Object.keys(player.data).length < 1 && retry < 3){
         playerUser = null;
         retry++;
         showPlayer(node, live, true);
