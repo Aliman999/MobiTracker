@@ -200,11 +200,12 @@ function showPlayer(node, live, clean){
         if(dataCount>0){
           playerUser = player.data.profile.handle;
           showComment(node);
+        }else{
+          playerUser = null;
         }
       }
     }
   }else{
-    playerUser = node;
     clear();
     populateHeader(player);
     showComment(node);
