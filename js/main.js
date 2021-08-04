@@ -198,6 +198,7 @@ function showPlayer(node, live, clean){
       }else{
         clear();
         populateHeader(player);
+        retry = 0;
         if(dataCount>0){
           playerUser = player.data.profile.handle;
           showComment(node);
