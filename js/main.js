@@ -188,14 +188,14 @@ function showPlayer(node, live, clean){
     request.send();
     request.onload = function() {
       player = request.response;
-      if (Object.keys(player.data).length === 0 && retry < 3){
+      if (player) {
+        dataCount = Object.keys(player["data"]).length;
+      }
+      if (dataCount === 0 && retry < 3){
         playerUser = null;
         retry++;
         showPlayer(node, live, true);
       }else{
-        if(player){
-          dataCount = Object.keys(player["data"]).length;
-        }
         clear();
         populateHeader(player);
         if(dataCount>0){
