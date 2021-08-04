@@ -190,6 +190,7 @@ function showPlayer(node, live, clean){
       player = request.response;
       if(player == null && retry < 3){
         retry++;
+        playerUser = null;
         showPlayer(node, live, true);
       }else{
         if(player){
@@ -200,8 +201,6 @@ function showPlayer(node, live, clean){
         if(dataCount>0){
           playerUser = player.data.profile.handle;
           showComment(node);
-        }else{
-          playerUser = null;
         }
       }
     }
