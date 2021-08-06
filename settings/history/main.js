@@ -81,7 +81,7 @@ function init(){
       }
 
       timelineElement.appendChild(timeline.date(day, month));
-      timelineElement.appendChild(timeline.event(title, description, date, time, direction, actions));
+      timelineElement.appendChild(timeline.event(title, description, date, time, actions));
 
       return timelineElement;
     },
