@@ -158,6 +158,7 @@ function init(){
           }
           action.title = actions[x].text;
           action.innerText = actions[x].text;
+          var y = 0;
           action.onclick = function(){
             if(y == 0){
               eventDesc.innerHTML += extra;
