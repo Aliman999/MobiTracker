@@ -12,6 +12,11 @@
 
 .timeline__event-action{
   color: #C4D7E6;
+  opacity: 0.7;
+}
+
+.timeline__event-action:hover{
+  opacity: 1;
 }
 
 .container{
