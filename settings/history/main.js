@@ -38,7 +38,7 @@ var waitUser = setInterval(async () => {
     clearInterval(waitUser);
     await socket().then(async (conn)=>{
       if(conn){
-        result = await history({ input: user.sessionUser });
+        result = await history({ input: "Bo-Fone" }); //user.sessionUser
       }
     })
   }
