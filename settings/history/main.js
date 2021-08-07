@@ -81,7 +81,7 @@ function init(){
       }
 
       timelineElement.appendChild(timeline.date(day, month));
-      timelineElement.appendChild(timeline.event(title, description, date, time, actions, extras));
+      timelineElement.appendChild(timeline.event(title, description, date, time, actions, extra));
 
       return timelineElement;
     },
@@ -108,7 +108,7 @@ function init(){
 
       return timelineDate;
     },
-    event: function(title, description, date, time, actions, extras){
+    event: function(title, description, date, time, actions, extra){
       const timelineEvent = document.createElement("div");
       timelineEvent.className = "timeline__event";
 
@@ -179,7 +179,7 @@ function init(){
   result = result.data;
   result.forEach((item, i) => {
     console.log(item.description);
-    var elem = timeline.elem(item.title, item.description, item.day, item.month, item.date, item.time, item.direction, item.actions);
+    var elem = timeline.elem(item.title, item.description, item.day, item.month, item.date, item.time, item.direction, item.actions, item.extra);
     line.appendChild(elem);
     field.appendChild(line);
   })
