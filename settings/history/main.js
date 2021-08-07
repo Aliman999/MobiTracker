@@ -191,21 +191,21 @@ function init(){
       var newDiff = document.createElement("p");
       newDiff.className = "new";
       newDiff.innerText = "NEW: +";
-      newDiff.style.paddingTop = "8px";
-      newDiff.style.paddingLeft = "8px";
-      newDiff.style.paddingRight = "8px";
+      newDiff.style.marginTop = "8px";
+      newDiff.style.marginLeft = "8px";
+      newDiff.style.marginRight = "8px";
       field.appendChild(newDiff);
       var oldDiff = document.createElement("p");
       oldDiff.className = "old";
       oldDiff.innerText = "OLD: -";
-      oldDiff.style.paddingLeft = "8px";
-      oldDiff.style.paddingRight = "8px";
+      oldDiff.style.marginLeft = "8px";
+      oldDiff.style.marginRight = "8px";
       field.appendChild(oldDiff);
       var matchDiff = document.createElement("p");
       matchDiff.className = "match";
       matchDiff.innerText = "UNCHANGED: @@";
-      matchDiff.style.paddingLeft = "8px";
-      matchDiff.style.paddingRight = "8px";
+      matchDiff.style.marginLeft = "8px";
+      matchDiff.style.marginRight = "8px";
       field.appendChild(matchDiff);
     }
     console.log(item.description);
