@@ -153,7 +153,9 @@ function init(){
         for(var x = 0; x < actions.length; x++){
           const action = document.createElement("a");
           action.className = "timeline__event-action";
-          action.href = actions[x].href;
+          if (actions[x].href){
+            action.href = actions[x].href;
+          }
           action.title = actions[x].text;
           action.innerText = actions[x].text;
 
