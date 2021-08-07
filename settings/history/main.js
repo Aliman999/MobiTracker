@@ -161,7 +161,7 @@ function init(){
           var y = 0;
           action.onclick = function(){
             if(y == 0){
-              eventDesc.innerHTML += extra;
+              eventDesc.innerHTML = extra;
               y = 1;
             }else{
               eventDesc.innerHTML = "";
