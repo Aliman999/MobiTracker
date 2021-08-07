@@ -25,17 +25,32 @@
   line-height: 19px;
   word-break: break-word;
 }
+.new::before{
+  content: '-';
+  position: absolute;
+  left: 0.5em;
+}
 .match{
   background: rgba(51, 58, 63, 0.7);
   color: #C4D7E6;
   line-height: 19px;
   word-break: break-word;
 }
+.match::before{
+  content: '@@';
+  position: absolute;
+  left: 0.5em;
+}
 .old{
   background: rgba(48, 23, 28, 0.7);
   color: #f92672; 
   line-height: 19px;
   word-break: break-word;
+}
+.old::before{
+  content: '-';
+  position: absolute;
+  left: 0.5em;
 }
 
 .container{
