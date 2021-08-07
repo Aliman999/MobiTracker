@@ -160,7 +160,7 @@ function init(){
           action.innerText = actions[x].text;
 
           action.onclick = function(){
-            desc.innerText = extras;
+            desc.innerText = extra;
           }
 
           eventActions.appendChild(action);
