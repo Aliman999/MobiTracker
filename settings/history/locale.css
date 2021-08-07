@@ -22,14 +22,17 @@
 .new{
   background: rgba(166,226,46,0.1);
   color: #C4D7E6;
+  line-height: 19px;
 }
 .match{
   background: rgba(255,255,255,0.1);
   color: #C4D7E6;
+  line-height: 19px;
 }
 .old{
   background: rgba(254,147,140,0.15);
-  color: #f92672;
+  color: #f92672; 
+  line-height: 19px;
 }
 
 .container{
