@@ -19,6 +19,19 @@
   opacity: 1;
 }
 
+.new{
+  background: rgba(166,226,46,0.1);
+  color: #a6e22e;
+}
+.match{
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.3);
+}
+.old{
+  background: rgba(254,147,140,0.15);
+  color: #f92672;
+}
+
 .container{
   padding: 0px;
 }
