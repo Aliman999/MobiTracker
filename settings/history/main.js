@@ -146,7 +146,7 @@ function init(){
       timelineEvent.appendChild(eventTitle);
       timelineEvent.appendChild(eventDesc);
 
-      if(actions){
+      if(actions.length > 0){
         const eventActions = document.createElement("div");
         eventActions.className = "timeline__event-actions";
 
