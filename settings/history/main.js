@@ -203,7 +203,7 @@ function init(){
       field.appendChild(oldDiff);
       var matchDiff = document.createElement("p");
       matchDiff.className = "match";
-      matchDiff.innerText = "UNCHANGED: @@";
+      matchDiff.innerText = "UNCHANGED";
       matchDiff.style.marginLeft = "8px";
       matchDiff.style.marginRight = "8px";
       field.appendChild(matchDiff);
