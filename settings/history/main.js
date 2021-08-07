@@ -159,6 +159,7 @@ function init(){
           action.title = actions[x].text;
           action.innerText = actions[x].text;
           var y = 0;
+          eventDesc.y = y;
           action.onclick = function(){
             if(y == 0){
               if(eventDesc.y){
