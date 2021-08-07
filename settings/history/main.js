@@ -184,7 +184,26 @@ function init(){
   var line = timeline.container();
   
   result = result.data;
+  var legend = false;
   result.forEach((item, i) => {
+    if(item.title.includes("Bio") && !legend){
+      legend = true;
+      var legendText = document.createElement("p");
+      legendText.innerText = "Legend:";
+      field.appendChild(legendText);
+      var newDiff = document.createElement("p");
+      newDiff.className = "new";
+      newDiff.innerText = "NEW: +";
+      field.appendChild(newDiff);
+      var oldDiff = document.createElement("p");
+      oldDiff.className = "old";
+      oldDiff.innerText = "OLD: -";
+      field.appendChild(oldDiff);
+      var matchDiff = document.createElement("p");
+      matchDiff.className = "match";
+      matchDiff.innerText = "UNCHANGED: @@";
+      field.appendChild(matchDiff);
+    }
     console.log(item.description);
     var elem = timeline.elem(item.title, item.description, item.day, item.month, item.date, item.time, item.direction, item.actions, item.extra);
     line.appendChild(elem);

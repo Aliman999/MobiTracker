@@ -75,10 +75,6 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
         <div class="setting">
           <div id="loadingContainer">
             <p><span class="rBold">Loading</span></p><img src="../../src/loading.png" class="loading">
-            <p>Legend:</p>
-            <p>NEW: +</p>
-            <p>REMOVED: -</p>
-            <p>UNCHANGED: @@</p>
           </div>
         </div>
       </div>
