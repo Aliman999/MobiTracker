@@ -173,7 +173,7 @@ function init(){
   result = result.data;
   result.forEach((item, i) => {
     console.log(item.description);
-    var elem = timeline.elem(item.title, item.description, item.day, item.month, item.date, item.time, item.direction);
+    var elem = timeline.elem(item.title, item.description, item.day, item.month, item.date, item.time, item.direction, item.actions);
     line.appendChild(elem);
     field.appendChild(line);
   })
