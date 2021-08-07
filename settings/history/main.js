@@ -158,15 +158,15 @@ function init(){
           }
           action.title = actions[x].text;
           action.innerText = actions[x].text;
-          var x = 0;
+          var y = 0;
           action.onclick = function(){
-            if(x == 0){
+            if(y == 0){
               eventDesc.innerHTML = extra;
-              x = 1;
+              y = 1;
             }else{
               eventDesc.innerHTML = "";
               eventDesc.appendChild(desc);
-              x = 0;
+              y = 0;
             }
           }
 
