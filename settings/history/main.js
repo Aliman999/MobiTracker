@@ -73,7 +73,7 @@ function init(){
     },
     elem: function(title, description, day, month, date, time, direction = 0, actions){
       const timelineElement = document.createElement("div");
-      timelineElement.className = "timeline__elem";
+      timelineElement.className = "timeline__elem faded";
       if (direction === 0) {
         timelineElement.classList.add("timeline__elem--left");
       } else {
