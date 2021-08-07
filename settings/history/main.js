@@ -159,6 +159,10 @@ function init(){
           action.title = actions[x].text;
           action.innerText = actions[x].text;
 
+          action.onclick = function(){
+            
+          }
+
           eventActions.appendChild(action);
         }
 
