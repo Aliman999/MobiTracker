@@ -190,14 +190,14 @@ function init(){
       legend = true;
       var newDiff = document.createElement("p");
       newDiff.className = "new";
-      newDiff.innerText = "NEW: +";
+      newDiff.innerText = "ADDED: +";
       newDiff.style.marginTop = "8px";
       newDiff.style.marginLeft = "8px";
       newDiff.style.marginRight = "8px";
       field.appendChild(newDiff);
       var oldDiff = document.createElement("p");
       oldDiff.className = "old";
-      oldDiff.innerText = "OLD: -";
+      oldDiff.innerText = "REMOVED: -";
       oldDiff.style.marginLeft = "8px";
       oldDiff.style.marginRight = "8px";
       field.appendChild(oldDiff);
