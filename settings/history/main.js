@@ -161,7 +161,8 @@ function init(){
           var y = 0;
           action.onclick = function(){
             if(y == 0){
-              eventDesc.innerHTML = extra;
+              eventDesc.innerHTML = "<p>+ = New\n- = Removed\n@@ = Unchanged</p>";
+              eventDesc.innerHTML += extra;
               y = 1;
             }else{
               eventDesc.innerHTML = "";
