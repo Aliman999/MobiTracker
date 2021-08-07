@@ -20,16 +20,19 @@
 }
 
 .new{
+  background: rgba(166,226,46,0.1);
   color: #87d374;
   line-height: 19px;
   word-break: break-word;
 }
 .match{
+  background: rgba(255,255,255,0.1);
   color: #C4D7E6;
   line-height: 19px;
   word-break: break-word;
 }
 .old{
+  background: rgba(254,147,140,0.15);
   color: #f92672; 
   line-height: 19px;
   word-break: break-word;
