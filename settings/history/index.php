@@ -22,9 +22,9 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
     <link rel="stylesheet" href="../../css/style.css?v=2.0">
     <link rel="stylesheet" href="../../css/patreon.css">
     <link rel="stylesheet" href="../../css/nav.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../locale.css">
     <link rel="stylesheet" href="locale.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="https://mobitracker.co/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://mobitracker.co/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://mobitracker.co/favicon-16x16.png">
