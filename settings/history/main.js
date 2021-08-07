@@ -161,12 +161,19 @@ function init(){
           var y = 0;
           action.onclick = function(){
             if(y == 0){
-              eventDesc.innerHTML = extra;
+              if(eventDesc.y){
+                eventDesc.innerHTML = "<p class='new'>+ = New</p><p class='old'>- = Removed</p><p class='match'>@@ = Unchanged</p><br>";
+                eventDesc.innerHTML += extra;
+              }else{
+                eventDesc.innerHTML += extra;
+              }
               y = 1;
+              eventDesc.y = y;
             }else{
               eventDesc.innerHTML = "";
               eventDesc.appendChild(desc);
               y = 0;
+              eventDesc.y = y;
             }
           }
 
