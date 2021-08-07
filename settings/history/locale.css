@@ -21,11 +21,11 @@
 
 .new{
   background: rgba(166,226,46,0.1);
-  color: #a6e22e;
+  color: #C4D7E6;
 }
 .match{
   background: rgba(255,255,255,0.1);
-  color: rgba(255,255,255,0.3);
+  color: #C4D7E6;
 }
 .old{
   background: rgba(254,147,140,0.15);
