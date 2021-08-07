@@ -158,9 +158,16 @@ function init(){
           }
           action.title = actions[x].text;
           action.innerText = actions[x].text;
-
+          var x = 0;
           action.onclick = function(){
-            eventDesc.innerHTML = extra;
+            if(x == 0){
+              eventDesc.innerHTML = extra;
+              x = 1;
+            }else{
+              eventDesc.innerHTML = "";
+              eventDesc.appendChild(desc);
+              x = 0;
+            }
           }
 
           eventActions.appendChild(action);
