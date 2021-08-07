@@ -160,7 +160,7 @@ function init(){
           action.innerText = actions[x].text;
 
           action.onclick = function(){
-            desc.innerHTML = extra;
+            desc.innerText = JSON.parse(extra);
           }
 
           eventActions.appendChild(action);
