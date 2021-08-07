@@ -27,8 +27,6 @@
 }
 .new::before{
   content: '-';
-  position: absolute;
-  left: 0.5em;
 }
 .match{
   background: rgba(51, 58, 63, 0.7);
@@ -38,8 +36,6 @@
 }
 .match::before{
   content: '@@';
-  position: absolute;
-  left: 0.5em;
 }
 .old{
   background: rgba(48, 23, 28, 0.7);
@@ -49,8 +45,6 @@
 }
 .old::before{
   content: '-';
-  position: absolute;
-  left: 0.5em;
 }
 
 .container{
