@@ -188,9 +188,6 @@ function init(){
   result.forEach((item, i) => {
     if(item.title.includes("Bio") && !legend){
       legend = true;
-      var legendText = document.createElement("p");
-      legendText.innerText = "Legend:";
-      field.appendChild(legendText);
       var newDiff = document.createElement("p");
       newDiff.className = "new";
       newDiff.innerText = "NEW: +";
