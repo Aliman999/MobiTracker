@@ -18,14 +18,20 @@ if(isset($headers)){
   }else{
     if(!empty($_POST['email'])){
       $email = $_POST['email'];
-      $string = json_encode(["username" => $_SESSION['username'], "email" => $email]);
+
       //Encrypt Email
-      $cypher = "AES-128-CTR";
-      $ivLen = openssl_cipher_iv_length($cypher);
-      $options = 0;
-      $encryption_iv = "-83cSneLj7OYcXJr";
-      $encryptionKey = "Ke7CF6gytaMufbSL-cwEFA";
-      $encryptEmail = openssl_encrypt($string, $cypher, $encryptionKey, $options, $encryption_iv);
+      $plaintext = json_encode(["username" => $_SESSION['username'], "email" => $email]);
+      $cipher = "aes-128-gcm";
+      $key = "Ke7CF6gytaMufbSL-cwEFA";
+      if (in_array($cipher, openssl_get_cipher_methods()))
+      {
+          $ivlen = openssl_cipher_iv_length($cipher);
+          $iv = openssl_random_pseudo_bytes($ivlen);
+          $encryptEmail = openssl_encrypt($plaintext, $cipher, $key, $options=0, $iv, $tag);
+          //store $cipher, $iv, and $tag for decryption later
+          $original_plaintext = openssl_decrypt($ciphertext, $cipher, $key, $options=0, $iv, $tag);
+      }
+
       $mail = new PHPMailer;
       try {
         $mail->isSMTP();                                      // Set mailer to use SMTP

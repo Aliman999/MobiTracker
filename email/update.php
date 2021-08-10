@@ -14,14 +14,18 @@ foreach ($_GET as $get => $g){
   $g = htmlentities($g, ENT_QUOTES, 'UTF-8');
 }
 
-$string = $_GET['token'];
 //Encrypt Email
-$cypher = "AES-128-CTR";
-$ivLen = openssl_cipher_iv_length($cypher);
-$options = 0;
-$encryption_iv = "-83cSneLj7OYcXJr";
-$encryptionKey = "Ke7CF6gytaMufbSL-cwEFA";
-$encryptEmail = openssl_decrypt($string, $cypher, $encryptionKey, $options, $encryption_iv);
+$plaintext = json_encode(["username" => $_SESSION['username'], "email" => $email]);
+$cipher = "aes-128-gcm";
+$key = "Ke7CF6gytaMufbSL-cwEFA";
+if (in_array($cipher, openssl_get_cipher_methods()))
+{
+    $ivlen = openssl_cipher_iv_length($cipher);
+    $iv = openssl_random_pseudo_bytes($ivlen);
+    $encryptEmail = openssl_encrypt($plaintext, $cipher, $key, $options=0, $iv, $tag);
+    //store $cipher, $iv, and $tag for decryption later
+    $original_plaintext = openssl_decrypt($ciphertext, $cipher, $key, $options=0, $iv, $tag);
+}
 
 echo $encryptEmail;
 
