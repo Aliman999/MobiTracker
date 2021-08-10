@@ -21,7 +21,7 @@ $ivLen = openssl_cipher_iv_length($cypher);
 $options = 0;
 $encryption_iv = "-83cSneLj7OYcXJr";
 $encryptionKey = "Ke7CF6gytaMufbSL-cwEFA";
-$encryptEmail = openssl_encrypt($string, $cypher, $encryptionKey, $options, $encryption_iv);
+$encryptEmail = openssl_decrypt($string, $cypher, $encryptionKey, $options, $encryption_iv);
 
 echo $encryptEmail;
 
