@@ -26,8 +26,6 @@ if(isset($headers)){
       $encryption_iv = "-83cSneLj7OYcXJr";
       $encryptionKey = "Ke7CF6gytaMufbSL-cwEFA";
       $encryptEmail = openssl_encrypt($string, $cypher, $encryptionKey, $options, $encryption_iv);
-
-      $encryptEmail = 
       $mail = new PHPMailer;
       try {
         $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -49,7 +47,7 @@ if(isset($headers)){
         $mail->isHTML(true);                                  // Set email format to HTML
 
         $mail->Subject = 'MobiTracker Verification';
-        $mail->Body    = '<p>This email was sent to you for verification with MobiTracker. Please click the link below to verify. \nhttps://mobitracker.co/email?token='.$string.'</p>';
+        $mail->Body    = '<p>This email was sent to you for verification with MobiTracker. Please click the link below to verify. \nhttps://mobitracker.co/email?token='.$encryptEmail.'</p>';
 
         $mail->send();
         $emailConfirm = 'Successfully sent to ' .$email;
