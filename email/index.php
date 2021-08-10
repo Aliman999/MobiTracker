@@ -1,5 +1,6 @@
 <?php
 if(!empty($_GET['token'])){
+  session_start();
   define('include', TRUE);
   include "update.php";
 }else{
