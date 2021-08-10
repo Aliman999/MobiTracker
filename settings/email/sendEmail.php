@@ -23,9 +23,9 @@ if(isset($headers)){
       $cypher = "AES-128-CTR";
       $ivLen = openssl_cipher_iv_length($cypher);
       $options = 0;
-      $ivInit = "-83cSneLj7OYcXJrIgG12Q";
+      $encryption_iv = "-83cSneLj7OYcXJr";
       $encryptionKey = "Ke7CF6gytaMufbSL-cwEFA";
-      $encryptEmail = openssl_encrypt($string, $cypher, $encryptionKey, $options, $ivInit);
+      $encryptEmail = openssl_encrypt($string, $cypher, $encryptionKey, $options, $encryption_iv);
 
       $encryptEmail = 
       $mail = new PHPMailer;
