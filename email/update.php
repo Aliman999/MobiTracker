@@ -18,11 +18,11 @@ foreach ($_GET as $get => $g){
 $ciphertext = $_GET['token'];
 $cipher = "aes-128-gcm";
 $key = "Ke7CF6gytaMufbSL-cwEFA";
+$decrypted = null;
 if (in_array($cipher, openssl_get_cipher_methods())){
   $ivlen = openssl_cipher_iv_length($cipher);
   $iv = openssl_random_pseudo_bytes($ivlen);
   $decrypted = openssl_decrypt($ciphertext, $cipher, $key, $options=0, $iv);
-  echo $decrypted;
 }
 
 
