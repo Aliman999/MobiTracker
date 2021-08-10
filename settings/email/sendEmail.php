@@ -21,14 +21,11 @@ if(isset($headers)){
 
       //Encrypt Email
       $plaintext = json_encode(["username" => $_SESSION['username'], "email" => $email]);
-      $cipher = "aes-128-gcm";
-      $key = "Ke7CF6gytaMufbSL-cwEFA";
-      $encryptEmail = null;
-      if (in_array($cipher, openssl_get_cipher_methods())){
-        $ivlen = openssl_cipher_iv_length($cipher);
-        $iv = openssl_random_pseudo_bytes($ivlen);
-        $encryptEmail = openssl_encrypt($plaintext, $cipher, $key, $options=0, $iv, $tag);
-      }
+      $ivlen = openssl_cipher_iv_length($cipher="AES-128-CBC");
+      $iv = openssl_random_pseudo_bytes($ivlen);
+      $ciphertext_raw = openssl_encrypt($plaintext, $cipher, $key, $options=OPENSSL_RAW_DATA, $iv);
+      $hmac = hash_hmac('sha256', $ciphertext_raw, $key, $as_binary=true);
+      $encryptEmail = base64_encode( $iv.$hmac.$ciphertext_raw );
 
       $mail = new PHPMailer;
       try {
