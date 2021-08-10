@@ -4,6 +4,11 @@ session_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
+if(!defined('include')) {
+   die('Direct access not permitted');
+}
+
 $headers = $_SERVER['HTTP_TOKEN'];
 if (isset($headers)) {
   if ($headers !== $_SESSION['token']) {
