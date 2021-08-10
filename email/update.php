@@ -19,7 +19,6 @@ $ciphertext = $_GET['token'];
 $cipher = "aes-128-gcm";
 $key = "Ke7CF6gytaMufbSL-cwEFA";
 $tag = base64_decode("OIAggQCGUbPgmPN6lFjQ8g==");
-$decrypted = null;
 if (in_array($cipher, openssl_get_cipher_methods())){
   $ivlen = openssl_cipher_iv_length($cipher);
   $iv = openssl_random_pseudo_bytes($ivlen);
