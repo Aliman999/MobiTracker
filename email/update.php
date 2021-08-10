@@ -1,8 +1,8 @@
 <?php
-echo isset($_SESSION['username']);
 if(!defined('include')) {
    die('Direct access not permitted');
 }
+session_start();
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -14,19 +14,14 @@ foreach ($_GET as $get => $g){
   $g = htmlentities($g, ENT_QUOTES, 'UTF-8');
 }
 
+$string = $_GET['token'];
 //Encrypt Email
-$c = base64_decode($_GET['token']);
-$key = "Ke7CF6gytaMufbSL-cwEFA";
-$ivlen = openssl_cipher_iv_length($cipher="AES-128-CBC");
-$iv = substr($c, 0, $ivlen);
-$hmac = substr($c, $ivlen, $sha2len=32);
-$ciphertext_raw = substr($c, $ivlen+$sha2len);
-$original_plaintext = openssl_decrypt($ciphertext_raw, $cipher, $key, $options=OPENSSL_RAW_DATA, $iv);
-$calcmac = hash_hmac('sha256', $ciphertext_raw, $key, $as_binary=true);
-if (hash_equals($hmac, $calcmac))// timing attack safe comparison
-{
-    echo $original_plaintext."\n";
-}
+$cypher = "AES-128-CTR";
+$ivLen = openssl_cipher_iv_length($cypher);
+$options = 0;
+$encryption_iv = "-83cSneLj7OYcXJr";
+$encryptionKey = "Ke7CF6gytaMufbSL-cwEFA";
+$encryptEmail = openssl_encrypt($string, $cypher, $encryptionKey, $options, $encryption_iv);
 
 
 if(!$link ) {

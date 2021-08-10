@@ -18,16 +18,14 @@ if(isset($headers)){
   }else{
     if(!empty($_POST['email'])){
       $email = $_POST['email'];
-
+      $string = json_encode(["username" => $_SESSION['username'], "email" => $email]);
       //Encrypt Email
-      $plaintext = json_encode(["username" => $_SESSION['username'], "email" => $email]);
-      $key = "Ke7CF6gytaMufbSL-cwEFA";
-      $ivlen = openssl_cipher_iv_length($cipher="AES-128-CBC");
-      $iv = openssl_random_pseudo_bytes($ivlen);
-      $ciphertext_raw = openssl_encrypt($plaintext, $cipher, $key, $options=OPENSSL_RAW_DATA, $iv);
-      $hmac = hash_hmac('sha256', $ciphertext_raw, $key, $as_binary=true);
-      $encryptEmail = base64_encode( $iv.$hmac.$ciphertext_raw );
-
+      $cypher = "AES-128-CTR";
+      $ivLen = openssl_cipher_iv_length($cypher);
+      $options = 0;
+      $encryption_iv = "-83cSneLj7OYcXJr";
+      $encryptionKey = "Ke7CF6gytaMufbSL-cwEFA";
+      $encryptEmail = openssl_encrypt($string, $cypher, $encryptionKey, $options, $encryption_iv);
       $mail = new PHPMailer;
       try {
         $mail->isSMTP();                                      // Set mailer to use SMTP
@@ -49,7 +47,7 @@ if(isset($headers)){
         $mail->isHTML(true);                                  // Set email format to HTML
 
         $mail->Subject = 'MobiTracker Verification';
-        $mail->Body    = '<p>This email was sent to you for verification with MobiTracker. <br>Please click the link below to verify. <br><br>https://mobitracker.co/beta/email?token='.$encryptEmail.'</p>';
+        $mail->Body    = '<p>This email was sent to you for verification with MobiTracker. Please click the link below to verify. \nhttps://mobitracker.co/email?token='.$encryptEmail.'</p>';
 
         $mail->send();
         $emailConfirm = 'Successfully sent to ' .$email;
