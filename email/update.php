@@ -16,10 +16,9 @@ foreach ($_GET as $get => $g){
 
 //Encrypt Email
 $ciphertext = $_GET['token'];
-echo $ciphertext;
 $cipher = "aes-128-gcm";
 $key = "Ke7CF6gytaMufbSL-cwEFA";
-$tag = "gcm";
+$tag = base64_decode("OIAggQCGUbPgmPN6lFjQ8g==");
 $decrypted = null;
 if (in_array($cipher, openssl_get_cipher_methods())){
   $ivlen = openssl_cipher_iv_length($cipher);
