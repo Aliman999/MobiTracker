@@ -23,6 +23,8 @@ $encryption_iv = "-83cSneLj7OYcXJr";
 $encryptionKey = "Ke7CF6gytaMufbSL-cwEFA";
 $encryptEmail = openssl_encrypt($string, $cypher, $encryptionKey, $options, $encryption_iv);
 
+echo $encryptEmail;
+
 if(!$link ) {
     die('Could not connect: ' . mysqli_error());
 }
@@ -33,8 +35,8 @@ $emparray = array();
 while($row = mysqli_fetch_assoc($result)){
   $emparray[] = $row;
 }
-*/
 echo json_encode($emparray);
+*/
 
 
 mysqli_close($link);
