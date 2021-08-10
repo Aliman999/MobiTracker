@@ -23,7 +23,7 @@ if(isset($headers)){
       $cypher = "AES-128-CTR";
       $ivLen = openssl_cipher_iv_length($cypher);
       $options = 0;
-      $ivInit = "dpK1N4OHdv3HR-9ypMoseCb1DaSMbKk0";
+      $ivInit = "-83cSneLj7OYcXJrIgG12Q";
       $encryptionKey = "ZImZ4few_bH1C-bf_3mWpGDovoKReXev";
       $encryptEmail = openssl_encrypt($email, $cypher, $encryptionKey, $options, $ivInit);
 
