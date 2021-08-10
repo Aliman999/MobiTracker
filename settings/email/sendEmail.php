@@ -40,7 +40,7 @@ if(isset($headers)){
 
         $mail->From = 'admin@dustytavern.com';
         $mail->FromName = 'MobiTracker';
-        $mail->addAddress($email, $username);     // Add a recipient
+        $mail->addAddress($email, $_SESSION['username']);     // Add a recipient
         $mail->addReplyTo('admin@dustytavern.com', 'Information');
 
         $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
