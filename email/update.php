@@ -15,7 +15,7 @@ foreach ($_GET as $get => $g){
 }
 
 //Encrypt Email
-$cyphertext = $_GET['token'];
+$ciphertext = $_GET['token'];
 $cipher = "aes-128-gcm";
 $key = "Ke7CF6gytaMufbSL-cwEFA";
 $tag = "gcm";
