@@ -38,10 +38,10 @@ if(isset($headers)){
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
         $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
-        $mail->From = 'admin@mobitracker.co';
+        $mail->From = 'admin@dustytavern.com';
         $mail->FromName = 'MobiTracker';
-        $mail->addAddress($email, $_SESSION['username']);     // Add a recipient
-        $mail->addReplyTo('admin@mobitracker.co', 'Information');
+        $mail->addAddress($email, $username);     // Add a recipient
+        $mail->addReplyTo('admin@dustytavern.com', 'Information');
 
         $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
         //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
