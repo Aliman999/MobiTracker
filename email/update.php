@@ -16,6 +16,7 @@ foreach ($_GET as $get => $g){
 
 //Encrypt Email
 $c = base64_decode($_GET['token']);
+$key = "Ke7CF6gytaMufbSL-cwEFA";
 $ivlen = openssl_cipher_iv_length($cipher="AES-128-CBC");
 $iv = substr($c, 0, $ivlen);
 $hmac = substr($c, $ivlen, $sha2len=32);

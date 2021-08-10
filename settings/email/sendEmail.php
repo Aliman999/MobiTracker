@@ -21,6 +21,7 @@ if(isset($headers)){
 
       //Encrypt Email
       $plaintext = json_encode(["username" => $_SESSION['username'], "email" => $email]);
+      $key = "Ke7CF6gytaMufbSL-cwEFA";
       $ivlen = openssl_cipher_iv_length($cipher="AES-128-CBC");
       $iv = openssl_random_pseudo_bytes($ivlen);
       $ciphertext_raw = openssl_encrypt($plaintext, $cipher, $key, $options=OPENSSL_RAW_DATA, $iv);
