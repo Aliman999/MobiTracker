@@ -18,14 +18,14 @@ if(isset($headers)){
   }else{
     if(!empty($_POST['email'])){
       $email = $_POST['email'];
-
+      $string = json_encode(["username" => $_SESSION['username'], "email" => $email]);
       //Encrypt Email
       $cypher = "AES-128-CTR";
       $ivLen = openssl_cipher_iv_length($cypher);
       $options = 0;
       $ivInit = "-83cSneLj7OYcXJrIgG12Q";
       $encryptionKey = "Ke7CF6gytaMufbSL-cwEFA";
-      $encryptEmail = openssl_encrypt($email, $cypher, $encryptionKey, $options, $ivInit);
+      $encryptEmail = openssl_encrypt($string, $cypher, $encryptionKey, $options, $ivInit);
 
       $encryptEmail = 
       $mail = new PHPMailer;
@@ -49,7 +49,7 @@ if(isset($headers)){
         $mail->isHTML(true);                                  // Set email format to HTML
 
         $mail->Subject = 'MobiTracker Verification';
-        $mail->Body    = 'This email was sent to you for verification with MobiTracker. \n\nPlease click the link below to verify. \nhttps://mobitracker.co/email?'.$_SESSION['jwt'];
+        $mail->Body    = 'This email was sent to you for verification with MobiTracker. \n\nPlease click the link below to verify. \nhttps://mobitracker.co/email?token='.$string;
 
         $mail->send();
         $emailConfirm = 'Successfully sent to ' .$email;
