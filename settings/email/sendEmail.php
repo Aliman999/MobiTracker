@@ -24,7 +24,7 @@ if(isset($headers)){
       $ivLen = openssl_cipher_iv_length($cypher);
       $options = 0;
       $ivInit = "-83cSneLj7OYcXJrIgG12Q";
-      $encryptionKey = "ZImZ4few_bH1C-bf_3mWpGDovoKReXev";
+      $encryptionKey = "Ke7CF6gytaMufbSL-cwEFA";
       $encryptEmail = openssl_encrypt($email, $cypher, $encryptionKey, $options, $ivInit);
 
       $encryptEmail = 
