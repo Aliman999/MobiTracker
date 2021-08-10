@@ -1,4 +1,5 @@
 <?php
+echo isset($_SESSION['username']);
 if(!defined('include')) {
    die('Direct access not permitted');
 }
