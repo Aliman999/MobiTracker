@@ -24,7 +24,6 @@ if(isset($headers)){
       $cipher = "aes-128-gcm";
       $key = "Ke7CF6gytaMufbSL-cwEFA";
       if (in_array($cipher, openssl_get_cipher_methods())){
-        echo $tag;
         $ivlen = openssl_cipher_iv_length($cipher);
         $iv = openssl_random_pseudo_bytes($ivlen);
         $encryptEmail = openssl_encrypt($plaintext, $cipher, $key, $options=0, $iv, $tag);
