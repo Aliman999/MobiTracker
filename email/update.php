@@ -24,9 +24,9 @@ if (in_array($cipher, openssl_get_cipher_methods())){
   $ivlen = openssl_cipher_iv_length($cipher);
   $iv = openssl_random_pseudo_bytes($ivlen);
   $decrypted = openssl_decrypt($ciphertext, $cipher, $key, $options=0, $iv, $tag);
+echo $decrypted;
 }
 
-echo $decrypted;
 
 if(!$link ) {
     die('Could not connect: ' . mysqli_error());
