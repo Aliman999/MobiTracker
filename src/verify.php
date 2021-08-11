@@ -1,5 +1,6 @@
 <?php
 session_start();
+define('include', TRUE);
 header('Content-Type: application/json');
 
 //ini_set('display_errors', 1);

@@ -1,6 +1,7 @@
 <?php
 // Initialize the session
 session_start();
+define('include', TRUE);
 
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && $_SESSION["verified"] === 0){
   require_once "../register/checkHandle.php";

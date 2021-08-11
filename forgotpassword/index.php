@@ -1,5 +1,6 @@
 <?php
 session_start();
+define('include', TRUE);
 // Include config file
 require_once "../src/config.php";
 if (empty($_SESSION['token'])) {

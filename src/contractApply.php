@@ -5,6 +5,7 @@
 //error_reporting(E_ALL);
 
 session_start();
+define('include', TRUE);
 
 $headers = $_SERVER['HTTP_TOKEN'];
 if (isset($headers)) {

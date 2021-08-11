@@ -1,5 +1,6 @@
 <?php
 session_start();
+define('include', TRUE);
 
 $headers = $_SERVER['HTTP_TOKEN'];
 

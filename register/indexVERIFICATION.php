@@ -1,4 +1,5 @@
 <?php
+define('include', TRUE);
 // Include config file
 require_once "../src/config.php";
 require_once "checkHandle.php";
