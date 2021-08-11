@@ -40,7 +40,7 @@ function safeDecrypt(string $encrypted, string $key): string
     sodium_memzero($key);
     return $plain;
 }
-$key = "Ke7CF6gytaMufbSL-cwEFA";
+$key = "g4hzCDkIx60LgaUSxrykXzK9JQmnNWxHjST8BDK36Ag=";
 safeDecrypt($_GET['token'], $key);
 
 if(!$link ) {
