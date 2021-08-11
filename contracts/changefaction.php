@@ -1,5 +1,6 @@
 <?php
   session_start();
+  define('include', TRUE);
   if (empty($_SESSION['loggedin'])) {
     header("location: https://mobitracker.co/login");
   }else{
