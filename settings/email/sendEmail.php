@@ -61,7 +61,7 @@ if(isset($headers)){
       $cookie_value = $_SESSION['username'];
       setcookie($cookie_name, $cookie_value, time() + (86400), "mobitracker.co", true, true);
 
-      $encryptEmail = safeEncrypt(json_encode(["username" => $_SESSION['username'], "email" => $email]), $key);
+      $encryptEmail = base64_encode(safeEncrypt(json_encode(["username" => $_SESSION['username'], "email" => $email]), $key));
 
       $mail = new PHPMailer;
       try {
