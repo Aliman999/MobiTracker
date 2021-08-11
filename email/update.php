@@ -14,24 +14,34 @@ foreach ($_GET as $get => $g){
   $g = htmlentities($g, ENT_QUOTES, 'UTF-8');
 }
 
-
-$cookie_name = "user";
-if(!isset($_COOKIE[$cookie_name])) {
-    echo "Cookie named '" . $cookie_name . "' is not set!";
-} else {
-    echo "Cookie '" . $cookie_name . "' is set!<br>";
-    echo "Value is: " . $_COOKIE[$cookie_name];
+/**
+ * Decrypt a message
+ * 
+ * @param string $encrypted - message encrypted with safeEncrypt()
+ * @param string $key - encryption key
+ * @return string
+ * @throws Exception
+ */
+function safeDecrypt(string $encrypted, string $key): string
+{   
+    $decoded = base64_decode($encrypted);
+    $nonce = mb_substr($decoded, 0, SODIUM_CRYPTO_SECRETBOX_NONCEBYTES, '8bit');
+    $ciphertext = mb_substr($decoded, SODIUM_CRYPTO_SECRETBOX_NONCEBYTES, null, '8bit');
+    
+    $plain = sodium_crypto_secretbox_open(
+        $ciphertext,
+        $nonce,
+        $key
+    );
+    if (!is_string($plain)) {
+        throw new Exception('Invalid MAC');
+    }
+    sodium_memzero($ciphertext);
+    sodium_memzero($key);
+    return $plain;
 }
-
-$string = $_GET['token'];
-//Encrypt Email
-$cypher = "AES-128-CTR";
-$ivLen = openssl_cipher_iv_length($cypher);
-$options = 0;
-$encryption_iv = "-83cSneLj7OYcXJr";
-$encryptionKey = "Ke7CF6gytaMufbSL-cwEFA";
-$decrypt = openssl_decrypt($string, $cypher, $encryptionKey, $options, $encryption_iv);
-echo $decrypt;
+$key = "Ke7CF6gytaMufbSL-cwEFA";
+safeDecrypt($_GET['token'], $key);
 
 if(!$link ) {
     die('Could not connect: ' . mysqli_error());

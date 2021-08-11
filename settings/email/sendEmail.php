@@ -17,18 +17,45 @@ if(isset($headers)){
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
     if(!empty($_POST['email'])){
-      $email = $_POST['email'];
-      $string = json_encode(["username" => $_SESSION['username'], "email" => $email]);
-      //Encrypt Email
-      $cypher = "AES-128-CTR";
-      $ivLen = openssl_cipher_iv_length($cypher);
-      $options = 0;
-      $encryption_iv = "-83cSneLj7OYcXJr";
-      $encryptionKey = "Ke7CF6gytaMufbSL-cwEFA";
-      $encryptEmail = openssl_encrypt($string, $cypher, $encryptionKey, $options, $encryption_iv);
-      $cookie_name = "user";
-      $cookie_value = "John Doe";
-      setcookie($cookie_name, $cookie_value, time() + (86400 * 1), "/beta/email/"); // 86400 = 1 day
+      declare(strict_types=1);
+      /**
+       * Encrypt a message
+       * 
+       * @param string $message - message to encrypt
+       * @param string $key - encryption key
+       * @return string
+       * @throws RangeException
+       */
+      function safeEncrypt(string $message, string $key): string
+      {
+          if (mb_strlen($key, '8bit') !== SODIUM_CRYPTO_SECRETBOX_KEYBYTES) {
+              throw new RangeException('Key is not the correct size (must be 32 bytes).');
+          }
+          $nonce = random_bytes(SODIUM_CRYPTO_SECRETBOX_NONCEBYTES);
+          
+          $cipher = base64_encode(
+              $nonce.
+              sodium_crypto_secretbox(
+                  $message,
+                  $nonce,
+                  $key
+              )
+          );
+          sodium_memzero($message);
+          sodium_memzero($key);
+          return $cipher;
+      }
+      $email = test_input($_POST["email"]);
+      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $emailErr = "Invalid email format";
+        exit(json_encode([
+          'status' => 0,
+          'data' => $emailErr
+        ]));
+      }
+      $key = "Ke7CF6gytaMufbSL-cwEFA";
+      $encryptEmail = safeEncrypt(json_encode(["username" => $_SESSION['username'], "email" => $email]), $key);
+      
       $mail = new PHPMailer;
       try {
         $mail->isSMTP();                                      // Set mailer to use SMTP
