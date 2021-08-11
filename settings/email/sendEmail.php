@@ -55,7 +55,11 @@ if(isset($headers)){
       $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
       $cookie_name = "vKey";
       $cookie_value = $key;
-      setcookie($cookie_name, $cookie_value, time() + (86400), "/beta/email/");
+      setcookie($cookie_name, $cookie_value, time() + (86400), "/beta/email/", true, true);
+
+      $cookie_name = "login_user";
+      $cookie_value = $_SESSION['username'];
+      setcookie($cookie_name, $cookie_value, time() + (86400), "mobitracker.co", true, true);
 
       $encryptEmail = safeEncrypt(json_encode(["username" => $_SESSION['username'], "email" => $email]), $key);
 
