@@ -52,7 +52,7 @@ if(isset($headers)){
           'data' => $emailErr
         ]));
       }
-      $key = "g4hzCDkIx60LgaUSxrykXzK9JQmnNWxHjST8BDK36Ag=";
+      $key = "g4hzCDkIx60LgaUSxrykXzK9JQmnNWxH";
       $encryptEmail = safeEncrypt(json_encode(["username" => $_SESSION['username'], "email" => $email]), $key);
 
       $mail = new PHPMailer;
