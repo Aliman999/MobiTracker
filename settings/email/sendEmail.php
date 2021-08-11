@@ -62,7 +62,6 @@ if(isset($headers)){
       setcookie($cookie_name, $cookie_value, time() + (86400), "mobitracker.co", true, true);
 
       $encryptEmail = base64_encode(safeEncrypt(json_encode(["username" => $_SESSION['username'], "email" => $email]), $key));
-      $encryptEmail2 = safeEncrypt(json_encode(["username" => $_SESSION['username'], "email" => $email]), $key);
 
       $mail = new PHPMailer;
       try {
@@ -85,7 +84,7 @@ if(isset($headers)){
         $mail->isHTML(true);                                  // Set email format to HTML
 
         $mail->Subject = 'MobiTracker Verification';
-        $mail->Body    = '<p>This email was sent to you for verification with MobiTracker. <br>Please click the link below to verify. <br><br>This link is valid for 24 hours.<br>'.$encryptEmail.'<br><br>'.$encryptEmail2.'</p>';
+        $mail->Body    = '<p>This email was sent to you for verification with MobiTracker. <br>Please click the link below to verify. <br><br>This link is valid for 24 hours.<br>https://mobitracker.co/beta/email?token='.$encryptEmail.'</p>';
 
         $mail->send();
         $emailConfirm = 'Successfully sent to ' .$email;
