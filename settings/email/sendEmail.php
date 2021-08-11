@@ -44,14 +44,13 @@ if(isset($headers)){
           sodium_memzero($key);
           return $cipher;
       }
+      $email = $_POST["email"];
       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $emailErr = "Invalid email format";
         exit(json_encode([
           'status' => 0,
           'data' => $emailErr
         ]));
-      }else{
-        $email = $_POST["email"];
       }
       $key = "Ke7CF6gytaMufbSL-cwEFA";
       $encryptEmail = safeEncrypt(json_encode(["username" => $_SESSION['username'], "email" => $email]), $key);
