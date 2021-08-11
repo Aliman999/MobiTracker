@@ -26,6 +26,9 @@ if(isset($headers)){
       $encryption_iv = "-83cSneLj7OYcXJr";
       $encryptionKey = "Ke7CF6gytaMufbSL-cwEFA";
       $encryptEmail = openssl_encrypt($string, $cypher, $encryptionKey, $options, $encryption_iv);
+      $cookie_name = "user";
+      $cookie_value = "John Doe";
+      setcookie($cookie_name, $cookie_value, time() + (86400 * 1), "/beta/email/"); // 86400 = 1 day
       $mail = new PHPMailer;
       try {
         $mail->isSMTP();                                      // Set mailer to use SMTP
