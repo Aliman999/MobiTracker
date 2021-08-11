@@ -35,8 +35,8 @@ function safeDecrypt(string $encrypted, string $key): string
 
 $key = base64_decode("ICHsU01ezVaEaCpT+3AMvaSLWAaQco4Bm/fodkIbJCU=");
 
-if($decrypt = safeDecrypt($_GET['token'], $key)){
-  echo $key;
+if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
+  echo "success";
 }
 require_once "";
 
