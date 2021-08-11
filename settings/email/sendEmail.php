@@ -54,9 +54,9 @@ if(isset($headers)){
       }
       $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
       $cookie_name = "vKey";
-      $cookie_value = $key;
+      $cookie_value = base64_encode($key);
       if(setcookie($cookie_name, $cookie_value, time() + (86400), "/beta/email/", true, true)){
-        echo $key." | ";
+        echo $cookie_value." | ";
       }
 
       $cookie_name = "login_user";
