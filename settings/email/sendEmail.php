@@ -52,7 +52,11 @@ if(isset($headers)){
           'data' => $emailErr
         ]));
       }
-      $key = "g4hzCDkIx60LgaUSxrykXzK9JQmnNWxH";
+      $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
+      $cookie_name = "vKey";
+      $cookie_value = $key;
+      setcookie($cookie_name, $cookie_value, time() + (86400), "/beta/email/");
+
       $encryptEmail = safeEncrypt(json_encode(["username" => $_SESSION['username'], "email" => $email]), $key);
 
       $mail = new PHPMailer;
