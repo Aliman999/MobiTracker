@@ -33,13 +33,10 @@ function safeDecrypt(string $encrypted, string $key): string
     return $plain;
 }
 
+$key = base64_decode("ICHsU01ezVaEaCpT+3AMvaSLWAaQco4Bm/fodkIbJCU=");
 
-if($key = $_COOKIE['vKey']){
-  if($decrypt = safeDecrypt($_GET['token'], $key)){
-    
-  }
-}else{
-   die('Verification key expired.');
+if($decrypt = safeDecrypt($_GET['token'], $key)){
+  echo $key;
 }
 require_once "";
 
