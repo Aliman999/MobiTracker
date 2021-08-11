@@ -14,6 +14,14 @@ foreach ($_GET as $get => $g){
   $g = htmlentities($g, ENT_QUOTES, 'UTF-8');
 }
 
+
+if(!isset($_COOKIE[$cookie_name])) {
+    echo "Cookie named '" . $cookie_name . "' is not set!";
+} else {
+    echo "Cookie '" . $cookie_name . "' is set!<br>";
+    echo "Value is: " . $_COOKIE[$cookie_name];
+}
+
 $string = $_GET['token'];
 //Encrypt Email
 $cypher = "AES-128-CTR";
