@@ -7,13 +7,6 @@ session_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
-require_once "../src/config.php";
-foreach ($_GET as $get => $g){
-  mysqli_real_escape_string($link, $g);
-  $g = htmlentities($g, ENT_QUOTES, 'UTF-8');
-}
-
 /**
  * Decrypt a message
  * 
@@ -41,8 +34,17 @@ function safeDecrypt(string $encrypted, string $key): string
     return $plain;
 }
 
-$key = $_COOKIE['vKey'];
-safeDecrypt($_GET['token'], $key);
+
+if($key = $_COOKIE['vKey']){
+  if($decrypt = safeDecrypt($_GET['token'], $key)){
+    
+  }
+}else{
+   die('Verification key expired.');
+}
+require_once "";
+
+require_once "../src/config.php";
 
 if(!$link ) {
     die('Could not connect: ' . mysqli_error());
