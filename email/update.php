@@ -15,6 +15,7 @@ foreach ($_GET as $get => $g){
 }
 
 
+$cookie_name = "user";
 if(!isset($_COOKIE[$cookie_name])) {
     echo "Cookie named '" . $cookie_name . "' is not set!";
 } else {
