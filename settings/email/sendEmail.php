@@ -80,7 +80,7 @@ if(isset($headers)){
         $mail->isHTML(true);                                  // Set email format to HTML
 
         $mail->Subject = 'MobiTracker Verification';
-        $mail->Body    = '<p>This email was sent to you for verification with MobiTracker. <br>Please click the link below to verify. <br><br>https://mobitracker.co/email?token='.$encryptEmail.'</p>';
+        $mail->Body    = '<p>This email was sent to you for verification with MobiTracker. <br>Please click the link below to verify. <br><br>https://mobitracker.co/beta/email?token='.$encryptEmail.'</p>';
 
         $mail->send();
         $emailConfirm = 'Successfully sent to ' .$email;
