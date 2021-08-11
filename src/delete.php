@@ -44,7 +44,7 @@ if (isset($headers)) {
         $sql = "UPDATE players SET avgRating = $rating, reviewed_count = reviewed_count + 1 WHERE username = '$r_player'";
       }
       $result = mysqli_query($link, $sql);
-      echo $sql;
+      //echo $sql;
       $sql = "UPDATE players SET com_count = com_count - 1 WHERE username = '$u_creator';";
       $result = mysqli_query($link, $sql);
 

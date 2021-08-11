@@ -83,7 +83,7 @@ if (isset($headers)) {
       $apps = json_encode($apps,  JSON_FORCE_OBJECT);
       $apps = mysqli_real_escape_string($link, $apps);
       $sql = "UPDATE contracts SET apps = '$apps' WHERE id = $id";
-      echo $sql;
+      //echo $sql;
       $result = mysqli_query($link, $sql);
       echo "Applied";
     }

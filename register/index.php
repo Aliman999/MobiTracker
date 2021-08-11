@@ -146,7 +146,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         if(mysqli_query($link, $sql)){
           header("location: ../login");
         }else{
-          echo $sql;
+          //echo $sql;
         }
         // Close statement
         mysqli_stmt_close($stmt);

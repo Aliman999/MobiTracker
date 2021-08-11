@@ -71,7 +71,7 @@ if (isset($headers)) {
         $sql = "UPDATE contracts SET acc = '$accepted', escrow = '$escrow', apps = '$apps' WHERE id = $cid AND u_creator = '$username'; UPDATE escrow SET $payee $payor WHERE id = $cid AND u_creator = '$username';";
         if($result = mysqli_multi_query($link, $sql)){
           echo "Success";
-          echo $sql;
+          //echo $sql;
         }else{
           echo mysqli_error($link);
         }

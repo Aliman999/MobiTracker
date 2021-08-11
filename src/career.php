@@ -25,7 +25,7 @@ if (isset($headers)) {
       exit();
     }else{
       $sql = "SELECT crew, escort, explorer, pirate, miner, trader FROM players WHERE username = '$username';";
-      echo $sql;
+      //echo $sql;
       $result = mysqli_query($link, $sql);
       $row = mysqli_fetch_assoc($result);
       if($oldCareer == 0){
