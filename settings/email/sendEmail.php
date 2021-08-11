@@ -56,13 +56,13 @@ if(isset($headers)){
       $cookie_name = "vKey";
       $cookie_value = $key;
       if(setcookie($cookie_name, $cookie_value, time() + (86400), "/beta/email/", true, true)){
-        echo "cookie vKey is set";
+        echo $key." | ";
       }
 
       $cookie_name = "login_user";
       $cookie_value = $_SESSION['username'];
       if(setcookie($cookie_name, $cookie_value, time() + (86400), "mobitracker.co", true, true)){
-        echo "cookie login_user is set";
+        echo $cookie_value." | ";
       }
       
 
