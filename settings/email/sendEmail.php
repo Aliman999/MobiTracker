@@ -45,7 +45,7 @@ if(isset($headers)){
           return $cipher;
       }
       $email = $_POST["email"];
-      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         $emailErr = "Invalid email format";
         exit(json_encode([
           'status' => 0,
@@ -55,11 +55,16 @@ if(isset($headers)){
       $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
       $cookie_name = "vKey";
       $cookie_value = $key;
-      setcookie($cookie_name, $cookie_value, time() + (86400), "/beta/email/", true, true);
+      if(setcookie($cookie_name, $cookie_value, time() + (86400), "/beta/email/", true, true)){
+        echo "cookie vKey is set";
+      }
 
       $cookie_name = "login_user";
       $cookie_value = $_SESSION['username'];
-      setcookie($cookie_name, $cookie_value, time() + (86400), "mobitracker.co", true, true);
+      if(setcookie($cookie_name, $cookie_value, time() + (86400), "mobitracker.co", true, true)){
+        echo "cookie login_user is set";
+      }
+      
 
       $encryptEmail = base64_encode(safeEncrypt(json_encode(["username" => $_SESSION['username'], "email" => $email]), $key));
 
