@@ -52,8 +52,10 @@ if(isset($headers)){
           'data' => $emailErr
         ]));
       }
+      $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
+      
 
-      $encryptEmail = base64_encode(safeEncrypt(json_encode(["id" => $_SESSION['id'], "email" => $email]), $key));
+      $encryptEmail = base64_encode(safeEncrypt(json_encode(["username" => $_SESSION['username'], "email" => $email]), $key));
 
       $mail = new PHPMailer;
       try {
