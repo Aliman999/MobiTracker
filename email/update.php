@@ -36,24 +36,22 @@ function safeDecrypt(string $encrypted, string $key): string
 $key = base64_decode("ICHsU01ezVaEaCpT+3AMvaSLWAaQco4Bm/fodkIbJCU=");
 
 if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
-  echo $decrypt;
+  $decrypt = json_decode($decrypt);
+  var_dump($decrypt);
+  /*
+  require_once "../src/config.php";
+
+  if(!$link ) {
+      die('Could not connect: ' . mysqli_error());
+  }
+  $sql = "UPDATE players SET email = '".."'";
+  $result = mysqli_query($link, $sql);
+  $emparray = array();
+  while($row = mysqli_fetch_assoc($result)){
+    $emparray[] = $row;
+  }
+  mysqli_close($link);
+  */
 }
 
-require_once "../src/config.php";
-
-if(!$link ) {
-    die('Could not connect: ' . mysqli_error());
-}
-/*
-$sql = "SELECT t1.id AS id, rating, u_creator, comment, r_player, flag, approval, t1.created_at AS created_at, avatar, verify, reviewed_count FROM comments t1 INNER JOIN players t2 ON t1.u_creator = t2.username WHERE r_player = '$username' ORDER BY t1.created_at DESC;";
-$result = mysqli_query($link, $sql);
-$emparray = array();
-while($row = mysqli_fetch_assoc($result)){
-  $emparray[] = $row;
-}
-echo json_encode($emparray);
-*/
-
-
-mysqli_close($link);
 ?>
