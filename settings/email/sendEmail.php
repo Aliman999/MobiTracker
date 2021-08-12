@@ -54,7 +54,7 @@ if(isset($headers)){
       }
       $key = base64_decode("ICHsU01ezVaEaCpT+3AMvaSLWAaQco4Bm/fodkIbJCU=");      
 
-      $encryptEmail = base64_encode(safeEncrypt(json_encode(["username" => $_SESSION['username'], "email" => $email]), $key));
+      $encryptEmail = base64_encode(safeEncrypt(json_encode(["username" => $_SESSION['id'], "email" => $email]), $key));
 
       $mail = new PHPMailer;
       try {
