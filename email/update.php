@@ -37,6 +37,7 @@ $key = base64_decode("ICHsU01ezVaEaCpT+3AMvaSLWAaQco4Bm/fodkIbJCU=");
 
 if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
   $decrypt = json_decode($decrypt);
+  /*
   require_once "../src/config.php";
 
   if(!$link ) {
@@ -50,6 +51,7 @@ if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
     $emparray[] = $row;
   }
   mysqli_close($link);
+  */
 }
 
 ?>
