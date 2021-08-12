@@ -52,19 +52,7 @@ if(isset($headers)){
           'data' => $emailErr
         ]));
       }
-      $key = random_bytes(SODIUM_CRYPTO_SECRETBOX_KEYBYTES);
-      $cookie_name = "vKey";
-      $cookie_value = base64_encode($key);
-      if(setcookie($cookie_name, $cookie_value, time() + (86400), "/beta/email/", true, true)){
-        echo $cookie_value." | ";
-      }
-
-      $cookie_name = "login_user";
-      $cookie_value = $_SESSION['username'];
-      if(setcookie($cookie_name, $cookie_value, time() + (86400), "mobitracker.co", true, true)){
-        echo $cookie_value." | ";
-      }
-      
+      $key = base64_decode("ICHsU01ezVaEaCpT+3AMvaSLWAaQco4Bm/fodkIbJCU=");      
 
       $encryptEmail = base64_encode(safeEncrypt(json_encode(["username" => $_SESSION['username'], "email" => $email]), $key));
 
