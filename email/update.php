@@ -43,7 +43,7 @@ if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
   if(!$link ) {
       die('Could not connect: ' . mysqli_error());
   }
-  $sql = "UPDATE players SET email = '$decrypt->$email' WHERE id = '$decrypt-$id'";
+  $sql = "UPDATE players SET email = '".$decrypt->$email."' WHERE id = '".$decrypt->$id."'";
   echo $sql;
   // $result = mysqli_query($link, $sql);
 }
