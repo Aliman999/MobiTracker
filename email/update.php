@@ -38,7 +38,11 @@ $key = base64_decode("ICHsU01ezVaEaCpT+3AMvaSLWAaQco4Bm/fodkIbJCU=");
 if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
   $decrypt = json_decode($decrypt);
   var_dump($decrypt);
-  require_once "../src/config.php";
+  if($decrypt->iat > time()){
+    die("Token Expired.");
+  }else{
+    require_once "../src/config.php";
+  }
 
   if(!$link ) {
       die('Could not connect: ' . mysqli_error());
