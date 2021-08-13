@@ -42,15 +42,8 @@ if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
   if(!$link ) {
       die('Could not connect: ' . mysqli_error());
   }
-  /*
-  $sql = "SELECT t1.id AS id, rating, u_creator, comment, r_player, flag, approval, t1.created_at AS created_at, avatar, verify, reviewed_count FROM comments t1 INNER JOIN players t2 ON t1.u_creator = t2.username WHERE r_player = '$username' ORDER BY t1.created_at DESC;";
-  $result = mysqli_query($link, $sql);
-  $emparray = array();
-  while($row = mysqli_fetch_assoc($result)){
-    $emparray[] = $row;
-  }
-  echo json_encode($emparray);
-  */
+  $sql = "UPDATE players SET email = '$decrypt->$email' WHERE id = '$decrypt-$id'";
+  // $result = mysqli_query($link, $sql);
 }
 
 
