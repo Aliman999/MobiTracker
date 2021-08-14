@@ -16,7 +16,7 @@ $header = json_encode([
 $payload = json_encode([
     'cid' => $_SESSION['cID'],
     'username' => $_SESSION['username'],
-    'privilage' => $_SESSION['privilage'],
+    'privilage' => 0,
     'prio' => $_SESSION['prio'],
     'iat' => time()+(60*60*4)
 ]);
