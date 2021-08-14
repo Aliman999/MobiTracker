@@ -124,7 +124,8 @@ if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
         ];
       $x++;
     }
-    header('Location: https://mobitracker.co/beta/settings/');
+    var_dump($_SESSION);
+    //header('Location: https://mobitracker.co/beta/settings/');
   }
 }
 mysqli_close($link);
