@@ -126,6 +126,7 @@ if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
         ];
       $x++;
     }
+    var_dump($_SESSION);
     //header('Location: https://mobitracker.co/beta/settings/email/');
   }
 }
