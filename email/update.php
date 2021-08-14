@@ -3,9 +3,9 @@ if(!defined('include')) {
    die('Direct access not permitted');
 }
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 /**
  * Decrypt a message
  * 
@@ -37,7 +37,6 @@ $key = base64_decode("ICHsU01ezVaEaCpT+3AMvaSLWAaQco4Bm/fodkIbJCU=");
 
 if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
   $decrypt = json_decode($decrypt);
-  var_dump($decrypt);
   if($decrypt->iat < time()){
     die("Token Expired.");
   }else{
