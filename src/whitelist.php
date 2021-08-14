@@ -1,7 +1,6 @@
 <?php
-if ($headers !== $_SESSION['token']) {
-  unset($_SESSION['token']);
-  exit(json_encode(['error' => 'Wrong token.']));
+if(!defined('include')) {
+   die('Direct access not permitted');
 }else{
   $staff = ["JamesDusky", "Kindmiss", "Bo-Fone"];
 }
