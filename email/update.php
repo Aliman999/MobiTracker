@@ -38,7 +38,7 @@ $key = base64_decode("ICHsU01ezVaEaCpT+3AMvaSLWAaQco4Bm/fodkIbJCU=");
 if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
   $decrypt = json_decode($decrypt);
   var_dump($decrypt);
-  if($decrypt->iat > time()){
+  if($decrypt->iat < time()){
     die("Token Expired.");
   }else{
     require_once "../src/config.php";
