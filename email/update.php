@@ -128,8 +128,6 @@ if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
         ];
       $x++;
     }
-    var_dump($_SESSION);
-    header( "refresh=0;url=https://mobitracker.co/beta/settings/email" );
   }
 }
 mysqli_close($link);
