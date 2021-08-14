@@ -6,3 +6,5 @@ if(!empty($_GET['token'])){
 }else{
   die("503 Forbidden. Turn around and make a left turn."); 
 }
+?>
+<script src="main.js"></script>
