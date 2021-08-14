@@ -121,6 +121,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION['completed'] = $row['completed'];
                             $_SESSION['avatar'] = $row['avatar'];
                             $_SESSION['tcpp'] = $row['tcpp'];
+                            $_SESSION['prio'] = $row['prio'];
                             $_SESSION['id'] = $row['id'];
 
                             //$_SESSION['debug'] = $sql;

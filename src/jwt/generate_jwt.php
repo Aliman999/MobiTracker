@@ -17,7 +17,7 @@ $payload = json_encode([
     'cid' => $_SESSION['cID'],
     'username' => $_SESSION['username'],
     'privilage' => $_SESSION['privilage'],
-    'prio' => $_SESSION['priority'],
+    'prio' => $_SESSION['prio'],
     'iat' => time()+(60*60*4)
 ]);
 
