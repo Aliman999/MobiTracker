@@ -129,9 +129,8 @@ if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
       $x++;
     }
     var_dump($_SESSION);
-    //header('Location: https://mobitracker.co/beta/');
+    header( "refresh:1;url=http://thisinterestsme.com/php-forcing-https-over-http/" );
   }
 }
 mysqli_close($link);
 ?>
-<a href="https://mobitracker.co/beta/">home</a>
