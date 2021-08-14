@@ -48,9 +48,8 @@ if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
       die('Could not connect: ' . mysqli_error());
   }
   $sql = "UPDATE players SET email = '".strtolower($decrypt->email)."' WHERE id = '".$decrypt->id."';";
-  /*
   if(mysqli_query($link, $sql)){
-    $sql = "SELECT players.id, JSON_EXTRACT(organization, '$**.sid') AS sid, JSON_EXTRACT(organization, '$**.rank') AS orgRank, avatar, verify, contracts, players.faction, daysleft, avatar, tcpp, contractPref, banned, com_count, contractCD, reviewed_count, COUNT(contracts.markComplete) AS completed, SUM(IFNULL(priority, 8)) AS prio FROM players LEFT JOIN contracts ON username = u_creator LEFT JOIN discord ON discord.username LIKE CONCAT('%', players.username, '%') WHERE players.username = '".$param_username."' GROUP BY sid, orgRank, verify, contracts, players.faction, daysleft, avatar, contractPref, banned, com_count, contractCD, reviewed_count, avatar, tcpp, priority, players.id;";
+    $sql = "SELECT players.id, JSON_EXTRACT(organization, '$**.sid') AS sid, JSON_EXTRACT(organization, '$**.rank') AS orgRank, avatar, verify, contracts, players.faction, daysleft, avatar, tcpp, contractPref, banned, com_count, contractCD, reviewed_count, COUNT(contracts.markComplete) AS completed, SUM(IFNULL(priority, 8)) AS prio FROM players LEFT JOIN contracts ON username = u_creator LEFT JOIN discord ON discord.username LIKE CONCAT('%', players.username, '%') WHERE players.id = '".$decrypt->id."' GROUP BY sid, orgRank, verify, contracts, players.faction, daysleft, avatar, contractPref, banned, com_count, contractCD, reviewed_count, avatar, tcpp, priority, players.id;";
     $result = mysqli_query($link, $sql);
     $row = mysqli_fetch_assoc($result);
     if($row['verify'] == 1){
@@ -79,7 +78,7 @@ if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
     }else{
       $contractCD = $row['contractCD'];
     }
-    require_once "whitelist.php";
+    require_once "../src/whitelist.php";
 
     // Store data in session variables
     $_SESSION["loggedin"] = true;
@@ -125,17 +124,8 @@ if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
         ];
       $x++;
     }
-    // Redirect user to welcome page
-    if($_SESSION['banned'] == 0){
-      if($_GET['ref'] == "escrow"){
-        $_GET['ref'] = "contracts/escrow";
-      }
-    }
+    header('Location: https://mobitracker.co/beta/settings/');
   }
-  */
 }
-
-
-
 mysqli_close($link);
 ?>
