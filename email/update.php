@@ -49,6 +49,7 @@ if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
   }
   $sql = "UPDATE players SET email = '".strtolower($decrypt->email)."' WHERE id = '".$decrypt->id."';";
   if(mysqli_query($link, $sql)){
+    session_start();
     $sql = "SELECT players.username AS username, players.cid AS cid, players.id AS id, JSON_EXTRACT(organization, '$**.sid') AS sid, JSON_EXTRACT(organization, '$**.rank') AS orgRank, avatar, verify, contracts, players.faction, daysleft, avatar, tcpp, contractPref, banned, com_count, contractCD, reviewed_count, COUNT(contracts.markComplete) AS completed, SUM(IFNULL(priority, 8)) AS prio FROM players LEFT JOIN contracts ON username = u_creator LEFT JOIN discord ON discord.username LIKE CONCAT('%', players.username, '%') WHERE players.id = '".$decrypt->id."' GROUP BY sid, orgRank, verify, contracts, players.faction, daysleft, avatar, contractPref, banned, com_count, contractCD, reviewed_count, avatar, tcpp, priority, players.id;";
     $result = mysqli_query($link, $sql);
     $row = mysqli_fetch_assoc($result);
