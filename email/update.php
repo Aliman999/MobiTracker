@@ -134,3 +134,4 @@ if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
 }
 mysqli_close($link);
 ?>
+<a href="https://mobitracker.co/beta/">home</a>
