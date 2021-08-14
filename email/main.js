@@ -1,1 +1,1 @@
-window.location.href = 'https://mobitracker.co/beta/settings/email';
+window.location.href = 'https://mobitracker.co/settings/email';

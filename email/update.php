@@ -38,7 +38,8 @@ $key = base64_decode("ICHsU01ezVaEaCpT+3AMvaSLWAaQco4Bm/fodkIbJCU=");
 if($decrypt = safeDecrypt(base64_decode($_GET['token']), $key)){
   $decrypt = json_decode($decrypt);
   if($decrypt->iat < time()){
-    die("Token Expired.");
+    header( "refresh:5;url=https://mobitracker.co/" );
+    die("Token Expired. Sending you back to the home page.");
   }else{
     require_once "../src/config.php";
   }
