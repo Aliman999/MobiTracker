@@ -1160,7 +1160,7 @@ function populateHeader(jsonObj){
         };
         var selected = 1;
         function toggleSelected(e){
-          if(){
+          if(e.classList.contains("notSelected")){
 
           }
           if(e.classList.contains("notSelected")){
