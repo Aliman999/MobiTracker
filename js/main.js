@@ -777,7 +777,7 @@ function populateHeader(jsonObj){
         }
       }
       showCount.appendChild(playerRatingConForm);
-      showCount.textContent = xp(ratingCount)+" ("+ratingCount+")";
+      showCount.textContent += xp(ratingCount)+" ("+ratingCount+")";
       ratingContainer.appendChild(showCount);
     }
   }
