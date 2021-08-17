@@ -24,7 +24,7 @@ input.star-5:checked ~ label.star:before {
   text-shadow: 0 0 20px #596269;
 }
 
-input.star-1:checked ~ label.star:before { color: #596269; }
+input.star-1:checked ~ label.star:before { color: #8e9da8; }
 
 label.star:hover { transform: scale(1.3); }
 
