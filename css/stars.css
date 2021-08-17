@@ -34,10 +34,6 @@ label.star:before {
   font-family: 'Material Icons';
 }
 
-form{
-  display: flex;
-}
-
 label.nStarFull{
   float: right;
   padding: 2px;
