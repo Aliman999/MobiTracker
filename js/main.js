@@ -749,7 +749,7 @@ function populateHeader(jsonObj){
 
   var playerRatingContainer = document.createElement("div");
   var playerRatingConForm = document.createElement("form");
-  playerRatingContainer.appendChild(starConForm);
+  playerRatingContainer.appendChild(playerRatingConForm);
   var stars = [];
 
   var queryString = "?username=" + node.value;
