@@ -764,13 +764,8 @@ function populateHeader(jsonObj){
 
       for (var x = 5; x > 0; x--) {
         if(x > avgRating){
-          var starInput = document.createElement("input");
-          starInput.className = "star star-" + x;
-          starInput.id = "star-" + x;
-          starInput.type = "radio";
-          starInput.name = "star";
           var starLabel = document.createElement("label");
-          starLabel.className = "star star-" + x;
+          starLabel.className = "nStarFull";
           stars.push({ input: starInput, label: starLabel });
           playerRatingConForm.appendChild(starInput);
           playerRatingConForm.appendChild(starLabel);
