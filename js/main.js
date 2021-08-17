@@ -1124,12 +1124,12 @@ function populateHeader(jsonObj){
 
         for(var x = 5; x > 0; x--){
           var starInput = document.createElement("input");
-          starInput.className = "notSelected star star-"+x;
+          starInput.className = "star star-"+x;
           starInput.id = "star-"+x;
           starInput.type = "radio";
           starInput.name = "star";
           var starLabel = document.createElement("label");
-          starLabel.className = "notSelected star star-"+x;
+          starLabel.className = "star star-"+x;
           starLabel.htmlFor = "star-"+x;
           starLabel.num = x;
           starLabel.onclick = function(){
