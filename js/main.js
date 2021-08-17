@@ -1124,12 +1124,12 @@ function populateHeader(jsonObj){
 
         for(var x = 5; x > 0; x--){
           var starInput = document.createElement("input");
-          starInput.className = "star star-"+x;
+          starInput.className = "notSelected star star-"+x;
           starInput.id = "star-"+x;
           starInput.type = "radio";
           starInput.name = "star";
           var starLabel = document.createElement("label");
-          starLabel.className = "star star-"+x;
+          starLabel.className = "notSelected star star-"+x;
           starLabel.htmlFor = "star-"+x;
           starLabel.num = x;
           starLabel.onclick = function(){
@@ -1160,6 +1160,9 @@ function populateHeader(jsonObj){
         };
         var selected = 1;
         function toggleSelected(e){
+          if(){
+
+          }
           if(e.classList.contains("notSelected")){
             e.classList.toggle("notSelected");
             e.other.classList.toggle("notSelected");
