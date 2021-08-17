@@ -777,8 +777,6 @@ function populateHeader(jsonObj){
       }
       ratingContainer.appendChild(playerRatingConForm);
       ratingContainer.appendChild(ratingCount);
-      //showCount.textContent += xp(ratingCount)+" ("+ratingCount+")";
-      //ratingContainer.appendChild(showCount);
     }
   }
 
@@ -1133,6 +1131,9 @@ function populateHeader(jsonObj){
           var starLabel = document.createElement("label");
           starLabel.className = "star star-"+x;
           starLabel.htmlFor = "star-"+x;
+          starLabel.onclick = function(){
+            console.log(x);
+          };
           stars.push({ input: starInput, label: starLabel });
           starConForm.appendChild(starInput);
           starConForm.appendChild(starLabel);
