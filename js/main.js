@@ -1084,7 +1084,7 @@ function populateHeader(jsonObj){
     createErr.className = "createErr";
     createErr.textContent = "";
     createButton.className = "commentButton";
-    createButton.textContent = "Vouch for "+jsonObj.data.profile.handle;
+    createButton.textContent = "Leave a good review for "+jsonObj.data.profile.handle;
     createButton.style.marginTop = "15px";
     header.style.paddingBottom = "18px";
     var editImg = document.createElement("img");
@@ -1094,25 +1094,25 @@ function populateHeader(jsonObj){
         createCommentContainer.className = "cCommentContainer";
         header.removeChild(header.lastChild);
 
-        var vouchContainer = document.createElement("div");
-        vouchContainer.style.display = "flex";
-        vouchContainer.style.justifyContent = "flex-end";
+        var reviewContainer = document.createElement("div");
+        reviewContainer.style.display = "flex";
+        reviewContainer.style.justifyContent = "flex-end";
 
-        var vouchPlus = document.createElement("h3");
-        var vouchMin = document.createElement("h3");
-        vouchPlus.className = "highlight-green cursor";
-        vouchPlus.innerText = "+1";
-        vouchPlus.value = 1;
-        vouchPlus.other = vouchMin;
-        vouchPlus.onclick = function(){
+        var reviewPlus = document.createElement("h3");
+        var reviewMin = document.createElement("h3");
+        reviewPlus.className = "highlight-green cursor";
+        reviewPlus.innerText = "+1";
+        reviewPlus.value = 1;
+        reviewPlus.other = reviewMin;
+        reviewPlus.onclick = function(){
           toggleSelected(this);
         };
 
-        vouchMin.className = "highlight-red shadow-red notSelected cursor";
-        vouchMin.innerText = "-1";
-        vouchMin.value = -1;
-        vouchMin.other = vouchPlus;
-        vouchMin.onclick = function(){
+        reviewMin.className = "highlight-red shadow-red notSelected cursor";
+        reviewMin.innerText = "-1";
+        reviewMin.value = -1;
+        reviewMin.other = reviewPlus;
+        reviewMin.onclick = function(){
           toggleSelected(this);
         };
         var selected = 1;
@@ -1127,18 +1127,18 @@ function populateHeader(jsonObj){
               minWarning.innerText = "Requires Proof";
               minWarning.style.margin = "auto 0";
               minWarning.style.fontSize = "18px";
-              vouchContainer.insertBefore(minWarning, vouchContainer.firstChild);
+              reviewContainer.insertBefore(minWarning, reviewContainer.firstChild);
             }else{
-              vouchContainer.firstChild.remove();
+              reviewContainer.firstChild.remove();
             }
             return;
           }
         }
 
-        vouchContainer.appendChild(vouchMin);
-        vouchContainer.appendChild(vouchPlus);
+        reviewContainer.appendChild(reviewMin);
+        reviewContainer.appendChild(reviewPlus);
 
-        createCommentContainer.appendChild(vouchContainer);
+        createCommentContainer.appendChild(reviewContainer);
 
         var createComment = document.createElement("textarea");
         createComment.maxLength = 600;
@@ -1223,13 +1223,13 @@ function populateHeader(jsonObj){
   }, 150);
 }
 
-function noVouchers(usr){
+function noReviews(usr){
   if(session == 1){
     var firstContainer = document.createElement("div");
     var notFound = document.createElement("p");
     firstContainer.className = "firstContainer";
     notFound.className = "notFound";
-    notFound.textContent = "Has "+usr+" left a lasting impression? \nBe the first to Vouch for them.";
+    notFound.textContent = "Has "+usr+" left a lasting impression? \nBe the first to leave a good review for them.";
     firstContainer.appendChild(notFound);
     containerSection.style.display = "block";
     section.appendChild(firstContainer);
@@ -1242,7 +1242,7 @@ function noVouchers(usr){
     signup.innerHTML = "Sign up";
     signup.href = "register";
     notFound.className = "notFound";
-    notFound.textContent = "Has "+usr+" left a lasting impression? \nBe the first to Vouch for them.";
+    notFound.textContent = "Has "+usr+" left a lasting impression? \nBe the first to leave a good review for the.";
     firstContainer.appendChild(notFound);
     firstContainer.appendChild(signup);
     containerSection.style.display = "block";
@@ -1255,7 +1255,7 @@ function showReview(){
   if(commentCount > 0){
     containerSection.style.display = "block";
   }else{
-    noVouchers(playerUser);
+    noReviews(playerUser);
     return;
   }
   var playerReview = [];
@@ -1299,16 +1299,16 @@ function showReview(){
     //Rating Container
     var ratingContainer = document.createElement("div");
     ratingContainer.className  = "rating-container";
-    var vouch = document.createElement("h3");
+    var review = document.createElement("h3");
     if(comment[i].rating > 0){
-      vouch.innerText = "+1";
-      vouch.classList.add("highlight-green");
+      review.innerText = "+1";
+      review.classList.add("highlight-green");
     }else if(comment[i].rating < 0){
-      vouch.innerText = "-1";
-      vouch.classList.add("highlight-red");
-      vouch.classList.add("shadow-red");
+      review.innerText = "-1";
+      review.classList.add("highlight-red");
+      review.classList.add("shadow-red");
     }
-    ratingContainer.appendChild(vouch);
+    ratingContainer.appendChild(review);
 
     //Rating Container END
     //Comment
@@ -1354,7 +1354,7 @@ function showReview(){
     if(sessionUser == comment[i]["u_creator"]){
       commented = 1
       createButton.onclick = function(){
-        createErr.textContent = "Error: You've already vouched of this Citizen. \n If you wish to edit your comments please edit it using the edit button";
+        createErr.textContent = "Error: You've already left a review of this Citizen. \n If you wish to edit your comments please edit it using the edit button";
         setTimeout(function () {
           createErr.textContent = "";
         }, 5000);
@@ -1370,33 +1370,33 @@ function showReview(){
         if(editing == 0){
           editing = 1;
 
-          var vouchContainer = document.createElement("div");
-          vouchContainer.style.display = "flex";
-          vouchContainer.style.justifyContent = "flex-end";
+          var reviewContainer = document.createElement("div");
+          reviewContainer.style.display = "flex";
+          reviewContainer.style.justifyContent = "flex-end";
 
-          var vouchPlus = document.createElement("h3");
-          var vouchMin = document.createElement("h3");
-          vouchPlus.className = "highlight-green notSelected cursor";
-          vouchPlus.innerText = "+1";
-          vouchPlus.value = 1;
-          vouchPlus.other = vouchMin;
-          vouchPlus.onclick = function(){
+          var reviewPlus = document.createElement("h3");
+          var reviewMin = document.createElement("h3");
+          reviewPlus.className = "highlight-green notSelected cursor";
+          reviewPlus.innerText = "+1";
+          reviewPlus.value = 1;
+          reviewPlus.other = reviewMin;
+          reviewPlus.onclick = function(){
             toggleSelected(this);
           };
 
-          vouchMin.className = "highlight-red shadow-red notSelected cursor";
-          vouchMin.innerText = "-1";
-          vouchMin.value = -1;
-          vouchMin.other = vouchPlus;
-          vouchMin.onclick = function(){
+          reviewMin.className = "highlight-red shadow-red notSelected cursor";
+          reviewMin.innerText = "-1";
+          reviewMin.value = -1;
+          reviewMin.other = reviewPlus;
+          reviewMin.onclick = function(){
             toggleSelected(this);
           };
           var newRating;
           if(userComment.rating > 0){
-            vouchPlus.classList.toggle("notSelected");
+            reviewPlus.classList.toggle("notSelected");
             newRating = 1;
           }else if (userComment.rating < 0) {
-            vouchMin.classList.toggle("notSelected");
+            reviewMin.classList.toggle("notSelected");
             newRating = -1;
           }
           function toggleSelected(e){
@@ -1408,8 +1408,8 @@ function showReview(){
             }
           }
 
-          vouchContainer.appendChild(vouchMin);
-          vouchContainer.appendChild(vouchPlus);
+          reviewContainer.appendChild(reviewMin);
+          reviewContainer.appendChild(reviewPlus);
 
           var editContainer = document.createElement("div");
           editContainer.className = "createCommentContainer";
@@ -1448,7 +1448,7 @@ function showReview(){
           editSubmit.innerHTML = "Submit";
           editSubmit.id = this.parentElement.parentElement.children[1].id;
 
-          editContainer.appendChild(vouchContainer);
+          editContainer.appendChild(reviewContainer);
           editContainer.appendChild(editBox);
           editContainer.appendChild(manageEditContainer);
           manageEditContainer.appendChild(editorCount);

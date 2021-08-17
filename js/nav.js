@@ -178,15 +178,15 @@ function showUser(){
   var experience = document.createElement("p");
   experience.className = "rBold";
   experience.innerText = xp(user.vouchers);
-  var vouches = document.createElement("p");
-  vouches.innerText = "Vouches: "+user.vouchers;
+  var reviews = document.createElement("p");
+  reviews.innerText = "Rating: "+user.vouchers;
   //var unique = document.createElement("p");
-  //unique.innerText = "Unique Vouches: 54";
+  //unique.innerText = "Unique reviews: 54";
   var contracts = document.createElement("p");
   contracts.innerText = "Completed Contracts: "+user.completed;
 
   miniRep.appendChild(experience);
-  miniRep.appendChild(vouches);
+  miniRep.appendChild(reviews);
   //miniRep.appendChild(unique);
   miniRep.appendChild(contracts);
 
