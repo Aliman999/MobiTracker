@@ -1659,7 +1659,7 @@ function uSearch(searched, length){
     }
 
     showsbrc.appendChild(playerRatingConForm);
-    showsbrc.innerHTML += "<p>"+searched[i].reviewed_count+"</p>";
+    showsbrc.innerHTML += "("+searched[i].reviewed_count+")";
 
     sbr.appendChild(showsbrc);
     sb[i].appendChild(sbr);
