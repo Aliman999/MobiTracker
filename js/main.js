@@ -1641,7 +1641,7 @@ function uSearch(searched, length){
     playerRatingContainer.appendChild(playerRatingConForm);
 
     for (var x = 5; x > 0; x--) {
-      if (x <= searched[i].rating) {
+      if (x <= searched[i].avgRating) {
         var starLabel = document.createElement("label");
         starLabel.className = "nStarFull";
         starLabel.style.fontSize = "24px";
