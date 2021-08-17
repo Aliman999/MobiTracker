@@ -1332,7 +1332,7 @@ function showReview(){
     playerRatingContainer.appendChild(playerRatingConForm);
 
     for (var x = 5; x > 0; x--) {
-      if (x < comment[i].rating) {
+      if (x <= comment[i].rating) {
         var starLabel = document.createElement("label");
         starLabel.className = "nStarFull";
         playerRatingConForm.appendChild(starLabel);
