@@ -1420,6 +1420,9 @@ function showReview(){
             starInput.id = "star-" + x;
             starInput.type = "radio";
             starInput.name = "star";
+            if(x <= comment[i].rating){
+              starInput.checked = true;
+            }
             var starLabel = document.createElement("label");
             starLabel.className = "star star-" + x;
             starLabel.htmlFor = "star-" + x;
