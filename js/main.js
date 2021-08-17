@@ -1409,37 +1409,49 @@ function showReview(){
           reviewContainer.style.display = "flex";
           reviewContainer.style.justifyContent = "flex-end";
 
-          var reviewPlus = document.createElement("h3");
-          var reviewMin = document.createElement("h3");
-          reviewPlus.className = "highlight-green notSelected cursor";
-          reviewPlus.innerText = "+1";
-          reviewPlus.value = 1;
-          reviewPlus.other = reviewMin;
-          reviewPlus.onclick = function(){
-            toggleSelected(this);
-          };
+          var starContainer = document.createElement("div");
+          var starConForm = document.createElement("form");
+          starContainer.appendChild(starConForm);
+          var stars = [];
 
-          reviewMin.className = "highlight-red shadow-red notSelected cursor";
-          reviewMin.innerText = "-1";
-          reviewMin.value = -1;
-          reviewMin.other = reviewPlus;
-          reviewMin.onclick = function(){
-            toggleSelected(this);
-          };
-          var newRating;
-          if(userComment.rating > 0){
-            reviewPlus.classList.toggle("notSelected");
-            newRating = 1;
-          }else if (userComment.rating < 0) {
-            reviewMin.classList.toggle("notSelected");
-            newRating = -1;
+          for (var x = 5; x > 0; x--) {
+            var starInput = document.createElement("input");
+            starInput.className = "star star-" + x;
+            starInput.id = "star-" + x;
+            starInput.type = "radio";
+            starInput.name = "star";
+            var starLabel = document.createElement("label");
+            starLabel.className = "star star-" + x;
+            starLabel.htmlFor = "star-" + x;
+            starLabel.num = x;
+            starLabel.onclick = function () {
+              toggleSelected(this);
+            };
+            stars.push({ input: starInput, label: starLabel });
+            starConForm.appendChild(starInput);
+            starConForm.appendChild(starLabel);
           }
-          function toggleSelected(e){
-            if(e.classList.contains("notSelected")){
-              e.classList.toggle("notSelected");
-              e.other.classList.toggle("notSelected");
-              newRating = e.value;
-              return;
+          reviewContainer.appendChild(starContainer);
+
+          var selected = 0;
+          function toggleSelected(e) {
+            if (!document.getElementById(e.htmlFor).checked) {
+              selected = e.num;
+              if (selected <= 2) {
+                if (reviewContainer.firstChild.id != "warning") {
+                  var minWarning = document.createElement("p");
+                  minWarning.id = "warning";
+                  minWarning.className = "highlight-red shadow-red";
+                  minWarning.innerText = "Requires Proof";
+                  minWarning.style.margin = "auto 0";
+                  minWarning.style.fontSize = "18px";
+                  reviewContainer.insertBefore(minWarning, reviewContainer.firstChild);
+                }
+              } else {
+                if (reviewContainer.firstChild.id == "warning") {
+                  reviewContainer.firstChild.remove();
+                }
+              }
             }
           }
 
