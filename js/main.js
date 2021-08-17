@@ -766,6 +766,10 @@ function populateHeader(jsonObj){
           var starLabel = document.createElement("label");
           starLabel.className = "nStarFull";
           playerRatingConForm.appendChild(starLabel);
+        }else{
+          var starLabel = document.createElement("label");
+          starLabel.className = "nStarEmpty";
+          playerRatingConForm.appendChild(starLabel);
         }
       }
       ratingContainer.appendChild(playerRatingConForm);
