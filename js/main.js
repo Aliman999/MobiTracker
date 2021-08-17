@@ -1508,7 +1508,7 @@ function showReview(){
           this.parentElement.parentElement.children[2].style.display = "none";
           this.parentElement.parentElement.insertBefore(editContainer, this.parentElement.parentElement.children[2]);
           editSubmit.onclick = function(){
-            updateComment(editSubmit.cid, newRating, editBox.value);
+            updateComment(editSubmit.cid, selected, editBox.value);
           };
           document.getElementsByClassName("createErr")[0].textContent = "";
 
