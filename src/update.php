@@ -18,9 +18,9 @@ if (isset($headers)) {
     $rating = $_POST['rating'];
     $comment = $_POST['comment'];
 
-    //ini_set('display_errors', 1);
-    //ini_set('display_startup_errors', 1);
-    //error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
 
     $param_id = $param_rating = $param_comment = '';
 
