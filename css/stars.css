@@ -15,6 +15,7 @@ label.star {
   font-size: 36px;
   color: #C4D7E6;
   transition: all .2s;
+  display: flex;
 }
 
 input.star:checked ~ label.star:before {
@@ -43,6 +44,7 @@ label.nStarFull{
   font-size: 36px;
   color: #C4D7E6;
   transition: all .2s;
+  display: flex;
 }
 label.nStarFull:before{
   content: 'star';
