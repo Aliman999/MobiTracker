@@ -1455,9 +1455,6 @@ function showReview(){
             }
           }
 
-          reviewContainer.appendChild(reviewMin);
-          reviewContainer.appendChild(reviewPlus);
-
           var editContainer = document.createElement("div");
           editContainer.className = "createCommentContainer";
           var manageEditContainer = document.createElement("div");
