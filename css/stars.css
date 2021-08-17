@@ -7,7 +7,7 @@ input.star { display: none; }
 
 label.star {
   float: right;
-  padding: 10px;
+  padding: 2px;
   font-size: 36px;
   color: #C4D7E6;
   transition: all .2s;
@@ -35,7 +35,7 @@ label.star:before {
 
 label.nStarFull{
   float: right;
-  padding: 10px;
+  padding: 2px;
   font-size: 36px;
   color: #C4D7E6;
   transition: all .2s;
@@ -47,7 +47,7 @@ label.nStarFull:before{
 
 label.nStarEmpty{
   float: right;
-  padding: 10px;
+  padding: 2px;
   font-size: 36px;
   color: #C4D7E6;
   transition: all .2s;
