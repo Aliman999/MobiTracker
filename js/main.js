@@ -1161,24 +1161,6 @@ function populateHeader(jsonObj){
               }
             }
           }
-          /*
-          if(e.classList.contains("notSelected")){
-            e.classList.toggle("notSelected");
-            e.other.classList.toggle("notSelected");
-            selected = e.value;
-            if(selected == -1){
-              var minWarning = document.createElement("p");
-              minWarning.className = "highlight-red shadow-red";
-              minWarning.innerText = "Requires Proof";
-              minWarning.style.margin = "auto 0";
-              minWarning.style.fontSize = "18px";
-              reviewContainer.insertBefore(minWarning, reviewContainer.firstChild);
-            }else{
-              reviewContainer.firstChild.remove();
-            }
-            return;
-          }
-          */
         }
 
         createCommentContainer.appendChild(reviewContainer);
@@ -1343,15 +1325,24 @@ function showReview(){
     var ratingContainer = document.createElement("div");
     ratingContainer.className  = "rating-container";
     var review = document.createElement("h3");
-    if(comment[i].rating > 0){
-      review.innerText = "+1";
-      review.classList.add("highlight-green");
-    }else if(comment[i].rating < 0){
-      review.innerText = "-1";
-      review.classList.add("highlight-red");
-      review.classList.add("shadow-red");
+
+    var playerRatingContainer = document.createElement("div");
+    var playerRatingConForm = document.createElement("form");
+    playerRatingContainer.appendChild(playerRatingConForm);
+
+    for (var x = 5; x > 0; x--) {
+      if (x < comment[i].rating) {
+        var starLabel = document.createElement("label");
+        starLabel.className = "nStarFull";
+        playerRatingConForm.appendChild(starLabel);
+      } else {
+        var starLabel = document.createElement("label");
+        starLabel.className = "nStarEmpty";
+        playerRatingConForm.appendChild(starLabel);
+      }
     }
-    ratingContainer.appendChild(review);
+    
+    ratingContainer.appendChild(playerRatingConForm);
 
     //Rating Container END
     //Comment
