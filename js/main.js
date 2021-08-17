@@ -1084,7 +1084,7 @@ function populateHeader(jsonObj){
     createErr.className = "createErr";
     createErr.textContent = "";
     createButton.className = "commentButton";
-    createButton.textContent = "Leave a good review for "+jsonObj.data.profile.handle;
+    createButton.textContent = "Rate "+jsonObj.data.profile.handle;
     createButton.style.marginTop = "15px";
     header.style.paddingBottom = "18px";
     var editImg = document.createElement("img");
