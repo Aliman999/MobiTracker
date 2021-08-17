@@ -15,7 +15,7 @@ label.star {
 
 input.star:checked ~ label.star:before {
   content: 'star';
-  color: #FD4;
+  color: #C4D7E6;
   transition: all .25s;
 }
 
