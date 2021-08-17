@@ -1098,6 +1098,25 @@ function populateHeader(jsonObj){
         reviewContainer.style.display = "flex";
         reviewContainer.style.justifyContent = "flex-end";
 
+        var starContainer = document.createElement("div");
+        var starConForm = document.createElement("form");
+        starContainer.appendChild(starConForm);
+        var stars = [];
+
+        for(var x = 5; x > 0; x--){
+          var starInput = document.createElement("input");
+          starInput.className = "star star-"+x;
+          starInput.id = "star-"+x;
+          starInput.type = radio;
+          starInput.name = "star";
+          var starLabel = document.createElement("label");
+          starLabel.className = "star star-"+x;
+          starLabel.for = "star-"+x;
+          stars.push({ input: starInput, label: starLabel });
+          starConForm.appendChild(starInput);
+          starConForm.appendChild(starLabel);
+        }
+
         var reviewPlus = document.createElement("h3");
         var reviewMin = document.createElement("h3");
         reviewPlus.className = "highlight-green cursor";
