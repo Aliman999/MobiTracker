@@ -1083,6 +1083,7 @@ function populateHeader(jsonObj){
   starCache.className = "star star-" + 1;
   starCache.htmlFor = "star-" + 1;
   header.appendChild(starCache);
+  starCache.remove();
 
   //Add Comment
   if(session && sessionUser !== node.value){
