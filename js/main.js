@@ -1401,6 +1401,7 @@ function showReview(){
       editComment.className = "manageEdit commentSubmit";
       editComment.id = "Edit";
       editComment.innerHTML = "Edit";
+      editComment.rating = comment[i].rating;
       editComment.onclick = function(){
         if(editing == 0){
           editing = 1;
