@@ -1131,8 +1131,9 @@ function populateHeader(jsonObj){
           var starLabel = document.createElement("label");
           starLabel.className = "star star-"+x;
           starLabel.htmlFor = "star-"+x;
+          starLabel.num = x;
           starLabel.onclick = function(){
-            console.log(x);
+            console.log(this.num);
           };
           stars.push({ input: starInput, label: starLabel });
           starConForm.appendChild(starInput);
