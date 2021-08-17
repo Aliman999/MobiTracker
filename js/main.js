@@ -773,6 +773,7 @@ function populateHeader(jsonObj){
         }
       }
       ratingContainer.appendChild(playerRatingConForm);
+      ratingContainer.innerText += "("+ratingCount+")";
       //showCount.textContent += xp(ratingCount)+" ("+ratingCount+")";
       //ratingContainer.appendChild(showCount);
     }
