@@ -1644,10 +1644,14 @@ function uSearch(searched, length){
       if (x <= searched[i].rating) {
         var starLabel = document.createElement("label");
         starLabel.className = "nStarFull";
+        starLabel.style.fontSize = "24px";
+        starLabel.style.fontWeight = "100";
         playerRatingConForm.appendChild(starLabel);
       } else {
         var starLabel = document.createElement("label");
         starLabel.className = "nStarEmpty";
+        starLabel.style.fontSize = "24px";
+        starLabel.style.fontWeight = "100";
         playerRatingConForm.appendChild(starLabel);
       }
     }
