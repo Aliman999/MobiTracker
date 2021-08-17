@@ -746,8 +746,12 @@ function populateHeader(jsonObj){
   //Rating Container
   var ratingContainer = document.createElement("div");
   ratingContainer.className  = "ptitle faded";
-  var showCount = document.createElement("p");
-  showCount.className = "ratingCount";
+
+  var playerRatingContainer = document.createElement("div");
+  var playerRatingConForm = document.createElement("form");
+  playerRatingContainer.appendChild(starConForm);
+  var stars = [];
+
   var queryString = "?username=" + node.value;
   readRating.open("GET", "src/rating.php" + queryString, true);
   readRating.setRequestHeader(tokenHeader.name,tokenHeader.content);
@@ -757,10 +761,27 @@ function populateHeader(jsonObj){
       var ratings = JSON.parse(readRating.response);
       var ratingCount = ratings.reviewed_count;
       var avgRating = ratings.avgRating;
+
+      for (var x = 5; x > 0; x--) {
+        if(x > avgRating){
+          var starInput = document.createElement("input");
+          starInput.className = "star star-" + x;
+          starInput.id = "star-" + x;
+          starInput.type = "radio";
+          starInput.name = "star";
+          var starLabel = document.createElement("label");
+          starLabel.className = "star star-" + x;
+          stars.push({ input: starInput, label: starLabel });
+          playerRatingConForm.appendChild(starInput);
+          playerRatingConForm.appendChild(starLabel);
+        }
+      }
+
       showCount.textContent = xp(ratingCount)+" ("+ratingCount+")";
       ratingContainer.appendChild(showCount);
     }
   }
+
 
   header.appendChild(ratingContainer);
   //Rating Container END
@@ -1078,12 +1099,6 @@ function populateHeader(jsonObj){
   }
   header.appendChild(playerbio);
   //Player Bio END
-
-  var starCache = document.createElement("label");
-  starCache.className = "star star-" + 1;
-  starCache.htmlFor = "star-" + 1;
-  starCache.style.position = "absolute";
-  header.appendChild(starCache);
 
   //Add Comment
   if(session && sessionUser !== node.value){

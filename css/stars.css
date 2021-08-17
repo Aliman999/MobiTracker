@@ -32,3 +32,18 @@ label.star:before {
   content: 'star_border';
   font-family: 'Material Icons';
 }
+
+label.nStarFull{
+  float: right;
+  padding: 10px;
+  font-size: 36px;
+  color: #C4D7E6;
+  transition: all .2s;
+}
+label.nStarEmpty{
+  float: right;
+  padding: 10px;
+  font-size: 36px;
+  color: #C4D7E6;
+  transition: all .2s;
+}
