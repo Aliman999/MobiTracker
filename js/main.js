@@ -1658,8 +1658,8 @@ function uSearch(searched, length){
       }
     }
 
-    showsbrc.appendChild(playerRatingConForm);
-    showsbrc.innerHTML += "("+searched[i].reviewed_count+")";
+    showsbr.appendChild(playerRatingConForm);
+    showsbrc.innerHTML = "("+searched[i].reviewed_count+")";
 
     sbr.appendChild(showsbrc);
     sb[i].appendChild(sbr);
