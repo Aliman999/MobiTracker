@@ -1080,10 +1080,10 @@ function populateHeader(jsonObj){
   //Player Bio END
 
   var starCache = document.createElement("label");
-  starLabel.className = "star star-" + 1;
-  starLabel.htmlFor = "star-" + 1;
-  starLabel.style.display = "none";
-  header.appendChild();
+  starCache.className = "star star-" + 1;
+  starCache.htmlFor = "star-" + 1;
+  starCache.style.display = "none";
+  header.appendChild(starCache);
 
   //Add Comment
   if(session && sessionUser !== node.value){
