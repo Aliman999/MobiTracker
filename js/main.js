@@ -765,7 +765,6 @@ function populateHeader(jsonObj){
         if(x > avgRating){
           var starLabel = document.createElement("label");
           starLabel.className = "nStarFull";
-          playerRatingConForm.appendChild(starInput);
           playerRatingConForm.appendChild(starLabel);
         }
       }
