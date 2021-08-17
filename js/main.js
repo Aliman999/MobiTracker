@@ -1145,7 +1145,7 @@ function populateHeader(jsonObj){
         function toggleSelected(e){
           if(!document.getElementById(e.htmlFor).checked){
             selected = e.num;
-            if(selected == 1){
+            if(selected <= 2){
               var minWarning = document.createElement("p");
               minWarning.id = "warning";
               minWarning.className = "highlight-red shadow-red";
