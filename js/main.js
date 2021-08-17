@@ -750,7 +750,6 @@ function populateHeader(jsonObj){
   var playerRatingContainer = document.createElement("div");
   var playerRatingConForm = document.createElement("form");
   playerRatingContainer.appendChild(playerRatingConForm);
-  var stars = [];
 
   var queryString = "?username=" + node.value;
   readRating.open("GET", "src/rating.php" + queryString, true);
@@ -766,7 +765,6 @@ function populateHeader(jsonObj){
         if(x > avgRating){
           var starLabel = document.createElement("label");
           starLabel.className = "nStarFull";
-          stars.push({ input: starInput, label: starLabel });
           playerRatingConForm.appendChild(starInput);
           playerRatingConForm.appendChild(starLabel);
         }
