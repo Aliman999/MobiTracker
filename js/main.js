@@ -1141,9 +1141,13 @@ function populateHeader(jsonObj){
         }
         reviewContainer.appendChild(starContainer);
 
+        var selected = 0;
         function toggleSelected(e){
-          if(e.classList.contains("notSelected")){
-
+          if(!document.getElementById(e.htmlFor).checked){
+            selected = e.num;
+            if(selected = 1){
+              
+            }
           }
           if(e.classList.contains("notSelected")){
             e.classList.toggle("notSelected");
