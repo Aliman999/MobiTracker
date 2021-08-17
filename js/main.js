@@ -1107,7 +1107,7 @@ function populateHeader(jsonObj){
           var starInput = document.createElement("input");
           starInput.className = "star star-"+x;
           starInput.id = "star-"+x;
-          starInput.type = radio;
+          starInput.type = "radio";
           starInput.name = "star";
           var starLabel = document.createElement("label");
           starLabel.className = "star star-"+x;
