@@ -1421,7 +1421,7 @@ function showReview(){
             starInput.id = "star-" + x;
             starInput.type = "radio";
             starInput.name = "star";
-            if(x <= comment[i].rating){
+            if(x <= this.rating){
               starInput.checked = true;
             }
             var starLabel = document.createElement("label");
