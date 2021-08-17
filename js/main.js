@@ -1133,7 +1133,7 @@ function populateHeader(jsonObj){
           starLabel.htmlFor = "star-"+x;
           starLabel.num = x;
           starLabel.onclick = function(){
-            console.log(this.num);
+            toggleSelected(this.num);
           };
           stars.push({ input: starInput, label: starLabel });
           starConForm.appendChild(starInput);
@@ -1141,24 +1141,6 @@ function populateHeader(jsonObj){
         }
         reviewContainer.appendChild(starContainer);
 
-        var reviewPlus = document.createElement("h3");
-        var reviewMin = document.createElement("h3");
-        reviewPlus.className = "highlight-green cursor";
-        reviewPlus.innerText = "+1";
-        reviewPlus.value = 1;
-        reviewPlus.other = reviewMin;
-        reviewPlus.onclick = function(){
-          toggleSelected(this);
-        };
-
-        reviewMin.className = "highlight-red shadow-red notSelected cursor";
-        reviewMin.innerText = "-1";
-        reviewMin.value = -1;
-        reviewMin.other = reviewPlus;
-        reviewMin.onclick = function(){
-          toggleSelected(this);
-        };
-        var selected = 1;
         function toggleSelected(e){
           if(e.classList.contains("notSelected")){
 
