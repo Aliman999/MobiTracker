@@ -33,7 +33,7 @@ if (isset($headers)) {
       $sql = "DELETE FROM comments WHERE id = $id;";
       $result = mysqli_query($link, $sql);
 
-      $sql = "SELECT rating FROM comments WHERE (r_player = '$r_player');";
+      $sql = "SELECT rating, avgRating FROM comments WHERE (r_player = '$r_player');";
       $result = mysqli_query($link, $sql);
       $row = mysqli_fetch_assoc($result);
       $rating = round($row['avgRating']);
