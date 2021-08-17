@@ -1111,7 +1111,7 @@ function populateHeader(jsonObj){
           starInput.name = "star";
           var starLabel = document.createElement("label");
           starLabel.className = "star star-"+x;
-          starLabel.for = "star-"+x;
+          starLabel.htmlFor = "star-"+x;
           stars.push({ input: starInput, label: starLabel });
           starConForm.appendChild(starInput);
           starConForm.appendChild(starLabel);
