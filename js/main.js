@@ -1133,7 +1133,7 @@ function populateHeader(jsonObj){
           starLabel.htmlFor = "star-"+x;
           starLabel.num = x;
           starLabel.onclick = function(){
-            toggleSelected(this.num);
+            toggleSelected(this);
           };
           stars.push({ input: starInput, label: starLabel });
           starConForm.appendChild(starInput);
