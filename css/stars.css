@@ -3,10 +3,6 @@ div.stars {
   display: inline-block;
 }
 
-form{
-  display: flex;
-}
-
 input.star { display: none; }
 
 label.star {
