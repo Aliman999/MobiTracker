@@ -1159,6 +1159,7 @@ function populateHeader(jsonObj){
               }
             }
           }
+          /*
           if(e.classList.contains("notSelected")){
             e.classList.toggle("notSelected");
             e.other.classList.toggle("notSelected");
@@ -1175,6 +1176,7 @@ function populateHeader(jsonObj){
             }
             return;
           }
+          */
         }
 
         createCommentContainer.appendChild(reviewContainer);
