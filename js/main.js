@@ -1116,6 +1116,7 @@ function populateHeader(jsonObj){
           starConForm.appendChild(starInput);
           starConForm.appendChild(starLabel);
         }
+        reviewContainer.appendChild(starContainer);
 
         var reviewPlus = document.createElement("h3");
         var reviewMin = document.createElement("h3");
