@@ -1636,8 +1636,22 @@ function uSearch(searched, length){
     var showsbrc = document.createElement("p");
     showsbrc.className = "sbrc";
 
+    var playerRatingContainer = document.createElement("div");
+    var playerRatingConForm = document.createElement("form");
+    playerRatingContainer.appendChild(playerRatingConForm);
 
-    showsbrc.textContent = xp(searched[i].reviewed_count)+" ("+searched[i].reviewed_count+")";
+    for (var x = 5; x > 0; x--) {
+      if (x <= searched[i].rating) {
+        var starLabel = document.createElement("label");
+        starLabel.className = "nStarFull";
+        playerRatingConForm.appendChild(starLabel);
+      } else {
+        var starLabel = document.createElement("label");
+        starLabel.className = "nStarEmpty";
+        playerRatingConForm.appendChild(starLabel);
+      }
+    }
+    showsbrc.appendChild(playerRatingConForm);
 
     sbr.appendChild(showsbrc);
     sb[i].appendChild(sbr);
