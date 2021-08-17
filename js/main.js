@@ -1080,8 +1080,8 @@ function populateHeader(jsonObj){
   //Player Bio END
 
   var starCache = document.createElement("label");
-  starLabel.className = "star star-" + x;
-  starLabel.htmlFor = "star-" + x;
+  starLabel.className = "star star-" + 1;
+  starLabel.htmlFor = "star-" + 1;
   starLabel.style.display = "none";
   header.appendChild();
 
