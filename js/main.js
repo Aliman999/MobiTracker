@@ -1079,6 +1079,10 @@ function populateHeader(jsonObj){
   header.appendChild(playerbio);
   //Player Bio END
 
+  var starCache = document.createElement("label");
+  starLabel.className = "star star-" + x;
+  starLabel.htmlFor = "star-" + x;
+
   //Add Comment
   if(session && sessionUser !== node.value){
     createErr.className = "createErr";
