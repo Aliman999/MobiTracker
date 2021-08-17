@@ -1163,9 +1163,6 @@ function populateHeader(jsonObj){
           }
         }
 
-        reviewContainer.appendChild(reviewMin);
-        reviewContainer.appendChild(reviewPlus);
-
         createCommentContainer.appendChild(reviewContainer);
 
         var createComment = document.createElement("textarea");
