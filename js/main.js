@@ -1146,13 +1146,15 @@ function populateHeader(jsonObj){
           if(!document.getElementById(e.htmlFor).checked){
             selected = e.num;
             if(selected <= 2){
-              var minWarning = document.createElement("p");
-              minWarning.id = "warning";
-              minWarning.className = "highlight-red shadow-red";
-              minWarning.innerText = "Requires Proof";
-              minWarning.style.margin = "auto 0";
-              minWarning.style.fontSize = "18px";
-              reviewContainer.insertBefore(minWarning, reviewContainer.firstChild);
+              if (reviewContainer.firstChild.id != "warning") {
+                var minWarning = document.createElement("p");
+                minWarning.id = "warning";
+                minWarning.className = "highlight-red shadow-red";
+                minWarning.innerText = "Requires Proof";
+                minWarning.style.margin = "auto 0";
+                minWarning.style.fontSize = "18px";
+                reviewContainer.insertBefore(minWarning, reviewContainer.firstChild);
+              }
             }else{
               if(reviewContainer.firstChild.id == "warning"){
                 reviewContainer.firstChild.remove();
