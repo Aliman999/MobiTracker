@@ -1537,12 +1537,12 @@ function showReview(){
       commentContainer.appendChild(manageComment);
       manageComment.appendChild(flagComment);
     }
-    if(comment[i].rating < 0 && comment[i].approval == 0){
+    if(comment[i].rating <= 2 && comment[i].approval == 0){
       var pending = document.createElement("p");
       pending.className = "validity highlight-red shadow-red";
       pending.innerText = "Pending Admin Validity";
       manageComment.insertBefore(pending, manageComment.firstChild);
-    }else if(comment[i].rating < 0 && comment[i].approval == 1){
+    }else if(comment[i].rating <= 2 && comment[i].approval == 1){
       var approved = document.createElement("p");
       approved.className = "validity highlight-green";
       approved.innerText = "Approved";
