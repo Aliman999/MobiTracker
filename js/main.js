@@ -249,7 +249,7 @@ function deleteComment(commentID){
   deleteComments.open("POST", "src/delete.php");
   deleteComments.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   deleteComments.setRequestHeader(tokenHeader.name,tokenHeader.content);
-  deleteComments.send("id="+commentID.id);
+  deleteComments.send("id="+commentID.cid);
   deleteComments.onload = function(){
     var response = deleteComments.response;
     mtco();
