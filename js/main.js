@@ -776,7 +776,7 @@ function populateHeader(jsonObj){
           playerRatingConForm.appendChild(starLabel);
         }
       }
-
+      showCount.appendChild(playerRatingConForm);
       showCount.textContent = xp(ratingCount)+" ("+ratingCount+")";
       ratingContainer.appendChild(showCount);
     }
