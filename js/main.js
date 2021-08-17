@@ -1497,7 +1497,7 @@ function showReview(){
           editCancel.innerHTML = "Cancel"
           editSubmit.className = "editSubmit commentSubmit";
           editSubmit.innerHTML = "Submit";
-          editSubmit.cid = this.parentElement.parentElement.children[1].id;
+          editSubmit.cid = this.parentElement.parentElement.children[1].cid;
 
           editContainer.appendChild(reviewContainer);
           editContainer.appendChild(editBox);
