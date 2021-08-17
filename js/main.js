@@ -1082,6 +1082,8 @@ function populateHeader(jsonObj){
   var starCache = document.createElement("label");
   starLabel.className = "star star-" + x;
   starLabel.htmlFor = "star-" + x;
+  starLabel.style.display = "none";
+  header.appendChild();
 
   //Add Comment
   if(session && sessionUser !== node.value){
