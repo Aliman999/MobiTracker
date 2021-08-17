@@ -1314,7 +1314,7 @@ function showReview(){
     playerVerify.src = "src/verified.png";
     playerVerify.className = "verified";
     playerUsername.className = "player-username";
-    playerUsername.id = comment[i]["u_creator"];
+    playerUsername.username = comment[i]["u_creator"];
     if(comment[i]["verify"] == 1){
       playerminName.appendChild(playerVerify);
     }
@@ -1352,7 +1352,7 @@ function showReview(){
     creatorComment.className = "comment";
     creatorComment.innerHTML = comment[i]["comment"];
     if(session && sessionUser == comment[i]["u_creator"]){
-      creatorComment.id = comment[i]["id"];
+      creatorComment.cid = comment[i]["id"];
       var userComment = comment[i];
     }
     commentContainer.className = "commentContainer";
@@ -1366,27 +1366,27 @@ function showReview(){
     if(comment[i]["u_creator"] != sessionUser){
       var flagComment = document.createElement("button");
       flagComment.className = "manageEdit commentSubmit flag";
-      flagComment.id = comment[i]["id"];
+      flagComment.cid = comment[i]["id"];
       if(flagged.includes(comment[i]["id"])){
         flagComment.innerHTML = "Unreport";
       }else{
         flagComment.innerHTML = "Report";
       }
       flagComment.onclick = function(){
-        if(flagged.includes(this.id)){
-          flag(this.id,0);
+        if(flagged.includes(this.cid)){
+          flag(this.cid,0);
           this.innerHTML = "Report";
-          flagged = flagged.replace(this.id,"");
+          flagged = flagged.replace(this.cid,"");
         }else{
-          flag(this.id,1);
+          flag(this.cid,1);
           this.innerHTML = "Unreport";
-          flagged = flagged+this.id;
+          flagged = flagged+this.cid;
         }
       };
     }
     //Manage END
     //Manage Comment
-    if(sessionUser == comment[i]["u_creator"]){
+    if(sessionUser == comment[i].u_creator){
       commented = 1
       createButton.onclick = function(){
         createErr.textContent = "Error: You've already left a review of this Citizen. \n If you wish to edit your comments please edit it using the edit button";
@@ -1493,7 +1493,7 @@ function showReview(){
           editCancel.innerHTML = "Cancel"
           editSubmit.className = "editSubmit commentSubmit";
           editSubmit.innerHTML = "Submit";
-          editSubmit.id = this.parentElement.parentElement.children[1].id;
+          editSubmit.cid = this.parentElement.parentElement.children[1].id;
 
           editContainer.appendChild(reviewContainer);
           editContainer.appendChild(editBox);
@@ -1507,7 +1507,7 @@ function showReview(){
           this.parentElement.parentElement.children[2].style.display = "none";
           this.parentElement.parentElement.insertBefore(editContainer, this.parentElement.parentElement.children[2]);
           editSubmit.onclick = function(){
-            updateComment(editSubmit.id, newRating, editBox.value);
+            updateComment(editSubmit.cid, newRating, editBox.value);
           };
           document.getElementsByClassName("createErr")[0].textContent = "";
 
@@ -1521,7 +1521,7 @@ function showReview(){
       var deleteBtn = document.createElement("button");
       deleteBtn.className = "manageEdit commentSubmit deleteBtn highlight-red";
       if(session && sessionUser == comment[i]["u_creator"]){
-        deleteBtn.id = comment[i]["id"];
+        deleteBtn.cid = comment[i]["id"];
       }
       deleteBtn.innerHTML = "Delete";
       deleteBtn.onclick = function(){
