@@ -759,6 +759,8 @@ function populateHeader(jsonObj){
     if(readRating.readyState == 4){
       var ratings = JSON.parse(readRating.response);
       var ratingCount = ratings.reviewed_count;
+      var ratingCount = document.createElement("p");
+      ratingCount.innerText = "("+ratings.reviewed_count+")";
       var avgRating = parseInt(ratings.avgRating);
 
       for (var x = 5; x > 0; x--) {
@@ -773,7 +775,7 @@ function populateHeader(jsonObj){
         }
       }
       ratingContainer.appendChild(playerRatingConForm);
-      ratingContainer.innerText += "("+ratingCount+")";
+      ratingContainer.appendChild(ratingCount);
       //showCount.textContent += xp(ratingCount)+" ("+ratingCount+")";
       //ratingContainer.appendChild(showCount);
     }
