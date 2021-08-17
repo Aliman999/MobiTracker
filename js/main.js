@@ -1286,6 +1286,7 @@ function showReview(){
   var playerReview = [];
   for(var i = 0; i < commentCount; i++){
     editing = 0;
+    comment[i].rating = parseInt(comment[i].rating);
     //Creator Container
     playerReview.push(document.createElement("div"));
     playerReview[i].className = "player-review faded-section";
@@ -1341,7 +1342,7 @@ function showReview(){
         playerRatingConForm.appendChild(starLabel);
       }
     }
-    
+
     ratingContainer.appendChild(playerRatingConForm);
 
     //Rating Container END
