@@ -759,7 +759,7 @@ function populateHeader(jsonObj){
     if(readRating.readyState == 4){
       var ratings = JSON.parse(readRating.response);
       var ratingCount = ratings.reviewed_count;
-      var avgRating = ratings.avgRating;
+      var avgRating = parseInt(ratings.avgRating);
 
       for (var x = 5; x > 0; x--) {
         if(x > avgRating){
