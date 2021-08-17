@@ -51,6 +51,7 @@ label.nStarEmpty{
   font-size: 36px;
   color: #C4D7E6;
   transition: all .2s;
+  display: flex;
 }
 label.nStarEmpty:before{
   content: 'star_border';
