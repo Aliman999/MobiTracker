@@ -1145,8 +1145,18 @@ function populateHeader(jsonObj){
         function toggleSelected(e){
           if(!document.getElementById(e.htmlFor).checked){
             selected = e.num;
-            if(selected = 1){
-              
+            if(selected == 1){
+              var minWarning = document.createElement("p");
+              minWarning.id = "warning";
+              minWarning.className = "highlight-red shadow-red";
+              minWarning.innerText = "Requires Proof";
+              minWarning.style.margin = "auto 0";
+              minWarning.style.fontSize = "18px";
+              reviewContainer.insertBefore(minWarning, reviewContainer.firstChild);
+            }else{
+              if(reviewContainer.firstChild.id == "warning"){
+                reviewContainer.firstChild.remove();
+              }
             }
           }
           if(e.classList.contains("notSelected")){
