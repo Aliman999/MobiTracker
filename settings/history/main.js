@@ -267,8 +267,8 @@ function init(){
   })
   changes.innerHTML = "SUMMARY<br>";
   var sortable = [];
-  for (var vehicle in maxSpeed) {
-    sortable.push([vehicle, maxSpeed[vehicle]]);
+  for (var title in changes.values) {
+    sortable.push([title, changes.values[title]]);
   }
   sortable.values.sort(function (a, b) {
     return a[1] - b[1];
