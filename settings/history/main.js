@@ -269,22 +269,22 @@ function init(){
   Object.keys(changes.values).forEach((key, i)=>{
     switch (key) {
       case "Changed Name":
-        changes.innerHTML += "Name Changes: "+changes.values[key]+"<br>";
+        changes.innerHTML += "Name Changes: "+changes.values[key].count+"<br>";
         break;
       case "Org Change":
-        changes.innerHTML += "Organization Changes: "+changes.values[key]+"<br>";
+        changes.innerHTML += "Organization Changes: " + changes.values[key].count+"<br>";
         break;
       case "Org Promotion/Demotion":
-        changes.innerHTML += "Organization Promotions/Demotions: "+changes.values[key]+"<br>";
+        changes.innerHTML += "Organization Promotions/Demotions: "+changes.values[key].count+"<br>";
         break;
       case "Badge Changed":
-        changes.innerHTML += "Badges Changed: "+changes.values[key]+"<br>";
+        changes.innerHTML += "Badges Changed: "+changes.values[key].count+"<br>";
         break;
       case "Avatar Changed":
-        changes.innerHTML += "Avatars Changed: "+changes.values[key]+"<br>";
+        changes.innerHTML += "Avatars Changed: "+changes.values[key].count+"<br>";
         break;
       case "Bio Changed":
-        changes.innerHTML += "Bio Changes: "+changes.values[key]+"<br>";
+        changes.innerHTML += "Bio Changes: "+changes.values[key].count+"<br>";
         break;
     }
   })
