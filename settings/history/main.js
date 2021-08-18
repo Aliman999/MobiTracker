@@ -217,7 +217,7 @@ function init(){
         }
         break;
       case "Badge Changed":
-        changes.values[item.title];
+        changes.values[item.title] = {};
         if(changes.values[item.title].count == null){
           changes.values[item.title].count = 1;
         }else{
