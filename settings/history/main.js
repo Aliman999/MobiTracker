@@ -122,8 +122,7 @@ function init(){
       eventDate.appendChild(dateSpan);
 
       eventDateTime.appendChild(eventDate);
-      eventDateTime.appendChild(eventTime);
-
+      
       timelineEvent.appendChild(eventDateTime);
 
       const eventTitle = document.createElement("h4");
