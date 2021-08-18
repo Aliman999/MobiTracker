@@ -186,6 +186,7 @@ function init(){
   result = result.data;
   var legend = false;
   var changes = document.createElement("p");
+  changes.style.marginTop = "8px";
   changes.style.marginLeft = "8px";
   changes.style.marginRight = "8px";
   changes.values = {  };
@@ -246,7 +247,6 @@ function init(){
       var newDiff = document.createElement("p");
       newDiff.className = "new";
       newDiff.innerText = "ADDED: +";
-      newDiff.style.marginTop = "8px";
       newDiff.style.marginLeft = "8px";
       newDiff.style.marginRight = "8px";
       field.appendChild(newDiff);
