@@ -266,7 +266,11 @@ function init(){
     field.appendChild(line);
   })
   changes.innerHTML = "SUMMARY<br>";
-  changes.values.sort(function (a, b) {
+  var sortable = [];
+  for (var vehicle in maxSpeed) {
+    sortable.push([vehicle, maxSpeed[vehicle]]);
+  }
+  sortable.values.sort(function (a, b) {
     return a[1] - b[1];
   });
   Object.keys(changes.values).forEach((key, i)=>{
