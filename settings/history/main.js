@@ -123,7 +123,6 @@ function init(){
 
       const eventTime = document.createElement("div");
       eventTime.className = "timeline__event-time";
-      eventTime.appendChild(timeSpan);
 
       eventDateTime.appendChild(eventDate);
       eventDateTime.appendChild(eventTime);
