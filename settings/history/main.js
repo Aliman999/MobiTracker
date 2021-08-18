@@ -266,6 +266,9 @@ function init(){
     field.appendChild(line);
   })
   changes.innerHTML = "SUMMARY<br>";
+  changes.values.sort(function (a, b) {
+    return a[1] - b[1];
+  });
   Object.keys(changes.values).forEach((key, i)=>{
     switch (key) {
       case "Changed Name":
