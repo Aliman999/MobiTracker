@@ -71,7 +71,7 @@ function init(){
       timelineBar.className = "timeline__bar";
       return timelineBar;
     },
-    elem: function(title, description, day, month, date, time, direction = 0, actions, extra){
+    elem: function(title, description, day, month, date, direction = 0, actions, extra){
       const timelineElement = document.createElement("div");
       timelineElement.className = "timeline__elem faded";
       if (direction === 0) {
@@ -81,7 +81,7 @@ function init(){
       }
 
       timelineElement.appendChild(timeline.date(day, month));
-      timelineElement.appendChild(timeline.event(title, description, date, time, actions, extra));
+      timelineElement.appendChild(timeline.event(title, description, date, actions, extra));
 
       return timelineElement;
     },
@@ -120,9 +120,6 @@ function init(){
       const dateSpan = document.createElement("span");
       dateSpan.innerText = date;
       eventDate.appendChild(dateSpan);
-
-      const eventTime = document.createElement("div");
-      eventTime.className = "timeline__event-time";
 
       eventDateTime.appendChild(eventDate);
       eventDateTime.appendChild(eventTime);
