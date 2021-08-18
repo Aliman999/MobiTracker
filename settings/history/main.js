@@ -191,51 +191,51 @@ function init(){
   result.forEach((item, i) => {
     switch(item.title){
       case "Changed Name":
-        changes.values[item.title] = {};
-        if(changes.values[item.title].count == null){
-          changes.values[item.title].count = 1;
+        changes.values[item.title];
+        if(changes.values[item.title] == null){
+          changes.values[item.title] = 1;
         }else{
-          changes.values[item.title].count++;
+          changes.values[item.title]++;
         }
         break;
       case "Org Change":
-        changes.values[item.title] = {};
-        if(changes.values[item.title].count == null){
-          changes.values[item.title].count = 1;
-        }else{
-          changes.values[item.title].count++;
+        changes.values[item.title];
+        if (changes.values[item.title] == null) {
+          changes.values[item.title] = 1;
+        } else {
+          changes.values[item.title]++;
         }
         break;
       case "Org Promotion/Demotion":
-        changes.values[item.title] = {};
-        if(changes.values[item.title].count == null){
-          changes.values[item.title].count = 1;
-        }else{
-          changes.values[item.title].count++;
+        changes.values[item.title];
+        if (changes.values[item.title] == null) {
+          changes.values[item.title] = 1;
+        } else {
+          changes.values[item.title]++;
         }
         break;
       case "Badge Changed":
-        changes.values[item.title] = {};
-        if(changes.values[item.title].count == null){
-          changes.values[item.title].count = 1;
-        }else{
-          changes.values[item.title].count++;
+        changes.values[item.title];
+        if (changes.values[item.title] == null) {
+          changes.values[item.title] = 1;
+        } else {
+          changes.values[item.title]++;
         }
         break;
       case "Avatar Changed":
-        changes.values[item.title] = {};
-        if(changes.values[item.title].count == null){
-          changes.values[item.title].count = 1;
-        }else{
-          changes.values[item.title].count++;
+        changes.values[item.title];
+        if (changes.values[item.title] == null) {
+          changes.values[item.title] = 1;
+        } else {
+          changes.values[item.title]++;
         }
         break;
       case "Bio Changed":
-        changes.values[item.title] = {};
-        if(changes.values[item.title].count == null){
-          changes.values[item.title].count = 1;
-        }else{
-          changes.values[item.title].count++;
+        changes.values[item.title];
+        if (changes.values[item.title] == null) {
+          changes.values[item.title] = 1;
+        } else {
+          changes.values[item.title]++;
         }
         break;
     }
