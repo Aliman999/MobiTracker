@@ -108,7 +108,7 @@ function init(){
 
       return timelineDate;
     },
-    event: function(title, description, date, time, actions, extra){
+    event: function(title, description, date, actions, extra){
       const timelineEvent = document.createElement("div");
       timelineEvent.className = "timeline__event";
 
@@ -123,8 +123,6 @@ function init(){
 
       const eventTime = document.createElement("div");
       eventTime.className = "timeline__event-time";
-      const timeSpan = document.createElement("span");
-      timeSpan.innerText = time;
       eventTime.appendChild(timeSpan);
 
       eventDateTime.appendChild(eventDate);
@@ -264,7 +262,7 @@ function init(){
       field.appendChild(matchDiff);
     }
     console.log(item.description);
-    var elem = timeline.elem(item.title, item.description, item.day, item.month, item.date, item.time, item.direction, item.actions, item.extra);
+    var elem = timeline.elem(item.title, item.description, item.day, item.month, item.date, item.direction, item.actions, item.extra);
     line.appendChild(elem);
     field.appendChild(line);
   })
