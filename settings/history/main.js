@@ -185,7 +185,32 @@ function init(){
   
   result = result.data;
   var legend = false;
+  var changes = document.createElement("p");
+  changes.style.marginLeft = "8px";
+  changes.style.marginRight = "8px";
+  changes.values = {  };
+  field.appendChild(changes);
   result.forEach((item, i) => {
+    switch(item.title){
+      case "Changed Name":
+        changes.values[item.title] += 1;
+        break;
+      case "Org Change":
+        changes.values[item.title] += 1;
+        break;
+      case "Org Promotion/Demotion":
+        changes.values[item.title] += 1;
+        break;
+      case "Badge Changed":
+        changes.values[item.title] += 1;
+        break;
+      case "Avatar Changed":
+        changes.values[item.title] += 1;
+        break;
+      case "Bio Changed":
+        changes.values[item.title] += 1;
+        break;
+    }
     if(item.title.includes("Bio") && !legend){
       legend = true;
       var newDiff = document.createElement("p");
