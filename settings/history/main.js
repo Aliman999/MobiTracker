@@ -268,6 +268,7 @@ function init(){
     line.appendChild(elem);
     field.appendChild(line);
   })
+  changes.innerText = "SUMMARY \n";
 
 
 
