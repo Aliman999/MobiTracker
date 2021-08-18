@@ -268,7 +268,7 @@ function init(){
     line.appendChild(elem);
     field.appendChild(line);
   })
-  changes.innerText = "SUMMARY \n";
+  changes.innerHTML = "SUMMARY <br> "+Object.keys(changes.values);
 
 
 
