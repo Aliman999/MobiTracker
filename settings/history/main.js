@@ -268,7 +268,29 @@ function init(){
     line.appendChild(elem);
     field.appendChild(line);
   })
-  changes.innerHTML = "SUMMARY <br> "+Object.keys(changes.values).join(": "+Object.values(changes.values)+"<br>");
+  changes.innerHTML = "SUMMARY<br>";
+  Object.keys(changes.values).forEach((key, i)=>{
+    switch (key) {
+      case "Changed Name":
+        changes.innerHTML += "Name Changes: "+changes.values[key]+"<br>";
+        break;
+      case "Org Change":
+        changes.innerHTML += "Organization Changes: "+changes.values[key]+"<br>";
+        break;
+      case "Org Promotion/Demotion":
+        changes.innerHTML += "Organization Promotions/Demotions: "+changes.values[key]+"<br>";
+        break;
+      case "Badge Changed":
+        changes.innerHTML += "Badges Changed: "+changes.values[key]+"<br>";
+        break;
+      case "Avatar Changed":
+        changes.innerHTML += "Avatars Changed: "+changes.values[key]+"<br>";
+        break;
+      case "Bio Changed":
+        changes.innerHTML += "Bio Changes: "+changes.values[key]+"<br>";
+        break;
+    }
+  })
 
 
 
