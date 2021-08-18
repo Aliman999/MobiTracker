@@ -270,7 +270,7 @@ function init(){
   for (var title in changes.values) {
     sortable.push([title, changes.values[title]]);
   }
-  sortable.values.sort(function (a, b) {
+  sortable.sort(function (a, b) {
     return a[1] - b[1];
   });
   Object.keys(changes.values).forEach((key, i)=>{
