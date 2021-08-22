@@ -17,13 +17,19 @@ eBtn.onclick = function(){
       }
     });
     input.oninput = function(e){
-      if(e.target.value.includes("@")){
+      if(strongPw(e.target.value)){
         eContainer.verified = true;
       }else{
         eContainer.verified = false;
       }
     }
   }
+}
+
+function strongPw(password) {
+  var regExp = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%&*()]).{8,}/;
+  var validPassword = regExp.test(password);
+  return validPassword;
 }
 
 function verify(email){
