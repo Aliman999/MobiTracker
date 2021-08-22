@@ -78,6 +78,15 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <a class="rButton highlight rightSide" id="changeBtn">Change Password</a>
           </div>
           <div class="hidden" id="passInput">
+            <p>Password should contain:
+              I) At least 8 Characters
+              II) At least one upper case letter (A-Z)
+              III) At least one lower case letter (a-z)
+              IV) At least one digit (0-9)
+              V) At least one special character !@#$%&*()
+            </p>
+          </div>
+          <div class="hidden" id="passInput">
             <div class="inputContainer padded" id="iContainer">
               <input type="password" class="userInput" autofocus="" autocomplete="password" value="" placeholder="Enter your new password.">
             </div>
