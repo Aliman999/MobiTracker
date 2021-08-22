@@ -77,6 +77,11 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <p><span class="rBold">Password:</span><br><span class="subP">●●●●●●●●●●●●</span></p>
             <a class="rButton highlight rightSide" id="changeBtn">Change Password</a>
           </div>
+          <div class="hidden" id="passInput">
+            <div class="inputContainer padded" id="iContainer">
+              <input type="password" class="userInput" autofocus="" autocomplete="password" value="" placeholder="Enter your new password.">
+            </div>
+          </div>
           <div class="hidden" id="preReq">
             <p>Your new password should contain:
               I) At least 8 Characters
@@ -85,11 +90,6 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
               IV) At least one digit (0-9)
               V) At least one special character !@#$%&*()
             </p>
-          </div>
-          <div class="hidden" id="passInput">
-            <div class="inputContainer padded" id="iContainer">
-              <input type="password" class="userInput" autofocus="" autocomplete="password" value="" placeholder="Enter your new password.">
-            </div>
           </div>
           <div class="hidden" id="status">
             <p class="subP"></p>
