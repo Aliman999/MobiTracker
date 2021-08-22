@@ -34,17 +34,17 @@ function strongPw(password) {
   return validPassword;
 }
 
-function verify(email){
+function verify(password){
   if(eContainer.verified){
     eContainer.classList.add("hidden");
-    var verifyEmail = new XMLHttpRequest();
-    verifyEmail.open("POST", "sendEmail.php");
-    verifyEmail.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    verifyEmail.setRequestHeader(tokenHeader.name,tokenHeader.content);
-    verifyEmail.responseType = "json";
-    verifyEmail.send("email="+email);
-    verifyEmail.onload = function() {
-      var userResponse = verifyEmail.response;
+    var verifyPassword = new XMLHttpRequest();
+    verifyPassword.open("POST", "newPassword.php");
+    verifyPassword.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    verifyPassword.setRequestHeader(tokenHeader.name,tokenHeader.content);
+    verifyPassword.responseType = "json";
+    verifyPassword.send("password="+password);
+    verifyPassword.onload = function() {
+      var userResponse = verifyPassword.response;
       if(userResponse.status){
         if(rStatus.classList.contains("hidden")){
           rStatus.classList.toggle("hidden");
@@ -59,7 +59,7 @@ function verify(email){
     if(rStatus.classList.contains("hidden")){
       rStatus.classList.remove("hidden");
       rStatus.classList.add("highlight-red");
-      rStatus.innerText = "Please enter a valid email.";
+      rStatus.innerText = "Please make sure your password completes all of the requirements.";
 
       rStatus.reset = setTimeout(()=>{
         rStatus.classList.add("hidden");

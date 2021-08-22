@@ -78,7 +78,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <a class="rButton highlight rightSide" id="changeBtn">Change Password</a>
           </div>
           <div class="hidden" id="preReq">
-            <p>Password should contain:
+            <p>Your new password should contain:
               I) At least 8 Characters
               II) At least one upper case letter (A-Z)
               III) At least one lower case letter (a-z)
