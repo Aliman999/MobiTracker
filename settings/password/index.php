@@ -5,10 +5,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require_once "../../vendor/autoload.php";
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
 if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
   header("location: ../");
 }else{
@@ -83,7 +79,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           </div>
           <div class="hidden" id="passInput">
             <div class="inputContainer padded" id="iContainer">
-              <input type="text" class="userInput" autofocus="" autocomplete="email" value="" placeholder="Enter your Email">
+              <input type="password" class="userInput" autofocus="" autocomplete="password" value="" placeholder="Enter a new password.">
             </div>
           </div>
           <div class="hidden" id="status">

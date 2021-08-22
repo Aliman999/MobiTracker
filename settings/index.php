@@ -86,11 +86,11 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           </div>
           <div>
             <p><span class="rBold">Email:</span><br><span class="subP"><?php echo $row['email'] ?></span></p>
-            <a class="rButton highlight rightSide">Change Email</a>
+            <a href="../email" class="rButton highlight rightSide">Change Email</a>
           </div>
           <div>
             <p><span class="rBold">Password:</span><br><span class="subP">●●●●●●●●●●●●</span></p>
-            <a class="rButton highlight rightSide">Change Password</a>
+            <a href="../password" class="rButton highlight rightSide">Change Password</a>
           </div>
           <div>
             <p><span class="rBold">Discord:</span><br><span class="subP<?php if($row['discUser']){echo ' highlight-green';}else{echo ' highlight-red';}  ?>"><?php if($row['discUser']){echo 'LINKED';}else{echo 'NOT LINKED';} ?></span></p>
