@@ -10,7 +10,7 @@ eBtn.onclick = function(){
   if(!eContainer.classList.contains("hidden")){
     verify(eContainer.value);
   }else{
-    
+    eRequirements.classList.remove("hidden");
     eContainer.classList.remove("hidden");
     eContainer.focus();
     eContainer.addEventListener('keypress', function (e) {

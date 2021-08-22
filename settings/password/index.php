@@ -77,7 +77,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <p><span class="rBold">Password:</span><br><span class="subP">●●●●●●●●●●●●</span></p>
             <a class="rButton highlight rightSide" id="changeBtn">Change Password</a>
           </div>
-          <div class="hidden" id="passInput">
+          <div class="hidden" id="preReq">
             <p>Password should contain:
               I) At least 8 Characters
               II) At least one upper case letter (A-Z)
