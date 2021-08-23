@@ -43,7 +43,7 @@ function verify(password){
     verifyPassword.open("POST", "newPassword.php");
     verifyPassword.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     verifyPassword.setRequestHeader(tokenHeader.name,tokenHeader.content);
-    //verifyPassword.responseType = "json";
+    verifyPassword.responseType = "json";
     verifyPassword.send("password="+password);
     verifyPassword.onload = function() {
       var userResponse = verifyPassword.response;
