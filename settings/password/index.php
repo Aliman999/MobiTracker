@@ -79,7 +79,6 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           </div>
           <div class="hidden" id="passInput">
             <div class="inputContainer padded" id="iContainer">
-              <input type="username" class="hidden" autofocus="" autocomplete="username">
               <input type="password" class="userInput" autofocus="" autocomplete="new-password" value="" placeholder="Enter your new password.">
             </div>
           </div>
