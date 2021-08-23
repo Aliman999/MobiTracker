@@ -31,7 +31,7 @@ eBtn.onclick = function(){
 }
 
 function strongPw(password) {
-  var regExp = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%&*()]).{8,}/;
+  var regExp = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
   var validPassword = regExp.test(password);
   return validPassword;
 }
