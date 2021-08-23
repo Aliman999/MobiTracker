@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 
 include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '../vendor/autoload.php');
 
-$headers = $_SERVER['HTTP_TOKEN'];
+//$headers = $_SERVER['HTTP_TOKEN'];
 
 if(isset($headers)){
   if ($headers !== $_SESSION['token']){
