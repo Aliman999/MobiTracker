@@ -77,11 +77,11 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <p><span class="rBold">Password:</span><br><span class="subP">●●●●●●●●●●●●</span></p>
             <a class="rButton highlight rightSide" id="changeBtn">Change Password</a>
           </div>
-          <form class="hidden" id="passInput">
+          <div class="hidden" id="passInput">
             <div class="inputContainer padded" id="iContainer">
               <input type="password" class="userInput" autofocus="" autocomplete="new-password" value="" placeholder="Enter your new password.">
             </div>
-          </form>
+          </div>
           <div class="hidden" id="encrypt"><input type="checkbox" name="encrypt"><label for="encrypt">Encrypt Password</label></div>
           <div class="hidden" id="preReq" style="flex-direction:column;">
             <span>Your new password should contain:</span>
