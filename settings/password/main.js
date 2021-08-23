@@ -59,7 +59,7 @@ function verify(password){
     if(rStatus.classList.contains("hidden")){
       rStatus.classList.remove("hidden");
       rStatus.classList.add("highlight-red");
-      rStatus.innerText = "Please make sure your password completes all of the requirements.";
+      rStatus.innerText = "Please make sure your password completes all of the requirements .";
 
       rStatus.reset = setTimeout(()=>{
         rStatus.classList.add("hidden");
