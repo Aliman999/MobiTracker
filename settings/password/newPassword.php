@@ -15,7 +15,7 @@ if(isset($headers)){
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
     if(!empty($_POST['password'])){
-      $password = mysql_real_escape_string($_POST["password"]);
+      $password = mysqli_real_escape_string($_POST["password"]);
 
       $uppercase = preg_match('@[A-Z]@', $password);
       $lowercase = preg_match('@[a-z]@', $password);
