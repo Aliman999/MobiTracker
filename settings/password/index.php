@@ -85,11 +85,11 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
           <div class="hidden" id="encrypt"><input type="checkbox" name="encrypt"><label for="encrypt">Encrypt Password</label></div>
           <div class="hidden" id="preReq">
             <span>Your new password should contain:<br>
-              I) At least 8 Characters
-              II) At least one upper case letter (A-Z)
-              III) At least one lower case letter (a-z)
-              IV) At least one digit (0-9)
-              V) At least one special character !@#$%&*()
+              I) At least 8 Characters<br>
+              II) At least one upper case letter (A-Z)<br>
+              III) At least one lower case letter (a-z)<br>
+              IV) At least one digit (0-9)<br>
+              V) At least one special character !@#$%&*()<br>
             </span>
           </div>
           <div class="hidden" id="status">
