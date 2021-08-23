@@ -3,6 +3,7 @@ var eBtn = document.getElementById("changeBtn");
 var tokenHeader = document.getElementsByName("token")[0];
 var eContainer = document.getElementById("passInput");
 var eRequirements = document.getElementById("preReq");
+var eEncrypt = document.getElementById("encrypt");
 var rStatus = document.getElementById("status");
 var input = document.getElementsByClassName("userInput")[0];
 
@@ -12,6 +13,7 @@ eBtn.onclick = function(){
   }else{
     eRequirements.classList.remove("hidden");
     eContainer.classList.remove("hidden");
+    eEncrypt.classList.remove("hidden");
     eContainer.focus();
     eContainer.addEventListener('keypress', function (e) {
       if (e.key === 'Enter') {
