@@ -22,7 +22,7 @@ if(isset($headers)){
       $lowercase = preg_match('@[a-z]@', $password);
       $number    = preg_match('@[0-9]@', $password);
 
-      if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+      if(!$uppercase || !$lowercase || !$number || strlen($password) < 8) {
           echo 'Your password should be at least 8 characters in length, include at least one upper case letter and one number.';
       }
 
