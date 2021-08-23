@@ -4,11 +4,6 @@ session_start();
 if($_SESSION['banned'] == 1){
   header("location: ../signout");
 }
-if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
-  header("location: ../");
-}else{
-  include "settings.php";
-}
 
 ?>
 <!DOCTYPE html>
@@ -27,10 +22,11 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
     <link rel="manifest" href="https://mobitracker.co/site.webmanifest">
     <link rel="mask-icon" href="https://mobitracker.co/safari-pinned-tab.svg" color="#5bbad5">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="MobiTracker.co" />
+    <meta property="og:title" content="Settings - MobiTracker.co" />
     <meta property="og:description" content="Find who to trust when you need a hand to lead your armed escort or who to avoid letting on your ship" />
     <meta property="og:url" content="https://mobitracker.co" />
     <meta property="og:image" content="https://mobitracker.co/android-chrome-512x512.png" />
+    <meta name="description" content="Find who to trust when you need a hand to lead your armed escort or who to avoid letting on your ship">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#253139">
@@ -44,7 +40,14 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
     ?>
   </head>
   <body>
-    <?php include "../gtemps/nav.php"; ?>
+    <?php
+    if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
+      header("location: ../");
+    }else{
+      include "settings.php";
+    }
+    include "../gtemps/nav.php";
+    ?>
     <div id="canvas">
       <div class="headerContainer">
         <div id="login_status" class="login_menu">

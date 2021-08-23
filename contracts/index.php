@@ -28,6 +28,7 @@ if (empty($_SESSION['token'])) {
     <meta property="og:description" content="Find who to trust when you need a hand to lead your armed escort or who to avoid letting on your ship" />
     <meta property="og:url" content="https://mobitracker.co/contracts" />
     <meta property="og:image" content="https://mobitracker.co/android-chrome-512x512.png" />
+    <meta name="description" content="Find who to trust when you need a hand to lead your armed escort or who to avoid letting on your ship">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#253139">
