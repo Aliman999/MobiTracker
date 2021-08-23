@@ -10,7 +10,7 @@ var input = document.getElementsByClassName("userInput")[0];
 
 eBtn.onclick = function(){
   if(!eContainer.classList.contains("hidden")){
-    verify(eContainer.value);
+    verify(eInput.value);
   }else{
     eRequirements.classList.remove("hidden");
     eContainer.classList.remove("hidden");
@@ -18,7 +18,7 @@ eBtn.onclick = function(){
     eInput.focus();
     eContainer.addEventListener('keypress', function (e) {
       if (e.key === 'Enter') {
-        verify(e.target.value);
+        verify(eInput.value);
       }
     });
     input.oninput = function(e){
