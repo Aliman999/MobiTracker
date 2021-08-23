@@ -89,7 +89,6 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             <span>II) At least one upper case letter (A-Z)</span>
             <span>III) At least one lower case letter (a-z)</span>
             <span>IV) At least one digit (0-9)</span>
-            <span>V) At least one special character !@#$%&*()</span>
           </div>
           <div class="hidden" id="status">
             <p class="subP"></p>
