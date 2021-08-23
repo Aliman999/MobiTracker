@@ -5,8 +5,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '../vendor/autoload.php');
-
 $headers = $_SERVER['HTTP_TOKEN'];
 
 if(isset($headers)){
@@ -14,7 +12,8 @@ if(isset($headers)){
     unset($_SESSION['token']);
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
-    if(!empty($_POST['password'])){
+    if(!empty($_POST['password'])){    
+      include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '/src/config.php');
       $password = mysqli_real_escape_string($link, $_POST["password"]);
 
       $uppercase = preg_match('@[A-Z]@', $password);
