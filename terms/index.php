@@ -9,7 +9,7 @@ if (empty($_SESSION['token'])) {
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>MobiTracker</title>
+    <title>Terms and Conditions - MobiTracker</title>
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css?v=2.0">
     <link rel="stylesheet" href="../css/patreon.css">
