@@ -23,13 +23,19 @@ if(isset($headers)){
       $number    = preg_match('@[0-9]@', $password);
 
       if(!$uppercase || !$lowercase || !$number || strlen($password) < 8) {
-          echo 'Your password should be at least 8 characters in length, include at least one upper case letter and one number.';
+        echo json_encode([
+          "status" => 0,
+          "data" => 'Your password should be at least 8 characters in length, include at least one upper case letter and one number.'
+        ]);
       }
 
       $password = password_hash($password, PASSWORD_DEFAULT);
       $sql = "UPDATE players SET password = '$password' WHERE username = '".$_SESSION['username']."'";
       if(mysqli_query($link, $sql)){
-        echo 'Password Changed.';
+        echo json_encode([
+          "status" => 1,
+          "data" => 'Password Changed.'
+        ]);
       }
     }else{
       exit(json_encode(['error' => 'Invalid Args.']));
