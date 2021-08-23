@@ -14,27 +14,21 @@ if(isset($headers)){
     unset($_SESSION['token']);
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
-    if(!empty($_POST['password']) && !empty($_POST['encrypt'])){
-      if($_POST['encrypt'] = filter_var($_POST['encrypt'], FILTER_VALIDATE_BOOLEAN)){
-        $password = mysql_real_escape_string($_POST["password"]);
+    if(!empty($_POST['password'])){
+      $password = mysql_real_escape_string($_POST["password"]);
 
-        $uppercase = preg_match('@[A-Z]@', $password);
-        $lowercase = preg_match('@[a-z]@', $password);
-        $number    = preg_match('@[0-9]@', $password);
+      $uppercase = preg_match('@[A-Z]@', $password);
+      $lowercase = preg_match('@[a-z]@', $password);
+      $number    = preg_match('@[0-9]@', $password);
 
-        if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
-            echo 'Your password should be at least 8 characters in length, include at least one upper case letter and one number.';
-        }
-
-        if($_POST["encrypt"] === true){
-          $password = password_hash($password, PASSWORD_DEFAULT);
-        }
-        $sql = "UPDATE players SET password = '$password' WHERE username = '$_SESSION['username']'";
-        if(mysqli_query($link, $sql)){
-          echo 'Password Changed.';
-        }
-      }else{
-        exit();
+      if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+          echo 'Your password should be at least 8 characters in length, include at least one upper case letter and one number.';
+      }
+      
+      $password = password_hash($password, PASSWORD_DEFAULT);
+      $sql = "UPDATE players SET password = '$password' WHERE username = '$_SESSION['username']'";
+      if(mysqli_query($link, $sql)){
+        echo 'Password Changed.';
       }
     }else{
       exit(json_encode(['error' => 'Invalid Args.']));

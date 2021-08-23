@@ -44,7 +44,7 @@ function verify(password){
     verifyPassword.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     verifyPassword.setRequestHeader(tokenHeader.name,tokenHeader.content);
     //verifyPassword.responseType = "json";
-    verifyPassword.send("password="+password+"&encrypt="+eEncrypt.children[0].checked.toString());
+    verifyPassword.send("password="+password);
     verifyPassword.onload = function() {
       var userResponse = verifyPassword.response;
       if(userResponse.status){
