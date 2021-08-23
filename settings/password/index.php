@@ -82,8 +82,8 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
               <input type="password" class="userInput" autofocus="" autocomplete="new-password" value="" placeholder="Enter your new password.">
             </div>
           </div>
-          <div class="hidden" id="encrypt"><input type="checkbox" name="encrypt"><label for="encrypt">Encrypt Password</label></div>
           <div class="hidden" id="preReq" style="flex-direction:column;">
+            <span>Note: Your password is ALWAYS encrypted.</span>
             <span>Your new password should contain:</span>
             <span>I) At least 8 Characters</span>
             <span>II) At least one upper case letter (A-Z)</span>
