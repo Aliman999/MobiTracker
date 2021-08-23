@@ -39,6 +39,7 @@ function strongPw(password) {
 function verify(password){
   if(eContainer.verified){
     eContainer.classList.add("hidden");
+    eRequirements.classList.add("hidden");
     var verifyPassword = new XMLHttpRequest();
     verifyPassword.open("POST", "newPassword.php");
     verifyPassword.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -50,8 +51,8 @@ function verify(password){
       if(userResponse.status){
         if(rStatus.classList.contains("hidden")){
           rStatus.classList.toggle("hidden");
-          rStatus.innerText = userResponse.data;
         }
+        rStatus.innerText = userResponse.data;
         setTimeout(()=>{
           rStatus.classList.add("hidden");
         }, 5000);
