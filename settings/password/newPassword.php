@@ -13,7 +13,7 @@ if(isset($headers)){
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
     if(!empty($_POST['password'])){    
-      include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '/src/config.php');
+      include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '../src/config.php');
       $password = mysqli_real_escape_string($link, $_POST["password"]);
 
       $uppercase = preg_match('@[A-Z]@', $password);
