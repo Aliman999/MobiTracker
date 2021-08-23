@@ -2,6 +2,8 @@ https://mobitracker.co/
 https://mobitracker.co/register
 https://mobitracker.co/login
 https://mobitracker.co/faq
-https://mobitracker.co/forgotpassword
-https://mobitracker.co/resetpassword
-https://mobitracker.co/verify
+https://mobitracker.co/settings
+https://mobitracker.co/privacy
+https://mobitracker.co/discord
+https://mobitracker.co/contracts
+https://mobitracker.co/terms
