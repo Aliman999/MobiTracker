@@ -2,6 +2,7 @@
 var eBtn = document.getElementById("changeBtn");
 var tokenHeader = document.getElementsByName("token")[0];
 var eContainer = document.getElementById("passInput");
+var eInput = eContainer.children[0].children[0];
 var eRequirements = document.getElementById("preReq");
 var eEncrypt = document.getElementById("encrypt");
 var rStatus = document.getElementById("status");
@@ -14,10 +15,10 @@ eBtn.onclick = function(){
     eRequirements.classList.remove("hidden");
     eContainer.classList.remove("hidden");
     eEncrypt.classList.remove("hidden");
-    eContainer.children[0].children[0].focus();
+    eInput.focus();
     eContainer.addEventListener('keypress', function (e) {
       if (e.key === 'Enter') {
-        verify(eContainer.value);
+        verify(e.target.value);
       }
     });
     input.oninput = function(e){
