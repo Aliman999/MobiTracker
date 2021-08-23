@@ -14,7 +14,7 @@ eBtn.onclick = function(){
     eRequirements.classList.remove("hidden");
     eContainer.classList.remove("hidden");
     eEncrypt.classList.remove("hidden");
-    eContainer.focus();
+    eContainer.children[0].focus();
     eContainer.addEventListener('keypress', function (e) {
       if (e.key === 'Enter') {
         verify(eContainer.value);
@@ -44,7 +44,7 @@ function verify(password){
     verifyPassword.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     verifyPassword.setRequestHeader(tokenHeader.name,tokenHeader.content);
     //verifyPassword.responseType = "json";
-    verifyPassword.send("?password="+password+"&encrypt="+eEncrypt.children[0].checked.toString());
+    verifyPassword.send("password="+password+"&encrypt="+eEncrypt.children[0].checked.toString());
     verifyPassword.onload = function() {
       var userResponse = verifyPassword.response;
       if(userResponse.status){
