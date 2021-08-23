@@ -7,6 +7,8 @@ error_reporting(E_ALL);
 
 include(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '../vendor/autoload.php');
 
+var_dump($_POST);
+
 //$headers = $_SERVER['HTTP_TOKEN'];
 
 if(isset($headers)){
