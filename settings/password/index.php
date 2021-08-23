@@ -83,7 +83,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
             </div>
           </div>
           <div class="hidden" id="preReq" style="flex-direction:column;">
-            <span>Note: Your password is ALWAYS encrypted.</span>
+            <span style="rBold">Note: Your password is ALWAYS encrypted.</span>
             <span>Your new password should contain:</span>
             <span>I) At least 8 Characters</span>
             <span>II) At least one upper case letter (A-Z)</span>
