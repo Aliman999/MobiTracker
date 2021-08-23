@@ -14,7 +14,7 @@ eBtn.onclick = function(){
     eRequirements.classList.remove("hidden");
     eContainer.classList.remove("hidden");
     eEncrypt.classList.remove("hidden");
-    eContainer.children[0].focus();
+    eContainer.children[0].children[0].focus();
     eContainer.addEventListener('keypress', function (e) {
       if (e.key === 'Enter') {
         verify(eContainer.value);
