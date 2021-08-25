@@ -871,7 +871,7 @@ function populateHeader(jsonObj){
   orgPanel.style.flexWrap = "wrap";
 
   if(jsonObj.data.organization){
-    if(jsonObj.data.organization.name){
+    if(jsonObj.data.organization.name != ""){
       var orgCont = document.createElement("div");
       orgCont.className = "rFlex";
       var orgLogo = document.createElement("img");
