@@ -66,7 +66,7 @@ if (empty($_SESSION['token'])) {
               <a class="collapse pointer" href="#general">▼</a>
             </div>
             <div>
-              <p class="playerbio"><span class="highlight">Q: What's the point?</span><br><br>A: MobiTracker isn't designed to help you find new handles. Its purpose is to help verify that the people you're embarking on an adventure with or forming/joining an organization with are trustworthy and don't have malicious intent. It can also be used to make a judgment on who is better suited for a task, because there are only so many seats in a ship, make sure you're filling them with the right people.</p>
+              <p class="playerbio"><span class="highlight">Q: What is the purpose of Mobitracker?</span><br><br>A: Mobitracker is a tool that allows players to search other players, either to find/leave reviews, check reputation of that player or even get a detailed history of changes that player has made to their profile/organization recently. It allows players to find detailed information about those they are already playing with as well as a tool to find new players to play with.</p>
               <p class="playerbio"><span class="highlight">Q: Do you store our information?</span><br><br>A: No. The information isn't viewable by any of the websites team. The only information that is viewable by the team is the RSI Handle and the reviews. (This is your public displayed ingame name) While the website does encrypt the email and password you use to login to mobiTracker, this doesn't need to be the same information as your RSI login credentials and we encourage users to use different information. The email you provide us is only stored for password retrieval purposes and is not used in any capacity.</p>
               <p class="playerbio"><span class="highlight">Q: Why do I need to give you my email?</span><br><br>A: Again, this email address is only for password retrieval purposes. Because you can only create one account linked to your RSI Handle you won't be able to use mobiTracker if you lose the login information associated with it. Thus we found it was necessary to find a way for people to find/retrieve their passwords.</p>
               <p class="playerbio"><span class="highlight">Q: How do you prevent RSI Developers or high profile RSI Handles from being stolen?</span><br><br>A: Developer RSI handles have a unique identifier built-in. This means that our website can prevent those accounts from being created. Nobody will be able to create an account using a developer's RSI handle. (  Sorry CIG :(  ) For other accounts, if you believe that someone has stolen your account or is using a high profile handle that isn't the rightful owner, just contact us at admin@mobiTracker.co and we will have a mobiTracker moderator send them a message on the RSI website to confirm they are the rightful owner. Until we get a response, that account will be locked from being used. Any reviews written by fake profiles will be removed.</p>
@@ -84,9 +84,26 @@ if (empty($_SESSION['token'])) {
             </div>
             <div class="hidden">
               <p class="playerbio"><span class="highlight">Q: How do you prevent abuse?</span><br><br>A: All of the reviews are carefully moderated, they must adhere to a guideline that has a zero-tolerance policy for racism, sexism, and harassment. They also must be of a real ingame event. We also have systems in place that will flag spam or otherwise questionable reviews.</p>
+              <p class="playerbio"><span class="highlight">Q: How can I gain reputation?</span><br><br>A: Reputation is earned when a player decides to leave a review/rating on your profile. The more positive reviews you get, the better your reputation score. Bad reviews can lower your reputation score, but mobitracker requires a valid reason (and proof) before negative reviews are added.</p>
               <p class="playerbio"><span class="highlight">Q: Why can unverified accounts only leave 3 reviews?</span><br><br>A: Verification helps us identify the rightful owners of the account, it also helps prevent spam or fake reviews.</p>
               <p class="playerbio"><span class="highlight">Q: What type of reviews can I leave?</span><br><br>A: Only reviews that pertain to real ingame interactions are permitted on mobiTracker, even if your review is pertaining to a real ingame incident it cannot include sexism, racism, or other forms of bigotry.</p>
               <p class="playerbio"><span class="highlight">Q: What can I do if someone leaves an inappropriate review?</span><br><br>A: If you find a review that breaks our posting guidelines, please use the report button to bring it to a moderator's attention.</p>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="container container-header" id="history">
+        <header class="playercard">
+          <div class="drop" id="faqhistory">
+            <div class="collapseB">
+              <a class="header highlight pointer" href="#history">Player/Organization History FAQ</a>
+              <a class="collapse pointer" href="#history">▲</a>
+            </div>
+            <div class="hidden">
+              <p class="playerbio"><span class="highlight">Q: What Is the function of Player and Organization History?</span><br><br>Mobitracker allows users to see updates and changes made to player profiles and well as Organization rosters. You can see edits to profiles as well who has joined, left or been promoted within and organization.</p>
+              <p class="playerbio"><span class="highlight">Q: Can I hide my History?</span><br><br>A: As a default all users have their profile history set to public. But if you would like, through the settings panel you may turn this feature off. Players not registered and verified through mobitracker will not be able to turn off their profile history.</p>
+              <p class="playerbio"><span class="highlight">Q: How can I hide my organizations history?</span><br><br>A: Only members who are rank 5 or above in an organization (as well as verified by mobitracker) may turn the public history on or off. To change this setting simply go to settings and select organization.</p>
+              <p class="playerbio"><span class="highlight">Q: What happens if someone changes their RSI Handle?</span><br><br>A: Mobitracker has the ability in most cases to track when an RSI handle has been changed. Old reviews and history will automatically follow the player to their new handle. When searching a players old handle, you will be notified about the change and linked to their new handle.</p>
             </div>
           </div>
         </header>
