@@ -871,7 +871,7 @@ function populateHeader(jsonObj){
   orgPanel.style.flexWrap = "wrap";
 
   if(jsonObj.data.organization){
-    if(jsonObj.data.organization.name != ""){
+    if(jsonObj.data.organization.name){
       var orgCont = document.createElement("div");
       orgCont.className = "rFlex";
       var orgLogo = document.createElement("img");
@@ -900,7 +900,7 @@ function populateHeader(jsonObj){
       orgCont.appendChild(orgLogo);
       orgCont.appendChild(orgLink);
       orgPanel.appendChild(orgCont);
-    }else{
+    }else if(jsonObj.data.organization.name == ""){
       var orgCont = document.createElement("div");
       orgCont.className = "rFlex";
       var orgLogo = document.createElement("img");
