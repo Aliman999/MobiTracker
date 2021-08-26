@@ -97,7 +97,7 @@ if($_SESSION['banned'] == 1){
           </div>
           <div>
             <p><span class="rBold">Discord:</span><br><span class="subP<?php if($row['discUser']){echo ' highlight-green';}else{echo ' highlight-red';}  ?>"><?php if($row['discUser']){echo 'LINKED';}else{echo 'NOT LINKED';} ?></span></p>
-            <a class="rButton rightSide" href="">Manage</a>
+            <a class="rButton rightSide" href="discord">Manage</a>
           </div>
         </div>
       </div>
