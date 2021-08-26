@@ -89,11 +89,11 @@ if($_SESSION['banned'] == 1){
           </div>
           <div>
             <p><span class="rBold">Email:</span><br><span class="subP"><?php echo $row['email'] ?></span></p>
-            <a href="../email" class="rButton highlight rightSide">Change Email</a>
+            <a href="email" class="rButton highlight rightSide">Change Email</a>
           </div>
           <div>
             <p><span class="rBold">Password:</span><br><span class="subP">●●●●●●●●●●●●</span></p>
-            <a href="../password" class="rButton highlight rightSide">Change Password</a>
+            <a href="password" class="rButton highlight rightSide">Change Password</a>
           </div>
           <div>
             <p><span class="rBold">Discord:</span><br><span class="subP<?php if($row['discUser']){echo ' highlight-green';}else{echo ' highlight-red';}  ?>"><?php if($row['discUser']){echo 'LINKED';}else{echo 'NOT LINKED';} ?></span></p>
