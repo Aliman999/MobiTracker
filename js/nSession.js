@@ -19,7 +19,7 @@ var urTimer = setInterval(()=>{
       clearInterval(urTimer);
     }
   }
-}, 500)
+}, 1000)
   
 
 openBtn.onclick = function(){
