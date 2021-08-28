@@ -7,11 +7,17 @@ var navMenu = document.getElementById("navMenu");
 var query = new XMLHttpRequest();
 openBtn.active = false;
 
+var x = 0;
 var urTimer = setInterval(()=>{
-  if(userResponse['navRegister']){
-    clearInterval(urTimer);
-    openNav();
-    showForm(false);
+  if(userResponse){
+    if (userResponse['navRegister'] && x <= 3) {
+      clearInterval(urTimer);
+      openNav();
+      showForm(false);
+      x++;
+    }else{
+      clearInterval(urTimer);
+    }
   }
 }, 500)
   
