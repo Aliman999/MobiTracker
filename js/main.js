@@ -1272,7 +1272,7 @@ function noReviews(usr){
       showForm(false);
     });
     notFound.className = "notFound";
-    notFound.textContent = "Has "+usr+" left a lasting impression? \nBe the first to leave a good review for the.";
+    notFound.textContent = "Has "+usr+" left a lasting impression? \nBe the first to leave a good review for them.";
     firstContainer.appendChild(notFound);
     firstContainer.appendChild(signup);
     containerSection.style.display = "block";
