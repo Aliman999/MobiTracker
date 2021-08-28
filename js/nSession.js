@@ -7,14 +7,14 @@ var navMenu = document.getElementById("navMenu");
 var query = new XMLHttpRequest();
 openBtn.active = false;
 
-try {
-  if (userResponse['nav']) {
+var urTimer = setInterval(()=>{
+  if(userResponse['navRegister']){
+    clearInterval(urTimer);
     openNav();
     showForm(false);
   }
-}catch{
-
-}
+}, 500)
+  
 
 openBtn.onclick = function(){
   if(this.active){
@@ -64,7 +64,7 @@ function hasValue(e){
 }
 
 //Experience
-
+/*
 function xp(rep){
   rep = parseInt(rep);
   if(rep < 0){
@@ -83,7 +83,7 @@ function xp(rep){
     }
   }
 }
-
+*/
 //FORM CTRL
 
 function registerUser(username, email, password){
