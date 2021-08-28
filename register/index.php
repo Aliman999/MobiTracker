@@ -1,2 +1,2 @@
 <?php
-    header('Location: https://mobitracker.co/?register=1');
+    header('Location: https://mobitracker.co/beta/?register=1');
