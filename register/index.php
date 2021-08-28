@@ -47,6 +47,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     $username_err = "You cannot use this Handle";
                     $username = "";
                   }
+                  $username_err = {
+                    $res,
+                    $pTitles
+                  };
                   if(array_search($res, $ptitles)){
                     $avatar = $obj['data']['profile']['image'];
                     $username = $obj['data']['profile']['handle'];
@@ -94,7 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                       }
                     }
                   }else{
-                    $username_err = "You need to display your <a class='helplogin backerTitle' href='https://starcitizen.tools/Titles#Backer_titles' target='_blank'>backer title</a> to sign up ";
+                    //$username_err = "You need to display your <a class='helplogin backerTitle' href='https://starcitizen.tools/Titles#Backer_titles' target='_blank'>backer title</a> to sign up ";
                   }
                 }
             } else{
