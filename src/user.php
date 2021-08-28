@@ -86,6 +86,12 @@ if (isset($headers)) {
       $user['tcpp'] = intval($_SESSION['tcpp']);
     }
 
+    if(isset($_SESSION['navRegister'])){
+      $user['navRegister'] = true;
+    }else{
+      $user['navRegister'] = false;
+    }
+
     echo json_encode($user);
   }
 }else{

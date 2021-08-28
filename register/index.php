@@ -1,2 +1,4 @@
 <?php
-    header('Location: https://mobitracker.co/beta/?register=1');
+session_start();
+$_SESSION['navRegister'] = true;
+header('Location: https://mobitracker.co/beta/');
