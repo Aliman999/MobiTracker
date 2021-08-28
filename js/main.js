@@ -1267,7 +1267,10 @@ function noReviews(usr){
     firstContainer.className = "firstContainer";
     signup.className = "login_btn";
     signup.innerHTML = "Sign up";
-    signup.href = "register";
+    signup.addEventListener("click", function(e) {
+      openNav();
+      showForm(false);
+    });
     notFound.className = "notFound";
     notFound.textContent = "Has "+usr+" left a lasting impression? \nBe the first to leave a good review for the.";
     firstContainer.appendChild(notFound);
