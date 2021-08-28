@@ -88,6 +88,7 @@ if (isset($headers)) {
 
     if(isset($_SESSION['navRegister'])){
       $user['navRegister'] = true;
+      unset($_SESSION['navRegister']);
     }else{
       $user['navRegister'] = false;
     }
