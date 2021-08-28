@@ -43,6 +43,7 @@ var session,
     limited,
     verified,
     flagged,
+    navRegister,
     faction;
 getUser.open("GET", "src/user.php");
 getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -60,6 +61,7 @@ getUser.onload = function() {
   verified = userResponse["verified"];
   flagged = userResponse["flagged"];
   faction = userResponse["faction"];
+  navRegister = userResponse["navRegister"];
   if(search.includes("/")){
     search = "";
   }

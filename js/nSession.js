@@ -9,15 +9,13 @@ openBtn.active = false;
 
 var x = 0;
 var urTimer = setInterval(()=>{
-  if(userResponse){
-    if (userResponse['navRegister'] && x <= 3) {
-      clearInterval(urTimer);
-      openNav();
-      showForm(false);
-      x++;
-    }else{
-      clearInterval(urTimer);
-    }
+  if (navRegister && x <= 3) {
+    clearInterval(urTimer);
+    openNav();
+    showForm(false);
+    x++;
+  } else {
+    clearInterval(urTimer);
   }
 }, 1000)
   
