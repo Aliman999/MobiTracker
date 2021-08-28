@@ -12,7 +12,7 @@ var urTimer = setInterval(()=>{
   if (navRegister && x <= 3) {
     clearInterval(urTimer);
     openNav();
-    showForm(false);
+    showForm(true);
     x++;
   } else {
     clearInterval(urTimer);
