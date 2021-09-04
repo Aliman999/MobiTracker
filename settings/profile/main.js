@@ -47,6 +47,7 @@ display.startTimer(()=>{
 var savedLoading = document.getElementById("loadingContainer");
 
 async function verify(){
+  profile = null;
   const container = document.getElementsByClassName("setting")[0];
   container.innerHTML = "";
   container.append(savedLoading);
