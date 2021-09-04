@@ -30,7 +30,7 @@ var waitUser = setInterval(async () => {
     clearInterval(waitUser);
     await socket().then(async (conn) => {
       if (conn) {
-        profile = await api(user.sessionUser);
+        profile = await api(apiToken.content);
       }
     })
   }
@@ -52,7 +52,7 @@ async function verify(){
   container.innerHTML = "";
   container.append(savedLoading);
   savedLoading.style.opacity = 1;
-  profile = await api(user.sessionUser);
+  profile = await api(apiToken.content);
   display.startTimer(async () => {
     if (profile) {
       display.clear();
