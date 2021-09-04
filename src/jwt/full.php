@@ -1,13 +1,17 @@
 <?php
 require 'bootstrap.php';
-
 use Carbon\Carbon;
 
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
 
+if ($_GET['type'] !== 'player' || $_GET['type'] !== 'org') {
+    exit(json_encode(["errorCode" => 0000000]));
+}
+
 $secret = $_ENV['FULL'];
+
 
 $header = json_encode([
     'typ' => 'JWT',
@@ -19,7 +23,7 @@ $payload = json_encode([
     'username' => $_SESSION['username'],
     'privilage' => 0, //Disabled
     'prio' => $_SESSION['prio'],
-    'type' => "player",
+    'type' => $_GET['type'],
     'query' => $_GET['search'],
     'iat' => time() + (30 * 60)
 ]);
