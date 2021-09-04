@@ -1,5 +1,6 @@
 var tokenHeader = document.getElementsByName("token")[0];
 var jwt = document.getElementsByName("jwt")[0];
+var apiToken = document.getElementsByName("apiToken")[0];
 var webSocket = null;
 
 function socket() {

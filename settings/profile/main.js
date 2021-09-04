@@ -1,5 +1,4 @@
 var profile = null;
-var apiToken = document.getElementsByName("apiToken")[0];
 var display = {
   setTimer:function(int){
     this.timer = int;
