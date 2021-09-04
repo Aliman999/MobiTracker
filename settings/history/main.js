@@ -181,7 +181,6 @@ function init(){
   var changes = document.createElement("p");
   changes.style.marginTop = "8px";
   changes.style.marginLeft = "8px";
-  changes.style.marginRight = "8px";
   changes.values = {  };
   field.appendChild(changes);
   result.forEach((item, i) => {
