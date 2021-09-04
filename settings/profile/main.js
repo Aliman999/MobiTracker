@@ -56,7 +56,7 @@ async function verify(){
   display.startTimer(async () => {
     if (profile) {
       display.clear();
-      if (profile.profile.bio.includes("mt.co")) {
+      if (profile.data.profile.bio.includes("mt.co")) {
         user.verified = 1;
         var userContainer = document.getElementsByClassName("userContainer")[0];
         var verified = document.createElement("img");
