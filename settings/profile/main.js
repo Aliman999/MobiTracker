@@ -46,12 +46,12 @@ display.startTimer(()=>{
 
 var savedLoading = document.getElementById("loadingContainer");
 
-function verify(){
+async function verify(){
   const container = document.getElementsByClassName("setting")[0];
   container.innerHTML = "";
   container.append(savedLoading);
   savedLoading.style.opacity = 1;
-  profile = api(user.sessionUser);
+  profile = await api(user.sessionUser);
   display.startTimer(async () => {
     if (profile) {
       display.clear();
