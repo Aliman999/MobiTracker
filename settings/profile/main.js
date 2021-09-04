@@ -1,4 +1,5 @@
 var profile = null;
+var apiToken = document.getElementsByName("apiToken")[0];
 var display = {
   setTimer:function(int){
     this.timer = int;
@@ -17,11 +18,11 @@ var display = {
   timer: 1000
 }
 
-function api(name) {
-  if (!name) {
-    throw new error("Input Required");
+function api(key) {
+  if (!key) {
+    throw new error("Key Required");
   } else {
-    return send("job", name);
+    return send("job", key);
   }
 }
 

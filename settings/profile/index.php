@@ -10,7 +10,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
 }else{
   $_SESSION['activeSetting'] = basename($_SERVER['REQUEST_URI']);
   include "../settings.php";
-  $_GET['search'] = $_SESSION['username'];
+  $username = $_SESSION['username'];
   include "../../src/jwt/player.php";
 }
 

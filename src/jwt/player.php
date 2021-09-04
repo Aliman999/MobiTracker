@@ -19,7 +19,7 @@ $payload = json_encode([
     'privilage' => 0, //Disabled
     'prio' => $_SESSION['prio'],
     'type' => "player",
-    'query' => $_GET['search'],
+    'query' => $username,
     'iat' => time()+(30*60)
 ]);
 
