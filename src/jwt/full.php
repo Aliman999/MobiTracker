@@ -38,4 +38,8 @@ $base64UrlSignature = base64UrlEncode($signature);
 
 $jwt = $base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature;
 
-$_SESSION['fullToken'] = $jwt;
+if (isset($output)) {
+    echo $jwt;
+} else {
+    $_SESSION['apiToken'] = $jwt;
+}

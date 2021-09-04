@@ -6,10 +6,6 @@ use Carbon\Carbon;
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
 
-if ($_GET['type'] !== 'player' || $_GET['type'] !== 'org') {
-    exit(json_encode(["errorCode" => 0000000]));
-}
-
 $secret = $_ENV['SECRET'];
 
 $header = json_encode([
@@ -22,7 +18,7 @@ $payload = json_encode([
     'username' => $_SESSION['username'],
     'privilage' => 0, //Disabled
     'prio' => $_SESSION['prio'],
-    'type' => $_GET['type'],
+    'type' => "player",
     'query' => $_GET['search'],
     'iat' => time()+(30*60)
 ]);
@@ -37,4 +33,8 @@ $base64UrlSignature = base64UrlEncode($signature);
 
 $jwt = $base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature;
 
-$_SESSION['playerToken'] = $jwt;
+if(isset($output)){
+    echo $jwt;
+}else{
+    $_SESSION['apiToken'] = $jwt;
+}
