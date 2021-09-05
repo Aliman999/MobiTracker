@@ -23,7 +23,7 @@ function socket() {
       }
     }
     window.onfocus = function(){
-      if(webSocket.readystate !== 1){
+      if(webSocket.readyState !== 1){
         socket();
       }
       webSocket.onerror = function (err) {
