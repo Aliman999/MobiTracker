@@ -7,8 +7,13 @@ use Carbon\Carbon;
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
 
-if ($_GET['type'] !== 'player' || $_GET['type'] !== 'org') {
-    exit(json_encode(["errorCode" => 0000000]));
+if(!isset($type)){
+    if (($_GET['type'] !== 'player' || $_GET['type'] !== 'org') && !isset($_GET['username'])) {
+        exit(json_encode(["errorCode" => 0000000]));
+    }else{
+        $type = $_GET['type'];
+        $username = $_GET['username'];
+    }
 }
 
 $secret = $_ENV['QUICK'];
