@@ -11,6 +11,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
   $_SESSION['activeSetting'] = basename($_SERVER['REQUEST_URI']);
   include "../settings.php";
   $username = $_SESSION['username'];
+  $type = "history";
   include "../../src/jwt/quick.php";
 }
 
