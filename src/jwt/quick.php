@@ -6,8 +6,8 @@ use Carbon\Carbon;
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
-$filter = [];
-if(!isset($type)){
+if(!isset($type)) {
+    $filter = [];
     if($_GET['type'] === 'user') {
         //Whitelisted search filters
         $filter = [
