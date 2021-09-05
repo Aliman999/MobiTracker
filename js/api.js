@@ -22,13 +22,19 @@ function socket() {
         callback(response.status);
       }
     }
-    webSocket.onerror = function (err) {
-      console.log("Error");
-      setTimeout(socket, 3000);
-    }
-    webSocket.onclose = function () {
-      console.log("Connection Closed");
-      setTimeout(socket, 3000);
+    window.onfocus = function(){
+      webSocket.onerror = function (err) {
+        console.log("Error");
+        setTimeout(socket, 3000);
+      };
+      webSocket.onclose = function () {
+        console.log("Connection Closed");
+        setTimeout(socket, 3000);
+      };
+    };
+    window.onblur = function(){
+      webSocket.onerror = null;
+      webSocket.onclose = null;
     };
   })
 }
