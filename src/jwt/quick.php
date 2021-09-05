@@ -23,8 +23,8 @@ $payload = json_encode([
     'username' => $_SESSION['username'],
     'privilage' => 0, //Disabled
     'prio' => $_SESSION['prio'],
-    'type' => $_GET['type'],
-    'query' => $_GET['search'],
+    'type' => $type,
+    'query' => $username,
     'iat' => time() + (30 * 60)
 ]);
 
