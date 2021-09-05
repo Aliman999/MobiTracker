@@ -19,17 +19,11 @@ var display = {
 var DOM = {};
 var result = null;
 
-function history(obj = { type: 'user', datatype: 'username', input: "" }) {
-  if (!obj.type) {
-    obj.type = "user";
-  }
-  if (!obj.datatype) {
-    obj.datatype = "username";
-  }
-  if (!obj.input) {
-    throw new error("Input Required");
+function history(token) {
+  if (!token) {
+    throw new error("Token Required");
   } else {
-    return send("history", obj);
+    return send("history", token);
   }
 }
 
@@ -38,7 +32,7 @@ var waitUser = setInterval(async () => {
     clearInterval(waitUser);
     await socket().then(async (conn)=>{
       if(conn){
-        result = await history({ input: apiToken.content }); //user.sessionUser
+        result = await history(apiToken.content); //user.sessionUser
       }
     })
   }
