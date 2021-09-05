@@ -8,23 +8,27 @@ use Carbon\Carbon;
 //error_reporting(E_ALL);
 $filter = [];
 if(!isset($type)){
-    if($_GET['type'] === 'player'){
+    if($_GET['type'] === 'user') {
+        //Whitelisted search filters
         $filter = [
             "username"
         ];
         $type = $_GET['type'];
         $username = $_GET['username'];
         if (in_array($_GET['filter'], $filter)) {
+            $filter = $_GET['filter'];
         }else{
             $filter = 'username';
         }
-    }elseif($_GET['type'] === 'org'){
+    }elseif($_GET['type'] === 'org') {
+        //Whitelisted search filters
         $filter = [
             "sid"
         ];
         $type = $_GET['type'];
         $username = $_GET['username'];
         if (in_array($_GET['filter'], $filter)) {
+            $filter = $_GET['filter'];
         }else{
             $filter = 'sid';
         }
