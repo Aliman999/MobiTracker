@@ -6,13 +6,30 @@ use Carbon\Carbon;
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
-
+$filter = [];
 if(!isset($type)){
-    if (($_GET['type'] !== 'player' || $_GET['type'] !== 'org') && !isset($_GET['username'])) {
-        exit(json_encode(["errorCode" => 0000000]));
-    }else{
+    if($_GET['type'] === 'player'){
+        $filter = [
+            "username"
+        ];
         $type = $_GET['type'];
         $username = $_GET['username'];
+        if (in_array($_GET['filter'], $filter)) {
+        }else{
+            $filter = 'username';
+        }
+    }elseif($_GET['type'] === 'org'){
+        $filter = [
+            "sid"
+        ];
+        $type = $_GET['type'];
+        $username = $_GET['username'];
+        if (in_array($_GET['filter'], $filter)) {
+        }else{
+            $filter = 'sid';
+        }
+    }else{
+        exit(json_encode(["errorCode" => 0000000]));
     }
 }
 
@@ -29,6 +46,7 @@ $payload = json_encode([
     'privilage' => 0, //Disabled
     'prio' => $_SESSION['prio'],
     'type' => $type,
+    'filter' => $filter,
     'query' => $username,
     'iat' => time() + (30 * 60)
 ]);
