@@ -46,7 +46,7 @@ function heartbeat() {
   if (!webSocket) return;
   if (webSocket.readyState !== 1) return;
   webSocket.send(JSON.stringify({type:"ping"}));
-  setTimeout(heartbeat, 30000);
+  setTimeout(heartbeat, 10000);
 }
 
 function send(type, message) {
