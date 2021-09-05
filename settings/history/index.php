@@ -43,7 +43,7 @@ if(empty($_SESSION['loggedin']) || $_SESSION['loggedin'] === false){
     <meta name="theme-color" content="#253139">
     <?php
     echo "<meta name='token' content=".$_SESSION['token'].">";
-    echo "<meta name='token' content=".$_SESSION['apiToken'].">";
+    echo "<meta name='apiToken' content=".$_SESSION['apiToken'].">";
 
     if($_SESSION["loggedin"]){
       echo "<meta name='jwt' content=".$_SESSION['jwt'].">";
