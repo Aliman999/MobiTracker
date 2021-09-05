@@ -23,6 +23,9 @@ function socket() {
       }
     }
     window.onfocus = function(){
+      if(webSocket.readystate !== 1){
+        socket();
+      }
       webSocket.onerror = function (err) {
         console.log("Error");
         setTimeout(socket, 3000);
