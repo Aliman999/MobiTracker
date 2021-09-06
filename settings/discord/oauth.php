@@ -4,6 +4,7 @@ var_dump($_SESSION);
 if(isset($_SESSION['loggedin'])){
   unset($_SESSION['access_token']);
   setcookie("Login",json_encode($_SESSION));
+  sleep(10);
 }
 
 ini_set('display_errors', 1);
@@ -29,7 +30,7 @@ if(get('action') == 'login') {
   );
 
   // Redirect the user to Discord's authorization page
-  //header('Location: https://discord.com/api/oauth2/authorize' . '?' . http_build_query($params));
+  header('Location: https://discord.com/api/oauth2/authorize' . '?' . http_build_query($params));
 }
 
 
