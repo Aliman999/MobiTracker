@@ -5,7 +5,7 @@ var eContainer = document.getElementById("passInput");
 var eInput = eContainer.children[0].children[0];
 var eRequirements = document.getElementById("preReq");
 var eEncrypt = document.getElementById("encrypt");
-var rStatus = document.getElementById("status");
+var rStatus = document.getElementById("status").children[0];
 var input = document.getElementsByClassName("userInput")[0];
 
 eBtn.onclick = function(){
