@@ -61,7 +61,7 @@ unset($_COOKIE['Login']);
       </div>
       <div class="container-header">
         <div class="centerCont">
-          <p>If there are inconsistencies please dont hesitate to contact Dusky.</p>
+          <p>If there are inconsistencies please dont hesitate to <a href="mobitracker.co/jamesdusky">contact us</a>.</p>
         </div>
       </div>
     </div>
