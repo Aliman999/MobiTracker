@@ -34,8 +34,8 @@ if(isset($headers)){
       }
       $row['username'] = json_encode($row['username']);
       $row['cID'] = json_encode($row['cID']);
-      $sql = "UPDATE `discord` SET username = '".$row['username']."', cID = '".$row['cID']."' WHERE discID = ".$_GET['discid'].";";
-      mysqli_query($link, $sql);
+      $sql = "UPDATE `discord` SET username = '".$row['username']."', cID = '".$row['cID']."' WHERE discID = ".$_GET['discid']. "; UPDATE `priority` SET value = (SELECT priority FROM discord WHERE discID = " . $_GET['discid'] . ");";
+      mysqli_multi_query($link, $sql);
       echo "Success";
     }else{
       $sql = "INSERT INTO `discord` (`discUser`, `discID`, `cID`, `username`) VALUES ('" . $discord . "', " . $_GET['discid'] . ", '" . $cid . "', '" . $username . "'); INSERT INTO `priority` (`discID`, `cID`, `value`) VALUES (" . $_GET['discid'] . ", " . $_GET['cid'] . ", 8);";
@@ -44,8 +44,8 @@ if(isset($headers)){
         echo "Success";
         //echo $sql;
       } else {
-        echo mysqli_error($link);
-        $sql = "UPDATE `priority` SET value = (SELECT priority FROM discord WHERE discID = " . $_GET['discid'] . ");";
+        //echo mysqli_error($link);
+        echo "Failed";
       }
     }
   }else{
