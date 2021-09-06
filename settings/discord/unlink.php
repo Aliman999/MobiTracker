@@ -32,7 +32,7 @@ if(isset($headers)){
     $row['username'] = json_encode($row['username']);
     $row['cID'] = json_encode($row['cID']);
     $sql = "UPDATE discord SET username = '".$row['username']."', cID = '".$row['cID']."'";
-    echo $sql;
+    $result = mysqli_query($link, $sql);
   }
 }else{
    exit(json_encode(['error' => 'No token.']));
