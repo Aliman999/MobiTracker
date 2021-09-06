@@ -99,6 +99,10 @@ function get($key, $default=NULL) {
 }
 
 function session($key, $default=NULL) {
-  return array_key_exists($key, $_SESSION) ? $_SESSION[$key] : $default;
+  if(array_key_exists($key, $_SESSION)){
+    return $_SESSION[$key];
+  }else{
+    return $_SESSION[$key] = "";
+  }
 }
 ?>
