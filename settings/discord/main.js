@@ -61,9 +61,9 @@ unlink.onclick = function () {
   unlinkDiscord();
 }
 
-
-var verify = document.getElementsByClassName("link")[0];
-
-verify.onclick = function(){
-  auth();
+var verify;
+if (verify = document.getElementsByClassName("link")[0]){
+  verify.onclick = function () {
+    auth();
+  }
 }
