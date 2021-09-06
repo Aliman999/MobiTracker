@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -20,6 +22,19 @@ if(isset($headers)){
     $cid = json_encode(array($_GET['cid']));
     $username = json_encode(array($_GET['username']));
     $discord = $_GET['disc']."#".$_GET['discriminator'];
+    $sql = "SELECT * FROM `discord` WHERE discID = " . $_GET['discid'] . ";";
+    $result = mysqli_query($link, $sql);
+    $row = mysqli_fetch_assoc($result);
+    if(count($row) > 0){
+      $row['username'] = json_decode($row['username']);
+      $row['cid'] = json_decode($row['cid']);
+      if(!in_array($row['username'], $_GET['username'])){
+        array_push($row['username'], $_GET['username']);
+        array_push($row['cid'], $_GET['cid']);
+      }
+    }
+
+
     $sql = "INSERT INTO `discord` (`discUser`, `discID`, `cID`, `username`) VALUES ('".$discord."', ".$_GET['discid'].", '".$cid."', '".$username."'); INSERT INTO `priority` (`discID`, `cID`, `value`) VALUES (".$_GET['discid'].", ".$_GET['cid'].", 8);";
     echo $sql;
     if(mysqli_multi_query($link, $sql)){
@@ -29,8 +44,6 @@ if(isset($headers)){
       echo mysqli_error($link);
       $sql = "UPDATE `priority` SET value = (SELECT priority FROM discord WHERE discID = ".$_GET['discid'].");";
       echo $sql;
-      //$result = mysqli_query($link, $sql);
-      //$row = mysqli_fetch_assoc($result);
     }
   }else{
 
