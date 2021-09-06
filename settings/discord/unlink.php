@@ -13,9 +13,14 @@ if(isset($headers)){
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
     $sql = "SELECT username, cID FROM discord WHERE username LIKE '%" . $_SESSION["username"] . "%';";
-    //$sql = "UPDATE discord SET (`username`, `cID`) VALUES (null, null) WHERE discUser LIKE '%".$_SESSION["username"]."%';";
+    $result = mysqli_query($link, $sql);
     echo $sql;
-    //mysqli_query($link, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $row = json_decode($row['username'], true);
+    var_dump($row);
+    //$sql = "UPDATE discord SET (`username`, `cID`) VALUES (null, null) WHERE discUser LIKE '%".$_SESSION["username"]."%';";
+
+    //
   }
 }else{
    exit(json_encode(['error' => 'No token.']));
