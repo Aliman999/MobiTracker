@@ -61,7 +61,8 @@ unset($_COOKIE['Login']);
       </div>
       <div class="container-header">
         <div class="centerCont">
-          <p>Go ahead and log back in to make sure your discord is properly linked. If there are inconsistencies please dont hesitate to contact Dusky.</p>
+          <p>If there are inconsistencies please dont hesitate to contact Dusky.</p>
+          <a href="../settings">Settings</a>
         </div>
       </div>
     </div>
