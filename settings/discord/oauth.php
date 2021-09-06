@@ -1,5 +1,6 @@
 <?php
 session_start();
+var_dump($_SESSION);
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -98,7 +99,6 @@ function get($key, $default=NULL) {
 }
 
 function session($key, $default=NULL) {
-  var_dump($_SESSION);
   return array_key_exists($key, $_SESSION) ? $_SESSION[$key] : $default;
 }
 ?>
