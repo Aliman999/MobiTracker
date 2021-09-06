@@ -31,7 +31,7 @@ if(isset($headers)){
       var_dump($row);
       if(!in_array($_GET['username'], $row['username'])){
         array_push($row['username'], $_GET['username']);
-        array_push($row['cID'], $_GET['cID']);
+        array_push($row['cID'], $_GET['cid']);
       }
     }
 
