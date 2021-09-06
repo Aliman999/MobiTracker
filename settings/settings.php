@@ -39,8 +39,8 @@ if(isset($headers)){
     $row['verifyClass'] = 'highlight-red';
     $row['verify'] = 'Not Verified';
   }
-  $row['dusername'] = json_decode($row['dusername']);
-  $row['dcID'] = json_decode($row['dcID']);
+  $row['dusername'] = json_decode($row['dusername'], true);
+  $row['dcID'] = json_decode($row['dcID'], true);
   if($row['dcID']){
     if(count($row['dcID']) > 0){
       $x = 0;
