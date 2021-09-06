@@ -35,6 +35,7 @@ if(isset($headers)){
       $row['username'] = json_encode($row['username']);
       $row['cID'] = json_encode($row['cID']);
       $sql = "UPDATE `discord` SET username = '".$row['username']."', cID = '".$row['cID']."' WHERE discID = ".$_GET['discid']. "; UPDATE `priority` SET value = (SELECT priority FROM discord WHERE discID = " . $_GET['discid'] . ");";
+      echo $sql;
       if(mysqli_multi_query($link, $sql)){
         echo "Success 001";
       }else{
