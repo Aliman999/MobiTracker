@@ -24,13 +24,14 @@ if(isset($headers)){
     if(mysqli_multi_query($link, $sql)){
       echo "Success";
       //echo $sql;
-    }else{
+    }else {
+      echo mysqli_error($link);
+      /*
       $sql = "SELECT * FROM `discord` INNER JOIN `priority` WHERE discID = " . $_GET['discid'] . ";";
       echo $sql;
       $result = mysqli_query($link, $sql);
       $row = mysqli_fetch_assoc($result);
-
-      //mysqli_error($link);
+      */
     }
   }else{
 
