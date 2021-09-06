@@ -25,7 +25,7 @@ if(isset($headers)){
     $sql = "SELECT username, cID FROM `discord` WHERE discID = " . $_GET['discid'] . ";";
     $result = mysqli_query($link, $sql);
     $row = mysqli_fetch_assoc($result);
-    if(count($row) > 0){
+    if(count($row['username']) > 0){
       $row['username'] = json_decode($row['username'], true);
       $row['cID'] = json_decode($row['cID'], true);
       if(count($row['username']) === 0){
