@@ -8,6 +8,7 @@ if(isset($headers)){
     unset($_SESSION['token']);
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
+      var_dump($_SESSION);
     $sql = "UPDATE discord SET (`username`, `cID`) VALUES (null, null) WHERE discUser = '".$_SESSION["discUser"]."';";
     echo $sql;
     //mysqli_query($link, $sql);
