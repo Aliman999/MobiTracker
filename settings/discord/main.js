@@ -55,15 +55,15 @@ function unlinkDiscord(){
   };
 }
 
+var unlink = document.getElementsByClassName("unlink")[0];
+
+unlink.onclick = function () {
+  unlinkDiscord();
+}
+
 
 var verify = document.getElementsByClassName("link")[0];
 
 verify.onclick = function(){
   auth();
-}
-
-var unlink = document.getElementsByClassName("unlink")[0];
-
-unlink.onclick = function(){
-  unlinkDiscord();
 }
