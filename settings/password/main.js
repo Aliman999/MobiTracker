@@ -5,7 +5,8 @@ var eContainer = document.getElementById("passInput");
 var eInput = eContainer.children[0].children[0];
 var eRequirements = document.getElementById("preReq");
 var eEncrypt = document.getElementById("encrypt");
-var rStatus = document.getElementById("status").children[0];
+var rStatus = document.getElementById("status");
+rStatus.child = rStatus.children[0];
 var input = document.getElementsByClassName("userInput")[0];
 
 eBtn.onclick = function(){
@@ -52,7 +53,7 @@ function verify(password){
         if(rStatus.classList.contains("hidden")){
           rStatus.classList.toggle("hidden");
         }
-        rStatus.innerText = userResponse.data;
+        rStatus.child.innerText = userResponse.data;
         setTimeout(()=>{
           rStatus.classList.add("hidden");
         }, 5000);
@@ -62,7 +63,7 @@ function verify(password){
     if(rStatus.classList.contains("hidden")){
       rStatus.classList.remove("hidden");
       rStatus.classList.add("highlight-red");
-      rStatus.innerText = "Please make sure your password completes all of the requirements .";
+      rStatus.child.innerText = "Please make sure your password completes all of the requirements .";
 
       rStatus.reset = setTimeout(()=>{
         rStatus.classList.add("hidden");
