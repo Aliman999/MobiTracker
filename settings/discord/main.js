@@ -44,9 +44,25 @@ function auth(){
   openSignInWindow("https://mobitracker.co/beta/settings/discord/oauth.php?action=login", "Debug");
 }
 
+function unlinkDiscord(){
+  var query = new XMLHttpRequest();
+  query.open("GET", "unlink.php");
+  query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  query.send();
+  query.onload = function () {
+    location.reload();
+  };
+}
+
 
 var verify = document.getElementsByClassName("link")[0];
 
 verify.onclick = function(){
   auth();
+}
+
+var unlink = document.getElementsByClassName("unlink")[0];
+
+unlink.onclick = function(){
+
 }
