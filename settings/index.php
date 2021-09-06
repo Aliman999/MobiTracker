@@ -83,7 +83,7 @@ if($_SESSION['banned'] == 1){
             ?>
           </div>
           <div>
-            <p><span class="rBold">Reputation:</span><br><span class="subP"><?php echo $row['xp'] ?></span></p>
+            <p><span class="rBold">Reputation:</span><br><span class="subP"><?php echo $row['rating'] ?></span></p>
             <p><span class="rBold">Career:</span><br><span class="subP"><?php echo join(", ", $row['career']) ?></span></p>
             <p><span class="rBold">Faction:</span><br><span class="subP"><?php echo $row['faction'] ?></span></p>
           </div>
