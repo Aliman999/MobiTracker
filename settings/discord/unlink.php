@@ -21,6 +21,7 @@ if(isset($headers)){
     $row = mysqli_fetch_assoc($result);
     $row['username'] = json_decode($row['username'], true);
     $row['cID'] = json_decode($row['cID'], true);
+    var_dump($row);
     //$sql = "UPDATE discord SET (`username`, `cID`) VALUES (null, null) WHERE discUser LIKE '%".$_SESSION["username"]."%';";
 
     //
