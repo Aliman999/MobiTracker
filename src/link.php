@@ -36,7 +36,7 @@ if(isset($headers)){
       $row['cID'] = json_encode($row['cID']);
       $sql = "UPDATE `discord` SET username = '".$row['username']."', cID = '".$row['cID']."' WHERE discID = ".$_GET['discid'].";";
       mysqli_query($link, $sql);
-      echo "Success"
+      echo "Success";
     }else{
       $sql = "INSERT INTO `discord` (`discUser`, `discID`, `cID`, `username`) VALUES ('" . $discord . "', " . $_GET['discid'] . ", '" . $cid . "', '" . $username . "'); INSERT INTO `priority` (`discID`, `cID`, `value`) VALUES (" . $_GET['discid'] . ", " . $_GET['cid'] . ", 8);";
       echo $sql;
