@@ -28,20 +28,14 @@ if(isset($headers)){
     if(count($row) > 0){
       $row['username'] = json_decode($row['username'], true);
       $row['cID'] = json_decode($row['cID'], true);
-      var_dump($row);
-      if(count($row['username']) === 0){
-        $row['username'] = array($_GET['username']);
-        $row['cID'] = array($_GET['cid']);
-      }else{
-        if (!in_array($_GET['username'], $row['username'])) {
-          array_push($row['username'], $_GET['username']);
-          array_push($row['cID'], $_GET['cid']);
-        }
+      if (!in_array($_GET['username'], $row['username'])) {
+        array_push($row['username'], $_GET['username']);
+        array_push($row['cID'], $_GET['cid']);
       }
+      var_dump($row);
       $row['username'] = json_encode($row['username']);
       $row['cID'] = json_encode($row['cID']);
       $sql = "UPDATE `discord` SET username = '".$row['username']."', cID = '".$row['cID']."' WHERE discID = ".$_GET['discid']. "; UPDATE `priority` SET value = (SELECT priority FROM discord WHERE discID = " . $_GET['discid'] . ");";
-      echo $sql;
       if(mysqli_multi_query($link, $sql)){
         echo "Success 001";
       }else{
