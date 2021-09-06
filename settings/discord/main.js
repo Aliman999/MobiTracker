@@ -50,6 +50,7 @@ function unlinkDiscord(){
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   query.send();
   query.onload = function () {
+    console.log(query.response);
     location.reload();
   };
 }
