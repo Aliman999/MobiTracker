@@ -34,7 +34,7 @@ if(isset($headers)){
       }
       $row['username'] = json_encode($row['username']);
       $row['cID'] = json_encode($row['cID']);
-      $sql = "UPDATE `discord` SET username = '".$row['username']."', cID = '".$row['cID']."';";
+      $sql = "UPDATE `discord` SET username = '".$row['username']."', cID = '".$row['cID']."' WHERE discID = ".$_GET['discid'].";";
       mysqli_query($link, $sql);
       echo "Success"
     }else{
