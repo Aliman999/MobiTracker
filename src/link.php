@@ -19,20 +19,18 @@ if($link === false){
 $headers = "p529.FR^;N^h/2CI";
 if(isset($headers)){
   if($_GET['token'] === $headers){
-    $cid = json_encode(array($_GET['cid']));
-    $username = json_encode(array($_GET['username']));
-    $discord = $_GET['disc']."#".$_GET['discriminator'];
     $sql = "SELECT username, cID FROM `discord` WHERE discID = " . $_GET['discid'] . ";";
     $result = mysqli_query($link, $sql);
     $row = mysqli_fetch_assoc($result);
     if(count($row) > 0){
+      $username = $_GET['username'];
+      $discID = $_GET['discid'];
+      $cid = $_GET['cid'];
       $row['username'] = json_decode($row['username'], true);
       $row['cID'] = json_decode($row['cID'], true);
       if (!in_array($_GET['username'], $row['username'])) {
         array_push($row['username'], $_GET['username']);
         array_push($row['cID'], $_GET['cid']);
-      }else{
-        echo "wtf";
       }
       var_dump($row);
       $row['username'] = json_encode($row['username']);
@@ -44,6 +42,9 @@ if(isset($headers)){
         echo mysqli_error($link);
       }
     }else{
+      $cid = json_encode(array($_GET['cid']));
+      $username = json_encode(array($_GET['username']));
+      $discord = $_GET['disc'] . "#" . $_GET['discriminator'];
       $sql = "INSERT INTO `discord` (`discUser`, `discID`, `cID`, `username`) VALUES ('" . $discord . "', " . $_GET['discid'] . ", '" . $cid . "', '" . $username . "'); INSERT INTO `priority` (`discID`, `cID`, `value`) VALUES (" . $_GET['discid'] . ", " . $_GET['cid'] . ", 8);";
       echo $sql;
       if (mysqli_multi_query($link, $sql)) {
