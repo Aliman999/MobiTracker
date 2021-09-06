@@ -6,6 +6,8 @@ if(isset($_SESSION['loggedin'])){
   setcookie("Login", json_encode($_SESSION), time()+3600, "/", "mobitracker.co", 1, 1);
 }else{
   var_dump($_COOKIE['Login']);
+  $_SESSION = json_decode($_COOKIE['Login']);
+  setcookie("Login", null, null, null, null, null, null);
 }
 
 ini_set('display_errors', 1);
