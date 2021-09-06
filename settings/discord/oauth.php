@@ -98,8 +98,7 @@ function get($key, $default=NULL) {
 }
 
 function session($key, $default=NULL) {
-  var_dump($key);
-  return true;
-  //return array_key_exists($key, $_SESSION) ? $_SESSION[$key] : $_SESSION;
+  var_dump($_SESSION);
+  return array_key_exists($key, $_SESSION) ? $_SESSION[$key] : $default;
 }
 ?>
