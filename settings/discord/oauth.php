@@ -5,7 +5,6 @@ if(isset($_SESSION['loggedin'])){
   setcookie("Login", json_encode($_SESSION), time()+3600, "/", "mobitracker.co", 1, 1);
 }else{
   $_SESSION = json_decode($_COOKIE['Login'], true);
-  unset($_COOKIE['Login']);
 }
 
 ini_set('display_errors', 1);
@@ -50,6 +49,14 @@ if(get('code')) {
 
   var_dump($_SESSION);
   $user = apiRequest($apiURLBase);
+
+  setcookie("Login", "",
+    time() - 3600,
+    "/",
+    "mobitracker.co",
+    1,
+    1
+  );
 
   echo '<meta name="dusername" content="'.$user->username.'">';
   
