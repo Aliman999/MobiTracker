@@ -84,10 +84,8 @@ function apiRequest($url, $post=FALSE, $headers=array()) {
 
   $headers[] = 'Accept: application/json';
 
-  /*
   if(session('access_token'))
     $headers[] = 'Authorization: Bearer ' . session('access_token');
-  */
 
   curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
