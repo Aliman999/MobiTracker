@@ -33,7 +33,7 @@ getUser.onload = function(){
   verified = response["verified"];
   flagged = response["flagged"];
   faction = response["faction"];
-  navRegister = userResponse["navRegister"];
+  navRegister = response["navRegister"];
   cPref = response["cPref"]; // TODO: 0 = Freelance, 1 = Contractor, 2 = Both
   if(faction == 0){
     careersText = ["Racing", "Delivery", "Security", "Scouting", "Medical", "Charting Regular", "Charting Luxury"];
