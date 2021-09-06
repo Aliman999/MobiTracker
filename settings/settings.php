@@ -22,26 +22,9 @@ if(isset($headers)){
   $sql = "SELECT *, players.username username, players.cID cID, discord.cID dcID, discord.username dusername  FROM players LEFT JOIN discord ON discord.username LIKE CONCAT('%', '".$debug."', '%') WHERE players.username = '".$debug."';";
   $result = mysqli_query($link, $sql);
   $row = mysqli_fetch_assoc($result);
-  function xp($rep){
-    $rep = intval($rep);
-    if($rep < 0){
-      if($rep < -5){
-        return "Dangerous";
-      }else if ($rep < 0) {
-        return "Sketchy";
-      }
-    }else{
-      if($rep == 0){
-        return "Newbie";
-      }else if ($rep <= 30) {
-        return "Experienced";
-      }else if ($rep <= 100) {
-        return "Reliable";
-      }
-    }
-  }
   unset($row['password']);
-  $row['xp'] = xp($row['reviewed_count'])." (".$row['reviewed_count'].")";
+  
+  $row['rating'] = $row['avgRating']."/5 Stars (".$row['reviewed_count'].")";
   if($row['faction'] === '0'){
     $row['faction'] = "Lawful";
   }else{
