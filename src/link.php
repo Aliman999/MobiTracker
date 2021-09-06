@@ -28,12 +28,10 @@ if(isset($headers)){
       $cid = $_SESSION['cID'];
       $row['username'] = json_decode($row['username'], true);
       $row['cID'] = json_decode($row['cID'], true);
-      var_dump($_SESSION);
       if (!in_array($username, $row['username'])) {
         array_push($row['username'], $username);
         array_push($row['cID'], $cid);
       }
-      var_dump($row);
       $row['username'] = json_encode($row['username']);
       $row['cID'] = json_encode($row['cID']);
       $sql = "UPDATE `discord` SET username = '" . $row['username'] . "', cID = '" . $row['cID'] . "' WHERE discID = " . $discID . "; UPDATE `priority` SET value = (SELECT priority FROM discord WHERE discID = " . $discID . ");";
