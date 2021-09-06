@@ -56,10 +56,11 @@ function unlinkDiscord(){
   };
 }
 
-var unlink = document.getElementsByClassName("unlink")[0];
 
-unlink.onclick = function () {
-  unlinkDiscord();
+if (unlink = document.getElementsByClassName("unlink")[0]){
+  unlink.onclick = function () {
+    unlinkDiscord();
+  }
 }
 
 if (verify = document.getElementsByClassName("link")[0]){
