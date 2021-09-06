@@ -36,16 +36,16 @@ if(isset($headers)){
       $row['cID'] = json_encode($row['cID']);
       $sql = "UPDATE `discord` SET username = '".$row['username']."', cID = '".$row['cID']."' WHERE discID = ".$_GET['discid']. "; UPDATE `priority` SET value = (SELECT priority FROM discord WHERE discID = " . $_GET['discid'] . ");";
       mysqli_multi_query($link, $sql);
-      echo "Success";
+      echo "Success 001";
     }else{
       $sql = "INSERT INTO `discord` (`discUser`, `discID`, `cID`, `username`) VALUES ('" . $discord . "', " . $_GET['discid'] . ", '" . $cid . "', '" . $username . "'); INSERT INTO `priority` (`discID`, `cID`, `value`) VALUES (" . $_GET['discid'] . ", " . $_GET['cid'] . ", 8);";
       echo $sql;
       if (mysqli_multi_query($link, $sql)) {
-        echo "Success";
+        echo "Success 002";
         //echo $sql;
       } else {
         //echo mysqli_error($link);
-        echo "Failed";
+        echo "Failed 003";
       }
     }
   }else{
