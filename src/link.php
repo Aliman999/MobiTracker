@@ -35,6 +35,7 @@ if(isset($headers)){
       $row['username'] = json_encode($row['username']);
       $row['cID'] = json_encode($row['cID']);
       $sql = "UPDATE `discord` SET username = '".$row['username']."', cID = '".$row['cID']."';";
+      echo $sql;
     }
 
     /*
