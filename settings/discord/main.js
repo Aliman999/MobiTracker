@@ -65,5 +65,5 @@ verify.onclick = function(){
 var unlink = document.getElementsByClassName("unlink")[0];
 
 unlink.onclick = function(){
-
+  unlinkDiscord();
 }
