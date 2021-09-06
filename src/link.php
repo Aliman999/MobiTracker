@@ -32,9 +32,10 @@ if(isset($headers)){
         array_push($row['username'], $_GET['username']);
         array_push($row['cid'], $_GET['cid']);
       }
+      var_dump($row);
     }
 
-
+    /*
     $sql = "INSERT INTO `discord` (`discUser`, `discID`, `cID`, `username`) VALUES ('".$discord."', ".$_GET['discid'].", '".$cid."', '".$username."'); INSERT INTO `priority` (`discID`, `cID`, `value`) VALUES (".$_GET['discid'].", ".$_GET['cid'].", 8);";
     echo $sql;
     if(mysqli_multi_query($link, $sql)){
@@ -45,6 +46,7 @@ if(isset($headers)){
       $sql = "UPDATE `priority` SET value = (SELECT priority FROM discord WHERE discID = ".$_GET['discid'].");";
       echo $sql;
     }
+    */
   }else{
 
   }
