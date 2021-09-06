@@ -10,6 +10,6 @@ echo "<div class='userContainer'>";
 if($_SESSION['verified'] == 1){
     echo "<img class='verified' src='https://mobitracker.co/src/verified.png'>";
 }
-echo "<a class='loginName' href='https://mobitracker.co/'".$_SESSION['username'].">".$_SESSION['username']."</a></div>";
+echo "<a class='loginName' href='https://mobitracker.co/".$_SESSION['username']."'>".$_SESSION['username']."</a></div>";
 }
 ?>
