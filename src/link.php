@@ -31,6 +31,8 @@ if(isset($headers)){
       if (!in_array($_GET['username'], $row['username'])) {
         array_push($row['username'], $_GET['username']);
         array_push($row['cID'], $_GET['cid']);
+      }else{
+        echo "wtf";
       }
       var_dump($row);
       $row['username'] = json_encode($row['username']);
