@@ -32,6 +32,7 @@ if(isset($headers)){
         array_push($row['username'], $_GET['username']);
         array_push($row['cID'], $_GET['cid']);
       }
+      var_dump($row);
       $row['username'] = json_encode($row['username']);
       $row['cID'] = json_encode($row['cID']);
       $sql = "UPDATE `discord` SET username = '".$row['username']."', cID = '".$row['cID']."' WHERE discID = ".$_GET['discid']. "; UPDATE `priority` SET value = (SELECT priority FROM discord WHERE discID = " . $_GET['discid'] . ");";
