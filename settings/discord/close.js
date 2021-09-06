@@ -36,7 +36,7 @@ function init() {
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   query.send();
   query.onload = function () {
-    window.close();
+    //window.close();
   };
 }
 
