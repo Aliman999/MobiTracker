@@ -160,7 +160,7 @@ function showUser(){
   var settingsContainer = document.createElement("div");
   settingsContainer.className = "settingsContainer";
   var settingsBtn = document.createElement("a");
-  settingsBtn.className = "rButton highlight settings rDisabled";
+  settingsBtn.className = "rButton highlight settings";
   settingsBtn.href = "https://mobitracker.co/settings";
   settingsBtn.innerText = "Settings";
   settingsBtn.style.marginRight = "auto";
