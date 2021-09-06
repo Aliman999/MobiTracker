@@ -1,6 +1,5 @@
 <?php
 session_start();
-var_dump($_SESSION);
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -42,6 +41,7 @@ if(get('code')) {
   $logout_token = $token->access_token;
   $_SESSION['access_token'] = $token->access_token;
 
+  var_dump($_SESSION);
   $user = apiRequest($apiURLBase);
 
   echo '<meta name="dusername" content="'.$user->username.'">';
