@@ -63,7 +63,7 @@ if(get('code')) {
   echo '<meta name="discriminator" content="'.$user->discriminator.'">';
   echo '<meta name="discid" content="'.$user->id.'">';
 
-  echo '<script src="close.js?id=3"></script>';
+  echo '<script src="close.js?id=4"></script>';
   //header('Location: ' . $_SERVER['PHP_SELF']);
 }
 
