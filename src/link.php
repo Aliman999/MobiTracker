@@ -28,11 +28,11 @@ if(isset($headers)){
     if(count($row) > 0){
       $row['username'] = json_decode($row['username']);
       $row['cID'] = json_decode($row['cID']);
+      var_dump($row);
       if(!in_array($row['username'], $_GET['username'])){
         array_push($row['username'], $_GET['username']);
         array_push($row['cID'], $_GET['cID']);
       }
-      var_dump($row);
     }
 
     /*
