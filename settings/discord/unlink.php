@@ -29,7 +29,9 @@ if(isset($headers)){
       }
       $x++;
     }
-    $sql = "UPDATE discord SET username = '". json_encode($row['username'])."', cID = '". json_encode($row['cID'])."' WHERE username LIKE '%".$_SESSION['username']."%';";
+    $row['username'] = json_encode(array_values($row['username']));
+    $row['cID'] = json_encode(array_values($row['cID']));
+    $sql = "UPDATE discord SET username = '". $row['username']."', cID = '". $row['cID']."' WHERE username LIKE '%".$_SESSION['username']."%';";
     $result = mysqli_query($link, $sql);
   }
 }else{
