@@ -39,7 +39,7 @@ function auth(){
     }
   }, 1000);
 
-  openSignInWindow("https://mobitracker.co/beta/settings/discord/oauth.php?action=login", "Debug");
+  openSignInWindow("https://mobitracker.co/beta/settings/discord/oauth.php?action=login", "oAuth - MobiTracker");
 }
 
 function unlinkDiscord(){
