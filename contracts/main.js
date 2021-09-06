@@ -12,6 +12,7 @@ var session,
     verified,
     flagged,
     faction,
+    navRegister,
     cPref;
 getUser.open("GET", "../src/user.php");
 getUser.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -32,6 +33,7 @@ getUser.onload = function(){
   verified = response["verified"];
   flagged = response["flagged"];
   faction = response["faction"];
+  navRegister = userResponse["navRegister"];
   cPref = response["cPref"]; // TODO: 0 = Freelance, 1 = Contractor, 2 = Both
   if(faction == 0){
     careersText = ["Racing", "Delivery", "Security", "Scouting", "Medical", "Charting Regular", "Charting Luxury"];

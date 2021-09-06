@@ -6,9 +6,6 @@ var eleCount = document.getElementsByClassName("navEle");
 var navMenu = document.getElementById("navMenu");
 var query = new XMLHttpRequest();
 openBtn.active = false;
-if(!navRegister){
-  var navRegister = false;
-}
 
 var x = 0;
 
