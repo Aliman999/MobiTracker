@@ -23,15 +23,15 @@ if(isset($headers)){
     $result = mysqli_query($link, $sql);
     $row = mysqli_fetch_assoc($result);
     if(count($row) > 0){
-      $username = $_GET['username'];
+      $username = $_SESSION['username'];
       $discID = $_GET['discid'];
-      $cid = $_GET['cid'];
+      $cid = $_SESSION['cID'];
       $row['username'] = json_decode($row['username'], true);
       $row['cID'] = json_decode($row['cID'], true);
       var_dump($_SESSION);
-      if (!in_array($_GET['username'], $row['username'])) {
-        array_push($row['username'], $_GET['username']);
-        array_push($row['cID'], $_GET['cid']);
+      if (!in_array($username, $row['username'])) {
+        array_push($row['username'], $username);
+        array_push($row['cID'], $cid);
       }
       var_dump($row);
       $row['username'] = json_encode($row['username']);
@@ -44,8 +44,8 @@ if(isset($headers)){
         //echo mysqli_error($link);
       }
     }else{
-      $cid = json_encode(array($_GET['cid']));
-      $username = json_encode(array($_GET['username']));
+      $cid = json_encode(array($_SESSION['cID']));
+      $username = json_encode(array($_SESSION['username']));
       $discord = $_GET['disc'] . "#" . $_GET['discriminator'];
       $sql = "INSERT INTO `discord` (`discUser`, `discID`, `cID`, `username`) VALUES ('" . $discord . "', " . $_GET['discid'] . ", '" . $cid . "', '" . $username . "'); INSERT INTO `priority` (`discID`, `cID`, `value`) VALUES (" . $_GET['discid'] . ", " . $_GET['cid'] . ", 8);";
       echo $sql;
