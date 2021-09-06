@@ -28,9 +28,14 @@ if(isset($headers)){
     if(count($row) > 0){
       $row['username'] = json_decode($row['username'], true);
       $row['cID'] = json_decode($row['cID'], true);
-      if(!in_array($_GET['username'], $row['username'])){
-        array_push($row['username'], $_GET['username']);
-        array_push($row['cID'], $_GET['cid']);
+      if(count($row['username']) === 0){
+        $row['username'] = array($_GET['username']);
+        $row['cID'] = array($_GET['cid']);
+      }else{
+        if (!in_array($_GET['username'], $row['username'])) {
+          array_push($row['username'], $_GET['username']);
+          array_push($row['cID'], $_GET['cid']);
+        }
       }
       var_dump($row);
       $row['username'] = json_encode($row['username']);
