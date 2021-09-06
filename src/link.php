@@ -27,10 +27,10 @@ if(isset($headers)){
     $row = mysqli_fetch_assoc($result);
     if(count($row) > 0){
       $row['username'] = json_decode($row['username']);
-      $row['cid'] = json_decode($row['cid']);
+      $row['cID'] = json_decode($row['cID']);
       if(!in_array($row['username'], $_GET['username'])){
         array_push($row['username'], $_GET['username']);
-        array_push($row['cid'], $_GET['cid']);
+        array_push($row['cID'], $_GET['cID']);
       }
       var_dump($row);
     }
