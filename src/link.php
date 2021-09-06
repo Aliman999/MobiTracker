@@ -26,8 +26,8 @@ if(isset($headers)){
     $result = mysqli_query($link, $sql);
     $row = mysqli_fetch_assoc($result);
     if(count($row) > 0){
-      $row['username'] = json_decode($row['username']);
-      $row['cID'] = json_decode($row['cID']);
+      $row['username'] = json_decode($row['username'], true);
+      $row['cID'] = json_decode($row['cID'], true);
       if(!in_array($_GET['username'], $row['username'])){
         array_push($row['username'], $_GET['username']);
         array_push($row['cID'], $_GET['cid']);
