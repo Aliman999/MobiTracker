@@ -1,6 +1,5 @@
 <?php
 session_start();
-var_dump($_SESSION);
 if(isset($_SESSION['loggedin'])){
   setcookie("Login", json_encode($_SESSION), time()+3600, "/", "mobitracker.co", 1, 1);
 }else{
@@ -46,8 +45,6 @@ if(get('code')) {
   ));
   $logout_token = $token->access_token;
   $_SESSION['access_token'] = $token->access_token;
-
-  var_dump($_SESSION);
   $user = apiRequest($apiURLBase);
 
   setcookie("Login", "",
