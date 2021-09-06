@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(isset($_SESSION['loggedin'])){
+  unset($_SESSION['access_token']);
+  setcookie("Login",json_encode($_SESSION));
+}
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
