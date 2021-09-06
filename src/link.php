@@ -25,7 +25,7 @@ if(isset($headers)){
       echo "Success";
       //echo $sql;
     }else{
-      $sql = "SELECT * FROM `discord` INNER JOIN `priority` WHERE discID = " . $_GET['discID'] . ";";
+      $sql = "SELECT * FROM `discord` INNER JOIN `priority` WHERE discID = " . $_GET['discid'] . ";";
       echo $sql;
       $result = mysqli_query($link, $sql);
       $row = mysqli_fetch_assoc($result);
