@@ -3,7 +3,7 @@ session_start();
 var_dump($_SESSION);
 if(isset($_SESSION['loggedin'])){
   unset($_SESSION['access_token']);
-  setcookie("Login",json_encode($_SESSION));
+  setcookie("Login", json_encode($_SESSION), time()+3600, "/", "mobitracker.co", 1, 1);
   sleep(10);
 }
 
