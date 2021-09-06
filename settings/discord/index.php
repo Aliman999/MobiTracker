@@ -91,7 +91,7 @@
               if($row["dusername"]){
                 echo '<p><span class="rBold">Linked RSI:</span><br><span class="subP">';
                 for($x = 0; $x < count($row["dusername"]); $x++){
-                  echo $row["dcID"][$x]." - ".$row["dusername"][$x];
+                  echo $row["dcID"][$x]." - ".$row["dusername"][$x]."\n";
                 };
                 echo '</span></p>';
               }else{
