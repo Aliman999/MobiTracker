@@ -28,7 +28,8 @@ if(isset($headers)){
       $cid = $_GET['cid'];
       $row['username'] = json_decode($row['username'], true);
       $row['cID'] = json_decode($row['cID'], true);
-      if (in_array($_GET['username'], $row['username'])) {
+      var_dump($_GET);
+      if (!in_array($_GET['username'], $row['username'])) {
         array_push($row['username'], $_GET['username']);
         array_push($row['cID'], $_GET['cid']);
       }
