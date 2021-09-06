@@ -9,7 +9,7 @@ if(isset($headers)){
     exit(json_encode(['error' => 'Wrong token.']));
   }else{
       var_dump($_SESSION);
-    $sql = "UPDATE discord SET (`username`, `cID`) VALUES (null, null) WHERE discUser = '".$_SESSION["discUser"]."';";
+    $sql = "UPDATE discord SET (`username`, `cID`) VALUES (null, null) WHERE discUser = '%".$_SESSION["username"]."%';";
     echo $sql;
     //mysqli_query($link, $sql);
   }
