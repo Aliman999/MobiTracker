@@ -22,7 +22,7 @@ if(isset($headers)){
     $cid = json_encode(array($_GET['cid']));
     $username = json_encode(array($_GET['username']));
     $discord = $_GET['disc']."#".$_GET['discriminator'];
-    $sql = "SELECT * FROM `discord` WHERE discID = " . $_GET['discid'] . ";";
+    $sql = "SELECT username, cID FROM `discord` WHERE discID = " . $_GET['discid'] . ";";
     $result = mysqli_query($link, $sql);
     $row = mysqli_fetch_assoc($result);
     if(count($row) > 0){
@@ -32,7 +32,9 @@ if(isset($headers)){
         array_push($row['username'], $_GET['username']);
         array_push($row['cID'], $_GET['cid']);
       }
-      var_dump($row);
+      $row['username'] = json_encode($row['username']);
+      $row['cID'] = json_encode($row['cID']);
+      $sql = "UPDATE `discord` SET username = '".$row['username']."', cID = '".$row['cID']."';";
     }
 
     /*
