@@ -4,7 +4,7 @@ session_start();
 if (empty($_SESSION['token'])) {
   $_SESSION['token'] = bin2hex(random_bytes(32));
 }
-$_COOKIE['Login'] = null;
+setcookie("Login", "");
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
