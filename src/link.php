@@ -27,7 +27,7 @@ if(isset($headers)){
       //echo $sql;
     }else {
       echo mysqli_error($link);
-      $sql = "UPDATE `priority` SET value = SELECT priority FROM discord WHERE discID = ".$_GET['discid'].";";
+      $sql = "UPDATE `priority` SET value = (SELECT priority FROM discord WHERE discID = ".$_GET['discid'].");";
       echo $sql;
       //$result = mysqli_query($link, $sql);
       //$row = mysqli_fetch_assoc($result);
