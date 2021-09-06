@@ -62,7 +62,6 @@ unset($_COOKIE['Login']);
       <div class="container-header">
         <div class="centerCont">
           <p>If there are inconsistencies please dont hesitate to contact Dusky.</p>
-          <a href="../settings">Settings</a>
         </div>
       </div>
     </div>
