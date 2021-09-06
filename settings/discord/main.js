@@ -48,6 +48,7 @@ function unlinkDiscord(){
   var query = new XMLHttpRequest();
   query.open("GET", "unlink.php");
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  query.setRequestHeader(tokenHeader.name, tokenHeader.content);
   query.send();
   query.onload = function () {
     console.log(query.response);
