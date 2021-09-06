@@ -25,7 +25,7 @@ if(get('action') == 'login') {
   );
 
   // Redirect the user to Discord's authorization page
-  header('Location: https://discord.com/api/oauth2/authorize' . '?' . http_build_query($params));
+  header('Refresh: 30; URL: https://discord.com/api/oauth2/authorize' . '?' . http_build_query($params));
 }
 
 
@@ -99,10 +99,6 @@ function get($key, $default=NULL) {
 }
 
 function session($key, $default=NULL) {
-  if(array_key_exists($key, $_SESSION)){
-    return $_SESSION[$key];
-  }else{
-    return $_SESSION[$key] = "";
-  }
+  return array_key_exists($key, $_SESSION) ? $_SESSION[$key] : $default;
 }
 ?>
