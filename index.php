@@ -65,7 +65,7 @@
         <p class="webTitle">Reputation Hub</p>
       </div>
       <div class="inputContainer padded" id="iContainer">
-        <input type="text" class="userInput" autofocus value="<?php if(!empty($_SESSION['search'])){echo $_SESSION['search']} ?>" placeholder="Enter a Star Citizen's Handle">
+        <input type="text" class="userInput" autofocus value="<?php if(!empty($_SESSION['search'])){echo $_SESSION['search'];} ?>" placeholder="Enter a Star Citizen's Handle">
       </div>
       <div class="search-param-container padded" id="sPContainer">
         Search By:
