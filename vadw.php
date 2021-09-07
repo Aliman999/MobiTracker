@@ -1,5 +1,7 @@
 <?php
-session_start();
+if(){
+  
+}
 if(!empty($_GET['search'])){
   $_SESSION['search'] = $_GET['search'];
 }
