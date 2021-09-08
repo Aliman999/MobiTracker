@@ -49,15 +49,15 @@
     ?>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177343701-1"></script>
-    <script type="text/javascript" src="js/ga.js"></script>
+    <script type="text/javascript" src="../js/ga.js"></script>
   </head>
 
   <body>
-    <?php include "gtemps/nav.php"; ?>
+    <?php include "../gtemps/nav.php"; ?>
     <div id="canvas">
       <div class="headerContainer">
         <div id="login_status" class="login_menu">
-          <?php include "gtemps/titleBar.php" ?>
+          <?php include "../gtemps/titleBar.php" ?>
           <div id="navBtnContainer" class="navBtnContainer">
             <div class="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "loggedIn";}else{echo "loggedOut";} ?>"></div>
             <div class="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "loggedIn";}else{echo "loggedOut";} ?>"></div>
@@ -103,7 +103,7 @@
         </div>
       </div>
     </div>
-    <?php include "gtemps/footer.php"; ?>
+    <?php include "../gtemps/footer.php"; ?>
     <script type="text/javascript" src="js/socket.js?date=8/28"></script>
     <script type="text/javascript" src="js/main.js?date=8/28" async></script>
     <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "js/nav.js?date=8/28";}else{echo "js/nSession.js?date=8/28";} ?>" async></script>
