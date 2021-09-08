@@ -104,8 +104,8 @@
       </div>
     </div>
     <?php include "../gtemps/footer.php"; ?>
-    <script type="text/javascript" src="js/socket.js?date=8/28"></script>
-    <script type="text/javascript" src="js/main.js?date=8/28" async></script>
-    <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "js/nav.js?date=8/28";}else{echo "js/nSession.js?date=8/28";} ?>" async></script>
+    <script type="text/javascript" src="../js/socket.js?date=8/28"></script>
+    <script type="text/javascript" src="../js/main.js?date=8/28" async></script>
+    <script type="text/javascript" src="<?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){echo "../js/nav.js?date=8/28";}else{echo "../js/nSession.js?date=8/28";} ?>" async></script>
   </body>
 </html>
