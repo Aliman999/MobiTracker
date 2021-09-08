@@ -138,7 +138,7 @@ function registerUser(username, email, password){
 }
 
 function login(username, password){
-  query.open("POST", "https://mobitracker.co/beta/src/login.php");
+  query.open("POST", "https://mobitracker.co/src/login.php");
   query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   query.send("username="+username+"&password="+password);
   query.onload = function(){

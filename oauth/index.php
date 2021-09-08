@@ -32,8 +32,6 @@ unset($_COOKIE['Login']);
     <meta name="theme-color" content="#253139">
     <?php
     echo "<meta name='token' content=".$_SESSION['token'].">";
-    ?>
-    <?php
     if($_SESSION["loggedin"]){
       echo "<meta name='jwt' content=".$_SESSION['jwt'].">";
     }

@@ -31,10 +31,12 @@ if (empty($_SESSION['token'])) {
     <meta name="theme-color" content="#253139">
     <?php
     echo "<meta name='token' content=".$_SESSION['token'].">";
-    ?>
-    <?php
     if($_SESSION["loggedin"]){
       echo "<meta name='jwt' content=".$_SESSION['jwt'].">";
+    }
+
+    if (dirname($_SERVER['REQUEST_URI']) !== "beta") {
+      echo '<script data-ad-client="ca-pub-9836061168141002" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>';
     }
     ?>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177343701-1"></script>

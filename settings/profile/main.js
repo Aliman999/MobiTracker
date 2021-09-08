@@ -64,7 +64,7 @@ async function verify(){
         verified.src = "https://mobitracker.co/src/verified.png";
         userContainer.insertBefore(verified, userContainer.childNodes[0]);
 
-        query.open("GET", "https://mobitracker.co/beta/src/verify.php");
+        query.open("GET", "https://mobitracker.co/src/verify.php");
         query.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         query.setRequestHeader(tokenHeader.name, tokenHeader.content);
         query.onload = null;
@@ -99,7 +99,7 @@ function init(){
 
   if(!user.verified){
     const verifyImg = document.createElement("img");
-    verifyImg.src = "https://mobitracker.co/beta/src/verified.png";
+    verifyImg.src = "https://mobitracker.co/src/verified.png";
     verifyImg.className = "verified";
     const verifyBtn = document.createElement("a");
     verifyBtn.appendChild(verifyImg);
