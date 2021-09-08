@@ -66,7 +66,7 @@
         </div>
       </div>
       <div class="titleContainer">
-        <img class="sc-logo" src="Star-Citizen.png" alt="">
+        <img class="sc-logo" src="../Star-Citizen.png" alt="">
         <p class="webTitle">Reputation Hub</p>
       </div>
       <div class="inputContainer padded" id="iContainer">
